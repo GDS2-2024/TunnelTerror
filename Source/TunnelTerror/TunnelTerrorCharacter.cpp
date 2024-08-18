@@ -14,6 +14,10 @@
 
 ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 {
+	// Character is not infected at the start
+	bIsInfected = false;
+	health = 100.0f;
+
 	// Character doesnt have a rifle at start
 	bHasRifle = false;
 	
@@ -41,6 +45,7 @@ void ATunnelTerrorCharacter::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
+	UE_LOG(LogTemp, Log, TEXT("BeginPlay in ATunnelTerrorCharacter is executing"));
 
 	//Add Input Mapping Context
 	if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
@@ -107,4 +112,22 @@ void ATunnelTerrorCharacter::SetHasRifle(bool bNewHasRifle)
 bool ATunnelTerrorCharacter::GetHasRifle()
 {
 	return bHasRifle;
+}
+
+void ATunnelTerrorCharacter::SetIsInfected(bool bIsNowInfected)
+{
+	bIsInfected = bIsNowInfected;
+	UE_LOG(LogTemp, Log, TEXT("Player is infected - health: %f"), health);
+}
+
+void ATunnelTerrorCharacter::DecreaseHealth(float damage)
+{
+	UE_LOG(LogTemp, Log, TEXT("Player health: %f"), health);
+	health -= damage;
+	UE_LOG(LogTemp, Log, TEXT("Player has taken damage: %f"), damage);
+
+	if (health <= 0)
+	{
+		this->SetIsInfected(true);
+	}
 }

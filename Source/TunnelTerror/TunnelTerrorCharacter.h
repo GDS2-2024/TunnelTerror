@@ -56,6 +56,12 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Weapon)
 	bool bHasRifle;
 
+	UPROPERTY(VisibleAnywhere)
+	bool bIsInfected;
+
+	UPROPERTY(VisibleAnywhere)
+	float health;
+
 	/** Setter to set the bool */
 	UFUNCTION(BlueprintCallable, Category = Weapon)
 	void SetHasRifle(bool bNewHasRifle);
@@ -63,6 +69,12 @@ public:
 	/** Getter for the bool */
 	UFUNCTION(BlueprintCallable, Category = Weapon)
 	bool GetHasRifle();
+
+	UFUNCTION(BlueprintCallable)
+	void SetIsInfected(bool bIsNowInfected);
+
+	UFUNCTION()
+	void DecreaseHealth(float damage);
 
 protected:
 	/** Called for movement input */
