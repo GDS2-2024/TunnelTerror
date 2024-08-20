@@ -120,6 +120,11 @@ void ATunnelTerrorCharacter::SetIsInfected(bool bIsNowInfected)
 	UE_LOG(LogTemp, Log, TEXT("Player is infected - health: %f"), health);
 }
 
+bool ATunnelTerrorCharacter::GetIsInfected()
+{
+	return bIsInfected;
+}
+
 void ATunnelTerrorCharacter::DecreaseHealth(float damage)
 {
 	UE_LOG(LogTemp, Log, TEXT("Player health: %f"), health);

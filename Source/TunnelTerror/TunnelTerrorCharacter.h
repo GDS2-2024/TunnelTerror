@@ -56,7 +56,7 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Weapon)
 	bool bHasRifle;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	bool bIsInfected;
 
 	UPROPERTY(VisibleAnywhere)
@@ -72,6 +72,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void SetIsInfected(bool bIsNowInfected);
+
+	UFUNCTION(BlueprintCallable)
+	bool GetIsInfected();
 
 	UFUNCTION()
 	void DecreaseHealth(float damage);
