@@ -2,6 +2,7 @@
 
 
 #include "LevelGenerator.h"
+#include "RoomComponent.h"
 
 // Sets default values
 ALevelGenerator::ALevelGenerator()
@@ -36,7 +37,7 @@ void ALevelGenerator::InitializeGrid(int32 GridWidth, int32 GridHeight)
 
         for (int32 ColIndex = 0; ColIndex < GridWidth; ++ColIndex)
         {
-            NewRow.Add(ColIndex);
+            NewRow.Add(ColIndex, false);
         }
 
         Grid.Add(NewRow);
@@ -53,8 +54,27 @@ void ALevelGenerator::SpawnMap(int32 GridWidth, int32 GridHeight)
     {
         for (int32 j = 0; j < GridWidth; ++j)
         {
-            FVector SpawnLocation(j * CellSize, i * CellSize, 0.0f);
-            GetWorld()->SpawnActor<AActor>(ActorToSpawn, SpawnLocation, FRotator::ZeroRotator);
+            if (!Grid[i].BoolValues[j])
+            {
+                FVector SpawnLocation(j * CellSize, i * CellSize, 0.0f);
+
+                AActor* RoomSpawned = GetWorld()->SpawnActor<AActor>(ActorToSpawn, SpawnLocation, FRotator::ZeroRotator);
+                URoomComponent* RC = RoomSpawned->FindComponentByClass<URoomComponent>();
+
+                if (RC)
+                {
+                    for (int32 x = i; x < i + RC->xSize; x++)
+                    {
+                        for (int32 y = j; y < j + RC->ySize; y++)
+                        {
+                            if (x < GridHeight && y < GridWidth)
+                            {
+                                Grid[x].BoolValues[y] = true;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

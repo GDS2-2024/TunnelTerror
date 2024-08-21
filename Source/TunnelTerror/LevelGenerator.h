@@ -14,10 +14,13 @@ struct FGridRow
     UPROPERTY()
     TArray<int32> Elements;
 
+    UPROPERTY()
+    TArray<bool> BoolValues; 
 
-    void Add(int32 Element) 
+    void Add(int32 Element, bool BoolValue)
     {
         Elements.Add(Element);
+        BoolValues.Add(BoolValue);
     }
 
     int32 Num() const
@@ -26,6 +29,7 @@ struct FGridRow
     }
     
 };
+
 
 UCLASS()
 class TUNNELTERROR_API ALevelGenerator : public AActor
