@@ -45,7 +45,6 @@ void ATunnelTerrorCharacter::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Log, TEXT("BeginPlay in ATunnelTerrorCharacter is executing"));
 
 	//Add Input Mapping Context
 	if (APlayerController* PlayerController = Cast<APlayerController>(Controller))

@@ -59,7 +59,6 @@ void UTP_WeaponComponent::Fire()
 		if (AnimInstance != nullptr)
 		{
 			AnimInstance->Montage_Play(FireAnimation, 1.f);
-			UE_LOG(LogTemp, Warning, TEXT("Weapon animation playing"));
 		}
 	}
 }
