@@ -3,30 +3,30 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "RoomComponent.generated.h"
+#include "Components/SceneComponent.h"
+#include "RoomSceneComponent.generated.h"
 
 USTRUCT(BlueprintType)
-struct FDoorOld
+struct FDoor
 {
 	GENERATED_BODY()
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Values")
 	int32 xValue;
-	
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Values")
 	int32 yValue;
 
 };
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class TUNNELTERROR_API URoomComponent : public UActorComponent
+class TUNNELTERROR_API URoomSceneComponent : public USceneComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	URoomComponent();
+	URoomSceneComponent();
 
 protected:
 	// Called when the game starts
@@ -52,4 +52,5 @@ public:
 	TArray<UActorComponent*> Walls;
 
 	TArray<FVector> GetDoorPositions(FVector Origin);
+		
 };

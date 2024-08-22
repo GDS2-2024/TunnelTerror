@@ -1,9 +1,8 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "RoomComponent.h"
 #include "LevelGenerator.generated.h"
 
 USTRUCT(BlueprintType)
@@ -15,7 +14,7 @@ struct FGridRow
     TArray<int32> Elements;
 
     UPROPERTY()
-    TArray<bool> BoolValues; 
+    TArray<bool> BoolValues;
 
     void Add(int32 Element, bool BoolValue)
     {
@@ -27,33 +26,53 @@ struct FGridRow
     {
         return Elements.Num();
     }
-    
 };
-
 
 UCLASS()
 class TUNNELTERROR_API ALevelGenerator : public AActor
 {
-	GENERATED_BODY()
-	
-public:	
-	// Sets default values for this actor's properties
-	ALevelGenerator();
+    GENERATED_BODY()
+
+public:
+    ALevelGenerator();
 
 protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+    virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+public:
+    virtual void Tick(float DeltaTime) override;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Grid")
     TArray<FGridRow> Grid;
 
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Grid")
+    int32 Height;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Grid")
+    int32 Width;
+
     void InitializeGrid(int32 GridWidth, int32 GridHeight);
     void SpawnMap(int32 GridWidth, int32 GridHeight);
+    void MarkGridAsOccupied(URoomComponent* RoomComponent, FVector Origin);
 
     UPROPERTY(EditDefaultsOnly)
-    TSubclassOf<AActor>ActorToSpawn;
+    TSubclassOf<AActor> Room1;
+
+    UPROPERTY(EditDefaultsOnly)
+    TSubclassOf<AActor> Room2;
+
+    UPROPERTY(EditDefaultsOnly)
+    TSubclassOf<AActor> Corridor1;
+
+    UPROPERTY(EditDefaultsOnly, Category = "Rooms")
+    TArray<TSubclassOf<AActor>> Rooms;
+
+    UPROPERTY(EditDefaultsOnly, Category = "Corridors")
+    TArray<TSubclassOf<AActor>> Corridors;
+
+private:
+    FVector GetRandomRoomSpawnLocation();
+    TSubclassOf<AActor> GetRandomRoom();
+    TSubclassOf<AActor> GetRandomCorridor();
+    TSubclassOf<AActor> ActorToSpawnNext;
 };
