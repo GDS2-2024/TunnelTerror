@@ -43,44 +43,52 @@ void ALevelGenerator::InitializeGrid(int32 GridWidth, int32 GridHeight)
     UE_LOG(LogTemp, Log, TEXT("Grid initialized with dimensions %dx%d."), GridWidth, GridHeight);
 }
 
-void ALevelGenerator::SpawnMap(int32 GridWidth, int32 GridHeight)
+URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubclassOf<AActor> ActorToSpawn)
 {
     const float CellSize = 500.0f;
     bool bSpawnRoom = true;
 
-    int32 CurrentI = 5;
-    int32 CurrentJ = 5;
-
     FVector SpawnLocation(CurrentJ * CellSize, CurrentI * CellSize, 0.0f);
-    AActor* RoomSpawned = GetWorld()->SpawnActor<AActor>(Room1, SpawnLocation, FRotator::ZeroRotator);
+    AActor* RoomSpawned = GetWorld()->SpawnActor<AActor>(ActorToSpawn, SpawnLocation, FRotator::ZeroRotator);
     URoomComponent* RC = RoomSpawned->GetComponentByClass<URoomComponent>();
 
     for (FVector space : RC->gridSpaces)
     {
-        int32 j = CurrentI + static_cast<int32>(space.X);
-        int32 i = CurrentJ + static_cast<int32>(space.Y);
+        int32 i = CurrentI + static_cast<int32>(space.X);
+        int32 j = CurrentJ + static_cast<int32>(space.Y);
 
-        if (i >= 0 && i < GridHeight && j >= 0 && j < GridWidth)
+        if (i >= 0 && i < Height && j >= 0 && j < Width)
         {
-            Grid[i].BoolValues[j] = true;
+            Grid[j].BoolValues[i] = true;
 
             FVector Place(j * CellSize, i * CellSize, 400.0f);
             DrawDebugSphere(GetWorld(), Place, 50.0f, 12, FColor::Red, true, -1.0f, 0, 2.0f);
         }
         else
         {
-   
+
             UE_LOG(LogTemp, Warning, TEXT("Out of bounds: i = %d, j = %d"), i, j);
         }
     }
+    return RC;
+}
 
-    while (CurrentI < GridHeight && CurrentJ < GridWidth)
+void ALevelGenerator::SpawnMap(int32 GridWidth, int32 GridHeight)
+{
+    URoomComponent* RC = SpawnRoom(0, 0, Room1);
+
+    for (int i = 1; i < RC->xDoors.Num(); i++) {
+        SpawnRoom(RC->xDoors[i].Y, RC->xDoors[i].X, Corridor1);
+    }
+}
+
+    /*while (CurrentI < GridHeight && CurrentJ < GridWidth)
     {
         
 
 
 
-        /*if (!Grid[CurrentI].BoolValues[CurrentJ])
+        if (!Grid[CurrentI].BoolValues[CurrentJ])
         {
             FVector SpawnLocation(CurrentJ * CellSize, CurrentI * CellSize, 0.0f);
             int32 RandomNumber = FMath::RandRange(1, 2);
@@ -163,7 +171,7 @@ void ALevelGenerator::SpawnMap(int32 GridWidth, int32 GridHeight)
                 if (bFoundNextSpot) break;
             }
             if (!bFoundNextSpot) break; 
-        }*/
-    }
-}
+        }
+    }*/
+
 

@@ -53,6 +53,7 @@ public:
 
     void InitializeGrid(int32 GridWidth, int32 GridHeight);
     void SpawnMap(int32 GridWidth, int32 GridHeight);
+    URoomComponent* SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubclassOf<AActor> ActorToSpawn);
     void MarkGridAsOccupied(URoomComponent* RoomComponent, FVector Origin);
 
     UPROPERTY(EditDefaultsOnly)
