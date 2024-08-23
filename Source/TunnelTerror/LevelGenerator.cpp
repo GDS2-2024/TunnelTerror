@@ -48,12 +48,39 @@ void ALevelGenerator::SpawnMap(int32 GridWidth, int32 GridHeight)
     const float CellSize = 500.0f;
     bool bSpawnRoom = true;
 
-    int32 CurrentI = 0;
-    int32 CurrentJ = 0;
+    int32 CurrentI = 5;
+    int32 CurrentJ = 5;
+
+    FVector SpawnLocation(CurrentJ * CellSize, CurrentI * CellSize, 0.0f);
+    AActor* RoomSpawned = GetWorld()->SpawnActor<AActor>(Room1, SpawnLocation, FRotator::ZeroRotator);
+    URoomComponent* RC = RoomSpawned->GetComponentByClass<URoomComponent>();
+
+    for (FVector space : RC->gridSpaces)
+    {
+        int32 j = CurrentI + static_cast<int32>(space.X);
+        int32 i = CurrentJ + static_cast<int32>(space.Y);
+
+        if (i >= 0 && i < GridHeight && j >= 0 && j < GridWidth)
+        {
+            Grid[i].BoolValues[j] = true;
+
+            FVector Place(j * CellSize, i * CellSize, 400.0f);
+            DrawDebugSphere(GetWorld(), Place, 50.0f, 12, FColor::Red, true, -1.0f, 0, 2.0f);
+        }
+        else
+        {
+   
+            UE_LOG(LogTemp, Warning, TEXT("Out of bounds: i = %d, j = %d"), i, j);
+        }
+    }
 
     while (CurrentI < GridHeight && CurrentJ < GridWidth)
     {
-        if (!Grid[CurrentI].BoolValues[CurrentJ])
+        
+
+
+
+        /*if (!Grid[CurrentI].BoolValues[CurrentJ])
         {
             FVector SpawnLocation(CurrentJ * CellSize, CurrentI * CellSize, 0.0f);
             int32 RandomNumber = FMath::RandRange(1, 2);
@@ -67,19 +94,17 @@ void ALevelGenerator::SpawnMap(int32 GridWidth, int32 GridHeight)
                     break;
             }
 
-            UE_LOG(LogTemp, Log, TEXT("Spawning actor at (%d, %d)"), CurrentI, CurrentJ);
-
             AActor* RoomSpawned = GetWorld()->SpawnActor<AActor>(ActorToSpawnNext, SpawnLocation, FRotator::ZeroRotator);
             if (!RoomSpawned)
             {
-                UE_LOG(LogTemp, Error, TEXT("Failed to spawn actor!"));
+                UE_LOG(LogTemp, Error, TEXT("Can't spawn room"));
                 return; 
             }
 
             URoomComponent* RC = RoomSpawned->FindComponentByClass<URoomComponent>();
             if (!RC)
             {
-                UE_LOG(LogTemp, Error, TEXT("URoomComponent not found on the spawned actor!"));
+                UE_LOG(LogTemp, Error, TEXT("No URoomComponent"));
                 return; 
             }
 
@@ -97,7 +122,7 @@ void ALevelGenerator::SpawnMap(int32 GridWidth, int32 GridHeight)
                     }
                     else
                     {
-                        UE_LOG(LogTemp, Warning, TEXT("Skipping out-of-bounds grid index (%d, %d)"), x, y);
+                        UE_LOG(LogTemp, Warning, TEXT("out of bounds"));
                     }
                 }
             }
@@ -114,7 +139,7 @@ void ALevelGenerator::SpawnMap(int32 GridWidth, int32 GridHeight)
             }
             else
             {
-                UE_LOG(LogTemp, Warning, TEXT("Next spawn location invalid or already occupied: (%d, %d)"), NextI, NextJ);
+                UE_LOG(LogTemp, Warning, TEXT("Can't spawn here"));
                 return; 
             }
 
@@ -138,9 +163,7 @@ void ALevelGenerator::SpawnMap(int32 GridWidth, int32 GridHeight)
                 if (bFoundNextSpot) break;
             }
             if (!bFoundNextSpot) break; 
-        }
+        }*/
     }
-
-    UE_LOG(LogTemp, Log, TEXT("Map spawning completed."));
 }
 

@@ -49,7 +49,7 @@ public:
 	TArray<FVector> yDoors;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Room Config")
-	TArray<UActorComponent*> Walls;
+	TArray<FVector> gridSpaces;
 
 	TArray<FVector> GetDoorPositions(FVector Origin);
 };

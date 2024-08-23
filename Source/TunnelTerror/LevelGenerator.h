@@ -64,6 +64,15 @@ public:
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<AActor> Corridor1;
 
+    UPROPERTY(EditDefaultsOnly)
+    TSubclassOf<AActor> CornerCorridor1;
+
+    UPROPERTY(EditDefaultsOnly)
+    TSubclassOf<AActor> CornerCorridor2;
+
+    UPROPERTY(EditDefaultsOnly)
+    TSubclassOf<AActor> TCorridor1;
+
     UPROPERTY(EditDefaultsOnly, Category = "Rooms")
     TArray<TSubclassOf<AActor>> Rooms;
 
