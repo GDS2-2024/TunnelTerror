@@ -37,12 +37,6 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Room Config")
-	int32 Width;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Room Config")
-	int32 Height;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Room Config")
 	TArray<FVector> xDoors;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Room Config")

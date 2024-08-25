@@ -46,7 +46,7 @@ void ALevelGenerator::InitializeGrid(int32 GridWidth, int32 GridHeight)
 URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubclassOf<AActor> ActorToSpawn)
 {
     const float CellSize = 500.0f;
-    bool bSpawnRoom = true;
+    
 
     FVector SpawnLocation(CurrentJ * CellSize, CurrentI * CellSize, 0.0f);
     AActor* RoomSpawned = GetWorld()->SpawnActor<AActor>(ActorToSpawn, SpawnLocation, FRotator::ZeroRotator);
@@ -56,6 +56,7 @@ URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubc
     {
         int32 i = CurrentI + static_cast<int32>(space.X);
         int32 j = CurrentJ + static_cast<int32>(space.Y);
+
 
         if (i >= 0 && i < Height && j >= 0 && j < Width)
         {
@@ -70,108 +71,36 @@ URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubc
             UE_LOG(LogTemp, Warning, TEXT("Out of bounds: i = %d, j = %d"), i, j);
         }
     }
+
+    LastX = RC->xDoors[1].X;
+    LastY = RC->xDoors[1].Y;
+
     return RC;
 }
 
 void ALevelGenerator::SpawnMap(int32 GridWidth, int32 GridHeight)
 {
-    URoomComponent* RC = SpawnRoom(0, 0, Room1);
+    bool bSpawnRoom = false;
+    int32 CurrentI = 0;
+    int32 CurrentJ = 0;
 
-    for (int i = 1; i < RC->xDoors.Num(); i++) {
-        SpawnRoom(RC->xDoors[i].Y, RC->xDoors[i].X, Corridor1);
+    URoomComponent* RC = SpawnRoom(CurrentI, CurrentJ, Room1);
+
+    for (int n = 0; n < 5; n++)
+    {
+        int32 NextI = CurrentI + RC->xDoors[1].Y;
+        int32 NextJ = CurrentJ + RC->xDoors[1].X; 
+
+        TSubclassOf<AActor> ActorToSpawnNext = bSpawnRoom ? Corridor1 : Room1;
+        RC = SpawnRoom(NextI, NextJ, ActorToSpawnNext);
+
+        CurrentI = NextI;
+        CurrentJ = NextJ;
+
+        bSpawnRoom = !bSpawnRoom;
     }
 }
 
-    /*while (CurrentI < GridHeight && CurrentJ < GridWidth)
-    {
-        
-
-
-
-        if (!Grid[CurrentI].BoolValues[CurrentJ])
-        {
-            FVector SpawnLocation(CurrentJ * CellSize, CurrentI * CellSize, 0.0f);
-            int32 RandomNumber = FMath::RandRange(1, 2);
-
-            switch (RandomNumber) {
-                case 1:
-                    ActorToSpawnNext = bSpawnRoom ? Room1 : Corridor1;
-                    break;
-                case 2:
-                    ActorToSpawnNext = bSpawnRoom ? Room2 : Corridor1;
-                    break;
-            }
-
-            AActor* RoomSpawned = GetWorld()->SpawnActor<AActor>(ActorToSpawnNext, SpawnLocation, FRotator::ZeroRotator);
-            if (!RoomSpawned)
-            {
-                UE_LOG(LogTemp, Error, TEXT("Can't spawn room"));
-                return; 
-            }
-
-            URoomComponent* RC = RoomSpawned->FindComponentByClass<URoomComponent>();
-            if (!RC)
-            {
-                UE_LOG(LogTemp, Error, TEXT("No URoomComponent"));
-                return; 
-            }
-
-            for (int32 x = CurrentI; x < CurrentI + RC->Height; x++) 
-            {
-                for (int32 y = CurrentJ; y < CurrentJ + RC->Width; y++) 
-                {
-                    if (x < GridHeight && y < GridWidth)
-                    {
-                        Grid[x].BoolValues[y] = true;
-
-                        FVector Place(y * CellSize, x * CellSize, 400.0f); 
-
-                        DrawDebugSphere(GetWorld(), Place, 50.0f, 12, FColor::Red, true, -1.0f, 0, 2.0f);
-                    }
-                    else
-                    {
-                        UE_LOG(LogTemp, Warning, TEXT("out of bounds"));
-                    }
-                }
-            }
-
-            
-            int32 NextI = CurrentI + RC->xDoors[1].Y; 
-            int32 NextJ = CurrentJ + RC->xDoors[1].X;
-
-
-            if (NextI >= 0 && NextJ >= 0 && NextI < GridHeight && NextJ < GridWidth && !Grid[NextI].BoolValues[NextJ])
-            {
-                CurrentI = NextI;
-                CurrentJ = NextJ;
-            }
-            else
-            {
-                UE_LOG(LogTemp, Warning, TEXT("Can't spawn here"));
-                return; 
-            }
-
-            bSpawnRoom = !bSpawnRoom;
-        }
-        else
-        {
-            bool bFoundNextSpot = false;
-            for (int32 i = CurrentI; i < GridHeight; ++i)
-            {
-                for (int32 j = (i == CurrentI ? CurrentJ + 1 : 0); j < GridWidth; ++j)
-                {
-                    if (!Grid[i].BoolValues[j])
-                    {
-                        CurrentI = i;
-                        CurrentJ = j;
-                        bFoundNextSpot = true;
-                        break;
-                    }
-                }
-                if (bFoundNextSpot) break;
-            }
-            if (!bFoundNextSpot) break; 
-        }
-    }*/
+    
 
 

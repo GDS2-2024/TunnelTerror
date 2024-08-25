@@ -80,9 +80,15 @@ public:
     UPROPERTY(EditDefaultsOnly, Category = "Corridors")
     TArray<TSubclassOf<AActor>> Corridors;
 
+    UPROPERTY(EditDefaultsOnly)
+    int32 LastY = 0;
+
+    UPROPERTY(EditDefaultsOnly)
+    int32 LastX = 0;
+
 private:
     FVector GetRandomRoomSpawnLocation();
     TSubclassOf<AActor> GetRandomRoom();
     TSubclassOf<AActor> GetRandomCorridor();
-    TSubclassOf<AActor> ActorToSpawnNext;
+
 };
