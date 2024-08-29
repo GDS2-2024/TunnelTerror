@@ -7,6 +7,7 @@
 #include "Components/CapsuleComponent.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
+#include "Inventory/InventoryComponent.h"
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -34,6 +35,9 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 	Mesh1P->CastShadow = false;
 	//Mesh1P->SetRelativeRotation(FRotator(0.9f, -19.19f, 5.2f));
 	Mesh1P->SetRelativeLocation(FVector(-30.f, 0.f, -150.f));
+
+	// Create Inventory Component
+	Inventory = CreateDefaultSubobject<UInventoryComponent>(TEXT("Player Inventory"));
 
 }
 
@@ -97,6 +101,17 @@ void ATunnelTerrorCharacter::Look(const FInputActionValue& Value)
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
 	}
+}
+
+void ATunnelTerrorCharacter::EquipToInventory(AInventoryItem* NewItem)
+{
+	Inventory->AddItem(NewItem);
+	UE_LOG(LogTemp, Warning, TEXT("Attempting to add to Player Inventory"))
+}
+
+void ATunnelTerrorCharacter::UseSelectedItem()
+{
+	
 }
 
 void ATunnelTerrorCharacter::SetHasRifle(bool bNewHasRifle)
