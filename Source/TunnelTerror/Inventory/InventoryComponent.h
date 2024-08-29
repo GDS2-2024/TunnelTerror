@@ -28,9 +28,11 @@ public:
 	void ChangeSelectedSlot(FInventorySlot NewSelection);
 	AInventoryItem* GetSelectedItem();
 
-private:
 	UPROPERTY(VisibleAnywhere)
 	int32 NumOfItems;
+	
+private:
+	
 	UPROPERTY(VisibleAnywhere)
 	TArray<FInventorySlot> InventorySlots;
 	UPROPERTY(VisibleAnywhere)
@@ -40,7 +42,7 @@ private:
 
 	// Finds an empty slot in the inventory
 	FInventorySlot* GetAvailableSlot();
-	
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;

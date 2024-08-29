@@ -53,6 +53,9 @@ void ATunnelTerrorCharacter::BeginPlay()
 		{
 			Subsystem->AddMappingContext(DefaultMappingContext, 0);
 		}
+
+		PlayerHUD = CreateWidget<UPlayerHUD>(PlayerController, PlayerHUDClass);
+		PlayerHUD->AddToPlayerScreen();
 	}
 
 }
@@ -106,7 +109,8 @@ void ATunnelTerrorCharacter::Look(const FInputActionValue& Value)
 void ATunnelTerrorCharacter::EquipToInventory(AInventoryItem* NewItem)
 {
 	Inventory->AddItem(NewItem);
-	UE_LOG(LogTemp, Warning, TEXT("Attempting to add to Player Inventory"))
+	UE_LOG(LogTemp, Warning, TEXT("Adding Item to Player Inventory"))
+	PlayerHUD->SetSlotIcon(Inventory->NumOfItems, NewItem->InventoryIcon);
 }
 
 void ATunnelTerrorCharacter::UseSelectedItem()

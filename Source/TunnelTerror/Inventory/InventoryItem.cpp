@@ -9,7 +9,7 @@ AInventoryItem::AInventoryItem()
 	PrimaryActorTick.bCanEverTick = true;
 	
 	ItemMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Item Mesh"));
-	ItemMesh->SetupAttachment(GetRootComponent());
+	SetRootComponent(ItemMesh);
 }
 
 void AInventoryItem::UseItem()

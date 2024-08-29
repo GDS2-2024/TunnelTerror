@@ -16,7 +16,7 @@ class TUNNELTERROR_API UPlayerHUD : public UUserWidget
 {
 	GENERATED_BODY()
 public:
-	void SetSlotIcon(int32 SlotNum);
+	void SetSlotIcon(int32 SlotNum, UTexture2D* IconToSet);
 	void ClearSlotIcon(int32 SlotNum);
 	
 protected:

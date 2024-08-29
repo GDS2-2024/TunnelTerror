@@ -22,6 +22,7 @@ void UInventoryComponent::AddItem(AInventoryItem* Item)
 	if (FInventorySlot* EmptySlot = GetAvailableSlot(); EmptySlot != nullptr)
 	{
 		EmptySlot->AddItemToSlot(Item);
+		NumOfItems += 1;
 	} else
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Can't add item, EmptySlot is null."));

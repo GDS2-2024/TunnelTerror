@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "InputActionValue.h"
 #include "Inventory/InventoryItem.h"
+#include "PlayerHUD.h"
 #include "TunnelTerrorCharacter.generated.h"
 
 class UInputComponent;
@@ -81,6 +82,11 @@ protected:
 
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<UPlayerHUD> PlayerHUDClass;
+	UPROPERTY()
+	UPlayerHUD* PlayerHUD;
 
 protected:
 	// APawn interface
