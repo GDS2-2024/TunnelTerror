@@ -28,6 +28,18 @@ struct FGridRow
     }
 };
 
+USTRUCT(BlueprintType)
+struct FRoom
+{
+    GENERATED_BODY()
+
+    UPROPERTY(EditDefaultsOnly)
+    TSubclassOf<AActor> Actor;
+
+    UPROPERTY(EditDefaultsOnly)
+    TArray<FString> Doors;
+};
+
 UCLASS()
 class TUNNELTERROR_API ALevelGenerator : public AActor
 {
@@ -53,32 +65,18 @@ public:
 
     void InitializeGrid(int32 GridWidth, int32 GridHeight);
     void SpawnMap(int32 GridWidth, int32 GridHeight);
-    URoomComponent* SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubclassOf<AActor> ActorToSpawn);
+    URoomComponent* SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubclassOf<AActor> ActorToSpawn, bool isX);
     void MarkGridAsOccupied(URoomComponent* RoomComponent, FVector Origin);
+    bool CanPlaceRoom(int32 CurrentI, int32 CurrentJ, URoomComponent* RC);
 
     UPROPERTY(EditDefaultsOnly)
-    TSubclassOf<AActor> Room1;
+    FRoom LastActor;
 
     UPROPERTY(EditDefaultsOnly)
-    TSubclassOf<AActor> Room2;
+    TArray<FRoom> Rooms;
 
     UPROPERTY(EditDefaultsOnly)
-    TSubclassOf<AActor> Corridor1;
-
-    UPROPERTY(EditDefaultsOnly)
-    TSubclassOf<AActor> CornerCorridor1;
-
-    UPROPERTY(EditDefaultsOnly)
-    TSubclassOf<AActor> CornerCorridor2;
-
-    UPROPERTY(EditDefaultsOnly)
-    TSubclassOf<AActor> TCorridor1;
-
-    UPROPERTY(EditDefaultsOnly, Category = "Rooms")
-    TArray<TSubclassOf<AActor>> Rooms;
-
-    UPROPERTY(EditDefaultsOnly, Category = "Corridors")
-    TArray<TSubclassOf<AActor>> Corridors;
+    TArray<FRoom> Corridors;
 
     UPROPERTY(EditDefaultsOnly)
     int32 LastY = 0;
