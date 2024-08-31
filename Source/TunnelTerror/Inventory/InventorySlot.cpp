@@ -18,3 +18,19 @@ void FInventorySlot::EmptySlot()
 {
 	Item = nullptr;
 }
+
+void FInventorySlot::SlotSelected()
+{
+	if (Item)
+	{
+		Item->ShowItem();
+	}
+}
+
+void FInventorySlot::SlotDeselected()
+{
+	if (Item)
+	{
+		Item->HideItem();
+	}
+}

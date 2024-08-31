@@ -14,6 +14,21 @@ AInventoryItem::AInventoryItem()
 
 void AInventoryItem::UseItem()
 {
-	// Default implementation (could be empty)
 	UE_LOG(LogTemp, Warning, TEXT("UseItem() called in Base Class (default implementation)"));
+}
+
+void AInventoryItem::ShowItem()
+{
+	if (ItemMesh)
+	{
+		ItemMesh->SetVisibility(true);
+	}
+}
+
+void AInventoryItem::HideItem()
+{
+	if (ItemMesh)
+	{
+		ItemMesh->SetVisibility(false);
+	}
 }

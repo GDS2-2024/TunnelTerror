@@ -52,6 +52,7 @@ void ATunnelTerrorCharacter::BeginPlay()
 		if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
 		{
 			Subsystem->AddMappingContext(DefaultMappingContext, 0);
+			Subsystem->AddMappingContext(InventoryMappingContext, 0);
 		}
 
 		PlayerHUD = CreateWidget<UPlayerHUD>(PlayerController, PlayerHUDClass);
@@ -76,6 +77,13 @@ void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 
 		//Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Look);
+
+		//Inventory Selection
+		EnhancedInputComponent->BindAction(SelectSlot1, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Slot1);
+		EnhancedInputComponent->BindAction(SelectSlot2, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Slot2);
+		EnhancedInputComponent->BindAction(SelectSlot3, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Slot3);
+		EnhancedInputComponent->BindAction(SelectSlot4, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Slot4);
+		EnhancedInputComponent->BindAction(SelectSlot5, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Slot5);
 	}
 }
 
@@ -106,6 +114,36 @@ void ATunnelTerrorCharacter::Look(const FInputActionValue& Value)
 	}
 }
 
+void ATunnelTerrorCharacter::Slot1(const FInputActionValue& Value)
+{
+	Inventory->ChangeSelectedSlot(1);
+	PlayerHUD->SetSlotSelection(1);
+}
+
+void ATunnelTerrorCharacter::Slot2(const FInputActionValue& Value)
+{
+	Inventory->ChangeSelectedSlot(2);
+	PlayerHUD->SetSlotSelection(2);
+}
+
+void ATunnelTerrorCharacter::Slot3(const FInputActionValue& Value)
+{
+	Inventory->ChangeSelectedSlot(3);
+	PlayerHUD->SetSlotSelection(3);
+}
+
+void ATunnelTerrorCharacter::Slot4(const FInputActionValue& Value)
+{
+	Inventory->ChangeSelectedSlot(4);
+	PlayerHUD->SetSlotSelection(4);
+}
+
+void ATunnelTerrorCharacter::Slot5(const FInputActionValue& Value)
+{
+	Inventory->ChangeSelectedSlot(5);
+	PlayerHUD->SetSlotSelection(5);
+}
+
 void ATunnelTerrorCharacter::EquipToInventory(AInventoryItem* NewItem)
 {
 	Inventory->AddItem(NewItem);
@@ -115,7 +153,7 @@ void ATunnelTerrorCharacter::EquipToInventory(AInventoryItem* NewItem)
 
 void ATunnelTerrorCharacter::UseSelectedItem()
 {
-	
+	Inventory->GetSelectedItem()->UseItem();
 }
 
 void ATunnelTerrorCharacter::SetHasRifle(bool bNewHasRifle)

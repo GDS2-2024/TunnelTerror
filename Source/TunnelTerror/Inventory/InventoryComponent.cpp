@@ -14,6 +14,7 @@ UInventoryComponent::UInventoryComponent()
 	MaxSlots = 5;
 	InventorySlots.SetNum(MaxSlots);
 	SelectedSlot = InventorySlots[0];
+	SelectedSlotIndex = 1;
 }
 
 // Add Item to an available slot
@@ -42,7 +43,6 @@ void UInventoryComponent::RemoveItem(FInventorySlot& Slot)
 {
 	Slot.EmptySlot();
 	NumOfItems -= 1;
-	
 }
 
 bool UInventoryComponent::HasEmptySlot() const
@@ -50,9 +50,20 @@ bool UInventoryComponent::HasEmptySlot() const
 	return NumOfItems < InventorySlots.Max();
 }
 
-void UInventoryComponent::ChangeSelectedSlot(FInventorySlot NewSelection)
+void UInventoryComponent::ChangeSelectedSlot(int32 NewSelection)
 {
-	SelectedSlot = NewSelection;
+	//Hide the previous selection
+	if (!SelectedSlot.IsEmpty())
+	{
+		SelectedSlot.Item->HideItem();
+	}
+	//Set the new selection
+	SelectedSlotIndex = NewSelection;
+	SelectedSlot = InventorySlots[NewSelection-1];
+	if (!SelectedSlot.IsEmpty())
+	{
+		SelectedSlot.Item->ShowItem();
+	}
 }
 
 AInventoryItem* UInventoryComponent::GetSelectedItem()

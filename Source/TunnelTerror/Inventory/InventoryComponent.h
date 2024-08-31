@@ -25,7 +25,7 @@ public:
 	// Remove the item from Inventory at the given slot
 	void RemoveItem(FInventorySlot& Slot);
 	bool HasEmptySlot() const;
-	void ChangeSelectedSlot(FInventorySlot NewSelection);
+	void ChangeSelectedSlot(int32 NewSelection);
 	AInventoryItem* GetSelectedItem();
 
 	UPROPERTY(VisibleAnywhere)
@@ -39,6 +39,8 @@ private:
 	int32 MaxSlots;
 	UPROPERTY(VisibleAnywhere)
 	FInventorySlot SelectedSlot;
+	UPROPERTY(VisibleAnywhere)
+	int32 SelectedSlotIndex;
 
 	// Finds an empty slot in the inventory
 	FInventorySlot* GetAvailableSlot();

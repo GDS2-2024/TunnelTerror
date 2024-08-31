@@ -47,7 +47,9 @@ void AItemPickup::OnPickupOverlap(UPrimitiveComponent* OverlappedComponent, AAct
 		{
 			// Spawn an instance of the inventory item
 			AInventoryItem* InventoryItem = GetWorld()->SpawnActor<AInventoryItem>(CorrespondingItemClass);
-			InventoryItem->AttachToComponent(Player->GetRootComponent(), FAttachmentTransformRules::KeepRelativeTransform);
+			InventoryItem->AttachToComponent(Player->GetMesh1P(), FAttachmentTransformRules::KeepRelativeTransform, "GripPoint");
+			//	TO DO: 
+			//	Need to have attach an additional mesh to the 3rd person character
             
 			if (InventoryItem)
 			{
@@ -62,5 +64,6 @@ void AItemPickup::OnPickupOverlap(UPrimitiveComponent* OverlappedComponent, AAct
 		{
 			UE_LOG(LogTemp, Warning, TEXT("CorrespondingItemClass is NULL"));
 		}
+		Destroy();
 	}
 }

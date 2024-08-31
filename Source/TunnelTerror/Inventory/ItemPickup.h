@@ -30,7 +30,6 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSubclassOf<AInventoryItem> CorrespondingItemClass;
-
 	
 	UFUNCTION()
 	void OnPickupOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,

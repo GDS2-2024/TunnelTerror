@@ -4,6 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
+#include "Components/Border.h"
+#include "Components/CanvasPanel.h"
+#include "Components/CanvasPanelSlot.h"
 #include "Components/TextBlock.h"
 #include "Components/Image.h"
 #include "PlayerHUD.generated.h"
@@ -18,6 +21,7 @@ class TUNNELTERROR_API UPlayerHUD : public UUserWidget
 public:
 	void SetSlotIcon(int32 SlotNum, UTexture2D* IconToSet);
 	void ClearSlotIcon(int32 SlotNum);
+	void SetSlotSelection(int32 SlotNum);
 	
 protected:
 
@@ -35,5 +39,8 @@ protected:
 
 	UPROPERTY(EditAnywhere, meta=(BindWidget))
 	UImage* Slot5;
+
+	UPROPERTY(EditAnywhere, meta=(BindWidget))
+	UBorder* SelectedSlot;
 	
 };

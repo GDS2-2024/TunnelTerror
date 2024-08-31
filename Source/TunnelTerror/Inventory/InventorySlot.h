@@ -23,4 +23,6 @@ struct FInventorySlot
 	void AddItemToSlot(AInventoryItem* NewItem);
 	void EmptySlot();
 	bool IsEmpty() const { return Item == nullptr; }
+	void SlotSelected();
+	void SlotDeselected();
 };

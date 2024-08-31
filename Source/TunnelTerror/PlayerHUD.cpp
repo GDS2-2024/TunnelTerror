@@ -32,3 +32,52 @@ void UPlayerHUD::ClearSlotIcon(int32 SlotNum)
 {
 	
 }
+
+void UPlayerHUD::SetSlotSelection(int32 SlotNum)
+{
+	// Get the Canvas Panel Slot of the Border
+	if (UCanvasPanelSlot* SelectedSlotCanvas = Cast<UCanvasPanelSlot>(SelectedSlot->Slot))
+	{
+		switch (SlotNum)
+		{
+		case 1 :
+			if (UCanvasPanelSlot* ImageSlot = Cast<UCanvasPanelSlot>(Slot1->Slot))
+			{
+				FVector2d NewPos = FVector2d(ImageSlot->GetPosition().X-5,ImageSlot->GetPosition().Y-5);
+				SelectedSlotCanvas->SetPosition(NewPos);
+			}
+			break;
+		case 2 :
+			if (UCanvasPanelSlot* ImageSlot = Cast<UCanvasPanelSlot>(Slot2->Slot))
+			{
+				FVector2d NewPos = FVector2d(ImageSlot->GetPosition().X-5,ImageSlot->GetPosition().Y-5);
+				SelectedSlotCanvas->SetPosition(NewPos);
+			}
+			break;
+		case 3 :
+			if (UCanvasPanelSlot* ImageSlot = Cast<UCanvasPanelSlot>(Slot3->Slot))
+			{
+				FVector2d NewPos = FVector2d(ImageSlot->GetPosition().X-5,ImageSlot->GetPosition().Y-5);
+				SelectedSlotCanvas->SetPosition(NewPos);
+			}
+			break;
+		case 4 :
+			if (UCanvasPanelSlot* ImageSlot = Cast<UCanvasPanelSlot>(Slot4->Slot))
+			{
+				FVector2d NewPos = FVector2d(ImageSlot->GetPosition().X-5,ImageSlot->GetPosition().Y-5);
+				SelectedSlotCanvas->SetPosition(NewPos);
+			}
+			break;
+		case 5 :
+			if (UCanvasPanelSlot* ImageSlot = Cast<UCanvasPanelSlot>(Slot5->Slot))
+			{
+				FVector2d NewPos = FVector2d(ImageSlot->GetPosition().X-5,ImageSlot->GetPosition().Y-5);
+				SelectedSlotCanvas->SetPosition(NewPos);
+			}
+			break;
+		default:
+			break;
+		}
+	}
+
+}

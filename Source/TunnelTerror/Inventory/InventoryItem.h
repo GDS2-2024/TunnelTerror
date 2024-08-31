@@ -30,5 +30,8 @@ public:
 	
 	// Function should be implemented by child classes
 	virtual void UseItem();
+
+	void ShowItem();
+	void HideItem();
 	
 };
