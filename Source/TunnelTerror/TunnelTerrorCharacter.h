@@ -64,6 +64,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Weapon)
 	bool GetHasRifle();
 
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+	void Ragdoll();
 	
 
 protected:
@@ -72,9 +74,6 @@ protected:
 
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
-
-	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
-	void Ragdoll();
 
 protected:
 	// APawn interface

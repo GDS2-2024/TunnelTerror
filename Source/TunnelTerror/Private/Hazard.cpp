@@ -2,6 +2,7 @@
 
 
 #include "Hazard.h"
+#include <TunnelTerror/TunnelTerrorCharacter.h>
 
 // Sets default values
 AHazard::AHazard()
@@ -14,10 +15,8 @@ AHazard::AHazard()
 void AHazard::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Display, TEXT("IT STARTED OMG"));
 	if (UStaticMeshComponent* mesh = Cast<UStaticMeshComponent>(GetRootComponent()))
 	{
-		UE_LOG(LogTemp, Display, TEXT("BRUH"));
 		mesh->OnComponentBeginOverlap.AddDynamic(this, &AHazard::OnHazardOverlap);
 	}
 }
@@ -25,7 +24,12 @@ void AHazard::BeginPlay()
 void AHazard::OnHazardOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 	UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& HitInfo)
 {
-	//ATunnelTerrorCharacter* character;
+	UE_LOG(LogTemp, Display, TEXT("AH"));
+	if (ATunnelTerrorCharacter* character = Cast<ATunnelTerrorCharacter>(OtherActor)) {
+		UE_LOG(LogTemp, Display, TEXT("AHHHHHHHHHHHHHHH"));
+		character->Ragdoll();
+	}
+		
 }
 
 // Called every frame
