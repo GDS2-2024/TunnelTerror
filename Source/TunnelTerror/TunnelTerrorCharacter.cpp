@@ -99,6 +99,11 @@ void ATunnelTerrorCharacter::Look(const FInputActionValue& Value)
 	}
 }
 
+void ATunnelTerrorCharacter::Ragdoll_Implementation()
+{
+
+}
+
 void ATunnelTerrorCharacter::SetHasRifle(bool bNewHasRifle)
 {
 	bHasRifle = bNewHasRifle;
