@@ -156,6 +156,11 @@ void ATunnelTerrorCharacter::UseSelectedItem()
 	Inventory->GetSelectedItem()->UseItem();
 }
 
+void ATunnelTerrorCharacter::Ragdoll_Implementation()
+{
+
+}
+
 void ATunnelTerrorCharacter::SetHasRifle(bool bNewHasRifle)
 {
 	bHasRifle = bNewHasRifle;

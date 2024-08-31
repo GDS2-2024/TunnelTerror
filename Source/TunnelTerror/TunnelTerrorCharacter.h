@@ -95,6 +95,10 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Weapon)
 	bool GetHasRifle();
 
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+	void Ragdoll();
+	
+
 protected:
 	/** Called for movement input */
 	void Move(const FInputActionValue& Value);
