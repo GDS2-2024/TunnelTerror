@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "InputActionValue.h"
+#include "Inventory/InventoryItem.h"
+#include "PlayerHUD.h"
 #include "TunnelTerrorCharacter.generated.h"
 
 class UInputComponent;
@@ -13,6 +15,7 @@ class USceneComponent;
 class UCameraComponent;
 class UAnimMontage;
 class USoundBase;
+class UInventoryComponent;
 
 UCLASS(config=Game)
 class ATunnelTerrorCharacter : public ACharacter
@@ -31,6 +34,10 @@ class ATunnelTerrorCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	class UInputMappingContext* DefaultMappingContext;
 
+	/* Inventory Input */
+	UPROPERTY(EditDefaultsOnly, Category=Input)
+	UInputMappingContext* InventoryMappingContext;
+	
 	/** Jump Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	class UInputAction* JumpAction;
@@ -39,6 +46,20 @@ class ATunnelTerrorCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	class UInputAction* MoveAction;
 
+	UPROPERTY(EditDefaultsOnly, Category=Input)
+	UInputAction* SelectSlot1;
+
+	UPROPERTY(EditDefaultsOnly, Category=Input)
+	UInputAction* SelectSlot2;
+
+	UPROPERTY(EditDefaultsOnly, Category=Input)
+	UInputAction* SelectSlot3;
+
+	UPROPERTY(EditDefaultsOnly, Category=Input)
+	UInputAction* SelectSlot4;
+
+	UPROPERTY(EditDefaultsOnly, Category=Input)
+	UInputAction* SelectSlot5;
 	
 public:
 	ATunnelTerrorCharacter();
@@ -56,6 +77,16 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Weapon)
 	bool bHasRifle;
 
+	/** Player Inventory */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UInventoryComponent* Inventory;
+
+	UFUNCTION()
+	void EquipToInventory(AInventoryItem* NewItem);
+
+	UFUNCTION()
+	void UseSelectedItem();
+	
 	/** Setter to set the bool */
 	UFUNCTION(BlueprintCallable, Category = Weapon)
 	void SetHasRifle(bool bNewHasRifle);
@@ -64,12 +95,27 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Weapon)
 	bool GetHasRifle();
 
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+	void Ragdoll();
+	
+
 protected:
 	/** Called for movement input */
 	void Move(const FInputActionValue& Value);
 
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
+
+	void Slot1(const FInputActionValue& Value);
+	void Slot2(const FInputActionValue& Value);
+	void Slot3(const FInputActionValue& Value);
+	void Slot4(const FInputActionValue& Value);
+	void Slot5(const FInputActionValue& Value);
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<UPlayerHUD> PlayerHUDClass;
+	UPROPERTY()
+	UPlayerHUD* PlayerHUD;
 
 protected:
 	// APawn interface
