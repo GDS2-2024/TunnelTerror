@@ -40,8 +40,7 @@ void AItemPickup::BeginPlay()
 
 void AItemPickup::MulticastDestroyPickup_Implementation()
 {
-	// Call Destroy on the client
-	UE_LOG(LogTemp, Warning, TEXT("MulticastDestroyPickup called on all clients. Destroying pickup."));
+	UE_LOG(LogTemp, Warning, TEXT("MulticastDestroyPickup called on a client. Destroying pickup."));
 	Destroy();
 }
 
@@ -64,7 +63,9 @@ void AItemPickup::OnPickupOverlap(UPrimitiveComponent* OverlappedComponent, AAct
 					Player->EquipToInventory(InventoryItem);
 
 					// Notify all clients to destroy the pickup
+					UE_LOG(LogTemp, Warning, TEXT("Calling MulticastDestroyPickup from server"));
 					MulticastDestroyPickup();
+					UE_LOG(LogTemp, Warning, TEXT("Destroying on the server"));
 					Destroy(); // Server-side destroy
 				}
 				else

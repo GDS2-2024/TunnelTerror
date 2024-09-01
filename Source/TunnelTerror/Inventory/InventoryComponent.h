@@ -49,6 +49,18 @@ private:
 	// Function to be called when the inventory slots are replicated
 	UFUNCTION()
 	void OnRep_InventorySlots();
+
+	// Tell the server to show item on all clients
+	UFUNCTION(Server, Reliable)
+	void ServerShowItem(AInventoryItem* Item);
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastShowItem(AInventoryItem* Item);
+	
+	// Tell the server to hide item on all clients
+	UFUNCTION(Server, Reliable)
+	void ServerHideItem(AInventoryItem* Item);
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastHideItem(AInventoryItem* Item);
 	
 	// Finds an empty slot in the inventory
 	FInventorySlot* GetAvailableSlot();

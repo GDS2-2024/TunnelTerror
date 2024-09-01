@@ -57,14 +57,16 @@ void UInventoryComponent::ChangeSelectedSlot(int32 NewSelection)
 	//Hide the previous selection
 	if (!SelectedSlot.IsEmpty())
 	{
-		SelectedSlot.Item->HideItem();
+		//SelectedSlot.Item->HideItem();
+		ServerHideItem(SelectedSlot.Item);
 	}
 	//Set the new selection
 	SelectedSlotIndex = NewSelection;
 	SelectedSlot = InventorySlots[NewSelection-1];
 	if (!SelectedSlot.IsEmpty())
 	{
-		SelectedSlot.Item->ShowItem();
+		//SelectedSlot.Item->ShowItem();
+		ServerShowItem(SelectedSlot.Item);
 	}
 }
 
@@ -84,6 +86,27 @@ void UInventoryComponent::OnRep_InventorySlots()
 	}
 }
 
+// Show Item
+void UInventoryComponent::ServerShowItem_Implementation(AInventoryItem* Item)
+{
+	MulticastShowItem(Item);	
+}
+
+void UInventoryComponent::MulticastShowItem_Implementation(AInventoryItem* Item)
+{
+	Item->ShowItem();
+}
+
+// Hide Item
+void UInventoryComponent::ServerHideItem_Implementation(AInventoryItem* Item)
+{
+	MulticastHideItem(Item);
+}
+
+void UInventoryComponent::MulticastHideItem_Implementation(AInventoryItem* Item)
+{
+	Item->HideItem();
+}
 
 FInventorySlot* UInventoryComponent::GetAvailableSlot()
 {
