@@ -68,6 +68,8 @@ protected:
 	virtual void BeginPlay();
 
 public:
+
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 		
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
@@ -78,12 +80,18 @@ public:
 	bool bHasRifle;
 
 	/** Player Inventory */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Replicated)
 	UInventoryComponent* Inventory;
 
 	UFUNCTION()
 	void EquipToInventory(AInventoryItem* NewItem);
+	
+	UFUNCTION(Server, Reliable)
+	void ServerEquipToInventory(AInventoryItem* InventoryItem);
 
+	UFUNCTION(Client, Reliable)
+	void ClientUpdateInventoryUI(AInventoryItem* NewItem);
+	
 	UFUNCTION()
 	void UseSelectedItem();
 	

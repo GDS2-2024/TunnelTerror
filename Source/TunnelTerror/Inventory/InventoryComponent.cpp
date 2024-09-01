@@ -2,6 +2,8 @@
 
 
 #include "InventoryComponent.h"
+#include "Net/UnrealNetwork.h"
+#include "TunnelTerror/TunnelTerrorCharacter.h"
 
 // Sets default values for this component's properties
 UInventoryComponent::UInventoryComponent()
@@ -55,20 +57,55 @@ void UInventoryComponent::ChangeSelectedSlot(int32 NewSelection)
 	//Hide the previous selection
 	if (!SelectedSlot.IsEmpty())
 	{
-		SelectedSlot.Item->HideItem();
+		//SelectedSlot.Item->HideItem();
+		ServerHideItem(SelectedSlot.Item);
 	}
 	//Set the new selection
 	SelectedSlotIndex = NewSelection;
 	SelectedSlot = InventorySlots[NewSelection-1];
 	if (!SelectedSlot.IsEmpty())
 	{
-		SelectedSlot.Item->ShowItem();
+		//SelectedSlot.Item->ShowItem();
+		ServerShowItem(SelectedSlot.Item);
 	}
 }
 
 AInventoryItem* UInventoryComponent::GetSelectedItem()
 {
 	return SelectedSlot.Item;
+}
+
+void UInventoryComponent::OnRep_InventorySlots()
+{
+	// Handle client-side logic when inventory slots are updated
+	UE_LOG(LogTemp, Log, TEXT("Inventory slots replicated to the client."));
+	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
+	if (AInventoryItem* NewItem = InventorySlots[GetNumOfItems()-1].Item)
+	{
+		Player->ClientUpdateInventoryUI(NewItem);
+	}
+}
+
+// Show Item
+void UInventoryComponent::ServerShowItem_Implementation(AInventoryItem* Item)
+{
+	MulticastShowItem(Item);	
+}
+
+void UInventoryComponent::MulticastShowItem_Implementation(AInventoryItem* Item)
+{
+	Item->ShowItem();
+}
+
+// Hide Item
+void UInventoryComponent::ServerHideItem_Implementation(AInventoryItem* Item)
+{
+	MulticastHideItem(Item);
+}
+
+void UInventoryComponent::MulticastHideItem_Implementation(AInventoryItem* Item)
+{
+	Item->HideItem();
 }
 
 FInventorySlot* UInventoryComponent::GetAvailableSlot()
@@ -105,4 +142,13 @@ void UInventoryComponent::TickComponent(float DeltaTime, ELevelTick TickType, FA
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 	
 }
+
+void UInventoryComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(UInventoryComponent, InventorySlots);
+	DOREPLIFETIME(UInventoryComponent, NumOfItems);
+}
+
 

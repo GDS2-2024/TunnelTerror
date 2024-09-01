@@ -8,6 +8,7 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "Inventory/InventoryComponent.h"
+#include "Net/UnrealNetwork.h"
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -15,6 +16,8 @@
 
 ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 {
+	bReplicates = true;
+	
 	// Character doesnt have a rifle at start
 	bHasRifle = false;
 	
@@ -35,10 +38,10 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 	Mesh1P->CastShadow = false;
 	//Mesh1P->SetRelativeRotation(FRotator(0.9f, -19.19f, 5.2f));
 	Mesh1P->SetRelativeLocation(FVector(-30.f, 0.f, -150.f));
-
+	
 	// Create Inventory Component
 	Inventory = CreateDefaultSubobject<UInventoryComponent>(TEXT("Player Inventory"));
-
+	Inventory->SetIsReplicated(true);
 }
 
 void ATunnelTerrorCharacter::BeginPlay()
@@ -55,10 +58,18 @@ void ATunnelTerrorCharacter::BeginPlay()
 			Subsystem->AddMappingContext(InventoryMappingContext, 0);
 		}
 
-		PlayerHUD = CreateWidget<UPlayerHUD>(PlayerController, PlayerHUDClass);
-		PlayerHUD->AddToPlayerScreen();
+		if(IsLocallyControlled())
+		{
+			PlayerHUD = CreateWidget<UPlayerHUD>(PlayerController, PlayerHUDClass);
+			PlayerHUD->AddToPlayerScreen();
+		}
 	}
+}
 
+void ATunnelTerrorCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	DOREPLIFETIME(ATunnelTerrorCharacter, Inventory);
 }
 
 //////////////////////////////////////////////////////////////////////////// Input
@@ -146,10 +157,51 @@ void ATunnelTerrorCharacter::Slot5(const FInputActionValue& Value)
 
 void ATunnelTerrorCharacter::EquipToInventory(AInventoryItem* NewItem)
 {
-	Inventory->AddItem(NewItem);
-	UE_LOG(LogTemp, Warning, TEXT("Adding Item to Player Inventory"))
-	PlayerHUD->SetSlotIcon(Inventory->NumOfItems, NewItem->InventoryIcon);
+	if (HasAuthority())
+	{
+		if (NewItem)
+		{
+			Inventory->AddItem(NewItem);
+
+			ClientUpdateInventoryUI(NewItem);
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Failed to add item to inventory because NewItem is null."));
+		}
+	}
 }
+
+
+void ATunnelTerrorCharacter::ServerEquipToInventory_Implementation(AInventoryItem* InventoryItem)
+{
+	EquipToInventory(InventoryItem);
+}
+
+void ATunnelTerrorCharacter::ClientUpdateInventoryUI_Implementation(AInventoryItem* NewItem)
+{
+	if (!PlayerHUD)
+	{
+		UE_LOG(LogTemp, Error, TEXT("PlayerHUD is null in ClientUpdateInventoryUI"));
+		return;
+	}
+
+	if (!Inventory)
+	{
+		UE_LOG(LogTemp, Error, TEXT("Inventory is null in ClientUpdateInventoryUI"));
+		return;
+	}
+
+	if (NewItem)
+	{
+		PlayerHUD->SetSlotIcon(Inventory->GetNumOfItems(), NewItem->InventoryIcon);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("NewItem is null in ClientUpdateInventoryUI"));
+	}
+}
+
 
 void ATunnelTerrorCharacter::UseSelectedItem()
 {
