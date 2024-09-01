@@ -2,6 +2,8 @@
 
 
 #include "InventoryComponent.h"
+#include "Net/UnrealNetwork.h"
+#include "TunnelTerror/TunnelTerrorCharacter.h"
 
 // Sets default values for this component's properties
 UInventoryComponent::UInventoryComponent()
@@ -71,6 +73,18 @@ AInventoryItem* UInventoryComponent::GetSelectedItem()
 	return SelectedSlot.Item;
 }
 
+void UInventoryComponent::OnRep_InventorySlots()
+{
+	// Handle client-side logic when inventory slots are updated
+	UE_LOG(LogTemp, Log, TEXT("Inventory slots replicated to the client."));
+	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
+	if (AInventoryItem* NewItem = InventorySlots[GetNumOfItems()-1].Item)
+	{
+		Player->ClientUpdateInventoryUI(NewItem);
+	}
+}
+
+
 FInventorySlot* UInventoryComponent::GetAvailableSlot()
 {
 	if (HasEmptySlot())
@@ -105,4 +119,13 @@ void UInventoryComponent::TickComponent(float DeltaTime, ELevelTick TickType, FA
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 	
 }
+
+void UInventoryComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(UInventoryComponent, InventorySlots);
+	DOREPLIFETIME(UInventoryComponent, NumOfItems);
+}
+
 

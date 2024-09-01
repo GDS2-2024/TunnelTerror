@@ -17,7 +17,7 @@ class TUNNELTERROR_API UInventoryComponent : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UInventoryComponent();
-
+	
 	// Add Item to an available slot
 	void AddItem(AInventoryItem* Item);
 	// Add Item to the given Inventory Slot
@@ -27,21 +27,29 @@ public:
 	bool HasEmptySlot() const;
 	void ChangeSelectedSlot(int32 NewSelection);
 	AInventoryItem* GetSelectedItem();
-
-	UPROPERTY(VisibleAnywhere)
-	int32 NumOfItems;
+	int32 GetNumOfItems() { return NumOfItems; }
 	
 private:
 	
 	UPROPERTY(VisibleAnywhere)
-	TArray<FInventorySlot> InventorySlots;
-	UPROPERTY(VisibleAnywhere)
 	int32 MaxSlots;
+
+	UPROPERTY(ReplicatedUsing = OnRep_InventorySlots, VisibleAnywhere)
+	TArray<FInventorySlot> InventorySlots;
+
+	UPROPERTY(Replicated, VisibleAnywhere)
+	int32 NumOfItems;
+
 	UPROPERTY(VisibleAnywhere)
 	FInventorySlot SelectedSlot;
+
 	UPROPERTY(VisibleAnywhere)
 	int32 SelectedSlotIndex;
 
+	// Function to be called when the inventory slots are replicated
+	UFUNCTION()
+	void OnRep_InventorySlots();
+	
 	// Finds an empty slot in the inventory
 	FInventorySlot* GetAvailableSlot();
 
@@ -49,9 +57,11 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
+
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
 		
 };

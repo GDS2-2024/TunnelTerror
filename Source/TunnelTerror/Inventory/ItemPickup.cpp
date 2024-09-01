@@ -6,6 +6,8 @@
 
 AItemPickup::AItemPickup()
 {
+	bReplicates = true;
+	
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
@@ -36,34 +38,45 @@ void AItemPickup::BeginPlay()
 	}
 }
 
+void AItemPickup::MulticastDestroyPickup_Implementation()
+{
+	// Call Destroy on the client
+	UE_LOG(LogTemp, Warning, TEXT("MulticastDestroyPickup called on all clients. Destroying pickup."));
+	Destroy();
+}
+
 void AItemPickup::OnPickupOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
                                   UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& HitInfo)
 {
-	//UE_LOG(LogTemp, Display, TEXT("Overlap event occurred in PickupBase"))
-	if (ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(OtherActor))
+	if(GetLocalRole() == ROLE_Authority) // Only the server should handle the pickup
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Player has collided with item pickup"))
-		if (CorrespondingItemClass)
+		if (ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(OtherActor))
 		{
-			// Spawn an instance of the inventory item
-			AInventoryItem* InventoryItem = GetWorld()->SpawnActor<AInventoryItem>(CorrespondingItemClass);
-			InventoryItem->AttachToComponent(Player->GetMesh1P(), FAttachmentTransformRules::KeepRelativeTransform, "GripPoint");
-			//	TO DO: 
-			//	Need to have attach an additional mesh to the 3rd person character
-            
-			if (InventoryItem)
+			if (CorrespondingItemClass)
 			{
-				// Pass the spawned item to the player's inventory
-				Player->EquipToInventory(InventoryItem);
+				// Spawn an instance of the inventory item on the server
+				AInventoryItem* InventoryItem = GetWorld()->SpawnActor<AInventoryItem>(CorrespondingItemClass);
+				if (InventoryItem)
+				{
+					InventoryItem->AttachToComponent(Player->GetMesh1P(), FAttachmentTransformRules::KeepRelativeTransform, "GripPoint");
+
+					// Pass the spawned item to the player's inventory
+					Player->EquipToInventory(InventoryItem);
+
+					// Notify all clients to destroy the pickup
+					MulticastDestroyPickup();
+					Destroy(); // Server-side destroy
+				}
+				else
+				{
+					UE_LOG(LogTemp, Warning, TEXT("Failed to spawn inventory item from CorrespondingItemClass"));
+				}
 			}
 			else
 			{
-				UE_LOG(LogTemp, Warning, TEXT("Failed to spawn inventory item from CorrespondingItemClass"));
+				UE_LOG(LogTemp, Warning, TEXT("CorrespondingItemClass is NULL"));
 			}
-		} else
-		{
-			UE_LOG(LogTemp, Warning, TEXT("CorrespondingItemClass is NULL"));
 		}
-		Destroy();
 	}
 }
+
