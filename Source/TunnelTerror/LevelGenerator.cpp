@@ -14,7 +14,8 @@ void ALevelGenerator::BeginPlay()
 {
     Super::BeginPlay();
     InitializeGrid(Width, Height);
-    SpawnMap(Width, Height);
+    SpawnPath(Width, Height);
+    UE_LOG(LogTemp, Error, TEXT("Rooms: %d"), rooms);
 }
 
 // Called every frame
@@ -43,7 +44,7 @@ void ALevelGenerator::InitializeGrid(int32 GridWidth, int32 GridHeight)
     UE_LOG(LogTemp, Log, TEXT("Grid initialized with dimensions %dx%d."), GridWidth, GridHeight);
 }
 
-URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubclassOf<AActor> ActorToSpawn, bool isX)
+URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubclassOf<AActor> ActorToSpawn, bool start)
 {
     UE_LOG(LogTemp, Warning, TEXT("spawning room at: %d, J: %d"), CurrentI, CurrentJ);
     const float CellSize = 500.0f;
@@ -75,18 +76,20 @@ URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubc
     return RC;
 }
 
-void ALevelGenerator::SpawnMap(int32 GridWidth, int32 GridHeight)
+void ALevelGenerator::SpawnPath(int32 GridWidth, int32 GridHeight)
 {
     int32 CurrentI = 50;
     int32 CurrentJ = 0;
     int32 NextI = 0;
     int32 NextJ = 0;
+    rooms = 0;
     TSubclassOf<AActor> ActorToSpawnNext = nullptr;
 
     LastActor = Rooms[0];
     URoomComponent* RC = SpawnRoom(CurrentI, CurrentJ, LastActor.Actor, true);
+    rooms += 1;
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 50; i++)
     {
         bool bFoundRoom = false;
 
@@ -124,6 +127,7 @@ void ALevelGenerator::SpawnMap(int32 GridWidth, int32 GridHeight)
             if (CanPlaceRoom(NextI, NextJ, NextRC))
             {
                 RC = SpawnRoom(NextI, NextJ, ActorToSpawnNext, true);
+                rooms += 1;
                 UE_LOG(LogTemp, Warning, TEXT("Room spawned: %s"), *ActorToSpawnNext->GetName());
 
                 CurrentI = NextI;

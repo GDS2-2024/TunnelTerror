@@ -63,8 +63,10 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Grid")
     int32 Width;
 
+    int32 rooms;
+
     void InitializeGrid(int32 GridWidth, int32 GridHeight);
-    void SpawnMap(int32 GridWidth, int32 GridHeight);
+    void SpawnPath(int32 GridWidth, int32 GridHeight);
     URoomComponent* SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubclassOf<AActor> ActorToSpawn, bool isX);
     void MarkGridAsOccupied(URoomComponent* RoomComponent, FVector Origin);
     bool CanPlaceRoom(int32 CurrentI, int32 CurrentJ, URoomComponent* RC);
