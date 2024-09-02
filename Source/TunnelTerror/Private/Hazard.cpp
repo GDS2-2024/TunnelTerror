@@ -15,21 +15,21 @@ AHazard::AHazard()
 void AHazard::BeginPlay()
 {
 	Super::BeginPlay();
-	if (UStaticMeshComponent* mesh = Cast<UStaticMeshComponent>(GetRootComponent()))
-	{
-		mesh->OnComponentBeginOverlap.AddDynamic(this, &AHazard::OnHazardOverlap);
+
+	if (HasAuthority()) {
+		if (UStaticMeshComponent* mesh = Cast<UStaticMeshComponent>(GetRootComponent()))
+		{
+			mesh->OnComponentBeginOverlap.AddDynamic(this, &AHazard::OnHazardOverlap);
+		}
 	}
 }
 
 void AHazard::OnHazardOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 	UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& HitInfo)
 {
-	UE_LOG(LogTemp, Display, TEXT("AH"));
 	if (ATunnelTerrorCharacter* character = Cast<ATunnelTerrorCharacter>(OtherActor)) {
-		UE_LOG(LogTemp, Display, TEXT("AHHHHHHHHHHHHHHH"));
-		character->Ragdoll();
+		character->Die();
 	}
-		
 }
 
 // Called every frame

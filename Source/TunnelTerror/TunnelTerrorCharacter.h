@@ -106,10 +106,11 @@ public:
 	/** Getter for the bool */
 	UFUNCTION(BlueprintCallable, Category = Weapon)
 	bool GetHasRifle();
-
-	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
-	void Ragdoll();
 	
+	/// <summary>
+	/// Kills the player
+	/// </summary>
+	void Die();
 
 protected:
 	/** Called for movement input */
@@ -130,6 +131,12 @@ protected:
 	TSubclassOf<UPlayerHUD> PlayerHUDClass;
 	UPROPERTY()
 	UPlayerHUD* PlayerHUD;
+
+
+	UFUNCTION(NetMulticast, Reliable)
+	void OnDeathVisual();
+	UFUNCTION(BlueprintNativeEvent)
+	void Ragdoll();
 
 protected:
 	// APawn interface

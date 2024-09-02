@@ -99,6 +99,22 @@ void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 	}
 }
 
+void ATunnelTerrorCharacter::Die()
+{
+	if (!HasAuthority()) return;
+	OnDeathVisual();
+}
+
+void ATunnelTerrorCharacter::OnDeathVisual_Implementation()
+{
+	Ragdoll();
+}
+
+void ATunnelTerrorCharacter::Ragdoll_Implementation()
+{
+
+}
+
 void ATunnelTerrorCharacter::Move(const FInputActionValue& Value)
 {
 	// input is a Vector2D
@@ -234,11 +250,6 @@ void ATunnelTerrorCharacter::ClientUpdateInventoryUI_Implementation(AInventoryIt
 void ATunnelTerrorCharacter::UseSelectedItem()
 {
 	Inventory->GetSelectedItem()->UseItem();
-}
-
-void ATunnelTerrorCharacter::Ragdoll_Implementation()
-{
-
 }
 
 void ATunnelTerrorCharacter::SetHasRifle(bool bNewHasRifle)
