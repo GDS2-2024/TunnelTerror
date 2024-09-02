@@ -95,6 +95,7 @@ void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 		EnhancedInputComponent->BindAction(Slot3, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot3);
 		EnhancedInputComponent->BindAction(Slot4, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot4);
 		EnhancedInputComponent->BindAction(Slot5, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot5);
+		EnhancedInputComponent->BindAction(Scroll, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::ScrollSlots);
 	}
 }
 
@@ -152,6 +153,36 @@ void ATunnelTerrorCharacter::SelectSlot5(const FInputActionValue& Value)
 {
 	Inventory->ChangeSelectedSlot(5);
 	PlayerHUD->SetSlotSelection(5);
+}
+
+void ATunnelTerrorCharacter::ScrollSlots(const FInputActionValue& Value)
+{
+	//UE_LOG(LogTemp, Log, TEXT("Scroll wheel is outputting: %f"), Value.Get<float>());
+	if (Value.Get<float>() > 0)
+	{
+		//Increase by 1, wrap around to start
+		if (Inventory->SelectedSlotIndex < Inventory->GetMaxSlots())
+		{
+			Inventory->ChangeSelectedSlot(Inventory->SelectedSlotIndex+1);
+			PlayerHUD->SetSlotSelection(Inventory->SelectedSlotIndex);
+		} else
+		{
+			Inventory->ChangeSelectedSlot(1);
+			PlayerHUD->SetSlotSelection(1);
+		}
+	} else
+	{
+		//Decrease by 1, wrap around to start
+		if (Inventory->SelectedSlotIndex > 1)
+		{
+			Inventory->ChangeSelectedSlot(Inventory->SelectedSlotIndex-1);
+			PlayerHUD->SetSlotSelection(Inventory->SelectedSlotIndex);
+		} else
+		{
+			Inventory->ChangeSelectedSlot(5);
+			PlayerHUD->SetSlotSelection(5);
+		}
+	}
 }
 
 void ATunnelTerrorCharacter::EquipToInventory(AInventoryItem* NewItem)

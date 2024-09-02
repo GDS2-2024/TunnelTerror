@@ -34,7 +34,7 @@ class ATunnelTerrorCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	class UInputMappingContext* DefaultMappingContext;
 
-	/* Inventory Input */
+	/** Inventory Input */
 	UPROPERTY(EditDefaultsOnly, Category=Input)
 	UInputMappingContext* InventoryMappingContext;
 	
@@ -46,6 +46,7 @@ class ATunnelTerrorCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	class UInputAction* MoveAction;
 
+	/** Inventory Input Actions */
 	UPROPERTY(EditDefaultsOnly, Category=Input)
 	UInputAction* Slot1;
 
@@ -61,6 +62,9 @@ class ATunnelTerrorCharacter : public ACharacter
 	UPROPERTY(EditDefaultsOnly, Category=Input)
 	UInputAction* Slot5;
 
+	UPROPERTY(EditDefaultsOnly, Category=Input)
+	UInputAction* Scroll;
+	
 public:
 	ATunnelTerrorCharacter();
 
@@ -113,12 +117,14 @@ protected:
 
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
-	
+
+	/** Called for inventory input */
 	void SelectSlot1(const FInputActionValue& Value);
 	void SelectSlot2(const FInputActionValue& Value);
 	void SelectSlot3(const FInputActionValue& Value);
 	void SelectSlot4(const FInputActionValue& Value);
 	void SelectSlot5(const FInputActionValue& Value);
+	void ScrollSlots(const FInputActionValue& Value);
 	
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<UPlayerHUD> PlayerHUDClass;

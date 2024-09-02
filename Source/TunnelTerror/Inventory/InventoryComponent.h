@@ -28,6 +28,10 @@ public:
 	void ChangeSelectedSlot(int32 NewSelection);
 	AInventoryItem* GetSelectedItem();
 	int32 GetNumOfItems() { return NumOfItems; }
+	INT32 GetMaxSlots() {return MaxSlots; }
+
+	UPROPERTY(VisibleAnywhere)
+    	int32 SelectedSlotIndex;
 	
 private:
 	
@@ -42,9 +46,6 @@ private:
 
 	UPROPERTY(VisibleAnywhere)
 	FInventorySlot SelectedSlot;
-
-	UPROPERTY(VisibleAnywhere)
-	int32 SelectedSlotIndex;
 
 	// Function to be called when the inventory slots are replicated
 	UFUNCTION()
