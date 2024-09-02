@@ -90,14 +90,13 @@ void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Look);
 
 		//Inventory Selection
-		EnhancedInputComponent->BindAction(SelectSlot1, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Slot1);
-		EnhancedInputComponent->BindAction(SelectSlot2, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Slot2);
-		EnhancedInputComponent->BindAction(SelectSlot3, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Slot3);
-		EnhancedInputComponent->BindAction(SelectSlot4, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Slot4);
-		EnhancedInputComponent->BindAction(SelectSlot5, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Slot5);
+		EnhancedInputComponent->BindAction(Slot1, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot1);
+		EnhancedInputComponent->BindAction(Slot2, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot2);
+		EnhancedInputComponent->BindAction(Slot3, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot3);
+		EnhancedInputComponent->BindAction(Slot4, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot4);
+		EnhancedInputComponent->BindAction(Slot5, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot5);
 	}
 }
-
 
 void ATunnelTerrorCharacter::Move(const FInputActionValue& Value)
 {
@@ -125,31 +124,31 @@ void ATunnelTerrorCharacter::Look(const FInputActionValue& Value)
 	}
 }
 
-void ATunnelTerrorCharacter::Slot1(const FInputActionValue& Value)
+void ATunnelTerrorCharacter::SelectSlot1(const FInputActionValue& Value)
 {
 	Inventory->ChangeSelectedSlot(1);
 	PlayerHUD->SetSlotSelection(1);
 }
 
-void ATunnelTerrorCharacter::Slot2(const FInputActionValue& Value)
+void ATunnelTerrorCharacter::SelectSlot2(const FInputActionValue& Value)
 {
 	Inventory->ChangeSelectedSlot(2);
 	PlayerHUD->SetSlotSelection(2);
 }
 
-void ATunnelTerrorCharacter::Slot3(const FInputActionValue& Value)
+void ATunnelTerrorCharacter::SelectSlot3(const FInputActionValue& Value)
 {
 	Inventory->ChangeSelectedSlot(3);
 	PlayerHUD->SetSlotSelection(3);
 }
 
-void ATunnelTerrorCharacter::Slot4(const FInputActionValue& Value)
+void ATunnelTerrorCharacter::SelectSlot4(const FInputActionValue& Value)
 {
 	Inventory->ChangeSelectedSlot(4);
 	PlayerHUD->SetSlotSelection(4);
 }
 
-void ATunnelTerrorCharacter::Slot5(const FInputActionValue& Value)
+void ATunnelTerrorCharacter::SelectSlot5(const FInputActionValue& Value)
 {
 	Inventory->ChangeSelectedSlot(5);
 	PlayerHUD->SetSlotSelection(5);
@@ -171,7 +170,6 @@ void ATunnelTerrorCharacter::EquipToInventory(AInventoryItem* NewItem)
 		}
 	}
 }
-
 
 void ATunnelTerrorCharacter::ServerEquipToInventory_Implementation(AInventoryItem* InventoryItem)
 {
@@ -201,7 +199,6 @@ void ATunnelTerrorCharacter::ClientUpdateInventoryUI_Implementation(AInventoryIt
 		UE_LOG(LogTemp, Warning, TEXT("NewItem is null in ClientUpdateInventoryUI"));
 	}
 }
-
 
 void ATunnelTerrorCharacter::UseSelectedItem()
 {

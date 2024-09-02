@@ -47,20 +47,20 @@ class ATunnelTerrorCharacter : public ACharacter
 	class UInputAction* MoveAction;
 
 	UPROPERTY(EditDefaultsOnly, Category=Input)
-	UInputAction* SelectSlot1;
+	UInputAction* Slot1;
 
 	UPROPERTY(EditDefaultsOnly, Category=Input)
-	UInputAction* SelectSlot2;
+	UInputAction* Slot2;
 
 	UPROPERTY(EditDefaultsOnly, Category=Input)
-	UInputAction* SelectSlot3;
+	UInputAction* Slot3;
 
 	UPROPERTY(EditDefaultsOnly, Category=Input)
-	UInputAction* SelectSlot4;
+	UInputAction* Slot4;
 
 	UPROPERTY(EditDefaultsOnly, Category=Input)
-	UInputAction* SelectSlot5;
-	
+	UInputAction* Slot5;
+
 public:
 	ATunnelTerrorCharacter();
 
@@ -113,13 +113,13 @@ protected:
 
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
-
-	void Slot1(const FInputActionValue& Value);
-	void Slot2(const FInputActionValue& Value);
-	void Slot3(const FInputActionValue& Value);
-	void Slot4(const FInputActionValue& Value);
-	void Slot5(const FInputActionValue& Value);
-
+	
+	void SelectSlot1(const FInputActionValue& Value);
+	void SelectSlot2(const FInputActionValue& Value);
+	void SelectSlot3(const FInputActionValue& Value);
+	void SelectSlot4(const FInputActionValue& Value);
+	void SelectSlot5(const FInputActionValue& Value);
+	
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<UPlayerHUD> PlayerHUDClass;
 	UPROPERTY()
