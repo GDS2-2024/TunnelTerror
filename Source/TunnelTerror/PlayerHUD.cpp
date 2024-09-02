@@ -10,74 +10,70 @@ void UPlayerHUD::SetSlotIcon(int32 SlotNum, UTexture2D* IconToSet)
 	{
 	case 1 :
 		Slot1->SetBrushFromTexture(IconToSet);
+		Slot1->SetBrushTintColor(ItemPresent);
 		break;
 	case 2 :
 		Slot2->SetBrushFromTexture(IconToSet);
+		Slot2->SetBrushTintColor(ItemPresent);
 		break;
 	case 3 :
 		Slot3->SetBrushFromTexture(IconToSet);
+		Slot3->SetBrushTintColor(ItemPresent);
 		break;
 	case 4 :
 		Slot4->SetBrushFromTexture(IconToSet);
+		Slot4->SetBrushTintColor(ItemPresent);
 		break;
 	case 5 :
 		Slot5->SetBrushFromTexture(IconToSet);
+		Slot5->SetBrushTintColor(ItemPresent);
 		break;
 	default:
 		break;
 	}
 }
 
-void UPlayerHUD::ClearSlotIcon(int32 SlotNum)
-{
-	
-}
-
 void UPlayerHUD::SetSlotSelection(int32 SlotNum)
 {
-	// Get the Canvas Panel Slot of the Border
-	if (UCanvasPanelSlot* SelectedSlotCanvas = Cast<UCanvasPanelSlot>(SelectedSlot->Slot))
+	
+	switch (SlotNum)
 	{
-		switch (SlotNum)
-		{
-		case 1 :
-			if (UCanvasPanelSlot* ImageSlot = Cast<UCanvasPanelSlot>(Slot1->Slot))
-			{
-				FVector2d NewPos = FVector2d(ImageSlot->GetPosition().X-5,ImageSlot->GetPosition().Y-5);
-				SelectedSlotCanvas->SetPosition(NewPos);
-			}
-			break;
-		case 2 :
-			if (UCanvasPanelSlot* ImageSlot = Cast<UCanvasPanelSlot>(Slot2->Slot))
-			{
-				FVector2d NewPos = FVector2d(ImageSlot->GetPosition().X-5,ImageSlot->GetPosition().Y-5);
-				SelectedSlotCanvas->SetPosition(NewPos);
-			}
-			break;
-		case 3 :
-			if (UCanvasPanelSlot* ImageSlot = Cast<UCanvasPanelSlot>(Slot3->Slot))
-			{
-				FVector2d NewPos = FVector2d(ImageSlot->GetPosition().X-5,ImageSlot->GetPosition().Y-5);
-				SelectedSlotCanvas->SetPosition(NewPos);
-			}
-			break;
-		case 4 :
-			if (UCanvasPanelSlot* ImageSlot = Cast<UCanvasPanelSlot>(Slot4->Slot))
-			{
-				FVector2d NewPos = FVector2d(ImageSlot->GetPosition().X-5,ImageSlot->GetPosition().Y-5);
-				SelectedSlotCanvas->SetPosition(NewPos);
-			}
-			break;
-		case 5 :
-			if (UCanvasPanelSlot* ImageSlot = Cast<UCanvasPanelSlot>(Slot5->Slot))
-			{
-				FVector2d NewPos = FVector2d(ImageSlot->GetPosition().X-5,ImageSlot->GetPosition().Y-5);
-				SelectedSlotCanvas->SetPosition(NewPos);
-			}
-			break;
-		default:
-			break;
-		}
+	case 1 :
+		BackgroundSlot1->SetBrushTintColor(SelectedColour);
+		BackgroundSlot2->SetBrushTintColor(DeselectedColour);
+		BackgroundSlot3->SetBrushTintColor(DeselectedColour);
+		BackgroundSlot4->SetBrushTintColor(DeselectedColour);
+		BackgroundSlot5->SetBrushTintColor(DeselectedColour);
+		break;
+	case 2 :
+		BackgroundSlot1->SetBrushTintColor(DeselectedColour);
+		BackgroundSlot2->SetBrushTintColor(SelectedColour);
+		BackgroundSlot3->SetBrushTintColor(DeselectedColour);
+		BackgroundSlot4->SetBrushTintColor(DeselectedColour);
+		BackgroundSlot5->SetBrushTintColor(DeselectedColour);
+		break;
+	case 3 :
+		BackgroundSlot1->SetBrushTintColor(DeselectedColour);
+		BackgroundSlot2->SetBrushTintColor(DeselectedColour);
+		BackgroundSlot3->SetBrushTintColor(SelectedColour);
+		BackgroundSlot4->SetBrushTintColor(DeselectedColour);
+		BackgroundSlot5->SetBrushTintColor(DeselectedColour);
+		break;
+	case 4 :
+		BackgroundSlot1->SetBrushTintColor(DeselectedColour);
+		BackgroundSlot2->SetBrushTintColor(DeselectedColour);
+		BackgroundSlot3->SetBrushTintColor(DeselectedColour);
+		BackgroundSlot4->SetBrushTintColor(SelectedColour);
+		BackgroundSlot5->SetBrushTintColor(DeselectedColour);
+		break;
+	case 5 :
+		BackgroundSlot1->SetBrushTintColor(DeselectedColour);
+		BackgroundSlot2->SetBrushTintColor(DeselectedColour);
+		BackgroundSlot3->SetBrushTintColor(DeselectedColour);
+		BackgroundSlot4->SetBrushTintColor(DeselectedColour);
+		BackgroundSlot5->SetBrushTintColor(SelectedColour);
+		break;
+	default:
+		break;
 	}
-
 }
