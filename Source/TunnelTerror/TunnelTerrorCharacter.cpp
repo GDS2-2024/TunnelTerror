@@ -9,6 +9,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "Inventory/InventoryComponent.h"
 #include "Net/UnrealNetwork.h"
+#include <TunnelTerrorPlayerState.h>
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -70,9 +71,15 @@ void ATunnelTerrorCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 	DOREPLIFETIME(ATunnelTerrorCharacter, Inventory);
+	DOREPLIFETIME(ATunnelTerrorCharacter, bIsRagdolled);
 }
 
 //////////////////////////////////////////////////////////////////////////// Input
+
+void ATunnelTerrorCharacter::OnRagdoll_Implementation()
+{
+	UE_LOG(LogTemp, Log, TEXT("Eyy that's nice"));
+}
 
 void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
@@ -102,17 +109,40 @@ void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 void ATunnelTerrorCharacter::Die()
 {
 	if (!HasAuthority()) return;
-	OnDeathVisual();
+	if (ATunnelTerrorPlayerState* playerState = GetPlayerState<ATunnelTerrorPlayerState>()) {
+		playerState->SetIsInfected(true);
+		SetIsRagdolled(true);
+		UE_LOG(LogTemp, Log, TEXT("Test 1"));
+
+		FTimerHandle timerHandle = FTimerHandle();
+		GetWorldTimerManager().SetTimer(timerHandle, this, &ATunnelTerrorCharacter::Reanimate, 2);
+	}
+	else {
+		UE_LOG(LogTemp, Error, TEXT("Couldn't cast to ATunnelTerrorPlayerState!"));
+	}
 }
 
-void ATunnelTerrorCharacter::OnDeathVisual_Implementation()
+void ATunnelTerrorCharacter::Reanimate()
 {
-	Ragdoll();
+	if (!HasAuthority()) return;
+	SetIsRagdolled(false);
 }
 
-void ATunnelTerrorCharacter::Ragdoll_Implementation()
-{
+//void ATunnelTerrorCharacter::OnRagdoll_Implementation()
+//{
+//	OnRagdollBP();
+//}
 
+void ATunnelTerrorCharacter::SetIsRagdolled(const bool bNewRagdolled)
+{
+	if (!HasAuthority()) {
+		UE_LOG(LogTemp, Error, TEXT("This should only be called from server!"));
+		return;
+	}
+
+	UE_LOG(LogTemp, Log, TEXT("Test 2"));
+	bIsRagdolled = bNewRagdolled;
+	OnRagdoll(); // call it directly on the server, clients can just use ReplicatedUsing
 }
 
 void ATunnelTerrorCharacter::Move(const FInputActionValue& Value)

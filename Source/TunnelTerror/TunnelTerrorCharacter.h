@@ -108,9 +108,22 @@ public:
 	bool GetHasRifle();
 	
 	/// <summary>
-	/// Kills the player
+	/// Ragdolls and infects the player
 	/// </summary>
 	void Die();
+
+	/// <summary>
+	/// Unragdolls them after they die
+	/// </summary>
+	void Reanimate();
+
+	UFUNCTION(BlueprintGetter)
+	bool IsRagdolled() const
+	{
+		return bIsRagdolled;
+	}
+
+	void SetIsRagdolled(const bool bNewRagdolled);
 
 protected:
 	/** Called for movement input */
@@ -132,11 +145,10 @@ protected:
 	UPROPERTY()
 	UPlayerHUD* PlayerHUD;
 
-
-	UFUNCTION(NetMulticast, Reliable)
-	void OnDeathVisual();
 	UFUNCTION(BlueprintNativeEvent)
-	void Ragdoll();
+	void OnRagdoll();
+	/*UFUNCTION(BlueprintImplementableEvent)
+	void OnRagdollBP(const bool bIsRagdolled);*/
 
 protected:
 	// APawn interface
@@ -149,6 +161,9 @@ public:
 	/** Returns FirstPersonCameraComponent subobject **/
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
 
+private:
+	UPROPERTY(ReplicatedUsing = OnRagdoll, BlueprintGetter = IsRagdolled, Replicated)
+	bool bIsRagdolled = false;
 
 };
 
