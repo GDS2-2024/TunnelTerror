@@ -7,6 +7,7 @@
 #include "Components/CapsuleComponent.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
+#include "DrillMachine.h"
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -73,6 +74,9 @@ void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 
 		//Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Look);
+
+		//Interactions
+		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Interact);
 	}
 }
 
@@ -100,6 +104,14 @@ void ATunnelTerrorCharacter::Look(const FInputActionValue& Value)
 		// add yaw and pitch input to controller
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
+	}
+}
+
+void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
+{
+	if (DrillMachine)
+	{
+		DrillMachine->RepairDrill(this);
 	}
 }
 
