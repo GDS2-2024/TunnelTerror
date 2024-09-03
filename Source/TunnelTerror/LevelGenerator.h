@@ -40,6 +40,32 @@ struct FRoom
     TArray<FString> Doors;
 };
 
+USTRUCT(BlueprintType)
+struct FPlace
+{
+    GENERATED_BODY()
+
+    UPROPERTY(EditDefaultsOnly)
+    FRoom Room;
+
+    UPROPERTY(EditDefaultsOnly)
+    int32 currentI;
+
+    UPROPERTY(EditDefaultsOnly)
+    int32 currentJ;
+
+    UPROPERTY(EditDefaultsOnly)
+    int32 lastDoor;
+
+    void Add(FRoom actor, int32 I, int32 J, int32 door)
+    {
+        Room = actor;
+        currentI = I;
+        currentJ = J;
+        lastDoor = door;
+    }
+};
+
 UCLASS()
 class TUNNELTERROR_API ALevelGenerator : public AActor
 {
@@ -66,10 +92,13 @@ public:
     int32 rooms;
 
     void InitializeGrid(int32 GridWidth, int32 GridHeight);
-    void SpawnPath(int32 GridWidth, int32 GridHeight);
+    void SpawnPath(int32 LastDoor, FRoom StartRoom, int32 CurrentI, int32 CurrentJ, bool start);
     URoomComponent* SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubclassOf<AActor> ActorToSpawn, bool isX);
     void MarkGridAsOccupied(URoomComponent* RoomComponent, FVector Origin);
     bool CanPlaceRoom(int32 CurrentI, int32 CurrentJ, URoomComponent* RC);
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    TArray<FPlace> Doorways;
 
     UPROPERTY(EditDefaultsOnly)
     FRoom LastActor;
@@ -85,6 +114,8 @@ public:
 
     UPROPERTY(EditDefaultsOnly)
     int32 LastX = 0;
+
+    INT32 addPath = 0;
 
 private:
     FVector GetRandomRoomSpawnLocation();

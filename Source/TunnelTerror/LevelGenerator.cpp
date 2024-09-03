@@ -14,7 +14,7 @@ void ALevelGenerator::BeginPlay()
 {
     Super::BeginPlay();
     InitializeGrid(Width, Height);
-    SpawnPath(Width, Height);
+    SpawnPath(1, Rooms[0], 50, 0, true);
     UE_LOG(LogTemp, Error, TEXT("Rooms: %d"), rooms);
 }
 
@@ -64,7 +64,7 @@ URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubc
             Grid[j].BoolValues[i] = true;
 
             FVector Place(j * CellSize, i * CellSize, 400.0f);
-            DrawDebugSphere(GetWorld(), Place, 50.0f, 12, FColor::Red, true, -1.0f, 0, 2.0f);
+            //DrawDebugSphere(GetWorld(), Place, 50.0f, 12, FColor::Red, true, -1.0f, 0, 2.0f);
         }
         else
         {
@@ -76,28 +76,28 @@ URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubc
     return RC;
 }
 
-void ALevelGenerator::SpawnPath(int32 GridWidth, int32 GridHeight)
+void ALevelGenerator::SpawnPath(int32 LastDoor, FRoom StartRoom, int32 CurrentI, int32 CurrentJ, bool start)
 {
-    int32 CurrentI = 50;
-    int32 CurrentJ = 0;
     int32 NextI = 0;
     int32 NextJ = 0;
     rooms = 0;
     TSubclassOf<AActor> ActorToSpawnNext = nullptr;
-
-    LastActor = Rooms[0];
-    URoomComponent* RC = SpawnRoom(CurrentI, CurrentJ, LastActor.Actor, true);
+    URoomComponent* RC = nullptr;
+    
+    addPath++;
+    LastActor = StartRoom;
+    RC = SpawnRoom(CurrentI, CurrentJ, LastActor.Actor, true);
     rooms += 1;
 
     for (int i = 0; i < 50; i++)
     {
         bool bFoundRoom = false;
 
-        if (LastActor.Doors[1] == "X") {
+        if (LastActor.Doors[LastDoor] == "X") {
             NextI = CurrentI + RC->xDoors[0].Y;
             NextJ = CurrentJ + RC->xDoors[0].X;
         }
-        else if (LastActor.Doors[1] == "Y") {
+        else if (LastActor.Doors[LastDoor] == "Y") {
             NextI = CurrentI + RC->yDoors[0].Y;
             NextJ = CurrentJ + RC->yDoors[0].X;
         }
@@ -120,11 +120,7 @@ void ALevelGenerator::SpawnPath(int32 GridWidth, int32 GridHeight)
             URoomComponent* NextRC = SpawnedActor->GetComponentByClass<URoomComponent>();
             SpawnedActor->Destroy();
 
-            if (NextRC) {
-                UE_LOG(LogTemp, Warning, TEXT("yay"));
-            }
-
-            if (CanPlaceRoom(NextI, NextJ, NextRC))
+            if (NextRC && CanPlaceRoom(NextI, NextJ, NextRC))
             {
                 RC = SpawnRoom(NextI, NextJ, ActorToSpawnNext, true);
                 rooms += 1;
