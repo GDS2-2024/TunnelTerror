@@ -16,6 +16,7 @@ class UCameraComponent;
 class UAnimMontage;
 class USoundBase;
 class UInventoryComponent;
+class UDrillMachine;
 
 UCLASS(config=Game)
 class ATunnelTerrorCharacter : public ACharacter
@@ -79,6 +80,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	class UInputAction* InteractAction;
+
 	/** Bool for AnimBP to switch to another animation set */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Weapon)
 	bool bHasRifle;
@@ -99,6 +103,12 @@ public:
 	UFUNCTION()
 	void UseSelectedItem();
 	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	bool bIsInfected;
+
+	UPROPERTY(VisibleAnywhere)
+	float health;
+
 	/** Setter to set the bool */
 	UFUNCTION(BlueprintCallable, Category = Weapon)
 	void SetHasRifle(bool bNewHasRifle);
@@ -125,6 +135,17 @@ public:
 
 	void SetIsRagdolled(const bool bNewRagdolled);
 
+	UFUNCTION(BlueprintCallable)
+	void SetIsInfected(bool bIsNowInfected);
+
+	UFUNCTION(BlueprintCallable)
+	bool GetIsInfected();
+
+	UFUNCTION()
+	void DecreaseHealth(float damage);
+
+	UDrillMachine* DrillMachine;
+
 protected:
 	/** Called for movement input */
 	void Move(const FInputActionValue& Value);
@@ -149,6 +170,7 @@ protected:
 	void OnRagdoll();
 	/*UFUNCTION(BlueprintImplementableEvent)
 	void OnRagdollBP(const bool bIsRagdolled);*/
+	void Interact(const FInputActionValue& Value);
 
 protected:
 	// APawn interface

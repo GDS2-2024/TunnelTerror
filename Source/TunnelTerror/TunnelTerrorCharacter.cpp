@@ -10,6 +10,7 @@
 #include "Inventory/InventoryComponent.h"
 #include "Net/UnrealNetwork.h"
 #include <TunnelTerrorPlayerState.h>
+#include "DrillMachine.h"
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -19,6 +20,10 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 {
 	bReplicates = true;
 	
+	// Character is not infected at the start
+	bIsInfected = false;
+	health = 100.0f;
+
 	// Character doesnt have a rifle at start
 	bHasRifle = false;
 	
@@ -103,6 +108,8 @@ void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 		EnhancedInputComponent->BindAction(Slot4, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot4);
 		EnhancedInputComponent->BindAction(Slot5, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot5);
 		EnhancedInputComponent->BindAction(Scroll, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::ScrollSlots);
+		//Interactions
+		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Interact);
 	}
 }
 
@@ -282,6 +289,14 @@ void ATunnelTerrorCharacter::UseSelectedItem()
 	Inventory->GetSelectedItem()->UseItem();
 }
 
+void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
+{
+	if (DrillMachine)
+	{
+		DrillMachine->RepairDrill(this);
+	}
+}
+
 void ATunnelTerrorCharacter::SetHasRifle(bool bNewHasRifle)
 {
 	bHasRifle = bNewHasRifle;
@@ -290,4 +305,27 @@ void ATunnelTerrorCharacter::SetHasRifle(bool bNewHasRifle)
 bool ATunnelTerrorCharacter::GetHasRifle()
 {
 	return bHasRifle;
+}
+
+void ATunnelTerrorCharacter::SetIsInfected(bool bIsNowInfected)
+{
+	bIsInfected = bIsNowInfected;
+	UE_LOG(LogTemp, Log, TEXT("Player is infected - health: %f"), health);
+}
+
+bool ATunnelTerrorCharacter::GetIsInfected()
+{
+	return bIsInfected;
+}
+
+void ATunnelTerrorCharacter::DecreaseHealth(float damage)
+{
+	UE_LOG(LogTemp, Log, TEXT("Player health: %f"), health);
+	health -= damage;
+	UE_LOG(LogTemp, Log, TEXT("Player has taken damage: %f"), damage);
+
+	if (health <= 0)
+	{
+		this->SetIsInfected(true);
+	}
 }
