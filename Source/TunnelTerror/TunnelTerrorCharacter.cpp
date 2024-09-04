@@ -8,6 +8,8 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "Inventory/InventoryComponent.h"
+#include "Net/UnrealNetwork.h"
+#include <TunnelTerrorPlayerState.h>
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -15,6 +17,12 @@
 
 ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 {
+	bReplicates = true;
+	
+	// Character is not infected at the start
+	bIsInfected = false;
+	health = 100.0f;
+
 	// Character doesnt have a rifle at start
 	bHasRifle = false;
 	
@@ -35,10 +43,10 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 	Mesh1P->CastShadow = false;
 	//Mesh1P->SetRelativeRotation(FRotator(0.9f, -19.19f, 5.2f));
 	Mesh1P->SetRelativeLocation(FVector(-30.f, 0.f, -150.f));
-
+	
 	// Create Inventory Component
 	Inventory = CreateDefaultSubobject<UInventoryComponent>(TEXT("Player Inventory"));
-
+	Inventory->SetIsReplicated(true);
 }
 
 void ATunnelTerrorCharacter::BeginPlay()
@@ -55,13 +63,27 @@ void ATunnelTerrorCharacter::BeginPlay()
 			Subsystem->AddMappingContext(InventoryMappingContext, 0);
 		}
 
-		PlayerHUD = CreateWidget<UPlayerHUD>(PlayerController, PlayerHUDClass);
-		PlayerHUD->AddToPlayerScreen();
+		if(IsLocallyControlled())
+		{
+			PlayerHUD = CreateWidget<UPlayerHUD>(PlayerController, PlayerHUDClass);
+			PlayerHUD->AddToPlayerScreen();
+		}
 	}
+}
 
+void ATunnelTerrorCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	DOREPLIFETIME(ATunnelTerrorCharacter, Inventory);
+	DOREPLIFETIME(ATunnelTerrorCharacter, bIsRagdolled);
 }
 
 //////////////////////////////////////////////////////////////////////////// Input
+
+void ATunnelTerrorCharacter::OnRagdoll_Implementation()
+{
+	UE_LOG(LogTemp, Log, TEXT("Eyy that's nice"));
+}
 
 void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
@@ -79,14 +101,55 @@ void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Look);
 
 		//Inventory Selection
-		EnhancedInputComponent->BindAction(SelectSlot1, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Slot1);
-		EnhancedInputComponent->BindAction(SelectSlot2, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Slot2);
-		EnhancedInputComponent->BindAction(SelectSlot3, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Slot3);
-		EnhancedInputComponent->BindAction(SelectSlot4, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Slot4);
-		EnhancedInputComponent->BindAction(SelectSlot5, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Slot5);
+		EnhancedInputComponent->BindAction(Slot1, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot1);
+		EnhancedInputComponent->BindAction(Slot2, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot2);
+		EnhancedInputComponent->BindAction(Slot3, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot3);
+		EnhancedInputComponent->BindAction(Slot4, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot4);
+		EnhancedInputComponent->BindAction(Slot5, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot5);
+		EnhancedInputComponent->BindAction(Scroll, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::ScrollSlots);
+		//Interactions
+		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Interact);
 	}
 }
 
+void ATunnelTerrorCharacter::Die()
+{
+	if (!HasAuthority()) return;
+	if (ATunnelTerrorPlayerState* playerState = GetPlayerState<ATunnelTerrorPlayerState>()) {
+		playerState->SetIsInfected(true);
+		SetIsRagdolled(true);
+		UE_LOG(LogTemp, Log, TEXT("Test 1"));
+
+		FTimerHandle timerHandle = FTimerHandle();
+		GetWorldTimerManager().SetTimer(timerHandle, this, &ATunnelTerrorCharacter::Reanimate, 2);
+	}
+	else {
+		UE_LOG(LogTemp, Error, TEXT("Couldn't cast to ATunnelTerrorPlayerState!"));
+	}
+}
+
+void ATunnelTerrorCharacter::Reanimate()
+{
+	if (!HasAuthority()) return;
+	SetIsRagdolled(false);
+}
+
+//void ATunnelTerrorCharacter::OnRagdoll_Implementation()
+//{
+//	OnRagdollBP();
+//}
+
+void ATunnelTerrorCharacter::SetIsRagdolled(const bool bNewRagdolled)
+{
+	if (!HasAuthority()) {
+		UE_LOG(LogTemp, Error, TEXT("This should only be called from server!"));
+		return;
+	}
+
+	UE_LOG(LogTemp, Log, TEXT("Test 2"));
+	bIsRagdolled = bNewRagdolled;
+	OnRagdoll(); // call it directly on the server, clients can just use ReplicatedUsing
+}
 
 void ATunnelTerrorCharacter::Move(const FInputActionValue& Value)
 {
@@ -114,41 +177,110 @@ void ATunnelTerrorCharacter::Look(const FInputActionValue& Value)
 	}
 }
 
-void ATunnelTerrorCharacter::Slot1(const FInputActionValue& Value)
+void ATunnelTerrorCharacter::SelectSlot1(const FInputActionValue& Value)
 {
 	Inventory->ChangeSelectedSlot(1);
 	PlayerHUD->SetSlotSelection(1);
 }
 
-void ATunnelTerrorCharacter::Slot2(const FInputActionValue& Value)
+void ATunnelTerrorCharacter::SelectSlot2(const FInputActionValue& Value)
 {
 	Inventory->ChangeSelectedSlot(2);
 	PlayerHUD->SetSlotSelection(2);
 }
 
-void ATunnelTerrorCharacter::Slot3(const FInputActionValue& Value)
+void ATunnelTerrorCharacter::SelectSlot3(const FInputActionValue& Value)
 {
 	Inventory->ChangeSelectedSlot(3);
 	PlayerHUD->SetSlotSelection(3);
 }
 
-void ATunnelTerrorCharacter::Slot4(const FInputActionValue& Value)
+void ATunnelTerrorCharacter::SelectSlot4(const FInputActionValue& Value)
 {
 	Inventory->ChangeSelectedSlot(4);
 	PlayerHUD->SetSlotSelection(4);
 }
 
-void ATunnelTerrorCharacter::Slot5(const FInputActionValue& Value)
+void ATunnelTerrorCharacter::SelectSlot5(const FInputActionValue& Value)
 {
 	Inventory->ChangeSelectedSlot(5);
 	PlayerHUD->SetSlotSelection(5);
 }
 
+void ATunnelTerrorCharacter::ScrollSlots(const FInputActionValue& Value)
+{
+	//UE_LOG(LogTemp, Log, TEXT("Scroll wheel is outputting: %f"), Value.Get<float>());
+	if (Value.Get<float>() > 0)
+	{
+		//Increase by 1, wrap around to start
+		if (Inventory->SelectedSlotIndex < Inventory->GetMaxSlots())
+		{
+			Inventory->ChangeSelectedSlot(Inventory->SelectedSlotIndex+1);
+			PlayerHUD->SetSlotSelection(Inventory->SelectedSlotIndex);
+		} else
+		{
+			Inventory->ChangeSelectedSlot(1);
+			PlayerHUD->SetSlotSelection(1);
+		}
+	} else
+	{
+		//Decrease by 1, wrap around to start
+		if (Inventory->SelectedSlotIndex > 1)
+		{
+			Inventory->ChangeSelectedSlot(Inventory->SelectedSlotIndex-1);
+			PlayerHUD->SetSlotSelection(Inventory->SelectedSlotIndex);
+		} else
+		{
+			Inventory->ChangeSelectedSlot(5);
+			PlayerHUD->SetSlotSelection(5);
+		}
+	}
+}
+
 void ATunnelTerrorCharacter::EquipToInventory(AInventoryItem* NewItem)
 {
-	Inventory->AddItem(NewItem);
-	UE_LOG(LogTemp, Warning, TEXT("Adding Item to Player Inventory"))
-	PlayerHUD->SetSlotIcon(Inventory->NumOfItems, NewItem->InventoryIcon);
+	if (HasAuthority())
+	{
+		if (NewItem)
+		{
+			Inventory->AddItem(NewItem);
+
+			ClientUpdateInventoryUI(NewItem);
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Failed to add item to inventory because NewItem is null."));
+		}
+	}
+}
+
+void ATunnelTerrorCharacter::ServerEquipToInventory_Implementation(AInventoryItem* InventoryItem)
+{
+	EquipToInventory(InventoryItem);
+}
+
+void ATunnelTerrorCharacter::ClientUpdateInventoryUI_Implementation(AInventoryItem* NewItem)
+{
+	if (!PlayerHUD)
+	{
+		UE_LOG(LogTemp, Error, TEXT("PlayerHUD is null in ClientUpdateInventoryUI"));
+		return;
+	}
+
+	if (!Inventory)
+	{
+		UE_LOG(LogTemp, Error, TEXT("Inventory is null in ClientUpdateInventoryUI"));
+		return;
+	}
+
+	if (NewItem)
+	{
+		PlayerHUD->SetSlotIcon(Inventory->GetNumOfItems(), NewItem->InventoryIcon);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("NewItem is null in ClientUpdateInventoryUI"));
+	}
 }
 
 void ATunnelTerrorCharacter::UseSelectedItem()
@@ -156,9 +288,12 @@ void ATunnelTerrorCharacter::UseSelectedItem()
 	Inventory->GetSelectedItem()->UseItem();
 }
 
-void ATunnelTerrorCharacter::Ragdoll_Implementation()
+void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 {
-
+	// if (DrillMachine)
+	// {
+	// 	DrillMachine->RepairDrill(this);
+	// }
 }
 
 void ATunnelTerrorCharacter::SetHasRifle(bool bNewHasRifle)
@@ -169,4 +304,27 @@ void ATunnelTerrorCharacter::SetHasRifle(bool bNewHasRifle)
 bool ATunnelTerrorCharacter::GetHasRifle()
 {
 	return bHasRifle;
+}
+
+void ATunnelTerrorCharacter::SetIsInfected(bool bIsNowInfected)
+{
+	bIsInfected = bIsNowInfected;
+	UE_LOG(LogTemp, Log, TEXT("Player is infected - health: %f"), health);
+}
+
+bool ATunnelTerrorCharacter::GetIsInfected()
+{
+	return bIsInfected;
+}
+
+void ATunnelTerrorCharacter::DecreaseHealth(float damage)
+{
+	UE_LOG(LogTemp, Log, TEXT("Player health: %f"), health);
+	health -= damage;
+	UE_LOG(LogTemp, Log, TEXT("Player has taken damage: %f"), damage);
+
+	if (health <= 0)
+	{
+		this->SetIsInfected(true);
+	}
 }

@@ -21,6 +21,9 @@ public:
 	AItemPickup();
 
 	virtual void BeginPlay() override;
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastDestroyPickup();
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UStaticMeshComponent* PickupMesh;

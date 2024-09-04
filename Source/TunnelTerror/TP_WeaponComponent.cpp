@@ -77,6 +77,8 @@ void UTP_WeaponComponent::AttachWeapon(ATunnelTerrorCharacter* TargetCharacter)
 	
 	// switch bHasRifle so the animation blueprint can switch to another animation set
 	Character->SetHasRifle(true);
+	Character->DecreaseHealth(100.0f);
+	UE_LOG(LogTemp, Warning, TEXT("Weapon is attached"));
 
 	// Set up action bindings
 	if (APlayerController* PlayerController = Cast<APlayerController>(Character->GetController()))

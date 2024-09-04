@@ -34,7 +34,7 @@ class ATunnelTerrorCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	class UInputMappingContext* DefaultMappingContext;
 
-	/* Inventory Input */
+	/** Inventory Input */
 	UPROPERTY(EditDefaultsOnly, Category=Input)
 	UInputMappingContext* InventoryMappingContext;
 	
@@ -46,20 +46,24 @@ class ATunnelTerrorCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	class UInputAction* MoveAction;
 
+	/** Inventory Input Actions */
 	UPROPERTY(EditDefaultsOnly, Category=Input)
-	UInputAction* SelectSlot1;
+	UInputAction* Slot1;
 
 	UPROPERTY(EditDefaultsOnly, Category=Input)
-	UInputAction* SelectSlot2;
+	UInputAction* Slot2;
 
 	UPROPERTY(EditDefaultsOnly, Category=Input)
-	UInputAction* SelectSlot3;
+	UInputAction* Slot3;
 
 	UPROPERTY(EditDefaultsOnly, Category=Input)
-	UInputAction* SelectSlot4;
+	UInputAction* Slot4;
 
 	UPROPERTY(EditDefaultsOnly, Category=Input)
-	UInputAction* SelectSlot5;
+	UInputAction* Slot5;
+
+	UPROPERTY(EditDefaultsOnly, Category=Input)
+	UInputAction* Scroll;
 	
 public:
 	ATunnelTerrorCharacter();
@@ -68,25 +72,42 @@ protected:
 	virtual void BeginPlay();
 
 public:
+
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 		
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	class UInputAction* InteractAction;
 
 	/** Bool for AnimBP to switch to another animation set */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Weapon)
 	bool bHasRifle;
 
 	/** Player Inventory */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Replicated)
 	UInventoryComponent* Inventory;
 
 	UFUNCTION()
 	void EquipToInventory(AInventoryItem* NewItem);
+	
+	UFUNCTION(Server, Reliable)
+	void ServerEquipToInventory(AInventoryItem* InventoryItem);
 
+	UFUNCTION(Client, Reliable)
+	void ClientUpdateInventoryUI(AInventoryItem* NewItem);
+	
 	UFUNCTION()
 	void UseSelectedItem();
 	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	bool bIsInfected;
+
+	UPROPERTY(VisibleAnywhere)
+	float health;
+
 	/** Setter to set the bool */
 	UFUNCTION(BlueprintCallable, Category = Weapon)
 	void SetHasRifle(bool bNewHasRifle);
@@ -94,10 +115,35 @@ public:
 	/** Getter for the bool */
 	UFUNCTION(BlueprintCallable, Category = Weapon)
 	bool GetHasRifle();
-
-	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
-	void Ragdoll();
 	
+	/// <summary>
+	/// Ragdolls and infects the player
+	/// </summary>
+	void Die();
+
+	/// <summary>
+	/// Unragdolls them after they die
+	/// </summary>
+	void Reanimate();
+
+	UFUNCTION(BlueprintGetter)
+	bool IsRagdolled() const
+	{
+		return bIsRagdolled;
+	}
+
+	void SetIsRagdolled(const bool bNewRagdolled);
+
+	UFUNCTION(BlueprintCallable)
+	void SetIsInfected(bool bIsNowInfected);
+
+	UFUNCTION(BlueprintCallable)
+	bool GetIsInfected();
+
+	UFUNCTION()
+	void DecreaseHealth(float damage);
+
+	// UDrillMachine* DrillMachine;
 
 protected:
 	/** Called for movement input */
@@ -106,16 +152,24 @@ protected:
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
 
-	void Slot1(const FInputActionValue& Value);
-	void Slot2(const FInputActionValue& Value);
-	void Slot3(const FInputActionValue& Value);
-	void Slot4(const FInputActionValue& Value);
-	void Slot5(const FInputActionValue& Value);
-
+	/** Called for inventory input */
+	void SelectSlot1(const FInputActionValue& Value);
+	void SelectSlot2(const FInputActionValue& Value);
+	void SelectSlot3(const FInputActionValue& Value);
+	void SelectSlot4(const FInputActionValue& Value);
+	void SelectSlot5(const FInputActionValue& Value);
+	void ScrollSlots(const FInputActionValue& Value);
+	
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<UPlayerHUD> PlayerHUDClass;
 	UPROPERTY()
 	UPlayerHUD* PlayerHUD;
+
+	UFUNCTION(BlueprintNativeEvent)
+	void OnRagdoll();
+	/*UFUNCTION(BlueprintImplementableEvent)
+	void OnRagdollBP(const bool bIsRagdolled);*/
+	void Interact(const FInputActionValue& Value);
 
 protected:
 	// APawn interface
@@ -128,6 +182,9 @@ public:
 	/** Returns FirstPersonCameraComponent subobject **/
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
 
+private:
+	UPROPERTY(ReplicatedUsing = OnRagdoll, BlueprintGetter = IsRagdolled, Replicated)
+	bool bIsRagdolled = false;
 
 };
 
