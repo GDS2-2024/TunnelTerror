@@ -10,7 +10,6 @@
 #include "Inventory/InventoryComponent.h"
 #include "Net/UnrealNetwork.h"
 #include <TunnelTerrorPlayerState.h>
-#include "DrillMachine.h"
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -291,10 +290,10 @@ void ATunnelTerrorCharacter::UseSelectedItem()
 
 void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 {
-	if (DrillMachine)
-	{
-		DrillMachine->RepairDrill(this);
-	}
+	// if (DrillMachine)
+	// {
+	// 	DrillMachine->RepairDrill(this);
+	// }
 }
 
 void ATunnelTerrorCharacter::SetHasRifle(bool bNewHasRifle)

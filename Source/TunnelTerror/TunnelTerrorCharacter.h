@@ -16,7 +16,6 @@ class UCameraComponent;
 class UAnimMontage;
 class USoundBase;
 class UInventoryComponent;
-class UDrillMachine;
 
 UCLASS(config=Game)
 class ATunnelTerrorCharacter : public ACharacter
@@ -144,7 +143,7 @@ public:
 	UFUNCTION()
 	void DecreaseHealth(float damage);
 
-	UDrillMachine* DrillMachine;
+	// UDrillMachine* DrillMachine;
 
 protected:
 	/** Called for movement input */
