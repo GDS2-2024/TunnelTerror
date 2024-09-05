@@ -51,6 +51,22 @@
 		{
 			"Name": "HairStrands",
 			"Enabled": true
+		},
+		{
+			"Name": "EOSShared",
+			"Enabled": true
+		},
+		{
+			"Name": "EOSVoiceChat",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineServicesEOS",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystemEOS",
+			"Enabled": true
 		}
 	]
 }
