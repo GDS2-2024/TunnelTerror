@@ -114,6 +114,9 @@ public:
     FRoom LastActor;
 
     UPROPERTY(EditDefaultsOnly)
+    FRoom EntranceRoom;
+
+    UPROPERTY(EditDefaultsOnly)
     TArray<FRoom> Rooms;
 
     UPROPERTY(EditDefaultsOnly)

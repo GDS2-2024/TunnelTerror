@@ -14,7 +14,7 @@ void ALevelGenerator::BeginPlay()
 {
     Super::BeginPlay();
     InitializeGrid(Width, Height);
-    SpawnPath(1, Rooms[0], 50, 0, true);
+    SpawnPath(1, EntranceRoom, 50, 0, true);
     UE_LOG(LogTemp, Error, TEXT("Rooms: %d"), rooms);
     
 }
@@ -214,8 +214,8 @@ void ALevelGenerator::SpawnAnotherPath(FPlace place)
 
         UE_LOG(LogTemp, Warning, TEXT("Current LastDoor: %d"), LastDoor);
         UE_LOG(LogTemp, Warning, TEXT("NextI: %d, NextJ: %d"), NextI, NextJ);
-        FVector Place(NextJ * 500.0f, NextI * 500.0f, 400.0f);
-        DrawDebugSphere(GetWorld(), Place, 50.0f, 12, FColor::Green, true, -1.0f, 0, 2.0f);
+        //FVector Place(NextJ * 500.0f, NextI * 500.0f, 400.0f);
+        //DrawDebugSphere(GetWorld(), Place, 50.0f, 12, FColor::Green, true, -1.0f, 0, 2.0f);
 
 
         TArray<FRoom> options = (i % 2 == 0) ? Corridors : Rooms;
