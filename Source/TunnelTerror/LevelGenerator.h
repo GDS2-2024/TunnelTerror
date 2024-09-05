@@ -64,6 +64,14 @@ struct FPlace
         currentJ = J;
         lastDoor = door;
     }
+
+    bool operator==(const FPlace& Other) const
+    {
+        return currentI == Other.currentI 
+            && currentJ == Other.currentJ 
+            && lastDoor == Other.lastDoor;
+    }
+
 };
 
 UCLASS()
@@ -90,12 +98,14 @@ public:
     int32 Width;
 
     int32 rooms;
+    int32 number = 0;
 
     void InitializeGrid(int32 GridWidth, int32 GridHeight);
     void SpawnPath(int32 LastDoor, FRoom StartRoom, int32 CurrentI, int32 CurrentJ, bool start);
     URoomComponent* SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubclassOf<AActor> ActorToSpawn, bool isX);
     void MarkGridAsOccupied(URoomComponent* RoomComponent, FVector Origin);
     bool CanPlaceRoom(int32 CurrentI, int32 CurrentJ, URoomComponent* RC);
+    void SpawnAnotherPath(FPlace place);
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     TArray<FPlace> Doorways;

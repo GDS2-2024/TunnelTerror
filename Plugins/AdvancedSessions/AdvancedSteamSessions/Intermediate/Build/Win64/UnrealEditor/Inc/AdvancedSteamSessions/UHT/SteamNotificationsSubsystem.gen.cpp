@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "../../../../../../../../../Users/Dylan Archer/Desktop/TunnelTerror/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/SteamNotificationsSubsystem.h"
+#include "../../../../../../../../Unreal Projects/GDS2/TunnelTerror/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/SteamNotificationsSubsystem.h"
 #include "../../Source/Runtime/Engine/Classes/Engine/GameInstance.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeSteamNotificationsSubsystem() {}
@@ -139,15 +139,15 @@ void FOnSteamOverlayActivated_DelegateWrapper(const FMulticastScriptDelegate& On
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(USteamNotificationsSubsystem);
 	USteamNotificationsSubsystem::~USteamNotificationsSubsystem() {}
-	struct Z_CompiledInDeferFile_FID_Users_Dylan_Archer_Desktop_TunnelTerror_Plugins_AdvancedSessions_AdvancedSteamSessions_Source_AdvancedSteamSessions_Classes_SteamNotificationsSubsystem_h_Statics
+	struct Z_CompiledInDeferFile_FID_Unreal_Projects_GDS2_TunnelTerror_Plugins_AdvancedSessions_AdvancedSteamSessions_Source_AdvancedSteamSessions_Classes_SteamNotificationsSubsystem_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Dylan_Archer_Desktop_TunnelTerror_Plugins_AdvancedSessions_AdvancedSteamSessions_Source_AdvancedSteamSessions_Classes_SteamNotificationsSubsystem_h_Statics::ClassInfo[] = {
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_GDS2_TunnelTerror_Plugins_AdvancedSessions_AdvancedSteamSessions_Source_AdvancedSteamSessions_Classes_SteamNotificationsSubsystem_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_USteamNotificationsSubsystem, USteamNotificationsSubsystem::StaticClass, TEXT("USteamNotificationsSubsystem"), &Z_Registration_Info_UClass_USteamNotificationsSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamNotificationsSubsystem), 2068363322U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Dylan_Archer_Desktop_TunnelTerror_Plugins_AdvancedSessions_AdvancedSteamSessions_Source_AdvancedSteamSessions_Classes_SteamNotificationsSubsystem_h_2302787985(TEXT("/Script/AdvancedSteamSessions"),
-		Z_CompiledInDeferFile_FID_Users_Dylan_Archer_Desktop_TunnelTerror_Plugins_AdvancedSessions_AdvancedSteamSessions_Source_AdvancedSteamSessions_Classes_SteamNotificationsSubsystem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Dylan_Archer_Desktop_TunnelTerror_Plugins_AdvancedSessions_AdvancedSteamSessions_Source_AdvancedSteamSessions_Classes_SteamNotificationsSubsystem_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_GDS2_TunnelTerror_Plugins_AdvancedSessions_AdvancedSteamSessions_Source_AdvancedSteamSessions_Classes_SteamNotificationsSubsystem_h_2302787985(TEXT("/Script/AdvancedSteamSessions"),
+		Z_CompiledInDeferFile_FID_Unreal_Projects_GDS2_TunnelTerror_Plugins_AdvancedSessions_AdvancedSteamSessions_Source_AdvancedSteamSessions_Classes_SteamNotificationsSubsystem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_GDS2_TunnelTerror_Plugins_AdvancedSessions_AdvancedSteamSessions_Source_AdvancedSteamSessions_Classes_SteamNotificationsSubsystem_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

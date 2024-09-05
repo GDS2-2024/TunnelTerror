@@ -16,6 +16,7 @@ void ALevelGenerator::BeginPlay()
     InitializeGrid(Width, Height);
     SpawnPath(1, Rooms[0], 50, 0, true);
     UE_LOG(LogTemp, Error, TEXT("Rooms: %d"), rooms);
+    
 }
 
 // Called every frame
@@ -69,7 +70,7 @@ URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubc
         else
         {
 
-            UE_LOG(LogTemp, Warning, TEXT("Out of bounds: i = %d, j = %d"), i, j);
+            UE_LOG(LogTemp, Warning, TEXT("Out of bounds"));
         }
     }
 
@@ -93,11 +94,21 @@ void ALevelGenerator::SpawnPath(int32 LastDoor, FRoom StartRoom, int32 CurrentI,
     {
         bool bFoundRoom = false;
 
-        if (LastActor.Doors[LastDoor] == "X") {
+        if (LastActor.Doors.Num() > 2) {
+            for (int j = 2; j < LastActor.Doors.Num(); j++) {
+                FPlace NewPlace;
+                NewPlace.Add(LastActor, CurrentI, CurrentJ, j);
+                if (!Doorways.Contains(NewPlace)) {
+                    Doorways.Add(NewPlace);
+                }
+            }
+        }
+
+        if (LastActor.Doors[1] == "X") {
             NextI = CurrentI + RC->xDoors[0].Y;
             NextJ = CurrentJ + RC->xDoors[0].X;
         }
-        else if (LastActor.Doors[LastDoor] == "Y") {
+        else if (LastActor.Doors[1] == "Y") {
             NextI = CurrentI + RC->yDoors[0].Y;
             NextJ = CurrentJ + RC->yDoors[0].X;
         }
@@ -141,8 +152,115 @@ void ALevelGenerator::SpawnPath(int32 LastDoor, FRoom StartRoom, int32 CurrentI,
         if (!bFoundRoom)
         {
             UE_LOG(LogTemp, Error, TEXT("Could not find a suitable room or corridor to spawn."));
+            break;
+        }
+
+        
+    }
+
+    number = Doorways.Num();
+    if (Doorways.Num() > 0) {
+        for (int n = 0; n < number; n++) {
+            SpawnAnotherPath(Doorways[n]);
+        }
+    }
+}
+
+void ALevelGenerator::SpawnAnotherPath(FPlace place) 
+{
+    UE_LOG(LogTemp, Error, TEXT("Reached"));
+    int32 NextI = 0;
+    int32 NextJ = 0;
+    int32 CurrentI = place.currentI;
+    int32 CurrentJ = place.currentJ;
+    int32 LastDoor = place.lastDoor;
+    rooms = 0;
+    TSubclassOf<AActor> ActorToSpawnNext = nullptr;
+    URoomComponent* RC = nullptr;
+
+    LastActor = place.Room;
+    AActor* spawned = GetWorld()->SpawnActor<AActor>(place.Room.Actor);
+    RC = spawned->GetComponentByClass<URoomComponent>();
+    spawned->Destroy();
+
+
+    for (int i = 0; i < 50; i++)
+    {
+        bool bFoundRoom = false;
+
+        if (LastActor.Doors.Num() > 2) {
+            for (int j = 2; j < LastActor.Doors.Num(); j++) {
+                FPlace NewPlace;
+                NewPlace.Add(LastActor, CurrentI, CurrentJ, j);
+                if (!Doorways.Contains(NewPlace)) {
+                    Doorways.Add(NewPlace);
+                    number++;
+                }
+            }
+        }
+
+        if (i != 0) {
+            LastDoor = 1;
+        }
+
+        if (LastActor.Doors[LastDoor] == "X") {
+            NextI = CurrentI + RC->xDoors[LastDoor-1].Y;
+            NextJ = CurrentJ + RC->xDoors[LastDoor-1].X;
+        }
+        else if (LastActor.Doors[LastDoor] == "Y") {
+            NextI = CurrentI + RC->yDoors[LastDoor-1].Y;
+            NextJ = CurrentJ + RC->yDoors[LastDoor-1].X;
+        }
+
+        UE_LOG(LogTemp, Warning, TEXT("Current LastDoor: %d"), LastDoor);
+        UE_LOG(LogTemp, Warning, TEXT("NextI: %d, NextJ: %d"), NextI, NextJ);
+        FVector Place(NextJ * 500.0f, NextI * 500.0f, 400.0f);
+        DrawDebugSphere(GetWorld(), Place, 50.0f, 12, FColor::Green, true, -1.0f, 0, 2.0f);
+
+
+        TArray<FRoom> options = (i % 2 == 0) ? Corridors : Rooms;
+
+        while (options.Num() > 0)
+        {
+            int32 RandomIndex = FMath::RandRange(0, options.Num() - 1);
+            ActorToSpawnNext = options[RandomIndex].Actor;
+            const FRoom& NextActor = options[RandomIndex];
+
+            if (LastActor.Doors[LastDoor] != NextActor.Doors[0])
+            {
+                options.RemoveAt(RandomIndex);
+                continue;
+            }
+
+            AActor* SpawnedActor = GetWorld()->SpawnActor<AActor>(ActorToSpawnNext);
+            URoomComponent* NextRC = SpawnedActor->GetComponentByClass<URoomComponent>();
+            SpawnedActor->Destroy();
+
+            if (NextRC && CanPlaceRoom(NextI, NextJ, NextRC))
+            {
+                RC = SpawnRoom(NextI, NextJ, ActorToSpawnNext, true);
+                rooms += 1;
+                UE_LOG(LogTemp, Warning, TEXT("Room spawned: %s"), *ActorToSpawnNext->GetName());
+
+                CurrentI = NextI;
+                CurrentJ = NextJ;
+                LastActor = NextActor;
+                bFoundRoom = true;
+                break;
+            }
+            else
+            {
+                options.RemoveAt(RandomIndex);
+            }
+        }
+
+        if (!bFoundRoom)
+        {
+            UE_LOG(LogTemp, Error, TEXT("No rooms fit here second path"));
             return;
         }
+
+
     }
 }
 
