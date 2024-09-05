@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "InventoryItem.h"
 #include "Components/BoxComponent.h"
+#include "Components/WidgetComponent.h"
 #include "ItemPickup.generated.h"
 
 /**
@@ -24,6 +25,9 @@ public:
 
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastDestroyPickup();
+
+	UFUNCTION(Client, Reliable)
+	void ShowPrompt(bool bIsVisible);
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UStaticMeshComponent* PickupMesh;
@@ -32,10 +36,16 @@ public:
 	UBoxComponent* PickupCollider;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UWidgetComponent* PickupPrompt;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSubclassOf<AInventoryItem> CorrespondingItemClass;
 	
 	UFUNCTION()
-	void OnPickupOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+	void OnPickupBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 		UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& HitInfo);
 	
+	UFUNCTION()
+	void OnPickupEndOverlap(UPrimitiveComponent* OverlappedComponent,
+	                        AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 };

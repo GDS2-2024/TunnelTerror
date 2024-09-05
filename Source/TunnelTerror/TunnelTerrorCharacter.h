@@ -7,6 +7,7 @@
 #include "InputActionValue.h"
 #include "Inventory/InventoryItem.h"
 #include "PlayerHUD.h"
+#include "Inventory/ItemPickup.h"
 #include "TunnelTerrorCharacter.generated.h"
 
 class UInputComponent;
@@ -92,6 +93,9 @@ public:
 
 	UFUNCTION()
 	void EquipToInventory(AInventoryItem* NewItem);
+
+	UFUNCTION(Server,Reliable)
+	void ServerSpawnItem(TSubclassOf<AInventoryItem> ItemClass);
 	
 	UFUNCTION(Server, Reliable)
 	void ServerEquipToInventory(AInventoryItem* InventoryItem);
@@ -145,6 +149,15 @@ public:
 
 	// UDrillMachine* DrillMachine;
 
+	// Variable is set by an item pickup
+	// Used to reference pickup object when player presses 'E' to interact
+	UPROPERTY(ReplicatedUsing = OnRep_CollidedPickup, VisibleAnywhere)
+	AItemPickup* CollidedPickup;
+
+	UFUNCTION()
+	void OnRep_CollidedPickup();
+
+	
 protected:
 	/** Called for movement input */
 	void Move(const FInputActionValue& Value);

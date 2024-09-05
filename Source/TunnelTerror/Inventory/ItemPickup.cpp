@@ -19,6 +19,8 @@ AItemPickup::AItemPickup()
 	// is moved (i.e. the collider transform) then the mesh will move with it.
 	PickupMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Pickup Mesh"));
 	PickupMesh->SetupAttachment(GetRootComponent());
+	PickupPrompt = CreateDefaultSubobject<UWidgetComponent>(TEXT("Pickup Prompt"));
+	PickupPrompt->SetupAttachment(GetRootComponent());
 }
 
 void AItemPickup::BeginPlay()
@@ -27,9 +29,10 @@ void AItemPickup::BeginPlay()
 
 	if (PickupCollider)
 	{
-		// This attaches the OnPickupOverlap function to be called when the OnComponentBeginOverlap event is triggered.
+		// This attaches the OnPickupBeginOverlap function to be called when the OnComponentBeginOverlap event is triggered.
 		// We use .AddDynamic to add a function to a multicast dynamic delegate event.
-		PickupCollider->OnComponentBeginOverlap.AddDynamic(this, &AItemPickup::OnPickupOverlap);
+		PickupCollider->OnComponentBeginOverlap.AddDynamic(this, &AItemPickup::OnPickupBeginOverlap);
+		PickupCollider->OnComponentEndOverlap.AddDynamic(this, &AItemPickup::OnPickupEndOverlap);
 		UE_LOG(LogTemp, Display, TEXT("Pickup overlap event added."))
 	}
 	else
@@ -38,45 +41,43 @@ void AItemPickup::BeginPlay()
 	}
 }
 
+void AItemPickup::ShowPrompt_Implementation(bool bIsVisible)
+{
+	PickupPrompt->SetHiddenInGame(!bIsVisible);
+}
+
 void AItemPickup::MulticastDestroyPickup_Implementation()
 {
 	UE_LOG(LogTemp, Warning, TEXT("MulticastDestroyPickup called on a client. Destroying pickup."));
 	Destroy();
 }
 
-void AItemPickup::OnPickupOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+void AItemPickup::OnPickupBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
                                   UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& HitInfo)
 {
 	if(GetLocalRole() == ROLE_Authority) // Only the server should handle the pickup
 	{
+		//UE_LOG(LogTemp, Log, TEXT("On Pickup BEGIN Overlap (SERVER)"))
 		if (ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(OtherActor))
 		{
-			if (CorrespondingItemClass)
-			{
-				// Spawn an instance of the inventory item on the server
-				AInventoryItem* InventoryItem = GetWorld()->SpawnActor<AInventoryItem>(CorrespondingItemClass);
-				if (InventoryItem)
-				{
-					InventoryItem->AttachToComponent(Player->GetMesh1P(), FAttachmentTransformRules::KeepRelativeTransform, "GripPoint");
+			// Set Player's item variable
+			Player->CollidedPickup = this;
+			ShowPrompt(true);
+		}
+	}
+}
 
-					// Pass the spawned item to the player's inventory
-					Player->EquipToInventory(InventoryItem);
-
-					// Notify all clients to destroy the pickup
-					UE_LOG(LogTemp, Warning, TEXT("Calling MulticastDestroyPickup from server"));
-					MulticastDestroyPickup();
-					UE_LOG(LogTemp, Warning, TEXT("Destroying on the server"));
-					Destroy(); // Server-side destroy
-				}
-				else
-				{
-					UE_LOG(LogTemp, Warning, TEXT("Failed to spawn inventory item from CorrespondingItemClass"));
-				}
-			}
-			else
-			{
-				UE_LOG(LogTemp, Warning, TEXT("CorrespondingItemClass is NULL"));
-			}
+void AItemPickup::OnPickupEndOverlap(UPrimitiveComponent* OverlappedComponent,
+		AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	if(GetLocalRole() == ROLE_Authority) // Only the server should handle the pickup
+	{
+		//UE_LOG(LogTemp, Log, TEXT("On Pickup END Overlap (SERVER)"))
+		if (ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(OtherActor))
+		{
+			// Set Player's item variable to NULLPTR
+			Player->CollidedPickup = nullptr;
+			ShowPrompt(false);
 		}
 	}
 }

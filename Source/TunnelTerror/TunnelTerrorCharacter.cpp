@@ -1,7 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "TunnelTerrorCharacter.h"
-#include "TunnelTerrorProjectile.h"
 #include "Animation/AnimInstance.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -76,6 +75,7 @@ void ATunnelTerrorCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 	DOREPLIFETIME(ATunnelTerrorCharacter, Inventory);
 	DOREPLIFETIME(ATunnelTerrorCharacter, bIsRagdolled);
+	DOREPLIFETIME(ATunnelTerrorCharacter, CollidedPickup);
 }
 
 //////////////////////////////////////////////////////////////////////////// Input
@@ -151,6 +151,19 @@ void ATunnelTerrorCharacter::SetIsRagdolled(const bool bNewRagdolled)
 	OnRagdoll(); // call it directly on the server, clients can just use ReplicatedUsing
 }
 
+void ATunnelTerrorCharacter::OnRep_CollidedPickup()
+{
+	// Logic to handle CollidedPickup being updated on the client
+	if (CollidedPickup)
+	{
+		UE_LOG(LogTemp, Log, TEXT("CollidedPickup replicated to client: %s"), *CollidedPickup->GetName());
+	}
+	else
+	{
+		UE_LOG(LogTemp, Log, TEXT("CollidedPickup is null on the client."));
+	}
+}
+
 void ATunnelTerrorCharacter::Move(const FInputActionValue& Value)
 {
 	// input is a Vector2D
@@ -224,7 +237,7 @@ void ATunnelTerrorCharacter::ScrollSlots(const FInputActionValue& Value)
 		}
 	} else
 	{
-		//Decrease by 1, wrap around to start
+		//Decrease by 1, wrap around to end
 		if (Inventory->SelectedSlotIndex > 1)
 		{
 			Inventory->ChangeSelectedSlot(Inventory->SelectedSlotIndex-1);
@@ -244,12 +257,25 @@ void ATunnelTerrorCharacter::EquipToInventory(AInventoryItem* NewItem)
 		if (NewItem)
 		{
 			Inventory->AddItem(NewItem);
-
 			ClientUpdateInventoryUI(NewItem);
 		}
 		else
 		{
 			UE_LOG(LogTemp, Warning, TEXT("Failed to add item to inventory because NewItem is null."));
+		}
+	}
+}
+
+void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInventoryItem> ItemClass)
+{
+	AInventoryItem* InventoryItem = GetWorld()->SpawnActor<AInventoryItem>(ItemClass);
+	if (InventoryItem)
+	{
+		InventoryItem->AttachToComponent(GetMesh1P(), FAttachmentTransformRules::KeepRelativeTransform, "GripPoint");
+		EquipToInventory(InventoryItem);
+		if (CollidedPickup)
+		{
+			CollidedPickup->Destroy();
 		}
 	}
 }
@@ -290,10 +316,27 @@ void ATunnelTerrorCharacter::UseSelectedItem()
 
 void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 {
+	//UE_LOG(LogTemp, Log, TEXT("Player Pressed E"))
+	
 	// if (DrillMachine)
 	// {
 	// 	DrillMachine->RepairDrill(this);
 	// }
+
+	// Player Presses 'E' on (Client) while currently colliding with a pickup (Server)
+	if (CollidedPickup)
+	{
+		if (CollidedPickup->CorrespondingItemClass)
+		{
+			// Spawn an instance of the inventory item on the server
+			UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item"))
+			ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("CorrespondingItemClass is NULL"));
+		}
+	}
 }
 
 void ATunnelTerrorCharacter::SetHasRifle(bool bNewHasRifle)
