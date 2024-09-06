@@ -357,7 +357,9 @@ void ATunnelTerrorCharacter::SetIsInfected(bool bIsNowInfected)
 
 bool ATunnelTerrorCharacter::GetIsInfected()
 {
-	return bIsInfected;
+	if (ATunnelTerrorPlayerState* playerState = GetPlayerState<ATunnelTerrorPlayerState>()) {
+		return playerState->IsInfected();
+	return false;
 }
 
 void ATunnelTerrorCharacter::DecreaseHealth(float damage)
