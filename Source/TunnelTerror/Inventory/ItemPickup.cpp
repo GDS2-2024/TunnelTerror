@@ -13,6 +13,7 @@ AItemPickup::AItemPickup()
 
 	// Creates and attaches the Actor Components to this actor.
 	PickupCollider = CreateDefaultSubobject<UBoxComponent>(TEXT("Pickup Collider"));
+	PickupCollider->SetBoxExtent(FVector(100, 100, 100));
 	// Specifies that the root transform of this actor should be the transform of the Collider component.
 	SetRootComponent(PickupCollider);
 	// Attaches the static mesh component to be a child of the collider. This means that when the actor's root transform
