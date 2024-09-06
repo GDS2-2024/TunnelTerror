@@ -45,5 +45,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Room Config")
 	TArray<FVector> gridSpaces;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Room Config")
+	TArray<FVector> SpawnLocations;
+
 	TArray<FVector> GetDoorPositions(FVector Origin);
 };
