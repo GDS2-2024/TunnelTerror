@@ -54,6 +54,14 @@ URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubc
     AActor* RoomSpawned = GetWorld()->SpawnActor<AActor>(ActorToSpawn, SpawnLocation, FRotator::ZeroRotator);
     URoomComponent* RC = RoomSpawned->GetComponentByClass<URoomComponent>();
 
+    if (!RC->SpawnLocations.IsEmpty()) {
+        for (int n = 0; n < RC->SpawnLocations.Num(); n++) {
+            FVector location = RoomSpawned->GetActorLocation() + RC->SpawnLocations[n];
+            AActor* ItemSpawned = GetWorld()->SpawnActor<AActor>(PickupItem, location, FRotator::ZeroRotator);
+        }
+        
+    }
+
     for (FVector space : RC->gridSpaces)
     {
         int32 i = CurrentI + static_cast<int32>(space.X);

@@ -114,6 +114,9 @@ public:
     FRoom LastActor;
 
     UPROPERTY(EditDefaultsOnly)
+    TSubclassOf<AActor> PickupItem;
+
+    UPROPERTY(EditDefaultsOnly)
     FRoom EntranceRoom;
 
     UPROPERTY(EditDefaultsOnly)
