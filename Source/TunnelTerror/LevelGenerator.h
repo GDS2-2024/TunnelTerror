@@ -101,6 +101,7 @@ public:
 
     int32 rooms;
     int32 number = 0;
+    int32 RoomsNumber = 50;
 
     UFUNCTION()
     void OnRep_Seed();
@@ -113,6 +114,7 @@ public:
     URoomComponent* SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubclassOf<AActor> ActorToSpawn, bool isX);
     void MarkGridAsOccupied(URoomComponent* RoomComponent, FVector Origin);
     bool CanPlaceRoom(int32 CurrentI, int32 CurrentJ, URoomComponent* RC);
+    bool CanPlaceEndRoom(int32 CurrentI, int32 CurrentJ, URoomComponent* RC);
     void SpawnAnotherPath(FPlace place);
     
 
@@ -130,6 +132,9 @@ public:
 
     UPROPERTY(EditDefaultsOnly)
     FRoom EntranceRoom;
+
+    UPROPERTY(EditDefaultsOnly)
+    FRoom EndRoom;
 
     UPROPERTY(EditDefaultsOnly)
     TArray<FRoom> Rooms;
