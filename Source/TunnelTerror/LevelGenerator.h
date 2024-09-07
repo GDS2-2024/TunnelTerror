@@ -126,6 +126,9 @@ public:
     TSubclassOf<AActor> PickupItem;
 
     UPROPERTY(EditDefaultsOnly)
+    TSubclassOf<AActor> Hazard1;
+
+    UPROPERTY(EditDefaultsOnly)
     FRoom EntranceRoom;
 
     UPROPERTY(EditDefaultsOnly)
