@@ -2,6 +2,7 @@
 #include "RoomComponent.h"
 #include "DrawDebugHelpers.h"
 #include "Math/UnrealMathUtility.h"
+#include "Net/UnrealNetwork.h"
 
 // Sets default values
 ALevelGenerator::ALevelGenerator()
@@ -14,10 +15,10 @@ ALevelGenerator::ALevelGenerator()
 void ALevelGenerator::BeginPlay()
 {
     Super::BeginPlay();
-    if (HasAuthority()) // Only the server should generate the seed
+    if (HasAuthority()) 
     {
         Seed = FMath::Rand();
-        OnRep_Seed(); // Replicate the seed to clients
+        OnRep_Seed(); 
     }
 
     FMath::RandInit(Seed);
@@ -25,6 +26,13 @@ void ALevelGenerator::BeginPlay()
     SpawnPath(1, EntranceRoom, 50, 0, true);
     UE_LOG(LogTemp, Error, TEXT("Rooms: %d"), rooms);
     
+}
+
+void ALevelGenerator::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+    DOREPLIFETIME(ALevelGenerator, Seed);
 }
 
 // Called every frame
@@ -69,12 +77,13 @@ URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubc
     AActor* RoomSpawned = GetWorld()->SpawnActor<AActor>(ActorToSpawn, SpawnLocation, FRotator::ZeroRotator);
     URoomComponent* RC = RoomSpawned->GetComponentByClass<URoomComponent>();
 
+    //spawn items in the rooms
     if (!RC->SpawnLocations.IsEmpty()) {
-        for (int n = 0; n < RC->SpawnLocations.Num(); n++) {
-            FVector location = RoomSpawned->GetActorLocation() + RC->SpawnLocations[n];
+        //for (int n = 0; n < RC->SpawnLocations.Num(); n++) {
+            int32 rand = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
+            FVector location = RoomSpawned->GetActorLocation() + RC->SpawnLocations[rand];
             AActor* ItemSpawned = GetWorld()->SpawnActor<AActor>(PickupItem, location, FRotator::ZeroRotator);
-        }
-        
+        //}
     }
 
     for (FVector space : RC->gridSpaces)

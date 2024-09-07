@@ -1,9 +1,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Net/UnrealNetwork.h"
 #include "GameFramework/Actor.h"
 #include "RoomComponent.h"
 #include "LevelGenerator.generated.h"
+
 
 USTRUCT(BlueprintType)
 struct FGridRow
@@ -100,6 +102,9 @@ public:
     int32 rooms;
     int32 number = 0;
 
+    UFUNCTION()
+    void OnRep_Seed();
+
     UPROPERTY(ReplicatedUsing = OnRep_Seed)
     int32 Seed = 0;
 
@@ -109,7 +114,7 @@ public:
     void MarkGridAsOccupied(URoomComponent* RoomComponent, FVector Origin);
     bool CanPlaceRoom(int32 CurrentI, int32 CurrentJ, URoomComponent* RC);
     void SpawnAnotherPath(FPlace place);
-    void OnRep_Seed();
+    
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     TArray<FPlace> Doorways;
