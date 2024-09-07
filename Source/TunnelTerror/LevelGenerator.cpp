@@ -7,12 +7,20 @@
 ALevelGenerator::ALevelGenerator()
 {
     PrimaryActorTick.bCanEverTick = true;
+    bReplicates = true;
 }
 
 // Called when the game starts or when spawned
 void ALevelGenerator::BeginPlay()
 {
     Super::BeginPlay();
+    if (HasAuthority()) // Only the server should generate the seed
+    {
+        Seed = FMath::Rand();
+        OnRep_Seed(); // Replicate the seed to clients
+    }
+
+    FMath::RandInit(Seed);
     InitializeGrid(Width, Height);
     SpawnPath(1, EntranceRoom, 50, 0, true);
     UE_LOG(LogTemp, Error, TEXT("Rooms: %d"), rooms);
@@ -23,6 +31,13 @@ void ALevelGenerator::BeginPlay()
 void ALevelGenerator::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
+}
+
+void ALevelGenerator::OnRep_Seed()
+{
+    FMath::RandInit(Seed);
+    InitializeGrid(Width, Height);
+    SpawnPath(1, EntranceRoom, 50, 0, true);
 }
 
 void ALevelGenerator::InitializeGrid(int32 GridWidth, int32 GridHeight)
