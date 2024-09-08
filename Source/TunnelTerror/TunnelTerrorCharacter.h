@@ -16,6 +16,7 @@ class UCameraComponent;
 class UAnimMontage;
 class USoundBase;
 class UInventoryComponent;
+class AElevatorEscape;
 
 UCLASS(config=Game)
 class ATunnelTerrorCharacter : public ACharacter
@@ -45,6 +46,10 @@ class ATunnelTerrorCharacter : public ACharacter
 	/** Move Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	class UInputAction* MoveAction;
+
+	/** Interact Input Action */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	class UInputAction* InteractAction;
 
 	/** Inventory Input Actions */
 	UPROPERTY(EditDefaultsOnly, Category=Input)
@@ -78,9 +83,6 @@ public:
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	class UInputAction* InteractAction;
 
 	/** Bool for AnimBP to switch to another animation set */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Weapon)
@@ -182,9 +184,14 @@ public:
 	/** Returns FirstPersonCameraComponent subobject **/
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
 
+	AElevatorEscape* ElevatorEscape;
+
 private:
 	UPROPERTY(ReplicatedUsing = OnRagdoll, BlueprintGetter = IsRagdolled, Replicated)
 	bool bIsRagdolled = false;
+
+	UPROPERTY()
+	int samples;
 
 };
 
