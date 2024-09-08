@@ -14,8 +14,18 @@ AElevatorEscape::AElevatorEscape()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	bReplicates = true;
+
 	samplesNeeded = 5;
 	currentSamples = 0;
+}
+
+void AElevatorEscape::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(AElevatorEscape, currentSamples);
+	DOREPLIFETIME(AElevatorEscape, samplesNeeded);
 }
 
 // Called when the game starts or when spawned
@@ -66,6 +76,11 @@ void AElevatorEscape::OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AAc
 
 void AElevatorEscape::AddSample(int newSamples)
 {
+	ServerAddSample(newSamples);
+}
+
+void AElevatorEscape::AddSampleImplementation(int newSamples)
+{
 	//UE_LOG(LogTemp, Log, TEXT("%d"), newSamples);
 	if (currentSamples <= samplesNeeded)
 	{
@@ -76,6 +91,30 @@ void AElevatorEscape::AddSample(int newSamples)
 
 	if (currentSamples == samplesNeeded)
 	{
-		PlayDoorOpenAnimation();
+		if (HasAuthority())
+		{
+			ServerPlayDoorOpenAnimation();
+		}
 	}
+}
+
+void AElevatorEscape::ServerAddSample_Implementation(int newSamples)
+{
+	// Call the function that handles adding samples
+	AddSampleImplementation(newSamples);
+}
+
+void AElevatorEscape::MulticastAddSample_Implementation(int newSamples)
+{
+	AddSampleImplementation(newSamples);
+}
+
+void AElevatorEscape::ServerPlayDoorOpenAnimation_Implementation()
+{
+	PlayDoorOpenAnimationImplementation();
+}
+
+void AElevatorEscape::MulticastPlayDoorOpenAnimation_Implementation()
+{
+	PlayDoorOpenAnimationImplementation();
 }

@@ -32,16 +32,29 @@ public:
 	UFUNCTION()
 	void OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
-	UFUNCTION()
-	void AddSample(int newSamples);
+	void AddSample(int newSample);
+
+	void AddSampleImplementation(int newSamples);
+
+	UFUNCTION(Server, Reliable)
+	void ServerAddSample(int newSamples);
+
+	UFUNCTION(Server, Reliable)
+	void MulticastAddSample(int newSamples);
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Elevator")
-	void PlayDoorOpenAnimation();
+	void PlayDoorOpenAnimationImplementation();
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UFUNCTION(Server, Reliable)
+	void ServerPlayDoorOpenAnimation();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastPlayDoorOpenAnimation();
+
+	UPROPERTY(Replicated)
 	int samplesNeeded;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UPROPERTY(Replicated)
 	int currentSamples;
 
 private:
