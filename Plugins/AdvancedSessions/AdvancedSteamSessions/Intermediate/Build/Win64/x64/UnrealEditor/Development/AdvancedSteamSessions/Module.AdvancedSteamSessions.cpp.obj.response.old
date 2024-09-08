@@ -1,6 +1,6 @@
-"D:\Unreal Projects\GDS2\TunnelTerror\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\AdvancedSteamSessions\Module.AdvancedSteamSessions.cpp"
+D:\Uni\UnrealEngineProjects\TunnelTerror\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\AdvancedSteamSessions\Module.AdvancedSteamSessions.cpp
 /I .
-/I "D:\Unreal Projects\GDS2\TunnelTerror\Plugins\AdvancedSessions\AdvancedSteamSessions\Source\AdvancedSteamSessions\Private"
+/I D:\Uni\UnrealEngineProjects\TunnelTerror\Plugins\AdvancedSessions\AdvancedSteamSessions\Source\AdvancedSteamSessions\Private
 /I ..\Plugins\Online\OnlineSubsystem\Intermediate\Build\Win64\UnrealEditor\Inc\OnlineSubsystem\UHT
 /I ..\Plugins\Online\OnlineSubsystem\Source
 /I ..\Plugins\Online\OnlineSubsystem\Source\Public
@@ -283,13 +283,13 @@
 /I Runtime\MovieSceneCapture\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AnimationDataController\UHT
 /I Developer\AnimationDataController\Public
-/I "D:\Unreal Projects\GDS2\TunnelTerror\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedSteamSessions\UHT"
+/I D:\Uni\UnrealEngineProjects\TunnelTerror\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedSteamSessions\UHT
 /I ..\Plugins\Online\OnlineSubsystemSteam\Source\Private
-/I "D:\Unreal Projects\GDS2\TunnelTerror\Plugins\AdvancedSessions\AdvancedSteamSessions\Source"
-/I "D:\Unreal Projects\GDS2\TunnelTerror\Plugins\AdvancedSessions\AdvancedSteamSessions\Source\AdvancedSteamSessions\Classes"
-/I "D:\Unreal Projects\GDS2\TunnelTerror\Plugins\AdvancedSessions\AdvancedSessions\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedSessions\UHT"
-/I "D:\Unreal Projects\GDS2\TunnelTerror\Plugins\AdvancedSessions\AdvancedSessions\Source"
-/I "D:\Unreal Projects\GDS2\TunnelTerror\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes"
+/I D:\Uni\UnrealEngineProjects\TunnelTerror\Plugins\AdvancedSessions\AdvancedSteamSessions\Source
+/I D:\Uni\UnrealEngineProjects\TunnelTerror\Plugins\AdvancedSessions\AdvancedSteamSessions\Source\AdvancedSteamSessions\Classes
+/I D:\Uni\UnrealEngineProjects\TunnelTerror\Plugins\AdvancedSessions\AdvancedSessions\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedSessions\UHT
+/I D:\Uni\UnrealEngineProjects\TunnelTerror\Plugins\AdvancedSessions\AdvancedSessions\Source
+/I D:\Uni\UnrealEngineProjects\TunnelTerror\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes
 /I ..\Plugins\Online\OnlineSubsystemSteam\Intermediate\Build\Win64\UnrealEditor\Inc\OnlineSubsystemSteam\UHT
 /I ..\Plugins\Online\OnlineSubsystemSteam\Source\Classes
 /I ..\Plugins\Online\OnlineSubsystemSteam\Source\Public
@@ -300,16 +300,16 @@
 /external:I ThirdParty\LibTiff\Source
 /external:I ThirdParty\Steamworks\Steamv153\sdk\public
 /external:I "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\INCLUDE"
-/external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt"
-/external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
-/external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um"
-/external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt"
-/FI"D:\Unreal Projects\GDS2\TunnelTerror\Intermediate\Build\Win64\x64\TunnelTerrorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
-/FI"D:\Unreal Projects\GDS2\TunnelTerror\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\AdvancedSteamSessions\Definitions.AdvancedSteamSessions.h"
-/Yu"D:\Unreal Projects\GDS2\TunnelTerror\Intermediate\Build\Win64\x64\TunnelTerrorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
-/Fp"D:\Unreal Projects\GDS2\TunnelTerror\Intermediate\Build\Win64\x64\TunnelTerrorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h.pch"
-/Fo"D:\Unreal Projects\GDS2\TunnelTerror\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\AdvancedSteamSessions\Module.AdvancedSteamSessions.cpp.obj"
-/sourceDependencies "D:\Unreal Projects\GDS2\TunnelTerror\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\AdvancedSteamSessions\Module.AdvancedSteamSessions.cpp.dep.json"
+/external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"
+/external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"
+/external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"
+/external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"
+/FI"D:\Uni\UnrealEngineProjects\TunnelTerror\Intermediate\Build\Win64\x64\TunnelTerrorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
+/FI"D:\Uni\UnrealEngineProjects\TunnelTerror\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\AdvancedSteamSessions\Definitions.AdvancedSteamSessions.h"
+/Yu"D:\Uni\UnrealEngineProjects\TunnelTerror\Intermediate\Build\Win64\x64\TunnelTerrorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
+/Fp"D:\Uni\UnrealEngineProjects\TunnelTerror\Intermediate\Build\Win64\x64\TunnelTerrorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h.pch"
+/Fo"D:\Uni\UnrealEngineProjects\TunnelTerror\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\AdvancedSteamSessions\Module.AdvancedSteamSessions.cpp.obj"
+/sourceDependencies D:\Uni\UnrealEngineProjects\TunnelTerror\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\AdvancedSteamSessions\Module.AdvancedSteamSessions.cpp.dep.json
 /Zc:inline
 /nologo
 /Oi

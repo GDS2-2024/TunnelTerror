@@ -22,6 +22,8 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 	bIsInfected = false;
 	health = 100.0f;
 
+	samples = 5;
+
 	// Character doesnt have a rifle at start
 	bHasRifle = false;
 	
@@ -108,7 +110,7 @@ void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 		EnhancedInputComponent->BindAction(Slot5, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot5);
 		EnhancedInputComponent->BindAction(Scroll, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::ScrollSlots);
 		//Interactions
-		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::Interact);
+		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::Interact);
 	}
 }
 
@@ -336,6 +338,19 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("CorrespondingItemClass is NULL"));
 		}
+	}
+	if (ElevatorEscape != nullptr)
+	{
+		if (!bIsInfected && samples > 0)
+		{
+			//UE_LOG(LogTemp, Log, TEXT("Interacting with Elevator, current samples: %d"), samples);
+			ElevatorEscape->AddSample(samples);
+			samples = 0;
+		}
+	}
+	else
+	{
+		UE_LOG(LogTemp, Log, TEXT("Move to Elevator to interact"));
 	}
 }
 
