@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "Hazard.generated.h"
 
+class UBoxComponent;
+
 UCLASS()
 class TUNNELTERROR_API AHazard : public AActor
 {
@@ -16,8 +18,14 @@ public:
 	AHazard();
 
 protected:
+	UPROPERTY(VisibleAnywhere)
+	USceneComponent* SceneRoot;
+	UPROPERTY(VisibleAnywhere)
+	UBoxComponent* Killbox;
+
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
 
 	UFUNCTION()
 	void OnHazardOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,

@@ -120,7 +120,6 @@ void ATunnelTerrorCharacter::Die()
 	if (ATunnelTerrorPlayerState* playerState = GetPlayerState<ATunnelTerrorPlayerState>()) {
 		playerState->SetIsInfected(true);
 		SetIsRagdolled(true);
-		UE_LOG(LogTemp, Log, TEXT("Test 1"));
 
 		FTimerHandle timerHandle = FTimerHandle();
 		GetWorldTimerManager().SetTimer(timerHandle, this, &ATunnelTerrorCharacter::Reanimate, 2);
@@ -344,7 +343,7 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 		if (!bIsInfected && samples > 0)
 		{
 			//UE_LOG(LogTemp, Log, TEXT("Interacting with Elevator, current samples: %d"), samples);
-			ElevatorEscape->AddSample(samples);
+			//ElevatorEscape->AddSample(samples);
 			samples = 0;
 		}
 	}
@@ -372,7 +371,11 @@ void ATunnelTerrorCharacter::SetIsInfected(bool bIsNowInfected)
 
 bool ATunnelTerrorCharacter::GetIsInfected()
 {
-	return bIsInfected;
+	if (ATunnelTerrorPlayerState* playerState = GetPlayerState<ATunnelTerrorPlayerState>()) {
+		return playerState->IsInfected();
+	}
+	UE_LOG(LogTemp, Error, TEXT("Couldn't cast to ATunnelTerrorPlayerState!"));
+	return false;
 }
 
 void ATunnelTerrorCharacter::DecreaseHealth(float damage)
@@ -383,6 +386,6 @@ void ATunnelTerrorCharacter::DecreaseHealth(float damage)
 
 	if (health <= 0)
 	{
-		this->SetIsInfected(true);
+		Die();
 	}
 }
