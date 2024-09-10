@@ -23,13 +23,17 @@ public:
 	// Add Item to the given Inventory Slot
 	void AddItem(AInventoryItem* Item, FInventorySlot& Slot);
 	// Remove the item from Inventory at the given slot
-	void RemoveItem(FInventorySlot& Slot);
+	void RemoveItem(int32 SlotIndex);
+	// Finds all plant samples in inventory and removes them
+	void RemoveSamples();
 	bool HasEmptySlot() const;
 	void ChangeSelectedSlot(int32 NewSelection);
 	AInventoryItem* GetSelectedItem();
 	int32 GetNumOfItems() { return NumOfItems; }
-	INT32 GetMaxSlots() {return MaxSlots; }
-
+	int32 GetMaxSlots() {return MaxSlots; }
+	int32 GetIndexOfItem(AInventoryItem* Item);
+	int32 GetAvailableSlotIndex();
+		
 	UPROPERTY(VisibleAnywhere)
     	int32 SelectedSlotIndex;
 	

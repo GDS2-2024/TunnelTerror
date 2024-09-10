@@ -24,7 +24,7 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 	bIsInfected = false;
 	health = 100.0f;
 
-	samples = 5;
+	samples = 0;
 
 	// Character doesnt have a rifle at start
 	bHasRifle = false;
@@ -137,11 +137,6 @@ void ATunnelTerrorCharacter::Reanimate()
 	SetIsRagdolled(false);
 }
 
-//void ATunnelTerrorCharacter::OnRagdoll_Implementation()
-//{
-//	OnRagdollBP();
-//}
-
 void ATunnelTerrorCharacter::SetIsRagdolled(const bool bNewRagdolled)
 {
 	if (!HasAuthority()) {
@@ -171,7 +166,8 @@ void ATunnelTerrorCharacter::ServerInteractWithElevator_Implementation(AElevator
 {
 	if (Elevator)
 	{
-		Elevator->ServerAddSample(Samples);  // Server now processes the request
+		Elevator->ServerAddSample(Samples);
+		RemoveSamplesFromInventory();
 	}
 }
 
@@ -268,7 +264,7 @@ void ATunnelTerrorCharacter::EquipToInventory(AInventoryItem* NewItem)
 		if (NewItem)
 		{
 			Inventory->AddItem(NewItem);
-			ClientUpdateInventoryUI(NewItem);
+			ClientAddInventoryUI(NewItem);
 		}
 		else
 		{
@@ -296,28 +292,46 @@ void ATunnelTerrorCharacter::ServerEquipToInventory_Implementation(AInventoryIte
 	EquipToInventory(InventoryItem);
 }
 
-void ATunnelTerrorCharacter::ClientUpdateInventoryUI_Implementation(AInventoryItem* NewItem)
+void ATunnelTerrorCharacter::ClientAddInventoryUI_Implementation(AInventoryItem* NewItem)
 {
 	if (!PlayerHUD)
 	{
-		UE_LOG(LogTemp, Error, TEXT("PlayerHUD is null in ClientUpdateInventoryUI"));
+		UE_LOG(LogTemp, Error, TEXT("PlayerHUD is null in ClientAddInventoryUI"));
 		return;
 	}
 
 	if (!Inventory)
 	{
-		UE_LOG(LogTemp, Error, TEXT("Inventory is null in ClientUpdateInventoryUI"));
+		UE_LOG(LogTemp, Error, TEXT("Inventory is null in ClientAddInventoryUI"));
 		return;
 	}
 
 	if (NewItem)
 	{
-		PlayerHUD->SetSlotIcon(Inventory->GetNumOfItems(), NewItem->InventoryIcon);
+		PlayerHUD->SetSlotIcon(Inventory->GetAvailableSlotIndex(), NewItem->InventoryIcon);
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("NewItem is null in ClientUpdateInventoryUI"));
+		UE_LOG(LogTemp, Warning, TEXT("NewItem is null in ClientAddInventoryUI"));
 	}
+}
+
+void ATunnelTerrorCharacter::ClientRemoveInventoryUI_Implementation(int32 SlotIndex)
+{
+	if (!PlayerHUD)
+	{
+		UE_LOG(LogTemp, Error, TEXT("PlayerHUD is null in ClientAddInventoryUI"));
+		return;
+	}
+
+	if (!Inventory)
+	{
+		UE_LOG(LogTemp, Error, TEXT("Inventory is null in ClientAddInventoryUI"));
+		return;
+	}
+	
+	PlayerHUD->ClearSlotIcon(SlotIndex+1);
+	
 }
 
 void ATunnelTerrorCharacter::UseSelectedItem()
@@ -332,6 +346,10 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 	{
 		if (CollidedPickup->CorrespondingItemClass)
 		{
+			if(CollidedPickup->PickupName == "SamplePickup")
+			{
+				samples++;
+			}
 			// Spawn an instance of the inventory item on the server
 			UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item"))
 			ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
@@ -351,8 +369,13 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 	}
 	else
 	{
-		UE_LOG(LogTemp, Log, TEXT("Move to Elevator to interact"));
+		//UE_LOG(LogTemp, Log, TEXT("Move to Elevator to interact"));
 	}
+}
+
+void ATunnelTerrorCharacter::RemoveSamplesFromInventory()
+{
+	Inventory->RemoveSamples();
 }
 
 void ATunnelTerrorCharacter::SetHasRifle(bool bNewHasRifle)

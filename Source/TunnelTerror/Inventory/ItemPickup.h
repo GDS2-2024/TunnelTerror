@@ -28,6 +28,9 @@ public:
 
 	UFUNCTION(Client, Reliable)
 	void ShowPrompt(bool bIsVisible);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString PickupName;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UStaticMeshComponent* PickupMesh;

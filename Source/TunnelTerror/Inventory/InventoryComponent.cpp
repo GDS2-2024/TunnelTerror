@@ -41,10 +41,29 @@ void UInventoryComponent::AddItem(AInventoryItem* Item, FInventorySlot& Slot)
 }
 
 // Remove the item from Inventory at the given slot
-void UInventoryComponent::RemoveItem(FInventorySlot& Slot)
+void UInventoryComponent::RemoveItem(int32 SlotIndex)
 {
-	Slot.EmptySlot();
+	InventorySlots[SlotIndex].EmptySlot();
 	NumOfItems -= 1;
+}
+
+void UInventoryComponent::RemoveSamples()
+{
+	int32 slotIndex = 0;
+	for (FInventorySlot& Slot : InventorySlots)
+	{
+		UE_LOG(LogTemp, Log, TEXT("Slot index: %d"), slotIndex)
+		if (!Slot.IsEmpty())
+		{
+			if (Slot.Item->ItemName == "Plant Sample")
+			{
+				UE_LOG(LogTemp, Log, TEXT("Slot: %d IS a plant sample"), slotIndex)
+				RemoveItem(slotIndex);
+				OnRep_InventorySlots();
+			}
+		}
+		slotIndex++;
+	}
 }
 
 bool UInventoryComponent::HasEmptySlot() const
@@ -75,14 +94,38 @@ AInventoryItem* UInventoryComponent::GetSelectedItem()
 	return SelectedSlot.Item;
 }
 
+int32 UInventoryComponent::GetIndexOfItem(AInventoryItem* Item)
+{
+	int32 slotNum = 0;
+	for (FInventorySlot& Slot : InventorySlots)
+	{
+		if (Slot.Item == Item)
+		{
+			return slotNum;
+		}
+		slotNum++;
+	}
+	UE_LOG(LogTemp, Error, TEXT("Error can't find index of item in inventory slots"))
+	return -1;
+}
+
 void UInventoryComponent::OnRep_InventorySlots()
 {
 	// Handle client-side logic when inventory slots are updated
 	UE_LOG(LogTemp, Log, TEXT("Inventory slots replicated to the client."));
 	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
-	if (AInventoryItem* NewItem = InventorySlots[GetNumOfItems()-1].Item)
+
+	int32 SlotIndex = 0; // Array Slot Index
+	for (FInventorySlot Slot : InventorySlots)
 	{
-		Player->ClientUpdateInventoryUI(NewItem);
+		if (Slot.IsEmpty())
+		{
+			Player->ClientRemoveInventoryUI(SlotIndex);
+		} else
+		{
+			Player->ClientAddInventoryUI(Slot.Item);
+		}
+		SlotIndex++;
 	}
 }
 
@@ -126,6 +169,26 @@ FInventorySlot* UInventoryComponent::GetAvailableSlot()
 	}
 
 	return nullptr; // Return nullptr if no available slot is found
+}
+
+int32 UInventoryComponent::GetAvailableSlotIndex()
+{
+	int32 slotIndex = 0;
+	if (HasEmptySlot())
+	{
+		for (FInventorySlot& Slot : InventorySlots)
+		{
+			if (Slot.IsEmpty())
+			{
+				return slotIndex;
+			}
+			slotIndex++;
+		}
+	} else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Inventory is full, can't return an available slot INDEX."));
+	}
+	return -1;
 }
 
 // Called when the game starts

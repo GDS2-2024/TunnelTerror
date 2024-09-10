@@ -104,7 +104,10 @@ public:
 	void ServerEquipToInventory(AInventoryItem* InventoryItem);
 
 	UFUNCTION(Client, Reliable)
-	void ClientUpdateInventoryUI(AInventoryItem* NewItem);
+	void ClientAddInventoryUI(AInventoryItem* NewItem);
+
+	UFUNCTION(Client, Reliable)
+	void ClientRemoveInventoryUI(int32 SlotIndex);
 	
 	UFUNCTION()
 	void UseSelectedItem();
@@ -180,15 +183,13 @@ protected:
 	
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<UPlayerHUD> PlayerHUDClass;
-	UPROPERTY()
-	UPlayerHUD* PlayerHUD;
-
+	
 	UFUNCTION(BlueprintNativeEvent)
 	void OnRagdoll();
-	/*UFUNCTION(BlueprintImplementableEvent)
-	void OnRagdollBP(const bool bIsRagdolled);*/
 	void Interact(const FInputActionValue& Value);
-
+	
+	void RemoveSamplesFromInventory();
+	
 protected:
 	// APawn interface
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
@@ -202,11 +203,14 @@ public:
 
 	AElevatorEscape* ElevatorEscape;
 
+	UPROPERTY()
+	UPlayerHUD* PlayerHUD;
+	
 private:
 	UPROPERTY(ReplicatedUsing = OnRagdoll, BlueprintGetter = IsRagdolled, Replicated)
 	bool bIsRagdolled = false;
 
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere)
 	int samples;
 
 };

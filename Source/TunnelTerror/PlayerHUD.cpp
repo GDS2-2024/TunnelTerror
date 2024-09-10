@@ -33,6 +33,35 @@ void UPlayerHUD::SetSlotIcon(int32 SlotNum, UTexture2D* IconToSet)
 	}
 }
 
+void UPlayerHUD::ClearSlotIcon(int32 SlotNum)
+{
+	switch (SlotNum)
+	{
+	case 1 :
+		Slot1->SetBrushFromTexture(nullptr);
+		Slot1->SetBrushTintColor(EmptyItem);
+		break;
+	case 2 :
+		Slot2->SetBrushFromTexture(nullptr);
+		Slot2->SetBrushTintColor(EmptyItem);
+		break;
+	case 3 :
+		Slot3->SetBrushFromTexture(nullptr);
+		Slot3->SetBrushTintColor(EmptyItem);
+		break;
+	case 4 :
+		Slot4->SetBrushFromTexture(nullptr);
+		Slot4->SetBrushTintColor(EmptyItem);
+		break;
+	case 5 :
+		Slot5->SetBrushFromTexture(nullptr);
+		Slot5->SetBrushTintColor(EmptyItem);
+		break;
+	default:
+		break;
+	}
+}
+
 void UPlayerHUD::SetSlotSelection(int32 SlotNum)
 {
 	
