@@ -80,16 +80,23 @@ URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubc
     //spawn items in the rooms
     if (!RC->SpawnLocations.IsEmpty()) {
         if (spawnItems) {
+            TArray<int32> locations;
+
             int32 rand = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
             FVector location = LastRoomSpawned->GetActorLocation() + RC->SpawnLocations[rand];
             AActor* ItemSpawned = GetWorld()->SpawnActor<AActor>(PickupItem, location, FRotator::ZeroRotator);
+            locations.Add(rand);
 
-            int32 rand2 = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
-            while (rand2 == rand) {
-                rand2 = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
+            for (int i = 0; i < 5; i++) {
+                rand = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
+                while (locations.Contains(rand)) {
+                    rand = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
+                }
+                location = LastRoomSpawned->GetActorLocation() + RC->SpawnLocations[rand];
+                AActor* HazardSpawned = GetWorld()->SpawnActor<AActor>(Hazard1, location, FRotator::ZeroRotator);
+                locations.Add(rand);
+                UE_LOG(LogTemp, Error, TEXT("hazard"));
             }
-            location = LastRoomSpawned->GetActorLocation() + RC->SpawnLocations[rand2];
-            AActor* HazardSpawned = GetWorld()->SpawnActor<AActor>(Hazard1, location, FRotator::ZeroRotator);
         }
 
         if (spawnSample) {
