@@ -10,6 +10,8 @@
 #include "Net/UnrealNetwork.h"
 #include <TunnelTerrorPlayerState.h>
 
+#include "ElevatorEscape.h"
+
 
 //////////////////////////////////////////////////////////////////////////
 // ATunnelTerrorCharacter
@@ -165,6 +167,14 @@ void ATunnelTerrorCharacter::OnRep_CollidedPickup()
 	}
 }
 
+void ATunnelTerrorCharacter::ServerInteractWithElevator_Implementation(AElevatorEscape* Elevator, int32 Samples)
+{
+	if (Elevator)
+	{
+		Elevator->ServerAddSample(Samples);  // Server now processes the request
+	}
+}
+
 void ATunnelTerrorCharacter::Move(const FInputActionValue& Value)
 {
 	// input is a Vector2D
@@ -317,13 +327,6 @@ void ATunnelTerrorCharacter::UseSelectedItem()
 
 void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 {
-	//UE_LOG(LogTemp, Log, TEXT("Player Pressed E"))
-	
-	// if (DrillMachine)
-	// {
-	// 	DrillMachine->RepairDrill(this);
-	// }
-
 	// Player Presses 'E' on (Client) while currently colliding with a pickup (Server)
 	if (CollidedPickup)
 	{
@@ -342,8 +345,7 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 	{
 		if (!bIsInfected && samples > 0)
 		{
-			//UE_LOG(LogTemp, Log, TEXT("Interacting with Elevator, current samples: %d"), samples);
-			//ElevatorEscape->AddSample(samples);
+			ServerInteractWithElevator(ElevatorEscape, samples);
 			samples = 0;
 		}
 	}

@@ -159,6 +159,8 @@ public:
 	UFUNCTION()
 	void OnRep_CollidedPickup();
 
+	UFUNCTION(Server, Reliable)
+	void ServerInteractWithElevator(AElevatorEscape* Elevator, int32 Samples);
 	
 protected:
 	/** Called for movement input */

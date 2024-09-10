@@ -7,6 +7,7 @@
 #include "GameFramework/Actor.h"
 #include "Engine/World.h"
 #include "Engine/Engine.h"
+#include "Net/UnrealNetwork.h"
 
 // Sets default values
 AElevatorEscape::AElevatorEscape()
@@ -18,6 +19,7 @@ AElevatorEscape::AElevatorEscape()
 
 	samplesNeeded = 5;
 	currentSamples = 0;
+
 }
 
 void AElevatorEscape::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
@@ -91,9 +93,11 @@ void AElevatorEscape::AddSampleImplementation(int newSamples)
 
 	if (currentSamples == samplesNeeded)
 	{
+		UE_LOG(LogTemp, Log, TEXT("Has enough samples: %d"), currentSamples);
 		if (HasAuthority())
 		{
-			ServerPlayDoorOpenAnimation();
+			MulticastPlayDoorOpenAnimation();
+			UE_LOG(LogTemp, Log, TEXT("Playing animation"));
 		}
 	}
 }
