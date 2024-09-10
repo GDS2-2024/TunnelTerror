@@ -318,13 +318,6 @@ void ATunnelTerrorCharacter::UseSelectedItem()
 
 void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 {
-	//UE_LOG(LogTemp, Log, TEXT("Player Pressed E"))
-	
-	// if (DrillMachine)
-	// {
-	// 	DrillMachine->RepairDrill(this);
-	// }
-
 	// Player Presses 'E' on (Client) while currently colliding with a pickup (Server)
 	if (CollidedPickup)
 	{
@@ -345,7 +338,6 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 		{
 			//UE_LOG(LogTemp, Log, TEXT("Interacting with Elevator, current samples: %d"), samples);
 			ElevatorEscape->AddSample(samples);
-			samples = 0;
 		}
 	}
 	else

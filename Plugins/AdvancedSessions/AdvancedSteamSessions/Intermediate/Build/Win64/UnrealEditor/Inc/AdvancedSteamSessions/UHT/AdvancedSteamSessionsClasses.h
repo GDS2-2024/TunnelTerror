@@ -7,9 +7,9 @@
 #pragma once
 
 
-#include "../../../../../../../../../Users/Dylan Archer/Desktop/TunnelTerror/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/AdvancedSteamFriendsLibrary.h"
-#include "../../../../../../../../../Users/Dylan Archer/Desktop/TunnelTerror/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/AdvancedSteamWorkshopLibrary.h"
-#include "../../../../../../../../../Users/Dylan Archer/Desktop/TunnelTerror/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/SteamNotificationsSubsystem.h"
-#include "../../../../../../../../../Users/Dylan Archer/Desktop/TunnelTerror/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/SteamRequestGroupOfficersCallbackProxy.h"
-#include "../../../../../../../../../Users/Dylan Archer/Desktop/TunnelTerror/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/SteamWSRequestUGCDetailsCallbackProxy.h"
+#include "../../../../../../../../../Users/keege/TunnelTerror/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/AdvancedSteamFriendsLibrary.h"
+#include "../../../../../../../../../Users/keege/TunnelTerror/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/AdvancedSteamWorkshopLibrary.h"
+#include "../../../../../../../../../Users/keege/TunnelTerror/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/SteamNotificationsSubsystem.h"
+#include "../../../../../../../../../Users/keege/TunnelTerror/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/SteamRequestGroupOfficersCallbackProxy.h"
+#include "../../../../../../../../../Users/keege/TunnelTerror/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/SteamWSRequestUGCDetailsCallbackProxy.h"
 

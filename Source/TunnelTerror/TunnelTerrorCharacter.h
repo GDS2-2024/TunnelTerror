@@ -8,6 +8,7 @@
 #include "Inventory/InventoryItem.h"
 #include "PlayerHUD.h"
 #include "Inventory/ItemPickup.h"
+#include "ElevatorEscape.h"
 #include "TunnelTerrorCharacter.generated.h"
 
 class UInputComponent;
