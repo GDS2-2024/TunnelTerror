@@ -1,9 +1,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Net/UnrealNetwork.h"
 #include "GameFramework/Actor.h"
 #include "RoomComponent.h"
 #include "LevelGenerator.generated.h"
+
 
 USTRUCT(BlueprintType)
 struct FGridRow
@@ -100,12 +102,30 @@ public:
     int32 rooms;
     int32 number = 0;
 
+    AActor* LastRoomSpawned;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Grid")
+    int32 RoomsNumber = 50;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Grid")
+    int32 StartI = 50;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Grid")
+    int32 StartJ = 0;
+
+    UFUNCTION()
+    void OnRep_Seed();
+
+    UPROPERTY(ReplicatedUsing = OnRep_Seed)
+    int32 Seed = 0;
+
     void InitializeGrid(int32 GridWidth, int32 GridHeight);
     void SpawnPath(int32 LastDoor, FRoom StartRoom, int32 CurrentI, int32 CurrentJ, bool start);
-    URoomComponent* SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubclassOf<AActor> ActorToSpawn, bool isX);
+    URoomComponent* SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubclassOf<AActor> ActorToSpawn, bool spawnItems, bool spawnSample);
     void MarkGridAsOccupied(URoomComponent* RoomComponent, FVector Origin);
     bool CanPlaceRoom(int32 CurrentI, int32 CurrentJ, URoomComponent* RC);
+    bool CanPlaceEndRoom(int32 CurrentI, int32 CurrentJ, URoomComponent* RC);
     void SpawnAnotherPath(FPlace place);
+    
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     TArray<FPlace> Doorways;
@@ -115,9 +135,16 @@ public:
 
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<AActor> PickupItem;
+    UPROPERTY(EditDefaultsOnly)
+    TSubclassOf<AActor> Hazard1;
+    UPROPERTY(EditDefaultsOnly)
+    TSubclassOf<AActor> Sample;
 
     UPROPERTY(EditDefaultsOnly)
     FRoom EntranceRoom;
+
+    UPROPERTY(EditDefaultsOnly)
+    FRoom EndRoom;
 
     UPROPERTY(EditDefaultsOnly)
     TArray<FRoom> Rooms;
