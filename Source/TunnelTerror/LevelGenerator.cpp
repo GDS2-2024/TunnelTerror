@@ -51,6 +51,7 @@ void ALevelGenerator::OnRep_Seed()
 void ALevelGenerator::InitializeGrid(int32 GridWidth, int32 GridHeight)
 {
     Grid.Empty();
+    const float CellSize = 500.0f;
 
     for (int32 RowIndex = 0; RowIndex < GridHeight; ++RowIndex)
     {
@@ -60,6 +61,10 @@ void ALevelGenerator::InitializeGrid(int32 GridWidth, int32 GridHeight)
         for (int32 ColIndex = 0; ColIndex < GridWidth; ++ColIndex)
         {
             NewRow.Add(ColIndex, false);
+            if (DebugMode) {
+                FVector SpawnLocation(ColIndex * CellSize, RowIndex * CellSize, 600.0f);
+                GetWorld()->SpawnActor<AActor>(GridItem, SpawnLocation, FRotator::ZeroRotator);
+            }
         }
 
         Grid.Add(NewRow);
@@ -80,30 +85,35 @@ URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubc
     //spawn items in the rooms
     if (!RC->SpawnLocations.IsEmpty()) {
         if (spawnItems) {
-            TArray<int32> locations;
+            if (!DebugMode) {
+                TArray<int32> locations;
 
-            int32 rand = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
-            FVector location = LastRoomSpawned->GetActorLocation() + RC->SpawnLocations[rand];
-            AActor* ItemSpawned = GetWorld()->SpawnActor<AActor>(PickupItem, location, FRotator::ZeroRotator);
-            locations.Add(rand);
-
-            for (int i = 0; i < 5; i++) {
-                rand = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
-                while (locations.Contains(rand)) {
-                    rand = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
-                }
-                location = LastRoomSpawned->GetActorLocation() + RC->SpawnLocations[rand];
-                AActor* HazardSpawned = GetWorld()->SpawnActor<AActor>(Hazard1, location, FRotator::ZeroRotator);
+                int32 rand = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
+                FVector location = LastRoomSpawned->GetActorLocation() + RC->SpawnLocations[rand];
+                AActor* ItemSpawned = GetWorld()->SpawnActor<AActor>(PickupItem, location, FRotator::ZeroRotator);
                 locations.Add(rand);
-                UE_LOG(LogTemp, Error, TEXT("hazard"));
+
+                for (int i = 0; i < 5; i++) {
+                    rand = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
+                    while (locations.Contains(rand)) {
+                        rand = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
+                    }
+                    location = LastRoomSpawned->GetActorLocation() + RC->SpawnLocations[rand];
+                    AActor* HazardSpawned = GetWorld()->SpawnActor<AActor>(Hazard1, location, FRotator::ZeroRotator);
+                    locations.Add(rand);
+                    UE_LOG(LogTemp, Error, TEXT("hazard"));
+                }
+            }
+            else {
+                for (int i = 0; i < RC->SpawnLocations.Num(); i++) {
+                    FVector location = LastRoomSpawned->GetActorLocation() + RC->SpawnLocations[i];
+                    AActor* ItemSpawned = GetWorld()->SpawnActor<AActor>(PickupTest, location, FRotator::ZeroRotator);
+                }
             }
         }
 
-        if (spawnSample) {
+        if (spawnSample && !DebugMode) {
             int32 rand3 = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
-            //while (rand3 == rand || rand3 == rand2) {
-            //    rand3 = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
-            //}
             FVector location = LastRoomSpawned->GetActorLocation() + RC->SpawnLocations[rand3];
             AActor* SampleSpawned = GetWorld()->SpawnActor<AActor>(Sample, location, FRotator::ZeroRotator);
             UE_LOG(LogTemp, Error, TEXT("sample SPAWNED"));
@@ -120,7 +130,11 @@ URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubc
         {
             Grid[j].BoolValues[i] = true;
 
-            FVector Place(j * CellSize, i * CellSize, 400.0f);
+            if (DebugMode) {
+                FVector Place(j * CellSize, i * CellSize, 400.0f);
+                GetWorld()->SpawnActor<AActor>(GridTrue, Place, FRotator::ZeroRotator);
+            }
+            
             //DrawDebugSphere(GetWorld(), Place, 50.0f, 12, FColor::Red, true, -1.0f, 0, 2.0f);
         }
         else
@@ -230,7 +244,7 @@ void ALevelGenerator::SpawnPath(int32 LastDoor, FRoom StartRoom, int32 CurrentI,
                 rooms += 1;
                 UE_LOG(LogTemp, Warning, TEXT("Room spawned: %s"), *ActorToSpawnNext->GetName());
 
-                if (ActorToSpawnNext == Corridors[0].Actor) {
+                if (ActorToSpawnNext == Corridors[1].Actor) {
                     spawnedT = true;  
                 }
 
@@ -473,7 +487,7 @@ bool ALevelGenerator::CanPlaceEndRoom(int32 CurrentI, int32 CurrentJ, URoomCompo
         int32 i = CurrentI + static_cast<int32>(space.X);
         int32 j = CurrentJ + static_cast<int32>(space.Y);
 
-        if (i >= Height || j >= Width || !Grid[j].BoolValues[i])
+        if (i >= Height || i < 0 || j >= Width || j < 0 || !Grid[j].BoolValues[i])
         {
             return true;
         }
