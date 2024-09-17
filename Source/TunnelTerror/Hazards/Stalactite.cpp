@@ -21,5 +21,10 @@ void AStalactite::BeginPlay()
 
 void AStalactite::OnFallTriggerOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& HitInfo)
 {
+	OnFall();
+}
+
+void AStalactite::OnFall_Implementation()
+{
 	Killbox->SetSimulatePhysics(true);
 }
