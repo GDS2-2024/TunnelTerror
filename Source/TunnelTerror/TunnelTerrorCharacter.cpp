@@ -11,6 +11,7 @@
 #include <TunnelTerrorPlayerState.h>
 
 #include "ElevatorEscape.h"
+#include "InfectionTrap.h"
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -73,6 +74,20 @@ void ATunnelTerrorCharacter::BeginPlay()
 		{
 			PlayerHUD = CreateWidget<UPlayerHUD>(PlayerController, PlayerHUDClass);
 			PlayerHUD->AddToPlayerScreen();
+		}
+	}
+}
+
+void ATunnelTerrorCharacter::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	if (trapCDCurrent > 0.0f)
+	{
+		trapCDCurrent -= DeltaTime;
+		if (trapCDCurrent < 0.0f)
+		{
+			trapCDCurrent = 0.0f;
 		}
 	}
 }
@@ -381,12 +396,27 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 
 void ATunnelTerrorCharacter::PlaceTrap(const FInputActionValue& Value)
 {
-	//UE_LOG(LogTemp, Log, TEXT("Placing trap..."));
-	bool canPlaceTrap = false;
-	canPlaceTrap = GetIsInfected();
-
-	if (canPlaceTrap) {
+	UE_LOG(LogTemp, Log, TEXT("Placing trap..."));
+	if (GetIsInfected() && trapCDCurrent == 0.0f) {
 		trapCDCurrent = trapCD;
+
+		UE_LOG(LogTemp, Log, TEXT("tap cd set"));
+
+		FVector PlayerLocation = GetActorLocation();
+		PlayerLocation.Z = 0.0f;
+		FVector ForwardVector = GetActorForwardVector();
+		FVector TrapLocation = PlayerLocation + (ForwardVector * 200.0f);
+
+		FRotator PlayerRotation = GetActorRotation();
+		FRotator RotationOffset(0.0f, -90.0f, 0.0f);
+		FRotator TrapRotation = PlayerRotation + RotationOffset;
+
+
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Owner = this;
+		SpawnParams.Instigator = GetInstigator();
+
+		GetWorld()->SpawnActor<AInfectionTrap>(TrapBlueprint, TrapLocation, TrapRotation, SpawnParams);
 	}
 }
 

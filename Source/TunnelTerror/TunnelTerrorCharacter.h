@@ -84,6 +84,8 @@ protected:
 
 public:
 
+	virtual void Tick(float DeltaTime) override;
+
 	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 		
 	/** Look Input Action */
@@ -225,5 +227,8 @@ private:
 
 	UPROPERTY(VisibleAnywhere)
 	float trapCDCurrent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Trap", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<AInfectionTrap> TrapBlueprint;
 };
 
