@@ -111,6 +111,8 @@ void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 		EnhancedInputComponent->BindAction(Slot4, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot4);
 		EnhancedInputComponent->BindAction(Slot5, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot5);
 		EnhancedInputComponent->BindAction(Scroll, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::ScrollSlots);
+		//Item
+		EnhancedInputComponent->BindAction(UseItemAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::UseSelectedItem);
 		//Interactions
 		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::Interact);
 	}
@@ -334,9 +336,17 @@ void ATunnelTerrorCharacter::ClientRemoveInventoryUI_Implementation(int32 SlotIn
 	
 }
 
-void ATunnelTerrorCharacter::UseSelectedItem()
+void ATunnelTerrorCharacter::UseSelectedItem(const FInputActionValue& Value)
 {
-	Inventory->GetSelectedItem()->UseItem();
+	UE_LOG(LogTemp, Warning, TEXT("UseSelectedItem() called in TunnelTerrorCharacter"))
+	if (Inventory->GetSelectedItem())
+	{
+		Inventory->GetSelectedItem()->UseItem();
+	} else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Selected slot does not have an item"))
+	}
+	
 }
 
 void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
