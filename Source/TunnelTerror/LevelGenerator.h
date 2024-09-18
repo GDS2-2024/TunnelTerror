@@ -147,7 +147,8 @@ public:
     TSubclassOf<AActor> Hazard1;
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<AActor> Sample;
-
+    UPROPERTY(EditDefaultsOnly)
+    TSubclassOf<AActor> Crystal;
     
 
     UPROPERTY(EditDefaultsOnly)
