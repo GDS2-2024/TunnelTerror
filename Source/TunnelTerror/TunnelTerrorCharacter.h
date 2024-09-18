@@ -53,6 +53,10 @@ class ATunnelTerrorCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* InteractAction;
 
+	/** Place Trap Input Action */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	class UInputAction* PlaceTrapAction;
+
 	/** Inventory Input Actions */
 	UPROPERTY(EditDefaultsOnly, Category=Input)
 	UInputAction* Slot1;
@@ -180,13 +184,16 @@ protected:
 	void SelectSlot4(const FInputActionValue& Value);
 	void SelectSlot5(const FInputActionValue& Value);
 	void ScrollSlots(const FInputActionValue& Value);
+
+	void Interact(const FInputActionValue& Value);
+
+	void PlaceTrap(const FInputActionValue& Value);
 	
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<UPlayerHUD> PlayerHUDClass;
 	
 	UFUNCTION(BlueprintNativeEvent)
 	void OnRagdoll();
-	void Interact(const FInputActionValue& Value);
 	
 	void RemoveSamplesFromInventory();
 	
@@ -213,5 +220,10 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	int samples;
 
+	UPROPERTY(VisibleAnywhere)
+	float trapCD;
+
+	UPROPERTY(VisibleAnywhere)
+	float trapCDCurrent;
 };
 

@@ -24,6 +24,9 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 	bIsInfected = false;
 	health = 100.0f;
 
+	trapCD = 10.0f;
+	trapCDCurrent = 0.0f;
+
 	samples = 0;
 
 	// Character doesnt have a rifle at start
@@ -113,6 +116,9 @@ void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 		EnhancedInputComponent->BindAction(Scroll, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::ScrollSlots);
 		//Interactions
 		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::Interact);
+
+		//PlaceTrap
+		EnhancedInputComponent->BindAction(PlaceTrapAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::PlaceTrap);
 	}
 }
 
@@ -370,6 +376,17 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 	else
 	{
 		//UE_LOG(LogTemp, Log, TEXT("Move to Elevator to interact"));
+	}
+}
+
+void ATunnelTerrorCharacter::PlaceTrap(const FInputActionValue& Value)
+{
+	//UE_LOG(LogTemp, Log, TEXT("Placing trap..."));
+	bool canPlaceTrap = false;
+	canPlaceTrap = GetIsInfected();
+
+	if (canPlaceTrap) {
+		trapCDCurrent = trapCD;
 	}
 }
 
