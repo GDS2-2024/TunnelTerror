@@ -109,6 +109,14 @@ public:
 	UFUNCTION(Server, Reliable)
 	void ServerEquipToInventory(AInventoryItem* InventoryItem);
 
+	void PlaceTrapImplementation();
+
+	UFUNCTION(Server, Reliable)
+	void ServerPlaceTrap();
+
+	UFUNCTION(Server, Reliable)
+	void MulticastPlaceTrap();
+
 	UFUNCTION(Client, Reliable)
 	void ClientAddInventoryUI(AInventoryItem* NewItem);
 

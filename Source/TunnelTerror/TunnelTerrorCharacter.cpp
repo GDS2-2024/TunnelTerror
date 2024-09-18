@@ -396,11 +396,23 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 
 void ATunnelTerrorCharacter::PlaceTrap(const FInputActionValue& Value)
 {
-	UE_LOG(LogTemp, Log, TEXT("Placing trap..."));
-	if (GetIsInfected() && trapCDCurrent == 0.0f) {
+	if (HasAuthority())
+	{
+		PlaceTrapImplementation();
+		MulticastPlaceTrap();
+	}
+	else
+	{
+		ServerPlaceTrap();
+	}
+}
+
+void ATunnelTerrorCharacter::PlaceTrapImplementation()
+{
+	if (GetIsInfected() && trapCDCurrent == 0) {
 		trapCDCurrent = trapCD;
 
-		UE_LOG(LogTemp, Log, TEXT("tap cd set"));
+		UE_LOG(LogTemp, Log, TEXT("trap cd set"));
 
 		FVector PlayerLocation = GetActorLocation();
 		PlayerLocation.Z = 0.0f;
@@ -417,6 +429,19 @@ void ATunnelTerrorCharacter::PlaceTrap(const FInputActionValue& Value)
 		SpawnParams.Instigator = GetInstigator();
 
 		GetWorld()->SpawnActor<AInfectionTrap>(TrapBlueprint, TrapLocation, TrapRotation, SpawnParams);
+	}
+}
+
+void ATunnelTerrorCharacter::ServerPlaceTrap_Implementation()
+{
+	PlaceTrapImplementation();
+}
+
+void ATunnelTerrorCharacter::MulticastPlaceTrap_Implementation()
+{
+	if (!HasAuthority())
+	{
+		PlaceTrapImplementation();
 	}
 }
 
