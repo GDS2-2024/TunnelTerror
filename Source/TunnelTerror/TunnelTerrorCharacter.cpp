@@ -278,7 +278,7 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 	AInventoryItem* InventoryItem = GetWorld()->SpawnActor<AInventoryItem>(ItemClass);
 	if (InventoryItem)
 	{
-		InventoryItem->AttachToComponent(GetMesh1P(), FAttachmentTransformRules::KeepRelativeTransform, "GripPoint");
+		InventoryItem->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, "index_r_socket");
 		EquipToInventory(InventoryItem);
 		if (CollidedPickup)
 		{
