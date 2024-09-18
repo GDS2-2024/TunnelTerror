@@ -174,7 +174,8 @@ protected:
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
 
-	void UseSelectedItem(const FInputActionValue& Value);
+	void PressedUseItem(const FInputActionValue& Value);
+	void ReleasedUseItem(const FInputActionValue& Value);
 	
 	/** Called for inventory input */
 	void SelectSlot1(const FInputActionValue& Value);
