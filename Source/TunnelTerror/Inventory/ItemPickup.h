@@ -45,7 +45,7 @@ public:
 	TSubclassOf<AInventoryItem> CorrespondingItemClass;
 	
 	UFUNCTION()
-	void OnPickupBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+	virtual void OnPickupBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 		UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& HitInfo);
 	
 	UFUNCTION()
