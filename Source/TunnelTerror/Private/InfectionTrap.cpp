@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
+#include "TunnelTerror/TunnelTerrorCharacter.h"
+#include "Components/SphereComponent.h"
 #include "InfectionTrap.h"
 
 // Sets default values
@@ -16,6 +17,30 @@ void AInfectionTrap::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	USkeletalMeshComponent* SkeletalMesh = FindComponentByClass<USkeletalMeshComponent>();
+
+	if (SkeletalMesh)
+	{
+		TArray<USceneComponent*> ChildComponents;
+		SkeletalMesh->GetChildrenComponents(true, ChildComponents);
+
+		for (USceneComponent* Child : ChildComponents)
+		{
+			// Check if the child is a USphereComponent
+			USphereComponent* SphereComponent = Cast<USphereComponent>(Child);
+			if (SphereComponent)
+			{
+				CollisionSphere = SphereComponent;
+				break;
+			}
+		}
+
+		if (CollisionSphere)
+		{
+			// Bind the overlap event to the OnOverlapBegin function
+			CollisionSphere->OnComponentBeginOverlap.AddDynamic(this, &AInfectionTrap::OnOverlapBegin);
+		}
+	}
 }
 
 // Called every frame
@@ -25,3 +50,19 @@ void AInfectionTrap::Tick(float DeltaTime)
 
 }
 
+void AInfectionTrap::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	// Check if the overlapping actor is the player character
+	ATunnelTerrorCharacter* PlayerCharacter = Cast<ATunnelTerrorCharacter>(OtherActor);
+	if (PlayerCharacter)
+	{
+		// Call the InfectPlayer function
+		InfectPlayer(PlayerCharacter);
+	}
+}
+
+void AInfectionTrap::InfectPlayer(ATunnelTerrorCharacter* TargetCharacter)
+{
+	TargetCharacter->DecreaseHealth(100.0f);
+	UE_LOG(LogTemp, Log, TEXT("The players health is: %f"), TargetCharacter->health);
+}
