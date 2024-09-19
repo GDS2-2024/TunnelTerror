@@ -129,6 +129,9 @@ void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 		EnhancedInputComponent->BindAction(Slot4, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot4);
 		EnhancedInputComponent->BindAction(Slot5, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot5);
 		EnhancedInputComponent->BindAction(Scroll, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::ScrollSlots);
+		//Item
+		EnhancedInputComponent->BindAction(UseItemAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::PressedUseItem);
+		EnhancedInputComponent->BindAction(UseItemAction, ETriggerEvent::Completed, this, &ATunnelTerrorCharacter::ReleasedUseItem);
 		//Interactions
 		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::Interact);
 
@@ -299,7 +302,7 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 	AInventoryItem* InventoryItem = GetWorld()->SpawnActor<AInventoryItem>(ItemClass);
 	if (InventoryItem)
 	{
-		InventoryItem->AttachToComponent(GetMesh1P(), FAttachmentTransformRules::KeepRelativeTransform, "GripPoint");
+		InventoryItem->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, "index_r_socket");
 		EquipToInventory(InventoryItem);
 		if (CollidedPickup)
 		{
@@ -355,9 +358,20 @@ void ATunnelTerrorCharacter::ClientRemoveInventoryUI_Implementation(int32 SlotIn
 	
 }
 
-void ATunnelTerrorCharacter::UseSelectedItem()
+void ATunnelTerrorCharacter::PressedUseItem(const FInputActionValue& Value)
 {
-	Inventory->GetSelectedItem()->UseItem();
+	if (Inventory->GetSelectedItem())
+	{
+		Inventory->GetSelectedItem()->UseItem();
+	}	
+}
+
+void ATunnelTerrorCharacter::ReleasedUseItem(const FInputActionValue& Value)
+{
+	if (Inventory->GetSelectedItem())
+	{
+		Inventory->GetSelectedItem()->ReleaseUseItem();
+	}
 }
 
 void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)

@@ -29,6 +29,11 @@ void AInventoryItem::UseItem()
 	UE_LOG(LogTemp, Warning, TEXT("UseItem() called in Base Class (default implementation)"));
 }
 
+void AInventoryItem::ReleaseUseItem()
+{
+	UE_LOG(LogTemp, Warning, TEXT("ReleaseUseItem() called in Base Class (default implementation)"));
+}
+
 void AInventoryItem::ShowItem()
 {
 	if (ItemMesh)

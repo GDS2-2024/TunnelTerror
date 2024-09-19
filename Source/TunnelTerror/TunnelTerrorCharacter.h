@@ -57,6 +57,10 @@ class ATunnelTerrorCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* PlaceTrapAction;
 
+	/** Use Item */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	class UInputAction* UseItemAction;
+	
 	/** Inventory Input Actions */
 	UPROPERTY(EditDefaultsOnly, Category=Input)
 	UInputAction* Slot1;
@@ -123,9 +127,6 @@ public:
 	UFUNCTION(Client, Reliable)
 	void ClientRemoveInventoryUI(int32 SlotIndex);
 	
-	UFUNCTION()
-	void UseSelectedItem();
-	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	bool bIsInfected;
 
@@ -187,6 +188,9 @@ protected:
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
 
+	void PressedUseItem(const FInputActionValue& Value);
+	void ReleasedUseItem(const FInputActionValue& Value);
+	
 	/** Called for inventory input */
 	void SelectSlot1(const FInputActionValue& Value);
 	void SelectSlot2(const FInputActionValue& Value);
