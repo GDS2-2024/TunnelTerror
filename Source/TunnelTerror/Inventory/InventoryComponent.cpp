@@ -25,6 +25,11 @@ void UInventoryComponent::AddItem(AInventoryItem* Item)
 	if (FInventorySlot* EmptySlot = GetAvailableSlot(); EmptySlot != nullptr)
 	{
 		EmptySlot->AddItemToSlot(Item);
+		Item->Player = GetOwner();
+		if (SelectedSlotIndex != GetIndexOfItem(Item)+1) //Hide item if not selected slot
+		{
+			Item->HideItem();
+		}
 		NumOfItems += 1;
 	} else
 	{

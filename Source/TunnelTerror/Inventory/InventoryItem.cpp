@@ -39,6 +39,17 @@ void AInventoryItem::ShowItem()
 	if (ItemMesh)
 	{
 		ItemMesh->SetVisibility(true);
+		TArray<USceneComponent*> ChildrenArray;
+		ItemMesh->GetChildrenComponents(true, ChildrenArray);
+
+		// Check if there are any children and set their visibility to true
+		for (USceneComponent* Element : ChildrenArray)
+		{
+			if (Element)
+			{
+				Element->SetVisibility(true);
+			}
+		}
 	}
 }
 
@@ -47,5 +58,16 @@ void AInventoryItem::HideItem()
 	if (ItemMesh)
 	{
 		ItemMesh->SetVisibility(false);
+		TArray<USceneComponent*> ChildrenArray;
+		ItemMesh->GetChildrenComponents(true, ChildrenArray);
+
+		// Check if there are any children and set their visibility to false
+		for (USceneComponent* Element : ChildrenArray)
+		{
+			if (Element)
+			{
+				Element->SetVisibility(false);
+			}
+		}
 	}
 }
