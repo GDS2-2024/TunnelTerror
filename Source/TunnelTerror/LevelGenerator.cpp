@@ -43,9 +43,12 @@ void ALevelGenerator::Tick(float DeltaTime)
 
 void ALevelGenerator::OnRep_Seed()
 {
-    FMath::RandInit(Seed);
-    InitializeGrid(Width, Height);
-    SpawnPath(1, EntranceRoom, StartI, StartJ, true);
+	if (HasAuthority()) 
+    {
+    	FMath::RandInit(Seed);
+    	InitializeGrid(Width, Height);
+    	SpawnPath(1, EntranceRoom, StartI, StartJ, true);
+	}
 }
 
 void ALevelGenerator::InitializeGrid(int32 GridWidth, int32 GridHeight)
