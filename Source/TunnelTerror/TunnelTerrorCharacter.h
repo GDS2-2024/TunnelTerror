@@ -99,6 +99,9 @@ public:
 
 	UFUNCTION(Server,Reliable)
 	void ServerSpawnItem(TSubclassOf<AInventoryItem> ItemClass);
+
+	UFUNCTION(Server, Reliable)
+	void ServerSpawnMoney(TSubclassOf<AInventoryItem> ItemClass);
 	
 	UFUNCTION(Server, Reliable)
 	void ServerEquipToInventory(AInventoryItem* InventoryItem);
@@ -117,6 +120,9 @@ public:
 
 	UPROPERTY(VisibleAnywhere)
 	float health;
+
+	UPROPERTY(VisibleAnywhere)
+	int32 money;
 
 	/** Setter to set the bool */
 	UFUNCTION(BlueprintCallable, Category = Weapon)

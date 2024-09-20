@@ -20,6 +20,7 @@ public:
 	void SetSlotIcon(int32 SlotNum, UTexture2D* IconToSet);
 	void ClearSlotIcon(int32 SlotNum);
 	void SetSlotSelection(int32 SlotNum);
+	void SetCurrencyUI(int32 number);
 	
 protected:
 
@@ -54,6 +55,10 @@ protected:
 
 	UPROPERTY(EditAnywhere, meta=(BindWidget))
 	UImage* BackgroundSlot5;
+
+	//Currency counter
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+	UTextBlock* CurrencyUI;
 
 	FSlateColor ItemPresent = FSlateColor(FColor(255,255,255,255));
 	FSlateColor EmptyItem = FSlateColor(FColor(255,255,255,0));
