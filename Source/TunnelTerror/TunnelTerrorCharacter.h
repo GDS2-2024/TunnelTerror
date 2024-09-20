@@ -53,6 +53,14 @@ class ATunnelTerrorCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* InteractAction;
 
+	/** Place Trap Input Action */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	class UInputAction* PlaceTrapAction;
+
+	/** Use Item */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	class UInputAction* UseItemAction;
+	
 	/** Inventory Input Actions */
 	UPROPERTY(EditDefaultsOnly, Category=Input)
 	UInputAction* Slot1;
@@ -80,6 +88,8 @@ protected:
 
 public:
 
+	virtual void Tick(float DeltaTime) override;
+
 	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 		
 	/** Look Input Action */
@@ -103,14 +113,19 @@ public:
 	UFUNCTION(Server, Reliable)
 	void ServerEquipToInventory(AInventoryItem* InventoryItem);
 
+	void PlaceTrapImplementation();
+
+	UFUNCTION(Server, Reliable)
+	void ServerPlaceTrap();
+
+	UFUNCTION(Server, Reliable)
+	void MulticastPlaceTrap();
+
 	UFUNCTION(Client, Reliable)
 	void ClientAddInventoryUI(AInventoryItem* NewItem);
 
 	UFUNCTION(Client, Reliable)
 	void ClientRemoveInventoryUI(int32 SlotIndex);
-	
-	UFUNCTION()
-	void UseSelectedItem();
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	bool bIsInfected;
@@ -173,6 +188,9 @@ protected:
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
 
+	void PressedUseItem(const FInputActionValue& Value);
+	void ReleasedUseItem(const FInputActionValue& Value);
+	
 	/** Called for inventory input */
 	void SelectSlot1(const FInputActionValue& Value);
 	void SelectSlot2(const FInputActionValue& Value);
@@ -180,13 +198,16 @@ protected:
 	void SelectSlot4(const FInputActionValue& Value);
 	void SelectSlot5(const FInputActionValue& Value);
 	void ScrollSlots(const FInputActionValue& Value);
+
+	void Interact(const FInputActionValue& Value);
+
+	void PlaceTrap(const FInputActionValue& Value);
 	
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<UPlayerHUD> PlayerHUDClass;
 	
 	UFUNCTION(BlueprintNativeEvent)
 	void OnRagdoll();
-	void Interact(const FInputActionValue& Value);
 	
 	void RemoveSamplesFromInventory();
 	
@@ -213,5 +234,13 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	int samples;
 
+	UPROPERTY(VisibleAnywhere)
+	float trapCD;
+
+	UPROPERTY(VisibleAnywhere)
+	float trapCDCurrent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Trap", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<AInfectionTrap> TrapBlueprint;
 };
 

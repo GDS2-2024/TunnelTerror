@@ -12,6 +12,7 @@
 
 #include "ElevatorEscape.h"
 #include "Hazards/TorchHazard.h"
+#include "InfectionTrap.h"
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -24,6 +25,9 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 	// Character is not infected at the start
 	bIsInfected = false;
 	health = 100.0f;
+
+	trapCD = 10.0f;
+	trapCDCurrent = 0.0f;
 
 	samples = 0;
 
@@ -75,6 +79,20 @@ void ATunnelTerrorCharacter::BeginPlay()
 	}
 }
 
+void ATunnelTerrorCharacter::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	if (trapCDCurrent > 0.0f)
+	{
+		trapCDCurrent -= DeltaTime;
+		if (trapCDCurrent < 0.0f)
+		{
+			trapCDCurrent = 0.0f;
+		}
+	}
+}
+
 void ATunnelTerrorCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
@@ -112,8 +130,14 @@ void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 		EnhancedInputComponent->BindAction(Slot4, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot4);
 		EnhancedInputComponent->BindAction(Slot5, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot5);
 		EnhancedInputComponent->BindAction(Scroll, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::ScrollSlots);
+		//Item
+		EnhancedInputComponent->BindAction(UseItemAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::PressedUseItem);
+		EnhancedInputComponent->BindAction(UseItemAction, ETriggerEvent::Completed, this, &ATunnelTerrorCharacter::ReleasedUseItem);
 		//Interactions
 		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::Interact);
+
+		//PlaceTrap
+		EnhancedInputComponent->BindAction(PlaceTrapAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::PlaceTrap);
 	}
 }
 
@@ -279,7 +303,7 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 	AInventoryItem* InventoryItem = GetWorld()->SpawnActor<AInventoryItem>(ItemClass);
 	if (InventoryItem)
 	{
-		InventoryItem->AttachToComponent(GetMesh1P(), FAttachmentTransformRules::KeepRelativeTransform, "GripPoint");
+		InventoryItem->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, "index_r_socket");
 		EquipToInventory(InventoryItem);
 		if (CollidedPickup)
 		{
@@ -335,9 +359,20 @@ void ATunnelTerrorCharacter::ClientRemoveInventoryUI_Implementation(int32 SlotIn
 	
 }
 
-void ATunnelTerrorCharacter::UseSelectedItem()
+void ATunnelTerrorCharacter::PressedUseItem(const FInputActionValue& Value)
 {
-	Inventory->GetSelectedItem()->UseItem();
+	if (Inventory->GetSelectedItem())
+	{
+		Inventory->GetSelectedItem()->UseItem();
+	}	
+}
+
+void ATunnelTerrorCharacter::ReleasedUseItem(const FInputActionValue& Value)
+{
+	if (Inventory->GetSelectedItem())
+	{
+		Inventory->GetSelectedItem()->ReleaseUseItem();
+	}
 }
 
 void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
@@ -377,6 +412,57 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 	else
 	{
 		//UE_LOG(LogTemp, Log, TEXT("Move to Elevator to interact"));
+	}
+}
+
+void ATunnelTerrorCharacter::PlaceTrap(const FInputActionValue& Value)
+{
+	if (HasAuthority())
+	{
+		PlaceTrapImplementation();
+		MulticastPlaceTrap();
+	}
+	else
+	{
+		ServerPlaceTrap();
+	}
+}
+
+void ATunnelTerrorCharacter::PlaceTrapImplementation()
+{
+	if (GetIsInfected() && trapCDCurrent == 0) {
+		trapCDCurrent = trapCD;
+
+		UE_LOG(LogTemp, Log, TEXT("trap cd set"));
+
+		FVector PlayerLocation = GetActorLocation();
+		PlayerLocation.Z = 0.0f;
+		FVector ForwardVector = GetActorForwardVector();
+		FVector TrapLocation = PlayerLocation + (ForwardVector * 200.0f);
+
+		FRotator PlayerRotation = GetActorRotation();
+		FRotator RotationOffset(0.0f, -90.0f, 0.0f);
+		FRotator TrapRotation = PlayerRotation + RotationOffset;
+
+
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Owner = this;
+		SpawnParams.Instigator = GetInstigator();
+
+		GetWorld()->SpawnActor<AInfectionTrap>(TrapBlueprint, TrapLocation, TrapRotation, SpawnParams);
+	}
+}
+
+void ATunnelTerrorCharacter::ServerPlaceTrap_Implementation()
+{
+	PlaceTrapImplementation();
+}
+
+void ATunnelTerrorCharacter::MulticastPlaceTrap_Implementation()
+{
+	if (!HasAuthority())
+	{
+		PlaceTrapImplementation();
 	}
 }
 

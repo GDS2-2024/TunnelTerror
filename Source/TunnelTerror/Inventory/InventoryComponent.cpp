@@ -191,6 +191,22 @@ int32 UInventoryComponent::GetAvailableSlotIndex()
 	return -1;
 }
 
+APickaxeItem* UInventoryComponent::GetPlayersPickaxe()
+{
+	for (FInventorySlot& Slot : InventorySlots)
+	{
+		if (Slot.Item)
+		{
+			if (APickaxeItem* Pickaxe = Cast<APickaxeItem>(Slot.Item) )
+			{
+				return Pickaxe;
+			}
+		}
+	}
+	UE_LOG(LogTemp, Warning, TEXT("Player does not have a pickaxe"))
+	return nullptr;
+}
+
 // Called when the game starts
 void UInventoryComponent::BeginPlay()
 {

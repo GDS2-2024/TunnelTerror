@@ -126,6 +126,14 @@ public:
     bool CanPlaceEndRoom(int32 CurrentI, int32 CurrentJ, URoomComponent* RC);
     void SpawnAnotherPath(FPlace place);
     
+    UPROPERTY(EditDefaultsOnly, Category = "Debug")
+    bool DebugMode;
+    UPROPERTY(EditDefaultsOnly, Category = "Debug")
+    TSubclassOf<AActor> GridItem;
+    UPROPERTY(EditDefaultsOnly, Category = "Debug")
+    TSubclassOf<AActor> GridTrue;
+    UPROPERTY(EditDefaultsOnly, Category = "Debug")
+    TSubclassOf<AActor> PickupTest;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     TArray<FPlace> Doorways;
@@ -139,6 +147,9 @@ public:
     TSubclassOf<AActor> Hazard1;
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<AActor> Sample;
+    UPROPERTY(EditDefaultsOnly)
+    TSubclassOf<AActor> Crystal;
+    
 
     UPROPERTY(EditDefaultsOnly)
     FRoom EntranceRoom;

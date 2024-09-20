@@ -7,6 +7,7 @@
 #include "ItemPickup.h"
 #include "InventorySlot.h"
 #include "InventoryItem.h"
+#include "Items/PickaxeItem.h"
 #include "InventoryComponent.generated.h"
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -33,7 +34,9 @@ public:
 	int32 GetMaxSlots() {return MaxSlots; }
 	int32 GetIndexOfItem(AInventoryItem* Item);
 	int32 GetAvailableSlotIndex();
-		
+	// Returns the Pickaxe if the player has one
+	APickaxeItem* GetPlayersPickaxe();
+	
 	UPROPERTY(VisibleAnywhere)
     	int32 SelectedSlotIndex;
 	

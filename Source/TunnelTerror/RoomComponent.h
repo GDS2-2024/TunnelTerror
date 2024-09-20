@@ -48,5 +48,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Room Config")
 	TArray<FVector> SpawnLocations;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Room Config")
+	TArray<FVector> CrystalLocations;
+
 	TArray<FVector> GetDoorPositions(FVector Origin);
 };
