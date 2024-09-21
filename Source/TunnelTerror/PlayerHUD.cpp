@@ -29,6 +29,7 @@ void UPlayerHUD::SetSlotIcon(int32 SlotNum, UTexture2D* IconToSet)
 		Slot5->SetBrushTintColor(ItemPresent);
 		break;
 	default:
+		UE_LOG(LogTemp, Warning, TEXT("SetSlotIcon() SlotNum is out of bounds: %d"), SlotNum)
 		break;
 	}
 }
@@ -58,6 +59,7 @@ void UPlayerHUD::ClearSlotIcon(int32 SlotNum)
 		Slot5->SetBrushTintColor(EmptyItem);
 		break;
 	default:
+		UE_LOG(LogTemp, Warning, TEXT("ClearSlotIcon() SlotNum is out of bounds: %d"), SlotNum)
 		break;
 	}
 }
@@ -103,6 +105,7 @@ void UPlayerHUD::SetSlotSelection(int32 SlotNum)
 		BackgroundSlot5->SetBrushTintColor(SelectedColour);
 		break;
 	default:
+		UE_LOG(LogTemp, Warning, TEXT("SetSlotSelection() SlotNum is out of bounds: %d"), SlotNum)
 		break;
 	}
 }

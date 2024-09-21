@@ -215,16 +215,22 @@ APickaxeItem* UInventoryComponent::GetPlayersPickaxe()
 
 void UInventoryComponent::ServerAddItem_Implementation(AInventoryItem* Item)
 {
-	if (FInventorySlot* EmptySlot = GetAvailableSlot())
+	if (HasEmptySlot())
 	{
-		int32 SlotIndex = GetAvailableSlotIndex();
-		EmptySlot->AddItemToSlot(Item);
-		Item->Player = GetOwner();
-
-		if (SelectedSlotIndex != SlotIndex + 1)  // Hide the item if not selected slot
+		UE_LOG(LogTemp, Log, TEXT("Adding Item to Inventory Slot"))
+		if (FInventorySlot* EmptySlot = GetAvailableSlot())
 		{
-			ServerHideItem(Item);
+			EmptySlot->AddItemToSlot(Item);
+			NumOfItems += 1;
+			Item->Player = GetOwner();
+			// Hide if not current slot
+			//SelectedSlot = EmptySlot;
+			if (SelectedSlot.Item != EmptySlot->Item)
+			{
+				ServerHideItem(Item);
+			}
 		}
+		Item->Player = GetOwner();
 	}
 	else
 	{

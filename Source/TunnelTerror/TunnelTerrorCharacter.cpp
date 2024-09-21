@@ -339,7 +339,7 @@ void ATunnelTerrorCharacter::ClientAddInventoryUI_Implementation(AInventoryItem*
 
 	if (NewItem)
 	{
-		PlayerHUD->SetSlotIcon(Inventory->GetAvailableSlotIndex(), NewItem->InventoryIcon);
+		PlayerHUD->SetSlotIcon(Inventory->GetNumOfItems(), NewItem->InventoryIcon);
 	}
 	else
 	{
