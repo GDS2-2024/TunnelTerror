@@ -26,7 +26,6 @@ public:
 	// Finds all plant samples in inventory and removes them
 	void RemoveSamples();
 	bool HasEmptySlot() const;
-	void ChangeSelectedSlot(int32 NewSelection);
 	AInventoryItem* GetSelectedItem();
 	int32 GetNumOfItems() { return NumOfItems; }
 	int32 GetMaxSlots() {return MaxSlots; }
@@ -35,8 +34,17 @@ public:
 	// Returns the Pickaxe if the player has one
 	APickaxeItem* GetPlayersPickaxe();
 	
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, Replicated)
     	int32 SelectedSlotIndex;
+	
+	UFUNCTION(Server, Reliable)
+	void ServerSetSelectedSlot(int32 SlotIndex);
+
+	UFUNCTION(Server, Reliable)
+	void ServerSetItemVisibility();
+	
+	UPROPERTY(VisibleAnywhere, Replicated)
+	int32 NewestItemSlotIndex;
 
 	UFUNCTION(Server, Reliable)
 	void ServerAddItem(AInventoryItem* Item);
@@ -51,13 +59,10 @@ private:
 	int32 MaxSlots;
 
 	UPROPERTY(ReplicatedUsing = OnRep_InventorySlots, VisibleAnywhere)
-	TArray<FInventorySlot> InventorySlots;
+	TArray<FInventorySlot> InventorySlots = TArray<FInventorySlot>();
 
 	UPROPERTY(Replicated, VisibleAnywhere)
 	int32 NumOfItems;
-
-	UPROPERTY(VisibleAnywhere)
-	FInventorySlot SelectedSlot;
 
 	// Function to be called when the inventory slots are replicated
 	UFUNCTION()
@@ -74,9 +79,6 @@ private:
 	void ServerHideItem(AInventoryItem* Item);
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastHideItem(AInventoryItem* Item);
-	
-	// Finds an empty slot in the inventory
-	FInventorySlot* GetAvailableSlot();
 
 protected:
 	// Called when the game starts

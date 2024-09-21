@@ -230,32 +230,32 @@ void ATunnelTerrorCharacter::Look(const FInputActionValue& Value)
 
 void ATunnelTerrorCharacter::SelectSlot1(const FInputActionValue& Value)
 {
-	Inventory->ChangeSelectedSlot(1);
-	PlayerHUD->SetSlotSelection(1);
+	Inventory->ServerSetSelectedSlot(0); //Mesh visibility changes on server
+	PlayerHUD->SetSlotSelection(0); // HUD Changes on client
 }
 
 void ATunnelTerrorCharacter::SelectSlot2(const FInputActionValue& Value)
 {
-	Inventory->ChangeSelectedSlot(2);
-	PlayerHUD->SetSlotSelection(2);
+	Inventory->ServerSetSelectedSlot(1);
+	PlayerHUD->SetSlotSelection(1);
 }
 
 void ATunnelTerrorCharacter::SelectSlot3(const FInputActionValue& Value)
 {
-	Inventory->ChangeSelectedSlot(3);
-	PlayerHUD->SetSlotSelection(3);
+	Inventory->ServerSetSelectedSlot(2);
+	PlayerHUD->SetSlotSelection(2);
 }
 
 void ATunnelTerrorCharacter::SelectSlot4(const FInputActionValue& Value)
 {
-	Inventory->ChangeSelectedSlot(4);
-	PlayerHUD->SetSlotSelection(4);
+	Inventory->ServerSetSelectedSlot(3);
+	PlayerHUD->SetSlotSelection(3);
 }
 
 void ATunnelTerrorCharacter::SelectSlot5(const FInputActionValue& Value)
 {
-	Inventory->ChangeSelectedSlot(5);
-	PlayerHUD->SetSlotSelection(5);
+	Inventory->ServerSetSelectedSlot(4);
+	PlayerHUD->SetSlotSelection(4);
 }
 
 void ATunnelTerrorCharacter::ScrollSlots(const FInputActionValue& Value)
@@ -264,26 +264,26 @@ void ATunnelTerrorCharacter::ScrollSlots(const FInputActionValue& Value)
 	if (Value.Get<float>() > 0)
 	{
 		//Increase by 1, wrap around to start
-		if (Inventory->SelectedSlotIndex < Inventory->GetMaxSlots())
+		if (Inventory->SelectedSlotIndex < Inventory->GetMaxSlots()-1)
 		{
-			Inventory->ChangeSelectedSlot(Inventory->SelectedSlotIndex+1);
+			Inventory->ServerSetSelectedSlot(Inventory->SelectedSlotIndex+1);
 			PlayerHUD->SetSlotSelection(Inventory->SelectedSlotIndex);
 		} else
 		{
-			Inventory->ChangeSelectedSlot(1);
-			PlayerHUD->SetSlotSelection(1);
+			Inventory->ServerSetSelectedSlot(0);
+			PlayerHUD->SetSlotSelection(0);
 		}
 	} else
 	{
 		//Decrease by 1, wrap around to end
 		if (Inventory->SelectedSlotIndex > 1)
 		{
-			Inventory->ChangeSelectedSlot(Inventory->SelectedSlotIndex-1);
+			Inventory->ServerSetSelectedSlot(Inventory->SelectedSlotIndex-1);
 			PlayerHUD->SetSlotSelection(Inventory->SelectedSlotIndex);
 		} else
 		{
-			Inventory->ChangeSelectedSlot(5);
-			PlayerHUD->SetSlotSelection(5);
+			Inventory->ServerSetSelectedSlot(4);
+			PlayerHUD->SetSlotSelection(4);
 		}
 	}
 }
@@ -294,8 +294,10 @@ void ATunnelTerrorCharacter::EquipToInventory(AInventoryItem* NewItem)
 	{
 		if (NewItem)
 		{
+			UE_LOG(LogTemp, Warning, TEXT("NewestItemSlotIndex BEFORE ServerAddItem: %d"), Inventory->NewestItemSlotIndex)
 			Inventory->ServerAddItem(NewItem);
-			ClientAddInventoryUI(NewItem);
+			UE_LOG(LogTemp, Warning, TEXT("NewestItemSlotIndex AFTER ServerAddItem: %d"), Inventory->NewestItemSlotIndex)
+			ClientAddInventoryUI(NewItem, Inventory->NewestItemSlotIndex);
 		}
 		else
 		{
@@ -323,7 +325,7 @@ void ATunnelTerrorCharacter::ServerEquipToInventory_Implementation(AInventoryIte
 	EquipToInventory(InventoryItem);
 }
 
-void ATunnelTerrorCharacter::ClientAddInventoryUI_Implementation(AInventoryItem* NewItem)
+void ATunnelTerrorCharacter::ClientAddInventoryUI_Implementation(AInventoryItem* NewItem, int32 SlotIndex)
 {
 	if (!PlayerHUD)
 	{
@@ -339,7 +341,7 @@ void ATunnelTerrorCharacter::ClientAddInventoryUI_Implementation(AInventoryItem*
 
 	if (NewItem)
 	{
-		PlayerHUD->SetSlotIcon(Inventory->GetNumOfItems(), NewItem->InventoryIcon);
+		PlayerHUD->SetSlotIcon(SlotIndex, NewItem->InventoryIcon);	
 	}
 	else
 	{
@@ -361,7 +363,7 @@ void ATunnelTerrorCharacter::ClientRemoveInventoryUI_Implementation(int32 SlotIn
 		return;
 	}
 	
-	PlayerHUD->ClearSlotIcon(SlotIndex+1);
+	PlayerHUD->ClearSlotIcon(SlotIndex);
 	
 }
 

@@ -15,8 +15,8 @@ UInventoryComponent::UInventoryComponent()
 	NumOfItems = 0;
 	MaxSlots = 5;
 	InventorySlots.SetNum(MaxSlots);
-	SelectedSlot = InventorySlots[0];
-	SelectedSlotIndex = 1;
+	SelectedSlotIndex = 0;
+	NewestItemSlotIndex = 0;
 }
 
 // Add Item to the given Inventory Slot
@@ -58,31 +58,9 @@ bool UInventoryComponent::HasEmptySlot() const
 	return NumOfItems < InventorySlots.Max();
 }
 
-void UInventoryComponent::ChangeSelectedSlot(int32 NewSelection)
-{
-	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
-	if (Player->IsLocallyControlled())
-	{
-		// Only clients should call the server RPC
-		if (!SelectedSlot.IsEmpty())
-		{
-			ServerHideItem(SelectedSlot.Item); //Hide the previous selection
-		}
-		if (NewSelection > 0 && NewSelection <= InventorySlots.Num())
-		{
-			SelectedSlotIndex = NewSelection;
-			SelectedSlot = InventorySlots[NewSelection - 1];
-			if (!SelectedSlot.IsEmpty())
-			{
-				ServerShowItem(SelectedSlot.Item);
-			}
-		}
-	}
-}
-
 AInventoryItem* UInventoryComponent::GetSelectedItem()
 {
-	return SelectedSlot.Item;
+	return InventorySlots[SelectedSlotIndex].Item;
 }
 
 int32 UInventoryComponent::GetIndexOfItem(AInventoryItem* Item)
@@ -114,7 +92,7 @@ void UInventoryComponent::OnRep_InventorySlots()
 			Player->ClientRemoveInventoryUI(SlotIndex);
 		} else
 		{
-			Player->ClientAddInventoryUI(Slot.Item);
+			Player->ClientAddInventoryUI(Slot.Item, NewestItemSlotIndex);
 		}
 		SlotIndex++;
 	}
@@ -127,6 +105,9 @@ void UInventoryComponent::ServerShowItem_Implementation(AInventoryItem* Item)
 	if (Item)
 	{
 		MulticastShowItem(Item);
+	} else
+	{
+		UE_LOG(LogTemp, Error, TEXT("SERVER SHOW() Item is null"))
 	}
 		
 }
@@ -136,16 +117,21 @@ void UInventoryComponent::MulticastShowItem_Implementation(AInventoryItem* Item)
 	if (Item)
 	{
 		Item->ShowItem();
+	} else
+	{
+		UE_LOG(LogTemp, Error, TEXT("MULTICAST SHOW() Item is null"))
 	}
 }
 
 // Hide Item
 void UInventoryComponent::ServerHideItem_Implementation(AInventoryItem* Item)
 {
-	//UE_LOG(LogTemp, Log, TEXT("ServerHideItem()"))
 	if (Item)
 	{
 		MulticastHideItem(Item);
+	} else
+	{
+		UE_LOG(LogTemp, Error, TEXT("SERVER HIDE() Item is null"))
 	}
 }
 
@@ -154,27 +140,10 @@ void UInventoryComponent::MulticastHideItem_Implementation(AInventoryItem* Item)
 	if (Item)
 	{
 		Item->HideItem();
-	}
-}
-
-FInventorySlot* UInventoryComponent::GetAvailableSlot()
-{
-	if (HasEmptySlot())
+	} else
 	{
-		for (FInventorySlot& Slot : InventorySlots)
-		{
-			if (Slot.IsEmpty())
-			{
-				return &Slot;
-			}
-		}
+		UE_LOG(LogTemp, Error, TEXT("Client: HIDE() Item is null"))
 	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Inventory is full, can't return an available slot."));
-	}
-
-	return nullptr; // Return nullptr if no available slot is found
 }
 
 int32 UInventoryComponent::GetAvailableSlotIndex()
@@ -213,24 +182,37 @@ APickaxeItem* UInventoryComponent::GetPlayersPickaxe()
 	return nullptr;
 }
 
+void UInventoryComponent::ServerSetItemVisibility_Implementation()
+{
+	UE_LOG(LogTemp, Log, TEXT("ServerSetItemVisibility_Implementation"))
+	ServerShowItem(InventorySlots[SelectedSlotIndex].Item);
+    for (int index = 0; index < InventorySlots.Num(); index++)
+    {
+       	if (index != SelectedSlotIndex)
+       	{
+    		UE_LOG(LogTemp, Warning, TEXT("Server Hiding Slot: %d"), index)
+       		ServerHideItem(InventorySlots[index].Item);
+       	}
+    }
+}
+
+void UInventoryComponent::ServerSetSelectedSlot_Implementation(int32 SlotIndex)
+{
+	SelectedSlotIndex = SlotIndex;
+	ServerSetItemVisibility();
+}
+
 void UInventoryComponent::ServerAddItem_Implementation(AInventoryItem* Item)
 {
 	if (HasEmptySlot())
 	{
+		int32 NewSlotIndex = GetAvailableSlotIndex();
+		NewestItemSlotIndex = NewSlotIndex;
 		UE_LOG(LogTemp, Log, TEXT("Adding Item to Inventory Slot"))
-		if (FInventorySlot* EmptySlot = GetAvailableSlot())
-		{
-			EmptySlot->AddItemToSlot(Item);
-			NumOfItems += 1;
-			Item->Player = GetOwner();
-			// Hide if not current slot
-			//SelectedSlot = EmptySlot;
-			if (SelectedSlot.Item != EmptySlot->Item)
-			{
-				ServerHideItem(Item);
-			}
-		}
+		InventorySlots[NewSlotIndex].AddItemToSlot(Item);
+		NumOfItems += 1;
 		Item->Player = GetOwner();
+		ServerSetItemVisibility();
 	}
 	else
 	{
@@ -240,11 +222,9 @@ void UInventoryComponent::ServerAddItem_Implementation(AInventoryItem* Item)
 
 void UInventoryComponent::ServerRemoveItem_Implementation(int32 SlotIndex)
 {
-	if (SlotIndex >= 0 && SlotIndex < InventorySlots.Num())
-	{
-		InventorySlots[SlotIndex].EmptySlot();
-		NumOfItems--;
-	}
+	InventorySlots[SlotIndex].EmptySlot();
+	NumOfItems--;
+	ServerSetItemVisibility();
 }
 
 // Called when the game starts
@@ -265,8 +245,10 @@ void UInventoryComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
-	DOREPLIFETIME(UInventoryComponent, InventorySlots);
-	DOREPLIFETIME(UInventoryComponent, NumOfItems);
+	DOREPLIFETIME(UInventoryComponent, InventorySlots)
+	DOREPLIFETIME(UInventoryComponent, NumOfItems)
+	DOREPLIFETIME(UInventoryComponent, SelectedSlotIndex)
+	DOREPLIFETIME(UInventoryComponent, NewestItemSlotIndex)
 }
 
 

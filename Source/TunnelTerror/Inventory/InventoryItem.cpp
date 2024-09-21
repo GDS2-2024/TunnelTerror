@@ -3,7 +3,9 @@
 
 #include "InventoryItem.h"
 
+#include "InventoryComponent.h"
 #include "Net/UnrealNetwork.h"
+#include "TunnelTerror/TunnelTerrorCharacter.h"
 
 AInventoryItem::AInventoryItem()
 {

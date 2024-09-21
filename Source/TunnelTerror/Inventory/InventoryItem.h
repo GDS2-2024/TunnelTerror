@@ -27,9 +27,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated)
 	UTexture2D* InventoryIcon;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UStaticMeshComponent* ItemMesh;
-
+	
 	UPROPERTY()
 	AActor* Player;
 	
