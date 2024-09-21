@@ -174,6 +174,9 @@ public:
 	// Used to reference pickup object when player presses 'E' to interact
 	UPROPERTY(ReplicatedUsing = OnRep_CollidedPickup, VisibleAnywhere)
 	AItemPickup* CollidedPickup;
+	// The previous collided pickup
+	UPROPERTY()
+	AItemPickup* PreviousPickup;
 
 	UFUNCTION()
 	void OnRep_CollidedPickup();

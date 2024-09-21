@@ -179,10 +179,17 @@ void ATunnelTerrorCharacter::OnRep_CollidedPickup()
 	if (CollidedPickup)
 	{
 		UE_LOG(LogTemp, Log, TEXT("CollidedPickup replicated to client: %s"), *CollidedPickup->GetName());
+		CollidedPickup->ShowPrompt(true);
+		PreviousPickup = CollidedPickup;
 	}
 	else
 	{
 		UE_LOG(LogTemp, Log, TEXT("CollidedPickup is null on the client."));
+		if (PreviousPickup)
+		{
+			PreviousPickup->ShowPrompt(false);
+			PreviousPickup = nullptr;
+		}
 	}
 }
 
