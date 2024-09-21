@@ -29,6 +29,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated)
 	UStaticMeshComponent* ItemMesh;
+
+	UPROPERTY()
+	AActor* Player;
 	
 	// Function should be implemented by child classes
 	virtual void UseItem();
