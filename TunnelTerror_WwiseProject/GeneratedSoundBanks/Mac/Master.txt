@@ -1,0 +1,14 @@
+Event	ID	Name			Wwise Object Path	Notes
+	85412153	ambience			\Default Work Unit\ambience	
+	489674504	Lock			\Default Work Unit\Lock	
+	2385628198	Footsteps			\Default Work Unit\Footsteps	
+
+Effect plug-ins	ID	Name	Type				Notes
+	691801801	Octave_Down (Custom)	Wwise Pitch Shifter			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	115456000	Lock	C:\Users\adamr\OneDrive\Documents\Unreal Projects\TunnelTerror\TunnelTerror_WwiseProject\.cache\Mac\SFX\Lock_918E0AC9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lock		45980
+	266344738	Outside	C:\Users\adamr\OneDrive\Documents\Unreal Projects\TunnelTerror\TunnelTerror_WwiseProject\.cache\Mac\SFX\Outside3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Outside		5760096
+	767630059	Woodstep	C:\Users\adamr\OneDrive\Documents\Unreal Projects\TunnelTerror\TunnelTerror_WwiseProject\.cache\Mac\SFX\WoodyStep_9D196CE6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Woodstep		37090
+	1014181641	HardStep	C:\Users\adamr\OneDrive\Documents\Unreal Projects\TunnelTerror\TunnelTerror_WwiseProject\.cache\Mac\SFX\HardStep_1568A41C.wem		\Actor-Mixer Hierarchy\Default Work Unit\HardStep		26036
+

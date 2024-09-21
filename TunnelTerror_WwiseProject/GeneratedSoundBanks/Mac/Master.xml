@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="4056684167" Type="User" GUID="{B99E3858-04A4-4859-8EB4-2277B2C2DE00}" Language="SFX" Hash="{B5BF8F71-8858-EC17-BF5A-30719EF69C21}">
+			<ObjectPath>\SoundBanks\Default Work Unit\Master</ObjectPath>
+			<ShortName>Master</ShortName>
+			<Path>Master.bnk</Path>
+			<Media>
+				<File Id="115456000" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lock.wav</ShortName>
+					<CachePath>SFX/Lock_918E0AC9.wem</CachePath>
+				</File>
+				<File Id="266344738" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Outside3.wav</ShortName>
+					<CachePath>SFX/Outside3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="767630059" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WoodyStep.wav</ShortName>
+					<CachePath>SFX/WoodyStep_9D196CE6.wem</CachePath>
+				</File>
+				<File Id="1014181641" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HardStep.wav</ShortName>
+					<CachePath>SFX/HardStep_1568A41C.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="691801801" Name="Octave_Down (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Default Work Unit\Lock\[Effect Slot [0]: (Pitch Shifter)]\Octave_Down (Custom)" GUID="{91BECDEE-803E-4B8C-B69E-A0F4C02A3887}" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="85412153" Name="ambience" ObjectPath="\Events\Default Work Unit\ambience" GUID="{DBFFF76E-05DF-4867-9ECB-FC432388DC61}" DurationType="OneShot" DurationMin="60" DurationMax="60">
+					<MediaRefs>
+						<MediaRef Id="266344738"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2385628198" Name="Footsteps" ObjectPath="\Events\Default Work Unit\Footsteps" GUID="{5E1CB9A0-FBDD-432A-9E95-F71111F85910}" DurationType="OneShot" DurationMin="0.3920844" DurationMax="0.46626952">
+					<MediaRefs>
+						<MediaRef Id="767630059"/>
+						<MediaRef Id="1014181641"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="489674504" Name="Lock" ObjectPath="\Events\Default Work Unit\Lock" GUID="{5A20C79E-CFA2-4223-8532-DBF536426E2A}" DurationType="OneShot" DurationMin="0.47650963" DurationMax="0.56797945">
+					<MediaRefs>
+						<MediaRef Id="115456000"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="691801801"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{8627B17A-15C3-7E77-D77D-28201611B274}</FileHash>
+</SoundBanksInfo>

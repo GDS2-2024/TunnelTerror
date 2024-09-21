@@ -1,0 +1,167 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "RootPaths": {
+   "ProjectRoot": "../..",
+   "SourceFilesRoot": "../../.cache/Mac",
+   "SoundBanksRoot": ".",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "."
+  },
+  "DialogueEvents": [],
+  "SoundBanks": [
+   {
+    "Id": "1355168291",
+    "Type": "User",
+    "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
+    "Language": "SFX",
+    "Hash": "{D0FF739B-30AC-F735-B0A4-0AED20799C37}",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk",
+    "Plugins": {
+     "AudioDevices": [
+      {
+       "Id": "2317455096",
+       "Name": "No_Output",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\No_Output",
+       "GUID": "{0DB1CB77-85CD-4D16-A27F-30120D6C377D}",
+       "LibName": "No Output",
+       "LibId": "11862023"
+      },
+      {
+       "Id": "3859886410",
+       "Name": "System",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\System",
+       "GUID": "{117572A3-53C8-4570-A339-054E22055812}",
+       "LibName": "System",
+       "LibId": "11403271"
+      }
+     ]
+    },
+    "Busses": [
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ]
+   },
+   {
+    "Id": "4056684167",
+    "Type": "User",
+    "GUID": "{B99E3858-04A4-4859-8EB4-2277B2C2DE00}",
+    "Language": "SFX",
+    "Hash": "{B5BF8F71-8858-EC17-BF5A-30719EF69C21}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Master",
+    "ShortName": "Master",
+    "Path": "Master.bnk",
+    "Media": [
+     {
+      "Id": "115456000",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Lock.wav",
+      "CachePath": "SFX/Lock_918E0AC9.wem"
+     },
+     {
+      "Id": "266344738",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Outside3.wav",
+      "CachePath": "SFX/Outside3_818F3B66.wem"
+     },
+     {
+      "Id": "767630059",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "WoodyStep.wav",
+      "CachePath": "SFX/WoodyStep_9D196CE6.wem"
+     },
+     {
+      "Id": "1014181641",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "HardStep.wav",
+      "CachePath": "SFX/HardStep_1568A41C.wem"
+     }
+    ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "691801801",
+       "Name": "Octave_Down (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\Lock\\[Effect Slot [0]: (Pitch Shifter)]\\Octave_Down (Custom)",
+       "GUID": "{91BECDEE-803E-4B8C-B69E-A0F4C02A3887}",
+       "LibName": "Wwise Pitch Shifter",
+       "LibId": "8912899"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "85412153",
+      "Name": "ambience",
+      "ObjectPath": "\\Events\\Default Work Unit\\ambience",
+      "GUID": "{DBFFF76E-05DF-4867-9ECB-FC432388DC61}",
+      "DurationType": "OneShot",
+      "DurationMin": "60",
+      "DurationMax": "60",
+      "MediaRefs": [
+       {
+        "Id": "266344738"
+       }
+      ]
+     },
+     {
+      "Id": "2385628198",
+      "Name": "Footsteps",
+      "ObjectPath": "\\Events\\Default Work Unit\\Footsteps",
+      "GUID": "{5E1CB9A0-FBDD-432A-9E95-F71111F85910}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.3920844",
+      "DurationMax": "0.46626952",
+      "MediaRefs": [
+       {
+        "Id": "767630059"
+       },
+       {
+        "Id": "1014181641"
+       }
+      ]
+     },
+     {
+      "Id": "489674504",
+      "Name": "Lock",
+      "ObjectPath": "\\Events\\Default Work Unit\\Lock",
+      "GUID": "{5A20C79E-CFA2-4223-8532-DBF536426E2A}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.47650963",
+      "DurationMax": "0.56797945",
+      "MediaRefs": [
+       {
+        "Id": "115456000"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "691801801"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C43056B2-C023-F93D-57D6-B1828F38BB90}"
+ }
+}

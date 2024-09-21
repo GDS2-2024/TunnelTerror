@@ -1,6 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{E20F6C04-5AF8-4B3F-B208-A5798890EFBB}" SchemaVersion="119">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{E20F6C04-5AF8-4B3F-B208-A5798890EFBB}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{E20F6C04-5AF8-4B3F-B208-A5798890EFBB}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Outside" ID="{57DE3080-15ED-48E0-8964-60F193070A9D}" ShortID="552839321">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F5C09B5A-2182-430D-989A-F42A331A8D83}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A2C70632-2C29-4F74-A6C3-43E577BE8186}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Outside3" ID="{FD7CB424-172A-4A32-A2C6-B2A3BB9B0494}">
+							<Language>SFX</Language>
+							<AudioFile>Outside3.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="266344738"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Outside3" ID="{FD7CB424-172A-4A32-A2C6-B2A3BB9B0494}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="HardStep" ID="{CEEEF343-B1E5-4CB9-A643-41744AD98063}" ShortID="112370770">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{F6019393-7005-4821-B77C-0D387DC3FF4B}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="126"/>
+											<Property Name="Min" Type="Real64" Value="-126"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F5C09B5A-2182-430D-989A-F42A331A8D83}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A2C70632-2C29-4F74-A6C3-43E577BE8186}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="HardStep" ID="{A7AE5A42-6172-49EA-A799-F1902A63C1B2}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.0628213507625272"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.0499128540305011"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.253867102396514"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.524084967320263"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>HardStep.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1014181641"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="HardStep" ID="{A7AE5A42-6172-49EA-A799-F1902A63C1B2}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Woodstep" ID="{F284B241-8312-44E2-B0FB-78DEC97EDE5F}" ShortID="179539070">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-180</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{860E8EAC-4241-4696-97CE-B6188E0A1389}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="150"/>
+											<Property Name="Min" Type="Real64" Value="-150"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F5C09B5A-2182-430D-989A-F42A331A8D83}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A2C70632-2C29-4F74-A6C3-43E577BE8186}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="WoodyStep" ID="{61489F62-1747-491A-B778-2E243AED78D2}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.031318082788671"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.126633986928105"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.0810185185185185"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.466367102396514"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>WoodyStep.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="767630059"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="WoodyStep" ID="{61489F62-1747-491A-B778-2E243AED78D2}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Lock" ID="{D68AF1C8-1A35-4114-85E4-E18FD2633D8E}" ShortID="990427607">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{A5B644D8-D5BB-4921-B91F-DE53611DF188}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="152"/>
+											<Property Name="Min" Type="Real64" Value="-152"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F5C09B5A-2182-430D-989A-F42A331A8D83}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A2C70632-2C29-4F74-A6C3-43E577BE8186}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Lock" ID="{61B6FA05-7F51-4826-9F8F-E56C1CC7CEC8}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.0166666666666667"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.0273809523809524"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.219047619047619"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.739285714285715"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Lock.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="115456000"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{5ADF9ED6-0A37-4C3B-87DB-B03114C26371}" ShortID="308005342">
+										<ReferenceList>
+											<Reference Name="Effect">
+												<Custom CreatedFrom="{062EC4B1-5372-4D1E-917B-C757293F2B42}">
+													<Effect Name="Octave_Down (Custom)" ID="{91BECDEE-803E-4B8C-B69E-A0F4C02A3887}" ShortID="691801801" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+														<PropertyList>
+															<Property Name="DryLevel" Type="Real32" Value="0"/>
+															<Property Name="Pitch" Type="Real32" Value="-1200"/>
+														</PropertyList>
+													</Effect>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+					<ActiveSourceList>
+						<ActiveSource Name="Lock" ID="{61B6FA05-7F51-4826-9F8F-E56C1CC7CEC8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

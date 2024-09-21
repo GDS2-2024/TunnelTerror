@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{0D5AA1B4-3611-4040-AA4D-9C07140BA6A6}" SchemaVersion="119">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{0D5AA1B4-3611-4040-AA4D-9C07140BA6A6}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{0D5AA1B4-3611-4040-AA4D-9C07140BA6A6}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="ambience" ID="{DBFFF76E-05DF-4867-9ECB-FC432388DC61}">
+					<ChildrenList>
+						<Action Name="" ID="{ACAD23B5-40F1-49CE-BB14-ED9F446A30E6}" ShortID="818607643">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Outside" ID="{57DE3080-15ED-48E0-8964-60F193070A9D}" WorkUnitID="{E20F6C04-5AF8-4B3F-B208-A5798890EFBB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Footsteps" ID="{5E1CB9A0-FBDD-432A-9E95-F71111F85910}">
+					<ChildrenList>
+						<Action Name="" ID="{091F91EB-64D3-40B8-B1C7-13194E7C3AA5}" ShortID="681723014">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Woodstep" ID="{F284B241-8312-44E2-B0FB-78DEC97EDE5F}" WorkUnitID="{E20F6C04-5AF8-4B3F-B208-A5798890EFBB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8C7E29D1-A2A6-4F22-8CE7-7ADDCEC8FFFA}" ShortID="442704572">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="HardStep" ID="{CEEEF343-B1E5-4CB9-A643-41744AD98063}" WorkUnitID="{E20F6C04-5AF8-4B3F-B208-A5798890EFBB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lock" ID="{5A20C79E-CFA2-4223-8532-DBF536426E2A}">
+					<ChildrenList>
+						<Action Name="" ID="{DDA0DC3A-512C-468D-81E0-9255CBB4A795}" ShortID="428789311">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lock" ID="{D68AF1C8-1A35-4114-85E4-E18FD2633D8E}" WorkUnitID="{E20F6C04-5AF8-4B3F-B208-A5798890EFBB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
