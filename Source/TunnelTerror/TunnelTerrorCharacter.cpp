@@ -175,20 +175,20 @@ void ATunnelTerrorCharacter::SetIsRagdolled(const bool bNewRagdolled)
 
 void ATunnelTerrorCharacter::OnRep_CollidedPickup()
 {
-	// Logic to handle CollidedPickup being updated on the client
-	if (CollidedPickup)
+	if (IsLocallyControlled())
 	{
-		UE_LOG(LogTemp, Log, TEXT("CollidedPickup replicated to client: %s"), *CollidedPickup->GetName());
-		CollidedPickup->ShowPrompt(true);
-		PreviousPickup = CollidedPickup;
-	}
-	else
-	{
-		UE_LOG(LogTemp, Log, TEXT("CollidedPickup is null on the client."));
-		if (PreviousPickup)
+		if (CollidedPickup)
 		{
-			PreviousPickup->ShowPrompt(false);
-			PreviousPickup = nullptr;
+			CollidedPickup->ShowPrompt(true);
+			PreviousPickup = CollidedPickup;
+		}
+		else
+		{
+			if (PreviousPickup)
+			{
+				PreviousPickup->ShowPrompt(false);
+				PreviousPickup = nullptr;
+			}
 		}
 	}
 }

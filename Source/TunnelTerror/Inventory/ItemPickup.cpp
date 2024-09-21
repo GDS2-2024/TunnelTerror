@@ -60,12 +60,10 @@ void AItemPickup::OnPickupBeginOverlap(UPrimitiveComponent* OverlappedComponent,
 	{
 		if (ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(OtherActor))
 		{
-			if (Player->IsLocallyControlled()) 
+			Player->CollidedPickup = this;
+			if (Player->IsLocallyControlled())
 			{
-				ShowPrompt(true); // This is for the server player
-			} else
-			{
-				Player->CollidedPickup = this; // This is for the client player
+				Player->OnRep_CollidedPickup();
 			}
 		}
 	}
@@ -78,12 +76,10 @@ void AItemPickup::OnPickupEndOverlap(UPrimitiveComponent* OverlappedComponent,
 	{
 		if (ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(OtherActor))
 		{
-			if (Player->IsLocallyControlled()) 
+			Player->CollidedPickup = nullptr;
+			if (Player->IsLocallyControlled())
 			{
-				ShowPrompt(false); // This is for the server player
-			} else
-			{
-				Player->CollidedPickup = nullptr; // This is for the client player
+				Player->OnRep_CollidedPickup();
 			}
 		}
 	}
