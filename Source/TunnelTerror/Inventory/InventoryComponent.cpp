@@ -19,28 +19,10 @@ UInventoryComponent::UInventoryComponent()
 	SelectedSlotIndex = 1;
 }
 
-// Add Item to an available slot
-void UInventoryComponent::AddItem(AInventoryItem* Item)
-{
-	if (FInventorySlot* EmptySlot = GetAvailableSlot(); EmptySlot != nullptr)
-	{
-		EmptySlot->AddItemToSlot(Item);
-		Item->Player = GetOwner();
-		if (SelectedSlotIndex != GetIndexOfItem(Item)+1) //Hide item if not selected slot
-		{
-			Item->HideItem();
-		}
-		NumOfItems += 1;
-	} else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Can't add item, EmptySlot is null."));
-	}
-}
-
 // Add Item to the given Inventory Slot
-void UInventoryComponent::AddItem(AInventoryItem* Item, FInventorySlot& Slot)
+void UInventoryComponent::AddItem(AInventoryItem* Item, int32 SlotIndex)
 {
-	Slot.AddItemToSlot(Item);
+	InventorySlots[SlotIndex].AddItemToSlot(Item);
 	NumOfItems += 1;
 	UE_LOG(LogTemp, Warning, TEXT("Item added to Inventory"))
 }
@@ -78,19 +60,23 @@ bool UInventoryComponent::HasEmptySlot() const
 
 void UInventoryComponent::ChangeSelectedSlot(int32 NewSelection)
 {
-	//Hide the previous selection
-	if (!SelectedSlot.IsEmpty())
+	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
+	if (Player->IsLocallyControlled())
 	{
-		//SelectedSlot.Item->HideItem();
-		ServerHideItem(SelectedSlot.Item);
-	}
-	//Set the new selection
-	SelectedSlotIndex = NewSelection;
-	SelectedSlot = InventorySlots[NewSelection-1];
-	if (!SelectedSlot.IsEmpty())
-	{
-		//SelectedSlot.Item->ShowItem();
-		ServerShowItem(SelectedSlot.Item);
+		// Only clients should call the server RPC
+		if (!SelectedSlot.IsEmpty())
+		{
+			ServerHideItem(SelectedSlot.Item); //Hide the previous selection
+		}
+		if (NewSelection > 0 && NewSelection <= InventorySlots.Num())
+		{
+			SelectedSlotIndex = NewSelection;
+			SelectedSlot = InventorySlots[NewSelection - 1];
+			if (!SelectedSlot.IsEmpty())
+			{
+				ServerShowItem(SelectedSlot.Item);
+			}
+		}
 	}
 }
 
@@ -117,7 +103,7 @@ int32 UInventoryComponent::GetIndexOfItem(AInventoryItem* Item)
 void UInventoryComponent::OnRep_InventorySlots()
 {
 	// Handle client-side logic when inventory slots are updated
-	UE_LOG(LogTemp, Log, TEXT("Inventory slots replicated to the client."));
+	UE_LOG(LogTemp, Warning, TEXT("Inventory slots replicated to the client."));
 	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
 
 	int32 SlotIndex = 0; // Array Slot Index
@@ -137,23 +123,38 @@ void UInventoryComponent::OnRep_InventorySlots()
 // Show Item
 void UInventoryComponent::ServerShowItem_Implementation(AInventoryItem* Item)
 {
-	MulticastShowItem(Item);	
+	//UE_LOG(LogTemp, Log, TEXT("ServerShowItem()"))
+	if (Item)
+	{
+		MulticastShowItem(Item);
+	}
+		
 }
 
 void UInventoryComponent::MulticastShowItem_Implementation(AInventoryItem* Item)
 {
-	Item->ShowItem();
+	if (Item)
+	{
+		Item->ShowItem();
+	}
 }
 
 // Hide Item
 void UInventoryComponent::ServerHideItem_Implementation(AInventoryItem* Item)
 {
-	MulticastHideItem(Item);
+	//UE_LOG(LogTemp, Log, TEXT("ServerHideItem()"))
+	if (Item)
+	{
+		MulticastHideItem(Item);
+	}
 }
 
 void UInventoryComponent::MulticastHideItem_Implementation(AInventoryItem* Item)
 {
-	Item->HideItem();
+	if (Item)
+	{
+		Item->HideItem();
+	}
 }
 
 FInventorySlot* UInventoryComponent::GetAvailableSlot()
@@ -212,13 +213,40 @@ APickaxeItem* UInventoryComponent::GetPlayersPickaxe()
 	return nullptr;
 }
 
+void UInventoryComponent::ServerAddItem_Implementation(AInventoryItem* Item)
+{
+	if (FInventorySlot* EmptySlot = GetAvailableSlot())
+	{
+		int32 SlotIndex = GetAvailableSlotIndex();
+		EmptySlot->AddItemToSlot(Item);
+		Item->Player = GetOwner();
+
+		if (SelectedSlotIndex != SlotIndex + 1)  // Hide the item if not selected slot
+		{
+			ServerHideItem(Item);
+		}
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Can't add item, EmptySlot is null."));
+	}
+}
+
+void UInventoryComponent::ServerRemoveItem_Implementation(int32 SlotIndex)
+{
+	if (SlotIndex >= 0 && SlotIndex < InventorySlots.Num())
+	{
+		InventorySlots[SlotIndex].EmptySlot();
+		NumOfItems--;
+	}
+}
+
 // Called when the game starts
 void UInventoryComponent::BeginPlay()
 {
 	Super::BeginPlay();
 	
 }
-
 
 // Called every frame
 void UInventoryComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)

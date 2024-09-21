@@ -39,7 +39,7 @@ void APickaxeItem::Tick(float DeltaTime)
 		UseTime += (CurrentTime - PreviousTime); // Accumulate the elapsed time
 		PreviousTime = CurrentTime; // Update previous time for the next frame
 		
-		UE_LOG(LogTemp, Warning, TEXT("Pickaxe has been used for %.2f seconds"), UseTime);
+		//UE_LOG(LogTemp, Warning, TEXT("Pickaxe has been used for %.2f seconds"), UseTime);
 	}
 }
 

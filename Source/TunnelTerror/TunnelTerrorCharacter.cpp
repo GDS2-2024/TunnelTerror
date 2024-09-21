@@ -294,7 +294,7 @@ void ATunnelTerrorCharacter::EquipToInventory(AInventoryItem* NewItem)
 	{
 		if (NewItem)
 		{
-			Inventory->AddItem(NewItem);
+			Inventory->ServerAddItem(NewItem);
 			ClientAddInventoryUI(NewItem);
 		}
 		else
@@ -310,7 +310,7 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 	if (InventoryItem)
 	{
 		InventoryItem->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, "index_r_socket");
-		EquipToInventory(InventoryItem);
+		ServerEquipToInventory(InventoryItem);
 		if (CollidedPickup)
 		{
 			CollidedPickup->Destroy();
@@ -367,18 +367,42 @@ void ATunnelTerrorCharacter::ClientRemoveInventoryUI_Implementation(int32 SlotIn
 
 void ATunnelTerrorCharacter::PressedUseItem(const FInputActionValue& Value)
 {
-	if (Inventory->GetSelectedItem())
+	if (Inventory)
 	{
-		Inventory->GetSelectedItem()->UseItem();
+		AInventoryItem* SelectedItem = Inventory->GetSelectedItem();
+		if (SelectedItem)
+		{
+			SelectedItem->UseItem();
+		}
+		else
+		{
+			//UE_LOG(LogTemp, Warning, TEXT("No selected item in inventory!"));
+		}
+	}
+	else
+	{
+		//UE_LOG(LogTemp, Error, TEXT("Inventory is null!"));
 	}	
 }
 
 void ATunnelTerrorCharacter::ReleasedUseItem(const FInputActionValue& Value)
 {
-	if (Inventory->GetSelectedItem())
+	if (Inventory)
 	{
-		Inventory->GetSelectedItem()->ReleaseUseItem();
+		AInventoryItem* SelectedItem = Inventory->GetSelectedItem();
+		if (SelectedItem)
+		{
+			SelectedItem->ReleaseUseItem();
+		}
+		else
+		{
+			//UE_LOG(LogTemp, Warning, TEXT("No selected item in inventory!"));
+		}
 	}
+	else
+	{
+		//UE_LOG(LogTemp, Error, TEXT("Inventory is null!"));
+	}	
 }
 
 void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)

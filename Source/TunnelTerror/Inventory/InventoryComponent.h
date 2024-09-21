@@ -19,10 +19,8 @@ public:
 	// Sets default values for this component's properties
 	UInventoryComponent();
 	
-	// Add Item to an available slot
-	void AddItem(AInventoryItem* Item);
-	// Add Item to the given Inventory Slot
-	void AddItem(AInventoryItem* Item, FInventorySlot& Slot);
+	// Add Item to the given Inventory Slot index
+	void AddItem(AInventoryItem* Item, int32 SlotIndex);
 	// Remove the item from Inventory at the given slot
 	void RemoveItem(int32 SlotIndex);
 	// Finds all plant samples in inventory and removes them
@@ -39,6 +37,13 @@ public:
 	
 	UPROPERTY(VisibleAnywhere)
     	int32 SelectedSlotIndex;
+
+	UFUNCTION(Server, Reliable)
+	void ServerAddItem(AInventoryItem* Item);
+
+	// Remove Item from a slot via RPC
+	UFUNCTION(Server, Reliable)
+	void ServerRemoveItem(int32 SlotIndex);
 	
 private:
 	
@@ -57,7 +62,7 @@ private:
 	// Function to be called when the inventory slots are replicated
 	UFUNCTION()
 	void OnRep_InventorySlots();
-
+	
 	// Tell the server to show item on all clients
 	UFUNCTION(Server, Reliable)
 	void ServerShowItem(AInventoryItem* Item);
