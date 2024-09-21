@@ -18,9 +18,9 @@ public:
 	AHazard();
 
 protected:
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditAnywhere)
 	USceneComponent* SceneRoot;
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UBoxComponent* Killbox;
 
 	// Called when the game starts or when spawned

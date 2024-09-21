@@ -11,6 +11,7 @@
 #include <TunnelTerrorPlayerState.h>
 
 #include "ElevatorEscape.h"
+#include "Hazards/TorchHazard.h"
 #include "InfectionTrap.h"
 
 
@@ -398,7 +399,13 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 		}
 		else
 		{
-			UE_LOG(LogTemp, Warning, TEXT("CorrespondingItemClass is NULL"));
+			if (CollidedPickup->PickupName == "TorchHazard") {
+				ATorchHazard* torchHazard = Cast<ATorchHazard>(CollidedPickup);
+				torchHazard->OnInteract();
+			}
+			else {
+				UE_LOG(LogTemp, Warning, TEXT("CorrespondingItemClass is NULL"));
+			}
 		}
 	}
 	if (ElevatorEscape != nullptr)

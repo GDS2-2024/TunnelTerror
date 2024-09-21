@@ -29,4 +29,10 @@ protected:
 	UFUNCTION()
 	void OnFallTriggerOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 		UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& HitInfo);
+
+
+	UFUNCTION(NetMulticast, Reliable)
+	void Fall();
+	UFUNCTION(BlueprintNativeEvent)
+	void OnFall();
 };
