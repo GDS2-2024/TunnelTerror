@@ -1,0 +1,36 @@
+{
+ "ProjectInfo": {
+  "Project": {
+   "Name": "TunnelTerror_WwiseProject",
+   "GUID": "{68741BEB-1B87-4050-AAEB-9C66E7A9182A}",
+   "Generator": "2023.1.7.8574"
+  },
+  "CacheRoot": "../.cache",
+  "Platforms": [
+   {
+    "Name": "Mac",
+    "GUID": "{4F2DB219-C6F4-4C75-B4C0-80D1E35E979F}",
+    "BasePlatform": "Mac",
+    "BasePlatformGUID": "{9C6217D5-DD11-4795-87C1-6CE02853C540}",
+    "Path": "Mac"
+   },
+   {
+    "Name": "Windows",
+    "GUID": "{CBBAA8A3-D3D3-4582-8FE7-3899BA3378D5}",
+    "BasePlatform": "Windows",
+    "BasePlatformGUID": "{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}",
+    "Path": "Windows"
+   }
+  ],
+  "Languages": [
+   {
+    "Name": "English(US)",
+    "Id": "684519430",
+    "GUID": "{FFADE934-FDD3-43E8-AA55-A96FEB1158A4}",
+    "Default": "true",
+    "UseAsStandIn": "true"
+   }
+  ],
+  "FileHash": "{0242F141-CADE-55CD-5CEB-818E0C523EBB}"
+ }
+}
