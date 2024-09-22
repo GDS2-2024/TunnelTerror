@@ -318,7 +318,7 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 		}
 		if (InventoryItem->ItemName.ToString() == "Compass")
 		{
-			FRotator DesiredRotation(0.0f, -90.0f, 0.0f);
+			FRotator DesiredRotation(0.0f, 180.0f, 0.0f);
 			FVector DesiredPos(0,0,5);
 			InventoryItem->SetActorRelativeLocation(DesiredPos);
 			InventoryItem->SetActorRelativeRotation(DesiredRotation);

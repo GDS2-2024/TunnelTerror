@@ -30,7 +30,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated)
 	UStaticMeshComponent* ItemMesh;
 	
-	UPROPERTY()
+	UPROPERTY(Replicated)
 	AActor* Player;
 	
 	// Function should be implemented by child classes
