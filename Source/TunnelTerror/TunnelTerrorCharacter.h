@@ -122,7 +122,7 @@ public:
 	void MulticastPlaceTrap();
 
 	UFUNCTION(Client, Reliable)
-	void ClientAddInventoryUI(AInventoryItem* NewItem);
+	void ClientAddInventoryUI(AInventoryItem* NewItem, int32 SlotIndex);
 
 	UFUNCTION(Client, Reliable)
 	void ClientRemoveInventoryUI(int32 SlotIndex);

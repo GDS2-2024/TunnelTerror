@@ -29,7 +29,7 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated)
 	UStaticMeshComponent* ItemMesh;
-
+	
 	UPROPERTY()
 	AActor* Player;
 	
