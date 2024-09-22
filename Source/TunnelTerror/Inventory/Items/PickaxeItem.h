@@ -26,7 +26,7 @@ public:
 
 	virtual void UseItem() override;
 	virtual void ReleaseUseItem() override;
-
+	
 	/**
 	 * @brief If the player has held pickaxe swing long enough to mine an ore
 	 * @return 

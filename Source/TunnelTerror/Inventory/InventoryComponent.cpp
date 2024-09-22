@@ -211,10 +211,21 @@ void UInventoryComponent::ServerSetSelectedSlot_Implementation(int32 SlotIndex)
 			Player->EquipCompass(false);
 			MulticastEquipCompass(false);
 		}
+		if (InventorySlots[SelectedSlotIndex].Item->ItemName.ToString() == "Pickaxe")
+		{
+			Player->EquipPickaxe(true);
+			MulticastEquipPickaxe(true);
+		} else
+		{
+			Player->EquipPickaxe(false);
+			MulticastEquipPickaxe(false);
+		}
 	} else
 	{
 		Player->EquipCompass(false);
 		MulticastEquipCompass(false);
+		Player->EquipPickaxe(false);
+		MulticastEquipPickaxe(false);
 	}
 	ServerSetItemVisibility();
 }
@@ -248,6 +259,18 @@ void UInventoryComponent::MulticastEquipCompass_Implementation(bool equip)
 {
 	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
 	Player->EquipCompass(equip);
+}
+
+void UInventoryComponent::MulticastEquipPickaxe_Implementation(bool equip)
+{
+	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
+	Player->EquipPickaxe(equip);
+}
+
+void UInventoryComponent::MulticastSwingPickaxe_Implementation(bool swing)
+{
+	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
+	Player->SwingPickaxe(swing);
 }
 
 // Called when the game starts
