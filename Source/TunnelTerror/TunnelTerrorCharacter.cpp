@@ -288,22 +288,18 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 	}
 }
 
-void ATunnelTerrorCharacter::ServerSpawnMoney_Implementation(TSubclassOf<AInventoryItem> ItemClass)
+void ATunnelTerrorCharacter::ServerRemoveCrystals_Implementation()
 {
-	AInventoryItem* InventoryItem = GetWorld()->SpawnActor<AInventoryItem>(ItemClass);
-	if (InventoryItem)
+	if (CollidedPickup)
 	{
-		//InventoryItem->AttachToComponent(GetMesh1P(), FAttachmentTransformRules::KeepRelativeTransform, "GripPoint");
-		//EquipToInventory(InventoryItem);
-		money = money+1;
-		PlayerHUD->SetCurrencyUI(money);
-		
-		if (CollidedPickup)
-		{
-			CollidedPickup->Destroy();
-		}
-		UE_LOG(LogTemp, Warning, TEXT("money = %d"), money);
+		CollidedPickup->Destroy();
 	}
+}
+
+void ATunnelTerrorCharacter::ClientAddMoney_Implementation() {
+	money = money + 3;
+	PlayerHUD->SetCurrencyUI(money); 
+	UE_LOG(LogTemp, Warning, TEXT("money = %d"), money);
 }
 
 void ATunnelTerrorCharacter::ServerEquipToInventory_Implementation(AInventoryItem* InventoryItem)
@@ -373,7 +369,8 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 				ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
 			}
 			else if (CollidedPickup->PickupName == "CrystalPickup") {
-				ServerSpawnMoney(CollidedPickup->CorrespondingItemClass);
+				ServerRemoveCrystals();
+				ClientAddMoney();
 			}
 			else {
 				// Spawn an instance of the inventory item on the server

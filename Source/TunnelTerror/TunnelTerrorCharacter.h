@@ -101,7 +101,10 @@ public:
 	void ServerSpawnItem(TSubclassOf<AInventoryItem> ItemClass);
 
 	UFUNCTION(Server, Reliable)
-	void ServerSpawnMoney(TSubclassOf<AInventoryItem> ItemClass);
+	void ServerRemoveCrystals();
+
+	UFUNCTION(Client, Reliable)
+	void ClientAddMoney();
 	
 	UFUNCTION(Server, Reliable)
 	void ServerEquipToInventory(AInventoryItem* InventoryItem);
