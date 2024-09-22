@@ -80,6 +80,10 @@ private:
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastHideItem(AInventoryItem* Item);
 
+	//Multicast equip/unequip Compass
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastEquipCompass(bool equip);
+	
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;

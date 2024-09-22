@@ -77,6 +77,7 @@ void ATunnelTerrorCharacter::BeginPlay()
 			PlayerHUD->AddToPlayerScreen();
 		}
 	}
+	
 }
 
 void ATunnelTerrorCharacter::Tick(float DeltaTime)
@@ -318,10 +319,11 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 		}
 		if (InventoryItem->ItemName.ToString() == "Compass")
 		{
-			FRotator DesiredRotation(0.0f, 180.0f, 0.0f);
-			FVector DesiredPos(0,0,5);
+			FRotator DesiredRotation(180.0f, 0.0f, 90.0f);
+			FVector DesiredPos(-1.5,4.3,-2.0);
 			InventoryItem->SetActorRelativeLocation(DesiredPos);
 			InventoryItem->SetActorRelativeRotation(DesiredRotation);
+			EquipCompass(true);
 		}
 		ServerEquipToInventory(InventoryItem);
 		if (CollidedPickup)

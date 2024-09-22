@@ -28,7 +28,7 @@ class ATunnelTerrorCharacter : public ACharacter
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
 	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
 	USkeletalMeshComponent* Mesh1P;
-
+	
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FirstPersonCameraComponent;
@@ -229,6 +229,9 @@ public:
 
 	UPROPERTY()
 	UPlayerHUD* PlayerHUD;
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void EquipCompass(bool bEquip);
 	
 private:
 	UPROPERTY(ReplicatedUsing = OnRagdoll, BlueprintGetter = IsRagdolled, Replicated)
