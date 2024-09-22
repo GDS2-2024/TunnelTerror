@@ -107,7 +107,7 @@ void UInventoryComponent::ServerShowItem_Implementation(AInventoryItem* Item)
 		MulticastShowItem(Item);
 	} else
 	{
-		UE_LOG(LogTemp, Error, TEXT("SERVER SHOW() Item is null"))
+		//UE_LOG(LogTemp, Error, TEXT("SERVER SHOW() Item is null"))
 	}
 		
 }
@@ -119,7 +119,7 @@ void UInventoryComponent::MulticastShowItem_Implementation(AInventoryItem* Item)
 		Item->ShowItem();
 	} else
 	{
-		UE_LOG(LogTemp, Error, TEXT("MULTICAST SHOW() Item is null"))
+		//UE_LOG(LogTemp, Error, TEXT("MULTICAST SHOW() Item is null"))
 	}
 }
 
@@ -131,7 +131,7 @@ void UInventoryComponent::ServerHideItem_Implementation(AInventoryItem* Item)
 		MulticastHideItem(Item);
 	} else
 	{
-		UE_LOG(LogTemp, Error, TEXT("SERVER HIDE() Item is null"))
+		//UE_LOG(LogTemp, Error, TEXT("SERVER HIDE() Item is null"))
 	}
 }
 
@@ -142,7 +142,7 @@ void UInventoryComponent::MulticastHideItem_Implementation(AInventoryItem* Item)
 		Item->HideItem();
 	} else
 	{
-		UE_LOG(LogTemp, Error, TEXT("Client: HIDE() Item is null"))
+		//UE_LOG(LogTemp, Error, TEXT("Client: HIDE() Item is null"))
 	}
 }
 
