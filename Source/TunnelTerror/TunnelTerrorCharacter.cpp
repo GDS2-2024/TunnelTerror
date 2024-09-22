@@ -31,6 +31,9 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 
 	samples = 0;
 
+	sporeInfectTime = 10.0f;
+	sporeInfectCurrent = 0.0f;
+
 	// Character doesnt have a rifle at start
 	bHasRifle = false;
 	
@@ -90,6 +93,19 @@ void ATunnelTerrorCharacter::Tick(float DeltaTime)
 		{
 			trapCDCurrent = 0.0f;
 		}
+	}
+
+	if (bSporesInfecting)
+	{
+		sporeInfectCurrent -= DeltaTime;
+		if (sporeInfectCurrent <= 0.0f)
+		{
+			this->DecreaseHealth(100.0f);
+		}
+	}
+	else
+	{
+		sporeInfectCurrent = sporeInfectTime - 0.1f;
 	}
 }
 
@@ -549,4 +565,18 @@ void ATunnelTerrorCharacter::DecreaseHealth(float damage)
 	{
 		Die();
 	}
+}
+
+void ATunnelTerrorCharacter::StartSporeInfection()
+{
+	bSporesInfecting = true;
+	sporeInfectCurrent = sporeInfectTime;
+	UE_LOG(LogTemp, Log, TEXT("Spores are infecting"));
+}
+
+void ATunnelTerrorCharacter::EndSporeInfection()
+{
+	bSporesInfecting = false;
+	sporeInfectCurrent = 0.0f;
+	UE_LOG(LogTemp, Log, TEXT("Spores have stopped infecting"));
 }

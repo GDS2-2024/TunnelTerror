@@ -133,6 +133,15 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	float health;
 
+	UPROPERTY(VisibleAnywhere)
+	float sporeInfectTime;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	float sporeInfectCurrent;
+
+	UPROPERTY(VisibleAnywhere)
+	bool bSporesInfecting;
+
 	/** Setter to set the bool */
 	UFUNCTION(BlueprintCallable, Category = Weapon)
 	void SetHasRifle(bool bNewHasRifle);
@@ -168,7 +177,11 @@ public:
 	UFUNCTION()
 	void DecreaseHealth(float damage);
 
-	// UDrillMachine* DrillMachine;
+	UFUNCTION()
+	void StartSporeInfection();
+
+	UFUNCTION()
+	void EndSporeInfection();
 
 	// Variable is set by an item pickup
 	// Used to reference pickup object when player presses 'E' to interact
