@@ -184,13 +184,13 @@ APickaxeItem* UInventoryComponent::GetPlayersPickaxe()
 
 void UInventoryComponent::ServerSetItemVisibility_Implementation()
 {
-	UE_LOG(LogTemp, Log, TEXT("ServerSetItemVisibility_Implementation"))
+	//UE_LOG(LogTemp, Log, TEXT("ServerSetItemVisibility_Implementation"))
 	ServerShowItem(InventorySlots[SelectedSlotIndex].Item);
     for (int index = 0; index < InventorySlots.Num(); index++)
     {
        	if (index != SelectedSlotIndex)
        	{
-    		UE_LOG(LogTemp, Warning, TEXT("Server Hiding Slot: %d"), index)
+    		//UE_LOG(LogTemp, Warning, TEXT("Server Hiding Slot: %d"), index)
        		ServerHideItem(InventorySlots[index].Item);
        	}
     }

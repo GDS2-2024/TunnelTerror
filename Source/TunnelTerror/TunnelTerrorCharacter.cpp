@@ -294,9 +294,7 @@ void ATunnelTerrorCharacter::EquipToInventory(AInventoryItem* NewItem)
 	{
 		if (NewItem)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("NewestItemSlotIndex BEFORE ServerAddItem: %d"), Inventory->NewestItemSlotIndex)
 			Inventory->ServerAddItem(NewItem);
-			UE_LOG(LogTemp, Warning, TEXT("NewestItemSlotIndex AFTER ServerAddItem: %d"), Inventory->NewestItemSlotIndex)
 			ClientAddInventoryUI(NewItem, Inventory->NewestItemSlotIndex);
 		}
 		else
