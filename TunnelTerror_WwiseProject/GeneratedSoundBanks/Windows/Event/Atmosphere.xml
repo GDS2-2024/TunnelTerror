@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="2145253833" Type="Event" GUID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}" Language="SFX" Hash="{09D623AE-6174-91C5-4D95-583C2D3BD958}">
+		<SoundBank Id="2145253833" Type="Event" GUID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}" Language="SFX" Hash="{B241E64F-32B2-BB63-E687-98EB700CA902}">
 			<ObjectPath>Atmosphere</ObjectPath>
 			<ShortName>Atmosphere</ShortName>
 			<Path>Event/Atmosphere.bnk</Path>
@@ -9,7 +9,7 @@
 				<File Id="71860382" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>99S LT Vehicle - Resonation C.wav</ShortName>
 					<Path>Media/71860382.wem</Path>
-					<CachePath>SFX/99S LT Vehicle - Resonation C_8ED18D5B.wem</CachePath>
+					<CachePath>SFX/99S LT Vehicle - Resonation C_6EA773F4.wem</CachePath>
 				</File>
 				<File Id="328367209" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>25879__acclivity__drip1.wav</ShortName>
@@ -19,7 +19,7 @@
 				<File Id="724212248" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA.wav</ShortName>
 					<Path>Media/724212248.wem</Path>
-					<CachePath>SFX/- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA_7505DF45.wem</CachePath>
+					<CachePath>SFX/- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA_5B0571AF.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -43,5 +43,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8983541A-E0F1-0235-9799-A962A0DDAA23}</FileHash>
+	<FileHash>{8692397A-CB99-AE8B-759D-213B57D94424}</FileHash>
 </SoundBanksInfo>

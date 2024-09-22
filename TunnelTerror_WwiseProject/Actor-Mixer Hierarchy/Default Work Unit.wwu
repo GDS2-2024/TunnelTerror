@@ -120,7 +120,7 @@
 								<AudioFileSource Name="- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA" ID="{233CA9B8-4A07-4A0C-AC2D-E83678A9F181}">
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="4.31650522804541"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="2.55073021575042"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="8.19612774409411"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 										<Property Name="TrimBegin" Type="Real64" Value="60"/>
 										<Property Name="TrimEnd" Type="Real64" Value="80"/>
@@ -256,9 +256,9 @@
 								<AudioFileSource Name="99S LT Vehicle - Resonation C" ID="{39273738-9502-44E0-B1E3-0B7050C793B7}">
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="2.52055357766516"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="2.43184296619411"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="4.64848239974531"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="12.5239912758997"/>
+										<Property Name="TrimEnd" Type="Real64" Value="15"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>99S LT Vehicle - Resonation C.wav</AudioFile>

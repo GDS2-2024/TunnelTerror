@@ -93,7 +93,7 @@
     "Type": "Event",
     "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
     "Language": "SFX",
-    "Hash": "{09D623AE-6174-91C5-4D95-583C2D3BD958}",
+    "Hash": "{B241E64F-32B2-BB63-E687-98EB700CA902}",
     "ObjectPath": "Atmosphere",
     "ShortName": "Atmosphere",
     "Path": "Event/Atmosphere.bnk",
@@ -105,7 +105,7 @@
       "Location": "Loose",
       "ShortName": "99S LT Vehicle - Resonation C.wav",
       "Path": "Media/71860382.wem",
-      "CachePath": "SFX/99S LT Vehicle - Resonation C_8ED18D5B.wem"
+      "CachePath": "SFX/99S LT Vehicle - Resonation C_6EA773F4.wem"
      },
      {
       "Id": "328367209",
@@ -123,7 +123,7 @@
       "Location": "Loose",
       "ShortName": "- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA.wav",
       "Path": "Media/724212248.wem",
-      "CachePath": "SFX/- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA_7505DF45.wem"
+      "CachePath": "SFX/- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA_5B0571AF.wem"
      }
     ],
     "Plugins": {
@@ -225,6 +225,6 @@
     ]
    }
   ],
-  "FileHash": "{2590D68C-061D-4197-E1E8-27621F0CDF4C}"
+  "FileHash": "{C5F573C2-FC13-1CAD-EF2E-4240D1C8E0D1}"
  }
 }
