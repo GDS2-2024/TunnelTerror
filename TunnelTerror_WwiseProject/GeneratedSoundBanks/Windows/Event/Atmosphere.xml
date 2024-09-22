@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="2145253833" Type="Event" GUID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}" Language="SFX" Hash="{B2D2FDF5-8038-DF5E-AC00-0EEBAF0909CB}">
+		<SoundBank Id="2145253833" Type="Event" GUID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}" Language="SFX" Hash="{09D623AE-6174-91C5-4D95-583C2D3BD958}">
 			<ObjectPath>Atmosphere</ObjectPath>
 			<ShortName>Atmosphere</ShortName>
 			<Path>Event/Atmosphere.bnk</Path>
@@ -9,29 +9,39 @@
 				<File Id="71860382" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>99S LT Vehicle - Resonation C.wav</ShortName>
 					<Path>Media/71860382.wem</Path>
-					<CachePath>SFX/99S LT Vehicle - Resonation C_50CA0C96.wem</CachePath>
+					<CachePath>SFX/99S LT Vehicle - Resonation C_8ED18D5B.wem</CachePath>
 				</File>
 				<File Id="328367209" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>25879__acclivity__drip1.wav</ShortName>
 					<Path>Media/328367209.wem</Path>
-					<CachePath>SFX/25879__acclivity__drip1_9DEB7957.wem</CachePath>
+					<CachePath>SFX/25879__acclivity__drip1_2B5CC65E.wem</CachePath>
 				</File>
 				<File Id="724212248" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA.wav</ShortName>
 					<Path>Media/724212248.wem</Path>
-					<CachePath>SFX/- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA_BBEA2EF1.wem</CachePath>
+					<CachePath>SFX/- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA_7505DF45.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="2513915904" Name="Hall_Large" ObjectPath="\Effects\Factory Effects\RoomVerb\Halls\Hall_Large" GUID="{6D154498-FF6D-4823-96FC-56841B70E079}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
-				<Event Id="2145253833" Name="Atmosphere" ObjectPath="\Events\Default Work Unit\Atmosphere" GUID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}" DurationType="OneShot" DurationMin="0.1373994" DurationMax="193.58899">
+				<Event Id="2145253833" Name="Atmosphere" ObjectPath="\Events\Default Work Unit\Atmosphere" GUID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="71860382"/>
 						<MediaRef Id="328367209"/>
 						<MediaRef Id="724212248"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2513915904"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{AC780D84-0D6D-BBB3-158D-BDBA4DE2F398}</FileHash>
+	<FileHash>{8983541A-E0F1-0235-9799-A962A0DDAA23}</FileHash>
 </SoundBanksInfo>

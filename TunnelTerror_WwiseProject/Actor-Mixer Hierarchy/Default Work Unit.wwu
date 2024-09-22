@@ -49,12 +49,37 @@
 				</Sound>
 				<RandomSequenceContainer Name="Atmosphere" ID="{D64C652C-D9F1-4614-95C7-BD8BA9D156E8}" ShortID="583616545">
 					<PropertyList>
+						<Property Name="3DPosition" Type="int16" Value="2"/>
+						<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+						<Property Name="HoldListenerOrientation" Type="bool" Value="True"/>
+						<Property Name="InitialDelay" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{5E5A45FA-6F7D-4F05-84CB-C3A12AD167B7}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="LoudnessNormalizationType" Type="int16" Value="1"/>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
-								<Value>2</Value>
+								<Value>3</Value>
 							</ValueList>
 						</Property>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{1E4EBD7D-82D9-4C81-8926-5DB9006C0909}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="5"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 						<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 						<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -99,9 +124,11 @@
 							<ChildrenList>
 								<AudioFileSource Name="- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA" ID="{233CA9B8-4A07-4A0C-AC2D-E83678A9F181}">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="1.76470588235294"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.980392156862735"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="4.31650522804541"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="2.55073021575042"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="60"/>
+										<Property Name="TrimEnd" Type="Real64" Value="80"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA.wav</AudioFile>
@@ -110,57 +137,16 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<PositioningInfo>
+								<Position Name="" ID="{FBF4619E-C71B-4998-BE0A-9DFF7F586910}"/>
+							</PositioningInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA" ID="{233CA9B8-4A07-4A0C-AC2D-E83678A9F181}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="99S LT Vehicle - Resonation C" ID="{B4310763-A786-4388-BFE2-4453192D1775}" ShortID="111960663">
-							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{A001B98A-E7C0-4CE5-9B8A-7E2B744C0FCC}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="126"/>
-													<Property Name="Min" Type="Real64" Value="-126"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-22.5</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="99S LT Vehicle - Resonation C" ID="{39273738-9502-44E0-B1E3-0B7050C793B7}">
-									<PropertyList>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>99S LT Vehicle - Resonation C.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="71860382"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="99S LT Vehicle - Resonation C" ID="{39273738-9502-44E0-B1E3-0B7050C793B7}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="25879__acclivity__drip1" ID="{4C060456-2CB6-4689-8AED-BB7DF349EF26}" ShortID="289688959">
 							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
 										<Value>-100</Value>
@@ -210,12 +196,114 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<PositioningInfo>
+								<Position Name="" ID="{26232B87-9D10-4695-B0F3-F3DA9DEED148}"/>
+							</PositioningInfo>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{734EB6C8-75DC-49B0-938A-22E6B0F6A75D}" ShortID="158415084">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<ObjectRef Name="Hall_Large" ID="{6D154498-FF6D-4823-96FC-56841B70E079}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="25879__acclivity__drip1" ID="{A75B456C-5499-4AA2-8B30-DFE906EE009A}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="99S LT Vehicle - Resonation C" ID="{B4310763-A786-4388-BFE2-4453192D1775}" ShortID="111960663">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{A001B98A-E7C0-4CE5-9B8A-7E2B744C0FCC}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="126"/>
+													<Property Name="Min" Type="Real64" Value="-126"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-22.5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="99S LT Vehicle - Resonation C" ID="{39273738-9502-44E0-B1E3-0B7050C793B7}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="2.52055357766516"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="2.43184296619411"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="12.5239912758997"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>99S LT Vehicle - Resonation C.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="71860382"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Position Name="" ID="{9FA01E7C-1273-42C5-90F9-65EA96BF725D}"/>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="99S LT Vehicle - Resonation C" ID="{39273738-9502-44E0-B1E3-0B7050C793B7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
+					<PositioningInfo>
+						<Position Name="" ID="{3A4BBC02-AFE1-4E06-BABC-630971F0BB0B}"/>
+					</PositioningInfo>
 				</RandomSequenceContainer>
+				<BlendContainer Name="Atmos" ID="{7C5CE867-314F-4F29-88DF-BEEF993862CF}" ShortID="313093260">
+					<PropertyList>
+						<Property Name="BlendBehavior" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+						</Reference>
+					</ReferenceList>
+					<PositioningInfo>
+						<Position Name="" ID="{53566020-FF48-418E-862A-DDF9465F4CE2}"/>
+					</PositioningInfo>
+					<BlendTrackList>
+						<BlendTrack Name="Cave" ID="{9F55A89C-6D60-4B95-B5E7-5883EBA01D42}" ShortID="1026514946">
+							<PropertyList>
+								<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="LayerCrossFadeControlInput">
+									<Custom>
+										<ModulatorLfo Name="Modulator LFO (Custom)" ID="{685C323A-E1BF-4854-A9A3-CB6DB4EDB86A}" ShortID="816279265"/>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+						</BlendTrack>
+					</BlendTrackList>
+				</BlendContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

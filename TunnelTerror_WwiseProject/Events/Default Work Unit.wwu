@@ -36,6 +36,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Atmos" ID="{85CCB3B4-AB10-4FD6-AC39-E56645010615}">
+					<ChildrenList>
+						<Action Name="" ID="{C0F0D448-C9A6-41F4-8732-FFCAD52343F5}" ShortID="943900651">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Atmos" ID="{7C5CE867-314F-4F29-88DF-BEEF993862CF}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

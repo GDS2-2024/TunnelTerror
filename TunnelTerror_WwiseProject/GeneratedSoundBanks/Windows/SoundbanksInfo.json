@@ -55,7 +55,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{B6CBD692-12EC-CDBA-0932-48F63C40C91F}",
+    "Hash": "{E03E4BF2-21B2-B240-E71E-0E77F997D423}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -93,7 +93,7 @@
     "Type": "Event",
     "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
     "Language": "SFX",
-    "Hash": "{B2D2FDF5-8038-DF5E-AC00-0EEBAF0909CB}",
+    "Hash": "{09D623AE-6174-91C5-4D95-583C2D3BD958}",
     "ObjectPath": "Atmosphere",
     "ShortName": "Atmosphere",
     "Path": "Event/Atmosphere.bnk",
@@ -105,7 +105,7 @@
       "Location": "Loose",
       "ShortName": "99S LT Vehicle - Resonation C.wav",
       "Path": "Media/71860382.wem",
-      "CachePath": "SFX/99S LT Vehicle - Resonation C_50CA0C96.wem"
+      "CachePath": "SFX/99S LT Vehicle - Resonation C_8ED18D5B.wem"
      },
      {
       "Id": "328367209",
@@ -114,7 +114,7 @@
       "Location": "Loose",
       "ShortName": "25879__acclivity__drip1.wav",
       "Path": "Media/328367209.wem",
-      "CachePath": "SFX/25879__acclivity__drip1_9DEB7957.wem"
+      "CachePath": "SFX/25879__acclivity__drip1_2B5CC65E.wem"
      },
      {
       "Id": "724212248",
@@ -123,18 +123,28 @@
       "Location": "Loose",
       "ShortName": "- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA.wav",
       "Path": "Media/724212248.wem",
-      "CachePath": "SFX/- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA_BBEA2EF1.wem"
+      "CachePath": "SFX/- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA_7505DF45.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2513915904",
+       "Name": "Hall_Large",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Halls\\Hall_Large",
+       "GUID": "{6D154498-FF6D-4823-96FC-56841B70E079}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "2145253833",
       "Name": "Atmosphere",
       "ObjectPath": "\\Events\\Default Work Unit\\Atmosphere",
       "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
-      "DurationType": "OneShot",
-      "DurationMin": "0.1373994",
-      "DurationMax": "193.58899",
+      "DurationType": "Infinite",
       "MediaRefs": [
        {
         "Id": "71860382"
@@ -145,7 +155,14 @@
        {
         "Id": "724212248"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2513915904"
+        }
+       ]
+      }
      }
     ]
    },
@@ -185,8 +202,29 @@
       ]
      }
     ]
+   },
+   {
+    "Id": "3034623661",
+    "Type": "Event",
+    "GUID": "{85CCB3B4-AB10-4FD6-AC39-E56645010615}",
+    "Language": "SFX",
+    "Hash": "{77B61C18-25E5-D35C-655B-6F00CF41B6EC}",
+    "ObjectPath": "Atmos",
+    "ShortName": "Atmos",
+    "Path": "Event/Atmos.bnk",
+    "Events": [
+     {
+      "Id": "3034623661",
+      "Name": "Atmos",
+      "ObjectPath": "\\Events\\Default Work Unit\\Atmos",
+      "GUID": "{85CCB3B4-AB10-4FD6-AC39-E56645010615}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
    }
   ],
-  "FileHash": "{13B12F3A-F8CA-330C-58A1-8AF3065A82A2}"
+  "FileHash": "{DFBB95BF-3505-AB3F-405C-98A37C635686}"
  }
 }

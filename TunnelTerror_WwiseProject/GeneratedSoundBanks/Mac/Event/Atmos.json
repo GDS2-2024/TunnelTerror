@@ -1,0 +1,32 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "3034623661",
+    "Type": "Event",
+    "GUID": "{85CCB3B4-AB10-4FD6-AC39-E56645010615}",
+    "Language": "SFX",
+    "Hash": "{77B61C18-25E5-D35C-655B-6F00CF41B6EC}",
+    "ObjectPath": "Atmos",
+    "ShortName": "Atmos",
+    "Path": "Event/Atmos.bnk",
+    "Events": [
+     {
+      "Id": "3034623661",
+      "Name": "Atmos",
+      "ObjectPath": "\\Events\\Default Work Unit\\Atmos",
+      "GUID": "{85CCB3B4-AB10-4FD6-AC39-E56645010615}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{0BDC4D32-EAA9-CF13-6027-09023D14C018}"
+ }
+}
