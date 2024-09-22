@@ -21,9 +21,10 @@ AInventoryItem::AInventoryItem()
 void AInventoryItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-	DOREPLIFETIME(AInventoryItem, ItemName);
-	DOREPLIFETIME(AInventoryItem, InventoryIcon);
-	DOREPLIFETIME(AInventoryItem, ItemMesh);
+	DOREPLIFETIME(AInventoryItem, ItemName)
+	DOREPLIFETIME(AInventoryItem, InventoryIcon)
+	DOREPLIFETIME(AInventoryItem, ItemMesh)
+	DOREPLIFETIME(AInventoryItem, bIsVisible)
 }
 
 void AInventoryItem::UseItem()
@@ -34,6 +35,29 @@ void AInventoryItem::UseItem()
 void AInventoryItem::ReleaseUseItem()
 {
 	UE_LOG(LogTemp, Warning, TEXT("ReleaseUseItem() called in Base Class (default implementation)"));
+}
+
+void AInventoryItem::OnRep_ItemMesh()
+{
+	UE_LOG(LogTemp, Warning, TEXT("ItemMesh Replicated"));
+}
+
+void AInventoryItem::OnRep_Visibility()
+{
+	//UE_LOG(LogTemp, Warning, TEXT("ItemMesh Visibility Replicated"));
+	if (bIsVisible)
+	{
+		ShowItem();
+	} else
+	{
+		HideItem();
+	}
+}
+
+void AInventoryItem::SetVisibility(bool newVisibility)
+{
+	bIsVisible = newVisibility;
+	OnRep_Visibility();
 }
 
 void AInventoryItem::ShowItem()

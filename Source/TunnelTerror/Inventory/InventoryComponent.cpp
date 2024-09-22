@@ -104,12 +104,9 @@ void UInventoryComponent::ServerShowItem_Implementation(AInventoryItem* Item)
 	//UE_LOG(LogTemp, Log, TEXT("ServerShowItem()"))
 	if (Item)
 	{
-		MulticastShowItem(Item);
-	} else
-	{
-		//UE_LOG(LogTemp, Error, TEXT("SERVER SHOW() Item is null"))
+		UE_LOG(LogTemp, Warning, TEXT("Server Showing Item"));
+		Item->SetVisibility(true);
 	}
-		
 }
 
 void UInventoryComponent::MulticastShowItem_Implementation(AInventoryItem* Item)
@@ -117,9 +114,6 @@ void UInventoryComponent::MulticastShowItem_Implementation(AInventoryItem* Item)
 	if (Item)
 	{
 		Item->ShowItem();
-	} else
-	{
-		//UE_LOG(LogTemp, Error, TEXT("MULTICAST SHOW() Item is null"))
 	}
 }
 
@@ -128,10 +122,8 @@ void UInventoryComponent::ServerHideItem_Implementation(AInventoryItem* Item)
 {
 	if (Item)
 	{
-		MulticastHideItem(Item);
-	} else
-	{
-		//UE_LOG(LogTemp, Error, TEXT("SERVER HIDE() Item is null"))
+		UE_LOG(LogTemp, Warning, TEXT("Server Hiding Item"));
+		Item->SetVisibility(false);
 	}
 }
 
@@ -140,9 +132,6 @@ void UInventoryComponent::MulticastHideItem_Implementation(AInventoryItem* Item)
 	if (Item)
 	{
 		Item->HideItem();
-	} else
-	{
-		//UE_LOG(LogTemp, Error, TEXT("Client: HIDE() Item is null"))
 	}
 }
 
@@ -184,14 +173,19 @@ APickaxeItem* UInventoryComponent::GetPlayersPickaxe()
 
 void UInventoryComponent::ServerSetItemVisibility_Implementation()
 {
-	//UE_LOG(LogTemp, Log, TEXT("ServerSetItemVisibility_Implementation"))
-	ServerShowItem(InventorySlots[SelectedSlotIndex].Item);
+	if (InventorySlots[SelectedSlotIndex].Item)
+	{
+		InventorySlots[SelectedSlotIndex].Item->SetVisibility(true);
+	}
     for (int index = 0; index < InventorySlots.Num(); index++)
     {
        	if (index != SelectedSlotIndex)
        	{
     		//UE_LOG(LogTemp, Warning, TEXT("Server Hiding Slot: %d"), index)
-       		ServerHideItem(InventorySlots[index].Item);
+			if (InventorySlots[index].Item)
+			{
+				InventorySlots[index].Item->SetVisibility(true);
+			}
        	}
     }
 }

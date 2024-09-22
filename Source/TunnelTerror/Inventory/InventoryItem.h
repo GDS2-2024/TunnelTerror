@@ -27,8 +27,11 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated)
 	UTexture2D* InventoryIcon;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing = OnRep_ItemMesh)
 	UStaticMeshComponent* ItemMesh;
+
+	UPROPERTY(ReplicatedUsing = OnRep_Visibility)
+	bool bIsVisible;
 	
 	UPROPERTY()
 	AActor* Player;
@@ -37,6 +40,13 @@ public:
 	virtual void UseItem();
 	virtual void ReleaseUseItem();
 
+	UFUNCTION()
+	void OnRep_ItemMesh();
+
+	UFUNCTION()
+	void OnRep_Visibility();
+
+	void SetVisibility(bool newVisibility);
 	void ShowItem();
 	void HideItem();
 	
