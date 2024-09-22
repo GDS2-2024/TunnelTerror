@@ -323,7 +323,6 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 			InventoryItem->SetActorRelativeLocation(DesiredPos);
 			InventoryItem->SetActorRelativeRotation(DesiredRotation);
 		}
-		EquipToInventory(InventoryItem);
 		ServerEquipToInventory(InventoryItem);
 		if (CollidedPickup)
 		{
