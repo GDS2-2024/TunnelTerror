@@ -246,6 +246,18 @@ public:
 	UFUNCTION(BlueprintImplementableEvent)
 	void EquipCompass(bool bEquip);
 	
+	UFUNCTION(BlueprintImplementableEvent)
+	void EquipPickaxe(bool bEquip);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void SwingPickaxe(bool bEquip);
+
+	UFUNCTION(Server, Reliable)
+	void ServerSwing(bool swing);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastSwing(bool swing);
+	
 private:
 	UPROPERTY(ReplicatedUsing = OnRagdoll, BlueprintGetter = IsRagdolled, Replicated)
 	bool bIsRagdolled = false;

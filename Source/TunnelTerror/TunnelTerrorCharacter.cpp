@@ -341,6 +341,10 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 			InventoryItem->SetActorRelativeRotation(DesiredRotation);
 			EquipCompass(true);
 		}
+		if (InventoryItem->ItemName.ToString() == "Pickaxe")
+		{
+			EquipPickaxe(true);
+		}
 		ServerEquipToInventory(InventoryItem);
 		if (CollidedPickup)
 		{
@@ -581,4 +585,14 @@ void ATunnelTerrorCharacter::EndSporeInfection()
 	bSporesInfecting = false;
 	sporeInfectCurrent = 0.0f;
 	UE_LOG(LogTemp, Log, TEXT("Spores have stopped infecting"));
+}
+
+void ATunnelTerrorCharacter::MulticastSwing_Implementation(bool swing)
+{
+	SwingPickaxe(swing);
+}
+
+void ATunnelTerrorCharacter::ServerSwing_Implementation(bool swing)
+{
+	MulticastSwing(swing);
 }
