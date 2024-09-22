@@ -89,6 +89,67 @@
     ]
    },
    {
+    "Id": "2145253833",
+    "Type": "Event",
+    "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
+    "Language": "SFX",
+    "Hash": "{B2D2FDF5-8038-DF5E-AC00-0EEBAF0909CB}",
+    "ObjectPath": "Atmosphere",
+    "ShortName": "Atmosphere",
+    "Path": "Event/Atmosphere.bnk",
+    "Media": [
+     {
+      "Id": "71860382",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "99S LT Vehicle - Resonation C.wav",
+      "Path": "Media/71860382.wem",
+      "CachePath": "SFX/99S LT Vehicle - Resonation C_50CA0C96.wem"
+     },
+     {
+      "Id": "328367209",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "25879__acclivity__drip1.wav",
+      "Path": "Media/328367209.wem",
+      "CachePath": "SFX/25879__acclivity__drip1_9DEB7957.wem"
+     },
+     {
+      "Id": "724212248",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA.wav",
+      "Path": "Media/724212248.wem",
+      "CachePath": "SFX/- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA_BBEA2EF1.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2145253833",
+      "Name": "Atmosphere",
+      "ObjectPath": "\\Events\\Default Work Unit\\Atmosphere",
+      "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.1373994",
+      "DurationMax": "193.58899",
+      "MediaRefs": [
+       {
+        "Id": "71860382"
+       },
+       {
+        "Id": "328367209"
+       },
+       {
+        "Id": "724212248"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "3024206357",
     "Type": "Event",
     "GUID": "{FFF5A928-8A4E-40CD-B84F-7A12D570E856}",
@@ -126,6 +187,6 @@
     ]
    }
   ],
-  "FileHash": "{D9CF3DE3-3AF8-E178-1586-066C5C3636E5}"
+  "FileHash": "{13B12F3A-F8CA-330C-58A1-8AF3065A82A2}"
  }
 }

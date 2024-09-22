@@ -1,0 +1,72 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "2145253833",
+    "Type": "Event",
+    "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
+    "Language": "SFX",
+    "Hash": "{B2D2FDF5-8038-DF5E-AC00-0EEBAF0909CB}",
+    "ObjectPath": "Atmosphere",
+    "ShortName": "Atmosphere",
+    "Path": "Event/Atmosphere.bnk",
+    "Media": [
+     {
+      "Id": "71860382",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "99S LT Vehicle - Resonation C.wav",
+      "Path": "Media/71860382.wem",
+      "CachePath": "SFX/99S LT Vehicle - Resonation C_50CA0C96.wem"
+     },
+     {
+      "Id": "328367209",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "25879__acclivity__drip1.wav",
+      "Path": "Media/328367209.wem",
+      "CachePath": "SFX/25879__acclivity__drip1_9DEB7957.wem"
+     },
+     {
+      "Id": "724212248",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA.wav",
+      "Path": "Media/724212248.wem",
+      "CachePath": "SFX/- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA_BBEA2EF1.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2145253833",
+      "Name": "Atmosphere",
+      "ObjectPath": "\\Events\\Default Work Unit\\Atmosphere",
+      "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.1373994",
+      "DurationMax": "193.58899",
+      "MediaRefs": [
+       {
+        "Id": "71860382"
+       },
+       {
+        "Id": "328367209"
+       },
+       {
+        "Id": "724212248"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{57B0EC65-5C20-97E8-8C39-2DAD86C19968}"
+ }
+}

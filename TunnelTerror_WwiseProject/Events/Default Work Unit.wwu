@@ -25,6 +25,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Atmosphere" ID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}">
+					<ChildrenList>
+						<Action Name="" ID="{98593568-A264-4070-BFA7-473635F94FD3}" ShortID="461207614">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Atmosphere" ID="{D64C652C-D9F1-4614-95C7-BD8BA9D156E8}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
