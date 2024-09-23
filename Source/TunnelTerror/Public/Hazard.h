@@ -6,6 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "Hazard.generated.h"
 
+class ATunnelTerrorCharacter;
 class UBoxComponent;
 
 UCLASS()
@@ -30,7 +31,9 @@ protected:
 	UFUNCTION()
 	void OnHazardOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 		UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& HitInfo);
-
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnKill(ATunnelTerrorCharacter* victim);
 
 
 public:	

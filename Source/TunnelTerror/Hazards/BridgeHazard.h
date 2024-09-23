@@ -4,24 +4,29 @@
 
 #include "CoreMinimal.h"
 #include "Hazard.h"
-#include "Stalactite.generated.h"
-
-class UBoxComponent;
+#include "BridgeHazard.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class TUNNELTERROR_API AStalactite : public AHazard
+class TUNNELTERROR_API ABridgeHazard : public AHazard
 {
 	GENERATED_BODY()
 	
 public:
 	// Sets default values for this actor's properties
-	AStalactite();
+	ABridgeHazard();
+	
+	bool IsSabotaged();
+	void SetIsSabotaged(bool sabotaged);
 
 protected:
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(VisibleAnywhere)
+	bool bIsSabotaged;
+
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UBoxComponent* FallTrigger;
 
 	virtual void BeginPlay() override;
