@@ -26,7 +26,7 @@ protected:
 	bool bIsSabotaged;
 
 protected:
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UBoxComponent* FallTrigger;
 
 	virtual void BeginPlay() override;
