@@ -109,6 +109,21 @@ void ATunnelTerrorCharacter::Tick(float DeltaTime)
 	{
 		sporeInfectCurrent = sporeInfectTime - 0.1f;
 	}
+	if (CollidedPickup)
+	{
+		if (CollidedPickup->PickupName == "CrystalPickup")
+        {
+        	if (Inventory->GetPlayersPickaxe())
+        	{
+        		if (Inventory->GetPlayersPickaxe()->HasReachedMiningThreshold())
+        		{
+        			ServerRemoveCrystals();
+        			ClientAddMoney();
+        		}
+        	}
+        }
+	}
+	
 }
 
 void ATunnelTerrorCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
@@ -480,10 +495,6 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 			if (CollidedPickup->PickupName == "TorchHazard") {
 				ATorchHazard* torchHazard = Cast<ATorchHazard>(CollidedPickup);
 				torchHazard->OnInteract();
-			}
-			else if (CollidedPickup->PickupName == "CrystalPickup") {
-				ServerRemoveCrystals();
-				ClientAddMoney();
 			}
 			else {
 				UE_LOG(LogTemp, Warning, TEXT("CorrespondingItemClass is NULL"));
