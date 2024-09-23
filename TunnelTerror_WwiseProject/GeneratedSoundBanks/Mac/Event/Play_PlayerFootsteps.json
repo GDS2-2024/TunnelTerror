@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}",
     "Language": "SFX",
-    "Hash": "{75518061-067E-C7FC-F394-A7AC84605F51}",
+    "Hash": "{6DAC6206-C155-E624-1F2D-7B95F637CF7F}",
     "ObjectPath": "Play_PlayerFootsteps",
     "ShortName": "Play_PlayerFootsteps",
     "Path": "Event/Play_PlayerFootsteps.bnk",
@@ -189,6 +189,6 @@
     ]
    }
   ],
-  "FileHash": "{EE742D20-9608-A05D-8774-E44E9043A87C}"
+  "FileHash": "{D95CAD0F-715E-02EC-3AD5-35D5805D8DB3}"
  }
 }

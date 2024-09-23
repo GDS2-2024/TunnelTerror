@@ -4,6 +4,13 @@
 		<WorkUnit Name="Footsteps" ID="{A01B63E6-E0C9-4FC2-A742-743F7B5DC4C1}" PersistMode="Standalone">
 			<ChildrenList>
 				<SwitchContainer Name="PlayerFootsteps" ID="{B5135BC1-2767-4928-9108-4A8961DE2D90}" ShortID="978903879">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-24</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
@@ -228,7 +235,6 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Wood" ID="{390EEFFA-7B12-4C2C-A988-0C1B3F7446D2}" ShortID="203105210">
 							<PropertyList>
-								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
