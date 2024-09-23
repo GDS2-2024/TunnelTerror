@@ -30,6 +30,7 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 	trapCDCurrent = 0.0f;
 
 	samples = 0;
+	money = 0;
 
 	sporeInfectTime = 10.0f;
 	sporeInfectCurrent = 0.0f;
@@ -353,6 +354,20 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 	}
 }
 
+void ATunnelTerrorCharacter::ServerRemoveCrystals_Implementation()
+{
+	if (CollidedPickup)
+	{
+		CollidedPickup->Destroy();
+	}
+}
+
+void ATunnelTerrorCharacter::ClientAddMoney_Implementation() {
+	money = money + 3;
+	PlayerHUD->SetCurrencyUI(money); 
+	UE_LOG(LogTemp, Warning, TEXT("money = %d"), money);
+}
+
 void ATunnelTerrorCharacter::ServerEquipToInventory_Implementation(AInventoryItem* InventoryItem)
 {
 	EquipToInventory(InventoryItem);
@@ -450,10 +465,19 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 			if(CollidedPickup->PickupName == "SamplePickup")
 			{
 				samples++;
+				// Spawn an instance of the inventory item on the server
+				UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item"))
+				ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
 			}
-			// Spawn an instance of the inventory item on the server
-			UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item"))
-			ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
+			else if (CollidedPickup->PickupName == "CrystalPickup") {
+				ServerRemoveCrystals();
+				ClientAddMoney();
+			}
+			else {
+				// Spawn an instance of the inventory item on the server
+				UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item"))
+				ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
+			}
 		}
 		else
 		{

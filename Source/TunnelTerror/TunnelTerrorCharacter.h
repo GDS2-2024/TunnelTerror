@@ -109,6 +109,12 @@ public:
 
 	UFUNCTION(Server,Reliable)
 	void ServerSpawnItem(TSubclassOf<AInventoryItem> ItemClass);
+
+	UFUNCTION(Server, Reliable)
+	void ServerRemoveCrystals();
+
+	UFUNCTION(Client, Reliable)
+	void ClientAddMoney();
 	
 	UFUNCTION(Server, Reliable)
 	void ServerEquipToInventory(AInventoryItem* InventoryItem);
@@ -134,6 +140,7 @@ public:
 	float health;
 
 	UPROPERTY(VisibleAnywhere)
+	
 	float sporeInfectTime;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
@@ -141,6 +148,8 @@ public:
 
 	UPROPERTY(VisibleAnywhere)
 	bool bSporesInfecting;
+	
+	int32 money;
 
 	/** Setter to set the bool */
 	UFUNCTION(BlueprintCallable, Category = Weapon)
