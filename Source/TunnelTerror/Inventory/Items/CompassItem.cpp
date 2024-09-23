@@ -53,5 +53,6 @@ void ACompassItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLife
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
-	DOREPLIFETIME(ACompassItem, CompassNeedle);
+	DOREPLIFETIME(ACompassItem, CompassNeedle)
+	DOREPLIFETIME(ACompassItem, ElevatorPosition)
 }

@@ -3,6 +3,8 @@
 
 #include "PickaxeItem.h"
 
+#include "TunnelTerror/TunnelTerrorCharacter.h"
+
 APickaxeItem::APickaxeItem()
 {
 	PrimaryActorTick.bCanEverTick = true;
@@ -11,6 +13,8 @@ APickaxeItem::APickaxeItem()
 void APickaxeItem::UseItem()
 {
 	UE_LOG(LogTemp, Warning, TEXT("UseItem() called in Pickaxe Item"));
+	ATunnelTerrorCharacter* PlayerT = Cast<ATunnelTerrorCharacter>(Player);
+	PlayerT->ServerSwing(true);
 	if (!IsSwinging)
 	{
 		IsSwinging = true;
@@ -22,6 +26,8 @@ void APickaxeItem::UseItem()
 void APickaxeItem::ReleaseUseItem()
 {
 	UE_LOG(LogTemp, Warning, TEXT("ReleaseUseItem() called in Pickaxe Item"));
+	ATunnelTerrorCharacter* PlayerT = Cast<ATunnelTerrorCharacter>(Player);
+	PlayerT->ServerSwing(false);
 	if (IsSwinging) // Stop only if the item was in use
 	{
 		IsSwinging = false;
@@ -38,8 +44,6 @@ void APickaxeItem::Tick(float DeltaTime)
 		float CurrentTime = GetWorld()->GetTimeSeconds();
 		UseTime += (CurrentTime - PreviousTime); // Accumulate the elapsed time
 		PreviousTime = CurrentTime; // Update previous time for the next frame
-		
-		UE_LOG(LogTemp, Warning, TEXT("Pickaxe has been used for %.2f seconds"), UseTime);
 	}
 }
 
@@ -47,5 +51,4 @@ void APickaxeItem::BeginPlay()
 {
 	Super::BeginPlay();
 	PreviousTime = 0.0f;
-	
 }

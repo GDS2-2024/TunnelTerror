@@ -28,7 +28,7 @@ class ATunnelTerrorCharacter : public ACharacter
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
 	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
 	USkeletalMeshComponent* Mesh1P;
-
+	
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FirstPersonCameraComponent;
@@ -122,7 +122,7 @@ public:
 	void MulticastPlaceTrap();
 
 	UFUNCTION(Client, Reliable)
-	void ClientAddInventoryUI(AInventoryItem* NewItem);
+	void ClientAddInventoryUI(AInventoryItem* NewItem, int32 SlotIndex);
 
 	UFUNCTION(Client, Reliable)
 	void ClientRemoveInventoryUI(int32 SlotIndex);
@@ -132,6 +132,15 @@ public:
 
 	UPROPERTY(VisibleAnywhere)
 	float health;
+
+	UPROPERTY(VisibleAnywhere)
+	float sporeInfectTime;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	float sporeInfectCurrent;
+
+	UPROPERTY(VisibleAnywhere)
+	bool bSporesInfecting;
 
 	/** Setter to set the bool */
 	UFUNCTION(BlueprintCallable, Category = Weapon)
@@ -168,7 +177,11 @@ public:
 	UFUNCTION()
 	void DecreaseHealth(float damage);
 
-	// UDrillMachine* DrillMachine;
+	UFUNCTION()
+	void StartSporeInfection();
+
+	UFUNCTION()
+	void EndSporeInfection();
 
 	// Variable is set by an item pickup
 	// Used to reference pickup object when player presses 'E' to interact
@@ -229,6 +242,21 @@ public:
 
 	UPROPERTY()
 	UPlayerHUD* PlayerHUD;
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void EquipCompass(bool bEquip);
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	void EquipPickaxe(bool bEquip);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void SwingPickaxe(bool bEquip);
+
+	UFUNCTION(Server, Reliable)
+	void ServerSwing(bool swing);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastSwing(bool swing);
 	
 private:
 	UPROPERTY(ReplicatedUsing = OnRagdoll, BlueprintGetter = IsRagdolled, Replicated)
