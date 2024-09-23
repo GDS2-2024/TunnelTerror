@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="1805011878" Type="Event" GUID="{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}" Language="SFX" Hash="{75518061-067E-C7FC-F394-A7AC84605F51}">
+			<ObjectPath>Play_PlayerFootsteps</ObjectPath>
+			<ShortName>Play_PlayerFootsteps</ShortName>
+			<Path>Event/Play_PlayerFootsteps.bnk</Path>
+			<Media>
+				<File Id="174242041" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>WoodStep4.wav</ShortName>
+					<Path>Media/174242041.wem</Path>
+					<CachePath>SFX/WoodStep4_193247EC.wem</CachePath>
+				</File>
+				<File Id="176085961" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>StoneStep1.wav</ShortName>
+					<Path>Media/176085961.wem</Path>
+					<CachePath>SFX/StoneStep1_F2809F3D.wem</CachePath>
+				</File>
+				<File Id="322751387" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>StoneStep2.wav</ShortName>
+					<Path>Media/322751387.wem</Path>
+					<CachePath>SFX/StoneStep2_2F65FE3A.wem</CachePath>
+				</File>
+				<File Id="565152878" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>StoneStep3.wav</ShortName>
+					<Path>Media/565152878.wem</Path>
+					<CachePath>SFX/StoneStep3_9473F992.wem</CachePath>
+				</File>
+				<File Id="909267900" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>WoodStep3.wav</ShortName>
+					<Path>Media/909267900.wem</Path>
+					<CachePath>SFX/WoodStep3_2EBCB4DD.wem</CachePath>
+				</File>
+				<File Id="925154816" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>StoneStep4.wav</ShortName>
+					<Path>Media/925154816.wem</Path>
+					<CachePath>SFX/StoneStep4_7E01015C.wem</CachePath>
+				</File>
+				<File Id="934607535" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>WoodStep2.wav</ShortName>
+					<Path>Media/934607535.wem</Path>
+					<CachePath>SFX/WoodStep2_1AF46CEE.wem</CachePath>
+				</File>
+				<File Id="1020823742" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>WoodStep1.wav</ShortName>
+					<Path>Media/1020823742.wem</Path>
+					<CachePath>SFX/WoodStep1_FA1BE85F.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1820854077" Name="Noise_Gate_Fast_Attack" ObjectPath="\Effects\Factory Effects\Expander\Noise_Gate_Fast_Attack" GUID="{747A6B61-E953-474C-8227-672C884DA616}" LibName="Wwise Expander" LibId="7143427"/>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="1805011878" Name="Play_PlayerFootsteps" ObjectPath="\Events\Default Work Unit\Play_PlayerFootsteps" GUID="{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}" DurationType="OneShot" DurationMin="0.38742706" DurationMax="0.74843657">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="684570577" Id="2058049674" GUID="{6074456D-A32A-4AAB-8F46-E09F5F98685E}"/>
+							<MediaRefs>
+								<MediaRef Id="174242041"/>
+								<MediaRef Id="909267900"/>
+								<MediaRef Id="934607535"/>
+								<MediaRef Id="1020823742"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="684570577" Id="1216965916" GUID="{DC7588E2-DD74-4930-A917-252AED41CA17}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="176085961"/>
+								<MediaRef Id="322751387"/>
+								<MediaRef Id="565152878"/>
+								<MediaRef Id="925154816"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="1820854077"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<SwitchGroups>
+				<SwitchGroup Id="684570577" Name="Footstep_Material" ObjectPath="\Switches\Default Work Unit\Footstep_Material" GUID="{4FAE6E9C-097A-4DB7-A22C-511803987DAF}">
+					<Switches>
+						<Switch Id="1216965916" Name="Stone" ObjectPath="\Switches\Default Work Unit\Footstep_Material\Stone" GUID="{DC7588E2-DD74-4930-A917-252AED41CA17}"/>
+						<Switch Id="2058049674" Name="Wood" ObjectPath="\Switches\Default Work Unit\Footstep_Material\Wood" GUID="{6074456D-A32A-4AAB-8F46-E09F5F98685E}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{5C451732-08CB-207D-9657-6F14C6D510F1}</FileHash>
+</SoundBanksInfo>

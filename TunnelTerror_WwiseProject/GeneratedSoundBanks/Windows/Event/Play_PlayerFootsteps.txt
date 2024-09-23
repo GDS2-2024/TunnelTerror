@@ -1,0 +1,13 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1805011878	Play_PlayerFootsteps			\Default Work Unit\Play_PlayerFootsteps	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	684570577	Footstep_Material			\Default Work Unit\Footstep_Material	
+
+Switch	ID	Name	Switch Group			Notes
+	1216965916	Stone	Footstep_Material			
+	2058049674	Wood	Footstep_Material			
+
+Effect plug-ins	ID	Name	Type				Notes
+	1820854077	Noise_Gate_Fast_Attack	Wwise Expander			
+

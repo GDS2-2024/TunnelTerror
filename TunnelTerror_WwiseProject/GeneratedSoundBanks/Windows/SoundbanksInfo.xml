@@ -28,7 +28,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{E03E4BF2-21B2-B240-E71E-0E77F997D423}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{5F23DADF-D975-64C1-373C-4F7DDF07BB4E}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -41,6 +41,103 @@
 			<Busses>
 				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 			</Busses>
+			<SwitchGroups>
+				<SwitchGroup Id="684570577" Name="Footstep_Material" ObjectPath="\Switches\Default Work Unit\Footstep_Material" GUID="{4FAE6E9C-097A-4DB7-A22C-511803987DAF}">
+					<Switches>
+						<Switch Id="1216965916" Name="Stone" ObjectPath="\Switches\Default Work Unit\Footstep_Material\Stone" GUID="{DC7588E2-DD74-4930-A917-252AED41CA17}"/>
+						<Switch Id="2058049674" Name="Wood" ObjectPath="\Switches\Default Work Unit\Footstep_Material\Wood" GUID="{6074456D-A32A-4AAB-8F46-E09F5F98685E}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="1805011878" Type="Event" GUID="{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}" Language="SFX" Hash="{75518061-067E-C7FC-F394-A7AC84605F51}">
+			<ObjectPath>Play_PlayerFootsteps</ObjectPath>
+			<ShortName>Play_PlayerFootsteps</ShortName>
+			<Path>Event/Play_PlayerFootsteps.bnk</Path>
+			<Media>
+				<File Id="174242041" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>WoodStep4.wav</ShortName>
+					<Path>Media/174242041.wem</Path>
+					<CachePath>SFX/WoodStep4_193247EC.wem</CachePath>
+				</File>
+				<File Id="176085961" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>StoneStep1.wav</ShortName>
+					<Path>Media/176085961.wem</Path>
+					<CachePath>SFX/StoneStep1_F2809F3D.wem</CachePath>
+				</File>
+				<File Id="322751387" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>StoneStep2.wav</ShortName>
+					<Path>Media/322751387.wem</Path>
+					<CachePath>SFX/StoneStep2_2F65FE3A.wem</CachePath>
+				</File>
+				<File Id="565152878" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>StoneStep3.wav</ShortName>
+					<Path>Media/565152878.wem</Path>
+					<CachePath>SFX/StoneStep3_9473F992.wem</CachePath>
+				</File>
+				<File Id="909267900" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>WoodStep3.wav</ShortName>
+					<Path>Media/909267900.wem</Path>
+					<CachePath>SFX/WoodStep3_2EBCB4DD.wem</CachePath>
+				</File>
+				<File Id="925154816" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>StoneStep4.wav</ShortName>
+					<Path>Media/925154816.wem</Path>
+					<CachePath>SFX/StoneStep4_7E01015C.wem</CachePath>
+				</File>
+				<File Id="934607535" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>WoodStep2.wav</ShortName>
+					<Path>Media/934607535.wem</Path>
+					<CachePath>SFX/WoodStep2_1AF46CEE.wem</CachePath>
+				</File>
+				<File Id="1020823742" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>WoodStep1.wav</ShortName>
+					<Path>Media/1020823742.wem</Path>
+					<CachePath>SFX/WoodStep1_FA1BE85F.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1820854077" Name="Noise_Gate_Fast_Attack" ObjectPath="\Effects\Factory Effects\Expander\Noise_Gate_Fast_Attack" GUID="{747A6B61-E953-474C-8227-672C884DA616}" LibName="Wwise Expander" LibId="7143427"/>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="1805011878" Name="Play_PlayerFootsteps" ObjectPath="\Events\Default Work Unit\Play_PlayerFootsteps" GUID="{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}" DurationType="OneShot" DurationMin="0.38742706" DurationMax="0.74843657">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="684570577" Id="2058049674" GUID="{6074456D-A32A-4AAB-8F46-E09F5F98685E}"/>
+							<MediaRefs>
+								<MediaRef Id="174242041"/>
+								<MediaRef Id="909267900"/>
+								<MediaRef Id="934607535"/>
+								<MediaRef Id="1020823742"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="684570577" Id="1216965916" GUID="{DC7588E2-DD74-4930-A917-252AED41CA17}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="176085961"/>
+								<MediaRef Id="322751387"/>
+								<MediaRef Id="565152878"/>
+								<MediaRef Id="925154816"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="1820854077"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<SwitchGroups>
+				<SwitchGroup Id="684570577" Name="Footstep_Material" ObjectPath="\Switches\Default Work Unit\Footstep_Material" GUID="{4FAE6E9C-097A-4DB7-A22C-511803987DAF}">
+					<Switches>
+						<Switch Id="1216965916" Name="Stone" ObjectPath="\Switches\Default Work Unit\Footstep_Material\Stone" GUID="{DC7588E2-DD74-4930-A917-252AED41CA17}"/>
+						<Switch Id="2058049674" Name="Wood" ObjectPath="\Switches\Default Work Unit\Footstep_Material\Wood" GUID="{6074456D-A32A-4AAB-8F46-E09F5F98685E}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="2145253833" Type="Event" GUID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}" Language="SFX" Hash="{B241E64F-32B2-BB63-E687-98EB700CA902}">
 			<ObjectPath>Atmosphere</ObjectPath>
@@ -83,25 +180,6 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3024206357" Type="Event" GUID="{FFF5A928-8A4E-40CD-B84F-7A12D570E856}" Language="SFX" Hash="{8FD5E6E8-57B6-5471-F60B-A84EA10A8165}">
-			<ObjectPath>Woodystep</ObjectPath>
-			<ShortName>Woodystep</ShortName>
-			<Path>Event/Woodystep.bnk</Path>
-			<Media>
-				<File Id="469502808" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>WoodyStep.wav</ShortName>
-					<Path>Media/469502808.wem</Path>
-					<CachePath>SFX/WoodyStep_818F3B66.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="3024206357" Name="Woodystep" ObjectPath="\Events\Default Work Unit\Woodystep" GUID="{FFF5A928-8A4E-40CD-B84F-7A12D570E856}" DurationType="OneShot" DurationMin="0.625" DurationMax="0.625">
-					<MediaRefs>
-						<MediaRef Id="469502808"/>
-					</MediaRefs>
-				</Event>
-			</Events>
-		</SoundBank>
 		<SoundBank Id="3034623661" Type="Event" GUID="{85CCB3B4-AB10-4FD6-AC39-E56645010615}" Language="SFX" Hash="{77B61C18-25E5-D35C-655B-6F00CF41B6EC}">
 			<ObjectPath>Atmos</ObjectPath>
 			<ShortName>Atmos</ShortName>
@@ -111,5 +189,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2A35F983-43E8-9F4C-F9BF-4BE8C611D769}</FileHash>
+	<FileHash>{2DB31308-1018-9AAD-4296-87D12B41A9DB}</FileHash>
 </SoundBanksInfo>
