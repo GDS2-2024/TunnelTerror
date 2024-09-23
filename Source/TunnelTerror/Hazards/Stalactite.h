@@ -34,5 +34,5 @@ protected:
 	UFUNCTION(NetMulticast, Reliable)
 	void Fall();
 	UFUNCTION(BlueprintNativeEvent)
-	void OnFall();
+	void FallVisual();
 };

@@ -18,6 +18,7 @@ class TUNNELTERROR_API ACompassItem : public AInventoryItem
 	
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(Replicated)
 	FVector ElevatorPosition;
 	
 public:

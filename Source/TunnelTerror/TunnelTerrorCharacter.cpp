@@ -30,6 +30,10 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 	trapCDCurrent = 0.0f;
 
 	samples = 0;
+	money = 0;
+
+	sporeInfectTime = 10.0f;
+	sporeInfectCurrent = 0.0f;
 
 	// Character doesnt have a rifle at start
 	bHasRifle = false;
@@ -77,6 +81,7 @@ void ATunnelTerrorCharacter::BeginPlay()
 			PlayerHUD->AddToPlayerScreen();
 		}
 	}
+	
 }
 
 void ATunnelTerrorCharacter::Tick(float DeltaTime)
@@ -91,6 +96,34 @@ void ATunnelTerrorCharacter::Tick(float DeltaTime)
 			trapCDCurrent = 0.0f;
 		}
 	}
+
+	if (bSporesInfecting)
+	{
+		sporeInfectCurrent -= DeltaTime;
+		if (sporeInfectCurrent <= 0.0f)
+		{
+			this->DecreaseHealth(100.0f);
+		}
+	}
+	else
+	{
+		sporeInfectCurrent = sporeInfectTime - 0.1f;
+	}
+	if (CollidedPickup)
+	{
+		if (CollidedPickup->PickupName == "CrystalPickup")
+        {
+        	if (Inventory->GetPlayersPickaxe())
+        	{
+        		if (Inventory->GetPlayersPickaxe()->HasReachedMiningThreshold())
+        		{
+        			ServerRemoveCrystals();
+        			ClientAddMoney();
+        		}
+        	}
+        }
+	}
+	
 }
 
 void ATunnelTerrorCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
@@ -318,18 +351,36 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 		}
 		if (InventoryItem->ItemName.ToString() == "Compass")
 		{
-			FRotator DesiredRotation(0.0f, -90.0f, 0.0f);
-			FVector DesiredPos(0,0,5);
+			FRotator DesiredRotation(180.0f, 0.0f, 90.0f);
+			FVector DesiredPos(-1.5,4.3,-2.0);
 			InventoryItem->SetActorRelativeLocation(DesiredPos);
 			InventoryItem->SetActorRelativeRotation(DesiredRotation);
+			EquipCompass(true);
 		}
-		EquipToInventory(InventoryItem);
+		if (InventoryItem->ItemName.ToString() == "Pickaxe")
+		{
+			EquipPickaxe(true);
+		}
 		ServerEquipToInventory(InventoryItem);
 		if (CollidedPickup)
 		{
 			CollidedPickup->Destroy();
 		}
 	}
+}
+
+void ATunnelTerrorCharacter::ServerRemoveCrystals_Implementation()
+{
+	if (CollidedPickup)
+	{
+		CollidedPickup->Destroy();
+	}
+}
+
+void ATunnelTerrorCharacter::ClientAddMoney_Implementation() {
+	money = money + 3;
+	PlayerHUD->SetCurrencyUI(money); 
+	UE_LOG(LogTemp, Warning, TEXT("money = %d"), money);
 }
 
 void ATunnelTerrorCharacter::ServerEquipToInventory_Implementation(AInventoryItem* InventoryItem)
@@ -429,10 +480,15 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 			if(CollidedPickup->PickupName == "SamplePickup")
 			{
 				samples++;
+				// Spawn an instance of the inventory item on the server
+				UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item"))
+				ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
 			}
-			// Spawn an instance of the inventory item on the server
-			UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item"))
-			ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
+			else {
+				// Spawn an instance of the inventory item on the server
+				UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item"))
+				ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
+			}
 		}
 		else
 		{
@@ -550,4 +606,28 @@ void ATunnelTerrorCharacter::DecreaseHealth(float damage)
 	{
 		Die();
 	}
+}
+
+void ATunnelTerrorCharacter::StartSporeInfection()
+{
+	bSporesInfecting = true;
+	sporeInfectCurrent = sporeInfectTime;
+	UE_LOG(LogTemp, Log, TEXT("Spores are infecting"));
+}
+
+void ATunnelTerrorCharacter::EndSporeInfection()
+{
+	bSporesInfecting = false;
+	sporeInfectCurrent = 0.0f;
+	UE_LOG(LogTemp, Log, TEXT("Spores have stopped infecting"));
+}
+
+void ATunnelTerrorCharacter::MulticastSwing_Implementation(bool swing)
+{
+	SwingPickaxe(swing);
+}
+
+void ATunnelTerrorCharacter::ServerSwing_Implementation(bool swing)
+{
+	MulticastSwing(swing);
 }

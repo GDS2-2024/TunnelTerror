@@ -80,6 +80,14 @@ private:
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastHideItem(AInventoryItem* Item);
 
+	//Multicast equip/unequip for Animations
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastEquipCompass(bool equip);
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastEquipPickaxe(bool equip);
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastSwingPickaxe(bool swing);
+	
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;

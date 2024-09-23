@@ -110,3 +110,9 @@ void UPlayerHUD::SetSlotSelection(int32 SlotNum)
 		break;
 	}
 }
+
+void UPlayerHUD::SetCurrencyUI(int32 number) {
+	if (CurrencyUI) {
+		CurrencyUI->SetText(FText::AsNumber(number));
+	}
+}

@@ -21,9 +21,10 @@ AInventoryItem::AInventoryItem()
 void AInventoryItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-	DOREPLIFETIME(AInventoryItem, ItemName);
-	DOREPLIFETIME(AInventoryItem, InventoryIcon);
-	DOREPLIFETIME(AInventoryItem, ItemMesh);
+	DOREPLIFETIME(AInventoryItem, ItemName)
+	DOREPLIFETIME(AInventoryItem, InventoryIcon)
+	DOREPLIFETIME(AInventoryItem, ItemMesh)
+	DOREPLIFETIME(AInventoryItem, Player)
 }
 
 void AInventoryItem::UseItem()

@@ -19,6 +19,7 @@ class UAnimMontage;
 class USoundBase;
 class UInventoryComponent;
 class AElevatorEscape;
+class AInfectionTrap;
 
 UCLASS(config=Game)
 class ATunnelTerrorCharacter : public ACharacter
@@ -28,7 +29,7 @@ class ATunnelTerrorCharacter : public ACharacter
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
 	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
 	USkeletalMeshComponent* Mesh1P;
-
+	
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FirstPersonCameraComponent;
@@ -109,6 +110,12 @@ public:
 
 	UFUNCTION(Server,Reliable)
 	void ServerSpawnItem(TSubclassOf<AInventoryItem> ItemClass);
+
+	UFUNCTION(Server, Reliable)
+	void ServerRemoveCrystals();
+
+	UFUNCTION(Client, Reliable)
+	void ClientAddMoney();
 	
 	UFUNCTION(Server, Reliable)
 	void ServerEquipToInventory(AInventoryItem* InventoryItem);
@@ -132,6 +139,18 @@ public:
 
 	UPROPERTY(VisibleAnywhere)
 	float health;
+
+	UPROPERTY(VisibleAnywhere)
+	
+	float sporeInfectTime;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	float sporeInfectCurrent;
+
+	UPROPERTY(VisibleAnywhere)
+	bool bSporesInfecting;
+	
+	int32 money;
 
 	/** Setter to set the bool */
 	UFUNCTION(BlueprintCallable, Category = Weapon)
@@ -168,7 +187,11 @@ public:
 	UFUNCTION()
 	void DecreaseHealth(float damage);
 
-	// UDrillMachine* DrillMachine;
+	UFUNCTION()
+	void StartSporeInfection();
+
+	UFUNCTION()
+	void EndSporeInfection();
 
 	// Variable is set by an item pickup
 	// Used to reference pickup object when player presses 'E' to interact
@@ -229,6 +252,21 @@ public:
 
 	UPROPERTY()
 	UPlayerHUD* PlayerHUD;
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void EquipCompass(bool bEquip);
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	void EquipPickaxe(bool bEquip);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void SwingPickaxe(bool bEquip);
+
+	UFUNCTION(Server, Reliable)
+	void ServerSwing(bool swing);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastSwing(bool swing);
 	
 private:
 	UPROPERTY(ReplicatedUsing = OnRagdoll, BlueprintGetter = IsRagdolled, Replicated)

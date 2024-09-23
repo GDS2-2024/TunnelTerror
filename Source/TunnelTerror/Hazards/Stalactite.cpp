@@ -26,10 +26,10 @@ void AStalactite::OnFallTriggerOverlap(UPrimitiveComponent* OverlappedComponent,
 
 void AStalactite::Fall_Implementation()
 {
-	OnFall();
+	FallVisual();
 }
 
-void AStalactite::OnFall_Implementation()
+void AStalactite::FallVisual_Implementation()
 {
 	Killbox->SetSimulatePhysics(true);
 }

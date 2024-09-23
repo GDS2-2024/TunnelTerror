@@ -20,9 +20,11 @@ void ATorchHazard::OnPickupBeginOverlap(UPrimitiveComponent* OverlappedComponent
 		if (ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(OtherActor))
 		{
 			if (Player->GetIsInfected()) { // torches can only be interacted by infected
-				// Set Player's item variable
 				Player->CollidedPickup = this;
-				ShowPrompt(true);
+				if (Player->IsLocallyControlled())
+				{
+					Player->OnRep_CollidedPickup();
+				}
 			}
 		}
 	}
