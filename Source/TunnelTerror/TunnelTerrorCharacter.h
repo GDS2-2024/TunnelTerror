@@ -19,6 +19,7 @@ class UAnimMontage;
 class USoundBase;
 class UInventoryComponent;
 class AElevatorEscape;
+class AInfectionTrap;
 
 UCLASS(config=Game)
 class ATunnelTerrorCharacter : public ACharacter

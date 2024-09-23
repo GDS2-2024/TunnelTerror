@@ -469,10 +469,6 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 				UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item"))
 				ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
 			}
-			else if (CollidedPickup->PickupName == "CrystalPickup") {
-				ServerRemoveCrystals();
-				ClientAddMoney();
-			}
 			else {
 				// Spawn an instance of the inventory item on the server
 				UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item"))
@@ -484,6 +480,10 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 			if (CollidedPickup->PickupName == "TorchHazard") {
 				ATorchHazard* torchHazard = Cast<ATorchHazard>(CollidedPickup);
 				torchHazard->OnInteract();
+			}
+			else if (CollidedPickup->PickupName == "CrystalPickup") {
+				ServerRemoveCrystals();
+				ClientAddMoney();
 			}
 			else {
 				UE_LOG(LogTemp, Warning, TEXT("CorrespondingItemClass is NULL"));
