@@ -124,7 +124,7 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	float health;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 money;
 
 	/** Setter to set the bool */

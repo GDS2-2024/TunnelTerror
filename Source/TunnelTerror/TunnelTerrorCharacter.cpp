@@ -73,6 +73,9 @@ void ATunnelTerrorCharacter::BeginPlay()
 			PlayerHUD->AddToPlayerScreen();
 		}
 	}
+
+	PlayerHUD->SetCurrencyUI(money);
+	UE_LOG(LogTemp, Warning, TEXT("money = %d"), money);
 }
 
 void ATunnelTerrorCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
