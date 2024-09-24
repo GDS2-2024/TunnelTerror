@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="2025845440" Type="Event" GUID="{F05E8152-8526-474A-8CD3-14071D451BB3}" Language="SFX" Hash="{F2E78927-B3FC-F089-E307-DD1A8C9E9CAC}">
+		<SoundBank Id="2025845440" Type="Event" GUID="{F05E8152-8526-474A-8CD3-14071D451BB3}" Language="SFX" Hash="{767C0CC7-AFB1-EB7B-80D6-97CABBEB622E}">
 			<ObjectPath>Play_Torch</ObjectPath>
 			<ShortName>Play_Torch</ShortName>
 			<Path>Event/Play_Torch.bnk</Path>
@@ -38,7 +38,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="2025845440" Name="Play_Torch" ObjectPath="\Events\Default Work Unit\Play_Torch" GUID="{F05E8152-8526-474A-8CD3-14071D451BB3}" MaxAttenuation="200" DurationType="Infinite">
+				<Event Id="2025845440" Name="Play_Torch" ObjectPath="\Events\Default Work Unit\Play_Torch" GUID="{F05E8152-8526-474A-8CD3-14071D451BB3}" MaxAttenuation="400" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="205328698"/>
 						<MediaRef Id="356177841"/>
@@ -51,5 +51,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{FF3A254F-0682-5519-714E-B46808853F1F}</FileHash>
+	<FileHash>{A76E0AE3-F868-A94A-0937-4D45A99F53AE}</FileHash>
 </SoundBanksInfo>

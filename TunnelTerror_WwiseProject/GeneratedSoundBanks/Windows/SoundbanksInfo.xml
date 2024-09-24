@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="17721092" Type="Event" GUID="{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}" Language="SFX" Hash="{404DD24B-4A0B-76F4-20EE-3A7D1DD04106}">
+		<SoundBank Id="17721092" Type="Event" GUID="{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}" Language="SFX" Hash="{0AB2CCB0-0BC3-2C6D-13FD-49861982052A}">
 			<ObjectPath>Play_Grab</ObjectPath>
 			<ShortName>Play_Grab</ShortName>
 			<Path>Event/Play_Grab.bnk</Path>
@@ -31,7 +31,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="17721092" Name="Play_Grab" ObjectPath="\Events\Default Work Unit\Play_Grab" GUID="{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}" MaxAttenuation="200" DurationType="OneShot" DurationMin="0.060328994" DurationMax="0.094719194">
+				<Event Id="17721092" Name="Play_Grab" ObjectPath="\Events\Default Work Unit\Play_Grab" GUID="{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}" MaxAttenuation="400" DurationType="OneShot" DurationMin="0.060328994" DurationMax="0.094719194">
 					<MediaRefs>
 						<MediaRef Id="363834967"/>
 						<MediaRef Id="644454746"/>
@@ -40,7 +40,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1120692842" Type="Event" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" Language="SFX" Hash="{331837A7-F033-E32E-F361-021A92462FA7}">
+		<SoundBank Id="1120692842" Type="Event" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" Language="SFX" Hash="{78F199A7-6BC9-E0E6-89F1-3649DC79CAA5}">
 			<ObjectPath>Play_RockFall</ObjectPath>
 			<ShortName>Play_RockFall</ShortName>
 			<Path>Event/Play_RockFall.bnk</Path>
@@ -82,7 +82,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1120692842" Name="Play_RockFall" ObjectPath="\Events\Default Work Unit\Play_RockFall" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" MaxAttenuation="200" DurationType="OneShot" DurationMin="4.5565443" DurationMax="6.9171724">
+				<Event Id="1120692842" Name="Play_RockFall" ObjectPath="\Events\Default Work Unit\Play_RockFall" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" MaxAttenuation="400" DurationType="OneShot" DurationMin="5.2483253" DurationMax="7.9186854">
 					<MediaRefs>
 						<MediaRef Id="287643081"/>
 						<MediaRef Id="597728859"/>
@@ -117,7 +117,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1805011878" Type="Event" GUID="{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}" Language="SFX" Hash="{BBC81C73-49E7-BDBD-940A-C4038F928815}">
+		<SoundBank Id="1805011878" Type="Event" GUID="{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}" Language="SFX" Hash="{BADCD4B1-4BB9-68B3-12A0-64C76C76CF71}">
 			<ObjectPath>Play_PlayerFootsteps</ObjectPath>
 			<ShortName>Play_PlayerFootsteps</ShortName>
 			<Path>Event/Play_PlayerFootsteps.bnk</Path>
@@ -169,7 +169,7 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="1805011878" Name="Play_PlayerFootsteps" ObjectPath="\Events\Default Work Unit\Play_PlayerFootsteps" GUID="{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}" MaxAttenuation="200" DurationType="OneShot" DurationMin="0.38742706" DurationMax="0.74843657">
+				<Event Id="1805011878" Name="Play_PlayerFootsteps" ObjectPath="\Events\Default Work Unit\Play_PlayerFootsteps" GUID="{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}" MaxAttenuation="400" DurationType="OneShot" DurationMin="0.38742706" DurationMax="0.74843657">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="684570577" Id="2058049674" GUID="{6074456D-A32A-4AAB-8F46-E09F5F98685E}"/>
@@ -206,7 +206,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2025845440" Type="Event" GUID="{F05E8152-8526-474A-8CD3-14071D451BB3}" Language="SFX" Hash="{F2E78927-B3FC-F089-E307-DD1A8C9E9CAC}">
+		<SoundBank Id="2025845440" Type="Event" GUID="{F05E8152-8526-474A-8CD3-14071D451BB3}" Language="SFX" Hash="{767C0CC7-AFB1-EB7B-80D6-97CABBEB622E}">
 			<ObjectPath>Play_Torch</ObjectPath>
 			<ShortName>Play_Torch</ShortName>
 			<Path>Event/Play_Torch.bnk</Path>
@@ -243,7 +243,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="2025845440" Name="Play_Torch" ObjectPath="\Events\Default Work Unit\Play_Torch" GUID="{F05E8152-8526-474A-8CD3-14071D451BB3}" MaxAttenuation="200" DurationType="Infinite">
+				<Event Id="2025845440" Name="Play_Torch" ObjectPath="\Events\Default Work Unit\Play_Torch" GUID="{F05E8152-8526-474A-8CD3-14071D451BB3}" MaxAttenuation="400" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="205328698"/>
 						<MediaRef Id="356177841"/>
@@ -296,7 +296,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2284361370" Type="Event" GUID="{0F14277F-3996-484C-A37D-4633DA6B3085}" Language="SFX" Hash="{42D90FA2-EDD4-3F28-992E-7C59398DDCA9}">
+		<SoundBank Id="2284361370" Type="Event" GUID="{0F14277F-3996-484C-A37D-4633DA6B3085}" Language="SFX" Hash="{6C406D17-379E-F8FE-D712-1C79FC3E1234}">
 			<ObjectPath>Play_WoodBreaking</ObjectPath>
 			<ShortName>Play_WoodBreaking</ShortName>
 			<Path>Event/Play_WoodBreaking.bnk</Path>
@@ -339,7 +339,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3858275350" Type="Event" GUID="{A7C25A1B-0608-4060-9C29-134EBEA4D185}" Language="SFX" Hash="{002094EB-C6FC-7024-4518-F50E7B8A13CE}">
+		<SoundBank Id="3858275350" Type="Event" GUID="{A7C25A1B-0608-4060-9C29-134EBEA4D185}" Language="SFX" Hash="{E57F9D1B-61B6-98CD-2C56-494A63597988}">
 			<ObjectPath>Play_Snap</ObjectPath>
 			<ShortName>Play_Snap</ShortName>
 			<Path>Event/Play_Snap.bnk</Path>
@@ -366,7 +366,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3858275350" Name="Play_Snap" ObjectPath="\Events\Default Work Unit\Play_Snap" GUID="{A7C25A1B-0608-4060-9C29-134EBEA4D185}" MaxAttenuation="200" DurationType="OneShot" DurationMin="0.27858928" DurationMax="0.4888849">
+				<Event Id="3858275350" Name="Play_Snap" ObjectPath="\Events\Default Work Unit\Play_Snap" GUID="{A7C25A1B-0608-4060-9C29-134EBEA4D185}" MaxAttenuation="400" DurationType="OneShot" DurationMin="0.27858928" DurationMax="0.4888849">
 					<MediaRefs>
 						<MediaRef Id="61820815"/>
 						<MediaRef Id="545870618"/>
@@ -377,5 +377,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{91246064-4C69-A5EE-4021-8680F5F72E15}</FileHash>
+	<FileHash>{ED8EFC61-44FD-EF76-EB5C-F2E78E69E441}</FileHash>
 </SoundBanksInfo>

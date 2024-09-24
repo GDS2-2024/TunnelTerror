@@ -18,7 +18,7 @@
     "Type": "Event",
     "GUID": "{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}",
     "Language": "SFX",
-    "Hash": "{404DD24B-4A0B-76F4-20EE-3A7D1DD04106}",
+    "Hash": "{0AB2CCB0-0BC3-2C6D-13FD-49861982052A}",
     "ObjectPath": "Play_Grab",
     "ShortName": "Play_Grab",
     "Path": "Event/Play_Grab.bnk",
@@ -57,7 +57,7 @@
       "Name": "Play_Grab",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Grab",
       "GUID": "{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}",
-      "MaxAttenuation": "200",
+      "MaxAttenuation": "400",
       "DurationType": "OneShot",
       "DurationMin": "0.060328994",
       "DurationMax": "0.094719194",
@@ -80,7 +80,7 @@
     "Type": "Event",
     "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
     "Language": "SFX",
-    "Hash": "{331837A7-F033-E32E-F361-021A92462FA7}",
+    "Hash": "{78F199A7-6BC9-E0E6-89F1-3649DC79CAA5}",
     "ObjectPath": "Play_RockFall",
     "ShortName": "Play_RockFall",
     "Path": "Event/Play_RockFall.bnk",
@@ -155,10 +155,10 @@
       "Name": "Play_RockFall",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_RockFall",
       "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
-      "MaxAttenuation": "200",
+      "MaxAttenuation": "400",
       "DurationType": "OneShot",
-      "DurationMin": "4.5565443",
-      "DurationMax": "6.9171724",
+      "DurationMin": "5.2483253",
+      "DurationMax": "7.9186854",
       "MediaRefs": [
        {
         "Id": "287643081"
@@ -250,7 +250,7 @@
     "Type": "Event",
     "GUID": "{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}",
     "Language": "SFX",
-    "Hash": "{BBC81C73-49E7-BDBD-940A-C4038F928815}",
+    "Hash": "{BADCD4B1-4BB9-68B3-12A0-64C76C76CF71}",
     "ObjectPath": "Play_PlayerFootsteps",
     "ShortName": "Play_PlayerFootsteps",
     "Path": "Event/Play_PlayerFootsteps.bnk",
@@ -346,7 +346,7 @@
       "Name": "Play_PlayerFootsteps",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_PlayerFootsteps",
       "GUID": "{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}",
-      "MaxAttenuation": "200",
+      "MaxAttenuation": "400",
       "DurationType": "OneShot",
       "DurationMin": "0.38742706",
       "DurationMax": "0.74843657",
@@ -434,7 +434,7 @@
     "Type": "Event",
     "GUID": "{F05E8152-8526-474A-8CD3-14071D451BB3}",
     "Language": "SFX",
-    "Hash": "{F2E78927-B3FC-F089-E307-DD1A8C9E9CAC}",
+    "Hash": "{767C0CC7-AFB1-EB7B-80D6-97CABBEB622E}",
     "ObjectPath": "Play_Torch",
     "ShortName": "Play_Torch",
     "Path": "Event/Play_Torch.bnk",
@@ -500,7 +500,7 @@
       "Name": "Play_Torch",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Torch",
       "GUID": "{F05E8152-8526-474A-8CD3-14071D451BB3}",
-      "MaxAttenuation": "200",
+      "MaxAttenuation": "400",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -608,7 +608,7 @@
     "Type": "Event",
     "GUID": "{0F14277F-3996-484C-A37D-4633DA6B3085}",
     "Language": "SFX",
-    "Hash": "{42D90FA2-EDD4-3F28-992E-7C59398DDCA9}",
+    "Hash": "{6C406D17-379E-F8FE-D712-1C79FC3E1234}",
     "ObjectPath": "Play_WoodBreaking",
     "ShortName": "Play_WoodBreaking",
     "Path": "Event/Play_WoodBreaking.bnk",
@@ -693,7 +693,7 @@
     "Type": "Event",
     "GUID": "{A7C25A1B-0608-4060-9C29-134EBEA4D185}",
     "Language": "SFX",
-    "Hash": "{002094EB-C6FC-7024-4518-F50E7B8A13CE}",
+    "Hash": "{E57F9D1B-61B6-98CD-2C56-494A63597988}",
     "ObjectPath": "Play_Snap",
     "ShortName": "Play_Snap",
     "Path": "Event/Play_Snap.bnk",
@@ -741,7 +741,7 @@
       "Name": "Play_Snap",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Snap",
       "GUID": "{A7C25A1B-0608-4060-9C29-134EBEA4D185}",
-      "MaxAttenuation": "200",
+      "MaxAttenuation": "400",
       "DurationType": "OneShot",
       "DurationMin": "0.27858928",
       "DurationMax": "0.4888849",
@@ -763,6 +763,6 @@
     ]
    }
   ],
-  "FileHash": "{67319789-96E2-B6D0-9FA5-CEDB84BA979C}"
+  "FileHash": "{C999A9AF-CA58-FD17-9414-8DE03AD603A5}"
  }
 }

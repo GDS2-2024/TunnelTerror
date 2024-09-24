@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}",
     "Language": "SFX",
-    "Hash": "{BBC81C73-49E7-BDBD-940A-C4038F928815}",
+    "Hash": "{BADCD4B1-4BB9-68B3-12A0-64C76C76CF71}",
     "ObjectPath": "Play_PlayerFootsteps",
     "ShortName": "Play_PlayerFootsteps",
     "Path": "Event/Play_PlayerFootsteps.bnk",
@@ -106,7 +106,7 @@
       "Name": "Play_PlayerFootsteps",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_PlayerFootsteps",
       "GUID": "{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}",
-      "MaxAttenuation": "200",
+      "MaxAttenuation": "400",
       "DurationType": "OneShot",
       "DurationMin": "0.38742706",
       "DurationMax": "0.74843657",
@@ -190,6 +190,6 @@
     ]
    }
   ],
-  "FileHash": "{D20FF3E2-39FE-19CB-54E8-0FF2550188EE}"
+  "FileHash": "{9A929593-F319-8B97-F540-3187E1767FFB}"
  }
 }

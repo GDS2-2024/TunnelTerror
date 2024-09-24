@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="17721092" Type="Event" GUID="{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}" Language="SFX" Hash="{404DD24B-4A0B-76F4-20EE-3A7D1DD04106}">
+		<SoundBank Id="17721092" Type="Event" GUID="{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}" Language="SFX" Hash="{0AB2CCB0-0BC3-2C6D-13FD-49861982052A}">
 			<ObjectPath>Play_Grab</ObjectPath>
 			<ShortName>Play_Grab</ShortName>
 			<Path>Event/Play_Grab.bnk</Path>
@@ -23,7 +23,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="17721092" Name="Play_Grab" ObjectPath="\Events\Default Work Unit\Play_Grab" GUID="{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}" MaxAttenuation="200" DurationType="OneShot" DurationMin="0.060328994" DurationMax="0.094719194">
+				<Event Id="17721092" Name="Play_Grab" ObjectPath="\Events\Default Work Unit\Play_Grab" GUID="{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}" MaxAttenuation="400" DurationType="OneShot" DurationMin="0.060328994" DurationMax="0.094719194">
 					<MediaRefs>
 						<MediaRef Id="363834967"/>
 						<MediaRef Id="644454746"/>
@@ -33,5 +33,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9DBC86D2-7EAB-B82B-013B-B6EBAEC64832}</FileHash>
+	<FileHash>{46127E54-ADBD-440F-8BAB-215CAE60E89A}</FileHash>
 </SoundBanksInfo>

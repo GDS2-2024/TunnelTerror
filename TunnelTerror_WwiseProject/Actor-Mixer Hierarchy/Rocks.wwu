@@ -170,12 +170,19 @@
 								<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
-										<Value>61</Value>
+										<Value>39</Value>
 									</ValueList>
+								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{3D14A101-D0A0-41F7-B6C1-2B61929B91FE}"/>
+										</ModifierInfo>
+									</ModifierList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
-										<Value>-1250</Value>
+										<Value>-1500</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
