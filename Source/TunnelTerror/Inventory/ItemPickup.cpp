@@ -60,6 +60,14 @@ void AItemPickup::OnPickupBeginOverlap(UPrimitiveComponent* OverlappedComponent,
 	{
 		if (ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(OtherActor))
 		{
+			if (Player->CollidedPickup)
+			{
+				Player->CollidedPickup = nullptr;
+				if (Player->IsLocallyControlled())
+				{
+					Player->OnRep_CollidedPickup();
+				}
+			}
 			Player->CollidedPickup = this;
 			if (Player->IsLocallyControlled())
 			{
@@ -76,10 +84,13 @@ void AItemPickup::OnPickupEndOverlap(UPrimitiveComponent* OverlappedComponent,
 	{
 		if (ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(OtherActor))
 		{
-			Player->CollidedPickup = nullptr;
-			if (Player->IsLocallyControlled())
+			if (Player->CollidedPickup == this)
 			{
-				Player->OnRep_CollidedPickup();
+				Player->CollidedPickup = nullptr;
+                if (Player->IsLocallyControlled())
+                {
+                	Player->OnRep_CollidedPickup();
+                }
 			}
 		}
 	}
