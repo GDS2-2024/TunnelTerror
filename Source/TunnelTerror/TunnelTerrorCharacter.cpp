@@ -294,8 +294,7 @@ void ATunnelTerrorCharacter::SelectSlot5(const FInputActionValue& Value)
 
 void ATunnelTerrorCharacter::ScrollSlots(const FInputActionValue& Value)
 {
-	//UE_LOG(LogTemp, Log, TEXT("Scroll wheel is outputting: %f"), Value.Get<float>());
-	if (Value.Get<float>() > 0)
+	if (Value.Get<float>() < 0) //Scroll Down
 	{
 		//Increase by 1, wrap around to start
 		if (Inventory->SelectedSlotIndex < Inventory->GetMaxSlots()-1)
@@ -307,10 +306,10 @@ void ATunnelTerrorCharacter::ScrollSlots(const FInputActionValue& Value)
 			Inventory->ServerSetSelectedSlot(0);
 			PlayerHUD->SetSlotSelection(0);
 		}
-	} else
+	} else //Scroll Up
 	{
 		//Decrease by 1, wrap around to end
-		if (Inventory->SelectedSlotIndex > 1)
+		if (Inventory->SelectedSlotIndex > 0)
 		{
 			Inventory->ServerSetSelectedSlot(Inventory->SelectedSlotIndex-1);
 			PlayerHUD->SetSlotSelection(Inventory->SelectedSlotIndex);
