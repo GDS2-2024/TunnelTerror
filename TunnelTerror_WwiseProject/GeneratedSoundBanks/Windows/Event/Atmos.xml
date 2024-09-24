@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="3034623661" Type="Event" GUID="{85CCB3B4-AB10-4FD6-AC39-E56645010615}" Language="SFX" Hash="{77B61C18-25E5-D35C-655B-6F00CF41B6EC}">
+			<ObjectPath>Atmos</ObjectPath>
+			<ShortName>Atmos</ShortName>
+			<Path>Event/Atmos.bnk</Path>
+			<Events>
+				<Event Id="3034623661" Name="Atmos" ObjectPath="\Events\Default Work Unit\Atmos" GUID="{85CCB3B4-AB10-4FD6-AC39-E56645010615}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{F494AE9C-D42C-8D13-AEDD-F2040DBBFE7E}</FileHash>
+</SoundBanksInfo>

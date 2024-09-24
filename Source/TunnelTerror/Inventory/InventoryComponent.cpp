@@ -178,7 +178,7 @@ APickaxeItem* UInventoryComponent::GetPlayersPickaxe()
 			}
 		}
 	}
-	UE_LOG(LogTemp, Warning, TEXT("Player does not have a pickaxe"))
+	//UE_LOG(LogTemp, Warning, TEXT("Player does not have a pickaxe"))
 	return nullptr;
 }
 
@@ -220,12 +220,23 @@ void UInventoryComponent::ServerSetSelectedSlot_Implementation(int32 SlotIndex)
 			Player->EquipPickaxe(false);
 			MulticastEquipPickaxe(false);
 		}
+		if (InventorySlots[SelectedSlotIndex].Item->ItemName.ToString() == "Torch")
+		{
+			Player->EquipTorch(true);
+			MulticastEquipTorch(true);
+		} else
+		{
+			Player->EquipTorch(false);
+			MulticastEquipTorch(false);
+		}
 	} else
 	{
 		Player->EquipCompass(false);
 		MulticastEquipCompass(false);
 		Player->EquipPickaxe(false);
 		MulticastEquipPickaxe(false);
+		Player->EquipTorch(false);
+		MulticastEquipTorch(false);
 	}
 	ServerSetItemVisibility();
 }
@@ -271,6 +282,12 @@ void UInventoryComponent::MulticastSwingPickaxe_Implementation(bool swing)
 {
 	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
 	Player->SwingPickaxe(swing);
+}
+
+void UInventoryComponent::MulticastEquipTorch_Implementation(bool equip)
+{
+	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
+	Player->EquipTorch(equip);
 }
 
 // Called when the game starts

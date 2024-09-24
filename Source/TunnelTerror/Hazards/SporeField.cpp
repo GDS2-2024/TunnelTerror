@@ -4,6 +4,7 @@
 #include "SporeField.h"
 #include "TunnelTerror/TunnelTerrorCharacter.h"
 #include "Components/SphereComponent.h"
+#include <Net/UnrealNetwork.h>
 
 // Sets default values
 ASporeField::ASporeField()
@@ -11,13 +12,19 @@ ASporeField::ASporeField()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	bReplicates = true;
 }
 
 // Called when the game starts or when spawned
 void ASporeField::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	if (HasAuthority())
+	{
+		DestroySporeFieldImplementation();
+	}
+
 	CollisionSphere = FindComponentByClass<USphereComponent>();
 
 	if (CollisionSphere)
@@ -53,4 +60,27 @@ void ASporeField::OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor*
 	{
 		PlayerCharacter->EndSporeInfection();
 	}
+}
+
+void ASporeField::DestroySporeFieldImplementation()
+{
+	spawnChance = 5;
+	int32 randomNumber = FMath::RandRange(1, spawnChance);
+
+	if (randomNumber != 1)
+	{
+		MulticastDestroySporeField();
+	}
+}
+
+void ASporeField::MulticastDestroySporeField_Implementation()
+{
+	Destroy();
+}
+
+void ASporeField::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(ASporeField, spawnChance);
 }

@@ -82,6 +82,8 @@ private:
 
 	//Multicast equip/unequip for Animations
 	UFUNCTION(NetMulticast, Reliable)
+	void MulticastEquipTorch(bool equip);
+	UFUNCTION(NetMulticast, Reliable)
 	void MulticastEquipCompass(bool equip);
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastEquipPickaxe(bool equip);

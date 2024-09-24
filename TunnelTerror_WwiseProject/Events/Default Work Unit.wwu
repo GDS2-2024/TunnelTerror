@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E9C5DBA2-A2C7-48FB-8CC2-68EE12224ADB}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{E9C5DBA2-A2C7-48FB-8CC2-68EE12224ADB}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Ambient" ID="{C52C6636-6E23-4BB5-BD61-7E214AC3C2BD}">
+					<ChildrenList>
+						<Action Name="" ID="{565FABC5-8E2D-41BC-97F3-F638549F7BA7}" ShortID="568259843">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambient" ID="{7E944169-E294-4D04-98F9-495A072F81D1}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Atmosphere" ID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}">
+					<ChildrenList>
+						<Action Name="" ID="{98593568-A264-4070-BFA7-473635F94FD3}" ShortID="461207614">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Atmosphere" ID="{D64C652C-D9F1-4614-95C7-BD8BA9D156E8}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Atmos" ID="{85CCB3B4-AB10-4FD6-AC39-E56645010615}">
+					<ChildrenList>
+						<Action Name="" ID="{C0F0D448-C9A6-41F4-8732-FFCAD52343F5}" ShortID="943900651">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Atmos" ID="{7C5CE867-314F-4F29-88DF-BEEF993862CF}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_PlayerFootsteps" ID="{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}">
+					<ChildrenList>
+						<Action Name="" ID="{0F06D82F-4545-4E4B-BEFC-8AB9806A5ECC}" ShortID="322341032">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlayerFootsteps" ID="{B5135BC1-2767-4928-9108-4A8961DE2D90}" WorkUnitID="{A01B63E6-E0C9-4FC2-A742-743F7B5DC4C1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

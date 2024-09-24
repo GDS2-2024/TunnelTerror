@@ -54,7 +54,7 @@ public:
 	UPROPERTY(Replicated)
 	int samplesNeeded;
 
-	UPROPERTY(Replicated)
+	UPROPERTY(Replicated, BlueprintReadWrite)
 	int currentSamples;
 
 private:
