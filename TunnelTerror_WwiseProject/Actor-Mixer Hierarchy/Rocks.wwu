@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0C2A8A81-D64C-41B9-84A1-64BB8D22FEF8}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="Rocks" ID="{0C2A8A81-D64C-41B9-84A1-64BB8D22FEF8}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="RockFall" ID="{F46FA88D-9B7F-4F36-ABC2-87745A1EEA25}" ShortID="864159908">
+					<PropertyList>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="RockHitGround" ID="{DCEAF137-48A7-499B-B3CD-51723F2494E8}" ShortID="204577973">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-1400</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{9DB99BB3-2258-4878-9D29-76C1AE1FC1B6}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-300"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="RockHitGround_1" ID="{4CCAAAD6-F8C8-4B3C-A28D-20B60863D45C}" ShortID="81814150">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RockHitGround_1" ID="{700609B4-2EF7-48A8-BE34-33C85C702192}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00295158179012345"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0016099537037037"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0719112654320988"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.132552854938272"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RockHitGround\RockHitGround_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="874392032"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RockHitGround_1" ID="{700609B4-2EF7-48A8-BE34-33C85C702192}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RockHitGround_2" ID="{BE10A8C7-8E55-435C-8E02-85BBD8926E83}" ShortID="883004745">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RockHitGround_2" ID="{55307D3A-2B9A-4942-B3A5-1ED9262B8E84}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0107099219317357"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0652331608569354"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.241460058097313"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RockHitGround\RockHitGround_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="953321177"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RockHitGround_2" ID="{55307D3A-2B9A-4942-B3A5-1ED9262B8E84}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RockHitGround_4" ID="{B9F9697C-AC54-46D4-B97E-D374CE245942}" ShortID="699894256">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RockHitGround_4" ID="{695FD727-EB1D-4BD3-97BD-BFA814F72535}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00268325617283951"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0689596836419753"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.16233699845679"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RockHitGround\RockHitGround_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="597728859"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RockHitGround_4" ID="{695FD727-EB1D-4BD3-97BD-BFA814F72535}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RockHitGround_5" ID="{2B5DADF6-EE65-4681-8777-16BC7DC9F348}" ShortID="730211364">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RockHitGround_5" ID="{3DFC47B7-7A2F-4D40-ADEC-5A28608C8582}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00234589460784314"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00182458469498911"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0870587554466231"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.133194682734205"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RockHitGround\RockHitGround_5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="953676981"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RockHitGround_5" ID="{3DFC47B7-7A2F-4D40-ADEC-5A28608C8582}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="RockShatter" ID="{27DE513F-623C-4ECD-9439-CD83F0162D1F}" ShortID="1045471531">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>40</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-1000</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{FDA56F24-44EA-4417-BB95-A0E070D26F5A}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-300"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="RockShatter_03" ID="{A97D759E-6B5C-40BE-AF3A-EA2BB325DF2D}" ShortID="1025343369">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RockShatter" ID="{CF110FD8-03BA-4605-8C54-498CDB8252AC}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.125397240377632"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="11.7873405954975"/>
+												<Property Name="TrimEnd" Type="Real64" Value="14.0758402323893"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RockShatter.WAV</AudioFile>
+											<MediaIDList>
+												<MediaID ID="697333171"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RockShatter" ID="{CF110FD8-03BA-4605-8C54-498CDB8252AC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RockShatter_02" ID="{7E01EA84-84BF-4923-AD67-951C343E91DE}" ShortID="830038748">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RockShatter" ID="{9F621CFF-E59B-468C-AB78-58D40887BD0C}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0817270061730273"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.53576592935652"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="6.61470442992012"/>
+												<Property Name="TrimEnd" Type="Real64" Value="8.77780682643428"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RockShatter.WAV</AudioFile>
+											<MediaIDList>
+												<MediaID ID="287643081"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RockShatter" ID="{9F621CFF-E59B-468C-AB78-58D40887BD0C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RockShatter_01" ID="{3D5008AA-244C-42B6-9574-96B8404DBFB3}" ShortID="879402964">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RockShatter" ID="{A38FC55D-B463-4EAF-BB50-0A65BAAAF3D7}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.1"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.125397240377632"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.22262309368192"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.8559651416122"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RockShatter.WAV</AudioFile>
+											<MediaIDList>
+												<MediaID ID="698207414"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RockShatter" ID="{A38FC55D-B463-4EAF-BB50-0A65BAAAF3D7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Playlist">
+							<Reference>
+								<ObjectRef Name="RockHitGround" ID="{DCEAF137-48A7-499B-B3CD-51723F2494E8}" WorkUnitID="{0C2A8A81-D64C-41B9-84A1-64BB8D22FEF8}"/>
+							</Reference>
+							<Reference>
+								<ObjectRef Name="RockShatter" ID="{27DE513F-623C-4ECD-9439-CD83F0162D1F}" WorkUnitID="{0C2A8A81-D64C-41B9-84A1-64BB8D22FEF8}"/>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

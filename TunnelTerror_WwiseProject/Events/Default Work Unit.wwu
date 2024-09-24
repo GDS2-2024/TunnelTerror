@@ -47,6 +47,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_RockFall" ID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}">
+					<ChildrenList>
+						<Action Name="" ID="{54689B56-EEED-472D-8C3A-BB8B55681B38}" ShortID="423006804">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RockFall" ID="{F46FA88D-9B7F-4F36-ABC2-87745A1EEA25}" WorkUnitID="{0C2A8A81-D64C-41B9-84A1-64BB8D22FEF8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="1120692842" Type="Event" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" Language="SFX" Hash="{4656DE50-B661-EF22-B083-190E4C30C206}">
+			<ObjectPath>Play_RockFall</ObjectPath>
+			<ShortName>Play_RockFall</ShortName>
+			<Path>Event/Play_RockFall.bnk</Path>
+			<Media>
+				<File Id="287643081" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RockShatter.WAV</ShortName>
+					<Path>Media/287643081.wem</Path>
+					<CachePath>SFX/RockShatter_E1C12152.wem</CachePath>
+				</File>
+				<File Id="597728859" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RockHitGround\RockHitGround_4.wav</ShortName>
+					<Path>Media/597728859.wem</Path>
+					<CachePath>SFX/RockHitGround/RockHitGround_4_7A1179AA.wem</CachePath>
+				</File>
+				<File Id="697333171" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RockShatter.WAV</ShortName>
+					<Path>Media/697333171.wem</Path>
+					<CachePath>SFX/RockShatter_BFC59738.wem</CachePath>
+				</File>
+				<File Id="698207414" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RockShatter.WAV</ShortName>
+					<Path>Media/698207414.wem</Path>
+					<CachePath>SFX/RockShatter_2B5CC4BC.wem</CachePath>
+				</File>
+				<File Id="874392032" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RockHitGround\RockHitGround_1.wav</ShortName>
+					<Path>Media/874392032.wem</Path>
+					<CachePath>SFX/RockHitGround/RockHitGround_1_4FCD9C49.wem</CachePath>
+				</File>
+				<File Id="953321177" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RockHitGround\RockHitGround_2.wav</ShortName>
+					<Path>Media/953321177.wem</Path>
+					<CachePath>SFX/RockHitGround/RockHitGround_2_D678C78D.wem</CachePath>
+				</File>
+				<File Id="953676981" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RockHitGround\RockHitGround_5.wav</ShortName>
+					<Path>Media/953676981.wem</Path>
+					<CachePath>SFX/RockHitGround/RockHitGround_5_8F54B111.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1120692842" Name="Play_RockFall" ObjectPath="\Events\Default Work Unit\Play_RockFall" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" DurationType="OneShot" DurationMin="3.9577818" DurationMax="6.0503273">
+					<MediaRefs>
+						<MediaRef Id="287643081"/>
+						<MediaRef Id="597728859"/>
+						<MediaRef Id="697333171"/>
+						<MediaRef Id="698207414"/>
+						<MediaRef Id="874392032"/>
+						<MediaRef Id="953321177"/>
+						<MediaRef Id="953676981"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{C1BC25DB-9322-FEBB-D6B3-1F56368A5800}</FileHash>
+</SoundBanksInfo>
