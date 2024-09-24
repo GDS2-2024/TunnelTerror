@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="2284361370" Type="Event" GUID="{0F14277F-3996-484C-A37D-4633DA6B3085}" Language="SFX" Hash="{70564EB6-7440-2688-621D-DD088014F097}">
+		<SoundBank Id="2284361370" Type="Event" GUID="{0F14277F-3996-484C-A37D-4633DA6B3085}" Language="SFX" Hash="{42D90FA2-EDD4-3F28-992E-7C59398DDCA9}">
 			<ObjectPath>Play_WoodBreaking</ObjectPath>
 			<ShortName>Play_WoodBreaking</ShortName>
 			<Path>Event/Play_WoodBreaking.bnk</Path>
@@ -45,5 +45,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{AE59A7C2-BB17-E8D1-2472-66656E9BEF1C}</FileHash>
+	<FileHash>{713EBD14-5992-B32E-43BD-22516D9D6321}</FileHash>
 </SoundBanksInfo>

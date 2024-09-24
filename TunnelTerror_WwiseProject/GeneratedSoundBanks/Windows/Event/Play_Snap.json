@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{A7C25A1B-0608-4060-9C29-134EBEA4D185}",
     "Language": "SFX",
-    "Hash": "{70B5792A-BDD2-2A1E-639B-35E95A96AC69}",
+    "Hash": "{002094EB-C6FC-7024-4518-F50E7B8A13CE}",
     "ObjectPath": "Play_Snap",
     "ShortName": "Play_Snap",
     "Path": "Event/Play_Snap.bnk",
@@ -58,7 +58,7 @@
       "Name": "Play_Snap",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Snap",
       "GUID": "{A7C25A1B-0608-4060-9C29-134EBEA4D185}",
-      "MaxAttenuation": "8000",
+      "MaxAttenuation": "200",
       "DurationType": "OneShot",
       "DurationMin": "0.27858928",
       "DurationMax": "0.4888849",
@@ -80,6 +80,6 @@
     ]
    }
   ],
-  "FileHash": "{B726F3B8-B7E3-0A97-14D1-7BC4E267EAD4}"
+  "FileHash": "{9777ADA8-A9BE-9864-C6DD-5149A6DDE154}"
  }
 }

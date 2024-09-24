@@ -30,11 +30,8 @@
 							</ModifierList>
 						</Property>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-20</Value>
-							</ValueList>
-						</Property>
+						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">

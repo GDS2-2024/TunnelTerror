@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1120692842" Type="Event" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" Language="SFX" Hash="{236B0FF5-C3AD-01A1-2004-8D98BAEBE145}">
+		<SoundBank Id="1120692842" Type="Event" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" Language="SFX" Hash="{331837A7-F033-E32E-F361-021A92462FA7}">
 			<ObjectPath>Play_RockFall</ObjectPath>
 			<ShortName>Play_RockFall</ShortName>
 			<Path>Event/Play_RockFall.bnk</Path>
@@ -43,7 +43,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1120692842" Name="Play_RockFall" ObjectPath="\Events\Default Work Unit\Play_RockFall" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" MaxAttenuation="8000" DurationType="OneShot" DurationMin="4.5565443" DurationMax="6.9171724">
+				<Event Id="1120692842" Name="Play_RockFall" ObjectPath="\Events\Default Work Unit\Play_RockFall" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" MaxAttenuation="200" DurationType="OneShot" DurationMin="4.5565443" DurationMax="6.9171724">
 					<MediaRefs>
 						<MediaRef Id="287643081"/>
 						<MediaRef Id="597728859"/>
@@ -57,5 +57,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EEC849EB-17C2-6EC3-4A1F-EB7537C954B7}</FileHash>
+	<FileHash>{037AB3CB-21F2-1880-FBED-F51BC08B4E9C}</FileHash>
 </SoundBanksInfo>

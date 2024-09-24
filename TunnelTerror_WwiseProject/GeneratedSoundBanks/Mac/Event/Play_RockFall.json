@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
     "Language": "SFX",
-    "Hash": "{236B0FF5-C3AD-01A1-2004-8D98BAEBE145}",
+    "Hash": "{331837A7-F033-E32E-F361-021A92462FA7}",
     "ObjectPath": "Play_RockFall",
     "ShortName": "Play_RockFall",
     "Path": "Event/Play_RockFall.bnk",
@@ -85,7 +85,7 @@
       "Name": "Play_RockFall",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_RockFall",
       "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
-      "MaxAttenuation": "8000",
+      "MaxAttenuation": "200",
       "DurationType": "OneShot",
       "DurationMin": "4.5565443",
       "DurationMax": "6.9171724",
@@ -116,6 +116,6 @@
     ]
    }
   ],
-  "FileHash": "{21808E2F-2049-E9FC-6AF4-653FAB6AC6F2}"
+  "FileHash": "{A12987C3-AFBC-1433-3BA7-4881E74D0D54}"
  }
 }

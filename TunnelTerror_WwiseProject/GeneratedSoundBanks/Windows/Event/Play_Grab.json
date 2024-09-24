@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}",
     "Language": "SFX",
-    "Hash": "{3205429A-7C3C-DFB6-2B57-CC67D2D8CFB7}",
+    "Hash": "{404DD24B-4A0B-76F4-20EE-3A7D1DD04106}",
     "ObjectPath": "Play_Grab",
     "ShortName": "Play_Grab",
     "Path": "Event/Play_Grab.bnk",
@@ -49,7 +49,7 @@
       "Name": "Play_Grab",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Grab",
       "GUID": "{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}",
-      "MaxAttenuation": "8000",
+      "MaxAttenuation": "200",
       "DurationType": "OneShot",
       "DurationMin": "0.060328994",
       "DurationMax": "0.094719194",
@@ -68,6 +68,6 @@
     ]
    }
   ],
-  "FileHash": "{CFBE55B5-C795-3080-96B4-7BF334F3C56D}"
+  "FileHash": "{60A5ABFA-E683-E8BE-DD55-B285E098F14F}"
  }
 }
