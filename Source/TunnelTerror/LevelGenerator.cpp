@@ -93,8 +93,10 @@ URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubc
                 TArray<int32> locations;
 
                 int32 rand = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
+                int32 randomItem = FMath::RandRange(0, Items.Num() - 1);
+
                 FVector location = LastRoomSpawned->GetActorLocation() + RC->SpawnLocations[rand];
-                AActor* ItemSpawned = GetWorld()->SpawnActor<AActor>(PickupItem, location, FRotator::ZeroRotator);
+                AActor* ItemSpawned = GetWorld()->SpawnActor<AActor>(Items[randomItem], location, FRotator::ZeroRotator);
                 locations.Add(rand);
 
                 for (int i = 0; i < 5; i++) {
