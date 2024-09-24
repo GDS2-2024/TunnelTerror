@@ -11,6 +11,8 @@
 #include "ElevatorEscape.h"
 #include "TunnelTerrorCharacter.generated.h"
 
+class ABridgeSabotager;
+class ATorchHazard;
 class UInputComponent;
 class USkeletalMeshComponent;
 class USceneComponent;
@@ -206,6 +208,10 @@ public:
 
 	UFUNCTION(Server, Reliable)
 	void ServerInteractWithElevator(AElevatorEscape* Elevator, int32 Samples);
+	UFUNCTION(Server, Reliable)
+	void ServerInteractWithTorch(ATorchHazard* Torch);
+	UFUNCTION(Server, Reliable)
+	void ServerInteractWithBridge(ABridgeSabotager* BridgeSabotager);
 	
 protected:
 	/** Called for movement input */
@@ -254,11 +260,14 @@ public:
 	UPlayerHUD* PlayerHUD;
 
 	UFUNCTION(BlueprintImplementableEvent)
+	void EquipTorch(bool bEquip);
+	
+	UFUNCTION(BlueprintImplementableEvent)
 	void EquipCompass(bool bEquip);
 	
 	UFUNCTION(BlueprintImplementableEvent)
 	void EquipPickaxe(bool bEquip);
-
+	
 	UFUNCTION(BlueprintImplementableEvent)
 	void SwingPickaxe(bool bEquip);
 

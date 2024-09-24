@@ -14,20 +14,10 @@ ATorchHazard::ATorchHazard()
 
 void ATorchHazard::OnPickupBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& HitInfo)
 {
-	if (GetLocalRole() == ROLE_Authority) // Only the server should handle the pickup
-	{
-		//UE_LOG(LogTemp, Log, TEXT("On Pickup BEGIN Overlap (SERVER)"))
-		if (ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(OtherActor))
-		{
-			if (Player->GetIsInfected()) { // torches can only be interacted by infected
-				Player->CollidedPickup = this;
-				if (Player->IsLocallyControlled())
-				{
-					Player->OnRep_CollidedPickup();
-				}
-			}
-		}
-	}
+	if (ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(OtherActor))
+		if (!Player->GetIsInfected()) return;
+	
+	Super::OnPickupBeginOverlap(OverlappedComponent, OtherActor, OtherComponent, OtherBodyIndex, bFromSweep, HitInfo);
 }
 
 void ATorchHazard::TurnOff_Implementation()
@@ -41,7 +31,7 @@ void ATorchHazard::OnInteract_Implementation()
 	for (TActorIterator<ATorchHazard> It(GetWorld()); It; ++It)
 	{
 		ATorchHazard* torch = *It;
-		if ((torch->GetActorLocation() - GetActorLocation()).Length() <= 5000) {
+		if ((torch->GetActorLocation() - GetActorLocation()).Length() <= SabotageRange) {
 			torch->TurnOff();
 		}
 	}

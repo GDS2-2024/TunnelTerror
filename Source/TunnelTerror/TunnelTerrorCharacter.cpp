@@ -13,6 +13,7 @@
 #include "ElevatorEscape.h"
 #include "Hazards/TorchHazard.h"
 #include "InfectionTrap.h"
+#include "Hazards/BridgeSabotager.h"
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -201,8 +202,7 @@ void ATunnelTerrorCharacter::SetIsRagdolled(const bool bNewRagdolled)
 		UE_LOG(LogTemp, Error, TEXT("This should only be called from server!"));
 		return;
 	}
-
-	UE_LOG(LogTemp, Log, TEXT("Test 2"));
+	
 	bIsRagdolled = bNewRagdolled;
 	OnRagdoll(); // call it directly on the server, clients can just use ReplicatedUsing
 }
@@ -234,6 +234,17 @@ void ATunnelTerrorCharacter::ServerInteractWithElevator_Implementation(AElevator
 		Elevator->ServerAddSample(Samples);
 		RemoveSamplesFromInventory();
 	}
+}
+
+void ATunnelTerrorCharacter::ServerInteractWithTorch_Implementation(ATorchHazard* Torch)
+{
+	Torch->OnInteract();
+}
+
+void ATunnelTerrorCharacter::ServerInteractWithBridge_Implementation(ABridgeSabotager* BridgeSabotager)
+{
+	UE_LOG(LogTemp, Log, TEXT("Test 0"));
+	BridgeSabotager->OnInteract();
 }
 
 void ATunnelTerrorCharacter::Move(const FInputActionValue& Value)
@@ -294,8 +305,7 @@ void ATunnelTerrorCharacter::SelectSlot5(const FInputActionValue& Value)
 
 void ATunnelTerrorCharacter::ScrollSlots(const FInputActionValue& Value)
 {
-	//UE_LOG(LogTemp, Log, TEXT("Scroll wheel is outputting: %f"), Value.Get<float>());
-	if (Value.Get<float>() > 0)
+	if (Value.Get<float>() < 0) //Scroll Down
 	{
 		//Increase by 1, wrap around to start
 		if (Inventory->SelectedSlotIndex < Inventory->GetMaxSlots()-1)
@@ -307,10 +317,10 @@ void ATunnelTerrorCharacter::ScrollSlots(const FInputActionValue& Value)
 			Inventory->ServerSetSelectedSlot(0);
 			PlayerHUD->SetSlotSelection(0);
 		}
-	} else
+	} else //Scroll Up
 	{
 		//Decrease by 1, wrap around to end
-		if (Inventory->SelectedSlotIndex > 1)
+		if (Inventory->SelectedSlotIndex > 0)
 		{
 			Inventory->ServerSetSelectedSlot(Inventory->SelectedSlotIndex-1);
 			PlayerHUD->SetSlotSelection(Inventory->SelectedSlotIndex);
@@ -343,7 +353,7 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 	AInventoryItem* InventoryItem = GetWorld()->SpawnActor<AInventoryItem>(ItemClass);
 	if (InventoryItem)
 	{
-		InventoryItem->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, "index_r_socket");
+		InventoryItem->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, "hand_r_socket");
 		if (InventoryItem->ItemName.ToString() == "Torch")
 		{
 			FRotator DesiredRotation(0.0f, -90.0f, 0.0f);
@@ -352,7 +362,7 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 		if (InventoryItem->ItemName.ToString() == "Compass")
 		{
 			FRotator DesiredRotation(180.0f, 0.0f, 90.0f);
-			FVector DesiredPos(-1.5,4.3,-2.0);
+			FVector DesiredPos(2.0f,3.0f,0.0f);
 			InventoryItem->SetActorRelativeLocation(DesiredPos);
 			InventoryItem->SetActorRelativeRotation(DesiredRotation);
 			EquipCompass(true);
@@ -360,6 +370,14 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 		if (InventoryItem->ItemName.ToString() == "Pickaxe")
 		{
 			EquipPickaxe(true);
+		}
+		if (InventoryItem->ItemName.ToString() == "Torch")
+		{
+			FRotator DesiredRotation(0.0f, -90.0f, 15.0f);
+			FVector DesiredPos(1.0f,3.0f,1.0f);
+			InventoryItem->SetActorRelativeLocation(DesiredPos);
+			InventoryItem->SetActorRelativeRotation(DesiredRotation);
+			EquipTorch(true);
 		}
 		ServerEquipToInventory(InventoryItem);
 		if (CollidedPickup)
@@ -494,7 +512,12 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 		{
 			if (CollidedPickup->PickupName == "TorchHazard") {
 				ATorchHazard* torchHazard = Cast<ATorchHazard>(CollidedPickup);
-				torchHazard->OnInteract();
+				ServerInteractWithTorch(torchHazard);
+			}
+			else if (CollidedPickup->PickupName == "BridgeSabotager")
+			{
+				ABridgeSabotager* BridgeSabotager = Cast<ABridgeSabotager>(CollidedPickup);
+				ServerInteractWithBridge(BridgeSabotager);
 			}
 			else {
 				UE_LOG(LogTemp, Warning, TEXT("CorrespondingItemClass is NULL"));
