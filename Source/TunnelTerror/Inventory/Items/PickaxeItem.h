@@ -19,7 +19,7 @@ private:
 	float UseTime = 0.0f;
 	float PreviousTime = 0.0f;
 	// The amount of time the player must swing the pickaxe
-	const float MiningThreshold = 0.5f;
+	const float MiningThreshold = 0.4f;
 
 public:
 	APickaxeItem();
