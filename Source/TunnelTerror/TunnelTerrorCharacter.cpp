@@ -408,6 +408,7 @@ void ATunnelTerrorCharacter::ServerEquipToInventory_Implementation(AInventoryIte
 
 void ATunnelTerrorCharacter::ClientAddInventoryUI_Implementation(AInventoryItem* NewItem, int32 SlotIndex)
 {
+	PlayItemPickupSFX();
 	if (!PlayerHUD)
 	{
 		UE_LOG(LogTemp, Error, TEXT("PlayerHUD is null in ClientAddInventoryUI"));
