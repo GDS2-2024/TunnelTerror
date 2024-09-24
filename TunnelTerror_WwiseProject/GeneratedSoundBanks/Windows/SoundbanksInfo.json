@@ -14,11 +14,73 @@
   "DialogueEvents": [],
   "SoundBanks": [
    {
+    "Id": "17721092",
+    "Type": "Event",
+    "GUID": "{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}",
+    "Language": "SFX",
+    "Hash": "{3205429A-7C3C-DFB6-2B57-CC67D2D8CFB7}",
+    "ObjectPath": "Play_Grab",
+    "ShortName": "Play_Grab",
+    "Path": "Event/Play_Grab.bnk",
+    "Media": [
+     {
+      "Id": "363834967",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Grab\\Grab_3.wav",
+      "Path": "Media/363834967.wem",
+      "CachePath": "SFX/Grab/Grab_3_1EC4DA32.wem"
+     },
+     {
+      "Id": "644454746",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Grab\\Grab_2.wav",
+      "Path": "Media/644454746.wem",
+      "CachePath": "SFX/Grab/Grab_2_A836BF12.wem"
+     },
+     {
+      "Id": "1024521790",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Grab\\Grab_1.wav",
+      "Path": "Media/1024521790.wem",
+      "CachePath": "SFX/Grab/Grab_1_B55A4CF6.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "17721092",
+      "Name": "Play_Grab",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Grab",
+      "GUID": "{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}",
+      "MaxAttenuation": "8000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.060328994",
+      "DurationMax": "0.094719194",
+      "MediaRefs": [
+       {
+        "Id": "363834967"
+       },
+       {
+        "Id": "644454746"
+       },
+       {
+        "Id": "1024521790"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "1120692842",
     "Type": "Event",
     "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
     "Language": "SFX",
-    "Hash": "{0E5E7980-4EE1-BBDC-26F7-A94A9FF97D1C}",
+    "Hash": "{236B0FF5-C3AD-01A1-2004-8D98BAEBE145}",
     "ObjectPath": "Play_RockFall",
     "ShortName": "Play_RockFall",
     "Path": "Event/Play_RockFall.bnk",
@@ -93,6 +155,7 @@
       "Name": "Play_RockFall",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_RockFall",
       "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
+      "MaxAttenuation": "8000",
       "DurationType": "OneShot",
       "DurationMin": "4.5565443",
       "DurationMax": "6.9171724",
@@ -187,7 +250,7 @@
     "Type": "Event",
     "GUID": "{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}",
     "Language": "SFX",
-    "Hash": "{6DAC6206-C155-E624-1F2D-7B95F637CF7F}",
+    "Hash": "{4412F5D2-79A6-B0B2-A035-097F8F60DEB4}",
     "ObjectPath": "Play_PlayerFootsteps",
     "ShortName": "Play_PlayerFootsteps",
     "Path": "Event/Play_PlayerFootsteps.bnk",
@@ -283,6 +346,7 @@
       "Name": "Play_PlayerFootsteps",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_PlayerFootsteps",
       "GUID": "{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}",
+      "MaxAttenuation": "8000",
       "DurationType": "OneShot",
       "DurationMin": "0.38742706",
       "DurationMax": "0.74843657",
@@ -370,7 +434,7 @@
     "Type": "Event",
     "GUID": "{F05E8152-8526-474A-8CD3-14071D451BB3}",
     "Language": "SFX",
-    "Hash": "{21D7EC4F-F58F-6354-599A-8790B4A72C4B}",
+    "Hash": "{3C5C6552-218A-4E0C-E632-FEFCA4DE8164}",
     "ObjectPath": "Play_Torch",
     "ShortName": "Play_Torch",
     "Path": "Event/Play_Torch.bnk",
@@ -436,7 +500,10 @@
       "Name": "Play_Torch",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Torch",
       "GUID": "{F05E8152-8526-474A-8CD3-14071D451BB3}",
-      "DurationType": "Infinite",
+      "MaxAttenuation": "8000",
+      "DurationType": "OneShot",
+      "DurationMin": "14.243367",
+      "DurationMax": "21.934233",
       "MediaRefs": [
        {
         "Id": "205328698"
@@ -543,11 +610,20 @@
     "Type": "Event",
     "GUID": "{0F14277F-3996-484C-A37D-4633DA6B3085}",
     "Language": "SFX",
-    "Hash": "{AD0A87E2-FDFA-87C5-A139-73615E73B411}",
+    "Hash": "{70564EB6-7440-2688-621D-DD088014F097}",
     "ObjectPath": "Play_WoodBreaking",
     "ShortName": "Play_WoodBreaking",
     "Path": "Event/Play_WoodBreaking.bnk",
     "Media": [
+     {
+      "Id": "61820815",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Snap\\Snap_3.wav",
+      "Path": "Media/61820815.wem",
+      "CachePath": "SFX/Snap/Snap_3_AA97B9F8.wem"
+     },
      {
       "Id": "64405040",
       "Language": "SFX",
@@ -556,6 +632,33 @@
       "ShortName": "WoodSmash.wav",
       "Path": "Media/64405040.wem",
       "CachePath": "SFX/WoodSmash_5875AC8D.wem"
+     },
+     {
+      "Id": "545870618",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Snap\\Snap_1.wav",
+      "Path": "Media/545870618.wem",
+      "CachePath": "SFX/Snap/Snap_1_122AC65D.wem"
+     },
+     {
+      "Id": "717525355",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Snap\\Snap_2.wav",
+      "Path": "Media/717525355.wem",
+      "CachePath": "SFX/Snap/Snap_2_4F641505.wem"
+     },
+     {
+      "Id": "837363706",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Snap\\Snap_4.wav",
+      "Path": "Media/837363706.wem",
+      "CachePath": "SFX/Snap/Snap_4_264CD53B.wem"
      }
     ],
     "Events": [
@@ -565,11 +668,23 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_WoodBreaking",
       "GUID": "{0F14277F-3996-484C-A37D-4633DA6B3085}",
       "DurationType": "OneShot",
-      "DurationMin": "1.2104591",
-      "DurationMax": "1.4394866",
+      "DurationMin": "1.4104592",
+      "DurationMax": "1.6394867",
       "MediaRefs": [
        {
+        "Id": "61820815"
+       },
+       {
         "Id": "64405040"
+       },
+       {
+        "Id": "545870618"
+       },
+       {
+        "Id": "717525355"
+       },
+       {
+        "Id": "837363706"
        }
       ]
      }
@@ -580,7 +695,7 @@
     "Type": "Event",
     "GUID": "{A7C25A1B-0608-4060-9C29-134EBEA4D185}",
     "Language": "SFX",
-    "Hash": "{D228DECA-5BBD-14DE-C247-3FD9F11F97C9}",
+    "Hash": "{70B5792A-BDD2-2A1E-639B-35E95A96AC69}",
     "ObjectPath": "Play_Snap",
     "ShortName": "Play_Snap",
     "Path": "Event/Play_Snap.bnk",
@@ -628,6 +743,7 @@
       "Name": "Play_Snap",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Snap",
       "GUID": "{A7C25A1B-0608-4060-9C29-134EBEA4D185}",
+      "MaxAttenuation": "8000",
       "DurationType": "OneShot",
       "DurationMin": "0.27858928",
       "DurationMax": "0.4888849",
@@ -649,6 +765,6 @@
     ]
    }
   ],
-  "FileHash": "{C235C860-81BE-DFBB-A976-385C7EBD0FD1}"
+  "FileHash": "{252D9214-A547-6AE7-150C-7DF3334030B0}"
  }
 }

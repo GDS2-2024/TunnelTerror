@@ -61,9 +61,30 @@
 				<Event Name="Play_WoodBreaking" ID="{0F14277F-3996-484C-A37D-4633DA6B3085}">
 					<ChildrenList>
 						<Action Name="" ID="{354FB3E9-DD2C-4641-A0E4-E0F5083CC3DF}" ShortID="838468550">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="WoodBreaking" ID="{EE5EF288-95FE-4C96-B2B5-3D4590F95625}" WorkUnitID="{353A940F-F92A-424D-9FBD-0DE26DC40E2E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A7EE9CA9-DFB7-4FF8-B8BE-DC8B2DD73A35}" ShortID="391021695">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Snap" ID="{D2BA8D10-E468-4640-9BB1-BD9EE9EB5242}" WorkUnitID="{353A940F-F92A-424D-9FBD-0DE26DC40E2E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Grab" ID="{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}">
+					<ChildrenList>
+						<Action Name="" ID="{DA7C79DE-DD46-44CF-938F-F5EF0BBC7605}" ShortID="73045985">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Grab" ID="{8F390D3F-DC5C-43F9-8022-80421F0223B4}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -246,6 +246,174 @@
 					</ReferenceList>
 					<GroupingInfo/>
 				</SwitchContainer>
+				<RandomSequenceContainer Name="Grab" ID="{8F390D3F-DC5C-43F9-8022-80421F0223B4}" ShortID="631439780">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-350</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{A817F1F0-93CA-4788-960A-A1BE965F67D1}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-50"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="New Attenuation" ID="{6142490D-7D05-4C6F-A86D-6C103BF24D93}" WorkUnitID="{DBAC850D-1D99-4039-87EC-15749192364E}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Grab_1" ID="{9399D7F6-3EDB-49B4-B276-D9811A4D7E0A}" ShortID="955962143">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-1000</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{68A1407A-E13D-481B-B342-A19259EA8481}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Grab_1" ID="{33B2E6AC-B7D7-41D2-8379-35B4F50B1BF6}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.00506311274509805"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.000750090777051557"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.054756626724764"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.0969492329339143"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Grab\Grab_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1024521790"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Grab_1" ID="{33B2E6AC-B7D7-41D2-8379-35B4F50B1BF6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Grab_2" ID="{979E7139-830E-4C84-B856-B57578CA061B}" ShortID="897813876">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{111601E4-40FB-4072-8DB7-12FEF7BD2EA6}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Grab_2" ID="{D41586B1-8A91-4963-B47F-858C92B6B1DC}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0633636982570806"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.114094135802469"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Grab\Grab_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="644454746"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Grab_2" ID="{D41586B1-8A91-4963-B47F-858C92B6B1DC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Grab_3" ID="{B7AA0A56-6D54-47F2-A911-0DC4F9DB4665}" ShortID="1063796115">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>16</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-900</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{A47F96DB-B49C-4231-A7B8-100C398C869D}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Grab_3" ID="{187FD99F-0A5A-4187-8187-B4560624AB5E}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.00124360021786493"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.00207266702977486"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.097415350399419"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.138868690994916"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Grab\Grab_3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="363834967"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Grab_3" ID="{187FD99F-0A5A-4187-8187-B4560624AB5E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

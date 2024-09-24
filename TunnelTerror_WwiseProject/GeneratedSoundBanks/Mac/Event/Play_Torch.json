@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{F05E8152-8526-474A-8CD3-14071D451BB3}",
     "Language": "SFX",
-    "Hash": "{21D7EC4F-F58F-6354-599A-8790B4A72C4B}",
+    "Hash": "{3C5C6552-218A-4E0C-E632-FEFCA4DE8164}",
     "ObjectPath": "Play_Torch",
     "ShortName": "Play_Torch",
     "Path": "Event/Play_Torch.bnk",
@@ -76,7 +76,10 @@
       "Name": "Play_Torch",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Torch",
       "GUID": "{F05E8152-8526-474A-8CD3-14071D451BB3}",
-      "DurationType": "Infinite",
+      "MaxAttenuation": "8000",
+      "DurationType": "OneShot",
+      "DurationMin": "14.243367",
+      "DurationMax": "21.934233",
       "MediaRefs": [
        {
         "Id": "205328698"
@@ -101,6 +104,6 @@
     ]
    }
   ],
-  "FileHash": "{857D5499-3209-E06B-8D05-C82F4E23E874}"
+  "FileHash": "{2224782F-A85A-2806-7A61-28D4A1B024EB}"
  }
 }
