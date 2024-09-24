@@ -18,35 +18,20 @@
     "Type": "Event",
     "GUID": "{C52C6636-6E23-4BB5-BD61-7E214AC3C2BD}",
     "Language": "SFX",
-    "Hash": "{E3FAFEE0-264D-4BDB-B4B3-5674EE351217}",
+    "Hash": "{C6144C6C-12B6-0993-6838-8E43B78D5C12}",
     "ObjectPath": "Ambient",
     "ShortName": "Ambient",
     "Path": "Event/Ambient.bnk",
-    "Media": [
-     {
-      "Id": "597430799",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Outside3.wav",
-      "Path": "Media/597430799.wem",
-      "CachePath": "SFX/Outside3_818F3B66.wem"
-     }
-    ],
     "Events": [
      {
       "Id": "77978275",
       "Name": "Ambient",
       "ObjectPath": "\\Events\\Default Work Unit\\Ambient",
       "GUID": "{C52C6636-6E23-4BB5-BD61-7E214AC3C2BD}",
+      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "60",
-      "DurationMax": "60",
-      "MediaRefs": [
-       {
-        "Id": "597430799"
-       }
-      ]
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    },
@@ -485,7 +470,7 @@
     "Type": "Event",
     "GUID": "{85CCB3B4-AB10-4FD6-AC39-E56645010615}",
     "Language": "SFX",
-    "Hash": "{77B61C18-25E5-D35C-655B-6F00CF41B6EC}",
+    "Hash": "{973F5161-49F4-2402-729D-94CBBF71EFAA}",
     "ObjectPath": "Atmos",
     "ShortName": "Atmos",
     "Path": "Event/Atmos.bnk",
@@ -495,6 +480,7 @@
       "Name": "Atmos",
       "ObjectPath": "\\Events\\Default Work Unit\\Atmos",
       "GUID": "{85CCB3B4-AB10-4FD6-AC39-E56645010615}",
+      "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -502,6 +488,6 @@
     ]
    }
   ],
-  "FileHash": "{4AD0B94C-B6A9-E678-09E5-BA51189A9A14}"
+  "FileHash": "{B07BC827-4D29-38AD-734E-83ED0482897E}"
  }
 }

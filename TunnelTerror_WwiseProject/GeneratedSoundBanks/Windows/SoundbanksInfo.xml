@@ -9,23 +9,12 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="77978275" Type="Event" GUID="{C52C6636-6E23-4BB5-BD61-7E214AC3C2BD}" Language="SFX" Hash="{E3FAFEE0-264D-4BDB-B4B3-5674EE351217}">
+		<SoundBank Id="77978275" Type="Event" GUID="{C52C6636-6E23-4BB5-BD61-7E214AC3C2BD}" Language="SFX" Hash="{C6144C6C-12B6-0993-6838-8E43B78D5C12}">
 			<ObjectPath>Ambient</ObjectPath>
 			<ShortName>Ambient</ShortName>
 			<Path>Event/Ambient.bnk</Path>
-			<Media>
-				<File Id="597430799" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Outside3.wav</ShortName>
-					<Path>Media/597430799.wem</Path>
-					<CachePath>SFX/Outside3_818F3B66.wem</CachePath>
-				</File>
-			</Media>
 			<Events>
-				<Event Id="77978275" Name="Ambient" ObjectPath="\Events\Default Work Unit\Ambient" GUID="{C52C6636-6E23-4BB5-BD61-7E214AC3C2BD}" DurationType="OneShot" DurationMin="60" DurationMax="60">
-					<MediaRefs>
-						<MediaRef Id="597430799"/>
-					</MediaRefs>
-				</Event>
+				<Event Id="77978275" Name="Ambient" ObjectPath="\Events\Default Work Unit\Ambient" GUID="{C52C6636-6E23-4BB5-BD61-7E214AC3C2BD}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="1120692842" Type="Event" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" Language="SFX" Hash="{4656DE50-B661-EF22-B083-190E4C30C206}">
@@ -235,14 +224,14 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3034623661" Type="Event" GUID="{85CCB3B4-AB10-4FD6-AC39-E56645010615}" Language="SFX" Hash="{77B61C18-25E5-D35C-655B-6F00CF41B6EC}">
+		<SoundBank Id="3034623661" Type="Event" GUID="{85CCB3B4-AB10-4FD6-AC39-E56645010615}" Language="SFX" Hash="{973F5161-49F4-2402-729D-94CBBF71EFAA}">
 			<ObjectPath>Atmos</ObjectPath>
 			<ShortName>Atmos</ShortName>
 			<Path>Event/Atmos.bnk</Path>
 			<Events>
-				<Event Id="3034623661" Name="Atmos" ObjectPath="\Events\Default Work Unit\Atmos" GUID="{85CCB3B4-AB10-4FD6-AC39-E56645010615}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3034623661" Name="Atmos" ObjectPath="\Events\Default Work Unit\Atmos" GUID="{85CCB3B4-AB10-4FD6-AC39-E56645010615}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5D91B2B3-4A94-F73C-0E0F-B0EB824C1A21}</FileHash>
+	<FileHash>{F54728AE-8AB7-25DF-BE9D-4A068D93356A}</FileHash>
 </SoundBanksInfo>

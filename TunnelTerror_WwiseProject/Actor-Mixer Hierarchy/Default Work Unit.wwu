@@ -3,28 +3,6 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="Ambient" ID="{7E944169-E294-4D04-98F9-495A072F81D1}" ShortID="390591002">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Outside3" ID="{ABA2F38E-E9FD-4938-8FAB-80E2FB7FCC4C}">
-							<Language>SFX</Language>
-							<AudioFile>Outside3.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="597430799"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Outside3" ID="{ABA2F38E-E9FD-4938-8FAB-80E2FB7FCC4C}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<RandomSequenceContainer Name="Atmosphere" ID="{D64C652C-D9F1-4614-95C7-BD8BA9D156E8}" ShortID="583616545">
 					<PropertyList>
 						<Property Name="3DPosition" Type="int16" Value="2"/>
@@ -257,36 +235,6 @@
 						<Position Name="" ID="{3A4BBC02-AFE1-4E06-BABC-630971F0BB0B}"/>
 					</PositioningInfo>
 				</RandomSequenceContainer>
-				<BlendContainer Name="Atmos" ID="{7C5CE867-314F-4F29-88DF-BEEF993862CF}" ShortID="313093260">
-					<PropertyList>
-						<Property Name="BlendBehavior" Type="int16" Value="1"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
-						</Reference>
-					</ReferenceList>
-					<PositioningInfo>
-						<Position Name="" ID="{53566020-FF48-418E-862A-DDF9465F4CE2}"/>
-					</PositioningInfo>
-					<BlendTrackList>
-						<BlendTrack Name="Cave" ID="{9F55A89C-6D60-4B95-B5E7-5883EBA01D42}" ShortID="1026514946">
-							<PropertyList>
-								<Property Name="EnableCrossFading" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="LayerCrossFadeControlInput">
-									<Custom>
-										<ModulatorLfo Name="Modulator LFO (Custom)" ID="{685C323A-E1BF-4854-A9A3-CB6DB4EDB86A}" ShortID="816279265"/>
-									</Custom>
-								</Reference>
-							</ReferenceList>
-						</BlendTrack>
-					</BlendTrackList>
-				</BlendContainer>
 				<SwitchContainer Name="Surfaces" ID="{AB8711BB-2FEB-486C-954B-AF828EC39A52}" ShortID="954495763">
 					<ReferenceList>
 						<Reference Name="Conversion">

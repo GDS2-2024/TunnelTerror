@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3034623661" Type="Event" GUID="{85CCB3B4-AB10-4FD6-AC39-E56645010615}" Language="SFX" Hash="{77B61C18-25E5-D35C-655B-6F00CF41B6EC}">
+		<SoundBank Id="3034623661" Type="Event" GUID="{85CCB3B4-AB10-4FD6-AC39-E56645010615}" Language="SFX" Hash="{973F5161-49F4-2402-729D-94CBBF71EFAA}">
 			<ObjectPath>Atmos</ObjectPath>
 			<ShortName>Atmos</ShortName>
 			<Path>Event/Atmos.bnk</Path>
 			<Events>
-				<Event Id="3034623661" Name="Atmos" ObjectPath="\Events\Default Work Unit\Atmos" GUID="{85CCB3B4-AB10-4FD6-AC39-E56645010615}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3034623661" Name="Atmos" ObjectPath="\Events\Default Work Unit\Atmos" GUID="{85CCB3B4-AB10-4FD6-AC39-E56645010615}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4AF1C844-080F-ABE7-45DB-EBB99F8BF153}</FileHash>
+	<FileHash>{838F36DE-4713-0B70-894A-E10E875F5BFD}</FileHash>
 </SoundBanksInfo>

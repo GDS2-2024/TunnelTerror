@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="77978275" Type="Event" GUID="{C52C6636-6E23-4BB5-BD61-7E214AC3C2BD}" Language="SFX" Hash="{E3FAFEE0-264D-4BDB-B4B3-5674EE351217}">
+		<SoundBank Id="77978275" Type="Event" GUID="{C52C6636-6E23-4BB5-BD61-7E214AC3C2BD}" Language="SFX" Hash="{C6144C6C-12B6-0993-6838-8E43B78D5C12}">
 			<ObjectPath>Ambient</ObjectPath>
 			<ShortName>Ambient</ShortName>
 			<Path>Event/Ambient.bnk</Path>
-			<Media>
-				<File Id="597430799" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Outside3.wav</ShortName>
-					<Path>Media/597430799.wem</Path>
-					<CachePath>SFX/Outside3_818F3B66.wem</CachePath>
-				</File>
-			</Media>
 			<Events>
-				<Event Id="77978275" Name="Ambient" ObjectPath="\Events\Default Work Unit\Ambient" GUID="{C52C6636-6E23-4BB5-BD61-7E214AC3C2BD}" DurationType="OneShot" DurationMin="60" DurationMax="60">
-					<MediaRefs>
-						<MediaRef Id="597430799"/>
-					</MediaRefs>
-				</Event>
+				<Event Id="77978275" Name="Ambient" ObjectPath="\Events\Default Work Unit\Ambient" GUID="{C52C6636-6E23-4BB5-BD61-7E214AC3C2BD}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6E498B6E-8A59-15E0-5A98-30B4FA2CE312}</FileHash>
+	<FileHash>{EF924020-76EF-5FFF-DF1A-B54BC1C4A6EE}</FileHash>
 </SoundBanksInfo>
