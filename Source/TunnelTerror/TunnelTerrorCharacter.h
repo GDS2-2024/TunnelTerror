@@ -195,6 +195,9 @@ public:
 	UFUNCTION()
 	void EndSporeInfection();
 
+	UFUNCTION(BlueprintImplementableEvent)
+	void PlayItemPickupSFX();
+	
 	// Variable is set by an item pickup
 	// Used to reference pickup object when player presses 'E' to interact
 	UPROPERTY(ReplicatedUsing = OnRep_CollidedPickup, VisibleAnywhere)
