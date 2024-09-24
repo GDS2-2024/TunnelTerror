@@ -25,11 +25,15 @@ public:
 	virtual void OnPickupBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 		UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& HitInfo) override;
 
-	UFUNCTION(Server, Reliable)
 	void OnInteract();
 
 	UFUNCTION(NetMulticast, Reliable)
 	void TurnOff();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void TurnOffBP();
+
+	bool bIsOff = false;
 
 protected:
 	UPROPERTY(BlueprintReadWrite)

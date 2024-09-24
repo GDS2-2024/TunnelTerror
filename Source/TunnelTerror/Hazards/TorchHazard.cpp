@@ -16,23 +16,33 @@ void ATorchHazard::OnPickupBeginOverlap(UPrimitiveComponent* OverlappedComponent
 {
 	if (ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(OtherActor))
 		if (!Player->GetIsInfected()) return;
+	if (bIsOff) return;
 	
 	Super::OnPickupBeginOverlap(OverlappedComponent, OtherActor, OtherComponent, OtherBodyIndex, bFromSweep, HitInfo);
 }
 
 void ATorchHazard::TurnOff_Implementation()
 {
-	PointLight2->SetVisibility(false);
+	TurnOffBP();
+	// PointLight2->SetVisibility(false);
 }
-void ATorchHazard::OnInteract_Implementation()
+
+void ATorchHazard::OnInteract()
 {
+	if (bIsOff) return;
+
+	// server function
 	TurnOff();
+	PointLight2->SetVisibility(false);
+	bIsOff = true;
 
 	for (TActorIterator<ATorchHazard> It(GetWorld()); It; ++It)
 	{
 		ATorchHazard* torch = *It;
 		if ((torch->GetActorLocation() - GetActorLocation()).Length() <= SabotageRange) {
+			torch->PointLight2->SetVisibility(false);
 			torch->TurnOff();
+			torch->bIsOff = true;
 		}
 	}
 }

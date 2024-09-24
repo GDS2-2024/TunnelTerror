@@ -243,7 +243,6 @@ void ATunnelTerrorCharacter::ServerInteractWithTorch_Implementation(ATorchHazard
 
 void ATunnelTerrorCharacter::ServerInteractWithBridge_Implementation(ABridgeSabotager* BridgeSabotager)
 {
-	UE_LOG(LogTemp, Log, TEXT("Test 0"));
 	BridgeSabotager->OnInteract();
 }
 
