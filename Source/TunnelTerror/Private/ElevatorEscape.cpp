@@ -91,7 +91,7 @@ void AElevatorEscape::AddSampleImplementation(int newSamples)
 		UE_LOG(LogTemp, Log, TEXT("Current samples after: %d"), currentSamples);
 	}
 
-	if (currentSamples == samplesNeeded)
+	if (currentSamples >= samplesNeeded)
 	{
 		UE_LOG(LogTemp, Log, TEXT("Has enough samples: %d"), currentSamples);
 		if (HasAuthority())

@@ -27,7 +27,7 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 	bIsInfected = false;
 	health = 100.0f;
 
-	trapCD = 10.0f;
+	trapCD = 30.0f;
 	trapCDCurrent = 0.0f;
 
 	samples = 0;
