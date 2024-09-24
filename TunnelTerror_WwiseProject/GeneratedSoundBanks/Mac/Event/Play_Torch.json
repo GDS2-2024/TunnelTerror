@@ -1,0 +1,106 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "2025845440",
+    "Type": "Event",
+    "GUID": "{F05E8152-8526-474A-8CD3-14071D451BB3}",
+    "Language": "SFX",
+    "Hash": "{21D7EC4F-F58F-6354-599A-8790B4A72C4B}",
+    "ObjectPath": "Play_Torch",
+    "ShortName": "Play_Torch",
+    "Path": "Event/Play_Torch.bnk",
+    "Media": [
+     {
+      "Id": "205328698",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Torch\\Torch_2.wav",
+      "Path": "Media/205328698.wem",
+      "CachePath": "SFX/Torch/Torch_2_818F3B66.wem"
+     },
+     {
+      "Id": "356177841",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Torch\\Torch_5.wav",
+      "Path": "Media/356177841.wem",
+      "CachePath": "SFX/Torch/Torch_5_818F3B66.wem"
+     },
+     {
+      "Id": "660290965",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Torch\\Torch_6.wav",
+      "Path": "Media/660290965.wem",
+      "CachePath": "SFX/Torch/Torch_6_818F3B66.wem"
+     },
+     {
+      "Id": "739850819",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Torch\\Torch_3.wav",
+      "Path": "Media/739850819.wem",
+      "CachePath": "SFX/Torch/Torch_3_818F3B66.wem"
+     },
+     {
+      "Id": "1006806049",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Torch\\Torch_4.wav",
+      "Path": "Media/1006806049.wem",
+      "CachePath": "SFX/Torch/Torch_4_818F3B66.wem"
+     },
+     {
+      "Id": "1057154220",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Torch\\Torch_1.wav",
+      "Path": "Media/1057154220.wem",
+      "CachePath": "SFX/Torch/Torch_1_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2025845440",
+      "Name": "Play_Torch",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Torch",
+      "GUID": "{F05E8152-8526-474A-8CD3-14071D451BB3}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "205328698"
+       },
+       {
+        "Id": "356177841"
+       },
+       {
+        "Id": "660290965"
+       },
+       {
+        "Id": "739850819"
+       },
+       {
+        "Id": "1006806049"
+       },
+       {
+        "Id": "1057154220"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{857D5499-3209-E06B-8D05-C82F4E23E874}"
+ }
+}
