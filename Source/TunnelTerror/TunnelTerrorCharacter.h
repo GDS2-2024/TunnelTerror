@@ -254,11 +254,14 @@ public:
 	UPlayerHUD* PlayerHUD;
 
 	UFUNCTION(BlueprintImplementableEvent)
+	void EquipTorch(bool bEquip);
+	
+	UFUNCTION(BlueprintImplementableEvent)
 	void EquipCompass(bool bEquip);
 	
 	UFUNCTION(BlueprintImplementableEvent)
 	void EquipPickaxe(bool bEquip);
-
+	
 	UFUNCTION(BlueprintImplementableEvent)
 	void SwingPickaxe(bool bEquip);
 
