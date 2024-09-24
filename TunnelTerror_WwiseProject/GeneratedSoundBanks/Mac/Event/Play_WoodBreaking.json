@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "2284361370",
+    "Type": "Event",
+    "GUID": "{0F14277F-3996-484C-A37D-4633DA6B3085}",
+    "Language": "SFX",
+    "Hash": "{AD0A87E2-FDFA-87C5-A139-73615E73B411}",
+    "ObjectPath": "Play_WoodBreaking",
+    "ShortName": "Play_WoodBreaking",
+    "Path": "Event/Play_WoodBreaking.bnk",
+    "Media": [
+     {
+      "Id": "64405040",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "WoodSmash.wav",
+      "Path": "Media/64405040.wem",
+      "CachePath": "SFX/WoodSmash_5875AC8D.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2284361370",
+      "Name": "Play_WoodBreaking",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_WoodBreaking",
+      "GUID": "{0F14277F-3996-484C-A37D-4633DA6B3085}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2104591",
+      "DurationMax": "1.4394866",
+      "MediaRefs": [
+       {
+        "Id": "64405040"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{575E80CC-2BD0-9FBC-004F-34FFE39003E1}"
+ }
+}

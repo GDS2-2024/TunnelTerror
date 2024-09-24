@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{353A940F-F92A-424D-9FBD-0DE26DC40E2E}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="BridgeSabotage" ID="{353A940F-F92A-424D-9FBD-0DE26DC40E2E}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="Snap" ID="{D2BA8D10-E468-4640-9BB1-BD9EE9EB5242}" ShortID="64422990">
+					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>40</Value>
+							</ValueList>
+						</Property>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-2000</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{8A9019F2-C403-4256-82CF-A8CBA7B4D9DE}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="200"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Snap_1" ID="{192FF296-1578-4490-922A-B054AB8A74D9}" ShortID="107558339">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Snap_1" ID="{8D39C35D-5166-490C-8655-AD515B4000AC}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.00405234460196292"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.00911777535441657"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.130688113413304"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.284677208287895"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Snap\Snap_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="545870618"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Snap_1" ID="{8D39C35D-5166-490C-8655-AD515B4000AC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Snap_2" ID="{27E230B4-C76B-4997-91AF-5C4781BD72A7}" ShortID="388784454">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Snap_2" ID="{4D75B764-718B-49E9-A1FC-435E78CAFD32}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.00157334832788077"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0569552094692839"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.104470328971283"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.252994411123228"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Snap\Snap_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="717525355"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Snap_2" ID="{4D75B764-718B-49E9-A1FC-435E78CAFD32}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Snap_3" ID="{E3277A65-B317-4572-8AD0-A637EC304DE9}" ShortID="512873880">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Snap_3" ID="{EF2A0468-1D03-409C-BA3D-34C4E4BAD18A}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0021412213740458"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.00832697201017812"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.06685368956743"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.165349872773537"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Snap\Snap_3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="61820815"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Snap_3" ID="{EF2A0468-1D03-409C-BA3D-34C4E4BAD18A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Snap_4" ID="{2428EF72-5D31-47DB-9EA3-CF1F3FC9C495}" ShortID="251357219">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Snap_4" ID="{9F5EC9DB-06FA-4695-AE0D-6A221E68BBCB}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.00368388767720829"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.017191475826972"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.114814499272992"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.215814419756452"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Snap\Snap_4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="837363706"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Snap_4" ID="{9F5EC9DB-06FA-4695-AE0D-6A221E68BBCB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<Sound Name="WoodBreaking" ID="{EE5EF288-95FE-4C96-B2B5-3D4590F95625}" ShortID="331429810">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-450</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{86A09677-F817-46B6-9B86-D246193B89E8}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="150"/>
+											<Property Name="Min" Type="Real64" Value="-150"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="WoodSmash" ID="{62F99CCB-2F81-4BAA-AE58-1226971D0372}">
+							<PropertyList>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.030879225736096"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>WoodSmash.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="64405040"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{84DF4D9E-BA6F-4996-A28A-0CA04E450D37}" ShortID="351272748">
+										<ReferenceList/>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+					<ActiveSourceList>
+						<ActiveSource Name="WoodSmash" ID="{62F99CCB-2F81-4BAA-AE58-1226971D0372}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

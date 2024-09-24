@@ -9,15 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="77978275" Type="Event" GUID="{C52C6636-6E23-4BB5-BD61-7E214AC3C2BD}" Language="SFX" Hash="{C6144C6C-12B6-0993-6838-8E43B78D5C12}">
-			<ObjectPath>Ambient</ObjectPath>
-			<ShortName>Ambient</ShortName>
-			<Path>Event/Ambient.bnk</Path>
-			<Events>
-				<Event Id="77978275" Name="Ambient" ObjectPath="\Events\Default Work Unit\Ambient" GUID="{C52C6636-6E23-4BB5-BD61-7E214AC3C2BD}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="1120692842" Type="Event" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" Language="SFX" Hash="{4656DE50-B661-EF22-B083-190E4C30C206}">
+		<SoundBank Id="1120692842" Type="Event" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" Language="SFX" Hash="{0E5E7980-4EE1-BBDC-26F7-A94A9FF97D1C}">
 			<ObjectPath>Play_RockFall</ObjectPath>
 			<ShortName>Play_RockFall</ShortName>
 			<Path>Event/Play_RockFall.bnk</Path>
@@ -59,7 +51,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1120692842" Name="Play_RockFall" ObjectPath="\Events\Default Work Unit\Play_RockFall" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" DurationType="OneShot" DurationMin="3.9577818" DurationMax="6.0503273">
+				<Event Id="1120692842" Name="Play_RockFall" ObjectPath="\Events\Default Work Unit\Play_RockFall" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" DurationType="OneShot" DurationMin="4.5565443" DurationMax="6.9171724">
 					<MediaRefs>
 						<MediaRef Id="287643081"/>
 						<MediaRef Id="597728859"/>
@@ -183,6 +175,55 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
+		<SoundBank Id="2025845440" Type="Event" GUID="{F05E8152-8526-474A-8CD3-14071D451BB3}" Language="SFX" Hash="{21D7EC4F-F58F-6354-599A-8790B4A72C4B}">
+			<ObjectPath>Play_Torch</ObjectPath>
+			<ShortName>Play_Torch</ShortName>
+			<Path>Event/Play_Torch.bnk</Path>
+			<Media>
+				<File Id="205328698" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Torch\Torch_2.wav</ShortName>
+					<Path>Media/205328698.wem</Path>
+					<CachePath>SFX/Torch/Torch_2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="356177841" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Torch\Torch_5.wav</ShortName>
+					<Path>Media/356177841.wem</Path>
+					<CachePath>SFX/Torch/Torch_5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="660290965" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Torch\Torch_6.wav</ShortName>
+					<Path>Media/660290965.wem</Path>
+					<CachePath>SFX/Torch/Torch_6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="739850819" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Torch\Torch_3.wav</ShortName>
+					<Path>Media/739850819.wem</Path>
+					<CachePath>SFX/Torch/Torch_3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1006806049" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Torch\Torch_4.wav</ShortName>
+					<Path>Media/1006806049.wem</Path>
+					<CachePath>SFX/Torch/Torch_4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1057154220" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Torch\Torch_1.wav</ShortName>
+					<Path>Media/1057154220.wem</Path>
+					<CachePath>SFX/Torch/Torch_1_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2025845440" Name="Play_Torch" ObjectPath="\Events\Default Work Unit\Play_Torch" GUID="{F05E8152-8526-474A-8CD3-14071D451BB3}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="205328698"/>
+						<MediaRef Id="356177841"/>
+						<MediaRef Id="660290965"/>
+						<MediaRef Id="739850819"/>
+						<MediaRef Id="1006806049"/>
+						<MediaRef Id="1057154220"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="2145253833" Type="Event" GUID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}" Language="SFX" Hash="{B241E64F-32B2-BB63-E687-98EB700CA902}">
 			<ObjectPath>Atmosphere</ObjectPath>
 			<ShortName>Atmosphere</ShortName>
@@ -224,14 +265,62 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3034623661" Type="Event" GUID="{85CCB3B4-AB10-4FD6-AC39-E56645010615}" Language="SFX" Hash="{973F5161-49F4-2402-729D-94CBBF71EFAA}">
-			<ObjectPath>Atmos</ObjectPath>
-			<ShortName>Atmos</ShortName>
-			<Path>Event/Atmos.bnk</Path>
+		<SoundBank Id="2284361370" Type="Event" GUID="{0F14277F-3996-484C-A37D-4633DA6B3085}" Language="SFX" Hash="{AD0A87E2-FDFA-87C5-A139-73615E73B411}">
+			<ObjectPath>Play_WoodBreaking</ObjectPath>
+			<ShortName>Play_WoodBreaking</ShortName>
+			<Path>Event/Play_WoodBreaking.bnk</Path>
+			<Media>
+				<File Id="64405040" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>WoodSmash.wav</ShortName>
+					<Path>Media/64405040.wem</Path>
+					<CachePath>SFX/WoodSmash_5875AC8D.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="3034623661" Name="Atmos" ObjectPath="\Events\Default Work Unit\Atmos" GUID="{85CCB3B4-AB10-4FD6-AC39-E56645010615}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2284361370" Name="Play_WoodBreaking" ObjectPath="\Events\Default Work Unit\Play_WoodBreaking" GUID="{0F14277F-3996-484C-A37D-4633DA6B3085}" DurationType="OneShot" DurationMin="1.2104591" DurationMax="1.4394866">
+					<MediaRefs>
+						<MediaRef Id="64405040"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="3858275350" Type="Event" GUID="{A7C25A1B-0608-4060-9C29-134EBEA4D185}" Language="SFX" Hash="{D228DECA-5BBD-14DE-C247-3FD9F11F97C9}">
+			<ObjectPath>Play_Snap</ObjectPath>
+			<ShortName>Play_Snap</ShortName>
+			<Path>Event/Play_Snap.bnk</Path>
+			<Media>
+				<File Id="61820815" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Snap\Snap_3.wav</ShortName>
+					<Path>Media/61820815.wem</Path>
+					<CachePath>SFX/Snap/Snap_3_AA97B9F8.wem</CachePath>
+				</File>
+				<File Id="545870618" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Snap\Snap_1.wav</ShortName>
+					<Path>Media/545870618.wem</Path>
+					<CachePath>SFX/Snap/Snap_1_122AC65D.wem</CachePath>
+				</File>
+				<File Id="717525355" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Snap\Snap_2.wav</ShortName>
+					<Path>Media/717525355.wem</Path>
+					<CachePath>SFX/Snap/Snap_2_4F641505.wem</CachePath>
+				</File>
+				<File Id="837363706" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Snap\Snap_4.wav</ShortName>
+					<Path>Media/837363706.wem</Path>
+					<CachePath>SFX/Snap/Snap_4_264CD53B.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3858275350" Name="Play_Snap" ObjectPath="\Events\Default Work Unit\Play_Snap" GUID="{A7C25A1B-0608-4060-9C29-134EBEA4D185}" DurationType="OneShot" DurationMin="0.27858928" DurationMax="0.4888849">
+					<MediaRefs>
+						<MediaRef Id="61820815"/>
+						<MediaRef Id="545870618"/>
+						<MediaRef Id="717525355"/>
+						<MediaRef Id="837363706"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{700DD9EF-CC85-C8B5-28CE-DF4E83AB19E0}</FileHash>
+	<FileHash>{4A8FC7D8-8961-809F-D445-73AAE841B88E}</FileHash>
 </SoundBanksInfo>

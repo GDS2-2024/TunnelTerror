@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3858275350	Play_Snap			\Default Work Unit\Play_Snap	
+
