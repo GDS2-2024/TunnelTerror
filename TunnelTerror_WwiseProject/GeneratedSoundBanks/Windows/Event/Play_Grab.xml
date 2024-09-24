@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="17721092" Type="Event" GUID="{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}" Language="SFX" Hash="{3205429A-7C3C-DFB6-2B57-CC67D2D8CFB7}">
+			<ObjectPath>Play_Grab</ObjectPath>
+			<ShortName>Play_Grab</ShortName>
+			<Path>Event/Play_Grab.bnk</Path>
+			<Media>
+				<File Id="363834967" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Grab\Grab_3.wav</ShortName>
+					<Path>Media/363834967.wem</Path>
+					<CachePath>SFX/Grab/Grab_3_1EC4DA32.wem</CachePath>
+				</File>
+				<File Id="644454746" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Grab\Grab_2.wav</ShortName>
+					<Path>Media/644454746.wem</Path>
+					<CachePath>SFX/Grab/Grab_2_A836BF12.wem</CachePath>
+				</File>
+				<File Id="1024521790" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Grab\Grab_1.wav</ShortName>
+					<Path>Media/1024521790.wem</Path>
+					<CachePath>SFX/Grab/Grab_1_B55A4CF6.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="17721092" Name="Play_Grab" ObjectPath="\Events\Default Work Unit\Play_Grab" GUID="{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}" MaxAttenuation="8000" DurationType="OneShot" DurationMin="0.060328994" DurationMax="0.094719194">
+					<MediaRefs>
+						<MediaRef Id="363834967"/>
+						<MediaRef Id="644454746"/>
+						<MediaRef Id="1024521790"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{3B8B72E6-9370-6624-1E14-DA28F41F3B35}</FileHash>
+</SoundBanksInfo>

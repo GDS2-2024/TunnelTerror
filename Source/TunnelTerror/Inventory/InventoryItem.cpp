@@ -3,7 +3,9 @@
 
 #include "InventoryItem.h"
 
+#include "InventoryComponent.h"
 #include "Net/UnrealNetwork.h"
+#include "TunnelTerror/TunnelTerrorCharacter.h"
 
 AInventoryItem::AInventoryItem()
 {
@@ -19,9 +21,10 @@ AInventoryItem::AInventoryItem()
 void AInventoryItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-	DOREPLIFETIME(AInventoryItem, ItemName);
-	DOREPLIFETIME(AInventoryItem, InventoryIcon);
-	DOREPLIFETIME(AInventoryItem, ItemMesh);
+	DOREPLIFETIME(AInventoryItem, ItemName)
+	DOREPLIFETIME(AInventoryItem, InventoryIcon)
+	DOREPLIFETIME(AInventoryItem, ItemMesh)
+	DOREPLIFETIME(AInventoryItem, Player)
 }
 
 void AInventoryItem::UseItem()
@@ -29,11 +32,27 @@ void AInventoryItem::UseItem()
 	UE_LOG(LogTemp, Warning, TEXT("UseItem() called in Base Class (default implementation)"));
 }
 
+void AInventoryItem::ReleaseUseItem()
+{
+	UE_LOG(LogTemp, Warning, TEXT("ReleaseUseItem() called in Base Class (default implementation)"));
+}
+
 void AInventoryItem::ShowItem()
 {
 	if (ItemMesh)
 	{
 		ItemMesh->SetVisibility(true);
+		TArray<USceneComponent*> ChildrenArray;
+		ItemMesh->GetChildrenComponents(true, ChildrenArray);
+
+		// Check if there are any children and set their visibility to true
+		for (USceneComponent* Element : ChildrenArray)
+		{
+			if (Element)
+			{
+				Element->SetVisibility(true);
+			}
+		}
 	}
 }
 
@@ -42,5 +61,16 @@ void AInventoryItem::HideItem()
 	if (ItemMesh)
 	{
 		ItemMesh->SetVisibility(false);
+		TArray<USceneComponent*> ChildrenArray;
+		ItemMesh->GetChildrenComponents(true, ChildrenArray);
+
+		// Check if there are any children and set their visibility to false
+		for (USceneComponent* Element : ChildrenArray)
+		{
+			if (Element)
+			{
+				Element->SetVisibility(false);
+			}
+		}
 	}
 }

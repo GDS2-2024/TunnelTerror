@@ -1,0 +1,770 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "RootPaths": {
+   "ProjectRoot": "../..",
+   "SourceFilesRoot": "../../.cache/Windows",
+   "SoundBanksRoot": ".",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "."
+  },
+  "DialogueEvents": [],
+  "SoundBanks": [
+   {
+    "Id": "17721092",
+    "Type": "Event",
+    "GUID": "{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}",
+    "Language": "SFX",
+    "Hash": "{3205429A-7C3C-DFB6-2B57-CC67D2D8CFB7}",
+    "ObjectPath": "Play_Grab",
+    "ShortName": "Play_Grab",
+    "Path": "Event/Play_Grab.bnk",
+    "Media": [
+     {
+      "Id": "363834967",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Grab\\Grab_3.wav",
+      "Path": "Media/363834967.wem",
+      "CachePath": "SFX/Grab/Grab_3_1EC4DA32.wem"
+     },
+     {
+      "Id": "644454746",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Grab\\Grab_2.wav",
+      "Path": "Media/644454746.wem",
+      "CachePath": "SFX/Grab/Grab_2_A836BF12.wem"
+     },
+     {
+      "Id": "1024521790",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Grab\\Grab_1.wav",
+      "Path": "Media/1024521790.wem",
+      "CachePath": "SFX/Grab/Grab_1_B55A4CF6.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "17721092",
+      "Name": "Play_Grab",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Grab",
+      "GUID": "{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}",
+      "MaxAttenuation": "8000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.060328994",
+      "DurationMax": "0.094719194",
+      "MediaRefs": [
+       {
+        "Id": "363834967"
+       },
+       {
+        "Id": "644454746"
+       },
+       {
+        "Id": "1024521790"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "1120692842",
+    "Type": "Event",
+    "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
+    "Language": "SFX",
+    "Hash": "{236B0FF5-C3AD-01A1-2004-8D98BAEBE145}",
+    "ObjectPath": "Play_RockFall",
+    "ShortName": "Play_RockFall",
+    "Path": "Event/Play_RockFall.bnk",
+    "Media": [
+     {
+      "Id": "287643081",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "RockShatter.WAV",
+      "Path": "Media/287643081.wem",
+      "CachePath": "SFX/RockShatter_E1C12152.wem"
+     },
+     {
+      "Id": "597728859",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "RockHitGround\\RockHitGround_4.wav",
+      "Path": "Media/597728859.wem",
+      "CachePath": "SFX/RockHitGround/RockHitGround_4_7A1179AA.wem"
+     },
+     {
+      "Id": "697333171",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "RockShatter.WAV",
+      "Path": "Media/697333171.wem",
+      "CachePath": "SFX/RockShatter_BFC59738.wem"
+     },
+     {
+      "Id": "698207414",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "RockShatter.WAV",
+      "Path": "Media/698207414.wem",
+      "CachePath": "SFX/RockShatter_2B5CC4BC.wem"
+     },
+     {
+      "Id": "874392032",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "RockHitGround\\RockHitGround_1.wav",
+      "Path": "Media/874392032.wem",
+      "CachePath": "SFX/RockHitGround/RockHitGround_1_4FCD9C49.wem"
+     },
+     {
+      "Id": "953321177",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "RockHitGround\\RockHitGround_2.wav",
+      "Path": "Media/953321177.wem",
+      "CachePath": "SFX/RockHitGround/RockHitGround_2_D678C78D.wem"
+     },
+     {
+      "Id": "953676981",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "RockHitGround\\RockHitGround_5.wav",
+      "Path": "Media/953676981.wem",
+      "CachePath": "SFX/RockHitGround/RockHitGround_5_8F54B111.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1120692842",
+      "Name": "Play_RockFall",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_RockFall",
+      "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
+      "MaxAttenuation": "8000",
+      "DurationType": "OneShot",
+      "DurationMin": "4.5565443",
+      "DurationMax": "6.9171724",
+      "MediaRefs": [
+       {
+        "Id": "287643081"
+       },
+       {
+        "Id": "597728859"
+       },
+       {
+        "Id": "697333171"
+       },
+       {
+        "Id": "698207414"
+       },
+       {
+        "Id": "874392032"
+       },
+       {
+        "Id": "953321177"
+       },
+       {
+        "Id": "953676981"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "1355168291",
+    "Type": "User",
+    "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
+    "Language": "SFX",
+    "Hash": "{5F23DADF-D975-64C1-373C-4F7DDF07BB4E}",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk",
+    "Plugins": {
+     "AudioDevices": [
+      {
+       "Id": "2317455096",
+       "Name": "No_Output",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\No_Output",
+       "GUID": "{B4C51FD9-285F-4DFD-BA1B-25DD244A8291}",
+       "LibName": "No Output",
+       "LibId": "11862023"
+      },
+      {
+       "Id": "3859886410",
+       "Name": "System",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\System",
+       "GUID": "{64440769-83E5-4BDC-8DB5-CFE26EEAE858}",
+       "LibName": "System",
+       "LibId": "11403271"
+      }
+     ]
+    },
+    "Busses": [
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "684570577",
+      "Name": "Footstep_Material",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Footstep_Material",
+      "GUID": "{4FAE6E9C-097A-4DB7-A22C-511803987DAF}",
+      "Switches": [
+       {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footstep_Material\\Stone",
+        "GUID": "{DC7588E2-DD74-4930-A917-252AED41CA17}"
+       },
+       {
+        "Id": "2058049674",
+        "Name": "Wood",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footstep_Material\\Wood",
+        "GUID": "{6074456D-A32A-4AAB-8F46-E09F5F98685E}"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "1805011878",
+    "Type": "Event",
+    "GUID": "{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}",
+    "Language": "SFX",
+    "Hash": "{4412F5D2-79A6-B0B2-A035-097F8F60DEB4}",
+    "ObjectPath": "Play_PlayerFootsteps",
+    "ShortName": "Play_PlayerFootsteps",
+    "Path": "Event/Play_PlayerFootsteps.bnk",
+    "Media": [
+     {
+      "Id": "174242041",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "WoodStep4.wav",
+      "Path": "Media/174242041.wem",
+      "CachePath": "SFX/WoodStep4_193247EC.wem"
+     },
+     {
+      "Id": "176085961",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "StoneStep1.wav",
+      "Path": "Media/176085961.wem",
+      "CachePath": "SFX/StoneStep1_F2809F3D.wem"
+     },
+     {
+      "Id": "322751387",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "StoneStep2.wav",
+      "Path": "Media/322751387.wem",
+      "CachePath": "SFX/StoneStep2_2F65FE3A.wem"
+     },
+     {
+      "Id": "565152878",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "StoneStep3.wav",
+      "Path": "Media/565152878.wem",
+      "CachePath": "SFX/StoneStep3_9473F992.wem"
+     },
+     {
+      "Id": "909267900",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "WoodStep3.wav",
+      "Path": "Media/909267900.wem",
+      "CachePath": "SFX/WoodStep3_2EBCB4DD.wem"
+     },
+     {
+      "Id": "925154816",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "StoneStep4.wav",
+      "Path": "Media/925154816.wem",
+      "CachePath": "SFX/StoneStep4_7E01015C.wem"
+     },
+     {
+      "Id": "934607535",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "WoodStep2.wav",
+      "Path": "Media/934607535.wem",
+      "CachePath": "SFX/WoodStep2_1AF46CEE.wem"
+     },
+     {
+      "Id": "1020823742",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "WoodStep1.wav",
+      "Path": "Media/1020823742.wem",
+      "CachePath": "SFX/WoodStep1_FA1BE85F.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1820854077",
+       "Name": "Noise_Gate_Fast_Attack",
+       "ObjectPath": "\\Effects\\Factory Effects\\Expander\\Noise_Gate_Fast_Attack",
+       "GUID": "{747A6B61-E953-474C-8227-672C884DA616}",
+       "LibName": "Wwise Expander",
+       "LibId": "7143427"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "1805011878",
+      "Name": "Play_PlayerFootsteps",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_PlayerFootsteps",
+      "GUID": "{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}",
+      "MaxAttenuation": "8000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.38742706",
+      "DurationMax": "0.74843657",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "684570577",
+         "Id": "2058049674",
+         "GUID": "{6074456D-A32A-4AAB-8F46-E09F5F98685E}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "174242041"
+         },
+         {
+          "Id": "909267900"
+         },
+         {
+          "Id": "934607535"
+         },
+         {
+          "Id": "1020823742"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "684570577",
+         "Id": "1216965916",
+         "GUID": "{DC7588E2-DD74-4930-A917-252AED41CA17}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "176085961"
+         },
+         {
+          "Id": "322751387"
+         },
+         {
+          "Id": "565152878"
+         },
+         {
+          "Id": "925154816"
+         }
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "1820854077"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "684570577",
+      "Name": "Footstep_Material",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Footstep_Material",
+      "GUID": "{4FAE6E9C-097A-4DB7-A22C-511803987DAF}",
+      "Switches": [
+       {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footstep_Material\\Stone",
+        "GUID": "{DC7588E2-DD74-4930-A917-252AED41CA17}"
+       },
+       {
+        "Id": "2058049674",
+        "Name": "Wood",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footstep_Material\\Wood",
+        "GUID": "{6074456D-A32A-4AAB-8F46-E09F5F98685E}"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "2025845440",
+    "Type": "Event",
+    "GUID": "{F05E8152-8526-474A-8CD3-14071D451BB3}",
+    "Language": "SFX",
+    "Hash": "{3C5C6552-218A-4E0C-E632-FEFCA4DE8164}",
+    "ObjectPath": "Play_Torch",
+    "ShortName": "Play_Torch",
+    "Path": "Event/Play_Torch.bnk",
+    "Media": [
+     {
+      "Id": "205328698",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Torch\\Torch_2.wav",
+      "Path": "Media/205328698.wem",
+      "CachePath": "SFX/Torch/Torch_2_818F3B66.wem"
+     },
+     {
+      "Id": "356177841",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Torch\\Torch_5.wav",
+      "Path": "Media/356177841.wem",
+      "CachePath": "SFX/Torch/Torch_5_818F3B66.wem"
+     },
+     {
+      "Id": "660290965",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Torch\\Torch_6.wav",
+      "Path": "Media/660290965.wem",
+      "CachePath": "SFX/Torch/Torch_6_818F3B66.wem"
+     },
+     {
+      "Id": "739850819",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Torch\\Torch_3.wav",
+      "Path": "Media/739850819.wem",
+      "CachePath": "SFX/Torch/Torch_3_818F3B66.wem"
+     },
+     {
+      "Id": "1006806049",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Torch\\Torch_4.wav",
+      "Path": "Media/1006806049.wem",
+      "CachePath": "SFX/Torch/Torch_4_818F3B66.wem"
+     },
+     {
+      "Id": "1057154220",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Torch\\Torch_1.wav",
+      "Path": "Media/1057154220.wem",
+      "CachePath": "SFX/Torch/Torch_1_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2025845440",
+      "Name": "Play_Torch",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Torch",
+      "GUID": "{F05E8152-8526-474A-8CD3-14071D451BB3}",
+      "MaxAttenuation": "8000",
+      "DurationType": "OneShot",
+      "DurationMin": "14.243367",
+      "DurationMax": "21.934233",
+      "MediaRefs": [
+       {
+        "Id": "205328698"
+       },
+       {
+        "Id": "356177841"
+       },
+       {
+        "Id": "660290965"
+       },
+       {
+        "Id": "739850819"
+       },
+       {
+        "Id": "1006806049"
+       },
+       {
+        "Id": "1057154220"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "2145253833",
+    "Type": "Event",
+    "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
+    "Language": "SFX",
+    "Hash": "{B241E64F-32B2-BB63-E687-98EB700CA902}",
+    "ObjectPath": "Atmosphere",
+    "ShortName": "Atmosphere",
+    "Path": "Event/Atmosphere.bnk",
+    "Media": [
+     {
+      "Id": "71860382",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "99S LT Vehicle - Resonation C.wav",
+      "Path": "Media/71860382.wem",
+      "CachePath": "SFX/99S LT Vehicle - Resonation C_6EA773F4.wem"
+     },
+     {
+      "Id": "328367209",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "25879__acclivity__drip1.wav",
+      "Path": "Media/328367209.wem",
+      "CachePath": "SFX/25879__acclivity__drip1_2B5CC65E.wem"
+     },
+     {
+      "Id": "724212248",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA.wav",
+      "Path": "Media/724212248.wem",
+      "CachePath": "SFX/- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA_5B0571AF.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2513915904",
+       "Name": "Hall_Large",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Halls\\Hall_Large",
+       "GUID": "{6D154498-FF6D-4823-96FC-56841B70E079}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "2145253833",
+      "Name": "Atmosphere",
+      "ObjectPath": "\\Events\\Default Work Unit\\Atmosphere",
+      "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "71860382"
+       },
+       {
+        "Id": "328367209"
+       },
+       {
+        "Id": "724212248"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2513915904"
+        }
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "Id": "2284361370",
+    "Type": "Event",
+    "GUID": "{0F14277F-3996-484C-A37D-4633DA6B3085}",
+    "Language": "SFX",
+    "Hash": "{70564EB6-7440-2688-621D-DD088014F097}",
+    "ObjectPath": "Play_WoodBreaking",
+    "ShortName": "Play_WoodBreaking",
+    "Path": "Event/Play_WoodBreaking.bnk",
+    "Media": [
+     {
+      "Id": "61820815",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Snap\\Snap_3.wav",
+      "Path": "Media/61820815.wem",
+      "CachePath": "SFX/Snap/Snap_3_AA97B9F8.wem"
+     },
+     {
+      "Id": "64405040",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "WoodSmash.wav",
+      "Path": "Media/64405040.wem",
+      "CachePath": "SFX/WoodSmash_5875AC8D.wem"
+     },
+     {
+      "Id": "545870618",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Snap\\Snap_1.wav",
+      "Path": "Media/545870618.wem",
+      "CachePath": "SFX/Snap/Snap_1_122AC65D.wem"
+     },
+     {
+      "Id": "717525355",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Snap\\Snap_2.wav",
+      "Path": "Media/717525355.wem",
+      "CachePath": "SFX/Snap/Snap_2_4F641505.wem"
+     },
+     {
+      "Id": "837363706",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Snap\\Snap_4.wav",
+      "Path": "Media/837363706.wem",
+      "CachePath": "SFX/Snap/Snap_4_264CD53B.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2284361370",
+      "Name": "Play_WoodBreaking",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_WoodBreaking",
+      "GUID": "{0F14277F-3996-484C-A37D-4633DA6B3085}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.4104592",
+      "DurationMax": "1.6394867",
+      "MediaRefs": [
+       {
+        "Id": "61820815"
+       },
+       {
+        "Id": "64405040"
+       },
+       {
+        "Id": "545870618"
+       },
+       {
+        "Id": "717525355"
+       },
+       {
+        "Id": "837363706"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "3858275350",
+    "Type": "Event",
+    "GUID": "{A7C25A1B-0608-4060-9C29-134EBEA4D185}",
+    "Language": "SFX",
+    "Hash": "{70B5792A-BDD2-2A1E-639B-35E95A96AC69}",
+    "ObjectPath": "Play_Snap",
+    "ShortName": "Play_Snap",
+    "Path": "Event/Play_Snap.bnk",
+    "Media": [
+     {
+      "Id": "61820815",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Snap\\Snap_3.wav",
+      "Path": "Media/61820815.wem",
+      "CachePath": "SFX/Snap/Snap_3_AA97B9F8.wem"
+     },
+     {
+      "Id": "545870618",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Snap\\Snap_1.wav",
+      "Path": "Media/545870618.wem",
+      "CachePath": "SFX/Snap/Snap_1_122AC65D.wem"
+     },
+     {
+      "Id": "717525355",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Snap\\Snap_2.wav",
+      "Path": "Media/717525355.wem",
+      "CachePath": "SFX/Snap/Snap_2_4F641505.wem"
+     },
+     {
+      "Id": "837363706",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Snap\\Snap_4.wav",
+      "Path": "Media/837363706.wem",
+      "CachePath": "SFX/Snap/Snap_4_264CD53B.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3858275350",
+      "Name": "Play_Snap",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Snap",
+      "GUID": "{A7C25A1B-0608-4060-9C29-134EBEA4D185}",
+      "MaxAttenuation": "8000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.27858928",
+      "DurationMax": "0.4888849",
+      "MediaRefs": [
+       {
+        "Id": "61820815"
+       },
+       {
+        "Id": "545870618"
+       },
+       {
+        "Id": "717525355"
+       },
+       {
+        "Id": "837363706"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{252D9214-A547-6AE7-150C-7DF3334030B0}"
+ }
+}

@@ -2,6 +2,7 @@
 
 #pragma once
 
+#include <TunnelTerror/TunnelTerrorCharacter.h>
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Hazard.generated.h"
@@ -18,9 +19,9 @@ public:
 	AHazard();
 
 protected:
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditAnywhere)
 	USceneComponent* SceneRoot;
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UBoxComponent* Killbox;
 
 	// Called when the game starts or when spawned
@@ -30,7 +31,9 @@ protected:
 	UFUNCTION()
 	void OnHazardOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 		UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& HitInfo);
-
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnKill(ATunnelTerrorCharacter* victim);
 
 
 public:	

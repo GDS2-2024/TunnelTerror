@@ -1,0 +1,85 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "3858275350",
+    "Type": "Event",
+    "GUID": "{A7C25A1B-0608-4060-9C29-134EBEA4D185}",
+    "Language": "SFX",
+    "Hash": "{70B5792A-BDD2-2A1E-639B-35E95A96AC69}",
+    "ObjectPath": "Play_Snap",
+    "ShortName": "Play_Snap",
+    "Path": "Event/Play_Snap.bnk",
+    "Media": [
+     {
+      "Id": "61820815",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Snap\\Snap_3.wav",
+      "Path": "Media/61820815.wem",
+      "CachePath": "SFX/Snap/Snap_3_AA97B9F8.wem"
+     },
+     {
+      "Id": "545870618",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Snap\\Snap_1.wav",
+      "Path": "Media/545870618.wem",
+      "CachePath": "SFX/Snap/Snap_1_122AC65D.wem"
+     },
+     {
+      "Id": "717525355",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Snap\\Snap_2.wav",
+      "Path": "Media/717525355.wem",
+      "CachePath": "SFX/Snap/Snap_2_4F641505.wem"
+     },
+     {
+      "Id": "837363706",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Snap\\Snap_4.wav",
+      "Path": "Media/837363706.wem",
+      "CachePath": "SFX/Snap/Snap_4_264CD53B.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3858275350",
+      "Name": "Play_Snap",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Snap",
+      "GUID": "{A7C25A1B-0608-4060-9C29-134EBEA4D185}",
+      "MaxAttenuation": "8000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.27858928",
+      "DurationMax": "0.4888849",
+      "MediaRefs": [
+       {
+        "Id": "61820815"
+       },
+       {
+        "Id": "545870618"
+       },
+       {
+        "Id": "717525355"
+       },
+       {
+        "Id": "837363706"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{BC5CE6AD-7AF1-05F8-C06E-5B46A907A705}"
+ }
+}

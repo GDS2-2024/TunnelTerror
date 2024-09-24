@@ -15,17 +15,17 @@ ALevelGenerator::ALevelGenerator()
 void ALevelGenerator::BeginPlay()
 {
     Super::BeginPlay();
-    if (HasAuthority()) 
+    if (HasAuthority())
     {
         Seed = FMath::Rand();
-        OnRep_Seed(); 
+        OnRep_Seed();
     }
 
     //FMath::RandInit(Seed);
     //InitializeGrid(Width, Height);
     //SpawnPath(1, EntranceRoom, 50, 0, true);
-    //UE_LOG(LogTemp, Error, TEXT("Rooms: %d"), rooms);
-    
+    UE_LOG(LogTemp, Error, TEXT("Rooms: %d"), rooms);
+
 }
 
 void ALevelGenerator::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
@@ -43,9 +43,12 @@ void ALevelGenerator::Tick(float DeltaTime)
 
 void ALevelGenerator::OnRep_Seed()
 {
-    FMath::RandInit(Seed);
-    InitializeGrid(Width, Height);
-    SpawnPath(1, EntranceRoom, StartI, StartJ, true);
+    if (HasAuthority())
+    {
+        FMath::RandInit(Seed);
+        InitializeGrid(Width, Height);
+        SpawnPath(1, EntranceRoom, StartI, StartJ, true);
+    }
 }
 
 void ALevelGenerator::InitializeGrid(int32 GridWidth, int32 GridHeight)
@@ -81,6 +84,7 @@ URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubc
     FVector SpawnLocation(CurrentJ * CellSize, CurrentI * CellSize, 0.0f);
     LastRoomSpawned = GetWorld()->SpawnActor<AActor>(ActorToSpawn, SpawnLocation, FRotator::ZeroRotator);
     URoomComponent* RC = LastRoomSpawned->GetComponentByClass<URoomComponent>();
+    rooms += 1;
 
     //spawn items in the rooms
     if (!RC->SpawnLocations.IsEmpty()) {
@@ -89,8 +93,10 @@ URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubc
                 TArray<int32> locations;
 
                 int32 rand = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
+                int32 randomItem = FMath::RandRange(0, Items.Num() - 1);
+
                 FVector location = LastRoomSpawned->GetActorLocation() + RC->SpawnLocations[rand];
-                AActor* ItemSpawned = GetWorld()->SpawnActor<AActor>(PickupItem, location, FRotator::ZeroRotator);
+                AActor* ItemSpawned = GetWorld()->SpawnActor<AActor>(Items[randomItem], location, FRotator::ZeroRotator);
                 locations.Add(rand);
 
                 for (int i = 0; i < 5; i++) {
@@ -101,7 +107,6 @@ URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubc
                     location = LastRoomSpawned->GetActorLocation() + RC->SpawnLocations[rand];
                     AActor* HazardSpawned = GetWorld()->SpawnActor<AActor>(Hazard1, location, FRotator::ZeroRotator);
                     locations.Add(rand);
-                    UE_LOG(LogTemp, Error, TEXT("hazard"));
                 }
             }
             else {
@@ -116,7 +121,6 @@ URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubc
             int32 rand3 = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
             FVector location = LastRoomSpawned->GetActorLocation() + RC->SpawnLocations[rand3];
             AActor* SampleSpawned = GetWorld()->SpawnActor<AActor>(Sample, location, FRotator::ZeroRotator);
-            UE_LOG(LogTemp, Error, TEXT("sample SPAWNED"));
         }
     }
 
@@ -134,7 +138,7 @@ URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubc
                 FVector Place(j * CellSize, i * CellSize, 400.0f);
                 GetWorld()->SpawnActor<AActor>(GridTrue, Place, FRotator::ZeroRotator);
             }
-            
+
             //DrawDebugSphere(GetWorld(), Place, 50.0f, 12, FColor::Red, true, -1.0f, 0, 2.0f);
         }
         else
@@ -151,16 +155,14 @@ void ALevelGenerator::SpawnPath(int32 LastDoor, FRoom StartRoom, int32 CurrentI,
 {
     int32 NextI = 0;
     int32 NextJ = 0;
-    rooms = 0;
     TSubclassOf<AActor> ActorToSpawnNext = nullptr;
     URoomComponent* RC = nullptr;
-    
+
     bool spawnedT = false;
 
     addPath++;
     LastActor = StartRoom;
     RC = SpawnRoom(CurrentI, CurrentJ, LastActor.Actor, false, false);
-    rooms += 1;
 
     for (int i = 0; i < RoomsNumber; i++)
     {
@@ -197,7 +199,6 @@ void ALevelGenerator::SpawnPath(int32 LastDoor, FRoom StartRoom, int32 CurrentI,
                     int32 rand3 = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
                     FVector location = LastRoomSpawned->GetActorLocation() + RC->SpawnLocations[rand3];
                     AActor* SampleSpawned = GetWorld()->SpawnActor<AActor>(Sample, location, FRotator::ZeroRotator);
-                    UE_LOG(LogTemp, Error, TEXT("sample SPAWNED"));
                 }
                 RC = SpawnRoom(NextI, NextJ, EndRoom.Actor, false, true);
             }
@@ -214,7 +215,7 @@ void ALevelGenerator::SpawnPath(int32 LastDoor, FRoom StartRoom, int32 CurrentI,
             if (!spawnedT && i % 2 == 0) {
                 RandomIndex = 0;
             }
-            
+
             ActorToSpawnNext = options[RandomIndex].Actor;
             const FRoom& NextActor = options[RandomIndex];
 
@@ -233,19 +234,17 @@ void ALevelGenerator::SpawnPath(int32 LastDoor, FRoom StartRoom, int32 CurrentI,
                 // if corridor
                 if (i % 2 == 0) {
                     RC = SpawnRoom(NextI, NextJ, ActorToSpawnNext, false, false);
-                    UE_LOG(LogTemp, Error, TEXT("looking 2"));
                 }
                 //if room
                 else {
                     RC = SpawnRoom(NextI, NextJ, ActorToSpawnNext, true, false);
-                    UE_LOG(LogTemp, Error, TEXT("looking 4"));
                 }
-                
-                rooms += 1;
+
+
                 UE_LOG(LogTemp, Warning, TEXT("Room spawned: %s"), *ActorToSpawnNext->GetName());
 
                 if (ActorToSpawnNext == Corridors[1].Actor) {
-                    spawnedT = true;  
+                    spawnedT = true;
                 }
 
                 CurrentI = NextI;
@@ -266,20 +265,19 @@ void ALevelGenerator::SpawnPath(int32 LastDoor, FRoom StartRoom, int32 CurrentI,
             AActor* SpawnedActor = GetWorld()->SpawnActor<AActor>(EndRoom.Actor);
             URoomComponent* NextRC = SpawnedActor->GetComponentByClass<URoomComponent>();
             SpawnedActor->Destroy();
-            if (NextRC && CanPlaceEndRoom(NextI, NextJ, NextRC)) 
+            if (NextRC && CanPlaceEndRoom(NextI, NextJ, NextRC))
             {
                 if (!RC->SpawnLocations.IsEmpty()) {
                     int32 rand3 = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
                     FVector location = LastRoomSpawned->GetActorLocation() + RC->SpawnLocations[rand3];
                     AActor* SampleSpawned = GetWorld()->SpawnActor<AActor>(Sample, location, FRotator::ZeroRotator);
-                    UE_LOG(LogTemp, Error, TEXT("sample SPAWNED"));
                 }
                 RC = SpawnRoom(NextI, NextJ, EndRoom.Actor, false, true);
             }
             break;
         }
 
-        
+
     }
 
     number = Doorways.Num();
@@ -290,15 +288,13 @@ void ALevelGenerator::SpawnPath(int32 LastDoor, FRoom StartRoom, int32 CurrentI,
     }
 }
 
-void ALevelGenerator::SpawnAnotherPath(FPlace place) 
+void ALevelGenerator::SpawnAnotherPath(FPlace place)
 {
-    UE_LOG(LogTemp, Error, TEXT("Reached"));
     int32 NextI = 0;
     int32 NextJ = 0;
     int32 CurrentI = place.currentI;
     int32 CurrentJ = place.currentJ;
     int32 LastDoor = place.lastDoor;
-    rooms = 0;
     TSubclassOf<AActor> ActorToSpawnNext = nullptr;
     URoomComponent* RC = nullptr;
 
@@ -330,12 +326,12 @@ void ALevelGenerator::SpawnAnotherPath(FPlace place)
         }
 
         if (LastActor.Doors[LastDoor] == "X") {
-            NextI = CurrentI + RC->xDoors[LastDoor-1].Y;
-            NextJ = CurrentJ + RC->xDoors[LastDoor-1].X;
+            NextI = CurrentI + RC->xDoors[LastDoor - 1].Y;
+            NextJ = CurrentJ + RC->xDoors[LastDoor - 1].X;
         }
         else if (LastActor.Doors[LastDoor] == "Y") {
-            NextI = CurrentI + RC->yDoors[LastDoor-1].Y;
-            NextJ = CurrentJ + RC->yDoors[LastDoor-1].X;
+            NextI = CurrentI + RC->yDoors[LastDoor - 1].Y;
+            NextJ = CurrentJ + RC->yDoors[LastDoor - 1].X;
         }
 
         if (i == RoomsNumber - 1)
@@ -350,7 +346,6 @@ void ALevelGenerator::SpawnAnotherPath(FPlace place)
                     int32 rand3 = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
                     FVector location = LastRoomSpawned->GetActorLocation() + RC->SpawnLocations[rand3];
                     AActor* SampleSpawned = GetWorld()->SpawnActor<AActor>(Sample, location, FRotator::ZeroRotator);
-                    UE_LOG(LogTemp, Error, TEXT("sample SPAWNED"));
                 }
                 RC = SpawnRoom(NextI, NextJ, EndRoom.Actor, false, true);
             }
@@ -390,15 +385,13 @@ void ALevelGenerator::SpawnAnotherPath(FPlace place)
                 // if corridor
                 if (i % 2 == 0) {
                     RC = SpawnRoom(NextI, NextJ, ActorToSpawnNext, false, false);
-                    UE_LOG(LogTemp, Error, TEXT("looking 2"));
                 }
                 //if room
                 else {
                     RC = SpawnRoom(NextI, NextJ, ActorToSpawnNext, true, false);
-                    UE_LOG(LogTemp, Error, TEXT("looking 4"));
                 }
 
-                rooms += 1;
+
                 UE_LOG(LogTemp, Warning, TEXT("Room spawned: %s"), *ActorToSpawnNext->GetName());
 
                 if (ActorToSpawnNext == Corridors[0].Actor) {
@@ -429,7 +422,6 @@ void ALevelGenerator::SpawnAnotherPath(FPlace place)
                     int32 rand3 = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
                     FVector location = LastRoomSpawned->GetActorLocation() + RC->SpawnLocations[rand3];
                     AActor* SampleSpawned = GetWorld()->SpawnActor<AActor>(Sample, location, FRotator::ZeroRotator);
-                    UE_LOG(LogTemp, Error, TEXT("sample SPAWNED"));
                 }
                 RC = SpawnRoom(NextI, NextJ, EndRoom.Actor, false, true);
             }
@@ -496,6 +488,6 @@ bool ALevelGenerator::CanPlaceEndRoom(int32 CurrentI, int32 CurrentJ, URoomCompo
     return false;
 }
 
-    
+
 
 

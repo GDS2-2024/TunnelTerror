@@ -164,6 +164,9 @@ public:
     TArray<FRoom> Corridors;
 
     UPROPERTY(EditDefaultsOnly)
+    TArray<TSubclassOf<AActor>> Items;
+
+    UPROPERTY(EditDefaultsOnly)
     int32 LastY = 0;
 
     UPROPERTY(EditDefaultsOnly)

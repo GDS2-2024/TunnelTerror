@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="3858275350" Type="Event" GUID="{A7C25A1B-0608-4060-9C29-134EBEA4D185}" Language="SFX" Hash="{70B5792A-BDD2-2A1E-639B-35E95A96AC69}">
+			<ObjectPath>Play_Snap</ObjectPath>
+			<ShortName>Play_Snap</ShortName>
+			<Path>Event/Play_Snap.bnk</Path>
+			<Media>
+				<File Id="61820815" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Snap\Snap_3.wav</ShortName>
+					<Path>Media/61820815.wem</Path>
+					<CachePath>SFX/Snap/Snap_3_AA97B9F8.wem</CachePath>
+				</File>
+				<File Id="545870618" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Snap\Snap_1.wav</ShortName>
+					<Path>Media/545870618.wem</Path>
+					<CachePath>SFX/Snap/Snap_1_122AC65D.wem</CachePath>
+				</File>
+				<File Id="717525355" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Snap\Snap_2.wav</ShortName>
+					<Path>Media/717525355.wem</Path>
+					<CachePath>SFX/Snap/Snap_2_4F641505.wem</CachePath>
+				</File>
+				<File Id="837363706" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Snap\Snap_4.wav</ShortName>
+					<Path>Media/837363706.wem</Path>
+					<CachePath>SFX/Snap/Snap_4_264CD53B.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3858275350" Name="Play_Snap" ObjectPath="\Events\Default Work Unit\Play_Snap" GUID="{A7C25A1B-0608-4060-9C29-134EBEA4D185}" MaxAttenuation="8000" DurationType="OneShot" DurationMin="0.27858928" DurationMax="0.4888849">
+					<MediaRefs>
+						<MediaRef Id="61820815"/>
+						<MediaRef Id="545870618"/>
+						<MediaRef Id="717525355"/>
+						<MediaRef Id="837363706"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{CAAE7ABE-4991-07CF-2944-A4E84DB7ECAD}</FileHash>
+</SoundBanksInfo>

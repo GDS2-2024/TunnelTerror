@@ -11,6 +11,9 @@
 #include <TunnelTerrorPlayerState.h>
 
 #include "ElevatorEscape.h"
+#include "Hazards/TorchHazard.h"
+#include "InfectionTrap.h"
+#include "Hazards/BridgeSabotager.h"
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -24,8 +27,14 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 	bIsInfected = false;
 	health = 100.0f;
 
+	trapCD = 10.0f;
+	trapCDCurrent = 0.0f;
+
 	samples = 0;
 	money = 0;
+
+	sporeInfectTime = 10.0f;
+	sporeInfectCurrent = 0.0f;
 
 	// Character doesnt have a rifle at start
 	bHasRifle = false;
@@ -76,6 +85,49 @@ void ATunnelTerrorCharacter::BeginPlay()
 
 	PlayerHUD->SetCurrencyUI(money);
 	UE_LOG(LogTemp, Warning, TEXT("money = %d"), money);
+	
+}
+
+void ATunnelTerrorCharacter::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	if (trapCDCurrent > 0.0f)
+	{
+		trapCDCurrent -= DeltaTime;
+		if (trapCDCurrent < 0.0f)
+		{
+			trapCDCurrent = 0.0f;
+		}
+	}
+
+	if (bSporesInfecting)
+	{
+		sporeInfectCurrent -= DeltaTime;
+		if (sporeInfectCurrent <= 0.0f)
+		{
+			this->DecreaseHealth(100.0f);
+		}
+	}
+	else
+	{
+		sporeInfectCurrent = sporeInfectTime - 0.1f;
+	}
+	if (CollidedPickup)
+	{
+		if (CollidedPickup->PickupName == "CrystalPickup")
+        {
+        	if (Inventory->GetPlayersPickaxe())
+        	{
+        		if (Inventory->GetPlayersPickaxe()->HasReachedMiningThreshold())
+        		{
+        			ServerRemoveCrystals();
+        			ClientAddMoney();
+        		}
+        	}
+        }
+	}
+	
 }
 
 void ATunnelTerrorCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
@@ -115,8 +167,14 @@ void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 		EnhancedInputComponent->BindAction(Slot4, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot4);
 		EnhancedInputComponent->BindAction(Slot5, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::SelectSlot5);
 		EnhancedInputComponent->BindAction(Scroll, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::ScrollSlots);
+		//Item
+		EnhancedInputComponent->BindAction(UseItemAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::PressedUseItem);
+		EnhancedInputComponent->BindAction(UseItemAction, ETriggerEvent::Completed, this, &ATunnelTerrorCharacter::ReleasedUseItem);
 		//Interactions
 		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::Interact);
+
+		//PlaceTrap
+		EnhancedInputComponent->BindAction(PlaceTrapAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::PlaceTrap);
 	}
 }
 
@@ -147,22 +205,28 @@ void ATunnelTerrorCharacter::SetIsRagdolled(const bool bNewRagdolled)
 		UE_LOG(LogTemp, Error, TEXT("This should only be called from server!"));
 		return;
 	}
-
-	UE_LOG(LogTemp, Log, TEXT("Test 2"));
+	
 	bIsRagdolled = bNewRagdolled;
 	OnRagdoll(); // call it directly on the server, clients can just use ReplicatedUsing
 }
 
 void ATunnelTerrorCharacter::OnRep_CollidedPickup()
 {
-	// Logic to handle CollidedPickup being updated on the client
-	if (CollidedPickup)
+	if (IsLocallyControlled())
 	{
-		UE_LOG(LogTemp, Log, TEXT("CollidedPickup replicated to client: %s"), *CollidedPickup->GetName());
-	}
-	else
-	{
-		UE_LOG(LogTemp, Log, TEXT("CollidedPickup is null on the client."));
+		if (CollidedPickup)
+		{
+			CollidedPickup->ShowPrompt(true);
+			PreviousPickup = CollidedPickup;
+		}
+		else
+		{
+			if (PreviousPickup)
+			{
+				PreviousPickup->ShowPrompt(false);
+				PreviousPickup = nullptr;
+			}
+		}
 	}
 }
 
@@ -173,6 +237,16 @@ void ATunnelTerrorCharacter::ServerInteractWithElevator_Implementation(AElevator
 		Elevator->ServerAddSample(Samples);
 		RemoveSamplesFromInventory();
 	}
+}
+
+void ATunnelTerrorCharacter::ServerInteractWithTorch_Implementation(ATorchHazard* Torch)
+{
+	Torch->OnInteract();
+}
+
+void ATunnelTerrorCharacter::ServerInteractWithBridge_Implementation(ABridgeSabotager* BridgeSabotager)
+{
+	BridgeSabotager->OnInteract();
 }
 
 void ATunnelTerrorCharacter::Move(const FInputActionValue& Value)
@@ -203,60 +277,59 @@ void ATunnelTerrorCharacter::Look(const FInputActionValue& Value)
 
 void ATunnelTerrorCharacter::SelectSlot1(const FInputActionValue& Value)
 {
-	Inventory->ChangeSelectedSlot(1);
-	PlayerHUD->SetSlotSelection(1);
+	Inventory->ServerSetSelectedSlot(0); //Mesh visibility changes on server
+	PlayerHUD->SetSlotSelection(0); // HUD Changes on client
 }
 
 void ATunnelTerrorCharacter::SelectSlot2(const FInputActionValue& Value)
 {
-	Inventory->ChangeSelectedSlot(2);
-	PlayerHUD->SetSlotSelection(2);
+	Inventory->ServerSetSelectedSlot(1);
+	PlayerHUD->SetSlotSelection(1);
 }
 
 void ATunnelTerrorCharacter::SelectSlot3(const FInputActionValue& Value)
 {
-	Inventory->ChangeSelectedSlot(3);
-	PlayerHUD->SetSlotSelection(3);
+	Inventory->ServerSetSelectedSlot(2);
+	PlayerHUD->SetSlotSelection(2);
 }
 
 void ATunnelTerrorCharacter::SelectSlot4(const FInputActionValue& Value)
 {
-	Inventory->ChangeSelectedSlot(4);
-	PlayerHUD->SetSlotSelection(4);
+	Inventory->ServerSetSelectedSlot(3);
+	PlayerHUD->SetSlotSelection(3);
 }
 
 void ATunnelTerrorCharacter::SelectSlot5(const FInputActionValue& Value)
 {
-	Inventory->ChangeSelectedSlot(5);
-	PlayerHUD->SetSlotSelection(5);
+	Inventory->ServerSetSelectedSlot(4);
+	PlayerHUD->SetSlotSelection(4);
 }
 
 void ATunnelTerrorCharacter::ScrollSlots(const FInputActionValue& Value)
 {
-	//UE_LOG(LogTemp, Log, TEXT("Scroll wheel is outputting: %f"), Value.Get<float>());
-	if (Value.Get<float>() > 0)
+	if (Value.Get<float>() < 0) //Scroll Down
 	{
 		//Increase by 1, wrap around to start
-		if (Inventory->SelectedSlotIndex < Inventory->GetMaxSlots())
+		if (Inventory->SelectedSlotIndex < Inventory->GetMaxSlots()-1)
 		{
-			Inventory->ChangeSelectedSlot(Inventory->SelectedSlotIndex+1);
+			Inventory->ServerSetSelectedSlot(Inventory->SelectedSlotIndex+1);
 			PlayerHUD->SetSlotSelection(Inventory->SelectedSlotIndex);
 		} else
 		{
-			Inventory->ChangeSelectedSlot(1);
-			PlayerHUD->SetSlotSelection(1);
+			Inventory->ServerSetSelectedSlot(0);
+			PlayerHUD->SetSlotSelection(0);
 		}
-	} else
+	} else //Scroll Up
 	{
 		//Decrease by 1, wrap around to end
-		if (Inventory->SelectedSlotIndex > 1)
+		if (Inventory->SelectedSlotIndex > 0)
 		{
-			Inventory->ChangeSelectedSlot(Inventory->SelectedSlotIndex-1);
+			Inventory->ServerSetSelectedSlot(Inventory->SelectedSlotIndex-1);
 			PlayerHUD->SetSlotSelection(Inventory->SelectedSlotIndex);
 		} else
 		{
-			Inventory->ChangeSelectedSlot(5);
-			PlayerHUD->SetSlotSelection(5);
+			Inventory->ServerSetSelectedSlot(4);
+			PlayerHUD->SetSlotSelection(4);
 		}
 	}
 }
@@ -267,8 +340,8 @@ void ATunnelTerrorCharacter::EquipToInventory(AInventoryItem* NewItem)
 	{
 		if (NewItem)
 		{
-			Inventory->AddItem(NewItem);
-			ClientAddInventoryUI(NewItem);
+			Inventory->ServerAddItem(NewItem);
+			ClientAddInventoryUI(NewItem, Inventory->NewestItemSlotIndex);
 		}
 		else
 		{
@@ -282,8 +355,33 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 	AInventoryItem* InventoryItem = GetWorld()->SpawnActor<AInventoryItem>(ItemClass);
 	if (InventoryItem)
 	{
-		InventoryItem->AttachToComponent(GetMesh1P(), FAttachmentTransformRules::KeepRelativeTransform, "GripPoint");
-		EquipToInventory(InventoryItem);
+		InventoryItem->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, "hand_r_socket");
+		if (InventoryItem->ItemName.ToString() == "Torch")
+		{
+			FRotator DesiredRotation(0.0f, -90.0f, 0.0f);
+			InventoryItem->SetActorRelativeRotation(DesiredRotation);
+		}
+		if (InventoryItem->ItemName.ToString() == "Compass")
+		{
+			FRotator DesiredRotation(180.0f, 0.0f, 90.0f);
+			FVector DesiredPos(2.0f,3.0f,0.0f);
+			InventoryItem->SetActorRelativeLocation(DesiredPos);
+			InventoryItem->SetActorRelativeRotation(DesiredRotation);
+			EquipCompass(true);
+		}
+		if (InventoryItem->ItemName.ToString() == "Pickaxe")
+		{
+			EquipPickaxe(true);
+		}
+		if (InventoryItem->ItemName.ToString() == "Torch")
+		{
+			FRotator DesiredRotation(0.0f, -90.0f, 15.0f);
+			FVector DesiredPos(1.0f,3.0f,1.0f);
+			InventoryItem->SetActorRelativeLocation(DesiredPos);
+			InventoryItem->SetActorRelativeRotation(DesiredRotation);
+			EquipTorch(true);
+		}
+		ServerEquipToInventory(InventoryItem);
 		if (CollidedPickup)
 		{
 			CollidedPickup->Destroy();
@@ -310,8 +408,9 @@ void ATunnelTerrorCharacter::ServerEquipToInventory_Implementation(AInventoryIte
 	EquipToInventory(InventoryItem);
 }
 
-void ATunnelTerrorCharacter::ClientAddInventoryUI_Implementation(AInventoryItem* NewItem)
+void ATunnelTerrorCharacter::ClientAddInventoryUI_Implementation(AInventoryItem* NewItem, int32 SlotIndex)
 {
+	PlayItemPickupSFX();
 	if (!PlayerHUD)
 	{
 		UE_LOG(LogTemp, Error, TEXT("PlayerHUD is null in ClientAddInventoryUI"));
@@ -326,7 +425,7 @@ void ATunnelTerrorCharacter::ClientAddInventoryUI_Implementation(AInventoryItem*
 
 	if (NewItem)
 	{
-		PlayerHUD->SetSlotIcon(Inventory->GetAvailableSlotIndex(), NewItem->InventoryIcon);
+		PlayerHUD->SetSlotIcon(SlotIndex, NewItem->InventoryIcon);	
 	}
 	else
 	{
@@ -348,13 +447,48 @@ void ATunnelTerrorCharacter::ClientRemoveInventoryUI_Implementation(int32 SlotIn
 		return;
 	}
 	
-	PlayerHUD->ClearSlotIcon(SlotIndex+1);
+	PlayerHUD->ClearSlotIcon(SlotIndex);
 	
 }
 
-void ATunnelTerrorCharacter::UseSelectedItem()
+void ATunnelTerrorCharacter::PressedUseItem(const FInputActionValue& Value)
 {
-	Inventory->GetSelectedItem()->UseItem();
+	if (Inventory)
+	{
+		AInventoryItem* SelectedItem = Inventory->GetSelectedItem();
+		if (SelectedItem)
+		{
+			SelectedItem->UseItem();
+		}
+		else
+		{
+			//UE_LOG(LogTemp, Warning, TEXT("No selected item in inventory!"));
+		}
+	}
+	else
+	{
+		//UE_LOG(LogTemp, Error, TEXT("Inventory is null!"));
+	}	
+}
+
+void ATunnelTerrorCharacter::ReleasedUseItem(const FInputActionValue& Value)
+{
+	if (Inventory)
+	{
+		AInventoryItem* SelectedItem = Inventory->GetSelectedItem();
+		if (SelectedItem)
+		{
+			SelectedItem->ReleaseUseItem();
+		}
+		else
+		{
+			//UE_LOG(LogTemp, Warning, TEXT("No selected item in inventory!"));
+		}
+	}
+	else
+	{
+		//UE_LOG(LogTemp, Error, TEXT("Inventory is null!"));
+	}	
 }
 
 void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
@@ -371,10 +505,6 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 				UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item"))
 				ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
 			}
-			else if (CollidedPickup->PickupName == "CrystalPickup") {
-				ServerRemoveCrystals();
-				ClientAddMoney();
-			}
 			else {
 				// Spawn an instance of the inventory item on the server
 				UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item"))
@@ -383,7 +513,18 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 		}
 		else
 		{
-			UE_LOG(LogTemp, Warning, TEXT("CorrespondingItemClass is NULL"));
+			if (CollidedPickup->PickupName == "TorchHazard") {
+				ATorchHazard* torchHazard = Cast<ATorchHazard>(CollidedPickup);
+				ServerInteractWithTorch(torchHazard);
+			}
+			else if (CollidedPickup->PickupName == "BridgeSabotager")
+			{
+				ABridgeSabotager* BridgeSabotager = Cast<ABridgeSabotager>(CollidedPickup);
+				ServerInteractWithBridge(BridgeSabotager);
+			}
+			else {
+				UE_LOG(LogTemp, Warning, TEXT("CorrespondingItemClass is NULL"));
+			}
 		}
 	}
 	if (ElevatorEscape != nullptr)
@@ -397,6 +538,57 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 	else
 	{
 		//UE_LOG(LogTemp, Log, TEXT("Move to Elevator to interact"));
+	}
+}
+
+void ATunnelTerrorCharacter::PlaceTrap(const FInputActionValue& Value)
+{
+	if (HasAuthority())
+	{
+		PlaceTrapImplementation();
+		MulticastPlaceTrap();
+	}
+	else
+	{
+		ServerPlaceTrap();
+	}
+}
+
+void ATunnelTerrorCharacter::PlaceTrapImplementation()
+{
+	if (GetIsInfected() && trapCDCurrent == 0) {
+		trapCDCurrent = trapCD;
+
+		UE_LOG(LogTemp, Log, TEXT("trap cd set"));
+
+		FVector PlayerLocation = GetActorLocation();
+		PlayerLocation.Z = 0.0f;
+		FVector ForwardVector = GetActorForwardVector();
+		FVector TrapLocation = PlayerLocation + (ForwardVector * 200.0f);
+
+		FRotator PlayerRotation = GetActorRotation();
+		FRotator RotationOffset(0.0f, -90.0f, 0.0f);
+		FRotator TrapRotation = PlayerRotation + RotationOffset;
+
+
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Owner = this;
+		SpawnParams.Instigator = GetInstigator();
+
+		GetWorld()->SpawnActor<AInfectionTrap>(TrapBlueprint, TrapLocation, TrapRotation, SpawnParams);
+	}
+}
+
+void ATunnelTerrorCharacter::ServerPlaceTrap_Implementation()
+{
+	PlaceTrapImplementation();
+}
+
+void ATunnelTerrorCharacter::MulticastPlaceTrap_Implementation()
+{
+	if (!HasAuthority())
+	{
+		PlaceTrapImplementation();
 	}
 }
 
@@ -440,4 +632,28 @@ void ATunnelTerrorCharacter::DecreaseHealth(float damage)
 	{
 		Die();
 	}
+}
+
+void ATunnelTerrorCharacter::StartSporeInfection()
+{
+	bSporesInfecting = true;
+	sporeInfectCurrent = sporeInfectTime;
+	UE_LOG(LogTemp, Log, TEXT("Spores are infecting"));
+}
+
+void ATunnelTerrorCharacter::EndSporeInfection()
+{
+	bSporesInfecting = false;
+	sporeInfectCurrent = 0.0f;
+	UE_LOG(LogTemp, Log, TEXT("Spores have stopped infecting"));
+}
+
+void ATunnelTerrorCharacter::MulticastSwing_Implementation(bool swing)
+{
+	SwingPickaxe(swing);
+}
+
+void ATunnelTerrorCharacter::ServerSwing_Implementation(bool swing)
+{
+	MulticastSwing(swing);
 }

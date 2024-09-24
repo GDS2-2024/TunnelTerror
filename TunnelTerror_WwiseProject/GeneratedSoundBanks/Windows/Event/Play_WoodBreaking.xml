@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="2284361370" Type="Event" GUID="{0F14277F-3996-484C-A37D-4633DA6B3085}" Language="SFX" Hash="{70564EB6-7440-2688-621D-DD088014F097}">
+			<ObjectPath>Play_WoodBreaking</ObjectPath>
+			<ShortName>Play_WoodBreaking</ShortName>
+			<Path>Event/Play_WoodBreaking.bnk</Path>
+			<Media>
+				<File Id="61820815" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Snap\Snap_3.wav</ShortName>
+					<Path>Media/61820815.wem</Path>
+					<CachePath>SFX/Snap/Snap_3_AA97B9F8.wem</CachePath>
+				</File>
+				<File Id="64405040" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>WoodSmash.wav</ShortName>
+					<Path>Media/64405040.wem</Path>
+					<CachePath>SFX/WoodSmash_5875AC8D.wem</CachePath>
+				</File>
+				<File Id="545870618" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Snap\Snap_1.wav</ShortName>
+					<Path>Media/545870618.wem</Path>
+					<CachePath>SFX/Snap/Snap_1_122AC65D.wem</CachePath>
+				</File>
+				<File Id="717525355" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Snap\Snap_2.wav</ShortName>
+					<Path>Media/717525355.wem</Path>
+					<CachePath>SFX/Snap/Snap_2_4F641505.wem</CachePath>
+				</File>
+				<File Id="837363706" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Snap\Snap_4.wav</ShortName>
+					<Path>Media/837363706.wem</Path>
+					<CachePath>SFX/Snap/Snap_4_264CD53B.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2284361370" Name="Play_WoodBreaking" ObjectPath="\Events\Default Work Unit\Play_WoodBreaking" GUID="{0F14277F-3996-484C-A37D-4633DA6B3085}" DurationType="OneShot" DurationMin="1.4104592" DurationMax="1.6394867">
+					<MediaRefs>
+						<MediaRef Id="61820815"/>
+						<MediaRef Id="64405040"/>
+						<MediaRef Id="545870618"/>
+						<MediaRef Id="717525355"/>
+						<MediaRef Id="837363706"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{6E91D3F0-034A-E262-82DA-B2BA987945E8}</FileHash>
+</SoundBanksInfo>

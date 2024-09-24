@@ -1,3 +1,13 @@
+# Wwise
+.backup*
+.cache*
+*.akd
+*.prof
+*.validationcache
+*.wsettings
+AkWwiseProjectData.asset
+IncrementalSoundBankData.xml
+
 # Visual Studio 2015 user specific files
 .vs/
 

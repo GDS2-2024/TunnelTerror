@@ -1,0 +1,121 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "1120692842",
+    "Type": "Event",
+    "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
+    "Language": "SFX",
+    "Hash": "{236B0FF5-C3AD-01A1-2004-8D98BAEBE145}",
+    "ObjectPath": "Play_RockFall",
+    "ShortName": "Play_RockFall",
+    "Path": "Event/Play_RockFall.bnk",
+    "Media": [
+     {
+      "Id": "287643081",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "RockShatter.WAV",
+      "Path": "Media/287643081.wem",
+      "CachePath": "SFX/RockShatter_E1C12152.wem"
+     },
+     {
+      "Id": "597728859",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "RockHitGround\\RockHitGround_4.wav",
+      "Path": "Media/597728859.wem",
+      "CachePath": "SFX/RockHitGround/RockHitGround_4_7A1179AA.wem"
+     },
+     {
+      "Id": "697333171",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "RockShatter.WAV",
+      "Path": "Media/697333171.wem",
+      "CachePath": "SFX/RockShatter_BFC59738.wem"
+     },
+     {
+      "Id": "698207414",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "RockShatter.WAV",
+      "Path": "Media/698207414.wem",
+      "CachePath": "SFX/RockShatter_2B5CC4BC.wem"
+     },
+     {
+      "Id": "874392032",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "RockHitGround\\RockHitGround_1.wav",
+      "Path": "Media/874392032.wem",
+      "CachePath": "SFX/RockHitGround/RockHitGround_1_4FCD9C49.wem"
+     },
+     {
+      "Id": "953321177",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "RockHitGround\\RockHitGround_2.wav",
+      "Path": "Media/953321177.wem",
+      "CachePath": "SFX/RockHitGround/RockHitGround_2_D678C78D.wem"
+     },
+     {
+      "Id": "953676981",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "RockHitGround\\RockHitGround_5.wav",
+      "Path": "Media/953676981.wem",
+      "CachePath": "SFX/RockHitGround/RockHitGround_5_8F54B111.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1120692842",
+      "Name": "Play_RockFall",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_RockFall",
+      "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
+      "MaxAttenuation": "8000",
+      "DurationType": "OneShot",
+      "DurationMin": "4.5565443",
+      "DurationMax": "6.9171724",
+      "MediaRefs": [
+       {
+        "Id": "287643081"
+       },
+       {
+        "Id": "597728859"
+       },
+       {
+        "Id": "697333171"
+       },
+       {
+        "Id": "698207414"
+       },
+       {
+        "Id": "874392032"
+       },
+       {
+        "Id": "953321177"
+       },
+       {
+        "Id": "953676981"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{6DED7EAD-6863-EEEB-15C3-8256F6D359A5}"
+ }
+}

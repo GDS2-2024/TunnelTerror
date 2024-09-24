@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2145253833	Atmosphere			\Default Work Unit\Atmosphere	
+
+Effect plug-ins	ID	Name	Type				Notes
+	2513915904	Hall_Large	Wwise RoomVerb			
+

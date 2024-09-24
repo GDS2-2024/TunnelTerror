@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="2025845440" Type="Event" GUID="{F05E8152-8526-474A-8CD3-14071D451BB3}" Language="SFX" Hash="{3C5C6552-218A-4E0C-E632-FEFCA4DE8164}">
+			<ObjectPath>Play_Torch</ObjectPath>
+			<ShortName>Play_Torch</ShortName>
+			<Path>Event/Play_Torch.bnk</Path>
+			<Media>
+				<File Id="205328698" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Torch\Torch_2.wav</ShortName>
+					<Path>Media/205328698.wem</Path>
+					<CachePath>SFX/Torch/Torch_2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="356177841" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Torch\Torch_5.wav</ShortName>
+					<Path>Media/356177841.wem</Path>
+					<CachePath>SFX/Torch/Torch_5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="660290965" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Torch\Torch_6.wav</ShortName>
+					<Path>Media/660290965.wem</Path>
+					<CachePath>SFX/Torch/Torch_6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="739850819" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Torch\Torch_3.wav</ShortName>
+					<Path>Media/739850819.wem</Path>
+					<CachePath>SFX/Torch/Torch_3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1006806049" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Torch\Torch_4.wav</ShortName>
+					<Path>Media/1006806049.wem</Path>
+					<CachePath>SFX/Torch/Torch_4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1057154220" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Torch\Torch_1.wav</ShortName>
+					<Path>Media/1057154220.wem</Path>
+					<CachePath>SFX/Torch/Torch_1_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2025845440" Name="Play_Torch" ObjectPath="\Events\Default Work Unit\Play_Torch" GUID="{F05E8152-8526-474A-8CD3-14071D451BB3}" MaxAttenuation="8000" DurationType="OneShot" DurationMin="14.243367" DurationMax="21.934233">
+					<MediaRefs>
+						<MediaRef Id="205328698"/>
+						<MediaRef Id="356177841"/>
+						<MediaRef Id="660290965"/>
+						<MediaRef Id="739850819"/>
+						<MediaRef Id="1006806049"/>
+						<MediaRef Id="1057154220"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{9BB2F72E-2E44-1168-92F7-8A65251189F3}</FileHash>
+</SoundBanksInfo>

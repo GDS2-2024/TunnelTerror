@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E9C5DBA2-A2C7-48FB-8CC2-68EE12224ADB}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{E9C5DBA2-A2C7-48FB-8CC2-68EE12224ADB}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Atmosphere" ID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}">
+					<ChildrenList>
+						<Action Name="" ID="{98593568-A264-4070-BFA7-473635F94FD3}" ShortID="461207614">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Atmosphere" ID="{D64C652C-D9F1-4614-95C7-BD8BA9D156E8}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_PlayerFootsteps" ID="{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}">
+					<ChildrenList>
+						<Action Name="" ID="{0F06D82F-4545-4E4B-BEFC-8AB9806A5ECC}" ShortID="322341032">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlayerFootsteps" ID="{B5135BC1-2767-4928-9108-4A8961DE2D90}" WorkUnitID="{A01B63E6-E0C9-4FC2-A742-743F7B5DC4C1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_RockFall" ID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}">
+					<ChildrenList>
+						<Action Name="" ID="{54689B56-EEED-472D-8C3A-BB8B55681B38}" ShortID="423006804">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RockFall" ID="{F46FA88D-9B7F-4F36-ABC2-87745A1EEA25}" WorkUnitID="{0C2A8A81-D64C-41B9-84A1-64BB8D22FEF8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Torch" ID="{F05E8152-8526-474A-8CD3-14071D451BB3}">
+					<ChildrenList>
+						<Action Name="" ID="{2616F3EF-1962-4CAD-9AAA-3CEADCFB9996}" ShortID="877147873">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Torch" ID="{8ADA7E1B-DB73-4C9C-8EA3-05E40C50E622}" WorkUnitID="{38D93596-E326-419F-9FB1-E53D73526390}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Snap" ID="{A7C25A1B-0608-4060-9C29-134EBEA4D185}">
+					<ChildrenList>
+						<Action Name="" ID="{2DB9BB67-D613-467C-9121-AE3E1A002AD5}" ShortID="593690256">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Snap" ID="{D2BA8D10-E468-4640-9BB1-BD9EE9EB5242}" WorkUnitID="{353A940F-F92A-424D-9FBD-0DE26DC40E2E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_WoodBreaking" ID="{0F14277F-3996-484C-A37D-4633DA6B3085}">
+					<ChildrenList>
+						<Action Name="" ID="{354FB3E9-DD2C-4641-A0E4-E0F5083CC3DF}" ShortID="838468550">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WoodBreaking" ID="{EE5EF288-95FE-4C96-B2B5-3D4590F95625}" WorkUnitID="{353A940F-F92A-424D-9FBD-0DE26DC40E2E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A7EE9CA9-DFB7-4FF8-B8BE-DC8B2DD73A35}" ShortID="391021695">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Snap" ID="{D2BA8D10-E468-4640-9BB1-BD9EE9EB5242}" WorkUnitID="{353A940F-F92A-424D-9FBD-0DE26DC40E2E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Grab" ID="{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}">
+					<ChildrenList>
+						<Action Name="" ID="{DA7C79DE-DD46-44CF-938F-F5EF0BBC7605}" ShortID="73045985">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Grab" ID="{8F390D3F-DC5C-43F9-8022-80421F0223B4}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

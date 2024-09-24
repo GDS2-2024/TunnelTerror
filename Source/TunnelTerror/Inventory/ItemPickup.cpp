@@ -58,12 +58,21 @@ void AItemPickup::OnPickupBeginOverlap(UPrimitiveComponent* OverlappedComponent,
 {
 	if(GetLocalRole() == ROLE_Authority) // Only the server should handle the pickup
 	{
-		//UE_LOG(LogTemp, Log, TEXT("On Pickup BEGIN Overlap (SERVER)"))
 		if (ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(OtherActor))
 		{
-			// Set Player's item variable
+			if (Player->CollidedPickup)
+			{
+				Player->CollidedPickup = nullptr;
+				if (Player->IsLocallyControlled())
+				{
+					Player->OnRep_CollidedPickup();
+				}
+			}
 			Player->CollidedPickup = this;
-			ShowPrompt(true);
+			if (Player->IsLocallyControlled())
+			{
+				Player->OnRep_CollidedPickup();
+			}
 		}
 	}
 }
@@ -73,12 +82,16 @@ void AItemPickup::OnPickupEndOverlap(UPrimitiveComponent* OverlappedComponent,
 {
 	if(GetLocalRole() == ROLE_Authority) // Only the server should handle the pickup
 	{
-		//UE_LOG(LogTemp, Log, TEXT("On Pickup END Overlap (SERVER)"))
 		if (ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(OtherActor))
 		{
-			// Set Player's item variable to NULLPTR
-			Player->CollidedPickup = nullptr;
-			ShowPrompt(false);
+			if (Player->CollidedPickup == this)
+			{
+				Player->CollidedPickup = nullptr;
+                if (Player->IsLocallyControlled())
+                {
+                	Player->OnRep_CollidedPickup();
+                }
+			}
 		}
 	}
 }

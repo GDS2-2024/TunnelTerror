@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2025845440	Play_Torch			\Default Work Unit\Play_Torch	
+

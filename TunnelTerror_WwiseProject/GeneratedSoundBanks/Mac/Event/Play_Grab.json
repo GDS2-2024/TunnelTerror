@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "17721092",
+    "Type": "Event",
+    "GUID": "{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}",
+    "Language": "SFX",
+    "Hash": "{3205429A-7C3C-DFB6-2B57-CC67D2D8CFB7}",
+    "ObjectPath": "Play_Grab",
+    "ShortName": "Play_Grab",
+    "Path": "Event/Play_Grab.bnk",
+    "Media": [
+     {
+      "Id": "363834967",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Grab\\Grab_3.wav",
+      "Path": "Media/363834967.wem",
+      "CachePath": "SFX/Grab/Grab_3_1EC4DA32.wem"
+     },
+     {
+      "Id": "644454746",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Grab\\Grab_2.wav",
+      "Path": "Media/644454746.wem",
+      "CachePath": "SFX/Grab/Grab_2_A836BF12.wem"
+     },
+     {
+      "Id": "1024521790",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Grab\\Grab_1.wav",
+      "Path": "Media/1024521790.wem",
+      "CachePath": "SFX/Grab/Grab_1_B55A4CF6.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "17721092",
+      "Name": "Play_Grab",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Grab",
+      "GUID": "{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}",
+      "MaxAttenuation": "8000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.060328994",
+      "DurationMax": "0.094719194",
+      "MediaRefs": [
+       {
+        "Id": "363834967"
+       },
+       {
+        "Id": "644454746"
+       },
+       {
+        "Id": "1024521790"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C4F62DAC-7040-BBCB-961C-414FAB09854D}"
+ }
+}
