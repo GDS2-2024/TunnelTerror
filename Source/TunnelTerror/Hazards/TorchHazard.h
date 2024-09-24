@@ -22,7 +22,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UPointLightComponent* PointLight2;
 
-	void OnPickupBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+	virtual void OnPickupBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 		UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& HitInfo) override;
 
 	UFUNCTION(Server, Reliable)
@@ -30,4 +30,8 @@ public:
 
 	UFUNCTION(NetMulticast, Reliable)
 	void TurnOff();
+
+protected:
+	UPROPERTY(BlueprintReadWrite)
+	double SabotageRange = 4000;
 };

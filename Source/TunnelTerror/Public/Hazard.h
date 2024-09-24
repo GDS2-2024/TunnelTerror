@@ -2,11 +2,11 @@
 
 #pragma once
 
+#include <TunnelTerror/TunnelTerrorCharacter.h>
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Hazard.generated.h"
 
-class ATunnelTerrorCharacter;
 class UBoxComponent;
 
 UCLASS()

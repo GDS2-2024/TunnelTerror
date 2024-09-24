@@ -13,6 +13,7 @@
 #include "ElevatorEscape.h"
 #include "Hazards/TorchHazard.h"
 #include "InfectionTrap.h"
+#include "Hazards/BridgeSabotager.h"
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -186,8 +187,7 @@ void ATunnelTerrorCharacter::SetIsRagdolled(const bool bNewRagdolled)
 		UE_LOG(LogTemp, Error, TEXT("This should only be called from server!"));
 		return;
 	}
-
-	UE_LOG(LogTemp, Log, TEXT("Test 2"));
+	
 	bIsRagdolled = bNewRagdolled;
 	OnRagdoll(); // call it directly on the server, clients can just use ReplicatedUsing
 }
@@ -219,6 +219,17 @@ void ATunnelTerrorCharacter::ServerInteractWithElevator_Implementation(AElevator
 		Elevator->ServerAddSample(Samples);
 		RemoveSamplesFromInventory();
 	}
+}
+
+void ATunnelTerrorCharacter::ServerInteractWithTorch_Implementation(ATorchHazard* Torch)
+{
+	Torch->OnInteract();
+}
+
+void ATunnelTerrorCharacter::ServerInteractWithBridge_Implementation(ABridgeSabotager* BridgeSabotager)
+{
+	UE_LOG(LogTemp, Log, TEXT("Test 0"));
+	BridgeSabotager->OnInteract();
 }
 
 void ATunnelTerrorCharacter::Move(const FInputActionValue& Value)
@@ -479,7 +490,12 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 		{
 			if (CollidedPickup->PickupName == "TorchHazard") {
 				ATorchHazard* torchHazard = Cast<ATorchHazard>(CollidedPickup);
-				torchHazard->OnInteract();
+				ServerInteractWithTorch(torchHazard);
+			}
+			else if (CollidedPickup->PickupName == "BridgeSabotager")
+			{
+				ABridgeSabotager* BridgeSabotager = Cast<ABridgeSabotager>(CollidedPickup);
+				ServerInteractWithBridge(BridgeSabotager);
 			}
 			else if (CollidedPickup->PickupName == "CrystalPickup") {
 				ServerRemoveCrystals();
