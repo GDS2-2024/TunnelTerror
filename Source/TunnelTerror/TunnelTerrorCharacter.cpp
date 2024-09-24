@@ -342,7 +342,7 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 	AInventoryItem* InventoryItem = GetWorld()->SpawnActor<AInventoryItem>(ItemClass);
 	if (InventoryItem)
 	{
-		InventoryItem->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, "index_r_socket");
+		InventoryItem->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, "hand_r_socket");
 		if (InventoryItem->ItemName.ToString() == "Torch")
 		{
 			FRotator DesiredRotation(0.0f, -90.0f, 0.0f);
@@ -351,7 +351,7 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 		if (InventoryItem->ItemName.ToString() == "Compass")
 		{
 			FRotator DesiredRotation(180.0f, 0.0f, 90.0f);
-			FVector DesiredPos(-1.5,4.3,-2.0);
+			FVector DesiredPos(2.0f,3.0f,0.0f);
 			InventoryItem->SetActorRelativeLocation(DesiredPos);
 			InventoryItem->SetActorRelativeRotation(DesiredRotation);
 			EquipCompass(true);
