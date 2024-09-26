@@ -495,18 +495,25 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 	{
 		if (CollidedPickup->CorrespondingItemClass)
 		{
-			if(CollidedPickup->PickupName == "SamplePickup")
+			if (Inventory->HasEmptySlot())
 			{
-				samples++;
-				// Spawn an instance of the inventory item on the server
-				UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item"))
-				ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
+				if(CollidedPickup->PickupName == "SamplePickup")
+                {
+                	samples++;
+                	// Spawn an instance of the inventory item on the server
+                	UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item (sample)"))
+                	ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
+                }
+                else {
+                	// Spawn an instance of the inventory item on the server
+                	UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item"))
+                	ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
+                }
+			} else
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Can't pickup item as inventory is full"));
 			}
-			else {
-				// Spawn an instance of the inventory item on the server
-				UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item"))
-				ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
-			}
+			
 		}
 		else
 		{
