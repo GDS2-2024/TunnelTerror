@@ -274,32 +274,32 @@ void ATunnelTerrorCharacter::Look(const FInputActionValue& Value)
 
 void ATunnelTerrorCharacter::SelectSlot1(const FInputActionValue& Value)
 {
-	Inventory->ServerSetSelectedSlot(0); //Mesh visibility changes on server
 	PlayerHUD->SetSlotSelection(0); // HUD Changes on client
+	Inventory->ServerSetSelectedSlot(0); //Mesh visibility changes on server
 }
 
 void ATunnelTerrorCharacter::SelectSlot2(const FInputActionValue& Value)
 {
-	Inventory->ServerSetSelectedSlot(1);
-	PlayerHUD->SetSlotSelection(1);
+	PlayerHUD->SetSlotSelection(1); // HUD Changes on client
+	Inventory->ServerSetSelectedSlot(1); //Mesh visibility changes on server
 }
 
 void ATunnelTerrorCharacter::SelectSlot3(const FInputActionValue& Value)
 {
-	Inventory->ServerSetSelectedSlot(2);
-	PlayerHUD->SetSlotSelection(2);
+	PlayerHUD->SetSlotSelection(2); // HUD Changes on client
+	Inventory->ServerSetSelectedSlot(2); //Mesh visibility changes on server
 }
 
 void ATunnelTerrorCharacter::SelectSlot4(const FInputActionValue& Value)
 {
-	Inventory->ServerSetSelectedSlot(3);
-	PlayerHUD->SetSlotSelection(3);
+	PlayerHUD->SetSlotSelection(3); // HUD Changes on client
+	Inventory->ServerSetSelectedSlot(3); //Mesh visibility changes on server
 }
 
 void ATunnelTerrorCharacter::SelectSlot5(const FInputActionValue& Value)
 {
-	Inventory->ServerSetSelectedSlot(4);
-	PlayerHUD->SetSlotSelection(4);
+	PlayerHUD->SetSlotSelection(4); // HUD Changes on client
+	Inventory->ServerSetSelectedSlot(4); //Mesh visibility changes on server
 }
 
 void ATunnelTerrorCharacter::ScrollSlots(const FInputActionValue& Value)
@@ -309,24 +309,25 @@ void ATunnelTerrorCharacter::ScrollSlots(const FInputActionValue& Value)
 		//Increase by 1, wrap around to start
 		if (Inventory->SelectedSlotIndex < Inventory->GetMaxSlots()-1)
 		{
-			Inventory->ServerSetSelectedSlot(Inventory->SelectedSlotIndex+1);
-			PlayerHUD->SetSlotSelection(Inventory->SelectedSlotIndex);
+			PlayerHUD->SetSlotSelection(Inventory->SelectedSlotIndex+1); //HUD Change on client. Does NOT change SelectedSlotIndex, only references it
+			Inventory->ServerSetSelectedSlot(Inventory->SelectedSlotIndex+1); //Does change SelectedSlotIndex 
 		} else
 		{
-			Inventory->ServerSetSelectedSlot(0);
-			PlayerHUD->SetSlotSelection(0);
+			PlayerHUD->SetSlotSelection(0);  //HUD Change on client. Does NOT change SelectedSlotIndex, only references it
+			Inventory->ServerSetSelectedSlot(0); //Does change SelectedSlotIndex
 		}
 	} else //Scroll Up
 	{
 		//Decrease by 1, wrap around to end
 		if (Inventory->SelectedSlotIndex > 0)
 		{
-			Inventory->ServerSetSelectedSlot(Inventory->SelectedSlotIndex-1);
-			PlayerHUD->SetSlotSelection(Inventory->SelectedSlotIndex);
+			PlayerHUD->SetSlotSelection(Inventory->SelectedSlotIndex-1);  //HUD Change on client. Does NOT change SelectedSlotIndex, only references it
+			Inventory->ServerSetSelectedSlot(Inventory->SelectedSlotIndex-1); //Does change SelectedSlotIndex 
+
 		} else
 		{
-			Inventory->ServerSetSelectedSlot(4);
-			PlayerHUD->SetSlotSelection(4);
+			PlayerHUD->SetSlotSelection(4);  //HUD Change on client. Does NOT change SelectedSlotIndex, only references it
+			Inventory->ServerSetSelectedSlot(4); //Does change SelectedSlotIndex 
 		}
 	}
 }
