@@ -112,7 +112,7 @@ public:
 
 	UFUNCTION(Server,Reliable)
 	void ServerSpawnItem(TSubclassOf<AInventoryItem> ItemClass);
-
+	
 	UFUNCTION(Server, Reliable)
 	void ServerRemoveCrystals();
 
@@ -205,7 +205,7 @@ public:
 	// The previous collided pickup
 	UPROPERTY()
 	AItemPickup* PreviousPickup;
-
+	
 	UFUNCTION()
 	void OnRep_CollidedPickup();
 
@@ -262,6 +262,15 @@ public:
 	UPROPERTY()
 	UPlayerHUD* PlayerHUD;
 
+	UFUNCTION(Server, Reliable)
+	void ServerManageAnims();
+
+	UFUNCTION(Server, Reliable)
+	void ServerUpdateVisibility();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastHideItemMesh(AInventoryItem* Item);
+	
 	UFUNCTION(BlueprintImplementableEvent)
 	void EquipTorchAnim(bool bEquip);
 

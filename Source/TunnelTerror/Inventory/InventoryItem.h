@@ -19,6 +19,8 @@ public:
 	// Sets default values for this component's properties
 	AInventoryItem();
 
+	virtual void BeginPlay() override;
+	
 	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated)

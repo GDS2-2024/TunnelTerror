@@ -96,6 +96,20 @@ void UInventoryComponent::OnRep_InventorySlots()
 		}
 		SlotIndex++;
 	}
+	if (Player->IsLocallyControlled())
+	{
+		ServerSetItemVisibility();
+        ServerUpdateAnims();
+	} else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("OnRep_InventorySlots() Not Locally Controlled"));
+	}
+}
+
+void UInventoryComponent::ServerUpdateAnims_Implementation()
+{
+	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
+	Player->ServerManageAnims();
 }
 
 // Show Item
@@ -253,12 +267,12 @@ void UInventoryComponent::ServerAddItem_Implementation(AInventoryItem* Item)
 		InventorySlots[NewSlotIndex].AddItemToSlot(Item);
 		NumOfItems += 1;
 		Item->Player = GetOwner();
-		ServerSetItemVisibility();
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Can't add item, EmptySlot is null."));
+		UE_LOG(LogTemp, Error, TEXT("Can't add item, EmptySlot is null."));
 	}
+	ServerSetItemVisibility();
 }
 
 void UInventoryComponent::ServerRemoveItem_Implementation(int32 SlotIndex)
@@ -296,7 +310,6 @@ void UInventoryComponent::MulticastEquipTorch_Implementation(bool equip)
 void UInventoryComponent::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called every frame

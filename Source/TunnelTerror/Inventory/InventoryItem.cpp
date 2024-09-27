@@ -18,6 +18,11 @@ AInventoryItem::AInventoryItem()
 	SetRootComponent(ItemMesh);
 }
 
+void AInventoryItem::BeginPlay()
+{
+	Super::BeginPlay();
+}
+
 void AInventoryItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);

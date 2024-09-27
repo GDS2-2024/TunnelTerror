@@ -175,6 +175,82 @@ void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 	}
 }
 
+void ATunnelTerrorCharacter::MulticastHideItemMesh_Implementation(AInventoryItem* Item)
+{
+	if (Item)
+	{
+		Item->HideItem();
+		UE_LOG(LogTemp, Error, TEXT("Client MESH HIDDEN"));
+	}
+}
+
+void ATunnelTerrorCharacter::ServerUpdateVisibility_Implementation()
+{
+	UE_LOG(LogTemp, Error, TEXT("Server Update Visibility"));
+	for (int index = 0; index < Inventory->InventorySlots.Num(); index++)
+	{
+		if (index != Inventory->SelectedSlotIndex)
+		{
+			MulticastHideItemMesh(Inventory->InventorySlots[index].Item);
+		}
+	}
+}
+
+void ATunnelTerrorCharacter::ServerManageAnims_Implementation()
+{
+	AInventoryItem* Item = Inventory->GetSelectedItem();
+	if (!Item)
+	{
+		EquipCompassAnim(false);
+		MulticastEquipCompassAnim(false);
+		EquipPickaxeAnim(false);
+		MulticastEquipPickaxeAnim(false);
+		EquipTorchAnim(false);
+		MulticastEquipTorchAnim(false);
+		return;
+	}
+	if (Item->ItemName.ToString() == "Compass")
+	{
+		EquipCompassAnim(true);
+		MulticastEquipCompassAnim(true);
+
+		EquipPickaxeAnim(false);
+		MulticastEquipPickaxeAnim(false);
+		EquipTorchAnim(false);
+		MulticastEquipTorchAnim(false);
+	}
+	if (Item->ItemName.ToString() == "Pickaxe")
+	{
+		EquipPickaxeAnim(true);
+		MulticastEquipPickaxeAnim(true);
+
+		EquipCompassAnim(false);
+		MulticastEquipCompassAnim(false);
+		EquipTorchAnim(false);
+		MulticastEquipTorchAnim(false);
+	}
+	if (Item->ItemName.ToString() == "Torch")
+	{
+		EquipTorchAnim(true);
+		MulticastEquipTorchAnim(true);
+
+		EquipCompassAnim(false);
+		MulticastEquipCompassAnim(false);
+		EquipPickaxeAnim(false);
+		MulticastEquipPickaxeAnim(false);
+	}
+	if (Item->ItemName.ToString() == "Plant Sample") // Plant uses the same anim as compass
+	{
+		EquipCompassAnim(true); // Plant uses the same anim as compass
+		MulticastEquipCompassAnim(true);
+
+		EquipPickaxeAnim(false);
+		MulticastEquipPickaxeAnim(false);
+		EquipTorchAnim(false);
+		MulticastEquipTorchAnim(false);
+	}
+}
+
 void ATunnelTerrorCharacter::MulticastEquipPickaxeAnim_Implementation(bool bEquip)
 {
 	EquipPickaxeAnim(bEquip);
@@ -375,13 +451,10 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 			FVector DesiredPos(2.0f,3.0f,0.0f);
 			InventoryItem->SetActorRelativeLocation(DesiredPos);
 			InventoryItem->SetActorRelativeRotation(DesiredRotation);
-			EquipCompassAnim(true);
-			MulticastEquipCompassAnim(true);
 		}
 		if (InventoryItem->ItemName.ToString() == "Pickaxe")
 		{
-			EquipPickaxeAnim(true);
-			MulticastEquipPickaxeAnim(true);
+
 		}
 		if (InventoryItem->ItemName.ToString() == "Torch")
 		{
@@ -389,17 +462,16 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 			FVector DesiredPos(1.0f,3.0f,1.0f);
 			InventoryItem->SetActorRelativeLocation(DesiredPos);
 			InventoryItem->SetActorRelativeRotation(DesiredRotation);
-			EquipTorchAnim(true);
-			MulticastEquipTorchAnim(true);
 		}
 		if (InventoryItem->ItemName.ToString() == "Plant Sample") // Plant uses the same anim as compass
 		{
 			FVector DesiredPos(0.0f,0.0f,0.0f);
 			InventoryItem->SetActorRelativeLocation(DesiredPos);
-			EquipCompassAnim(true); // Plant uses the same anim as compass
-			MulticastEquipCompassAnim(true); // Plant uses the same anim as compass
+
 		}
 		ServerEquipToInventory(InventoryItem);
+		ServerManageAnims();
+		ServerUpdateVisibility();
 		if (CollidedPickup)
 		{
 			CollidedPickup->Destroy();

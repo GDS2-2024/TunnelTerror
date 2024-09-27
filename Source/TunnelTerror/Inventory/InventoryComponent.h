@@ -53,7 +53,9 @@ public:
 	UFUNCTION(Server, Reliable)
 	void ServerRemoveItem(int32 SlotIndex);
 	
-private:
+	// Function to be called when the inventory slots are replicated
+    UFUNCTION()
+    void OnRep_InventorySlots();
 	
 	UPROPERTY(VisibleAnywhere)
 	int32 MaxSlots;
@@ -63,10 +65,8 @@ private:
 
 	UPROPERTY(Replicated, VisibleAnywhere)
 	int32 NumOfItems;
+	
 
-	// Function to be called when the inventory slots are replicated
-	UFUNCTION()
-	void OnRep_InventorySlots();
 	
 	// Tell the server to show item on all clients
 	UFUNCTION(Server, Reliable)
@@ -79,7 +79,11 @@ private:
 	void ServerHideItem(AInventoryItem* Item);
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastHideItem(AInventoryItem* Item);
-
+	
+	// Tells the Server to update anims based on given item
+	UFUNCTION(Server, Reliable)
+	void ServerUpdateAnims();
+	
 	//Multicast equip/unequip for Animations
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastEquipTorch(bool equip);
