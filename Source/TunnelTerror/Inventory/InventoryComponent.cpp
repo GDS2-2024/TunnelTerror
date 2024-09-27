@@ -202,7 +202,8 @@ void UInventoryComponent::ServerSetSelectedSlot_Implementation(int32 SlotIndex)
 	SelectedSlotIndex = SlotIndex;
 	if (InventorySlots[SelectedSlotIndex].Item)
 	{
-		if (InventorySlots[SelectedSlotIndex].Item->ItemName.ToString() == "Compass")
+		if (InventorySlots[SelectedSlotIndex].Item->ItemName.ToString() == "Compass"
+			|| InventorySlots[SelectedSlotIndex].Item->ItemName.ToString() == "Plant Sample")
 		{
 			Player->EquipCompassAnim(true);
 			MulticastEquipCompass(true);

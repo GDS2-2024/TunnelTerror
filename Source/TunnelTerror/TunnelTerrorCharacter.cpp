@@ -392,6 +392,13 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 			EquipTorchAnim(true);
 			MulticastEquipTorchAnim(true);
 		}
+		if (InventoryItem->ItemName.ToString() == "Plant Sample") // Plant uses the same anim as compass
+		{
+			FVector DesiredPos(0.0f,0.0f,0.0f);
+			InventoryItem->SetActorRelativeLocation(DesiredPos);
+			EquipCompassAnim(true); // Plant uses the same anim as compass
+			MulticastEquipCompassAnim(true); // Plant uses the same anim as compass
+		}
 		ServerEquipToInventory(InventoryItem);
 		if (CollidedPickup)
 		{
