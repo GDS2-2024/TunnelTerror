@@ -7,6 +7,7 @@
 #include "ElevatorEscape.generated.h"
 
 class ATunnelTerrorCharacter;
+class ATunnelTerrorGameState;
 class USphereComponent;
 
 UCLASS(Blueprintable, BlueprintType, ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
@@ -62,4 +63,6 @@ private:
 	USphereComponent* CollisionSphere;
 
 	ATunnelTerrorCharacter* Character;
+
+	ATunnelTerrorGameState* GameState;
 };

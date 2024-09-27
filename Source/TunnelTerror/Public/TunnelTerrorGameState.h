@@ -14,4 +14,24 @@ class TUNNELTERROR_API ATunnelTerrorGameState : public AGameState
 {
 	GENERATED_BODY()
 	
+public:
+
+	UPROPERTY(BlueprintReadWrite)
+	float chaosTime;
+
+	UPROPERTY(BlueprintReadWrite)
+	bool bChaosTime;
+
+	UPROPERTY(BlueprintReadWrite)
+	bool bGameTime;
+
+public:
+
+	ATunnelTerrorGameState();
+
+	virtual void Tick(float DeltaTime) override;
+
+	UFUNCTION()
+	void StartChaosTimer();
+
 };

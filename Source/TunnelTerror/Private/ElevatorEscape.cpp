@@ -3,6 +3,7 @@
 
 #include "ElevatorEscape.h"
 #include "TunnelTerror/TunnelTerrorCharacter.h"
+#include "TunnelTerrorGameState.h"
 #include "Components/SphereComponent.h"
 #include "GameFramework/Actor.h"
 #include "Engine/World.h"
@@ -34,6 +35,8 @@ void AElevatorEscape::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
 void AElevatorEscape::BeginPlay()
 {
 	Super::BeginPlay();
+
+	GameState = GetWorld()->GetGameState<ATunnelTerrorGameState>();
 
 	CollisionSphere = FindComponentByClass<USphereComponent>();
 
@@ -97,7 +100,11 @@ void AElevatorEscape::AddSampleImplementation(int newSamples)
 		if (HasAuthority())
 		{
 			MulticastPlayDoorOpenAnimation();
-			UE_LOG(LogTemp, Log, TEXT("Playing animation"));
+			if (GameState)
+			{
+				GameState->StartChaosTimer();
+			}
+			//UE_LOG(LogTemp, Log, TEXT("Playing animation"));
 		}
 	}
 }
