@@ -204,38 +204,38 @@ void UInventoryComponent::ServerSetSelectedSlot_Implementation(int32 SlotIndex)
 	{
 		if (InventorySlots[SelectedSlotIndex].Item->ItemName.ToString() == "Compass")
 		{
-			Player->EquipCompass(true);
+			Player->EquipCompassAnim(true);
 			MulticastEquipCompass(true);
 		} else
 		{
-			Player->EquipCompass(false);
+			Player->EquipCompassAnim(false);
 			MulticastEquipCompass(false);
 		}
 		if (InventorySlots[SelectedSlotIndex].Item->ItemName.ToString() == "Pickaxe")
 		{
-			Player->EquipPickaxe(true);
+			Player->EquipPickaxeAnim(true);
 			MulticastEquipPickaxe(true);
 		} else
 		{
-			Player->EquipPickaxe(false);
+			Player->EquipPickaxeAnim(false);
 			MulticastEquipPickaxe(false);
 		}
 		if (InventorySlots[SelectedSlotIndex].Item->ItemName.ToString() == "Torch")
 		{
-			Player->EquipTorch(true);
+			Player->EquipTorchAnim(true);
 			MulticastEquipTorch(true);
 		} else
 		{
-			Player->EquipTorch(false);
+			Player->EquipTorchAnim(false);
 			MulticastEquipTorch(false);
 		}
 	} else
 	{
-		Player->EquipCompass(false);
+		Player->EquipCompassAnim(false);
 		MulticastEquipCompass(false);
-		Player->EquipPickaxe(false);
+		Player->EquipPickaxeAnim(false);
 		MulticastEquipPickaxe(false);
-		Player->EquipTorch(false);
+		Player->EquipTorchAnim(false);
 		MulticastEquipTorch(false);
 	}
 	ServerSetItemVisibility();
@@ -269,25 +269,25 @@ void UInventoryComponent::ServerRemoveItem_Implementation(int32 SlotIndex)
 void UInventoryComponent::MulticastEquipCompass_Implementation(bool equip)
 {
 	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
-	Player->EquipCompass(equip);
+	Player->EquipCompassAnim(equip);
 }
 
 void UInventoryComponent::MulticastEquipPickaxe_Implementation(bool equip)
 {
 	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
-	Player->EquipPickaxe(equip);
+	Player->EquipPickaxeAnim(equip);
 }
 
 void UInventoryComponent::MulticastSwingPickaxe_Implementation(bool swing)
 {
 	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
-	Player->SwingPickaxe(swing);
+	Player->SwingPickaxeAnim(swing);
 }
 
 void UInventoryComponent::MulticastEquipTorch_Implementation(bool equip)
 {
 	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
-	Player->EquipTorch(equip);
+	Player->EquipTorchAnim(equip);
 }
 
 // Called when the game starts

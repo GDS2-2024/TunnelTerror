@@ -175,6 +175,21 @@ void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 	}
 }
 
+void ATunnelTerrorCharacter::MulticastEquipPickaxeAnim_Implementation(bool bEquip)
+{
+	EquipPickaxeAnim(bEquip);
+}
+
+void ATunnelTerrorCharacter::MulticastEquipCompassAnim_Implementation(bool bEquip)
+{
+	EquipCompassAnim(bEquip);
+}
+
+void ATunnelTerrorCharacter::MulticastEquipTorchAnim_Implementation(bool bEquip)
+{
+	EquipTorchAnim(bEquip);
+}
+
 void ATunnelTerrorCharacter::Die()
 {
 	if (!HasAuthority()) return;
@@ -354,22 +369,19 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 	if (InventoryItem)
 	{
 		InventoryItem->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, "hand_r_socket");
-		if (InventoryItem->ItemName.ToString() == "Torch")
-		{
-			FRotator DesiredRotation(0.0f, -90.0f, 0.0f);
-			InventoryItem->SetActorRelativeRotation(DesiredRotation);
-		}
 		if (InventoryItem->ItemName.ToString() == "Compass")
 		{
 			FRotator DesiredRotation(180.0f, 0.0f, 90.0f);
 			FVector DesiredPos(2.0f,3.0f,0.0f);
 			InventoryItem->SetActorRelativeLocation(DesiredPos);
 			InventoryItem->SetActorRelativeRotation(DesiredRotation);
-			EquipCompass(true);
+			EquipCompassAnim(true);
+			MulticastEquipCompassAnim(true);
 		}
 		if (InventoryItem->ItemName.ToString() == "Pickaxe")
 		{
-			EquipPickaxe(true);
+			EquipPickaxeAnim(true);
+			MulticastEquipPickaxeAnim(true);
 		}
 		if (InventoryItem->ItemName.ToString() == "Torch")
 		{
@@ -377,7 +389,8 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 			FVector DesiredPos(1.0f,3.0f,1.0f);
 			InventoryItem->SetActorRelativeLocation(DesiredPos);
 			InventoryItem->SetActorRelativeRotation(DesiredRotation);
-			EquipTorch(true);
+			EquipTorchAnim(true);
+			MulticastEquipTorchAnim(true);
 		}
 		ServerEquipToInventory(InventoryItem);
 		if (CollidedPickup)
@@ -501,7 +514,7 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 				if(CollidedPickup->PickupName == "SamplePickup")
                 {
                 	samples++;
-                	// Spawn an instance of the inventory item on the server
+                	// Spawn an instance of the item (sample) on the server
                 	UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item (sample)"))
                 	ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
                 }
@@ -514,7 +527,6 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 			{
 				UE_LOG(LogTemp, Warning, TEXT("Can't pickup item as inventory is full"));
 			}
-			
 		}
 		else
 		{
@@ -653,12 +665,12 @@ void ATunnelTerrorCharacter::EndSporeInfection()
 	UE_LOG(LogTemp, Log, TEXT("Spores have stopped infecting"));
 }
 
-void ATunnelTerrorCharacter::MulticastSwing_Implementation(bool swing)
+void ATunnelTerrorCharacter::MulticastSwingAnim_Implementation(bool swing)
 {
-	SwingPickaxe(swing);
+	SwingPickaxeAnim(swing);
 }
 
-void ATunnelTerrorCharacter::ServerSwing_Implementation(bool swing)
+void ATunnelTerrorCharacter::ServerSwingAnim_Implementation(bool swing)
 {
-	MulticastSwing(swing);
+	MulticastSwingAnim(swing);
 }

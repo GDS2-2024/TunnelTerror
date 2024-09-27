@@ -263,22 +263,31 @@ public:
 	UPlayerHUD* PlayerHUD;
 
 	UFUNCTION(BlueprintImplementableEvent)
-	void EquipTorch(bool bEquip);
-	
-	UFUNCTION(BlueprintImplementableEvent)
-	void EquipCompass(bool bEquip);
-	
-	UFUNCTION(BlueprintImplementableEvent)
-	void EquipPickaxe(bool bEquip);
-	
-	UFUNCTION(BlueprintImplementableEvent)
-	void SwingPickaxe(bool bEquip);
-
-	UFUNCTION(Server, Reliable)
-	void ServerSwing(bool swing);
+	void EquipTorchAnim(bool bEquip);
 
 	UFUNCTION(NetMulticast, Reliable)
-	void MulticastSwing(bool swing);
+	void MulticastEquipTorchAnim(bool bEquip);
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	void EquipCompassAnim(bool bEquip);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastEquipCompassAnim(bool bEquip);
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	void EquipPickaxeAnim(bool bEquip);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastEquipPickaxeAnim(bool bEquip);
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	void SwingPickaxeAnim(bool bEquip);
+
+	UFUNCTION(Server, Reliable)
+	void ServerSwingAnim(bool swing);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastSwingAnim(bool swing);
 	
 private:
 	UPROPERTY(ReplicatedUsing = OnRagdoll, BlueprintGetter = IsRagdolled, Replicated)
