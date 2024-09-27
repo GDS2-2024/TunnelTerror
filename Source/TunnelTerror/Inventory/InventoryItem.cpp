@@ -39,38 +39,26 @@ void AInventoryItem::ReleaseUseItem()
 
 void AInventoryItem::ShowItem()
 {
+	UE_LOG(LogTemp, Error, TEXT("AInventoryItem::ShowItem() Called on: %d"), GetNetMode())
 	if (ItemMesh)
 	{
-		ItemMesh->SetVisibility(true);
-		TArray<USceneComponent*> ChildrenArray;
-		ItemMesh->GetChildrenComponents(true, ChildrenArray);
-
-		// Check if there are any children and set their visibility to true
-		for (USceneComponent* Element : ChildrenArray)
-		{
-			if (Element)
-			{
-				Element->SetVisibility(true);
-			}
-		}
+		ItemMesh->SetVisibility(true, true);
+		UE_LOG(LogTemp, Error, TEXT("AInventoryItem::ShowItem() Set visibility to true: %s"), *ItemName.ToString())
+	} else
+	{
+		UE_LOG(LogTemp, Error, TEXT("AInventoryItem::ShowItem() ItemMesh is null"))
 	}
 }
 
 void AInventoryItem::HideItem()
 {
+	UE_LOG(LogTemp, Error, TEXT("AInventoryItem::HideItem() Called on: %d"), GetNetMode())
 	if (ItemMesh)
 	{
-		ItemMesh->SetVisibility(false);
-		TArray<USceneComponent*> ChildrenArray;
-		ItemMesh->GetChildrenComponents(true, ChildrenArray);
-
-		// Check if there are any children and set their visibility to false
-		for (USceneComponent* Element : ChildrenArray)
-		{
-			if (Element)
-			{
-				Element->SetVisibility(false);
-			}
-		}
+		ItemMesh->SetVisibility(false, true);
+		UE_LOG(LogTemp, Error, TEXT("AInventoryItem::HideItem() Set visibility to false: %s"), *ItemName.ToString())
+	} else
+	{
+		UE_LOG(LogTemp, Error, TEXT("AInventoryItem::HideItem() ItemMesh is null"))
 	}
 }

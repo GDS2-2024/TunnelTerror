@@ -139,6 +139,7 @@ void UInventoryComponent::MulticastHideItem_Implementation(AInventoryItem* Item)
 {
 	if (Item)
 	{
+		UE_LOG(LogTemp, Warning, TEXT("Client: HIDE() Item"))
 		Item->HideItem();
 	} else
 	{
@@ -190,7 +191,7 @@ void UInventoryComponent::ServerSetItemVisibility_Implementation()
     {
        	if (index != SelectedSlotIndex)
        	{
-    		//UE_LOG(LogTemp, Warning, TEXT("Server Hiding Slot: %d"), index)
+    		UE_LOG(LogTemp, Warning, TEXT("Server Hiding Slot: %d"), index)
        		ServerHideItem(InventorySlots[index].Item);
        	}
     }
