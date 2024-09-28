@@ -9,6 +9,9 @@
 /**
  * 
  */
+
+class ATunnelTerrorCharacer;
+
 UCLASS()
 class TUNNELTERROR_API ATunnelTerrorGameState : public AGameState
 {
@@ -16,13 +19,16 @@ class TUNNELTERROR_API ATunnelTerrorGameState : public AGameState
 	
 public:
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(Replicated, BlueprintReadWrite)
 	float chaosTime;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(Replicated, BlueprintReadWrite)
 	bool bChaosTime;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(Replicated, BlueprintReadWrite)
+	float gameTime;
+	
+	UPROPERTY(Replicated, BlueprintReadWrite)
 	bool bGameTime;
 
 public:
@@ -31,7 +37,22 @@ public:
 
 	virtual void Tick(float DeltaTime) override;
 
-	UFUNCTION()
 	void StartChaosTimer();
 
+	UFUNCTION(Server, Reliable)
+	void MulticastStartChaosTimer();
+
+	void KillEveryone();
+
+	UFUNCTION(Server, Reliable)
+	void MulticastKillEveryone();
+
+private:
+
+	TArray<ATunnelTerrorCharacter*> players;
+
+protected:
+	virtual void BeginPlay() override;
+
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 };
