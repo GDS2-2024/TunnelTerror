@@ -394,8 +394,10 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 		}
 		if (InventoryItem->ItemName.ToString() == "Plant Sample") // Plant uses the same anim as compass
 		{
-			FVector DesiredPos(0.0f,0.0f,0.0f);
+			FVector DesiredPos(5.0f,3.0f,-8.0f);
+			FRotator DesiredRotation(30.0f, 0.0f, 0.0f);
 			InventoryItem->SetActorRelativeLocation(DesiredPos);
+			InventoryItem->SetActorRelativeRotation(DesiredRotation);
 			EquipCompassAnim(true); // Plant uses the same anim as compass
 			MulticastEquipCompassAnim(true); // Plant uses the same anim as compass
 		}
