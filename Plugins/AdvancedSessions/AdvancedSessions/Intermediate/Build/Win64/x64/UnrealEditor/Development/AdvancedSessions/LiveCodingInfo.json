@@ -3,8 +3,8 @@
 	{
 		"Module.AdvancedSessions.1_of_3.cpp.obj": [
 			"AdvancedExternalUILibrary.gen.cpp.obj",
-			"AdvancedFriendsGameInstance.gen.cpp.obj",
 			"AdvancedFriendsInterface.gen.cpp.obj",
+			"AdvancedFriendsGameInstance.gen.cpp.obj",
 			"AdvancedFriendsLibrary.gen.cpp.obj",
 			"AdvancedGameSession.gen.cpp.obj",
 			"AdvancedIdentityLibrary.gen.cpp.obj",
@@ -12,6 +12,7 @@
 			"AdvancedSessionsLibrary.gen.cpp.obj"
 		],
 		"Module.AdvancedSessions.2_of_3.cpp.obj": [
+			"AdvancedExternalUILibrary.cpp.obj",
 			"AdvancedVoiceLibrary.gen.cpp.obj",
 			"AutoLoginUserCallbackProxy.gen.cpp.obj",
 			"BlueprintDataDefinitions.gen.cpp.obj",
@@ -25,12 +26,11 @@
 			"GetUserPrivilegeCallbackProxy.gen.cpp.obj",
 			"LoginUserCallbackProxy.gen.cpp.obj",
 			"LogoutUserCallbackProxy.gen.cpp.obj",
-			"SendFriendInviteCallbackProxy.gen.cpp.obj"
+			"SendFriendInviteCallbackProxy.gen.cpp.obj",
+			"StartSessionCallbackProxyAdvanced.gen.cpp.obj",
+			"UpdateSessionCallbackProxyAdvanced.gen.cpp.obj"
 		],
 		"Module.AdvancedSessions.3_of_3.cpp.obj": [
-			"StartSessionCallbackProxyAdvanced.gen.cpp.obj",
-			"UpdateSessionCallbackProxyAdvanced.gen.cpp.obj",
-			"AdvancedExternalUILibrary.cpp.obj",
 			"AdvancedFriendsGameInstance.cpp.obj",
 			"AdvancedFriendsInterface.cpp.obj",
 			"AdvancedFriendsLibrary.cpp.obj",
