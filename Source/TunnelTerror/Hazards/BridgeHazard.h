@@ -21,9 +21,16 @@ public:
 	UFUNCTION(NetMulticast, Reliable)
 	void Fall();
 
+	void OnPlayerInfected();
+
 protected:
 	virtual void BeginPlay() override;
+
+	bool bIsSabotaged = false;
 	
-	UFUNCTION(BlueprintNativeEvent)
+	UFUNCTION(BlueprintImplementableEvent)
 	void FallVisual();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void SetSabotagableVisual(bool bIsSabotagable);
 };

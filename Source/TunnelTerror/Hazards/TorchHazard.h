@@ -31,7 +31,12 @@ public:
 	UFUNCTION(NetMulticast, Reliable)
 	void TurnOff();
 
+	void OnPlayerInfected();
+
 protected:
 	UPROPERTY(BlueprintReadWrite)
 	double SabotageRange = 4000;
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void SetSabotagableVisual(bool bIsSabotagable);
 };

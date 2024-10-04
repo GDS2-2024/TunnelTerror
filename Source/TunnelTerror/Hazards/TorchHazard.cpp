@@ -20,9 +20,16 @@ void ATorchHazard::OnPickupBeginOverlap(UPrimitiveComponent* OverlappedComponent
 	Super::OnPickupBeginOverlap(OverlappedComponent, OtherActor, OtherComponent, OtherBodyIndex, bFromSweep, HitInfo);
 }
 
+void ATorchHazard::OnPlayerInfected()
+{
+	if (!PointLight2->IsVisible()) return;
+	SetSabotagableVisual(true);
+}
+
 void ATorchHazard::TurnOff_Implementation()
 {
 	PointLight2->SetVisibility(false);
+	SetSabotagableVisual(false);
 }
 void ATorchHazard::OnInteract_Implementation()
 {

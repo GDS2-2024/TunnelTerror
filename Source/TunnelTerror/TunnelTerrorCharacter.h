@@ -135,9 +135,6 @@ public:
 
 	UFUNCTION(Client, Reliable)
 	void ClientRemoveInventoryUI(int32 SlotIndex);
-	
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
-	bool bIsInfected;
 
 	UPROPERTY(VisibleAnywhere)
 	float health;
@@ -180,8 +177,9 @@ public:
 
 	void SetIsRagdolled(const bool bNewRagdolled);
 
-	UFUNCTION(BlueprintCallable)
-	void SetIsInfected(bool bIsNowInfected);
+	// Die() should be called instead!
+	/*UFUNCTION(BlueprintCallable)
+	void SetIsInfected(bool bIsNowInfected);*/
 
 	UFUNCTION(BlueprintCallable)
 	bool GetIsInfected();
