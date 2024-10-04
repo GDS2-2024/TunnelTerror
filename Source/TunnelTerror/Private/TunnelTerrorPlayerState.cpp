@@ -5,15 +5,40 @@
 #include "Net/UnrealNetwork.h"
 #include <TunnelTerror/TunnelTerrorCharacter.h>
 
+#include "EngineUtils.h"
+#include "TunnelTerror/TunnelTerror.h"
+#include "TunnelTerror/Hazards/TorchHazard.h"
+#include "TunnelTerror/Hazards/BridgeHazard.h"
+
 void ATunnelTerrorPlayerState::SetIsInfected(const bool bNewInfected)
 {
+    if (!HasAuthority())
+    {
+        UE_LOG(LogTemp, Error, TEXT("ATunnelTerrorPlayerState::SetIsInfected should only be called from the server!"));
+        return;
+    }
     //MARK_PROPERTY_DIRTY_FROM_NAME(ATunnelTerrorPlayerState, bIsInfected, this); // errored, so i commented it out
     bIsInfected = bNewInfected;
+    OnRep_bIsInfected();
 }
 
+// Gets called on the server and client whenever they get infected
 void ATunnelTerrorPlayerState::OnRep_bIsInfected()
 {
-
+    if (HasNetOwner())
+    {
+        // make bridges and torches appear sabotagable
+        for (TActorIterator<ATorchHazard> It(GetWorld()); It; ++It)
+        {
+            ATorchHazard* torch = *It;
+            torch->OnPlayerInfected();
+        }
+		for (TActorIterator<ABridgeHazard> It(GetWorld()); It; ++It)
+        {
+            ABridgeHazard* bridge = *It;
+            bridge->OnPlayerInfected();
+        }
+    }
 }
 
 void ATunnelTerrorPlayerState::CopyProperties(APlayerState* PlayerState)
