@@ -25,7 +25,7 @@ void ATunnelTerrorPlayerState::SetIsInfected(const bool bNewInfected)
 // Gets called on the server and client whenever they get infected
 void ATunnelTerrorPlayerState::OnRep_bIsInfected()
 {
-    if (HasNetOwner())
+    if (GetPawn()->IsLocallyControlled())
     {
         // make bridges and torches appear sabotagable
         for (TActorIterator<ATorchHazard> It(GetWorld()); It; ++It)
