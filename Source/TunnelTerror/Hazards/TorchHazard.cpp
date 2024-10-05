@@ -21,10 +21,17 @@ void ATorchHazard::OnPickupBeginOverlap(UPrimitiveComponent* OverlappedComponent
 	Super::OnPickupBeginOverlap(OverlappedComponent, OtherActor, OtherComponent, OtherBodyIndex, bFromSweep, HitInfo);
 }
 
+void ATorchHazard::OnPlayerInfected()
+{
+	if (bIsOff) return;
+	SetSabotagableVisual(true);
+}
+
 void ATorchHazard::TurnOff_Implementation()
 {
+	bIsOff = true;
 	TurnOffBP();
-	// PointLight2->SetVisibility(false);
+	SetSabotagableVisual(false);
 }
 
 void ATorchHazard::OnInteract()
@@ -33,16 +40,12 @@ void ATorchHazard::OnInteract()
 
 	// server function
 	TurnOff();
-	PointLight2->SetVisibility(false);
-	bIsOff = true;
 
 	for (TActorIterator<ATorchHazard> It(GetWorld()); It; ++It)
 	{
 		ATorchHazard* torch = *It;
 		if ((torch->GetActorLocation() - GetActorLocation()).Length() <= SabotageRange) {
-			torch->PointLight2->SetVisibility(false);
 			torch->TurnOff();
-			torch->bIsOff = true;
 		}
 	}
 }

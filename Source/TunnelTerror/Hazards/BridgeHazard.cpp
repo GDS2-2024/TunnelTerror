@@ -9,6 +9,12 @@ ABridgeHazard::ABridgeHazard()
 {
 }
 
+void ABridgeHazard::OnPlayerInfected()
+{
+	if (bIsSabotaged) return;
+	SetSabotagableVisual(true);
+}
+
 void ABridgeHazard::BeginPlay()
 {
 	Super::BeginPlay();
@@ -16,10 +22,9 @@ void ABridgeHazard::BeginPlay()
 
 void ABridgeHazard::Fall_Implementation()
 {
-	FallVisual();
-}
-
-void ABridgeHazard::FallVisual_Implementation()
-{
+	if (bIsSabotaged) return;
+	bIsSabotaged = true;
+	SetSabotagableVisual(false);
 	
+	FallVisual();
 }

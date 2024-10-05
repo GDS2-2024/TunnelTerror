@@ -34,8 +34,13 @@ public:
 	void TurnOffBP();
 
 	bool bIsOff = false;
+	
+	void OnPlayerInfected();
 
 protected:
 	UPROPERTY(BlueprintReadWrite)
 	double SabotageRange = 4000;
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void SetSabotagableVisual(bool bIsSabotagable);
 };

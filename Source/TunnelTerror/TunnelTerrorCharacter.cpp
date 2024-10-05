@@ -11,6 +11,7 @@
 #include <TunnelTerrorPlayerState.h>
 
 #include "ElevatorEscape.h"
+#include "EngineUtils.h"
 #include "Hazards/TorchHazard.h"
 #include "InfectionTrap.h"
 #include "Hazards/BridgeSabotager.h"
@@ -23,8 +24,6 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 {
 	bReplicates = true;
 	
-	// Character is not infected at the start
-	bIsInfected = false;
 	health = 100.0f;
 
 	trapCD = 30.0f;
@@ -555,7 +554,7 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 	}
 	if (ElevatorEscape != nullptr)
 	{
-		if (!bIsInfected && samples > 0)
+		if (!GetIsInfected() && samples > 0)
 		{
 			ServerInteractWithElevator(ElevatorEscape, samples);
 			samples = 0;
@@ -633,11 +632,20 @@ bool ATunnelTerrorCharacter::GetHasRifle()
 	return bHasRifle;
 }
 
-void ATunnelTerrorCharacter::SetIsInfected(bool bIsNowInfected)
+// Die() should be called instead!
+/*void ATunnelTerrorCharacter::SetIsInfected(bool bIsNowInfected)
 {
-	bIsInfected = bIsNowInfected;
+	//if (bIsNowInfected == bIsInfected) return;
+	//bIsInfected = bIsNowInfected;
 	UE_LOG(LogTemp, Log, TEXT("Player is infected - health: %f"), health);
-}
+
+	// make torches and bridges appear sabotagable
+	for (TActorIterator<ATorchHazard> It(GetWorld()); It; ++It)
+	{
+		ATorchHazard* torch = *It;
+		torch->OnPlayerInfected();
+	}
+}*/
 
 bool ATunnelTerrorCharacter::GetIsInfected()
 {
