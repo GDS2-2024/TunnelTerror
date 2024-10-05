@@ -43,7 +43,7 @@ void AInventoryItem::ShowItem()
 	if (ItemMesh)
 	{
 		ItemMesh->SetVisibility(true, true);
-		UE_LOG(LogTemp, Error, TEXT("AInventoryItem::ShowItem() Set visibility to true: %s"), *ItemName.ToString())
+		//UE_LOG(LogTemp, Error, TEXT("AInventoryItem::ShowItem() Set visibility to true: %s"), *ItemName.ToString())
 	} else
 	{
 		UE_LOG(LogTemp, Error, TEXT("AInventoryItem::ShowItem() ItemMesh is null"))
@@ -56,7 +56,7 @@ void AInventoryItem::HideItem()
 	if (ItemMesh)
 	{
 		ItemMesh->SetVisibility(false, true);
-		UE_LOG(LogTemp, Error, TEXT("AInventoryItem::HideItem() Set visibility to false: %s"), *ItemName.ToString())
+		//UE_LOG(LogTemp, Error, TEXT("AInventoryItem::HideItem() Set visibility to false: %s"), *ItemName.ToString())
 	} else
 	{
 		UE_LOG(LogTemp, Error, TEXT("AInventoryItem::HideItem() ItemMesh is null"))

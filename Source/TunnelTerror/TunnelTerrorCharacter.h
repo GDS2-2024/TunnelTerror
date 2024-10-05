@@ -2,6 +2,8 @@
 
 #pragma once
 
+#include <string>
+
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "InputActionValue.h"
@@ -63,6 +65,10 @@ class ATunnelTerrorCharacter : public ACharacter
 	/** Use Item */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* UseItemAction;
+
+	/** Drop Item */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	class UInputAction* DropItemAction;
 	
 	/** Inventory Input Actions */
 	UPROPERTY(EditDefaultsOnly, Category=Input)
@@ -113,6 +119,12 @@ public:
 	UFUNCTION(Server,Reliable)
 	void ServerSpawnItem(TSubclassOf<AInventoryItem> ItemClass);
 
+	UFUNCTION(Server, Reliable)
+	void ServerSpawnPickup(FName PickupName);
+	
+	UFUNCTION(Server, Reliable)
+	void ServerRemoveItem();
+	
 	UFUNCTION(Server, Reliable)
 	void ServerRemoveCrystals();
 
@@ -235,6 +247,8 @@ protected:
 	void Interact(const FInputActionValue& Value);
 
 	void PlaceTrap(const FInputActionValue& Value);
+
+	void DropItem(const FInputActionValue& Value);
 	
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<UPlayerHUD> PlayerHUDClass;
@@ -243,8 +257,7 @@ protected:
 	void OnRagdoll();
 	
 	void RemoveSamplesFromInventory();
-	
-protected:
+
 	// APawn interface
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
 	// End of APawn interface
@@ -302,5 +315,16 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Trap", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<AInfectionTrap> TrapBlueprint;
+
+	// Item Pickup classes to spawn pickups
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<AItemPickup> TorchPickupClass;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<AItemPickup> CompassPickupClass;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<AItemPickup> PickaxePickupClass;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<AItemPickup> PlantPickupClass;
+
 };
 

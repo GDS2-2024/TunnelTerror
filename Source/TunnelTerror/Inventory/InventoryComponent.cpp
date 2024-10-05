@@ -30,8 +30,11 @@ void UInventoryComponent::AddItem(AInventoryItem* Item, int32 SlotIndex)
 // Remove the item from Inventory at the given slot
 void UInventoryComponent::RemoveItem(int32 SlotIndex)
 {
-	InventorySlots[SlotIndex].EmptySlot();
-	NumOfItems -= 1;
+	if (!InventorySlots[SlotIndex].IsEmpty())
+	{
+		InventorySlots[SlotIndex].EmptySlot();
+		NumOfItems -= 1;
+	}
 }
 
 void UInventoryComponent::RemoveSamples()
@@ -81,7 +84,7 @@ int32 UInventoryComponent::GetIndexOfItem(AInventoryItem* Item)
 void UInventoryComponent::OnRep_InventorySlots()
 {
 	// Handle client-side logic when inventory slots are updated
-	UE_LOG(LogTemp, Warning, TEXT("Inventory slots replicated to the client."));
+	//UE_LOG(LogTemp, Warning, TEXT("Inventory slots replicated to the client."));
 	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
 
 	int32 SlotIndex = 0; // Array Slot Index
@@ -191,7 +194,7 @@ void UInventoryComponent::ServerSetItemVisibility_Implementation()
     {
        	if (index != SelectedSlotIndex)
        	{
-    		UE_LOG(LogTemp, Warning, TEXT("Server Hiding Slot: %d"), index)
+    		//UE_LOG(LogTemp, Warning, TEXT("Server Hiding Slot: %d"), index)
        		ServerHideItem(InventorySlots[index].Item);
        	}
     }

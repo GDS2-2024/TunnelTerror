@@ -166,9 +166,9 @@ void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 		//Item
 		EnhancedInputComponent->BindAction(UseItemAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::PressedUseItem);
 		EnhancedInputComponent->BindAction(UseItemAction, ETriggerEvent::Completed, this, &ATunnelTerrorCharacter::ReleasedUseItem);
+		EnhancedInputComponent->BindAction(DropItemAction, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::DropItem);
 		//Interactions
 		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::Interact);
-
 		//PlaceTrap
 		EnhancedInputComponent->BindAction(PlaceTrapAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::PlaceTrap);
 	}
@@ -359,6 +359,73 @@ void ATunnelTerrorCharacter::EquipToInventory(AInventoryItem* NewItem)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("Failed to add item to inventory because NewItem is null."));
 		}
+	}
+}
+
+void ATunnelTerrorCharacter::ServerSpawnPickup_Implementation(FName PickupName)
+{
+	AItemPickup* ItemPickup = nullptr;
+	int offset = 0.0f;
+	
+	if (PickupName == "Torch")
+	{
+		ItemPickup = GetWorld()->SpawnActor<AItemPickup>(TorchPickupClass);
+		offset = 10.0f;
+	} else if (PickupName == "Compass")
+	{
+		ItemPickup = GetWorld()->SpawnActor<AItemPickup>(CompassPickupClass);
+		offset = -90.0f;
+	} else if (PickupName == "Pickaxe")
+	{
+		ItemPickup = GetWorld()->SpawnActor<AItemPickup>(PickaxePickupClass);
+		offset = 50.0f;
+	} else if (PickupName == "Plant Sample")
+	{
+		ItemPickup = GetWorld()->SpawnActor<AItemPickup>(PlantPickupClass);
+	} else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("No item pickup with given name"))
+		return;
+	}
+
+	// If the item was spawned successfully
+	if (ItemPickup)
+	{
+		// Set the initial spawn location at the character's location
+		FVector SpawnLocation = GetActorLocation();
+		ItemPickup->SetActorLocation(SpawnLocation);
+
+		// Perform a line trace down to find the ground
+		FVector TraceStart = SpawnLocation;
+		FVector TraceEnd = TraceStart - FVector(0.0f, 0.0f, 10000.0f);
+		FHitResult HitResult;
+		FCollisionQueryParams TraceParams(FName(TEXT("")), false, this);
+		bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, TraceStart, TraceEnd,ECC_Visibility, TraceParams);
+		if (bHit)
+		{
+			FVector GroundLocation = HitResult.ImpactPoint;
+			GroundLocation.Z += offset;
+			ItemPickup->SetActorLocation(GroundLocation);
+		}
+		//DrawDebugLine(GetWorld(), TraceStart, TraceEnd, FColor::Green, false, 5.0f, 0, 5.0f);
+	}
+}
+
+void ATunnelTerrorCharacter::ServerRemoveItem_Implementation()
+{
+	// Destroy the Item
+	if (!Inventory->InventorySlots[Inventory->SelectedSlotIndex].IsEmpty())
+	{
+		Inventory->InventorySlots[Inventory->SelectedSlotIndex].Item->Destroy();
+	}
+	// Remove from inventory
+	Inventory->ServerRemoveItem(Inventory->SelectedSlotIndex);
+	//Updates anims
+	Inventory->ServerSetSelectedSlot(Inventory->SelectedSlotIndex);
+	//Update HUD
+	if (IsLocallyControlled())
+	{
+		Inventory->OnRep_InventorySlots();
 	}
 }
 
@@ -577,6 +644,17 @@ void ATunnelTerrorCharacter::PlaceTrap(const FInputActionValue& Value)
 	{
 		ServerPlaceTrap();
 	}
+}
+
+void ATunnelTerrorCharacter::DropItem(const FInputActionValue& Value)
+{
+	// Spawn the dropped item as a pickup on the ground
+	if (Inventory->GetSelectedItem())
+	{
+		ServerSpawnPickup(Inventory->GetSelectedItem()->ItemName);
+	}
+	// Remove item from inventory
+	ServerRemoveItem();
 }
 
 void ATunnelTerrorCharacter::PlaceTrapImplementation()
