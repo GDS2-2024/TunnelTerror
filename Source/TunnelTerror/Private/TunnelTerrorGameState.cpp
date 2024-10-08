@@ -6,7 +6,7 @@
 ATunnelTerrorGameState::ATunnelTerrorGameState()
 {
 	bGameTime = true;
-	chaosTime = 30.0f;
+	chaosTime = 10.0f;
 	bChaosTime = false;
 	gameTime = 300.0f;
 }

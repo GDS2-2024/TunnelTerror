@@ -5,6 +5,7 @@
 #include "TunnelTerror/TunnelTerrorCharacter.h"
 #include "TunnelTerrorGameState.h"
 #include "Components/SphereComponent.h"
+#include "Components/CapsuleComponent.h"
 #include "GameFramework/Actor.h"
 #include "Engine/World.h"
 #include "Engine/Engine.h"

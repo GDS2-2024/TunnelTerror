@@ -103,6 +103,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Weapon)
 	bool bHasRifle;
 
+	UPROPERTY()
+	bool bIsInSafeZone;
+
 	/** Player Inventory */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Replicated)
 	UInventoryComponent* Inventory;
@@ -185,6 +188,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	bool GetIsInfected();
+
+	UFUNCTION()
+	void SetIsInSafeZone(bool bNewIsInSafeZone);
 
 	UFUNCTION()
 	void DecreaseHealth(float damage);

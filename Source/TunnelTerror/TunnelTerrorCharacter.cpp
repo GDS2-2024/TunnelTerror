@@ -25,6 +25,7 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 	
 	// Character is not infected at the start
 	bIsInfected = false;
+	bIsInSafeZone = false;
 	health = 100.0f;
 
 	trapCD = 30.0f;
@@ -622,7 +623,10 @@ bool ATunnelTerrorCharacter::GetIsInfected()
 void ATunnelTerrorCharacter::DecreaseHealth(float damage)
 {
 	UE_LOG(LogTemp, Log, TEXT("Player health: %f"), health);
-	health -= damage;
+	if (bIsInSafeZone == false)
+	{
+		health -= damage;
+	}
 	UE_LOG(LogTemp, Log, TEXT("Player has taken damage: %f"), damage);
 
 	if (health <= 0)
@@ -653,4 +657,9 @@ void ATunnelTerrorCharacter::MulticastSwing_Implementation(bool swing)
 void ATunnelTerrorCharacter::ServerSwing_Implementation(bool swing)
 {
 	MulticastSwing(swing);
+}
+
+void ATunnelTerrorCharacter::SetIsInSafeZone(bool bNewIsInSafeZone)
+{
+	bIsInSafeZone = bNewIsInSafeZone;
 }

@@ -9,6 +9,7 @@
 class ATunnelTerrorCharacter;
 class ATunnelTerrorGameState;
 class USphereComponent;
+class UCapsuleComponent;
 
 UCLASS(Blueprintable, BlueprintType, ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class TUNNELTERROR_API AElevatorEscape : public AActor
