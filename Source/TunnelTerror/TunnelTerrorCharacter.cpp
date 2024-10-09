@@ -460,7 +460,6 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 			FVector DesiredPos(1.0f,3.0f,1.0f);
 			InventoryItem->SetActorRelativeLocation(DesiredPos);
 			InventoryItem->SetActorRelativeRotation(DesiredRotation);
-			EquipTorch(true);
 			EquipTorchAnim(true);
 			MulticastEquipTorchAnim(true);
 		}
