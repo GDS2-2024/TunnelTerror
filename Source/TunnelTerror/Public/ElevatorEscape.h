@@ -20,6 +20,8 @@ public:
 	// Sets default values for this actor's properties
 	AElevatorEscape();
 
+	bool bDoorOpening;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -46,6 +48,9 @@ public:
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Elevator")
 	void PlayDoorOpenAnimationImplementation();
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Elevator")
+	void PlayDoorCloseAnimation();
 
 	UFUNCTION(Server, Reliable)
 	void ServerPlayDoorOpenAnimation();

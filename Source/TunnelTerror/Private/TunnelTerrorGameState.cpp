@@ -2,6 +2,7 @@
 
 #include "TunnelTerrorGameState.h"
 #include "Kismet/GameplayStatics.h"
+#include "ElevatorEscape.h"
 
 ATunnelTerrorGameState::ATunnelTerrorGameState()
 {
@@ -9,11 +10,12 @@ ATunnelTerrorGameState::ATunnelTerrorGameState()
 	chaosTime = 10.0f;
 	bChaosTime = false;
 	gameTime = 300.0f;
+	bDoorClosing = false;
 }
 
 void ATunnelTerrorGameState::BeginPlay()
 {
-	
+	ElevatorEscape = Cast<AElevatorEscape>(UGameplayStatics::GetActorOfClass(GetWorld(), AElevatorEscape::StaticClass()));
 }
 
 void ATunnelTerrorGameState::Tick(float DeltaTime)
@@ -27,6 +29,11 @@ void ATunnelTerrorGameState::Tick(float DeltaTime)
 		{
 			chaosTime = 0.0f;
 			KillEveryone();
+			if (!bDoorClosing)
+			{
+				ElevatorEscape->PlayDoorCloseAnimation();
+				bDoorClosing = true;
+			}
 		}
 	}
 }

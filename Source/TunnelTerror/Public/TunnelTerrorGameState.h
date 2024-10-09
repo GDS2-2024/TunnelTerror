@@ -11,6 +11,7 @@
  */
 
 class ATunnelTerrorCharacer;
+class AElevatorEscape;
 
 UCLASS()
 class TUNNELTERROR_API ATunnelTerrorGameState : public AGameState
@@ -31,6 +32,8 @@ public:
 	UPROPERTY(Replicated, BlueprintReadWrite)
 	bool bGameTime;
 
+	bool bDoorClosing;
+
 public:
 
 	ATunnelTerrorGameState();
@@ -50,6 +53,8 @@ public:
 private:
 
 	TArray<ATunnelTerrorCharacter*> players;
+
+	AElevatorEscape* ElevatorEscape;
 
 protected:
 	virtual void BeginPlay() override;

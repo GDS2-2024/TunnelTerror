@@ -22,6 +22,7 @@ AElevatorEscape::AElevatorEscape()
 	samplesNeeded = 5;
 	currentSamples = 0;
 
+	bDoorOpening = false;
 }
 
 void AElevatorEscape::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
@@ -95,11 +96,12 @@ void AElevatorEscape::AddSampleImplementation(int newSamples)
 		UE_LOG(LogTemp, Log, TEXT("Current samples after: %d"), currentSamples);
 	}
 
-	if (currentSamples >= samplesNeeded)
+	if (currentSamples >= samplesNeeded && !bDoorOpening)
 	{
 		UE_LOG(LogTemp, Log, TEXT("Has enough samples: %d"), currentSamples);
 		if (HasAuthority())
 		{
+			bDoorOpening = true;
 			MulticastPlayDoorOpenAnimation();
 			if (GameState)
 			{
