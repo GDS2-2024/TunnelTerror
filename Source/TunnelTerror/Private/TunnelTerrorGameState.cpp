@@ -38,22 +38,23 @@ void ATunnelTerrorGameState::Tick(float DeltaTime)
 		}
 	}
 
-	if (HasAuthority())
+	if (HasAuthority() && Players.Num() > 0)
 	{
-		bAllInfected = false;
+		bAllInfected = true;
 
 		for (ATunnelTerrorCharacter* Player : Players)
 		{
-			if (!Player->GetIsInfected())
+			if (Player && !Player->GetIsInfected())
 			{
+				bAllInfected = false;
 				break;
 			}
-			bAllInfected = true;
 		}
 
 		if (bAllInfected)
 		{
 			gameTime = 0.0f;
+			bChaosTime = false;
 		}
 	}
 
