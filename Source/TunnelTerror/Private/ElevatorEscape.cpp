@@ -19,7 +19,7 @@ AElevatorEscape::AElevatorEscape()
 
 	bReplicates = true;
 
-	samplesNeeded = 5;
+	samplesNeeded = 8;
 	currentSamples = 0;
 
 	bDoorOpening = false;

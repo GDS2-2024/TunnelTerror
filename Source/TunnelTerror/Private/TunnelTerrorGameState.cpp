@@ -9,9 +9,9 @@
 ATunnelTerrorGameState::ATunnelTerrorGameState()
 {
 	bGameTime = true;
-	chaosTime = 10.0f;
+	chaosTime = 30.0f;
 	bChaosTime = false;
-	gameTime = 300.0f;
+	gameTime = 600.0f;
 	bDoorClosing = false;
 }
 
