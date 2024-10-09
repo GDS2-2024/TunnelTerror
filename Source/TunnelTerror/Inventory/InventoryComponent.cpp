@@ -142,7 +142,7 @@ void UInventoryComponent::MulticastHideItem_Implementation(AInventoryItem* Item)
 {
 	if (Item)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Client: HIDE() Item"))
+		//UE_LOG(LogTemp, Warning, TEXT("Client: HIDE() Item"))
 		Item->HideItem();
 	} else
 	{

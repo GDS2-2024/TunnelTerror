@@ -434,7 +434,13 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 	AInventoryItem* InventoryItem = GetWorld()->SpawnActor<AInventoryItem>(ItemClass);
 	if (InventoryItem)
 	{
-		InventoryItem->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, "hand_r_socket");
+		if (InventoryItem->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, "hand_rSocket"))
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Attached Success"));
+		} else
+		{
+			UE_LOG(LogTemp, Error, TEXT("Attached Failed"));
+		}
 		if (InventoryItem->ItemName.ToString() == "Compass")
 		{
 			FRotator DesiredRotation(180.0f, 0.0f, 90.0f);
