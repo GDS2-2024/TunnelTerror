@@ -34,6 +34,9 @@ public:
 
 	bool bDoorClosing;
 
+	UPROPERTY()
+	TArray<ATunnelTerrorCharacter*> Players;
+
 public:
 
 	ATunnelTerrorGameState();
@@ -49,6 +52,9 @@ public:
 
 	UFUNCTION(Server, Reliable)
 	void MulticastKillEveryone();
+
+	UFUNCTION()
+	void EndGame();
 
 private:
 

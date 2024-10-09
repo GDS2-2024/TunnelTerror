@@ -49,14 +49,20 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Elevator")
 	void PlayDoorOpenAnimationImplementation();
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "Elevator")
-	void PlayDoorCloseAnimation();
-
 	UFUNCTION(Server, Reliable)
 	void ServerPlayDoorOpenAnimation();
 
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastPlayDoorOpenAnimation();
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Elevator")
+	void PlayDoorCloseAnimation();
+
+	UFUNCTION(Server, Reliable)
+	void ServerPlayDoorCloseAnimation();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastPlayDoorCloseAnimation();
 
 	UPROPERTY(Replicated)
 	int samplesNeeded;

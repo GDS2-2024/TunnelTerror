@@ -102,7 +102,7 @@ void AElevatorEscape::AddSampleImplementation(int newSamples)
 		if (HasAuthority())
 		{
 			bDoorOpening = true;
-			MulticastPlayDoorOpenAnimation();
+			ServerPlayDoorOpenAnimation();
 			if (GameState)
 			{
 				GameState->StartChaosTimer();
@@ -125,10 +125,20 @@ void AElevatorEscape::MulticastAddSample_Implementation(int newSamples)
 
 void AElevatorEscape::ServerPlayDoorOpenAnimation_Implementation()
 {
-	PlayDoorOpenAnimationImplementation();
+	MulticastPlayDoorOpenAnimation();
 }
 
 void AElevatorEscape::MulticastPlayDoorOpenAnimation_Implementation()
 {
 	PlayDoorOpenAnimationImplementation();
+}
+
+void AElevatorEscape::ServerPlayDoorCloseAnimation_Implementation()
+{
+	MulticastPlayDoorCloseAnimation();
+}
+
+void AElevatorEscape::MulticastPlayDoorCloseAnimation_Implementation()
+{
+	PlayDoorCloseAnimation();
 }

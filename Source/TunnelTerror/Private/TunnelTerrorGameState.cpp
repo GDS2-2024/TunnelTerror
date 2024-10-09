@@ -3,6 +3,8 @@
 #include "TunnelTerrorGameState.h"
 #include "Kismet/GameplayStatics.h"
 #include "ElevatorEscape.h"
+#include "TunnelTerror/TunnelTerrorCharacter.h"
+#include "Net/UnrealNetwork.h"
 
 ATunnelTerrorGameState::ATunnelTerrorGameState()
 {
@@ -22,16 +24,20 @@ void ATunnelTerrorGameState::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+
+
 	if (bChaosTime == true && HasAuthority())
 	{
 		chaosTime -= DeltaTime;
+		gameTime = chaosTime;
 		if (chaosTime <= 0.0f)
 		{
 			chaosTime = 0.0f;
+			bChaosTime = false;
 			KillEveryone();
 			if (!bDoorClosing)
 			{
-				ElevatorEscape->PlayDoorCloseAnimation();
+				ElevatorEscape->ServerPlayDoorCloseAnimation();
 				bDoorClosing = true;
 			}
 		}
@@ -78,6 +84,11 @@ void ATunnelTerrorGameState::MulticastStartChaosTimer_Implementation()
 	UE_LOG(LogTemp, Log, TEXT("Chaos Timer Started"));
 }
 
+void ATunnelTerrorGameState::EndGame()
+{
+		
+}
+
 void ATunnelTerrorGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
@@ -87,3 +98,4 @@ void ATunnelTerrorGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty
 	DOREPLIFETIME(ATunnelTerrorGameState, chaosTime);
 	DOREPLIFETIME(ATunnelTerrorGameState, bChaosTime);
 }
+
