@@ -24,7 +24,38 @@ void ATunnelTerrorGameState::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	Players.Empty();
 
+	TArray<AActor*> FoundActors;
+
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ATunnelTerrorCharacter::StaticClass(), FoundActors);
+
+	for (AActor* Actor : FoundActors)
+	{
+		if (ATunnelTerrorCharacter* Character = Cast<ATunnelTerrorCharacter>(Actor))
+		{
+			Players.Add(Character);
+		}
+	}
+
+	if (HasAuthority())
+	{
+		bAllInfected = false;
+
+		for (ATunnelTerrorCharacter* Player : Players)
+		{
+			if (!Player->GetIsInfected())
+			{
+				break;
+			}
+			bAllInfected = true;
+		}
+
+		if (bAllInfected)
+		{
+			gameTime = 0.0f;
+		}
+	}
 
 	if (bChaosTime == true && HasAuthority())
 	{

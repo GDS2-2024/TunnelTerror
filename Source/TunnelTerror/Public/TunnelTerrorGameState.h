@@ -37,6 +37,8 @@ public:
 	UPROPERTY()
 	TArray<ATunnelTerrorCharacter*> Players;
 
+	bool bAllInfected;
+
 public:
 
 	ATunnelTerrorGameState();
