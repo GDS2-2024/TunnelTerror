@@ -167,7 +167,7 @@ void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 		//Item
 		EnhancedInputComponent->BindAction(UseItemAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::PressedUseItem);
 		EnhancedInputComponent->BindAction(UseItemAction, ETriggerEvent::Completed, this, &ATunnelTerrorCharacter::ReleasedUseItem);
-		EnhancedInputComponent->BindAction(DropItemAction, ETriggerEvent::Triggered, this, &ATunnelTerrorCharacter::DropItem);
+		EnhancedInputComponent->BindAction(DropItemAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::DropItem);
 		//Interactions
 		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::Interact);
 		//PlaceTrap
@@ -364,21 +364,23 @@ void ATunnelTerrorCharacter::EquipToInventory(AInventoryItem* NewItem)
 
 void ATunnelTerrorCharacter::ServerSpawnPickup_Implementation(FName PickupName)
 {
+	UE_LOG(LogTemp, Warning, TEXT("Spawning pickup on Server"))
 	AItemPickup* ItemPickup = nullptr;
-	int offset = 0.0f;
+	int Heightoffset = 0.0f;
+	int ForwardOffset = -50.0f;
 	
 	if (PickupName == "Torch")
 	{
 		ItemPickup = GetWorld()->SpawnActor<AItemPickup>(TorchPickupClass);
-		offset = 10.0f;
+		Heightoffset = 10.0f;
 	} else if (PickupName == "Compass")
 	{
 		ItemPickup = GetWorld()->SpawnActor<AItemPickup>(CompassPickupClass);
-		offset = -90.0f;
+		Heightoffset = -90.0f;
 	} else if (PickupName == "Pickaxe")
 	{
 		ItemPickup = GetWorld()->SpawnActor<AItemPickup>(PickaxePickupClass);
-		offset = 50.0f;
+		Heightoffset = 50.0f;
 	} else if (PickupName == "Plant Sample")
 	{
 		ItemPickup = GetWorld()->SpawnActor<AItemPickup>(PlantPickupClass);
@@ -404,7 +406,8 @@ void ATunnelTerrorCharacter::ServerSpawnPickup_Implementation(FName PickupName)
 		if (bHit)
 		{
 			FVector GroundLocation = HitResult.ImpactPoint;
-			GroundLocation.Z += offset;
+			GroundLocation.Z += Heightoffset;
+			GroundLocation.X += ForwardOffset;
 			ItemPickup->SetActorLocation(GroundLocation);
 		}
 		//DrawDebugLine(GetWorld(), TraceStart, TraceEnd, FColor::Green, false, 5.0f, 0, 5.0f);
@@ -504,7 +507,7 @@ void ATunnelTerrorCharacter::ClientAddInventoryUI_Implementation(AInventoryItem*
 	PlayItemPickupSFX();
 	if (!PlayerHUD)
 	{
-		UE_LOG(LogTemp, Error, TEXT("PlayerHUD is null in ClientAddInventoryUI"));
+		//UE_LOG(LogTemp, Error, TEXT("PlayerHUD is null in ClientAddInventoryUI"));
 		return;
 	}
 
@@ -528,7 +531,7 @@ void ATunnelTerrorCharacter::ClientRemoveInventoryUI_Implementation(int32 SlotIn
 {
 	if (!PlayerHUD)
 	{
-		UE_LOG(LogTemp, Error, TEXT("PlayerHUD is null in ClientAddInventoryUI"));
+		//UE_LOG(LogTemp, Error, TEXT("PlayerHUD is null in ClientAddInventoryUI"));
 		return;
 	}
 
@@ -654,6 +657,7 @@ void ATunnelTerrorCharacter::PlaceTrap(const FInputActionValue& Value)
 
 void ATunnelTerrorCharacter::DropItem(const FInputActionValue& Value)
 {
+	UE_LOG(LogTemp, Warning, TEXT("Player pressed 'F' to drop"))
 	// Spawn the dropped item as a pickup on the ground
 	if (Inventory->GetSelectedItem())
 	{

@@ -39,26 +39,26 @@ void AInventoryItem::ReleaseUseItem()
 
 void AInventoryItem::ShowItem()
 {
-	UE_LOG(LogTemp, Error, TEXT("AInventoryItem::ShowItem() Called on: %d"), GetNetMode())
+	//UE_LOG(LogTemp, Error, TEXT("AInventoryItem::ShowItem() Called on: %d"), GetNetMode())
 	if (ItemMesh)
 	{
 		ItemMesh->SetVisibility(true, true);
 		//UE_LOG(LogTemp, Error, TEXT("AInventoryItem::ShowItem() Set visibility to true: %s"), *ItemName.ToString())
 	} else
 	{
-		UE_LOG(LogTemp, Error, TEXT("AInventoryItem::ShowItem() ItemMesh is null"))
+		//UE_LOG(LogTemp, Error, TEXT("AInventoryItem::ShowItem() ItemMesh is null"))
 	}
 }
 
 void AInventoryItem::HideItem()
 {
-	UE_LOG(LogTemp, Error, TEXT("AInventoryItem::HideItem() Called on: %d"), GetNetMode())
+	//UE_LOG(LogTemp, Error, TEXT("AInventoryItem::HideItem() Called on: %d"), GetNetMode())
 	if (ItemMesh)
 	{
 		ItemMesh->SetVisibility(false, true);
 		//UE_LOG(LogTemp, Error, TEXT("AInventoryItem::HideItem() Set visibility to false: %s"), *ItemName.ToString())
 	} else
 	{
-		UE_LOG(LogTemp, Error, TEXT("AInventoryItem::HideItem() ItemMesh is null"))
+		//UE_LOG(LogTemp, Error, TEXT("AInventoryItem::HideItem() ItemMesh is null"))
 	}
 }
