@@ -3,7 +3,9 @@
 
 #include "ElevatorEscape.h"
 #include "TunnelTerror/TunnelTerrorCharacter.h"
+#include "TunnelTerrorGameState.h"
 #include "Components/SphereComponent.h"
+#include "Components/CapsuleComponent.h"
 #include "GameFramework/Actor.h"
 #include "Engine/World.h"
 #include "Engine/Engine.h"
@@ -17,9 +19,10 @@ AElevatorEscape::AElevatorEscape()
 
 	bReplicates = true;
 
-	samplesNeeded = 5;
+	samplesNeeded = 8;
 	currentSamples = 0;
 
+	bDoorOpening = false;
 }
 
 void AElevatorEscape::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
@@ -34,6 +37,8 @@ void AElevatorEscape::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
 void AElevatorEscape::BeginPlay()
 {
 	Super::BeginPlay();
+
+	GameState = GetWorld()->GetGameState<ATunnelTerrorGameState>();
 
 	CollisionSphere = FindComponentByClass<USphereComponent>();
 
@@ -91,13 +96,18 @@ void AElevatorEscape::AddSampleImplementation(int newSamples)
 		UE_LOG(LogTemp, Log, TEXT("Current samples after: %d"), currentSamples);
 	}
 
-	if (currentSamples >= samplesNeeded)
+	if (currentSamples >= samplesNeeded && !bDoorOpening)
 	{
 		UE_LOG(LogTemp, Log, TEXT("Has enough samples: %d"), currentSamples);
 		if (HasAuthority())
 		{
-			MulticastPlayDoorOpenAnimation();
-			UE_LOG(LogTemp, Log, TEXT("Playing animation"));
+			bDoorOpening = true;
+			ServerPlayDoorOpenAnimation();
+			if (GameState)
+			{
+				GameState->StartChaosTimer();
+			}
+			//UE_LOG(LogTemp, Log, TEXT("Playing animation"));
 		}
 	}
 }
@@ -115,10 +125,20 @@ void AElevatorEscape::MulticastAddSample_Implementation(int newSamples)
 
 void AElevatorEscape::ServerPlayDoorOpenAnimation_Implementation()
 {
-	PlayDoorOpenAnimationImplementation();
+	MulticastPlayDoorOpenAnimation();
 }
 
 void AElevatorEscape::MulticastPlayDoorOpenAnimation_Implementation()
 {
 	PlayDoorOpenAnimationImplementation();
+}
+
+void AElevatorEscape::ServerPlayDoorCloseAnimation_Implementation()
+{
+	MulticastPlayDoorCloseAnimation();
+}
+
+void AElevatorEscape::MulticastPlayDoorCloseAnimation_Implementation()
+{
+	PlayDoorCloseAnimation();
 }
