@@ -437,13 +437,7 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 	AInventoryItem* InventoryItem = GetWorld()->SpawnActor<AInventoryItem>(ItemClass);
 	if (InventoryItem)
 	{
-		if (InventoryItem->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, "hand_rSocket"))
-		{
-			UE_LOG(LogTemp, Warning, TEXT("Attached Success"));
-		} else
-		{
-			UE_LOG(LogTemp, Error, TEXT("Attached Failed"));
-		InventoryItem->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, "hand_r_socket");
+		InventoryItem->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, "hand_rSocket");
 		if (InventoryItem->ItemName.ToString() == "Torch")
 		{
 			FRotator DesiredRotation(0.0f, -90.0f, 0.0f);
