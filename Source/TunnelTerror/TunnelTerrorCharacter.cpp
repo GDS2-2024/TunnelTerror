@@ -126,6 +126,12 @@ void ATunnelTerrorCharacter::Tick(float DeltaTime)
 	
 }
 
+void ATunnelTerrorCharacter::SetMoneyUI(int32 amount) {
+	PlayerHUD->SetCurrencyUI(amount);
+	money = amount;
+}
+
+
 void ATunnelTerrorCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
