@@ -170,7 +170,11 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	bool bSporesInfecting;
 	
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	int32 money;
+
+	UFUNCTION(BlueprintCallable)
+	void SetMoneyUI(int32 amount);
 
 	/** Setter to set the bool */
 	UFUNCTION(BlueprintCallable, Category = Weapon)
