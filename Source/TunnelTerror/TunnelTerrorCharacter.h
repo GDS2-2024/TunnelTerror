@@ -119,6 +119,12 @@ public:
 	UFUNCTION()
 	void EquipToInventory(AInventoryItem* NewItem);
 
+	UFUNCTION(BlueprintImplementableEvent)
+	void ChangePlayerMesh(USkeletalMesh* NewMesh);
+
+	UFUNCTION(BlueprintCallable)
+	USkeletalMesh* GetRandomMesh();
+	
 	UFUNCTION(Server,Reliable)
 	void ServerSpawnItem(TSubclassOf<AInventoryItem> ItemClass);
 
@@ -332,5 +338,15 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<AItemPickup> PlantPickupClass;
 
+	// Character Selection Meshes
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Selection", meta = (AllowPrivateAccess = "true"))
+	USkeletalMesh* MaleCharacter1;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Selection", meta = (AllowPrivateAccess = "true"))
+	USkeletalMesh* MaleCharacter2;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Selection", meta = (AllowPrivateAccess = "true"))
+	USkeletalMesh* FemaleCharacter1;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Selection", meta = (AllowPrivateAccess = "true"))
+	USkeletalMesh* FemaleCharacter2;
+	
 };
 

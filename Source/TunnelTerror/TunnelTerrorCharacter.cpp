@@ -82,7 +82,6 @@ void ATunnelTerrorCharacter::BeginPlay()
 			PlayerHUD->AddToPlayerScreen();
 		}
 	}
-	
 }
 
 void ATunnelTerrorCharacter::Tick(float DeltaTime)
@@ -359,6 +358,25 @@ void ATunnelTerrorCharacter::EquipToInventory(AInventoryItem* NewItem)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("Failed to add item to inventory because NewItem is null."));
 		}
+	}
+}
+
+USkeletalMesh* ATunnelTerrorCharacter::GetRandomMesh()
+{
+	int32 RandomInt = FMath::RandRange(1, 4);
+	UE_LOG(LogTemp, Warning, TEXT("RandomInt: %d"), RandomInt);
+	switch (RandomInt)
+	{
+	case 1:
+		return MaleCharacter1;
+	case 2:
+		return MaleCharacter2;
+	case 3:
+		return FemaleCharacter1;
+	case 4:
+		return FemaleCharacter2;
+	default:
+		return MaleCharacter1;
 	}
 }
 
