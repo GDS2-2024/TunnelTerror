@@ -734,16 +734,6 @@ void ATunnelTerrorCharacter::RemoveSamplesFromInventory()
 	Inventory->RemoveSamples();
 }
 
-void ATunnelTerrorCharacter::SetHasRifle(bool bNewHasRifle)
-{
-	bHasRifle = bNewHasRifle;
-}
-
-bool ATunnelTerrorCharacter::GetHasRifle()
-{
-	return bHasRifle;
-}
-
 bool ATunnelTerrorCharacter::GetIsInfected()
 {
 	if (ATunnelTerrorPlayerState* playerState = GetPlayerState<ATunnelTerrorPlayerState>()) {
