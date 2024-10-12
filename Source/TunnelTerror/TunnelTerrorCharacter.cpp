@@ -35,9 +35,6 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 
 	sporeInfectTime = 10.0f;
 	sporeInfectCurrent = 0.0f;
-
-	// Character doesnt have a rifle at start
-	bHasRifle = false;
 	
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(55.f, 96.0f);
@@ -193,6 +190,11 @@ void ATunnelTerrorCharacter::MulticastEquipCompassAnim_Implementation(bool bEqui
 void ATunnelTerrorCharacter::MulticastEquipTorchAnim_Implementation(bool bEquip)
 {
 	EquipTorchAnim(bEquip);
+}
+
+void ATunnelTerrorCharacter::MulticastEquipWeedKillerAnim_Implementation(bool bEquip)
+{
+	EquipWeedKillerAnim(bEquip);
 }
 
 void ATunnelTerrorCharacter::Die()
@@ -397,7 +399,13 @@ void ATunnelTerrorCharacter::ServerSpawnPickup_Implementation(FName PickupName)
 	{
 		ItemPickup = GetWorld()->SpawnActor<AItemPickup>(TorchPickupClass);
 		Heightoffset = 10.0f;
-	} else if (PickupName == "Compass")
+	}
+	else if (PickupName == "WeedKiller")
+	{
+		ItemPickup = GetWorld()->SpawnActor<AItemPickup>(WeedKillerPickupClass);
+		Heightoffset = 10.0f;
+	}
+	else if (PickupName == "Compass")
 	{
 		ItemPickup = GetWorld()->SpawnActor<AItemPickup>(CompassPickupClass);
 		Heightoffset = -90.0f;
@@ -467,7 +475,7 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 			FRotator DesiredRotation(0.0f, -90.0f, 0.0f);
 			InventoryItem->SetActorRelativeRotation(DesiredRotation);
 		}
-		if (InventoryItem->ItemName.ToString() == "Compass")
+		if (InventoryItem->ItemName.ToString() == "Compass") // note from sherwin: dylan why the fuck arent you using else if
 		{
 			FRotator DesiredRotation(180.0f, 0.0f, 90.0f);
 			FVector DesiredPos(2.0f,3.0f,0.0f);
@@ -489,6 +497,15 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 			InventoryItem->SetActorRelativeRotation(DesiredRotation);
 			EquipTorchAnim(true);
 			MulticastEquipTorchAnim(true);
+		}
+		if (InventoryItem->ItemName.ToString() == "WeedKiller")
+		{
+			FRotator DesiredRotation(-30.0f, 75.0f, -15.0f);
+			FVector DesiredPos(-7.0f,-3.0f,-15.0f);
+			InventoryItem->SetActorRelativeLocation(DesiredPos);
+			InventoryItem->SetActorRelativeRotation(DesiredRotation);
+			EquipWeedKillerAnim(true);
+			MulticastEquipWeedKillerAnim(true);
 		}
 		if (InventoryItem->ItemName.ToString() == "Plant Sample") // Plant uses the same anim as compass
 		{

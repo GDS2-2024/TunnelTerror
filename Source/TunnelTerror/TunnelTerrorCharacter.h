@@ -105,10 +105,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
 
-	/** Bool for AnimBP to switch to another animation set */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Weapon)
-	bool bHasRifle;
-
 	UPROPERTY()
 	bool bIsInSafeZone;
 
@@ -175,14 +171,6 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void SetMoneyUI(int32 amount);
-
-	/** Setter to set the bool */
-	UFUNCTION(BlueprintCallable, Category = Weapon)
-	void SetHasRifle(bool bNewHasRifle);
-
-	/** Getter for the bool */
-	UFUNCTION(BlueprintCallable, Category = Weapon)
-	bool GetHasRifle();
 	
 	/// <summary>
 	/// Ragdolls and infects the player
@@ -294,6 +282,12 @@ public:
 
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastEquipTorchAnim(bool bEquip);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void EquipWeedKillerAnim(bool bEquip);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastEquipWeedKillerAnim(bool bEquip);
 	
 	UFUNCTION(BlueprintImplementableEvent)
 	void EquipCompassAnim(bool bEquip);
@@ -335,6 +329,8 @@ private:
 	// Item Pickup classes to spawn pickups
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<AItemPickup> TorchPickupClass;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<AItemPickup> WeedKillerPickupClass;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<AItemPickup> CompassPickupClass;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))

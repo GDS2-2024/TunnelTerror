@@ -89,6 +89,8 @@ private:
 	void MulticastEquipPickaxe(bool equip);
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastSwingPickaxe(bool swing);
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastEquipWeedKiller(bool equip);
 	
 protected:
 	// Called when the game starts
