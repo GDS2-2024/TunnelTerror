@@ -78,7 +78,7 @@ void ALevelGenerator::InitializeGrid(int32 GridWidth, int32 GridHeight)
 
 URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubclassOf<AActor> ActorToSpawn, bool spawnItems, bool spawnSample)
 {
-    UE_LOG(LogTemp, Warning, TEXT("spawning room at: %d, J: %d"), CurrentI, CurrentJ);
+    // UE_LOG(LogTemp, Warning, TEXT("spawning room at: %d, J: %d"), CurrentI, CurrentJ);
     const float CellSize = 500.0f;
 
     FVector SpawnLocation(CurrentJ * CellSize, CurrentI * CellSize, 0.0f);
@@ -241,7 +241,7 @@ void ALevelGenerator::SpawnPath(int32 LastDoor, FRoom StartRoom, int32 CurrentI,
                 }
 
 
-                UE_LOG(LogTemp, Warning, TEXT("Room spawned: %s"), *ActorToSpawnNext->GetName());
+                // UE_LOG(LogTemp, Warning, TEXT("Room spawned: %s"), *ActorToSpawnNext->GetName());
 
                 if (ActorToSpawnNext == Corridors[1].Actor) {
                     spawnedT = true;
@@ -352,8 +352,8 @@ void ALevelGenerator::SpawnAnotherPath(FPlace place)
             break;
         }
 
-        UE_LOG(LogTemp, Warning, TEXT("Current LastDoor: %d"), LastDoor);
-        UE_LOG(LogTemp, Warning, TEXT("NextI: %d, NextJ: %d"), NextI, NextJ);
+        //UE_LOG(LogTemp, Warning, TEXT("Current LastDoor: %d"), LastDoor);
+        //UE_LOG(LogTemp, Warning, TEXT("NextI: %d, NextJ: %d"), NextI, NextJ);
         //FVector Place(NextJ * 500.0f, NextI * 500.0f, 400.0f);
         //DrawDebugSphere(GetWorld(), Place, 50.0f, 12, FColor::Green, true, -1.0f, 0, 2.0f);
 
@@ -392,7 +392,7 @@ void ALevelGenerator::SpawnAnotherPath(FPlace place)
                 }
 
 
-                UE_LOG(LogTemp, Warning, TEXT("Room spawned: %s"), *ActorToSpawnNext->GetName());
+                //UE_LOG(LogTemp, Warning, TEXT("Room spawned: %s"), *ActorToSpawnNext->GetName());
 
                 if (ActorToSpawnNext == Corridors[0].Actor) {
                     spawnedT = true;
