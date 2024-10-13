@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "3065143382",
+    "Type": "Event",
+    "GUID": "{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}",
+    "Language": "SFX",
+    "Hash": "{0468C38A-737F-0977-3EFF-F7ED6939411A}",
+    "ObjectPath": "Stop_Torch",
+    "ShortName": "Stop_Torch",
+    "Path": "Event/Stop_Torch.bnk",
+    "Events": [
+     {
+      "Id": "3065143382",
+      "Name": "Stop_Torch",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_Torch",
+      "GUID": "{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F9FAFE67-DE37-F75C-46BA-77CD99F6FB8B}"
+ }
+}

@@ -90,6 +90,21 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stop_Torch" ID="{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}">
+					<ChildrenList>
+						<Action Name="" ID="{81109C18-1ABD-4A6B-A195-40F9AACFBACE}" ShortID="786389771">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Torch" ID="{8ADA7E1B-DB73-4C9C-8EA3-05E40C50E622}" WorkUnitID="{38D93596-E326-419F-9FB1-E53D73526390}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

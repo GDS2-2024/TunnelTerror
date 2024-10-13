@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3065143382	Stop_Torch			\Default Work Unit\Stop_Torch	
+

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
     "Language": "SFX",
-    "Hash": "{B241E64F-32B2-BB63-E687-98EB700CA902}",
+    "Hash": "{3F57B527-27FE-3A47-9BD0-56D3DBDE13AB}",
     "ObjectPath": "Atmosphere",
     "ShortName": "Atmosphere",
     "Path": "Event/Atmosphere.bnk",
@@ -84,6 +84,6 @@
     ]
    }
   ],
-  "FileHash": "{DBF94642-7A39-FF6E-1435-B403E73D4C41}"
+  "FileHash": "{AABD1AB4-0FB4-84D7-4C8F-E61EE9A61828}"
  }
 }

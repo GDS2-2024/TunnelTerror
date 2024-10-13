@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="3065143382" Type="Event" GUID="{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}" Language="SFX" Hash="{0468C38A-737F-0977-3EFF-F7ED6939411A}">
+			<ObjectPath>Stop_Torch</ObjectPath>
+			<ShortName>Stop_Torch</ShortName>
+			<Path>Event/Stop_Torch.bnk</Path>
+			<Events>
+				<Event Id="3065143382" Name="Stop_Torch" ObjectPath="\Events\Default Work Unit\Stop_Torch" GUID="{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{39E50E17-180B-E647-26AF-8D0C5033375C}</FileHash>
+</SoundBanksInfo>

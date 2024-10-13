@@ -38,6 +38,11 @@
 						</Property>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 						<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -48,7 +53,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA" ID="{BFEAC129-0190-447F-9BCB-3ED23C8A6B1F}" ShortID="240629889">
+						<Sound Name="AirSystem" ID="{BFEAC129-0190-447F-9BCB-3ED23C8A6B1F}" ShortID="240629889">
 							<PropertyList>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -95,7 +100,7 @@
 								<ActiveSource Name="- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA" ID="{233CA9B8-4A07-4A0C-AC2D-E83678A9F181}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="25879__acclivity__drip1" ID="{4C060456-2CB6-4689-8AED-BB7DF349EF26}" ShortID="289688959">
+						<Sound Name="Drip" ID="{4C060456-2CB6-4689-8AED-BB7DF349EF26}" ShortID="289688959">
 							<PropertyList>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
@@ -116,7 +121,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-10</Value>
+										<Value>-6</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
@@ -179,7 +184,7 @@
 								<ActiveSource Name="25879__acclivity__drip1" ID="{A75B456C-5499-4AA2-8B30-DFE906EE009A}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="99S LT Vehicle - Resonation C" ID="{B4310763-A786-4388-BFE2-4453192D1775}" ShortID="111960663">
+						<Sound Name="Engine" ID="{B4310763-A786-4388-BFE2-4453192D1775}" ShortID="111960663">
 							<PropertyList>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -269,7 +274,7 @@
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
-							<ObjectRef Name="New Attenuation" ID="{6142490D-7D05-4C6F-A86D-6C103BF24D93}" WorkUnitID="{DBAC850D-1D99-4039-87EC-15749192364E}"/>
+							<ObjectRef Name="Rockfall" ID="{6142490D-7D05-4C6F-A86D-6C103BF24D93}" WorkUnitID="{DBAC850D-1D99-4039-87EC-15749192364E}"/>
 						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>

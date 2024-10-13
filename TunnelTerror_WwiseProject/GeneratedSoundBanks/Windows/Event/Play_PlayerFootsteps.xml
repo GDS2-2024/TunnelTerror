@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1805011878" Type="Event" GUID="{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}" Language="SFX" Hash="{BADCD4B1-4BB9-68B3-12A0-64C76C76CF71}">
+		<SoundBank Id="1805011878" Type="Event" GUID="{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}" Language="SFX" Hash="{42E9970D-2529-6E14-6DD8-CE6D227AE91F}">
 			<ObjectPath>Play_PlayerFootsteps</ObjectPath>
 			<ShortName>Play_PlayerFootsteps</ShortName>
 			<Path>Event/Play_PlayerFootsteps.bnk</Path>
@@ -53,7 +53,7 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="1805011878" Name="Play_PlayerFootsteps" ObjectPath="\Events\Default Work Unit\Play_PlayerFootsteps" GUID="{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}" MaxAttenuation="400" DurationType="OneShot" DurationMin="0.38742706" DurationMax="0.74843657">
+				<Event Id="1805011878" Name="Play_PlayerFootsteps" ObjectPath="\Events\Default Work Unit\Play_PlayerFootsteps" GUID="{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}" MaxAttenuation="800" DurationType="OneShot" DurationMin="0.38742706" DurationMax="0.74843657">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="684570577" Id="2058049674" GUID="{6074456D-A32A-4AAB-8F46-E09F5F98685E}"/>
@@ -91,5 +91,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D99A350B-5B5F-EAF1-AFD0-89631C445C8B}</FileHash>
+	<FileHash>{C8B0BF22-6FF0-3635-F58F-0F363B1DC96F}</FileHash>
 </SoundBanksInfo>

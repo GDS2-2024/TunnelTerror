@@ -18,7 +18,7 @@
     "Type": "Event",
     "GUID": "{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}",
     "Language": "SFX",
-    "Hash": "{0AB2CCB0-0BC3-2C6D-13FD-49861982052A}",
+    "Hash": "{209BCEC8-5AC4-B6CF-77AB-ABF14554A8F5}",
     "ObjectPath": "Play_Grab",
     "ShortName": "Play_Grab",
     "Path": "Event/Play_Grab.bnk",
@@ -57,7 +57,7 @@
       "Name": "Play_Grab",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Grab",
       "GUID": "{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}",
-      "MaxAttenuation": "400",
+      "MaxAttenuation": "800",
       "DurationType": "OneShot",
       "DurationMin": "0.060328994",
       "DurationMax": "0.094719194",
@@ -80,7 +80,7 @@
     "Type": "Event",
     "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
     "Language": "SFX",
-    "Hash": "{78F199A7-6BC9-E0E6-89F1-3649DC79CAA5}",
+    "Hash": "{7B2CC80F-D0FF-E7DB-B70A-2C97C43F61A5}",
     "ObjectPath": "Play_RockFall",
     "ShortName": "Play_RockFall",
     "Path": "Event/Play_RockFall.bnk",
@@ -149,13 +149,41 @@
       "CachePath": "SFX/RockHitGround/RockHitGround_5_8F54B111.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "8525658",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Rocks\\RockFall\\RockShatter\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{0DE8CC0F-A379-4320-9F31-EF7805AE6B3A}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "493556205",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Rocks\\RockFall\\RockHitGround\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{73E7BEE8-E9DC-4BD1-BEAE-6F7E35BD8555}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "744592701",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Rocks\\RockFall\\RockShatter\\RockShatter_02\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{1ECBDC60-D6F4-44E4-B12F-A42A65346C00}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1120692842",
       "Name": "Play_RockFall",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_RockFall",
       "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
-      "MaxAttenuation": "400",
+      "MaxAttenuation": "800",
       "DurationType": "OneShot",
       "DurationMin": "5.2483253",
       "DurationMax": "7.9186854",
@@ -181,7 +209,20 @@
        {
         "Id": "953676981"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "8525658"
+        },
+        {
+         "Id": "493556205"
+        },
+        {
+         "Id": "744592701"
+        }
+       ]
+      }
      }
     ]
    },
@@ -190,7 +231,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{6447F812-9DAC-7EEB-EEB8-66B7C9B169DF}",
+    "Hash": "{357103FE-E98A-167F-15A8-2AABE38E90B0}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -250,7 +291,7 @@
     "Type": "Event",
     "GUID": "{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}",
     "Language": "SFX",
-    "Hash": "{BADCD4B1-4BB9-68B3-12A0-64C76C76CF71}",
+    "Hash": "{42E9970D-2529-6E14-6DD8-CE6D227AE91F}",
     "ObjectPath": "Play_PlayerFootsteps",
     "ShortName": "Play_PlayerFootsteps",
     "Path": "Event/Play_PlayerFootsteps.bnk",
@@ -346,7 +387,7 @@
       "Name": "Play_PlayerFootsteps",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_PlayerFootsteps",
       "GUID": "{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}",
-      "MaxAttenuation": "400",
+      "MaxAttenuation": "800",
       "DurationType": "OneShot",
       "DurationMin": "0.38742706",
       "DurationMax": "0.74843657",
@@ -434,7 +475,7 @@
     "Type": "Event",
     "GUID": "{F05E8152-8526-474A-8CD3-14071D451BB3}",
     "Language": "SFX",
-    "Hash": "{767C0CC7-AFB1-EB7B-80D6-97CABBEB622E}",
+    "Hash": "{A52B1869-7909-FD9B-2B74-46FB3D2D8188}",
     "ObjectPath": "Play_Torch",
     "ShortName": "Play_Torch",
     "Path": "Event/Play_Torch.bnk",
@@ -530,7 +571,7 @@
     "Type": "Event",
     "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
     "Language": "SFX",
-    "Hash": "{B241E64F-32B2-BB63-E687-98EB700CA902}",
+    "Hash": "{3F57B527-27FE-3A47-9BD0-56D3DBDE13AB}",
     "ObjectPath": "Atmosphere",
     "ShortName": "Atmosphere",
     "Path": "Event/Atmosphere.bnk",
@@ -608,7 +649,7 @@
     "Type": "Event",
     "GUID": "{0F14277F-3996-484C-A37D-4633DA6B3085}",
     "Language": "SFX",
-    "Hash": "{6C406D17-379E-F8FE-D712-1C79FC3E1234}",
+    "Hash": "{BD9FAD46-929B-9871-69EB-3AF2A48E79EE}",
     "ObjectPath": "Play_WoodBreaking",
     "ShortName": "Play_WoodBreaking",
     "Path": "Event/Play_WoodBreaking.bnk",
@@ -689,11 +730,33 @@
     ]
    },
    {
+    "Id": "3065143382",
+    "Type": "Event",
+    "GUID": "{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}",
+    "Language": "SFX",
+    "Hash": "{0468C38A-737F-0977-3EFF-F7ED6939411A}",
+    "ObjectPath": "Stop_Torch",
+    "ShortName": "Stop_Torch",
+    "Path": "Event/Stop_Torch.bnk",
+    "Events": [
+     {
+      "Id": "3065143382",
+      "Name": "Stop_Torch",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_Torch",
+      "GUID": "{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   },
+   {
     "Id": "3858275350",
     "Type": "Event",
     "GUID": "{A7C25A1B-0608-4060-9C29-134EBEA4D185}",
     "Language": "SFX",
-    "Hash": "{E57F9D1B-61B6-98CD-2C56-494A63597988}",
+    "Hash": "{089A6F51-AB52-C2CD-E673-19C579F8B95A}",
     "ObjectPath": "Play_Snap",
     "ShortName": "Play_Snap",
     "Path": "Event/Play_Snap.bnk",
@@ -741,7 +804,7 @@
       "Name": "Play_Snap",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Snap",
       "GUID": "{A7C25A1B-0608-4060-9C29-134EBEA4D185}",
-      "MaxAttenuation": "400",
+      "MaxAttenuation": "800",
       "DurationType": "OneShot",
       "DurationMin": "0.27858928",
       "DurationMax": "0.4888849",
@@ -763,6 +826,6 @@
     ]
    }
   ],
-  "FileHash": "{C999A9AF-CA58-FD17-9414-8DE03AD603A5}"
+  "FileHash": "{0659E2C7-7064-FADA-89D2-0C4F0EEEDFC2}"
  }
 }
