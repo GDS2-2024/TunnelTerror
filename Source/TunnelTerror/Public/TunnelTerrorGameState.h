@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "TunnelTerror/TunnelTerrorCharacter.h"
 #include "GameFramework/GameState.h"
 #include "TunnelTerrorGameState.generated.h"
 
