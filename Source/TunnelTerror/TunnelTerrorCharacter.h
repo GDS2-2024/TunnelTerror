@@ -117,9 +117,6 @@ public:
 
 	UFUNCTION(BlueprintImplementableEvent)
 	void ChangePlayerMesh(USkeletalMesh* NewMesh);
-
-	UFUNCTION(BlueprintCallable)
-	USkeletalMesh* GetRandomMesh();
 	
 	UFUNCTION(Server,Reliable)
 	void ServerSpawnItem(TSubclassOf<AInventoryItem> ItemClass);
@@ -223,6 +220,17 @@ public:
 	UFUNCTION()
 	void OnRep_CollidedPickup();
 
+	// Character Mesh Picker
+	UPROPERTY(Replicated, BlueprintReadWrite)
+	AActor* CollidedCharacterPicker;
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<UUserWidget> CharacterPickerClass;
+	UPROPERTY()
+	UUserWidget* CharacterPickerUI;
+	void ShowCharacterPickerUI();
+	UFUNCTION(BlueprintCallable)
+	void HideCharacterPickerUI();
+	
 	UFUNCTION(Server, Reliable)
 	void ServerInteractWithElevator(AElevatorEscape* Elevator, int32 Samples);
 	UFUNCTION(Server, Reliable)
@@ -337,16 +345,6 @@ private:
 	TSubclassOf<AItemPickup> PickaxePickupClass;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<AItemPickup> PlantPickupClass;
-
-	// Character Selection Meshes
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Selection", meta = (AllowPrivateAccess = "true"))
-	USkeletalMesh* MaleCharacter1;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Selection", meta = (AllowPrivateAccess = "true"))
-	USkeletalMesh* MaleCharacter2;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Selection", meta = (AllowPrivateAccess = "true"))
-	USkeletalMesh* FemaleCharacter1;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Selection", meta = (AllowPrivateAccess = "true"))
-	USkeletalMesh* FemaleCharacter2;
 	
 };
 

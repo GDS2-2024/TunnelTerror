@@ -135,6 +135,7 @@ void ATunnelTerrorCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty
 	DOREPLIFETIME(ATunnelTerrorCharacter, Inventory);
 	DOREPLIFETIME(ATunnelTerrorCharacter, bIsRagdolled);
 	DOREPLIFETIME(ATunnelTerrorCharacter, CollidedPickup);
+	DOREPLIFETIME(ATunnelTerrorCharacter, CollidedCharacterPicker)
 }
 
 //////////////////////////////////////////////////////////////////////////// Input
@@ -245,6 +246,48 @@ void ATunnelTerrorCharacter::OnRep_CollidedPickup()
 				PreviousPickup->ShowPrompt(false);
 				PreviousPickup = nullptr;
 			}
+		}
+	}
+}
+
+void ATunnelTerrorCharacter::ShowCharacterPickerUI()
+{
+	if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
+	{
+		if (CharacterPickerClass)
+		{
+			if (CharacterPickerUI == nullptr)
+			{
+				CharacterPickerUI = CreateWidget<UUserWidget>(PlayerController, CharacterPickerClass);
+				CharacterPickerUI->AddToPlayerScreen();
+				PlayerController->bShowMouseCursor = true;
+				FInputModeUIOnly InputMode;
+				InputMode.SetWidgetToFocus(CharacterPickerUI->TakeWidget());
+				PlayerController->SetInputMode(InputMode);
+				//UE_LOG(LogTemp, Log, TEXT("Add to screen"));
+			} else
+			{
+				CharacterPickerUI->AddToPlayerScreen();
+				PlayerController->bShowMouseCursor = true;
+				FInputModeUIOnly InputMode;
+				InputMode.SetWidgetToFocus(CharacterPickerUI->TakeWidget());
+				PlayerController->SetInputMode(InputMode);
+				UE_LOG(LogTemp, Log, TEXT("Re-Add to screen"));
+			}
+		}
+	}
+}
+
+void ATunnelTerrorCharacter::HideCharacterPickerUI()
+{
+	if (CharacterPickerUI)
+	{
+		if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
+		{
+			CharacterPickerUI->RemoveFromParent();
+            PlayerController->bShowMouseCursor = false;
+			FInputModeGameOnly InputMode;
+			PlayerController->SetInputMode(InputMode);
 		}
 	}
 }
@@ -366,25 +409,6 @@ void ATunnelTerrorCharacter::EquipToInventory(AInventoryItem* NewItem)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("Failed to add item to inventory because NewItem is null."));
 		}
-	}
-}
-
-USkeletalMesh* ATunnelTerrorCharacter::GetRandomMesh()
-{
-	int32 RandomInt = FMath::RandRange(1, 4);
-	UE_LOG(LogTemp, Warning, TEXT("RandomInt: %d"), RandomInt);
-	switch (RandomInt)
-	{
-	case 1:
-		return MaleCharacter1;
-	case 2:
-		return MaleCharacter2;
-	case 3:
-		return FemaleCharacter1;
-	case 4:
-		return FemaleCharacter2;
-	default:
-		return MaleCharacter1;
 	}
 }
 
@@ -680,6 +704,13 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 	else
 	{
 		//UE_LOG(LogTemp, Log, TEXT("Move to Elevator to interact"));
+	}
+	if (CollidedCharacterPicker)
+	{
+		if(IsLocallyControlled())
+		{
+			ShowCharacterPickerUI();
+		}
 	}
 }
 
