@@ -26,6 +26,8 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 	// Character is not infected at the start
 	bIsInSafeZone = false;
 	health = 100.0f;
+	causeOfDeath = "alive";
+	timeAlive = 0.0f;
 
 	trapCD = 30.0f;
 	trapCDCurrent = 0.0f;
@@ -88,6 +90,11 @@ void ATunnelTerrorCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (!GetIsInfected())
+	{
+		timeAlive += DeltaTime;
+	}
+
 	if (trapCDCurrent > 0.0f)
 	{
 		trapCDCurrent -= DeltaTime;
@@ -102,7 +109,7 @@ void ATunnelTerrorCharacter::Tick(float DeltaTime)
 		sporeInfectCurrent -= DeltaTime;
 		if (sporeInfectCurrent <= 0.0f)
 		{
-			this->DecreaseHealth(100.0f);
+			this->DecreaseHealth(100.0f, "Spores");
 		}
 	}
 	else
@@ -460,6 +467,7 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 {
 	AInventoryItem* InventoryItem = GetWorld()->SpawnActor<AInventoryItem>(ItemClass);
 	if (InventoryItem)
+
 	{
 		InventoryItem->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, "hand_rSocket");
 		if (InventoryItem->ItemName.ToString() == "Torch")
@@ -753,18 +761,23 @@ bool ATunnelTerrorCharacter::GetIsInfected()
 	return false;
 }
 
-void ATunnelTerrorCharacter::DecreaseHealth(float damage)
+void ATunnelTerrorCharacter::DecreaseHealth(float damage, FString newCauseOfDeath)
 {
-	UE_LOG(LogTemp, Log, TEXT("Player health: %f"), health);
-	if (bIsInSafeZone == false)
+	if (!GetIsInfected())
 	{
-		health -= damage;
-	}
-	UE_LOG(LogTemp, Log, TEXT("Player has taken damage: %f"), damage);
+		causeOfDeath = newCauseOfDeath;
 
-	if (health <= 0)
-	{
-		Die();
+		UE_LOG(LogTemp, Log, TEXT("Player health: %f"), health);
+		if (bIsInSafeZone == false)
+		{
+			health -= damage;
+		}
+		UE_LOG(LogTemp, Log, TEXT("Player has taken damage: %f"), damage);
+
+		if (health <= 0)
+		{
+			Die();
+		}
 	}
 }
 
