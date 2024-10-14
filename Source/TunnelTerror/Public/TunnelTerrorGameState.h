@@ -35,10 +35,19 @@ public:
 
 	bool bDoorClosing;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	TArray<ATunnelTerrorCharacter*> Players;
 
+	UPROPERTY(BlueprintReadWrite)
+	TArray<FString> deathCauses;
+
+	UPROPERTY(BlueprintReadWrite)
+	TArray<float> timesAlive;
+
 	bool bAllInfected;
+
+	UPROPERTY(BlueprintReadWrite)
+	int playerNo;
 
 public:
 
@@ -55,9 +64,6 @@ public:
 
 	UFUNCTION(Server, Reliable)
 	void MulticastKillEveryone();
-
-	UFUNCTION()
-	void EndGame();
 
 private:
 

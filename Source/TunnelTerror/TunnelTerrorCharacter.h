@@ -108,6 +108,12 @@ public:
 	UPROPERTY()
 	bool bIsInSafeZone;
 
+	UPROPERTY(BlueprintReadWrite)
+	FString causeOfDeath;
+
+	UPROPERTY(blueprintReadWrite)
+	float timeAlive;
+
 	/** Player Inventory */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Replicated)
 	UInventoryComponent* Inventory;
@@ -198,7 +204,7 @@ public:
 	void SetIsInSafeZone(bool bNewIsInSafeZone);
 
 	UFUNCTION()
-	void DecreaseHealth(float damage);
+	void DecreaseHealth(float damage, FString newCauseOfDeath);
 
 	UFUNCTION()
 	void StartSporeInfection();
