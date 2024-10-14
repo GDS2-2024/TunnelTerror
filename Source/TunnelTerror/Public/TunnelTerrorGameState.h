@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameState.h"
+#include "TunnelTerror/TunnelTerrorCharacter.h"
 #include "TunnelTerrorGameState.generated.h"
 
 /**
@@ -38,6 +39,10 @@ public:
 	TArray<ATunnelTerrorCharacter*> Players;
 
 	bool bAllInfected;
+	bool bAllReady;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bIsReady;
 
 public:
 
@@ -57,6 +62,7 @@ public:
 
 	UFUNCTION()
 	void EndGame();
+
 
 private:
 
