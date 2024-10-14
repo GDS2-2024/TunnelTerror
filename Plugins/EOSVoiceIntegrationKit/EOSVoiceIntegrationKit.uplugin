@@ -1,0 +1,34 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.3",
+	"FriendlyName": "EOSVoiceIntegrationKit",
+	"Description": "EOS Voice Integration Kit is a powerful and user-friendly integration of the EOS Voice Chat system for Unreal Engine. It provides an extensive range of blueprint functions and features, enabling seamless integration of voice communication in multiplayer games. With the plugin, developers can effortlessly manage voice rooms, player muting, volume control, and input/output devices, creating an immersive and interactive gaming experience for their players.",
+	"Category": "Betide Studio",
+	"CreatedBy": "Betide Studio",
+	"CreatedByURL": "https://betide.studio",
+	"DocsURL": "https://betide-studio.gitbook.io/eos-voice-integration-kit/",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/7282bfcc5ed34fc2b268bd3cd67538d8",
+	"SupportURL": "https://discord.gg/2BtvDbmbEK",
+	"EngineVersion": "5.2.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "EOSVoiceIntegrationKit",
+			"Type": "ClientOnlyNoCommandlet",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Android",
+				"Mac",
+				"Win64"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "EOSShared",
+			"Enabled": true
+		}
+	]
+}
