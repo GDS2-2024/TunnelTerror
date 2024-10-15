@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{AA3B480F-E159-421B-A0C2-0C2A86F882C2}",
     "Language": "SFX",
-    "Hash": "{5243E8CC-E069-E272-8C1C-D310E2DB1286}",
+    "Hash": "{59123A40-72B1-841A-ABFD-6173445E895B}",
     "ObjectPath": "Play_Glow",
     "ShortName": "Play_Glow",
     "Path": "Event/Play_Glow.bnk",
@@ -42,6 +42,6 @@
     ]
    }
   ],
-  "FileHash": "{41D35FBD-0AD2-D37F-4F49-29FD9E82F296}"
+  "FileHash": "{42260D0C-7813-13A2-EE79-C88DDD0749C6}"
  }
 }

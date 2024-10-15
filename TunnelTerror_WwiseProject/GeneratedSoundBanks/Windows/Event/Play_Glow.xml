@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="721983777" Type="Event" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" Language="SFX" Hash="{5243E8CC-E069-E272-8C1C-D310E2DB1286}">
+		<SoundBank Id="721983777" Type="Event" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" Language="SFX" Hash="{59123A40-72B1-841A-ABFD-6173445E895B}">
 			<ObjectPath>Play_Glow</ObjectPath>
 			<ShortName>Play_Glow</ShortName>
 			<Path>Event/Play_Glow.bnk</Path>
@@ -21,5 +21,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{FE729D19-09E1-1EF0-FD20-28828F3EB840}</FileHash>
+	<FileHash>{0CEB9425-8121-592D-42DD-2B3F06B83C9D}</FileHash>
 </SoundBanksInfo>

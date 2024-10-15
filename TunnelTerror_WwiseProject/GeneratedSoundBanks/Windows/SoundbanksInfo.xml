@@ -40,7 +40,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="721983777" Type="Event" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" Language="SFX" Hash="{5243E8CC-E069-E272-8C1C-D310E2DB1286}">
+		<SoundBank Id="721983777" Type="Event" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" Language="SFX" Hash="{59123A40-72B1-841A-ABFD-6173445E895B}">
 			<ObjectPath>Play_Glow</ObjectPath>
 			<ShortName>Play_Glow</ShortName>
 			<Path>Event/Play_Glow.bnk</Path>
@@ -506,5 +506,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C199A024-F013-38B5-1064-588D4459D2C8}</FileHash>
+	<FileHash>{4C360E76-DA3B-C774-3888-928180533D5D}</FileHash>
 </SoundBanksInfo>
