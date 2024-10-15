@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="721983777" Type="Event" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" Language="SFX" Hash="{5243E8CC-E069-E272-8C1C-D310E2DB1286}">
+			<ObjectPath>Play_Glow</ObjectPath>
+			<ShortName>Play_Glow</ShortName>
+			<Path>Event/Play_Glow.bnk</Path>
+			<Media>
+				<File Id="733000276" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Glow.wav</ShortName>
+					<Path>Media/733000276.wem</Path>
+					<CachePath>SFX/Glow_36B74D48.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="721983777" Name="Play_Glow" ObjectPath="\Events\Default Work Unit\Play_Glow" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" MaxAttenuation="800" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="733000276"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{31238334-8B65-5D2F-F5F2-C2DB834CA594}</FileHash>
+</SoundBanksInfo>

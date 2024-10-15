@@ -1,0 +1,47 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "721983777",
+    "Type": "Event",
+    "GUID": "{AA3B480F-E159-421B-A0C2-0C2A86F882C2}",
+    "Language": "SFX",
+    "Hash": "{5243E8CC-E069-E272-8C1C-D310E2DB1286}",
+    "ObjectPath": "Play_Glow",
+    "ShortName": "Play_Glow",
+    "Path": "Event/Play_Glow.bnk",
+    "Media": [
+     {
+      "Id": "733000276",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Glow.wav",
+      "Path": "Media/733000276.wem",
+      "CachePath": "SFX/Glow_36B74D48.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "721983777",
+      "Name": "Play_Glow",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Glow",
+      "GUID": "{AA3B480F-E159-421B-A0C2-0C2A86F882C2}",
+      "MaxAttenuation": "800",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "733000276"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{115B34E3-61DF-2CC2-D959-55C6DE49D00A}"
+ }
+}

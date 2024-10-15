@@ -31,7 +31,7 @@
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
-							<ObjectRef Name="New Attenuation" ID="{6142490D-7D05-4C6F-A86D-6C103BF24D93}" WorkUnitID="{DBAC850D-1D99-4039-87EC-15749192364E}"/>
+							<ObjectRef Name="Rockfall" ID="{6142490D-7D05-4C6F-A86D-6C103BF24D93}" WorkUnitID="{DBAC850D-1D99-4039-87EC-15749192364E}"/>
 						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>

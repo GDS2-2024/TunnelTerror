@@ -674,6 +674,7 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 		{
 			if (Inventory->HasEmptySlot())
 			{
+				PlayPickupSound();
 				if (CollidedPickup->PickupName == "SamplePickup")
 				{
 					samples++;

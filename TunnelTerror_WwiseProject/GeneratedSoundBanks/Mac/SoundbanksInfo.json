@@ -18,7 +18,7 @@
     "Type": "Event",
     "GUID": "{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}",
     "Language": "SFX",
-    "Hash": "{0AB2CCB0-0BC3-2C6D-13FD-49861982052A}",
+    "Hash": "{CBD5C734-81C8-9959-38C4-4A598FC2F1A4}",
     "ObjectPath": "Play_Grab",
     "ShortName": "Play_Grab",
     "Path": "Event/Play_Grab.bnk",
@@ -57,7 +57,7 @@
       "Name": "Play_Grab",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Grab",
       "GUID": "{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}",
-      "MaxAttenuation": "400",
+      "MaxAttenuation": "800",
       "DurationType": "OneShot",
       "DurationMin": "0.060328994",
       "DurationMax": "0.094719194",
@@ -76,11 +76,121 @@
     ]
    },
    {
+    "Id": "721983777",
+    "Type": "Event",
+    "GUID": "{AA3B480F-E159-421B-A0C2-0C2A86F882C2}",
+    "Language": "SFX",
+    "Hash": "{5243E8CC-E069-E272-8C1C-D310E2DB1286}",
+    "ObjectPath": "Play_Glow",
+    "ShortName": "Play_Glow",
+    "Path": "Event/Play_Glow.bnk",
+    "Media": [
+     {
+      "Id": "733000276",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Glow.wav",
+      "Path": "Media/733000276.wem",
+      "CachePath": "SFX/Glow_36B74D48.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "721983777",
+      "Name": "Play_Glow",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Glow",
+      "GUID": "{AA3B480F-E159-421B-A0C2-0C2A86F882C2}",
+      "MaxAttenuation": "800",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "733000276"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "821056363",
+    "Type": "Event",
+    "GUID": "{3ADEA1F1-F0F5-4552-8C26-899603130220}",
+    "Language": "SFX",
+    "Hash": "{ED974193-14FC-F7A3-F04D-F37566DE2417}",
+    "ObjectPath": "Play_PickAxe",
+    "ShortName": "Play_PickAxe",
+    "Path": "Event/Play_PickAxe.bnk",
+    "Media": [
+     {
+      "Id": "545678415",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PickAxe.wav",
+      "Path": "Media/545678415.wem",
+      "CachePath": "SFX/PickAxe_D1AD1249.wem"
+     },
+     {
+      "Id": "562104551",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PickAxe.wav",
+      "Path": "Media/562104551.wem",
+      "CachePath": "SFX/PickAxe_42392FB0.wem"
+     },
+     {
+      "Id": "904230647",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PickAxe.wav",
+      "Path": "Media/904230647.wem",
+      "CachePath": "SFX/PickAxe_7D046056.wem"
+     },
+     {
+      "Id": "1063682463",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PickAxe.wav",
+      "Path": "Media/1063682463.wem",
+      "CachePath": "SFX/PickAxe_8077902C.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "821056363",
+      "Name": "Play_PickAxe",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_PickAxe",
+      "GUID": "{3ADEA1F1-F0F5-4552-8C26-899603130220}",
+      "MaxAttenuation": "200",
+      "DurationType": "OneShot",
+      "DurationMin": "0.39109114",
+      "DurationMax": "0.5441268",
+      "MediaRefs": [
+       {
+        "Id": "545678415"
+       },
+       {
+        "Id": "562104551"
+       },
+       {
+        "Id": "904230647"
+       },
+       {
+        "Id": "1063682463"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "1120692842",
     "Type": "Event",
     "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
     "Language": "SFX",
-    "Hash": "{78F199A7-6BC9-E0E6-89F1-3649DC79CAA5}",
+    "Hash": "{2B273414-AB4B-CEE7-E69D-C5B10F5D78D5}",
     "ObjectPath": "Play_RockFall",
     "ShortName": "Play_RockFall",
     "Path": "Event/Play_RockFall.bnk",
@@ -149,13 +259,41 @@
       "CachePath": "SFX/RockHitGround/RockHitGround_5_8F54B111.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "8525658",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Rocks\\RockFall\\RockShatter\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{0DE8CC0F-A379-4320-9F31-EF7805AE6B3A}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "493556205",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Rocks\\RockFall\\RockHitGround\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{73E7BEE8-E9DC-4BD1-BEAE-6F7E35BD8555}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "744592701",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Rocks\\RockFall\\RockShatter\\RockShatter_02\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{1ECBDC60-D6F4-44E4-B12F-A42A65346C00}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1120692842",
       "Name": "Play_RockFall",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_RockFall",
       "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
-      "MaxAttenuation": "400",
+      "MaxAttenuation": "800",
       "DurationType": "OneShot",
       "DurationMin": "5.2483253",
       "DurationMax": "7.9186854",
@@ -181,7 +319,20 @@
        {
         "Id": "953676981"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "8525658"
+        },
+        {
+         "Id": "493556205"
+        },
+        {
+         "Id": "744592701"
+        }
+       ]
+      }
      }
     ]
    },
@@ -190,7 +341,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{6447F812-9DAC-7EEB-EEB8-66B7C9B169DF}",
+    "Hash": "{357103FE-E98A-167F-15A8-2AABE38E90B0}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -250,7 +401,7 @@
     "Type": "Event",
     "GUID": "{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}",
     "Language": "SFX",
-    "Hash": "{BADCD4B1-4BB9-68B3-12A0-64C76C76CF71}",
+    "Hash": "{73862A0F-FC9B-8696-E598-9123FA4E3400}",
     "ObjectPath": "Play_PlayerFootsteps",
     "ShortName": "Play_PlayerFootsteps",
     "Path": "Event/Play_PlayerFootsteps.bnk",
@@ -346,7 +497,7 @@
       "Name": "Play_PlayerFootsteps",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_PlayerFootsteps",
       "GUID": "{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}",
-      "MaxAttenuation": "400",
+      "MaxAttenuation": "800",
       "DurationType": "OneShot",
       "DurationMin": "0.38742706",
       "DurationMax": "0.74843657",
@@ -430,11 +581,97 @@
     ]
    },
    {
+    "Id": "1810912708",
+    "Type": "Event",
+    "GUID": "{E287937B-CDED-4F16-913F-DB393E5E8E26}",
+    "Language": "SFX",
+    "Hash": "{5ABA6FAA-AA73-C0B5-8A3D-EEFFFD75A3D5}",
+    "ObjectPath": "Play_Bite",
+    "ShortName": "Play_Bite",
+    "Path": "Event/Play_Bite.bnk",
+    "Media": [
+     {
+      "Id": "140177471",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bite.wav",
+      "Path": "Media/140177471.wem",
+      "CachePath": "SFX/Bite_07F4F787.wem"
+     },
+     {
+      "Id": "165520342",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bite.wav",
+      "Path": "Media/165520342.wem",
+      "CachePath": "SFX/Bite_4B6ECAC2.wem"
+     },
+     {
+      "Id": "261416016",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bite.wav",
+      "Path": "Media/261416016.wem",
+      "CachePath": "SFX/Bite_1CC9E668.wem"
+     },
+     {
+      "Id": "856751788",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bite.wav",
+      "Path": "Media/856751788.wem",
+      "CachePath": "SFX/Bite_B6543914.wem"
+     },
+     {
+      "Id": "1044280572",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bite.wav",
+      "Path": "Media/1044280572.wem",
+      "CachePath": "SFX/Bite_5CD7C961.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1810912708",
+      "Name": "Play_Bite",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Bite",
+      "GUID": "{E287937B-CDED-4F16-913F-DB393E5E8E26}",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "0.42073348",
+      "DurationMax": "0.7678617",
+      "MediaRefs": [
+       {
+        "Id": "140177471"
+       },
+       {
+        "Id": "165520342"
+       },
+       {
+        "Id": "261416016"
+       },
+       {
+        "Id": "856751788"
+       },
+       {
+        "Id": "1044280572"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "2025845440",
     "Type": "Event",
     "GUID": "{F05E8152-8526-474A-8CD3-14071D451BB3}",
     "Language": "SFX",
-    "Hash": "{767C0CC7-AFB1-EB7B-80D6-97CABBEB622E}",
+    "Hash": "{264A4DEB-EB16-8C61-6250-666836A61338}",
     "ObjectPath": "Play_Torch",
     "ShortName": "Play_Torch",
     "Path": "Event/Play_Torch.bnk",
@@ -530,7 +767,7 @@
     "Type": "Event",
     "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
     "Language": "SFX",
-    "Hash": "{B241E64F-32B2-BB63-E687-98EB700CA902}",
+    "Hash": "{3F57B527-27FE-3A47-9BD0-56D3DBDE13AB}",
     "ObjectPath": "Atmosphere",
     "ShortName": "Atmosphere",
     "Path": "Event/Atmosphere.bnk",
@@ -608,7 +845,7 @@
     "Type": "Event",
     "GUID": "{0F14277F-3996-484C-A37D-4633DA6B3085}",
     "Language": "SFX",
-    "Hash": "{6C406D17-379E-F8FE-D712-1C79FC3E1234}",
+    "Hash": "{E0379ED1-20EC-F7C4-0E3E-6924467455EE}",
     "ObjectPath": "Play_WoodBreaking",
     "ShortName": "Play_WoodBreaking",
     "Path": "Event/Play_WoodBreaking.bnk",
@@ -689,11 +926,33 @@
     ]
    },
    {
+    "Id": "3065143382",
+    "Type": "Event",
+    "GUID": "{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}",
+    "Language": "SFX",
+    "Hash": "{638A8D0F-FFB6-019B-DDD6-C16B10B72A4B}",
+    "ObjectPath": "Stop_Torch",
+    "ShortName": "Stop_Torch",
+    "Path": "Event/Stop_Torch.bnk",
+    "Events": [
+     {
+      "Id": "3065143382",
+      "Name": "Stop_Torch",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_Torch",
+      "GUID": "{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   },
+   {
     "Id": "3858275350",
     "Type": "Event",
     "GUID": "{A7C25A1B-0608-4060-9C29-134EBEA4D185}",
     "Language": "SFX",
-    "Hash": "{E57F9D1B-61B6-98CD-2C56-494A63597988}",
+    "Hash": "{4426CF7F-2268-C4A3-5DAB-60F5A464C9A5}",
     "ObjectPath": "Play_Snap",
     "ShortName": "Play_Snap",
     "Path": "Event/Play_Snap.bnk",
@@ -741,7 +1000,7 @@
       "Name": "Play_Snap",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Snap",
       "GUID": "{A7C25A1B-0608-4060-9C29-134EBEA4D185}",
-      "MaxAttenuation": "400",
+      "MaxAttenuation": "800",
       "DurationType": "OneShot",
       "DurationMin": "0.27858928",
       "DurationMax": "0.4888849",
@@ -761,8 +1020,30 @@
       ]
      }
     ]
+   },
+   {
+    "Id": "4000532691",
+    "Type": "Event",
+    "GUID": "{BE5A0D3A-492D-4FBE-9071-C77D396C3AEE}",
+    "Language": "SFX",
+    "Hash": "{A0A44E3F-7F22-7958-AD35-C1B465408631}",
+    "ObjectPath": "Stop_Glow",
+    "ShortName": "Stop_Glow",
+    "Path": "Event/Stop_Glow.bnk",
+    "Events": [
+     {
+      "Id": "4000532691",
+      "Name": "Stop_Glow",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_Glow",
+      "GUID": "{BE5A0D3A-492D-4FBE-9071-C77D396C3AEE}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
    }
   ],
-  "FileHash": "{C999A9AF-CA58-FD17-9414-8DE03AD603A5}"
+  "FileHash": "{5EC8A2D8-8306-FD69-FDBE-9E3D01910114}"
  }
 }

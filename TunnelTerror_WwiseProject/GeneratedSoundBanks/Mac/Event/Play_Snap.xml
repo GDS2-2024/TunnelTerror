@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3858275350" Type="Event" GUID="{A7C25A1B-0608-4060-9C29-134EBEA4D185}" Language="SFX" Hash="{E57F9D1B-61B6-98CD-2C56-494A63597988}">
+		<SoundBank Id="3858275350" Type="Event" GUID="{A7C25A1B-0608-4060-9C29-134EBEA4D185}" Language="SFX" Hash="{4426CF7F-2268-C4A3-5DAB-60F5A464C9A5}">
 			<ObjectPath>Play_Snap</ObjectPath>
 			<ShortName>Play_Snap</ShortName>
 			<Path>Event/Play_Snap.bnk</Path>
@@ -28,7 +28,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3858275350" Name="Play_Snap" ObjectPath="\Events\Default Work Unit\Play_Snap" GUID="{A7C25A1B-0608-4060-9C29-134EBEA4D185}" MaxAttenuation="400" DurationType="OneShot" DurationMin="0.27858928" DurationMax="0.4888849">
+				<Event Id="3858275350" Name="Play_Snap" ObjectPath="\Events\Default Work Unit\Play_Snap" GUID="{A7C25A1B-0608-4060-9C29-134EBEA4D185}" MaxAttenuation="800" DurationType="OneShot" DurationMin="0.27858928" DurationMax="0.4888849">
 					<MediaRefs>
 						<MediaRef Id="61820815"/>
 						<MediaRef Id="545870618"/>
@@ -39,5 +39,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3757C927-681E-52B3-FCCB-36B64EC9BB3F}</FileHash>
+	<FileHash>{AB4D9F9A-1AEF-1F17-35A9-527F9121DFAD}</FileHash>
 </SoundBanksInfo>

@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "3065143382",
+    "Type": "Event",
+    "GUID": "{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}",
+    "Language": "SFX",
+    "Hash": "{638A8D0F-FFB6-019B-DDD6-C16B10B72A4B}",
+    "ObjectPath": "Stop_Torch",
+    "ShortName": "Stop_Torch",
+    "Path": "Event/Stop_Torch.bnk",
+    "Events": [
+     {
+      "Id": "3065143382",
+      "Name": "Stop_Torch",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_Torch",
+      "GUID": "{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{89EA8365-E1BD-3C39-9C83-EEBC7EC729A7}"
+ }
+}

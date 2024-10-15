@@ -1,0 +1,85 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "821056363",
+    "Type": "Event",
+    "GUID": "{3ADEA1F1-F0F5-4552-8C26-899603130220}",
+    "Language": "SFX",
+    "Hash": "{ED974193-14FC-F7A3-F04D-F37566DE2417}",
+    "ObjectPath": "Play_PickAxe",
+    "ShortName": "Play_PickAxe",
+    "Path": "Event/Play_PickAxe.bnk",
+    "Media": [
+     {
+      "Id": "545678415",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PickAxe.wav",
+      "Path": "Media/545678415.wem",
+      "CachePath": "SFX/PickAxe_D1AD1249.wem"
+     },
+     {
+      "Id": "562104551",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PickAxe.wav",
+      "Path": "Media/562104551.wem",
+      "CachePath": "SFX/PickAxe_42392FB0.wem"
+     },
+     {
+      "Id": "904230647",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PickAxe.wav",
+      "Path": "Media/904230647.wem",
+      "CachePath": "SFX/PickAxe_7D046056.wem"
+     },
+     {
+      "Id": "1063682463",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PickAxe.wav",
+      "Path": "Media/1063682463.wem",
+      "CachePath": "SFX/PickAxe_8077902C.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "821056363",
+      "Name": "Play_PickAxe",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_PickAxe",
+      "GUID": "{3ADEA1F1-F0F5-4552-8C26-899603130220}",
+      "MaxAttenuation": "200",
+      "DurationType": "OneShot",
+      "DurationMin": "0.39109114",
+      "DurationMax": "0.5441268",
+      "MediaRefs": [
+       {
+        "Id": "545678415"
+       },
+       {
+        "Id": "562104551"
+       },
+       {
+        "Id": "904230647"
+       },
+       {
+        "Id": "1063682463"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{1F016A97-1C48-B223-805B-1CA73A516570}"
+ }
+}

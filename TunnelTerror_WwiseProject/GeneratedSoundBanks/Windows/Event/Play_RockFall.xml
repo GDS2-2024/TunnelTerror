@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1120692842" Type="Event" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" Language="SFX" Hash="{78F199A7-6BC9-E0E6-89F1-3649DC79CAA5}">
+		<SoundBank Id="1120692842" Type="Event" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" Language="SFX" Hash="{2B273414-AB4B-CEE7-E69D-C5B10F5D78D5}">
 			<ObjectPath>Play_RockFall</ObjectPath>
 			<ShortName>Play_RockFall</ShortName>
 			<Path>Event/Play_RockFall.bnk</Path>
@@ -42,8 +42,15 @@
 					<CachePath>SFX/RockHitGround/RockHitGround_5_8F54B111.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="8525658" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Rocks\RockFall\RockShatter\[Effect Slot [0]: (Parametric EQ)]\Parametric EQ (Custom)" GUID="{0DE8CC0F-A379-4320-9F31-EF7805AE6B3A}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="493556205" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Rocks\RockFall\RockHitGround\[Effect Slot [0]: (Parametric EQ)]\Parametric EQ (Custom)" GUID="{73E7BEE8-E9DC-4BD1-BEAE-6F7E35BD8555}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="744592701" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Rocks\RockFall\RockShatter\RockShatter_02\[Effect Slot [0]: (Parametric EQ)]\Parametric EQ (Custom)" GUID="{1ECBDC60-D6F4-44E4-B12F-A42A65346C00}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</Custom>
+			</Plugins>
 			<Events>
-				<Event Id="1120692842" Name="Play_RockFall" ObjectPath="\Events\Default Work Unit\Play_RockFall" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" MaxAttenuation="400" DurationType="OneShot" DurationMin="5.2483253" DurationMax="7.9186854">
+				<Event Id="1120692842" Name="Play_RockFall" ObjectPath="\Events\Default Work Unit\Play_RockFall" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" MaxAttenuation="800" DurationType="OneShot" DurationMin="5.2483253" DurationMax="7.9186854">
 					<MediaRefs>
 						<MediaRef Id="287643081"/>
 						<MediaRef Id="597728859"/>
@@ -53,9 +60,16 @@
 						<MediaRef Id="953321177"/>
 						<MediaRef Id="953676981"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="8525658"/>
+							<PluginRef Id="493556205"/>
+							<PluginRef Id="744592701"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{359A4FFE-E0EB-EC48-B686-179A093C55B9}</FileHash>
+	<FileHash>{87341158-25BA-0078-FCB6-926D6EBCE464}</FileHash>
 </SoundBanksInfo>

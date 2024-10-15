@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{F05E8152-8526-474A-8CD3-14071D451BB3}",
     "Language": "SFX",
-    "Hash": "{767C0CC7-AFB1-EB7B-80D6-97CABBEB622E}",
+    "Hash": "{264A4DEB-EB16-8C61-6250-666836A61338}",
     "ObjectPath": "Play_Torch",
     "ShortName": "Play_Torch",
     "Path": "Event/Play_Torch.bnk",
@@ -102,6 +102,6 @@
     ]
    }
   ],
-  "FileHash": "{3759F268-BB58-AEAE-7658-02216818122A}"
+  "FileHash": "{E87693AC-3DBD-79E4-1B32-226520ED106D}"
  }
 }
