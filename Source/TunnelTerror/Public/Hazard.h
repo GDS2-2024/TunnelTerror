@@ -24,6 +24,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UBoxComponent* Killbox;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString DisplayName;
+
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 

@@ -319,6 +319,11 @@ void ATunnelTerrorCharacter::ServerInteractWithBridge_Implementation(ABridgeSabo
 	BridgeSabotager->OnInteract();
 }
 
+void ATunnelTerrorCharacter::KillPlant_Implementation(AInfectionTrap* trap)
+{
+	trap->Destroy();
+}
+
 void ATunnelTerrorCharacter::Move(const FInputActionValue& Value)
 {
 	// input is a Vector2D

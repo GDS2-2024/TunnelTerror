@@ -6,6 +6,7 @@
 #include "../InventoryItem.h"
 #include "WeedKillerItem.generated.h"
 
+class AInfectionTrap;
 class UNiagaraComponent;
 /**
  * 

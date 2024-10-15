@@ -33,7 +33,7 @@ void AHazard::OnHazardOverlap(UPrimitiveComponent* OverlappedComponent, AActor* 
 {
 	if (ATunnelTerrorCharacter* character = Cast<ATunnelTerrorCharacter>(OtherActor)) {
 		OnKill(character);
-		character->Die();
+		character->DecreaseHealth(100, DisplayName);
 	}
 }
 

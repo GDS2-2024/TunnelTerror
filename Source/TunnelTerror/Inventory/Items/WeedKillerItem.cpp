@@ -4,6 +4,7 @@
 #include "WeedKillerItem.h"
 #include "InfectionTrap.h"
 #include "NiagaraComponent.h"
+#include "TunnelTerror/TunnelTerrorCharacter.h"
 
 AWeedKillerItem::AWeedKillerItem()
 {
@@ -39,7 +40,10 @@ void AWeedKillerItem::Tick(float DeltaTime)
 
 		for (AActor* trap : Results)
 		{
-			trap->Destroy();
+			AInfectionTrap* trap2 = Cast<AInfectionTrap>(trap);
+			UE_LOG(LogTemp, Log, TEXT("DESTROOOOOY YEAHHHHHH"));
+			ATunnelTerrorCharacter* character = Cast<ATunnelTerrorCharacter>(Player);
+			character->KillPlant(trap2);
 		}
 	}
 }

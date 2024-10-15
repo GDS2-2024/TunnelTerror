@@ -249,6 +249,9 @@ public:
 	void ServerInteractWithTorch(ATorchHazard* Torch);
 	UFUNCTION(Server, Reliable)
 	void ServerInteractWithBridge(ABridgeSabotager* BridgeSabotager);
+
+	UFUNCTION(Server, Reliable)
+	void KillPlant(AInfectionTrap* trap);
 	
 protected:
 	/** Called for movement input */
