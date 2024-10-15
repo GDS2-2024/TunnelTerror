@@ -138,6 +138,9 @@ public:
 
 	UFUNCTION(Client, Reliable)
 	void ClientAddMoney();
+
+	UFUNCTION(Client, Reliable)
+	void ClientRemoveMoney(int32 amount);
 	
 	UFUNCTION(Server, Reliable)
 	void ServerEquipToInventory(AInventoryItem* InventoryItem);
