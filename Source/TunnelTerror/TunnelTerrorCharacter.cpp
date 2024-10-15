@@ -754,7 +754,7 @@ void ATunnelTerrorCharacter::PlaceTrap(const FInputActionValue& Value)
 
 void ATunnelTerrorCharacter::DropItem(const FInputActionValue& Value)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Player pressed 'F' to drop"))
+	//UE_LOG(LogTemp, Warning, TEXT("Player pressed 'F' to drop"))
 	// Spawn the dropped item as a pickup on the ground
 	if (Inventory->GetSelectedItem())
 	{
@@ -812,7 +812,7 @@ bool ATunnelTerrorCharacter::GetIsInfected()
 	if (ATunnelTerrorPlayerState* playerState = GetPlayerState<ATunnelTerrorPlayerState>()) {
 		return playerState->IsInfected();
 	}
-	UE_LOG(LogTemp, Error, TEXT("Couldn't cast to ATunnelTerrorPlayerState!"));
+	//UE_LOG(LogTemp, Error, TEXT("Couldn't cast to ATunnelTerrorPlayerState!"));
 	return false;
 }
 
