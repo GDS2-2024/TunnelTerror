@@ -557,7 +557,11 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 		ServerEquipToInventory(InventoryItem);
 		if (CollidedPickup)
 		{
-			CollidedPickup->Destroy();
+			if (GetWorld()->GetName() != "LobbyScene") 
+			{
+				CollidedPickup->Destroy();
+			}
+			
 		}
 	}
 }

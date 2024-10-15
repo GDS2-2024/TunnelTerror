@@ -19,6 +19,11 @@ UInventoryComponent::UInventoryComponent()
 	NewestItemSlotIndex = 0;
 }
 
+bool UInventoryComponent::IsSlotEmpty(int32 SlotIndex)
+{
+	return InventorySlots[SlotIndex].IsEmpty();
+}
+
 // Add Item to the given Inventory Slot
 void UInventoryComponent::AddItem(AInventoryItem* Item, int32 SlotIndex)
 {

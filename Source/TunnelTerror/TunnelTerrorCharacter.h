@@ -49,7 +49,7 @@ class ATunnelTerrorCharacter : public ACharacter
 	/** Jump Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	class UInputAction* JumpAction;
-
+	
 	/** Move Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	class UInputAction* MoveAction;
@@ -115,7 +115,7 @@ public:
 	float timeAlive;
 
 	/** Player Inventory */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Replicated)
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Replicated)
 	UInventoryComponent* Inventory;
 
 	UFUNCTION()
@@ -124,7 +124,7 @@ public:
 	UFUNCTION(BlueprintImplementableEvent)
 	void ChangePlayerMesh(USkeletalMesh* NewMesh);
 	
-	UFUNCTION(Server,Reliable)
+	UFUNCTION(Server,Reliable, BlueprintCallable)
 	void ServerSpawnItem(TSubclassOf<AInventoryItem> ItemClass);
 
 	UFUNCTION(Server, Reliable)
