@@ -132,6 +132,9 @@ public:
 	
 	UFUNCTION(Server, Reliable)
 	void ServerRemoveItem();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void PlayPickupSound();
 	
 	UFUNCTION(Server, Reliable)
 	void ServerRemoveCrystals();

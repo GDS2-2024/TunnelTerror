@@ -480,6 +480,7 @@ void ATunnelTerrorCharacter::ServerSpawnPickup_Implementation(FName PickupName)
 
 void ATunnelTerrorCharacter::ServerRemoveItem_Implementation()
 {
+	PlayPickupSound();
 	// Destroy the Item
 	if (!Inventory->InventorySlots[Inventory->SelectedSlotIndex].IsEmpty())
 	{
