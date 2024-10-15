@@ -14,6 +14,8 @@ void FInventorySlot::AddItemToSlot(AInventoryItem* NewItem)
 	}
 }
 
+
+
 void FInventorySlot::EmptySlot()
 {
 	Item = nullptr;

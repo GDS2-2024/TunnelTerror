@@ -20,11 +20,13 @@ public:
 	UInventoryComponent();
 	
 	// Add Item to the given Inventory Slot index
+	UFUNCTION(BlueprintCallable)
 	void AddItem(AInventoryItem* Item, int32 SlotIndex);
 	// Remove the item from Inventory at the given slot
 	void RemoveItem(int32 SlotIndex);
 	// Finds all plant samples in inventory and removes them
 	void RemoveSamples();
+	UFUNCTION(BlueprintCallable)
 	bool HasEmptySlot() const;
 	AInventoryItem* GetSelectedItem();
 	int32 GetNumOfItems() { return NumOfItems; }
@@ -40,13 +42,16 @@ public:
 	UFUNCTION(Server, Reliable)
 	void ServerSetSelectedSlot(int32 SlotIndex);
 
+	UFUNCTION(BlueprintCallable)
+	bool IsSlotEmpty(int32 SlotIndex);
+
 	UFUNCTION(Server, Reliable)
 	void ServerSetItemVisibility();
 	
 	UPROPERTY(VisibleAnywhere, Replicated)
 	int32 NewestItemSlotIndex;
 
-	UFUNCTION(Server, Reliable)
+	UFUNCTION(Server, Reliable, BlueprintCallable)
 	void ServerAddItem(AInventoryItem* Item);
 
 	// Remove Item from a slot via RPC
@@ -56,7 +61,7 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	int32 MaxSlots;
 
-	UPROPERTY(ReplicatedUsing = OnRep_InventorySlots, VisibleAnywhere)
+	UPROPERTY(ReplicatedUsing = OnRep_InventorySlots, VisibleAnywhere, BlueprintReadWrite)
 	TArray<FInventorySlot> InventorySlots = TArray<FInventorySlot>();
 
 	UPROPERTY(Replicated, VisibleAnywhere)

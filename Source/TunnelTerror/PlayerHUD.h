@@ -20,6 +20,8 @@ public:
 	void SetSlotIcon(int32 SlotNum, UTexture2D* IconToSet);
 	void ClearSlotIcon(int32 SlotNum);
 	void SetSlotSelection(int32 SlotNum);
+
+	UFUNCTION(BlueprintCallable)
 	void SetCurrencyUI(int32 number);
 	
 protected:
