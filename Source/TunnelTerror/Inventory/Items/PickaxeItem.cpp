@@ -12,9 +12,9 @@ APickaxeItem::APickaxeItem()
 
 void APickaxeItem::UseItem()
 {
-	UE_LOG(LogTemp, Warning, TEXT("UseItem() called in Pickaxe Item"));
+	//UE_LOG(LogTemp, Warning, TEXT("UseItem() called in Pickaxe Item"));
 	ATunnelTerrorCharacter* PlayerT = Cast<ATunnelTerrorCharacter>(Player);
-	PlayerT->ServerSwing(true);
+	PlayerT->ServerSwingAnim(true);
 	if (!IsSwinging)
 	{
 		IsSwinging = true;
@@ -25,9 +25,9 @@ void APickaxeItem::UseItem()
 
 void APickaxeItem::ReleaseUseItem()
 {
-	UE_LOG(LogTemp, Warning, TEXT("ReleaseUseItem() called in Pickaxe Item"));
+	//UE_LOG(LogTemp, Warning, TEXT("ReleaseUseItem() called in Pickaxe Item"));
 	ATunnelTerrorCharacter* PlayerT = Cast<ATunnelTerrorCharacter>(Player);
-	PlayerT->ServerSwing(false);
+	PlayerT->ServerSwingAnim(false);
 	if (IsSwinging) // Stop only if the item was in use
 	{
 		IsSwinging = false;

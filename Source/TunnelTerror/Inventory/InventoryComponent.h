@@ -53,8 +53,6 @@ public:
 	UFUNCTION(Server, Reliable)
 	void ServerRemoveItem(int32 SlotIndex);
 	
-private:
-	
 	UPROPERTY(VisibleAnywhere)
 	int32 MaxSlots;
 
@@ -63,10 +61,12 @@ private:
 
 	UPROPERTY(Replicated, VisibleAnywhere)
 	int32 NumOfItems;
-
+	
 	// Function to be called when the inventory slots are replicated
 	UFUNCTION()
 	void OnRep_InventorySlots();
+
+private:
 	
 	// Tell the server to show item on all clients
 	UFUNCTION(Server, Reliable)
@@ -89,6 +89,8 @@ private:
 	void MulticastEquipPickaxe(bool equip);
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastSwingPickaxe(bool swing);
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastEquipWeedKiller(bool equip);
 	
 protected:
 	// Called when the game starts

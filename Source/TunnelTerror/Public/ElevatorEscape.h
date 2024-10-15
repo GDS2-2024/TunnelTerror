@@ -7,7 +7,9 @@
 #include "ElevatorEscape.generated.h"
 
 class ATunnelTerrorCharacter;
+class ATunnelTerrorGameState;
 class USphereComponent;
+class UCapsuleComponent;
 
 UCLASS(Blueprintable, BlueprintType, ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class TUNNELTERROR_API AElevatorEscape : public AActor
@@ -17,6 +19,8 @@ class TUNNELTERROR_API AElevatorEscape : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AElevatorEscape();
+
+	bool bDoorOpening;
 
 protected:
 	// Called when the game starts or when spawned
@@ -51,6 +55,15 @@ public:
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastPlayDoorOpenAnimation();
 
+	UFUNCTION(BlueprintImplementableEvent, Category = "Elevator")
+	void PlayDoorCloseAnimation();
+
+	UFUNCTION(Server, Reliable)
+	void ServerPlayDoorCloseAnimation();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastPlayDoorCloseAnimation();
+
 	UPROPERTY(Replicated)
 	int samplesNeeded;
 
@@ -62,4 +75,6 @@ private:
 	USphereComponent* CollisionSphere;
 
 	ATunnelTerrorCharacter* Character;
+
+	ATunnelTerrorGameState* GameState;
 };

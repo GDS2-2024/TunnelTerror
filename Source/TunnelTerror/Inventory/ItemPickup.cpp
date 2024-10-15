@@ -34,7 +34,7 @@ void AItemPickup::BeginPlay()
 		// We use .AddDynamic to add a function to a multicast dynamic delegate event.
 		PickupCollider->OnComponentBeginOverlap.AddDynamic(this, &AItemPickup::OnPickupBeginOverlap);
 		PickupCollider->OnComponentEndOverlap.AddDynamic(this, &AItemPickup::OnPickupEndOverlap);
-		UE_LOG(LogTemp, Display, TEXT("Pickup overlap event added."))
+		//UE_LOG(LogTemp, Display, TEXT("Pickup overlap event added."))
 	}
 	else
 	{

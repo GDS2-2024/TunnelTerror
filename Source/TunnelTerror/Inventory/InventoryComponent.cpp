@@ -30,8 +30,11 @@ void UInventoryComponent::AddItem(AInventoryItem* Item, int32 SlotIndex)
 // Remove the item from Inventory at the given slot
 void UInventoryComponent::RemoveItem(int32 SlotIndex)
 {
-	InventorySlots[SlotIndex].EmptySlot();
-	NumOfItems -= 1;
+	if (!InventorySlots[SlotIndex].IsEmpty())
+	{
+		InventorySlots[SlotIndex].EmptySlot();
+		NumOfItems -= 1;
+	}
 }
 
 void UInventoryComponent::RemoveSamples()
@@ -81,7 +84,7 @@ int32 UInventoryComponent::GetIndexOfItem(AInventoryItem* Item)
 void UInventoryComponent::OnRep_InventorySlots()
 {
 	// Handle client-side logic when inventory slots are updated
-	UE_LOG(LogTemp, Warning, TEXT("Inventory slots replicated to the client."));
+	//UE_LOG(LogTemp, Warning, TEXT("Inventory slots replicated to the client."));
 	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
 
 	int32 SlotIndex = 0; // Array Slot Index
@@ -139,6 +142,7 @@ void UInventoryComponent::MulticastHideItem_Implementation(AInventoryItem* Item)
 {
 	if (Item)
 	{
+		//UE_LOG(LogTemp, Warning, TEXT("Client: HIDE() Item"))
 		Item->HideItem();
 	} else
 	{
@@ -202,40 +206,50 @@ void UInventoryComponent::ServerSetSelectedSlot_Implementation(int32 SlotIndex)
 	SelectedSlotIndex = SlotIndex;
 	if (InventorySlots[SelectedSlotIndex].Item)
 	{
-		if (InventorySlots[SelectedSlotIndex].Item->ItemName.ToString() == "Compass")
+		if (InventorySlots[SelectedSlotIndex].Item->ItemName.ToString() == "Compass"
+			|| InventorySlots[SelectedSlotIndex].Item->ItemName.ToString() == "Plant Sample")
 		{
-			Player->EquipCompass(true);
+			Player->EquipCompassAnim(true);
 			MulticastEquipCompass(true);
 		} else
 		{
-			Player->EquipCompass(false);
+			Player->EquipCompassAnim(false);
 			MulticastEquipCompass(false);
 		}
 		if (InventorySlots[SelectedSlotIndex].Item->ItemName.ToString() == "Pickaxe")
 		{
-			Player->EquipPickaxe(true);
+			Player->EquipPickaxeAnim(true);
 			MulticastEquipPickaxe(true);
 		} else
 		{
-			Player->EquipPickaxe(false);
+			Player->EquipPickaxeAnim(false);
 			MulticastEquipPickaxe(false);
 		}
 		if (InventorySlots[SelectedSlotIndex].Item->ItemName.ToString() == "Torch")
 		{
-			Player->EquipTorch(true);
+			Player->EquipTorchAnim(true);
 			MulticastEquipTorch(true);
 		} else
 		{
-			Player->EquipTorch(false);
+			Player->EquipTorchAnim(false);
 			MulticastEquipTorch(false);
+		}
+		if (InventorySlots[SelectedSlotIndex].Item->ItemName.ToString() == "WeedKiller")
+		{
+			Player->EquipWeedKillerAnim(true);
+			MulticastEquipWeedKiller(true);
+		} else
+		{
+			Player->EquipWeedKillerAnim(false);
+			MulticastEquipWeedKiller(false);
 		}
 	} else
 	{
-		Player->EquipCompass(false);
+		Player->EquipCompassAnim(false);
 		MulticastEquipCompass(false);
-		Player->EquipPickaxe(false);
+		Player->EquipPickaxeAnim(false);
 		MulticastEquipPickaxe(false);
-		Player->EquipTorch(false);
+		Player->EquipTorchAnim(false);
 		MulticastEquipTorch(false);
 	}
 	ServerSetItemVisibility();
@@ -269,25 +283,31 @@ void UInventoryComponent::ServerRemoveItem_Implementation(int32 SlotIndex)
 void UInventoryComponent::MulticastEquipCompass_Implementation(bool equip)
 {
 	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
-	Player->EquipCompass(equip);
+	Player->EquipCompassAnim(equip);
 }
 
 void UInventoryComponent::MulticastEquipPickaxe_Implementation(bool equip)
 {
 	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
-	Player->EquipPickaxe(equip);
+	Player->EquipPickaxeAnim(equip);
 }
 
 void UInventoryComponent::MulticastSwingPickaxe_Implementation(bool swing)
 {
 	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
-	Player->SwingPickaxe(swing);
+	Player->SwingPickaxeAnim(swing);
 }
 
 void UInventoryComponent::MulticastEquipTorch_Implementation(bool equip)
 {
 	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
-	Player->EquipTorch(equip);
+	Player->EquipTorchAnim(equip);
+}
+
+void UInventoryComponent::MulticastEquipWeedKiller_Implementation(bool equip)
+{
+	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
+	Player->EquipWeedKillerAnim(equip);
 }
 
 // Called when the game starts

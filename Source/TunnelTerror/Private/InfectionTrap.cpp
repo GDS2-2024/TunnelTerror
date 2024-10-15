@@ -10,7 +10,7 @@ AInfectionTrap::AInfectionTrap()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	despawnTimer = 60.0f;
+	despawnTimer = 600.0f;
 }
 
 // Called when the game starts or when spawned
@@ -68,6 +68,6 @@ void AInfectionTrap::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AA
 
 void AInfectionTrap::InfectPlayer(ATunnelTerrorCharacter* TargetCharacter)
 {
-	TargetCharacter->DecreaseHealth(100.0f);
+	TargetCharacter->DecreaseHealth(100.0f, "Plant Trap");
 	UE_LOG(LogTemp, Log, TEXT("The players health is: %f"), TargetCharacter->health);
 }

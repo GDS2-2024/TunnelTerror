@@ -5,5 +5,5 @@
 
 void ASampleItem::UseItem()
 {
-	UE_LOG(LogTemp, Warning, TEXT("UseItem() called in Sample Item"))
+	//UE_LOG(LogTemp, Warning, TEXT("UseItem() called in Sample Item"))
 }

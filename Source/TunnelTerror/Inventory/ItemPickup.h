@@ -43,6 +43,9 @@ public:
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSubclassOf<AInventoryItem> CorrespondingItemClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 Cost;
 	
 	UFUNCTION()
 	virtual void OnPickupBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,

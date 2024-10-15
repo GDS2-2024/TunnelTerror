@@ -2,6 +2,8 @@
 
 #pragma once
 
+#include <string>
+
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "InputActionValue.h"
@@ -63,6 +65,10 @@ class ATunnelTerrorCharacter : public ACharacter
 	/** Use Item */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* UseItemAction;
+
+	/** Drop Item */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	class UInputAction* DropItemAction;
 	
 	/** Inventory Input Actions */
 	UPROPERTY(EditDefaultsOnly, Category=Input)
@@ -99,9 +105,14 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
 
-	/** Bool for AnimBP to switch to another animation set */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Weapon)
-	bool bHasRifle;
+	UPROPERTY()
+	bool bIsInSafeZone;
+
+	UPROPERTY(BlueprintReadWrite)
+	FString causeOfDeath;
+
+	UPROPERTY(blueprintReadWrite)
+	float timeAlive;
 
 	/** Player Inventory */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Replicated)
@@ -110,14 +121,29 @@ public:
 	UFUNCTION()
 	void EquipToInventory(AInventoryItem* NewItem);
 
+	UFUNCTION(BlueprintImplementableEvent)
+	void ChangePlayerMesh(USkeletalMesh* NewMesh);
+	
 	UFUNCTION(Server,Reliable)
 	void ServerSpawnItem(TSubclassOf<AInventoryItem> ItemClass);
 
+	UFUNCTION(Server, Reliable)
+	void ServerSpawnPickup(FName PickupName);
+	
+	UFUNCTION(Server, Reliable)
+	void ServerRemoveItem();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void PlayPickupSound();
+	
 	UFUNCTION(Server, Reliable)
 	void ServerRemoveCrystals();
 
 	UFUNCTION(Client, Reliable)
 	void ClientAddMoney();
+
+	UFUNCTION(Client, Reliable)
+	void ClientRemoveMoney(int32 amount);
 	
 	UFUNCTION(Server, Reliable)
 	void ServerEquipToInventory(AInventoryItem* InventoryItem);
@@ -135,9 +161,6 @@ public:
 
 	UFUNCTION(Client, Reliable)
 	void ClientRemoveInventoryUI(int32 SlotIndex);
-	
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
-	bool bIsInfected;
 
 	UPROPERTY(VisibleAnywhere)
 	float health;
@@ -152,15 +175,11 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	bool bSporesInfecting;
 	
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	int32 money;
 
-	/** Setter to set the bool */
-	UFUNCTION(BlueprintCallable, Category = Weapon)
-	void SetHasRifle(bool bNewHasRifle);
-
-	/** Getter for the bool */
-	UFUNCTION(BlueprintCallable, Category = Weapon)
-	bool GetHasRifle();
+	UFUNCTION(BlueprintCallable)
+	void SetMoneyUI(int32 amount);
 	
 	/// <summary>
 	/// Ragdolls and infects the player
@@ -180,14 +199,18 @@ public:
 
 	void SetIsRagdolled(const bool bNewRagdolled);
 
-	UFUNCTION(BlueprintCallable)
-	void SetIsInfected(bool bIsNowInfected);
+	// Die() should be called instead!
+	/*UFUNCTION(BlueprintCallable)
+	void SetIsInfected(bool bIsNowInfected);*/
 
 	UFUNCTION(BlueprintCallable)
 	bool GetIsInfected();
 
 	UFUNCTION()
-	void DecreaseHealth(float damage);
+	void SetIsInSafeZone(bool bNewIsInSafeZone);
+
+	UFUNCTION()
+	void DecreaseHealth(float damage, FString newCauseOfDeath);
 
 	UFUNCTION()
 	void StartSporeInfection();
@@ -209,6 +232,17 @@ public:
 	UFUNCTION()
 	void OnRep_CollidedPickup();
 
+	// Character Mesh Picker
+	UPROPERTY(Replicated, BlueprintReadWrite)
+	AActor* CollidedCharacterPicker;
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<UUserWidget> CharacterPickerClass;
+	UPROPERTY()
+	UUserWidget* CharacterPickerUI;
+	void ShowCharacterPickerUI();
+	UFUNCTION(BlueprintCallable)
+	void HideCharacterPickerUI();
+	
 	UFUNCTION(Server, Reliable)
 	void ServerInteractWithElevator(AElevatorEscape* Elevator, int32 Samples);
 	UFUNCTION(Server, Reliable)
@@ -237,6 +271,8 @@ protected:
 	void Interact(const FInputActionValue& Value);
 
 	void PlaceTrap(const FInputActionValue& Value);
+
+	void DropItem(const FInputActionValue& Value);
 	
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<UPlayerHUD> PlayerHUDClass;
@@ -245,8 +281,7 @@ protected:
 	void OnRagdoll();
 	
 	void RemoveSamplesFromInventory();
-	
-protected:
+
 	// APawn interface
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
 	// End of APawn interface
@@ -263,22 +298,37 @@ public:
 	UPlayerHUD* PlayerHUD;
 
 	UFUNCTION(BlueprintImplementableEvent)
-	void EquipTorch(bool bEquip);
-	
-	UFUNCTION(BlueprintImplementableEvent)
-	void EquipCompass(bool bEquip);
-	
-	UFUNCTION(BlueprintImplementableEvent)
-	void EquipPickaxe(bool bEquip);
-	
-	UFUNCTION(BlueprintImplementableEvent)
-	void SwingPickaxe(bool bEquip);
-
-	UFUNCTION(Server, Reliable)
-	void ServerSwing(bool swing);
+	void EquipTorchAnim(bool bEquip);
 
 	UFUNCTION(NetMulticast, Reliable)
-	void MulticastSwing(bool swing);
+	void MulticastEquipTorchAnim(bool bEquip);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void EquipWeedKillerAnim(bool bEquip);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastEquipWeedKillerAnim(bool bEquip);
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	void EquipCompassAnim(bool bEquip);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastEquipCompassAnim(bool bEquip);
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	void EquipPickaxeAnim(bool bEquip);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastEquipPickaxeAnim(bool bEquip);
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	void SwingPickaxeAnim(bool bEquip);
+
+	UFUNCTION(Server, Reliable)
+	void ServerSwingAnim(bool swing);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastSwingAnim(bool swing);
 	
 private:
 	UPROPERTY(ReplicatedUsing = OnRagdoll, BlueprintGetter = IsRagdolled, Replicated)
@@ -295,5 +345,18 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Trap", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<AInfectionTrap> TrapBlueprint;
+
+	// Item Pickup classes to spawn pickups
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<AItemPickup> TorchPickupClass;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<AItemPickup> WeedKillerPickupClass;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<AItemPickup> CompassPickupClass;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<AItemPickup> PickaxePickupClass;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<AItemPickup> PlantPickupClass;
+	
 };
 
