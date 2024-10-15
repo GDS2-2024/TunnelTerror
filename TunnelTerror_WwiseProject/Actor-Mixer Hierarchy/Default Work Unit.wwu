@@ -271,6 +271,11 @@
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -421,8 +426,9 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Bite" ID="{6B631BCA-2E17-4680-9AC4-84887647491F}" ShortID="546188115">
 					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -436,16 +442,19 @@
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
-						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
-							<Custom>
-								<Attenuation Name="Attenuation (Custom)" ID="{DA53DDED-E983-4C6A-A83E-342FBCD00B17}" ShortID="808205190">
+							<Custom CreatedFrom="{C7C0DA46-EFE8-4F41-8246-C80EBEBB0280}">
+								<Attenuation Name="Plant (Custom)" ID="{E8870582-2236-49F1-B12B-493F6359DD4F}" ShortID="1012193054">
+									<PropertyList>
+										<Property Name="RadiusMax" Type="Real64" Value="800"/>
+									</PropertyList>
 									<CurveUsageInfoList>
 										<VolumeDryUsage>
 											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-												<Curve Name="VolumeDry" ID="{CFC624BD-B827-41AE-82A8-5E713DAED525}">
+												<Curve Name="VolumeDry" ID="{A34D7797-33E1-4500-85BA-6EBC73B972DD}">
 													<PropertyList>
 														<Property Name="Flags" Type="int32" Value="3"/>
 													</PropertyList>
@@ -454,9 +463,10 @@
 															<XPos>0</XPos>
 															<YPos>0</YPos>
 															<Flags>5</Flags>
+															<SegmentShape>Exp1</SegmentShape>
 														</Point>
 														<Point>
-															<XPos>100</XPos>
+															<XPos>800</XPos>
 															<YPos>-200</YPos>
 															<Flags>37</Flags>
 														</Point>
@@ -669,7 +679,7 @@
 				</RandomSequenceContainer>
 				<Sound Name="Glow" ID="{DF2EF46A-16CE-4506-8136-0C7BABBE590A}" ShortID="712523884">
 					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Highpass" Type="int16">
 							<ValueList>
 								<Value>40</Value>

@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="17721092" Type="Event" GUID="{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}" Language="SFX" Hash="{CBD5C734-81C8-9959-38C4-4A598FC2F1A4}">
+		<SoundBank Id="17721092" Type="Event" GUID="{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}" Language="SFX" Hash="{91EBBBDF-17A8-32D9-43C5-223CECEC7346}">
 			<ObjectPath>Play_Grab</ObjectPath>
 			<ShortName>Play_Grab</ShortName>
 			<Path>Event/Play_Grab.bnk</Path>
@@ -276,7 +276,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1810912708" Type="Event" GUID="{E287937B-CDED-4F16-913F-DB393E5E8E26}" Language="SFX" Hash="{5ABA6FAA-AA73-C0B5-8A3D-EEFFFD75A3D5}">
+		<SoundBank Id="1810912708" Type="Event" GUID="{E287937B-CDED-4F16-913F-DB393E5E8E26}" Language="SFX" Hash="{A949F78A-2506-6BE5-6F3B-FBB4BAABD1A0}">
 			<ObjectPath>Play_Bite</ObjectPath>
 			<ShortName>Play_Bite</ShortName>
 			<Path>Event/Play_Bite.bnk</Path>
@@ -308,7 +308,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1810912708" Name="Play_Bite" ObjectPath="\Events\Default Work Unit\Play_Bite" GUID="{E287937B-CDED-4F16-913F-DB393E5E8E26}" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.42073348" DurationMax="0.7678617">
+				<Event Id="1810912708" Name="Play_Bite" ObjectPath="\Events\Default Work Unit\Play_Bite" GUID="{E287937B-CDED-4F16-913F-DB393E5E8E26}" MaxAttenuation="800" DurationType="OneShot" DurationMin="0.42073348" DurationMax="0.7678617">
 					<MediaRefs>
 						<MediaRef Id="140177471"/>
 						<MediaRef Id="165520342"/>
@@ -506,5 +506,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4C360E76-DA3B-C774-3888-928180533D5D}</FileHash>
+	<FileHash>{CB763B20-EF1D-3DE9-7ECE-373EE81FCCCE}</FileHash>
 </SoundBanksInfo>

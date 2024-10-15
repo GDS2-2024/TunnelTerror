@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E287937B-CDED-4F16-913F-DB393E5E8E26}",
     "Language": "SFX",
-    "Hash": "{5ABA6FAA-AA73-C0B5-8A3D-EEFFFD75A3D5}",
+    "Hash": "{A949F78A-2506-6BE5-6F3B-FBB4BAABD1A0}",
     "ObjectPath": "Play_Bite",
     "ShortName": "Play_Bite",
     "Path": "Event/Play_Bite.bnk",
@@ -67,7 +67,7 @@
       "Name": "Play_Bite",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Bite",
       "GUID": "{E287937B-CDED-4F16-913F-DB393E5E8E26}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "800",
       "DurationType": "OneShot",
       "DurationMin": "0.42073348",
       "DurationMax": "0.7678617",
@@ -92,6 +92,6 @@
     ]
    }
   ],
-  "FileHash": "{1E7E7BE4-C599-EB7A-9BC3-AA510CBCC14E}"
+  "FileHash": "{9C4DD9FB-2E42-DAA7-A17B-7DFA7B6E87A1}"
  }
 }

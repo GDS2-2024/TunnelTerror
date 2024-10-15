@@ -18,7 +18,7 @@
     "Type": "Event",
     "GUID": "{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}",
     "Language": "SFX",
-    "Hash": "{CBD5C734-81C8-9959-38C4-4A598FC2F1A4}",
+    "Hash": "{91EBBBDF-17A8-32D9-43C5-223CECEC7346}",
     "ObjectPath": "Play_Grab",
     "ShortName": "Play_Grab",
     "Path": "Event/Play_Grab.bnk",
@@ -585,7 +585,7 @@
     "Type": "Event",
     "GUID": "{E287937B-CDED-4F16-913F-DB393E5E8E26}",
     "Language": "SFX",
-    "Hash": "{5ABA6FAA-AA73-C0B5-8A3D-EEFFFD75A3D5}",
+    "Hash": "{A949F78A-2506-6BE5-6F3B-FBB4BAABD1A0}",
     "ObjectPath": "Play_Bite",
     "ShortName": "Play_Bite",
     "Path": "Event/Play_Bite.bnk",
@@ -642,7 +642,7 @@
       "Name": "Play_Bite",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Bite",
       "GUID": "{E287937B-CDED-4F16-913F-DB393E5E8E26}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "800",
       "DurationType": "OneShot",
       "DurationMin": "0.42073348",
       "DurationMax": "0.7678617",
@@ -1044,6 +1044,6 @@
     ]
    }
   ],
-  "FileHash": "{400AF8C4-CB10-FBF7-C7FB-04AB672B921B}"
+  "FileHash": "{8EF023EA-ABE7-4BC6-D345-4DF7FC4BE2F6}"
  }
 }
