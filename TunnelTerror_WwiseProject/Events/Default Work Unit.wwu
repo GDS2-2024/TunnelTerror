@@ -105,6 +105,54 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Bite" ID="{E287937B-CDED-4F16-913F-DB393E5E8E26}">
+					<ChildrenList>
+						<Action Name="" ID="{26C7F876-017B-45C2-ACCC-D6BE898DE877}" ShortID="409305453">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bite" ID="{6B631BCA-2E17-4680-9AC4-84887647491F}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Glow" ID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}">
+					<ChildrenList>
+						<Action Name="" ID="{DA830352-05E8-4015-B9FD-30A182F72BD2}" ShortID="43596638">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Glow" ID="{DF2EF46A-16CE-4506-8136-0C7BABBE590A}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Glow" ID="{BE5A0D3A-492D-4FBE-9071-C77D396C3AEE}">
+					<ChildrenList>
+						<Action Name="" ID="{A4302312-30CA-4905-BA7E-49888A3B7F0B}" ShortID="610479990">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Glow" ID="{DF2EF46A-16CE-4506-8136-0C7BABBE590A}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_PickAxe" ID="{3ADEA1F1-F0F5-4552-8C26-899603130220}">
+					<ChildrenList>
+						<Action Name="" ID="{6ED341B4-D621-4C2B-A3F5-5517F2783728}" ShortID="411313252">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PickAxe" ID="{CED7FD15-3E75-435D-8D19-ADC2AD36EE88}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

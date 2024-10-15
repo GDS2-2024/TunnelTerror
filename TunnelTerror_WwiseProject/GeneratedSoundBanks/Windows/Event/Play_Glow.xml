@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="721983777" Type="Event" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" Language="SFX" Hash="{D573DF0F-2653-6A9F-8951-AF8D46C3FDD8}">
+			<ObjectPath>Play_Glow</ObjectPath>
+			<ShortName>Play_Glow</ShortName>
+			<Path>Event/Play_Glow.bnk</Path>
+			<Media>
+				<File Id="733000276" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Glow.wav</ShortName>
+					<Path>Media/733000276.wem</Path>
+					<CachePath>SFX/Glow_FB1A8438.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="721983777" Name="Play_Glow" ObjectPath="\Events\Default Work Unit\Play_Glow" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="733000276"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{D0CED558-0E35-C2F4-AE66-39DD84A40AAC}</FileHash>
+</SoundBanksInfo>

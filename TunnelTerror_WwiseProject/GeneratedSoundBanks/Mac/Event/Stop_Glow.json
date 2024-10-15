@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "4000532691",
+    "Type": "Event",
+    "GUID": "{BE5A0D3A-492D-4FBE-9071-C77D396C3AEE}",
+    "Language": "SFX",
+    "Hash": "{A0A44E3F-7F22-7958-AD35-C1B465408631}",
+    "ObjectPath": "Stop_Glow",
+    "ShortName": "Stop_Glow",
+    "Path": "Event/Stop_Glow.bnk",
+    "Events": [
+     {
+      "Id": "4000532691",
+      "Name": "Stop_Glow",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_Glow",
+      "GUID": "{BE5A0D3A-492D-4FBE-9071-C77D396C3AEE}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{33445F75-2704-2C42-E39C-401A4FF758E3}"
+ }
+}

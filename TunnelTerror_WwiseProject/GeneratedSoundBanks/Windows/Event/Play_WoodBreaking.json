@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{0F14277F-3996-484C-A37D-4633DA6B3085}",
     "Language": "SFX",
-    "Hash": "{BD9FAD46-929B-9871-69EB-3AF2A48E79EE}",
+    "Hash": "{E0379ED1-20EC-F7C4-0E3E-6924467455EE}",
     "ObjectPath": "Play_WoodBreaking",
     "ShortName": "Play_WoodBreaking",
     "Path": "Event/Play_WoodBreaking.bnk",
@@ -91,6 +91,6 @@
     ]
    }
   ],
-  "FileHash": "{7B878661-94E3-93AE-13E5-EB02580B3C20}"
+  "FileHash": "{71F700AC-D9F9-A903-9F28-E666A2976273}"
  }
 }

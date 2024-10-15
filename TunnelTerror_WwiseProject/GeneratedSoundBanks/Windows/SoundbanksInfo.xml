@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="17721092" Type="Event" GUID="{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}" Language="SFX" Hash="{209BCEC8-5AC4-B6CF-77AB-ABF14554A8F5}">
+		<SoundBank Id="17721092" Type="Event" GUID="{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}" Language="SFX" Hash="{CBD5C734-81C8-9959-38C4-4A598FC2F1A4}">
 			<ObjectPath>Play_Grab</ObjectPath>
 			<ShortName>Play_Grab</ShortName>
 			<Path>Event/Play_Grab.bnk</Path>
@@ -40,7 +40,63 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1120692842" Type="Event" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" Language="SFX" Hash="{7B2CC80F-D0FF-E7DB-B70A-2C97C43F61A5}">
+		<SoundBank Id="721983777" Type="Event" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" Language="SFX" Hash="{D573DF0F-2653-6A9F-8951-AF8D46C3FDD8}">
+			<ObjectPath>Play_Glow</ObjectPath>
+			<ShortName>Play_Glow</ShortName>
+			<Path>Event/Play_Glow.bnk</Path>
+			<Media>
+				<File Id="733000276" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Glow.wav</ShortName>
+					<Path>Media/733000276.wem</Path>
+					<CachePath>SFX/Glow_FB1A8438.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="721983777" Name="Play_Glow" ObjectPath="\Events\Default Work Unit\Play_Glow" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="733000276"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="821056363" Type="Event" GUID="{3ADEA1F1-F0F5-4552-8C26-899603130220}" Language="SFX" Hash="{E83E0275-E7CD-B103-3FCC-5FDEC8497B42}">
+			<ObjectPath>Play_PickAxe</ObjectPath>
+			<ShortName>Play_PickAxe</ShortName>
+			<Path>Event/Play_PickAxe.bnk</Path>
+			<Media>
+				<File Id="545678415" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>PickAxe.wav</ShortName>
+					<Path>Media/545678415.wem</Path>
+					<CachePath>SFX/PickAxe_D1AD1249.wem</CachePath>
+				</File>
+				<File Id="562104551" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>PickAxe.wav</ShortName>
+					<Path>Media/562104551.wem</Path>
+					<CachePath>SFX/PickAxe_42392FB0.wem</CachePath>
+				</File>
+				<File Id="904230647" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>PickAxe.wav</ShortName>
+					<Path>Media/904230647.wem</Path>
+					<CachePath>SFX/PickAxe_7D046056.wem</CachePath>
+				</File>
+				<File Id="1063682463" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>PickAxe.wav</ShortName>
+					<Path>Media/1063682463.wem</Path>
+					<CachePath>SFX/PickAxe_8077902C.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="821056363" Name="Play_PickAxe" ObjectPath="\Events\Default Work Unit\Play_PickAxe" GUID="{3ADEA1F1-F0F5-4552-8C26-899603130220}" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.39109114" DurationMax="0.5441268">
+					<MediaRefs>
+						<MediaRef Id="545678415"/>
+						<MediaRef Id="562104551"/>
+						<MediaRef Id="904230647"/>
+						<MediaRef Id="1063682463"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1120692842" Type="Event" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" Language="SFX" Hash="{2B273414-AB4B-CEE7-E69D-C5B10F5D78D5}">
 			<ObjectPath>Play_RockFall</ObjectPath>
 			<ShortName>Play_RockFall</ShortName>
 			<Path>Event/Play_RockFall.bnk</Path>
@@ -131,7 +187,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1805011878" Type="Event" GUID="{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}" Language="SFX" Hash="{42E9970D-2529-6E14-6DD8-CE6D227AE91F}">
+		<SoundBank Id="1805011878" Type="Event" GUID="{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}" Language="SFX" Hash="{73862A0F-FC9B-8696-E598-9123FA4E3400}">
 			<ObjectPath>Play_PlayerFootsteps</ObjectPath>
 			<ShortName>Play_PlayerFootsteps</ShortName>
 			<Path>Event/Play_PlayerFootsteps.bnk</Path>
@@ -219,6 +275,49 @@
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="1810912708" Type="Event" GUID="{E287937B-CDED-4F16-913F-DB393E5E8E26}" Language="SFX" Hash="{5ABA6FAA-AA73-C0B5-8A3D-EEFFFD75A3D5}">
+			<ObjectPath>Play_Bite</ObjectPath>
+			<ShortName>Play_Bite</ShortName>
+			<Path>Event/Play_Bite.bnk</Path>
+			<Media>
+				<File Id="140177471" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Bite.wav</ShortName>
+					<Path>Media/140177471.wem</Path>
+					<CachePath>SFX/Bite_07F4F787.wem</CachePath>
+				</File>
+				<File Id="165520342" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Bite.wav</ShortName>
+					<Path>Media/165520342.wem</Path>
+					<CachePath>SFX/Bite_4B6ECAC2.wem</CachePath>
+				</File>
+				<File Id="261416016" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Bite.wav</ShortName>
+					<Path>Media/261416016.wem</Path>
+					<CachePath>SFX/Bite_1CC9E668.wem</CachePath>
+				</File>
+				<File Id="856751788" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Bite.wav</ShortName>
+					<Path>Media/856751788.wem</Path>
+					<CachePath>SFX/Bite_B6543914.wem</CachePath>
+				</File>
+				<File Id="1044280572" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Bite.wav</ShortName>
+					<Path>Media/1044280572.wem</Path>
+					<CachePath>SFX/Bite_5CD7C961.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1810912708" Name="Play_Bite" ObjectPath="\Events\Default Work Unit\Play_Bite" GUID="{E287937B-CDED-4F16-913F-DB393E5E8E26}" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.42073348" DurationMax="0.7678617">
+					<MediaRefs>
+						<MediaRef Id="140177471"/>
+						<MediaRef Id="165520342"/>
+						<MediaRef Id="261416016"/>
+						<MediaRef Id="856751788"/>
+						<MediaRef Id="1044280572"/>
+					</MediaRefs>
+				</Event>
+			</Events>
 		</SoundBank>
 		<SoundBank Id="2025845440" Type="Event" GUID="{F05E8152-8526-474A-8CD3-14071D451BB3}" Language="SFX" Hash="{A52B1869-7909-FD9B-2B74-46FB3D2D8188}">
 			<ObjectPath>Play_Torch</ObjectPath>
@@ -310,7 +409,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2284361370" Type="Event" GUID="{0F14277F-3996-484C-A37D-4633DA6B3085}" Language="SFX" Hash="{BD9FAD46-929B-9871-69EB-3AF2A48E79EE}">
+		<SoundBank Id="2284361370" Type="Event" GUID="{0F14277F-3996-484C-A37D-4633DA6B3085}" Language="SFX" Hash="{E0379ED1-20EC-F7C4-0E3E-6924467455EE}">
 			<ObjectPath>Play_WoodBreaking</ObjectPath>
 			<ShortName>Play_WoodBreaking</ShortName>
 			<Path>Event/Play_WoodBreaking.bnk</Path>
@@ -361,7 +460,7 @@
 				<Event Id="3065143382" Name="Stop_Torch" ObjectPath="\Events\Default Work Unit\Stop_Torch" GUID="{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3858275350" Type="Event" GUID="{A7C25A1B-0608-4060-9C29-134EBEA4D185}" Language="SFX" Hash="{089A6F51-AB52-C2CD-E673-19C579F8B95A}">
+		<SoundBank Id="3858275350" Type="Event" GUID="{A7C25A1B-0608-4060-9C29-134EBEA4D185}" Language="SFX" Hash="{4426CF7F-2268-C4A3-5DAB-60F5A464C9A5}">
 			<ObjectPath>Play_Snap</ObjectPath>
 			<ShortName>Play_Snap</ShortName>
 			<Path>Event/Play_Snap.bnk</Path>
@@ -398,6 +497,14 @@
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="4000532691" Type="Event" GUID="{BE5A0D3A-492D-4FBE-9071-C77D396C3AEE}" Language="SFX" Hash="{A0A44E3F-7F22-7958-AD35-C1B465408631}">
+			<ObjectPath>Stop_Glow</ObjectPath>
+			<ShortName>Stop_Glow</ShortName>
+			<Path>Event/Stop_Glow.bnk</Path>
+			<Events>
+				<Event Id="4000532691" Name="Stop_Glow" ObjectPath="\Events\Default Work Unit\Stop_Glow" GUID="{BE5A0D3A-492D-4FBE-9071-C77D396C3AEE}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4AB1BC1B-3B6C-30E9-33B5-F247D4B53A44}</FileHash>
+	<FileHash>{8C09F584-4AFF-1336-3A84-CA82FD1C13D3}</FileHash>
 </SoundBanksInfo>

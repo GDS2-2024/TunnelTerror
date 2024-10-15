@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3858275350" Type="Event" GUID="{A7C25A1B-0608-4060-9C29-134EBEA4D185}" Language="SFX" Hash="{089A6F51-AB52-C2CD-E673-19C579F8B95A}">
+		<SoundBank Id="3858275350" Type="Event" GUID="{A7C25A1B-0608-4060-9C29-134EBEA4D185}" Language="SFX" Hash="{4426CF7F-2268-C4A3-5DAB-60F5A464C9A5}">
 			<ObjectPath>Play_Snap</ObjectPath>
 			<ShortName>Play_Snap</ShortName>
 			<Path>Event/Play_Snap.bnk</Path>
@@ -39,5 +39,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{515BB928-A093-E178-1507-F063C484C125}</FileHash>
+	<FileHash>{B9E486C6-3469-02FB-3B6E-3DB7BC42744B}</FileHash>
 </SoundBanksInfo>
