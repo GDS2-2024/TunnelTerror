@@ -3,8 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/GameState.h"
 #include "TunnelTerror/TunnelTerrorCharacter.h"
+#include "GameFramework/GameState.h"
 #include "TunnelTerrorGameState.generated.h"
 
 /**
@@ -35,14 +35,19 @@ public:
 
 	bool bDoorClosing;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	TArray<ATunnelTerrorCharacter*> Players;
 
-	bool bAllInfected;
-	bool bAllReady;
+	UPROPERTY(BlueprintReadWrite)
+	TArray<FString> deathCauses;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	bool bIsReady;
+	UPROPERTY(BlueprintReadWrite)
+	TArray<float> timesAlive;
+
+	bool bAllInfected;
+
+	UPROPERTY(BlueprintReadWrite)
+	int playerNo;
 
 public:
 
@@ -59,10 +64,6 @@ public:
 
 	UFUNCTION(Server, Reliable)
 	void MulticastKillEveryone();
-
-	UFUNCTION()
-	void EndGame();
-
 
 private:
 

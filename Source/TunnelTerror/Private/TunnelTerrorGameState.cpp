@@ -74,6 +74,17 @@ void ATunnelTerrorGameState::Tick(float DeltaTime)
 			}
 		}
 	}
+
+	if (gameTime <= 0.0f)
+	{
+		playerNo = 0;
+		for (ATunnelTerrorCharacter* Player : Players)
+		{
+			deathCauses.Add(Player->causeOfDeath);
+			timesAlive.Add(Player->timeAlive);
+			playerNo++;
+		}
+	}
 }
 
 void ATunnelTerrorGameState::KillEveryone()
@@ -99,7 +110,7 @@ void ATunnelTerrorGameState::MulticastKillEveryone_Implementation()
 	{
 		if (player)
 		{
-			player->DecreaseHealth(100.0f);
+			player->DecreaseHealth(100.0f, "The entity");
 		}
 	}
 }
@@ -114,11 +125,6 @@ void ATunnelTerrorGameState::MulticastStartChaosTimer_Implementation()
 	bChaosTime = true;
 	bGameTime = false;
 	UE_LOG(LogTemp, Log, TEXT("Chaos Timer Started"));
-}
-
-void ATunnelTerrorGameState::EndGame()
-{
-		
 }
 
 void ATunnelTerrorGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const

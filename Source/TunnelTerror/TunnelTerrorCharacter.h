@@ -105,12 +105,14 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
 
-	/** Bool for AnimBP to switch to another animation set */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Weapon)
-	bool bHasRifle;
-
 	UPROPERTY()
 	bool bIsInSafeZone;
+
+	UPROPERTY(BlueprintReadWrite)
+	FString causeOfDeath;
+
+	UPROPERTY(blueprintReadWrite)
+	float timeAlive;
 
 	/** Player Inventory */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Replicated)
@@ -121,9 +123,6 @@ public:
 
 	UFUNCTION(BlueprintImplementableEvent)
 	void ChangePlayerMesh(USkeletalMesh* NewMesh);
-
-	UFUNCTION(BlueprintCallable)
-	USkeletalMesh* GetRandomMesh();
 	
 	UFUNCTION(Server,Reliable)
 	void ServerSpawnItem(TSubclassOf<AInventoryItem> ItemClass);
@@ -175,14 +174,6 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void SetMoneyUI(int32 amount);
-
-	/** Setter to set the bool */
-	UFUNCTION(BlueprintCallable, Category = Weapon)
-	void SetHasRifle(bool bNewHasRifle);
-
-	/** Getter for the bool */
-	UFUNCTION(BlueprintCallable, Category = Weapon)
-	bool GetHasRifle();
 	
 	/// <summary>
 	/// Ragdolls and infects the player
@@ -213,7 +204,7 @@ public:
 	void SetIsInSafeZone(bool bNewIsInSafeZone);
 
 	UFUNCTION()
-	void DecreaseHealth(float damage);
+	void DecreaseHealth(float damage, FString newCauseOfDeath);
 
 	UFUNCTION()
 	void StartSporeInfection();
@@ -235,6 +226,17 @@ public:
 	UFUNCTION()
 	void OnRep_CollidedPickup();
 
+	// Character Mesh Picker
+	UPROPERTY(Replicated, BlueprintReadWrite)
+	AActor* CollidedCharacterPicker;
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<UUserWidget> CharacterPickerClass;
+	UPROPERTY()
+	UUserWidget* CharacterPickerUI;
+	void ShowCharacterPickerUI();
+	UFUNCTION(BlueprintCallable)
+	void HideCharacterPickerUI();
+	
 	UFUNCTION(Server, Reliable)
 	void ServerInteractWithElevator(AElevatorEscape* Elevator, int32 Samples);
 	UFUNCTION(Server, Reliable)
@@ -294,6 +296,12 @@ public:
 
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastEquipTorchAnim(bool bEquip);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void EquipWeedKillerAnim(bool bEquip);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastEquipWeedKillerAnim(bool bEquip);
 	
 	UFUNCTION(BlueprintImplementableEvent)
 	void EquipCompassAnim(bool bEquip);
@@ -336,21 +344,13 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<AItemPickup> TorchPickupClass;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<AItemPickup> WeedKillerPickupClass;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<AItemPickup> CompassPickupClass;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<AItemPickup> PickaxePickupClass;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Pickups", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<AItemPickup> PlantPickupClass;
-
-	// Character Selection Meshes
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Selection", meta = (AllowPrivateAccess = "true"))
-	USkeletalMesh* MaleCharacter1;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Selection", meta = (AllowPrivateAccess = "true"))
-	USkeletalMesh* MaleCharacter2;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Selection", meta = (AllowPrivateAccess = "true"))
-	USkeletalMesh* FemaleCharacter1;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Selection", meta = (AllowPrivateAccess = "true"))
-	USkeletalMesh* FemaleCharacter2;
 	
 };
 

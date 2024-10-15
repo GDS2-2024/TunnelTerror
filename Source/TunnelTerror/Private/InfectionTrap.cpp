@@ -68,6 +68,6 @@ void AInfectionTrap::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AA
 
 void AInfectionTrap::InfectPlayer(ATunnelTerrorCharacter* TargetCharacter)
 {
-	TargetCharacter->DecreaseHealth(100.0f);
+	TargetCharacter->DecreaseHealth(100.0f, "Plant Trap");
 	UE_LOG(LogTemp, Log, TEXT("The players health is: %f"), TargetCharacter->health);
 }

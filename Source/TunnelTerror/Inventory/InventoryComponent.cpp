@@ -234,6 +234,15 @@ void UInventoryComponent::ServerSetSelectedSlot_Implementation(int32 SlotIndex)
 			Player->EquipTorchAnim(false);
 			MulticastEquipTorch(false);
 		}
+		if (InventorySlots[SelectedSlotIndex].Item->ItemName.ToString() == "WeedKiller")
+		{
+			Player->EquipWeedKillerAnim(true);
+			MulticastEquipWeedKiller(true);
+		} else
+		{
+			Player->EquipWeedKillerAnim(false);
+			MulticastEquipWeedKiller(false);
+		}
 	} else
 	{
 		Player->EquipCompassAnim(false);
@@ -293,6 +302,12 @@ void UInventoryComponent::MulticastEquipTorch_Implementation(bool equip)
 {
 	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
 	Player->EquipTorchAnim(equip);
+}
+
+void UInventoryComponent::MulticastEquipWeedKiller_Implementation(bool equip)
+{
+	ATunnelTerrorCharacter* Player = Cast<ATunnelTerrorCharacter>(GetOwner());
+	Player->EquipWeedKillerAnim(equip);
 }
 
 // Called when the game starts

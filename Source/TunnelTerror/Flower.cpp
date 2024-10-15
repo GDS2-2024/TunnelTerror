@@ -13,7 +13,7 @@ UFlower::UFlower()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
 
-	// ...    .
+	// ...
 }
 
 
@@ -56,7 +56,7 @@ void UFlower::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* O
 
 void UFlower::InfectPlayer(ATunnelTerrorCharacter* TargetCharacter)
 {
-	TargetCharacter->DecreaseHealth(100.0f);
+	TargetCharacter->DecreaseHealth(100.0f, "Sherwin");
 	UE_LOG(LogTemp, Log, TEXT("The players health is: %f"), TargetCharacter->health);
 }
 
