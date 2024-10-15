@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3065143382" Type="Event" GUID="{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}" Language="SFX" Hash="{0468C38A-737F-0977-3EFF-F7ED6939411A}">
+		<SoundBank Id="3065143382" Type="Event" GUID="{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}" Language="SFX" Hash="{638A8D0F-FFB6-019B-DDD6-C16B10B72A4B}">
 			<ObjectPath>Stop_Torch</ObjectPath>
 			<ShortName>Stop_Torch</ShortName>
 			<Path>Event/Stop_Torch.bnk</Path>
@@ -10,5 +10,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E3CF06EF-B02E-6B25-193F-3AEA6075CE39}</FileHash>
+	<FileHash>{35384981-A6AA-B217-9C76-84F10B2AD9E4}</FileHash>
 </SoundBanksInfo>

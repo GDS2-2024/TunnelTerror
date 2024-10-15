@@ -40,7 +40,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="721983777" Type="Event" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" Language="SFX" Hash="{D573DF0F-2653-6A9F-8951-AF8D46C3FDD8}">
+		<SoundBank Id="721983777" Type="Event" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" Language="SFX" Hash="{5243E8CC-E069-E272-8C1C-D310E2DB1286}">
 			<ObjectPath>Play_Glow</ObjectPath>
 			<ShortName>Play_Glow</ShortName>
 			<Path>Event/Play_Glow.bnk</Path>
@@ -48,18 +48,18 @@
 				<File Id="733000276" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Glow.wav</ShortName>
 					<Path>Media/733000276.wem</Path>
-					<CachePath>SFX/Glow_FB1A8438.wem</CachePath>
+					<CachePath>SFX/Glow_36B74D48.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="721983777" Name="Play_Glow" ObjectPath="\Events\Default Work Unit\Play_Glow" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" MaxAttenuation="100" DurationType="Infinite">
+				<Event Id="721983777" Name="Play_Glow" ObjectPath="\Events\Default Work Unit\Play_Glow" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" MaxAttenuation="800" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="733000276"/>
 					</MediaRefs>
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="821056363" Type="Event" GUID="{3ADEA1F1-F0F5-4552-8C26-899603130220}" Language="SFX" Hash="{E83E0275-E7CD-B103-3FCC-5FDEC8497B42}">
+		<SoundBank Id="821056363" Type="Event" GUID="{3ADEA1F1-F0F5-4552-8C26-899603130220}" Language="SFX" Hash="{ED974193-14FC-F7A3-F04D-F37566DE2417}">
 			<ObjectPath>Play_PickAxe</ObjectPath>
 			<ShortName>Play_PickAxe</ShortName>
 			<Path>Event/Play_PickAxe.bnk</Path>
@@ -86,7 +86,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="821056363" Name="Play_PickAxe" ObjectPath="\Events\Default Work Unit\Play_PickAxe" GUID="{3ADEA1F1-F0F5-4552-8C26-899603130220}" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.39109114" DurationMax="0.5441268">
+				<Event Id="821056363" Name="Play_PickAxe" ObjectPath="\Events\Default Work Unit\Play_PickAxe" GUID="{3ADEA1F1-F0F5-4552-8C26-899603130220}" MaxAttenuation="200" DurationType="OneShot" DurationMin="0.39109114" DurationMax="0.5441268">
 					<MediaRefs>
 						<MediaRef Id="545678415"/>
 						<MediaRef Id="562104551"/>
@@ -319,7 +319,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2025845440" Type="Event" GUID="{F05E8152-8526-474A-8CD3-14071D451BB3}" Language="SFX" Hash="{A52B1869-7909-FD9B-2B74-46FB3D2D8188}">
+		<SoundBank Id="2025845440" Type="Event" GUID="{F05E8152-8526-474A-8CD3-14071D451BB3}" Language="SFX" Hash="{264A4DEB-EB16-8C61-6250-666836A61338}">
 			<ObjectPath>Play_Torch</ObjectPath>
 			<ShortName>Play_Torch</ShortName>
 			<Path>Event/Play_Torch.bnk</Path>
@@ -452,7 +452,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3065143382" Type="Event" GUID="{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}" Language="SFX" Hash="{0468C38A-737F-0977-3EFF-F7ED6939411A}">
+		<SoundBank Id="3065143382" Type="Event" GUID="{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}" Language="SFX" Hash="{638A8D0F-FFB6-019B-DDD6-C16B10B72A4B}">
 			<ObjectPath>Stop_Torch</ObjectPath>
 			<ShortName>Stop_Torch</ShortName>
 			<Path>Event/Stop_Torch.bnk</Path>
@@ -506,5 +506,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{82B08CE7-79B2-6F4C-11D3-023D4D7A7F08}</FileHash>
+	<FileHash>{2D7FD376-FF1A-01A7-98A3-92C226F9D259}</FileHash>
 </SoundBanksInfo>

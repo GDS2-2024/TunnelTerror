@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}",
     "Language": "SFX",
-    "Hash": "{0468C38A-737F-0977-3EFF-F7ED6939411A}",
+    "Hash": "{638A8D0F-FFB6-019B-DDD6-C16B10B72A4B}",
     "ObjectPath": "Stop_Torch",
     "ShortName": "Stop_Torch",
     "Path": "Event/Stop_Torch.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{5C9669DD-6C42-26DC-16DF-538F2B247C8E}"
+  "FileHash": "{89EA8365-E1BD-3C39-9C83-EEBC7EC729A7}"
  }
 }

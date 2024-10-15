@@ -80,7 +80,7 @@
     "Type": "Event",
     "GUID": "{AA3B480F-E159-421B-A0C2-0C2A86F882C2}",
     "Language": "SFX",
-    "Hash": "{D573DF0F-2653-6A9F-8951-AF8D46C3FDD8}",
+    "Hash": "{5243E8CC-E069-E272-8C1C-D310E2DB1286}",
     "ObjectPath": "Play_Glow",
     "ShortName": "Play_Glow",
     "Path": "Event/Play_Glow.bnk",
@@ -92,7 +92,7 @@
       "Location": "Loose",
       "ShortName": "Glow.wav",
       "Path": "Media/733000276.wem",
-      "CachePath": "SFX/Glow_FB1A8438.wem"
+      "CachePath": "SFX/Glow_36B74D48.wem"
      }
     ],
     "Events": [
@@ -101,7 +101,7 @@
       "Name": "Play_Glow",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Glow",
       "GUID": "{AA3B480F-E159-421B-A0C2-0C2A86F882C2}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "800",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -116,7 +116,7 @@
     "Type": "Event",
     "GUID": "{3ADEA1F1-F0F5-4552-8C26-899603130220}",
     "Language": "SFX",
-    "Hash": "{E83E0275-E7CD-B103-3FCC-5FDEC8497B42}",
+    "Hash": "{ED974193-14FC-F7A3-F04D-F37566DE2417}",
     "ObjectPath": "Play_PickAxe",
     "ShortName": "Play_PickAxe",
     "Path": "Event/Play_PickAxe.bnk",
@@ -164,7 +164,7 @@
       "Name": "Play_PickAxe",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_PickAxe",
       "GUID": "{3ADEA1F1-F0F5-4552-8C26-899603130220}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "200",
       "DurationType": "OneShot",
       "DurationMin": "0.39109114",
       "DurationMax": "0.5441268",
@@ -671,7 +671,7 @@
     "Type": "Event",
     "GUID": "{F05E8152-8526-474A-8CD3-14071D451BB3}",
     "Language": "SFX",
-    "Hash": "{A52B1869-7909-FD9B-2B74-46FB3D2D8188}",
+    "Hash": "{264A4DEB-EB16-8C61-6250-666836A61338}",
     "ObjectPath": "Play_Torch",
     "ShortName": "Play_Torch",
     "Path": "Event/Play_Torch.bnk",
@@ -930,7 +930,7 @@
     "Type": "Event",
     "GUID": "{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}",
     "Language": "SFX",
-    "Hash": "{0468C38A-737F-0977-3EFF-F7ED6939411A}",
+    "Hash": "{638A8D0F-FFB6-019B-DDD6-C16B10B72A4B}",
     "ObjectPath": "Stop_Torch",
     "ShortName": "Stop_Torch",
     "Path": "Event/Stop_Torch.bnk",
@@ -1044,6 +1044,6 @@
     ]
    }
   ],
-  "FileHash": "{8723452A-2501-E0AE-37F6-DAADE9C7586E}"
+  "FileHash": "{5EC8A2D8-8306-FD69-FDBE-9E3D01910114}"
  }
 }
