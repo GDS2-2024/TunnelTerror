@@ -64,7 +64,7 @@ public:
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastPlayDoorCloseAnimation();
 
-	UPROPERTY(Replicated)
+	UPROPERTY(Replicated, BlueprintReadWrite)
 	int samplesNeeded;
 
 	UPROPERTY(Replicated, BlueprintReadWrite)

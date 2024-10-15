@@ -38,6 +38,11 @@ void ATunnelTerrorGameState::Tick(float DeltaTime)
 		}
 	}
 
+	if (ElevatorEscape)
+	{
+		ElevatorEscape->samplesNeeded = Players.Num() * 2;
+	}
+
 	if (HasAuthority() && Players.Num() > 0)
 	{
 		bAllInfected = true;
