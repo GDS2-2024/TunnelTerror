@@ -44,6 +44,9 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 	TArray<float> timesAlive;
 
+	UPROPERTY(BlueprintReadWrite)
+	TArray<FString> playerNames;
+	
 	bool bAllInfected;
 
 	UPROPERTY(BlueprintReadWrite)

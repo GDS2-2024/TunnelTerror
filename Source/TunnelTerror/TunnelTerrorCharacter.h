@@ -108,6 +108,15 @@ public:
 	UPROPERTY()
 	bool bIsInSafeZone;
 
+	UFUNCTION(Server, Reliable, BlueprintCallable)
+	void ServerSetPlayerName(const FString& NewName);
+
+	UFUNCTION(NetMulticast, Reliable, BlueprintCallable)
+	void MulticastSetPlayerName(const FString& NewName);
+	
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Replicated)
+	FString playerName = "Player";
+	
 	UPROPERTY(BlueprintReadWrite)
 	FString causeOfDeath;
 
@@ -280,6 +289,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<UPlayerHUD> PlayerHUDClass;
 	
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<UUserWidget> PlayerNameUIClass;
+	
 	UFUNCTION(BlueprintNativeEvent)
 	void OnRagdoll();
 	
@@ -299,6 +311,9 @@ public:
 
 	UPROPERTY()
 	UPlayerHUD* PlayerHUD;
+
+	UPROPERTY()
+	UUserWidget* SetNameUI;
 
 	UFUNCTION(BlueprintImplementableEvent)
 	void EquipTorchAnim(bool bEquip);

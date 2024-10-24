@@ -54,7 +54,7 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 	Mesh1P->bCastDynamicShadow = false;
 	Mesh1P->CastShadow = false;
 	//Mesh1P->SetRelativeRotation(FRotator(0.9f, -19.19f, 5.2f));
-	Mesh1P->SetRelativeLocation(FVector(-30.f, 0.f, -150.f));
+	Mesh1P->SetRelativeLocation(FVector(-30.f, 0.f, -150.f)); 
 	
 	// Create Inventory Component
 	Inventory = CreateDefaultSubobject<UInventoryComponent>(TEXT("Player Inventory"));
@@ -79,9 +79,19 @@ void ATunnelTerrorCharacter::BeginPlay()
 		{
 			PlayerHUD = CreateWidget<UPlayerHUD>(PlayerController, PlayerHUDClass);
 			PlayerHUD->AddToPlayerScreen();
+			//UI For entering player name
+			SetNameUI = CreateWidget<UUserWidget>(PlayerController, PlayerNameUIClass);
+			SetNameUI->AddToPlayerScreen();
+			PlayerController->bShowMouseCursor = true;
+			FInputModeUIOnly InputMode;
+			InputMode.SetWidgetToFocus(SetNameUI->TakeWidget());
+			PlayerController->SetInputMode(InputMode);
+			
 			SetMoneyUI(money);
 		}
 	}
+	//playerName = "Player";
+	UE_LOG(LogTemp, Log, TEXT("Player BeginPLay"));
 }
 
 void ATunnelTerrorCharacter::Tick(float DeltaTime)
@@ -143,7 +153,41 @@ void ATunnelTerrorCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty
 	DOREPLIFETIME(ATunnelTerrorCharacter, Inventory);
 	DOREPLIFETIME(ATunnelTerrorCharacter, bIsRagdolled);
 	DOREPLIFETIME(ATunnelTerrorCharacter, CollidedPickup);
-	DOREPLIFETIME(ATunnelTerrorCharacter, CollidedCharacterPicker)
+	DOREPLIFETIME(ATunnelTerrorCharacter, CollidedCharacterPicker);
+	DOREPLIFETIME(ATunnelTerrorCharacter, playerName);
+}
+
+void ATunnelTerrorCharacter::MulticastSetPlayerName_Implementation(const FString& NewName)
+{
+	UE_LOG(LogTemp, Log, TEXT("Client Set Player Name: %s"), *NewName);
+	//playerName = NewName;
+	if (SetNameUI)
+	{
+		if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
+		{
+			SetNameUI->RemoveFromParent();
+			PlayerController->bShowMouseCursor = false;
+			FInputModeGameOnly InputMode;
+			PlayerController->SetInputMode(InputMode);
+		}
+	}
+}
+
+void ATunnelTerrorCharacter::ServerSetPlayerName_Implementation(const FString& NewName)
+{
+	UE_LOG(LogTemp, Log, TEXT("Server Set Player Name: %s"), *NewName);
+	playerName = NewName;
+	if (SetNameUI)
+	{
+		if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
+		{
+			SetNameUI->RemoveFromParent();
+			PlayerController->bShowMouseCursor = false;
+			FInputModeGameOnly InputMode;
+			PlayerController->SetInputMode(InputMode);
+		}
+	}
+	MulticastSetPlayerName(NewName);
 }
 
 //////////////////////////////////////////////////////////////////////////// Input

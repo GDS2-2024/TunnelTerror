@@ -87,6 +87,7 @@ void ATunnelTerrorGameState::Tick(float DeltaTime)
 		{
 			deathCauses.Add(Player->causeOfDeath);
 			timesAlive.Add(Player->timeAlive);
+			playerNames.Add(Player->playerName);
 			playerNo++;
 		}
 	}
