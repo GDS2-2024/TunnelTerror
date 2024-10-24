@@ -1,11 +1,11 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\caved in\\tunnelterror\\plugins\\advancedsessions\\advancedsessions\\intermediate\\build\\win64\\unrealeditor\\inc\\advancedsessions\\uht\\advancedsessions.init.gen.cpp",
+        "Source": "d:\\unity projects\\gds2\\tunnelterror\\plugins\\advancedsessions\\advancedsessions\\intermediate\\build\\win64\\unrealeditor\\inc\\advancedsessions\\uht\\advancedsessions.init.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\caved in\\tunnelterror\\intermediate\\build\\win64\\x64\\tunnelterroreditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "PCH": "d:\\unity projects\\gds2\\tunnelterror\\intermediate\\build\\win64\\x64\\tunnelterroreditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
         "Includes": [
-            "c:\\caved in\\tunnelterror\\plugins\\advancedsessions\\advancedsessions\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\advancedsessions\\definitions.advancedsessions.h"
+            "d:\\unity projects\\gds2\\tunnelterror\\plugins\\advancedsessions\\advancedsessions\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\advancedsessions\\definitions.advancedsessions.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
