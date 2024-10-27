@@ -144,6 +144,9 @@ public:
 
 	UFUNCTION(BlueprintImplementableEvent)
 	void PlayPickupSound();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void PlaySwingSound();
 	
 	UFUNCTION(Server, Reliable)
 	void ServerRemoveCrystals();

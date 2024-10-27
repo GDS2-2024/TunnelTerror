@@ -134,6 +134,7 @@ void ATunnelTerrorCharacter::Tick(float DeltaTime)
         		{
         			ServerRemoveCrystals();
         			ClientAddMoney();
+        			PlaySwingSound();
         		}
         	}
         }
