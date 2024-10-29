@@ -11,6 +11,7 @@
 #include <TunnelTerrorPlayerState.h>
 
 #include "ElevatorEscape.h"
+#include "EngineUtils.h"
 #include "Hazards/TorchHazard.h"
 #include "InfectionTrap.h"
 #include "Hazards/BridgeSabotager.h"
@@ -868,6 +869,20 @@ bool ATunnelTerrorCharacter::GetIsInfected()
 	}
 	//UE_LOG(LogTemp, Error, TEXT("Couldn't cast to ATunnelTerrorPlayerState!"));
 	return false;
+}
+
+// Gets called here and in the blueprint whenever the player becomes infected
+void ATunnelTerrorCharacter::OnInfected_Implementation()
+{
+	
+	// make all players visible thru walls (heat vision)
+	for (TActorIterator<ATunnelTerrorCharacter> It(GetWorld()); It; ++It)
+	{
+		ATunnelTerrorCharacter* character = *It;
+		if (character == this) continue;
+		character->TurnOnHeatVisionPPE();
+	}
+	
 }
 
 void ATunnelTerrorCharacter::DecreaseHealth(float damage, FString newCauseOfDeath)

@@ -39,6 +39,11 @@ void ATunnelTerrorPlayerState::OnRep_bIsInfected()
             bridge->OnPlayerInfected();
         }
     }
+
+    if (ATunnelTerrorCharacter* Character = Cast<ATunnelTerrorCharacter>(GetPawn()))
+    {
+        Character->OnInfected();
+    }
 }
 
 void ATunnelTerrorPlayerState::CopyProperties(APlayerState* PlayerState)

@@ -215,6 +215,12 @@ public:
 	UFUNCTION(BlueprintCallable)
 	bool GetIsInfected();
 
+	UFUNCTION(BlueprintNativeEvent)
+	void OnInfected();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void TurnOnHeatVisionPPE();
+
 	UFUNCTION()
 	void SetIsInSafeZone(bool bNewIsInSafeZone);
 
