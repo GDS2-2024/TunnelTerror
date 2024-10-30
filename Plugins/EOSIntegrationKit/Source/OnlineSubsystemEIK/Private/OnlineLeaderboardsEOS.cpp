@@ -327,18 +327,22 @@ bool FOnlineLeaderboardsEOS::ReadLeaderboardsAroundRank(int32 Rank, uint32 Range
 				char EpicIdStr[EOS_CONNECT_EXTERNAL_ACCOUNT_ID_MAX_LENGTH+1];
 				int32 EpicIdStrSize = sizeof(EpicIdStr);
 				Options.TargetProductUserId = Record->UserId;
-
+				FString Nickname = UTF8_TO_TCHAR(Record->UserDisplayName);
+				if(Nickname.IsEmpty())
+				{
+					Nickname = TEXT("Unknown Player");
+				}
+				UE_LOG_ONLINE_LEADERBOARD(Display, TEXT("Leaderboard Record: %s, %d, %d"), *Nickname, Record->Rank, Record->Score);
+				EOS_EpicAccountId AccountId = EOS_EpicAccountId_FromString("");
 				Result = EOS_Connect_GetProductUserIdMapping(EOSSubsystem->ConnectHandle, &Options, EpicIdStr, &EpicIdStrSize);
 				if (Result == EOS_EResult::EOS_Success)
 				{
-					FString Nickname = UTF8_TO_TCHAR(Record->UserDisplayName);
-					if(Nickname.IsEmpty())
-					{
-						Nickname = TEXT("Unknown Player");
-					}
-					const EOS_EpicAccountId AccountId = EOS_EpicAccountId_FromString(EpicIdStr);
-					const FUniqueNetIdEOSRef NetId = FUniqueNetIdEOSRegistry::FindOrAdd(AccountId, Record->UserId).ToSharedRef();
-
+					AccountId = EOS_EpicAccountId_FromString(EpicIdStr);
+				}
+				auto LocalNetId =  FUniqueNetIdEOSRegistry::FindOrAdd(AccountId, Record->UserId);
+				if(LocalNetId.IsValid())
+				{
+					FUniqueNetIdEOSRef NetId = LocalNetId.ToSharedRef();
 					FOnlineStatsRow* Row = new(LambdaReadObject->Rows) FOnlineStatsRow(Nickname, NetId);
 					Row->Rank = Record->Rank;
 					Row->Columns.Add(LambdaReadObject->SortedColumn, FVariantData(Record->Score));
