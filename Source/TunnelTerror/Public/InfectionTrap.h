@@ -24,6 +24,17 @@ public:
 	UFUNCTION()
 	void OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
+	void PlantDie();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void DeathAnim();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void Snap();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void StopSnap();
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -34,6 +45,15 @@ public:
 
 	UPROPERTY()
 	float despawnTimer;
+
+	UPROPERTY()
+	float activateTimer;
+
+	UPROPERTY()
+	float activate;
+
+	UPROPERTY(BlueprintReadWrite)
+	bool bCanTimeOut;
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Collision", meta = (AllowPrivateAccess = "true"))

@@ -9,8 +9,9 @@ AInfectionTrap::AInfectionTrap()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	despawnTimer = 600.0f;
+	bCanTimeOut = true;
+	despawnTimer = 60.0f;
+	activate = 3.0f;
 }
 
 // Called when the game starts or when spawned
@@ -18,6 +19,8 @@ void AInfectionTrap::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	activateTimer = 0.0f;
+
 	USkeletalMeshComponent* SkeletalMesh = FindComponentByClass<USkeletalMeshComponent>();
 
 	if (SkeletalMesh)
@@ -40,6 +43,7 @@ void AInfectionTrap::BeginPlay()
 		{
 			// Bind the overlap event to the OnOverlapBegin function
 			CollisionSphere->OnComponentBeginOverlap.AddDynamic(this, &AInfectionTrap::OnOverlapBegin);
+			CollisionSphere->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		}
 	}
 }
@@ -49,9 +53,22 @@ void AInfectionTrap::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	despawnTimer -= DeltaTime;
+	if (activateTimer < activate)
+	{
+		activateTimer += DeltaTime;
+	}
+	else
+	{
+		CollisionSphere->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+	}
+
+	if (bCanTimeOut)
+	{
+		despawnTimer -= DeltaTime;
+	}
+
 	if (despawnTimer <= 0) {
-		Destroy();
+		PlantDie();
 	}
 }
 
@@ -70,4 +87,10 @@ void AInfectionTrap::InfectPlayer(ATunnelTerrorCharacter* TargetCharacter)
 {
 	TargetCharacter->DecreaseHealth(100.0f, "Plant Trap");
 	UE_LOG(LogTemp, Log, TEXT("The players health is: %f"), TargetCharacter->health);
+}
+
+void AInfectionTrap::PlantDie()
+{
+	DeathAnim();
+	CollisionSphere->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }

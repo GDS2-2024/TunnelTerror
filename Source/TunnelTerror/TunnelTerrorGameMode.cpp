@@ -12,3 +12,29 @@ ATunnelTerrorGameMode::ATunnelTerrorGameMode()
 	DefaultPawnClass = PlayerPawnClassFinder.Class;
 
 }
+
+void ATunnelTerrorGameMode::PostLogin(APlayerController* NewPlayer)
+{
+    Super::PostLogin(NewPlayer);
+
+    if (ATunnelTerrorGameState* GameState = GetGameState<ATunnelTerrorGameState>())
+    {
+        if (ATunnelTerrorCharacter* Character = Cast<ATunnelTerrorCharacter>(NewPlayer->GetPawn()))
+        {
+            GameState->AddPlayer(Character);
+        }
+    }
+}
+
+void ATunnelTerrorGameMode::Logout(AController* Exiting)
+{
+    Super::Logout(Exiting);
+
+    if (ATunnelTerrorGameState* GameState = GetGameState<ATunnelTerrorGameState>())
+    {
+        if (ATunnelTerrorCharacter* Character = Cast<ATunnelTerrorCharacter>(Exiting->GetPawn()))
+        {
+            GameState->RemovePlayer(Character);
+        }
+    }
+}
