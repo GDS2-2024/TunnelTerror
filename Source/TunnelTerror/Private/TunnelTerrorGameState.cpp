@@ -18,13 +18,6 @@ ATunnelTerrorGameState::ATunnelTerrorGameState()
 void ATunnelTerrorGameState::BeginPlay()
 {
 	ElevatorEscape = Cast<AElevatorEscape>(UGameplayStatics::GetActorOfClass(GetWorld(), AElevatorEscape::StaticClass()));
-}
-
-void ATunnelTerrorGameState::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-	Players.Empty();
 
 	TArray<AActor*> FoundActors;
 
@@ -37,11 +30,11 @@ void ATunnelTerrorGameState::Tick(float DeltaTime)
 			Players.Add(Character);
 		}
 	}
+}
 
-	if (ElevatorEscape)
-	{
-		ElevatorEscape->samplesNeeded = Players.Num() * 2;
-	}
+void ATunnelTerrorGameState::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
 
 	if (HasAuthority() && Players.Num() > 0)
 	{
@@ -99,19 +92,7 @@ void ATunnelTerrorGameState::KillEveryone()
 
 void ATunnelTerrorGameState::MulticastKillEveryone_Implementation()
 {
-	TArray<AActor*> foundActors;
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ATunnelTerrorCharacter::StaticClass(), foundActors);
-
-	for (AActor* actor : foundActors)
-	{
-		ATunnelTerrorCharacter* player = Cast<ATunnelTerrorCharacter>(actor);
-		if (player)
-		{
-			players.Add(player);
-		}
-	}
-
-	for (ATunnelTerrorCharacter* player : players)
+	for (ATunnelTerrorCharacter* player : Players)
 	{
 		if (player)
 		{
@@ -142,3 +123,28 @@ void ATunnelTerrorGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty
 	DOREPLIFETIME(ATunnelTerrorGameState, bChaosTime);
 }
 
+void ATunnelTerrorGameState::AddPlayer(ATunnelTerrorCharacter* Character)
+{
+	if (Character && !Players.Contains(Character))
+	{
+		Players.Add(Character);
+
+		if (ElevatorEscape)
+		{
+			ElevatorEscape->samplesNeeded = Players.Num() * 2;
+		}
+	}
+}
+
+void ATunnelTerrorGameState::RemovePlayer(ATunnelTerrorCharacter* Character)
+{
+	if (Character)
+	{
+		Players.Remove(Character);
+
+		if (ElevatorEscape)
+		{
+			ElevatorEscape->samplesNeeded = Players.Num() * 2;
+		}
+	}
+}

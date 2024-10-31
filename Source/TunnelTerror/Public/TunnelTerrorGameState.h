@@ -65,9 +65,11 @@ public:
 	UFUNCTION(Server, Reliable)
 	void MulticastKillEveryone();
 
-private:
+	void AddPlayer(ATunnelTerrorCharacter* Character);
 
-	TArray<ATunnelTerrorCharacter*> players;
+	void RemovePlayer(ATunnelTerrorCharacter* Character);
+
+private:
 
 	AElevatorEscape* ElevatorEscape;
 

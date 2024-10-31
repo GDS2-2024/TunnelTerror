@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameMode.h"
+#include "Public/TunnelTerrorGameState.h"
 #include "TunnelTerrorGameMode.generated.h"
 
 UCLASS(minimalapi)
@@ -13,6 +14,10 @@ class ATunnelTerrorGameMode : public AGameMode
 
 public:
 	ATunnelTerrorGameMode();
+
+	virtual void PostLogin(APlayerController* NewPlayer) override;
+
+	virtual void Logout(AController* Exiting) override;
 };
 
 
