@@ -44,6 +44,9 @@ public:
 	UPROPERTY()
 	float despawnTimer;
 
+	UPROPERTY(BlueprintReadWrite)
+	bool bCanTimeOut;
+
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Collision", meta = (AllowPrivateAccess = "true"))
 	USphereComponent* CollisionSphere;

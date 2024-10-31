@@ -9,7 +9,7 @@ AInfectionTrap::AInfectionTrap()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	bCanTimeOut = true;
 	despawnTimer = 60.0f;
 }
 
@@ -49,7 +49,11 @@ void AInfectionTrap::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	despawnTimer -= DeltaTime;
+	if (bCanTimeOut)
+	{
+		despawnTimer -= DeltaTime;
+	}
+
 	if (despawnTimer <= 0) {
 		DeathAnim();
 		CollisionSphere->SetCollisionEnabled(ECollisionEnabled::NoCollision);
