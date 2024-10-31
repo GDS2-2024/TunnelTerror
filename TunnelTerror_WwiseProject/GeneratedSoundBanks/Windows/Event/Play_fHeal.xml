@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3279106990" Type="Event" GUID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}" Language="SFX" Hash="{CE05DE6A-8629-E42B-C29B-985972C66B76}">
+		<SoundBank Id="3279106990" Type="Event" GUID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}" Language="SFX" Hash="{3C05C24C-D1A7-79BC-FE9A-B8FCB181B4F1}">
 			<ObjectPath>Play_fHeal</ObjectPath>
 			<ShortName>Play_fHeal</ShortName>
 			<Path>Event/Play_fHeal.bnk</Path>
+			<Media>
+				<File Id="225740081" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-056.wav</ShortName>
+					<Path>Media/225740081.wem</Path>
+					<CachePath>SFX/sfx vox mono full-056_818F3B66.wem</CachePath>
+				</File>
+				<File Id="634154630" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-057.wav</ShortName>
+					<Path>Media/634154630.wem</Path>
+					<CachePath>SFX/sfx vox mono full-057_818F3B66.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="3279106990" Name="Play_fHeal" ObjectPath="\Events\Default Work Unit\Play_fHeal" GUID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3279106990" Name="Play_fHeal" ObjectPath="\Events\Default Work Unit\Play_fHeal" GUID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}" DurationType="OneShot" DurationMin="1.6141723" DurationMax="1.6736054">
+					<MediaRefs>
+						<MediaRef Id="225740081"/>
+						<MediaRef Id="634154630"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{25FAA738-7C0A-A912-83B5-99A2D817B6C3}</FileHash>
+	<FileHash>{7B19BEB0-0FE4-953D-2F30-93AD1C593847}</FileHash>
 </SoundBanksInfo>

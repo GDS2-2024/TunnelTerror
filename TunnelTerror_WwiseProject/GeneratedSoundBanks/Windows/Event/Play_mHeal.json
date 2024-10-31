@@ -10,10 +10,39 @@
     "Type": "Event",
     "GUID": "{BB9FBAE0-EE84-48F3-96D9-0F1BA79BF2A0}",
     "Language": "SFX",
-    "Hash": "{8366D58C-B8F8-38AD-398D-3EDB3A1713E1}",
+    "Hash": "{D5FD5447-31EC-1C96-34D5-0D4335E57D42}",
     "ObjectPath": "Play_mHeal",
     "ShortName": "Play_mHeal",
     "Path": "Event/Play_mHeal.bnk",
+    "Media": [
+     {
+      "Id": "81284966",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-082.wav",
+      "Path": "Media/81284966.wem",
+      "CachePath": "SFX/sfx vox mono full-082_818F3B66.wem"
+     },
+     {
+      "Id": "404608766",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-084.wav",
+      "Path": "Media/404608766.wem",
+      "CachePath": "SFX/sfx vox mono full-084_818F3B66.wem"
+     },
+     {
+      "Id": "727467757",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-083.wav",
+      "Path": "Media/727467757.wem",
+      "CachePath": "SFX/sfx vox mono full-083_818F3B66.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "3821234109",
@@ -21,12 +50,23 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_mHeal",
       "GUID": "{BB9FBAE0-EE84-48F3-96D9-0F1BA79BF2A0}",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "1.6736054",
+      "DurationMax": "1.9113605",
+      "MediaRefs": [
+       {
+        "Id": "81284966"
+       },
+       {
+        "Id": "404608766"
+       },
+       {
+        "Id": "727467757"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{A94714F2-795F-F5C2-EB23-AFDCAA278A7C}"
+  "FileHash": "{587B2B18-2990-AB0E-5E22-F5360445E89C}"
  }
 }

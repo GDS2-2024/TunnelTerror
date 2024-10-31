@@ -40,20 +40,78 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="25938892" Type="Event" GUID="{59B1A844-A95F-4B37-8C0F-664C08A82F28}" Language="SFX" Hash="{0A2EA6CB-5456-DCD7-92D2-68EA5E8CF957}">
+		<SoundBank Id="25938892" Type="Event" GUID="{59B1A844-A95F-4B37-8C0F-664C08A82F28}" Language="SFX" Hash="{32BC9457-6583-2CCB-03F0-EA10F0370DC4}">
 			<ObjectPath>Play_mFall</ObjectPath>
 			<ShortName>Play_mFall</ShortName>
 			<Path>Event/Play_mFall.bnk</Path>
+			<Media>
+				<File Id="153288701" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-015.wav</ShortName>
+					<Path>Media/153288701.wem</Path>
+					<CachePath>SFX/sfx vox mono full-015_818F3B66.wem</CachePath>
+				</File>
+				<File Id="612531236" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-078.wav</ShortName>
+					<Path>Media/612531236.wem</Path>
+					<CachePath>SFX/sfx vox mono full-078_818F3B66.wem</CachePath>
+				</File>
+				<File Id="656007416" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-026.wav</ShortName>
+					<Path>Media/656007416.wem</Path>
+					<CachePath>SFX/sfx vox mono full-026_818F3B66.wem</CachePath>
+				</File>
+				<File Id="755896194" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-024.wav</ShortName>
+					<Path>Media/755896194.wem</Path>
+					<CachePath>SFX/sfx vox mono full-024_818F3B66.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="25938892" Name="Play_mFall" ObjectPath="\Events\Default Work Unit\Play_mFall" GUID="{59B1A844-A95F-4B37-8C0F-664C08A82F28}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="25938892" Name="Play_mFall" ObjectPath="\Events\Default Work Unit\Play_mFall" GUID="{59B1A844-A95F-4B37-8C0F-664C08A82F28}" DurationType="OneShot" DurationMin="2.48" DurationMax="3.476508">
+					<MediaRefs>
+						<MediaRef Id="153288701"/>
+						<MediaRef Id="612531236"/>
+						<MediaRef Id="656007416"/>
+						<MediaRef Id="755896194"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="249772270" Type="Event" GUID="{525BAA67-25EB-498C-A659-9A06057D697A}" Language="SFX" Hash="{A6E16DF5-012D-1748-9A53-9FE5620DA80E}">
+		<SoundBank Id="249772270" Type="Event" GUID="{525BAA67-25EB-498C-A659-9A06057D697A}" Language="SFX" Hash="{B874DDE7-61F6-1A62-C73C-918413FF0D90}">
 			<ObjectPath>Play_fCough</ObjectPath>
 			<ShortName>Play_fCough</ShortName>
 			<Path>Event/Play_fCough.bnk</Path>
+			<Media>
+				<File Id="155306609" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-052.wav</ShortName>
+					<Path>Media/155306609.wem</Path>
+					<CachePath>SFX/sfx vox mono full-052_818F3B66.wem</CachePath>
+				</File>
+				<File Id="325174341" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-055.wav</ShortName>
+					<Path>Media/325174341.wem</Path>
+					<CachePath>SFX/sfx vox mono full-055_818F3B66.wem</CachePath>
+				</File>
+				<File Id="702522122" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-054.wav</ShortName>
+					<Path>Media/702522122.wem</Path>
+					<CachePath>SFX/sfx vox mono full-054_818F3B66.wem</CachePath>
+				</File>
+				<File Id="870190361" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-053.wav</ShortName>
+					<Path>Media/870190361.wem</Path>
+					<CachePath>SFX/sfx vox mono full-053_818F3B66.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="249772270" Name="Play_fCough" ObjectPath="\Events\Default Work Unit\Play_fCough" GUID="{525BAA67-25EB-498C-A659-9A06057D697A}" DurationType="Infinite"/>
+				<Event Id="249772270" Name="Play_fCough" ObjectPath="\Events\Default Work Unit\Play_fCough" GUID="{525BAA67-25EB-498C-A659-9A06057D697A}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="155306609"/>
+						<MediaRef Id="325174341"/>
+						<MediaRef Id="702522122"/>
+						<MediaRef Id="870190361"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="721983777" Type="Event" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" Language="SFX" Hash="{59123A40-72B1-841A-ABFD-6173445E895B}">
@@ -120,12 +178,41 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1030680943" Type="Event" GUID="{7279E098-5799-4D47-98FB-C7C5EBB03C57}" Language="SFX" Hash="{04060085-47B3-A364-65CC-5528C6A32B77}">
+		<SoundBank Id="1030680943" Type="Event" GUID="{7279E098-5799-4D47-98FB-C7C5EBB03C57}" Language="SFX" Hash="{F7B8BCBF-A663-87A0-3AEE-23AC58F4F366}">
 			<ObjectPath>Play_mCough</ObjectPath>
 			<ShortName>Play_mCough</ShortName>
 			<Path>Event/Play_mCough.bnk</Path>
+			<Media>
+				<File Id="71706976" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-050.wav</ShortName>
+					<Path>Media/71706976.wem</Path>
+					<CachePath>SFX/sfx vox mono full-050_818F3B66.wem</CachePath>
+				</File>
+				<File Id="254379164" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-049.wav</ShortName>
+					<Path>Media/254379164.wem</Path>
+					<CachePath>SFX/sfx vox mono full-049_818F3B66.wem</CachePath>
+				</File>
+				<File Id="333364772" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-086.wav</ShortName>
+					<Path>Media/333364772.wem</Path>
+					<CachePath>SFX/sfx vox mono full-086_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1058583552" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-085.wav</ShortName>
+					<Path>Media/1058583552.wem</Path>
+					<CachePath>SFX/sfx vox mono full-085_818F3B66.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="1030680943" Name="Play_mCough" ObjectPath="\Events\Default Work Unit\Play_mCough" GUID="{7279E098-5799-4D47-98FB-C7C5EBB03C57}" DurationType="Infinite"/>
+				<Event Id="1030680943" Name="Play_mCough" ObjectPath="\Events\Default Work Unit\Play_mCough" GUID="{7279E098-5799-4D47-98FB-C7C5EBB03C57}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="71706976"/>
+						<MediaRef Id="254379164"/>
+						<MediaRef Id="333364772"/>
+						<MediaRef Id="1058583552"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="1063654281" Type="Event" GUID="{DABE9434-237E-4C4C-B6AD-CE89FC21E0C0}" Language="SFX" Hash="{8EFB4771-734B-68BB-4C0F-F636AD35B95D}">
@@ -498,7 +585,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2846960996" Type="Event" GUID="{7889DD4D-525D-40DE-A58F-738E55124508}" Language="SFX" Hash="{5CE175E4-A25B-CAE1-A104-0AF46DDD011F}">
+		<SoundBank Id="2846960996" Type="Event" GUID="{7889DD4D-525D-40DE-A58F-738E55124508}" Language="SFX" Hash="{B80393FA-D89E-B8FF-1647-7F5811177841}">
 			<ObjectPath>Play_mDamage</ObjectPath>
 			<ShortName>Play_mDamage</ShortName>
 			<Path>Event/Play_mDamage.bnk</Path>
@@ -507,6 +594,21 @@
 					<ShortName>sfx vox mono full-001.wav</ShortName>
 					<Path>Media/192834410.wem</Path>
 					<CachePath>SFX/sfx vox mono full-001_818F3B66.wem</CachePath>
+				</File>
+				<File Id="228684005" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-081.wav</ShortName>
+					<Path>Media/228684005.wem</Path>
+					<CachePath>SFX/sfx vox mono full-081_818F3B66.wem</CachePath>
+				</File>
+				<File Id="708508853" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-069.wav</ShortName>
+					<Path>Media/708508853.wem</Path>
+					<CachePath>SFX/sfx vox mono full-069_818F3B66.wem</CachePath>
+				</File>
+				<File Id="756183386" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-079.wav</ShortName>
+					<Path>Media/756183386.wem</Path>
+					<CachePath>SFX/sfx vox mono full-079_818F3B66.wem</CachePath>
 				</File>
 				<File Id="999515445" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>sfx vox mono full-003.wav</ShortName>
@@ -518,6 +620,9 @@
 				<Event Id="2846960996" Name="Play_mDamage" ObjectPath="\Events\Default Work Unit\Play_mDamage" GUID="{7889DD4D-525D-40DE-A58F-738E55124508}" DurationType="OneShot" DurationMin="1.4" DurationMax="1.84">
 					<MediaRefs>
 						<MediaRef Id="192834410"/>
+						<MediaRef Id="228684005"/>
+						<MediaRef Id="708508853"/>
+						<MediaRef Id="756183386"/>
 						<MediaRef Id="999515445"/>
 					</MediaRefs>
 				</Event>
@@ -531,20 +636,60 @@
 				<Event Id="3065143382" Name="Stop_Torch" ObjectPath="\Events\Default Work Unit\Stop_Torch" GUID="{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3279106990" Type="Event" GUID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}" Language="SFX" Hash="{CE05DE6A-8629-E42B-C29B-985972C66B76}">
+		<SoundBank Id="3279106990" Type="Event" GUID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}" Language="SFX" Hash="{3C05C24C-D1A7-79BC-FE9A-B8FCB181B4F1}">
 			<ObjectPath>Play_fHeal</ObjectPath>
 			<ShortName>Play_fHeal</ShortName>
 			<Path>Event/Play_fHeal.bnk</Path>
+			<Media>
+				<File Id="225740081" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-056.wav</ShortName>
+					<Path>Media/225740081.wem</Path>
+					<CachePath>SFX/sfx vox mono full-056_818F3B66.wem</CachePath>
+				</File>
+				<File Id="634154630" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-057.wav</ShortName>
+					<Path>Media/634154630.wem</Path>
+					<CachePath>SFX/sfx vox mono full-057_818F3B66.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="3279106990" Name="Play_fHeal" ObjectPath="\Events\Default Work Unit\Play_fHeal" GUID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3279106990" Name="Play_fHeal" ObjectPath="\Events\Default Work Unit\Play_fHeal" GUID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}" DurationType="OneShot" DurationMin="1.6141723" DurationMax="1.6736054">
+					<MediaRefs>
+						<MediaRef Id="225740081"/>
+						<MediaRef Id="634154630"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3821234109" Type="Event" GUID="{BB9FBAE0-EE84-48F3-96D9-0F1BA79BF2A0}" Language="SFX" Hash="{8366D58C-B8F8-38AD-398D-3EDB3A1713E1}">
+		<SoundBank Id="3821234109" Type="Event" GUID="{BB9FBAE0-EE84-48F3-96D9-0F1BA79BF2A0}" Language="SFX" Hash="{D5FD5447-31EC-1C96-34D5-0D4335E57D42}">
 			<ObjectPath>Play_mHeal</ObjectPath>
 			<ShortName>Play_mHeal</ShortName>
 			<Path>Event/Play_mHeal.bnk</Path>
+			<Media>
+				<File Id="81284966" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-082.wav</ShortName>
+					<Path>Media/81284966.wem</Path>
+					<CachePath>SFX/sfx vox mono full-082_818F3B66.wem</CachePath>
+				</File>
+				<File Id="404608766" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-084.wav</ShortName>
+					<Path>Media/404608766.wem</Path>
+					<CachePath>SFX/sfx vox mono full-084_818F3B66.wem</CachePath>
+				</File>
+				<File Id="727467757" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-083.wav</ShortName>
+					<Path>Media/727467757.wem</Path>
+					<CachePath>SFX/sfx vox mono full-083_818F3B66.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="3821234109" Name="Play_mHeal" ObjectPath="\Events\Default Work Unit\Play_mHeal" GUID="{BB9FBAE0-EE84-48F3-96D9-0F1BA79BF2A0}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3821234109" Name="Play_mHeal" ObjectPath="\Events\Default Work Unit\Play_mHeal" GUID="{BB9FBAE0-EE84-48F3-96D9-0F1BA79BF2A0}" DurationType="OneShot" DurationMin="1.6736054" DurationMax="1.9113605">
+					<MediaRefs>
+						<MediaRef Id="81284966"/>
+						<MediaRef Id="404608766"/>
+						<MediaRef Id="727467757"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="3858275350" Type="Event" GUID="{A7C25A1B-0608-4060-9C29-134EBEA4D185}" Language="SFX" Hash="{4426CF7F-2268-C4A3-5DAB-60F5A464C9A5}">
@@ -584,12 +729,35 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3904875299" Type="Event" GUID="{5A8512E4-12F7-4DE2-A25A-85A8AFAFA131}" Language="SFX" Hash="{7EFFCF1C-30BA-06E5-BA71-0168A0CB6637}">
+		<SoundBank Id="3904875299" Type="Event" GUID="{5A8512E4-12F7-4DE2-A25A-85A8AFAFA131}" Language="SFX" Hash="{8CB85FA7-FE19-9161-2B8E-EEC070803C35}">
 			<ObjectPath>Play_fFall</ObjectPath>
 			<ShortName>Play_fFall</ShortName>
 			<Path>Event/Play_fFall.bnk</Path>
+			<Media>
+				<File Id="154375343" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-032.wav</ShortName>
+					<Path>Media/154375343.wem</Path>
+					<CachePath>SFX/sfx vox mono full-032_818F3B66.wem</CachePath>
+				</File>
+				<File Id="604771415" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-045.wav</ShortName>
+					<Path>Media/604771415.wem</Path>
+					<CachePath>SFX/sfx vox mono full-045_818F3B66.wem</CachePath>
+				</File>
+				<File Id="757661738" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-033.wav</ShortName>
+					<Path>Media/757661738.wem</Path>
+					<CachePath>SFX/sfx vox mono full-033_818F3B66.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="3904875299" Name="Play_fFall" ObjectPath="\Events\Default Work Unit\Play_fFall" GUID="{5A8512E4-12F7-4DE2-A25A-85A8AFAFA131}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3904875299" Name="Play_fFall" ObjectPath="\Events\Default Work Unit\Play_fFall" GUID="{5A8512E4-12F7-4DE2-A25A-85A8AFAFA131}" DurationType="OneShot" DurationMin="2.2104988" DurationMax="3.8010204">
+					<MediaRefs>
+						<MediaRef Id="154375343"/>
+						<MediaRef Id="604771415"/>
+						<MediaRef Id="757661738"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="4000532691" Type="Event" GUID="{BE5A0D3A-492D-4FBE-9071-C77D396C3AEE}" Language="SFX" Hash="{A0A44E3F-7F22-7958-AD35-C1B465408631}">
@@ -600,14 +768,43 @@
 				<Event Id="4000532691" Name="Stop_Glow" ObjectPath="\Events\Default Work Unit\Stop_Glow" GUID="{BE5A0D3A-492D-4FBE-9071-C77D396C3AEE}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4025974203" Type="Event" GUID="{AFFB088D-E64F-432C-B457-EDB99086C352}" Language="SFX" Hash="{FE6F7524-18AA-2F18-FB3C-DE064FBBE7E6}">
+		<SoundBank Id="4025974203" Type="Event" GUID="{AFFB088D-E64F-432C-B457-EDB99086C352}" Language="SFX" Hash="{B7568238-705D-717A-A0D8-09B49902B90E}">
 			<ObjectPath>Play_fDamage</ObjectPath>
 			<ShortName>Play_fDamage</ShortName>
 			<Path>Event/Play_fDamage.bnk</Path>
+			<Media>
+				<File Id="193248907" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-035.wav</ShortName>
+					<Path>Media/193248907.wem</Path>
+					<CachePath>SFX/sfx vox mono full-035_818F3B66.wem</CachePath>
+				</File>
+				<File Id="292561689" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-042.wav</ShortName>
+					<Path>Media/292561689.wem</Path>
+					<CachePath>SFX/sfx vox mono full-042_818F3B66.wem</CachePath>
+				</File>
+				<File Id="699606164" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-043.wav</ShortName>
+					<Path>Media/699606164.wem</Path>
+					<CachePath>SFX/sfx vox mono full-043_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1009139115" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-040.wav</ShortName>
+					<Path>Media/1009139115.wem</Path>
+					<CachePath>SFX/sfx vox mono full-040_818F3B66.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="4025974203" Name="Play_fDamage" ObjectPath="\Events\Default Work Unit\Play_fDamage" GUID="{AFFB088D-E64F-432C-B457-EDB99086C352}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4025974203" Name="Play_fDamage" ObjectPath="\Events\Default Work Unit\Play_fDamage" GUID="{AFFB088D-E64F-432C-B457-EDB99086C352}" DurationType="OneShot" DurationMin="1.2674377" DurationMax="1.4363492">
+					<MediaRefs>
+						<MediaRef Id="193248907"/>
+						<MediaRef Id="292561689"/>
+						<MediaRef Id="699606164"/>
+						<MediaRef Id="1009139115"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{43D96270-B1EA-35A1-7FB5-C60910CCA146}</FileHash>
+	<FileHash>{2FB0A937-B9BC-BEBE-61AF-0AEFD773F75F}</FileHash>
 </SoundBanksInfo>

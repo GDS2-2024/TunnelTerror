@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<WorkUnit Name="Male" ID="{F6EB16DF-A728-408B-941A-B3FC6594F678}" PersistMode="Reference"/>
 				<WorkUnit Name="Female" ID="{E6DED6F4-79E4-46B1-A000-A2D010AD7865}" PersistMode="Reference"/>
+				<WorkUnit Name="Infected" ID="{B48A2A45-95D3-4666-9C09-54474C7DED67}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

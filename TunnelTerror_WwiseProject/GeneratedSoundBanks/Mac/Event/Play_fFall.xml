@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3904875299" Type="Event" GUID="{5A8512E4-12F7-4DE2-A25A-85A8AFAFA131}" Language="SFX" Hash="{7EFFCF1C-30BA-06E5-BA71-0168A0CB6637}">
+		<SoundBank Id="3904875299" Type="Event" GUID="{5A8512E4-12F7-4DE2-A25A-85A8AFAFA131}" Language="SFX" Hash="{8CB85FA7-FE19-9161-2B8E-EEC070803C35}">
 			<ObjectPath>Play_fFall</ObjectPath>
 			<ShortName>Play_fFall</ShortName>
 			<Path>Event/Play_fFall.bnk</Path>
+			<Media>
+				<File Id="154375343" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-032.wav</ShortName>
+					<Path>Media/154375343.wem</Path>
+					<CachePath>SFX/sfx vox mono full-032_818F3B66.wem</CachePath>
+				</File>
+				<File Id="604771415" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-045.wav</ShortName>
+					<Path>Media/604771415.wem</Path>
+					<CachePath>SFX/sfx vox mono full-045_818F3B66.wem</CachePath>
+				</File>
+				<File Id="757661738" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-033.wav</ShortName>
+					<Path>Media/757661738.wem</Path>
+					<CachePath>SFX/sfx vox mono full-033_818F3B66.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="3904875299" Name="Play_fFall" ObjectPath="\Events\Default Work Unit\Play_fFall" GUID="{5A8512E4-12F7-4DE2-A25A-85A8AFAFA131}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3904875299" Name="Play_fFall" ObjectPath="\Events\Default Work Unit\Play_fFall" GUID="{5A8512E4-12F7-4DE2-A25A-85A8AFAFA131}" DurationType="OneShot" DurationMin="2.2104988" DurationMax="3.8010204">
+					<MediaRefs>
+						<MediaRef Id="154375343"/>
+						<MediaRef Id="604771415"/>
+						<MediaRef Id="757661738"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9659E670-415F-2711-D0B6-1408FB56A45A}</FileHash>
+	<FileHash>{6C737CF7-4C1C-BE61-776B-E2CA14B6B809}</FileHash>
 </SoundBanksInfo>

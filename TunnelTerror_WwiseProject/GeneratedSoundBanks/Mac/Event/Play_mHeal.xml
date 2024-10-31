@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3821234109" Type="Event" GUID="{BB9FBAE0-EE84-48F3-96D9-0F1BA79BF2A0}" Language="SFX" Hash="{8366D58C-B8F8-38AD-398D-3EDB3A1713E1}">
+		<SoundBank Id="3821234109" Type="Event" GUID="{BB9FBAE0-EE84-48F3-96D9-0F1BA79BF2A0}" Language="SFX" Hash="{D5FD5447-31EC-1C96-34D5-0D4335E57D42}">
 			<ObjectPath>Play_mHeal</ObjectPath>
 			<ShortName>Play_mHeal</ShortName>
 			<Path>Event/Play_mHeal.bnk</Path>
+			<Media>
+				<File Id="81284966" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-082.wav</ShortName>
+					<Path>Media/81284966.wem</Path>
+					<CachePath>SFX/sfx vox mono full-082_818F3B66.wem</CachePath>
+				</File>
+				<File Id="404608766" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-084.wav</ShortName>
+					<Path>Media/404608766.wem</Path>
+					<CachePath>SFX/sfx vox mono full-084_818F3B66.wem</CachePath>
+				</File>
+				<File Id="727467757" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-083.wav</ShortName>
+					<Path>Media/727467757.wem</Path>
+					<CachePath>SFX/sfx vox mono full-083_818F3B66.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="3821234109" Name="Play_mHeal" ObjectPath="\Events\Default Work Unit\Play_mHeal" GUID="{BB9FBAE0-EE84-48F3-96D9-0F1BA79BF2A0}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3821234109" Name="Play_mHeal" ObjectPath="\Events\Default Work Unit\Play_mHeal" GUID="{BB9FBAE0-EE84-48F3-96D9-0F1BA79BF2A0}" DurationType="OneShot" DurationMin="1.6736054" DurationMax="1.9113605">
+					<MediaRefs>
+						<MediaRef Id="81284966"/>
+						<MediaRef Id="404608766"/>
+						<MediaRef Id="727467757"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7E109A1F-0378-0C63-BFAF-60D73B0A3CB3}</FileHash>
+	<FileHash>{6BCD6D49-6F6A-B1A6-4D49-AE77BB211CAD}</FileHash>
 </SoundBanksInfo>

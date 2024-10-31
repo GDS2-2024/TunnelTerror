@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B48A2A45-95D3-4666-9C09-54474C7DED67}" SchemaVersion="119" RootDocumentID="{FC933A67-CF6E-43F8-8162-A130483E47D2}" ParentDocumentID="{FC933A67-CF6E-43F8-8162-A130483E47D2}">
+	<AudioObjects>
+		<WorkUnit Name="Infected" ID="{B48A2A45-95D3-4666-9C09-54474C7DED67}" OwnerID="{FC933A67-CF6E-43F8-8162-A130483E47D2}" PersistMode="Nested">
+			<ChildrenList>
+				<RandomSequenceContainer Name="iMoans" ID="{86A8DB10-2AB9-4E8F-99AE-506D38B638DB}" ShortID="4178024">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="sfx vox mono full-061" ID="{D540E550-1D89-42B2-AA7C-510EA6E6152C}" ShortID="416638989">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx vox mono full-061" ID="{37DAAAA2-80EB-416A-933E-6F02E42177F7}">
+									<Language>SFX</Language>
+									<AudioFile>sfx vox mono full-061.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="313275621"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx vox mono full-061" ID="{37DAAAA2-80EB-416A-933E-6F02E42177F7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx vox mono full-062" ID="{DA3FF8C1-554C-4E20-A78C-91CDFE103C2E}" ShortID="788863249">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx vox mono full-062" ID="{B81657A5-974A-4F08-B9CC-18D1BBC8E20E}">
+									<Language>SFX</Language>
+									<AudioFile>sfx vox mono full-062.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="671955011"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx vox mono full-062" ID="{B81657A5-974A-4F08-B9CC-18D1BBC8E20E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx vox mono full-066" ID="{C7391B79-CE74-431E-A335-9A9EB2AFD7C2}" ShortID="786653029">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx vox mono full-066" ID="{83FEBE26-CDC2-4E5A-B8F6-9F7A7275DA08}">
+									<Language>SFX</Language>
+									<AudioFile>sfx vox mono full-066.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="398637573"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx vox mono full-066" ID="{83FEBE26-CDC2-4E5A-B8F6-9F7A7275DA08}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx vox mono full-089" ID="{81EA4613-E124-4697-9C1B-C5D7C9038725}" ShortID="489428775">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx vox mono full-089" ID="{D67CBC78-5D1C-4BA7-8F77-44313FE96099}">
+									<Language>SFX</Language>
+									<AudioFile>sfx vox mono full-089.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="908915927"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx vox mono full-089" ID="{D67CBC78-5D1C-4BA7-8F77-44313FE96099}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx vox mono full-090" ID="{37962175-B6DE-4E8E-887E-FCBEDD401345}" ShortID="506046814">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx vox mono full-090" ID="{F4572274-C971-4AC4-A585-8EA553E7BBD0}">
+									<Language>SFX</Language>
+									<AudioFile>sfx vox mono full-090.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1061935294"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx vox mono full-090" ID="{F4572274-C971-4AC4-A585-8EA553E7BBD0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

@@ -10,10 +10,48 @@
     "Type": "Event",
     "GUID": "{59B1A844-A95F-4B37-8C0F-664C08A82F28}",
     "Language": "SFX",
-    "Hash": "{0A2EA6CB-5456-DCD7-92D2-68EA5E8CF957}",
+    "Hash": "{32BC9457-6583-2CCB-03F0-EA10F0370DC4}",
     "ObjectPath": "Play_mFall",
     "ShortName": "Play_mFall",
     "Path": "Event/Play_mFall.bnk",
+    "Media": [
+     {
+      "Id": "153288701",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-015.wav",
+      "Path": "Media/153288701.wem",
+      "CachePath": "SFX/sfx vox mono full-015_818F3B66.wem"
+     },
+     {
+      "Id": "612531236",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-078.wav",
+      "Path": "Media/612531236.wem",
+      "CachePath": "SFX/sfx vox mono full-078_818F3B66.wem"
+     },
+     {
+      "Id": "656007416",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-026.wav",
+      "Path": "Media/656007416.wem",
+      "CachePath": "SFX/sfx vox mono full-026_818F3B66.wem"
+     },
+     {
+      "Id": "755896194",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-024.wav",
+      "Path": "Media/755896194.wem",
+      "CachePath": "SFX/sfx vox mono full-024_818F3B66.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "25938892",
@@ -21,12 +59,26 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_mFall",
       "GUID": "{59B1A844-A95F-4B37-8C0F-664C08A82F28}",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "2.48",
+      "DurationMax": "3.476508",
+      "MediaRefs": [
+       {
+        "Id": "153288701"
+       },
+       {
+        "Id": "612531236"
+       },
+       {
+        "Id": "656007416"
+       },
+       {
+        "Id": "755896194"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{07C157FD-2D02-621C-E9B9-F31C611A6E8B}"
+  "FileHash": "{C3B8B031-31B6-7315-E109-F424497DADBD}"
  }
 }

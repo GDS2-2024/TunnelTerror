@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="25938892" Type="Event" GUID="{59B1A844-A95F-4B37-8C0F-664C08A82F28}" Language="SFX" Hash="{0A2EA6CB-5456-DCD7-92D2-68EA5E8CF957}">
+		<SoundBank Id="25938892" Type="Event" GUID="{59B1A844-A95F-4B37-8C0F-664C08A82F28}" Language="SFX" Hash="{32BC9457-6583-2CCB-03F0-EA10F0370DC4}">
 			<ObjectPath>Play_mFall</ObjectPath>
 			<ShortName>Play_mFall</ShortName>
 			<Path>Event/Play_mFall.bnk</Path>
+			<Media>
+				<File Id="153288701" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-015.wav</ShortName>
+					<Path>Media/153288701.wem</Path>
+					<CachePath>SFX/sfx vox mono full-015_818F3B66.wem</CachePath>
+				</File>
+				<File Id="612531236" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-078.wav</ShortName>
+					<Path>Media/612531236.wem</Path>
+					<CachePath>SFX/sfx vox mono full-078_818F3B66.wem</CachePath>
+				</File>
+				<File Id="656007416" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-026.wav</ShortName>
+					<Path>Media/656007416.wem</Path>
+					<CachePath>SFX/sfx vox mono full-026_818F3B66.wem</CachePath>
+				</File>
+				<File Id="755896194" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-024.wav</ShortName>
+					<Path>Media/755896194.wem</Path>
+					<CachePath>SFX/sfx vox mono full-024_818F3B66.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="25938892" Name="Play_mFall" ObjectPath="\Events\Default Work Unit\Play_mFall" GUID="{59B1A844-A95F-4B37-8C0F-664C08A82F28}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="25938892" Name="Play_mFall" ObjectPath="\Events\Default Work Unit\Play_mFall" GUID="{59B1A844-A95F-4B37-8C0F-664C08A82F28}" DurationType="OneShot" DurationMin="2.48" DurationMax="3.476508">
+					<MediaRefs>
+						<MediaRef Id="153288701"/>
+						<MediaRef Id="612531236"/>
+						<MediaRef Id="656007416"/>
+						<MediaRef Id="755896194"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DABF2A33-7341-676A-74D4-44E8E660957E}</FileHash>
+	<FileHash>{A4902BF4-610A-D46A-1997-576B9B2ED8F0}</FileHash>
 </SoundBanksInfo>

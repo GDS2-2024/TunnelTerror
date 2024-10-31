@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="2846960996" Type="Event" GUID="{7889DD4D-525D-40DE-A58F-738E55124508}" Language="SFX" Hash="{5CE175E4-A25B-CAE1-A104-0AF46DDD011F}">
+		<SoundBank Id="2846960996" Type="Event" GUID="{7889DD4D-525D-40DE-A58F-738E55124508}" Language="SFX" Hash="{B80393FA-D89E-B8FF-1647-7F5811177841}">
 			<ObjectPath>Play_mDamage</ObjectPath>
 			<ShortName>Play_mDamage</ShortName>
 			<Path>Event/Play_mDamage.bnk</Path>
@@ -10,6 +10,21 @@
 					<ShortName>sfx vox mono full-001.wav</ShortName>
 					<Path>Media/192834410.wem</Path>
 					<CachePath>SFX/sfx vox mono full-001_818F3B66.wem</CachePath>
+				</File>
+				<File Id="228684005" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-081.wav</ShortName>
+					<Path>Media/228684005.wem</Path>
+					<CachePath>SFX/sfx vox mono full-081_818F3B66.wem</CachePath>
+				</File>
+				<File Id="708508853" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-069.wav</ShortName>
+					<Path>Media/708508853.wem</Path>
+					<CachePath>SFX/sfx vox mono full-069_818F3B66.wem</CachePath>
+				</File>
+				<File Id="756183386" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-079.wav</ShortName>
+					<Path>Media/756183386.wem</Path>
+					<CachePath>SFX/sfx vox mono full-079_818F3B66.wem</CachePath>
 				</File>
 				<File Id="999515445" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>sfx vox mono full-003.wav</ShortName>
@@ -21,11 +36,14 @@
 				<Event Id="2846960996" Name="Play_mDamage" ObjectPath="\Events\Default Work Unit\Play_mDamage" GUID="{7889DD4D-525D-40DE-A58F-738E55124508}" DurationType="OneShot" DurationMin="1.4" DurationMax="1.84">
 					<MediaRefs>
 						<MediaRef Id="192834410"/>
+						<MediaRef Id="228684005"/>
+						<MediaRef Id="708508853"/>
+						<MediaRef Id="756183386"/>
 						<MediaRef Id="999515445"/>
 					</MediaRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{529AD4E1-2F28-4652-ECA9-B2C1AAD5582E}</FileHash>
+	<FileHash>{E1B2F854-571E-FD5F-ECF2-50C09DAA7F08}</FileHash>
 </SoundBanksInfo>

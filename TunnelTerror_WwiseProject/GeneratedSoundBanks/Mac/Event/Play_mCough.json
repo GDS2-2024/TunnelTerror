@@ -10,21 +10,73 @@
     "Type": "Event",
     "GUID": "{7279E098-5799-4D47-98FB-C7C5EBB03C57}",
     "Language": "SFX",
-    "Hash": "{04060085-47B3-A364-65CC-5528C6A32B77}",
+    "Hash": "{F7B8BCBF-A663-87A0-3AEE-23AC58F4F366}",
     "ObjectPath": "Play_mCough",
     "ShortName": "Play_mCough",
     "Path": "Event/Play_mCough.bnk",
+    "Media": [
+     {
+      "Id": "71706976",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-050.wav",
+      "Path": "Media/71706976.wem",
+      "CachePath": "SFX/sfx vox mono full-050_818F3B66.wem"
+     },
+     {
+      "Id": "254379164",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-049.wav",
+      "Path": "Media/254379164.wem",
+      "CachePath": "SFX/sfx vox mono full-049_818F3B66.wem"
+     },
+     {
+      "Id": "333364772",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-086.wav",
+      "Path": "Media/333364772.wem",
+      "CachePath": "SFX/sfx vox mono full-086_818F3B66.wem"
+     },
+     {
+      "Id": "1058583552",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-085.wav",
+      "Path": "Media/1058583552.wem",
+      "CachePath": "SFX/sfx vox mono full-085_818F3B66.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "1030680943",
       "Name": "Play_mCough",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_mCough",
       "GUID": "{7279E098-5799-4D47-98FB-C7C5EBB03C57}",
-      "DurationType": "Infinite"
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "71706976"
+       },
+       {
+        "Id": "254379164"
+       },
+       {
+        "Id": "333364772"
+       },
+       {
+        "Id": "1058583552"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{68CAE01D-0ACA-2352-3BBB-1EE5AAA4E7B0}"
+  "FileHash": "{CC4E2D0F-A346-ECC5-47F1-561B70238E10}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{7889DD4D-525D-40DE-A58F-738E55124508}",
     "Language": "SFX",
-    "Hash": "{5CE175E4-A25B-CAE1-A104-0AF46DDD011F}",
+    "Hash": "{B80393FA-D89E-B8FF-1647-7F5811177841}",
     "ObjectPath": "Play_mDamage",
     "ShortName": "Play_mDamage",
     "Path": "Event/Play_mDamage.bnk",
@@ -23,6 +23,33 @@
       "ShortName": "sfx vox mono full-001.wav",
       "Path": "Media/192834410.wem",
       "CachePath": "SFX/sfx vox mono full-001_818F3B66.wem"
+     },
+     {
+      "Id": "228684005",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-081.wav",
+      "Path": "Media/228684005.wem",
+      "CachePath": "SFX/sfx vox mono full-081_818F3B66.wem"
+     },
+     {
+      "Id": "708508853",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-069.wav",
+      "Path": "Media/708508853.wem",
+      "CachePath": "SFX/sfx vox mono full-069_818F3B66.wem"
+     },
+     {
+      "Id": "756183386",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-079.wav",
+      "Path": "Media/756183386.wem",
+      "CachePath": "SFX/sfx vox mono full-079_818F3B66.wem"
      },
      {
       "Id": "999515445",
@@ -48,6 +75,15 @@
         "Id": "192834410"
        },
        {
+        "Id": "228684005"
+       },
+       {
+        "Id": "708508853"
+       },
+       {
+        "Id": "756183386"
+       },
+       {
         "Id": "999515445"
        }
       ]
@@ -55,6 +91,6 @@
     ]
    }
   ],
-  "FileHash": "{90D23B13-A413-074E-67ED-9FB7DA0D534A}"
+  "FileHash": "{C243CE92-1519-7168-C5B9-057450140A32}"
  }
 }

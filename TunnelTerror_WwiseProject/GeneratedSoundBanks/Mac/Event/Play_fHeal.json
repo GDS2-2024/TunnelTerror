@@ -10,10 +10,30 @@
     "Type": "Event",
     "GUID": "{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}",
     "Language": "SFX",
-    "Hash": "{CE05DE6A-8629-E42B-C29B-985972C66B76}",
+    "Hash": "{3C05C24C-D1A7-79BC-FE9A-B8FCB181B4F1}",
     "ObjectPath": "Play_fHeal",
     "ShortName": "Play_fHeal",
     "Path": "Event/Play_fHeal.bnk",
+    "Media": [
+     {
+      "Id": "225740081",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-056.wav",
+      "Path": "Media/225740081.wem",
+      "CachePath": "SFX/sfx vox mono full-056_818F3B66.wem"
+     },
+     {
+      "Id": "634154630",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-057.wav",
+      "Path": "Media/634154630.wem",
+      "CachePath": "SFX/sfx vox mono full-057_818F3B66.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "3279106990",
@@ -21,12 +41,20 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_fHeal",
       "GUID": "{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "1.6141723",
+      "DurationMax": "1.6736054",
+      "MediaRefs": [
+       {
+        "Id": "225740081"
+       },
+       {
+        "Id": "634154630"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{63BEE7B6-BC8F-3E6A-A2EF-C899E9566FAE}"
+  "FileHash": "{472FE953-8CD6-8CE6-CB0A-B4BCF853ECF7}"
  }
 }
