@@ -2,8 +2,6 @@
 
 
 #include "ElevatorSafeZone.h"
-#include "Components/CapsuleComponent.h"
-#include "TunnelTerror/TunnelTerrorCharacter.h"
 
 // Sets default values
 AElevatorSafeZone::AElevatorSafeZone()
