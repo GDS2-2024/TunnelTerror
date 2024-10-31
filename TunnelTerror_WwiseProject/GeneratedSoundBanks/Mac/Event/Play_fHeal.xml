@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="3279106990" Type="Event" GUID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}" Language="SFX" Hash="{CE05DE6A-8629-E42B-C29B-985972C66B76}">
+			<ObjectPath>Play_fHeal</ObjectPath>
+			<ShortName>Play_fHeal</ShortName>
+			<Path>Event/Play_fHeal.bnk</Path>
+			<Events>
+				<Event Id="3279106990" Name="Play_fHeal" ObjectPath="\Events\Default Work Unit\Play_fHeal" GUID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{E2DA9732-A45C-C715-2E0C-5F0E597D794B}</FileHash>
+</SoundBanksInfo>

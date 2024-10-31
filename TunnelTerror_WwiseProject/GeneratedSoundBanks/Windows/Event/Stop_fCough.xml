@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="736239132" Type="Event" GUID="{8C87B0AB-D43F-41E4-A3FE-5948C382CB16}" Language="SFX" Hash="{700A2BF6-75F0-85B5-CEED-B8D4D3E63828}">
+			<ObjectPath>Stop_fCough</ObjectPath>
+			<ShortName>Stop_fCough</ShortName>
+			<Path>Event/Stop_fCough.bnk</Path>
+			<Events>
+				<Event Id="736239132" Name="Stop_fCough" ObjectPath="\Events\Default Work Unit\Stop_fCough" GUID="{8C87B0AB-D43F-41E4-A3FE-5948C382CB16}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{77CB0B76-4342-BD59-A19D-66100C7A1487}</FileHash>
+</SoundBanksInfo>

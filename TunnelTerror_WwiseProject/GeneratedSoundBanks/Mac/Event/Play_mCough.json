@@ -1,0 +1,30 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "1030680943",
+    "Type": "Event",
+    "GUID": "{7279E098-5799-4D47-98FB-C7C5EBB03C57}",
+    "Language": "SFX",
+    "Hash": "{04060085-47B3-A364-65CC-5528C6A32B77}",
+    "ObjectPath": "Play_mCough",
+    "ShortName": "Play_mCough",
+    "Path": "Event/Play_mCough.bnk",
+    "Events": [
+     {
+      "Id": "1030680943",
+      "Name": "Play_mCough",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_mCough",
+      "GUID": "{7279E098-5799-4D47-98FB-C7C5EBB03C57}",
+      "DurationType": "Infinite"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{68CAE01D-0ACA-2352-3BBB-1EE5AAA4E7B0}"
+ }
+}
