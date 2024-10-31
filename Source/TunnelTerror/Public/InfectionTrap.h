@@ -44,6 +44,12 @@ public:
 	UPROPERTY()
 	float despawnTimer;
 
+	UPROPERTY()
+	float activateTimer;
+
+	UPROPERTY()
+	float activate;
+
 	UPROPERTY(BlueprintReadWrite)
 	bool bCanTimeOut;
 

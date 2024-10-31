@@ -11,6 +11,7 @@ AInfectionTrap::AInfectionTrap()
 	PrimaryActorTick.bCanEverTick = true;
 	bCanTimeOut = true;
 	despawnTimer = 60.0f;
+	activate = 3.0f;
 }
 
 // Called when the game starts or when spawned
@@ -18,6 +19,8 @@ void AInfectionTrap::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	activateTimer = 0.0f;
+
 	USkeletalMeshComponent* SkeletalMesh = FindComponentByClass<USkeletalMeshComponent>();
 
 	if (SkeletalMesh)
@@ -40,6 +43,7 @@ void AInfectionTrap::BeginPlay()
 		{
 			// Bind the overlap event to the OnOverlapBegin function
 			CollisionSphere->OnComponentBeginOverlap.AddDynamic(this, &AInfectionTrap::OnOverlapBegin);
+			CollisionSphere->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		}
 	}
 }
@@ -48,6 +52,15 @@ void AInfectionTrap::BeginPlay()
 void AInfectionTrap::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	if (activateTimer < activate)
+	{
+		activateTimer += DeltaTime;
+	}
+	else
+	{
+		CollisionSphere->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+	}
 
 	if (bCanTimeOut)
 	{
