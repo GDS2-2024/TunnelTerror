@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="1030680943" Type="Event" GUID="{7279E098-5799-4D47-98FB-C7C5EBB03C57}" Language="SFX" Hash="{04060085-47B3-A364-65CC-5528C6A32B77}">
+			<ObjectPath>Play_mCough</ObjectPath>
+			<ShortName>Play_mCough</ShortName>
+			<Path>Event/Play_mCough.bnk</Path>
+			<Events>
+				<Event Id="1030680943" Name="Play_mCough" ObjectPath="\Events\Default Work Unit\Play_mCough" GUID="{7279E098-5799-4D47-98FB-C7C5EBB03C57}" DurationType="Infinite"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{BDB5839B-3D97-066B-9B2E-C4717221F9D8}</FileHash>
+</SoundBanksInfo>

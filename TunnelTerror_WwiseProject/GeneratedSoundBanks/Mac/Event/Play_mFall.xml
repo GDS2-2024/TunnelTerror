@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="25938892" Type="Event" GUID="{59B1A844-A95F-4B37-8C0F-664C08A82F28}" Language="SFX" Hash="{0A2EA6CB-5456-DCD7-92D2-68EA5E8CF957}">
+			<ObjectPath>Play_mFall</ObjectPath>
+			<ShortName>Play_mFall</ShortName>
+			<Path>Event/Play_mFall.bnk</Path>
+			<Events>
+				<Event Id="25938892" Name="Play_mFall" ObjectPath="\Events\Default Work Unit\Play_mFall" GUID="{59B1A844-A95F-4B37-8C0F-664C08A82F28}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{15113759-17EA-1219-94A2-40C73E7A4095}</FileHash>
+</SoundBanksInfo>

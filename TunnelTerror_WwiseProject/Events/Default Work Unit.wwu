@@ -153,6 +153,122 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_fDamage" ID="{AFFB088D-E64F-432C-B457-EDB99086C352}">
+					<ChildrenList>
+						<Action Name="" ID="{AB1FE14C-1853-4FCB-9F8E-DD6AF3470416}" ShortID="896377889">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fDamage" ID="{D083C263-E558-497A-9CFB-0DCD428254F1}" WorkUnitID="{E6DED6F4-79E4-46B1-A000-A2D010AD7865}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_fFall" ID="{5A8512E4-12F7-4DE2-A25A-85A8AFAFA131}">
+					<ChildrenList>
+						<Action Name="" ID="{3E74492B-1E1D-4BC3-830F-661E7108C193}" ShortID="572072083">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fFall" ID="{1BBF1D0A-EE3B-427A-8ECE-21E62094576C}" WorkUnitID="{E6DED6F4-79E4-46B1-A000-A2D010AD7865}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_fHeal" ID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}">
+					<ChildrenList>
+						<Action Name="" ID="{0D1A60C7-B5AA-41CA-911E-364B851EE8E3}" ShortID="761138326">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fHeal" ID="{4417A1E6-AC8D-42EF-BE80-2AB0E19AF9CE}" WorkUnitID="{E6DED6F4-79E4-46B1-A000-A2D010AD7865}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_mDamage" ID="{7889DD4D-525D-40DE-A58F-738E55124508}">
+					<ChildrenList>
+						<Action Name="" ID="{B6EEAE4D-C4FF-4E70-B881-E506C88EF1D4}" ShortID="951232360">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mDamage" ID="{8B08DB79-1CD7-4C53-B83E-7F647A70DCD8}" WorkUnitID="{F6EB16DF-A728-408B-941A-B3FC6594F678}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_mFall" ID="{59B1A844-A95F-4B37-8C0F-664C08A82F28}">
+					<ChildrenList>
+						<Action Name="" ID="{CE793D7D-1607-45DB-B018-A886CFB4F821}" ShortID="486014909">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mFall" ID="{8F00DE7B-A142-40A7-B9D5-09FF1ACC1FC1}" WorkUnitID="{F6EB16DF-A728-408B-941A-B3FC6594F678}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_mHeal" ID="{BB9FBAE0-EE84-48F3-96D9-0F1BA79BF2A0}">
+					<ChildrenList>
+						<Action Name="" ID="{406A74E9-6584-49D1-A4E4-F828C1BCE9AF}" ShortID="980593493">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mHeal" ID="{D19ED1FE-6C7A-477E-945F-A15EB07B9E47}" WorkUnitID="{F6EB16DF-A728-408B-941A-B3FC6594F678}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_fCough" ID="{525BAA67-25EB-498C-A659-9A06057D697A}">
+					<ChildrenList>
+						<Action Name="" ID="{AC13C496-0E44-448F-8D74-5414CD500F63}" ShortID="601395078">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fCough" ID="{D0355584-D055-4191-8437-DC24D4AAA92E}" WorkUnitID="{E6DED6F4-79E4-46B1-A000-A2D010AD7865}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_fCough" ID="{8C87B0AB-D43F-41E4-A3FE-5948C382CB16}">
+					<ChildrenList>
+						<Action Name="" ID="{A7C49EE1-13C3-41D1-A6B9-0CDF93FECBD9}" ShortID="821328523">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fCough" ID="{D0355584-D055-4191-8437-DC24D4AAA92E}" WorkUnitID="{E6DED6F4-79E4-46B1-A000-A2D010AD7865}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_mCough" ID="{7279E098-5799-4D47-98FB-C7C5EBB03C57}">
+					<ChildrenList>
+						<Action Name="" ID="{96C1173D-33A0-45EE-801D-645089734ABB}" ShortID="1070092535">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mCough" ID="{7064832F-854B-4F5D-83D3-66110F6B5C77}" WorkUnitID="{F6EB16DF-A728-408B-941A-B3FC6594F678}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_mCough" ID="{DABE9434-237E-4C4C-B6AD-CE89FC21E0C0}">
+					<ChildrenList>
+						<Action Name="" ID="{FB32A0D1-70E5-42B7-9882-D5DD923AE8EF}" ShortID="925635327">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mCough" ID="{7064832F-854B-4F5D-83D3-66110F6B5C77}" WorkUnitID="{F6EB16DF-A728-408B-941A-B3FC6594F678}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

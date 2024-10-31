@@ -76,6 +76,46 @@
     ]
    },
    {
+    "Id": "25938892",
+    "Type": "Event",
+    "GUID": "{59B1A844-A95F-4B37-8C0F-664C08A82F28}",
+    "Language": "SFX",
+    "Hash": "{0A2EA6CB-5456-DCD7-92D2-68EA5E8CF957}",
+    "ObjectPath": "Play_mFall",
+    "ShortName": "Play_mFall",
+    "Path": "Event/Play_mFall.bnk",
+    "Events": [
+     {
+      "Id": "25938892",
+      "Name": "Play_mFall",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_mFall",
+      "GUID": "{59B1A844-A95F-4B37-8C0F-664C08A82F28}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   },
+   {
+    "Id": "249772270",
+    "Type": "Event",
+    "GUID": "{525BAA67-25EB-498C-A659-9A06057D697A}",
+    "Language": "SFX",
+    "Hash": "{A6E16DF5-012D-1748-9A53-9FE5620DA80E}",
+    "ObjectPath": "Play_fCough",
+    "ShortName": "Play_fCough",
+    "Path": "Event/Play_fCough.bnk",
+    "Events": [
+     {
+      "Id": "249772270",
+      "Name": "Play_fCough",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_fCough",
+      "GUID": "{525BAA67-25EB-498C-A659-9A06057D697A}",
+      "DurationType": "Infinite"
+     }
+    ]
+   },
+   {
     "Id": "721983777",
     "Type": "Event",
     "GUID": "{AA3B480F-E159-421B-A0C2-0C2A86F882C2}",
@@ -108,6 +148,28 @@
         "Id": "733000276"
        }
       ]
+     }
+    ]
+   },
+   {
+    "Id": "736239132",
+    "Type": "Event",
+    "GUID": "{8C87B0AB-D43F-41E4-A3FE-5948C382CB16}",
+    "Language": "SFX",
+    "Hash": "{700A2BF6-75F0-85B5-CEED-B8D4D3E63828}",
+    "ObjectPath": "Stop_fCough",
+    "ShortName": "Stop_fCough",
+    "Path": "Event/Stop_fCough.bnk",
+    "Events": [
+     {
+      "Id": "736239132",
+      "Name": "Stop_fCough",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_fCough",
+      "GUID": "{8C87B0AB-D43F-41E4-A3FE-5948C382CB16}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    },
@@ -186,11 +248,52 @@
     ]
    },
    {
+    "Id": "1030680943",
+    "Type": "Event",
+    "GUID": "{7279E098-5799-4D47-98FB-C7C5EBB03C57}",
+    "Language": "SFX",
+    "Hash": "{04060085-47B3-A364-65CC-5528C6A32B77}",
+    "ObjectPath": "Play_mCough",
+    "ShortName": "Play_mCough",
+    "Path": "Event/Play_mCough.bnk",
+    "Events": [
+     {
+      "Id": "1030680943",
+      "Name": "Play_mCough",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_mCough",
+      "GUID": "{7279E098-5799-4D47-98FB-C7C5EBB03C57}",
+      "DurationType": "Infinite"
+     }
+    ]
+   },
+   {
+    "Id": "1063654281",
+    "Type": "Event",
+    "GUID": "{DABE9434-237E-4C4C-B6AD-CE89FC21E0C0}",
+    "Language": "SFX",
+    "Hash": "{8EFB4771-734B-68BB-4C0F-F636AD35B95D}",
+    "ObjectPath": "Stop_mCough",
+    "ShortName": "Stop_mCough",
+    "Path": "Event/Stop_mCough.bnk",
+    "Events": [
+     {
+      "Id": "1063654281",
+      "Name": "Stop_mCough",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_mCough",
+      "GUID": "{DABE9434-237E-4C4C-B6AD-CE89FC21E0C0}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   },
+   {
     "Id": "1120692842",
     "Type": "Event",
     "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
     "Language": "SFX",
-    "Hash": "{2B273414-AB4B-CEE7-E69D-C5B10F5D78D5}",
+    "Hash": "{D3630A97-5E3B-8CAA-1043-7D683C545A8D}",
     "ObjectPath": "Play_RockFall",
     "ShortName": "Play_RockFall",
     "Path": "Event/Play_RockFall.bnk",
@@ -285,6 +388,16 @@
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
       }
+     ],
+     "ShareSets": [
+      {
+       "Id": "602546716",
+       "Name": "Room_Large",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Large",
+       "GUID": "{AD8EFAFC-7121-4D5F-BE4D-B13FBD6CEBAE}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
      ]
     },
     "Events": [
@@ -295,8 +408,8 @@
       "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
       "MaxAttenuation": "800",
       "DurationType": "OneShot",
-      "DurationMin": "5.2483253",
-      "DurationMax": "7.9186854",
+      "DurationMin": "7.2483253",
+      "DurationMax": "9.918686",
       "MediaRefs": [
        {
         "Id": "287643081"
@@ -330,6 +443,11 @@
         },
         {
          "Id": "744592701"
+        }
+       ],
+       "ShareSets": [
+        {
+         "Id": "602546716"
         }
        ]
       }
@@ -926,6 +1044,55 @@
     ]
    },
    {
+    "Id": "2846960996",
+    "Type": "Event",
+    "GUID": "{7889DD4D-525D-40DE-A58F-738E55124508}",
+    "Language": "SFX",
+    "Hash": "{5CE175E4-A25B-CAE1-A104-0AF46DDD011F}",
+    "ObjectPath": "Play_mDamage",
+    "ShortName": "Play_mDamage",
+    "Path": "Event/Play_mDamage.bnk",
+    "Media": [
+     {
+      "Id": "192834410",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-001.wav",
+      "Path": "Media/192834410.wem",
+      "CachePath": "SFX/sfx vox mono full-001_818F3B66.wem"
+     },
+     {
+      "Id": "999515445",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-003.wav",
+      "Path": "Media/999515445.wem",
+      "CachePath": "SFX/sfx vox mono full-003_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2846960996",
+      "Name": "Play_mDamage",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_mDamage",
+      "GUID": "{7889DD4D-525D-40DE-A58F-738E55124508}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.4",
+      "DurationMax": "1.84",
+      "MediaRefs": [
+       {
+        "Id": "192834410"
+       },
+       {
+        "Id": "999515445"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "3065143382",
     "Type": "Event",
     "GUID": "{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}",
@@ -941,6 +1108,48 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Stop_Torch",
       "GUID": "{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}",
       "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   },
+   {
+    "Id": "3279106990",
+    "Type": "Event",
+    "GUID": "{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}",
+    "Language": "SFX",
+    "Hash": "{CE05DE6A-8629-E42B-C29B-985972C66B76}",
+    "ObjectPath": "Play_fHeal",
+    "ShortName": "Play_fHeal",
+    "Path": "Event/Play_fHeal.bnk",
+    "Events": [
+     {
+      "Id": "3279106990",
+      "Name": "Play_fHeal",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_fHeal",
+      "GUID": "{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   },
+   {
+    "Id": "3821234109",
+    "Type": "Event",
+    "GUID": "{BB9FBAE0-EE84-48F3-96D9-0F1BA79BF2A0}",
+    "Language": "SFX",
+    "Hash": "{8366D58C-B8F8-38AD-398D-3EDB3A1713E1}",
+    "ObjectPath": "Play_mHeal",
+    "ShortName": "Play_mHeal",
+    "Path": "Event/Play_mHeal.bnk",
+    "Events": [
+     {
+      "Id": "3821234109",
+      "Name": "Play_mHeal",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_mHeal",
+      "GUID": "{BB9FBAE0-EE84-48F3-96D9-0F1BA79BF2A0}",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -1022,6 +1231,27 @@
     ]
    },
    {
+    "Id": "3904875299",
+    "Type": "Event",
+    "GUID": "{5A8512E4-12F7-4DE2-A25A-85A8AFAFA131}",
+    "Language": "SFX",
+    "Hash": "{7EFFCF1C-30BA-06E5-BA71-0168A0CB6637}",
+    "ObjectPath": "Play_fFall",
+    "ShortName": "Play_fFall",
+    "Path": "Event/Play_fFall.bnk",
+    "Events": [
+     {
+      "Id": "3904875299",
+      "Name": "Play_fFall",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_fFall",
+      "GUID": "{5A8512E4-12F7-4DE2-A25A-85A8AFAFA131}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   },
+   {
     "Id": "4000532691",
     "Type": "Event",
     "GUID": "{BE5A0D3A-492D-4FBE-9071-C77D396C3AEE}",
@@ -1042,8 +1272,29 @@
       "DurationMax": "0"
      }
     ]
+   },
+   {
+    "Id": "4025974203",
+    "Type": "Event",
+    "GUID": "{AFFB088D-E64F-432C-B457-EDB99086C352}",
+    "Language": "SFX",
+    "Hash": "{FE6F7524-18AA-2F18-FB3C-DE064FBBE7E6}",
+    "ObjectPath": "Play_fDamage",
+    "ShortName": "Play_fDamage",
+    "Path": "Event/Play_fDamage.bnk",
+    "Events": [
+     {
+      "Id": "4025974203",
+      "Name": "Play_fDamage",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_fDamage",
+      "GUID": "{AFFB088D-E64F-432C-B457-EDB99086C352}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
    }
   ],
-  "FileHash": "{8EF023EA-ABE7-4BC6-D345-4DF7FC4BE2F6}"
+  "FileHash": "{0D0A0980-4FF3-7AE6-B5C0-40F65493B7D4}"
  }
 }

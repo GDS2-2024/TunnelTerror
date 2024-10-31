@@ -24,6 +24,11 @@
 						<RandomSequenceContainer Name="RockHitGround" ID="{DCEAF137-48A7-499B-B3CD-51723F2494E8}" ShortID="204577973">
 							<PropertyList>
 								<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
@@ -229,6 +234,17 @@
 											</EffectSlot>
 										</Local>
 									</Reference>
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{F4BE2420-A6D4-4756-9876-5DCEFAA97577}" ShortID="331421937">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<ObjectRef Name="Room_Large" ID="{AD8EFAFC-7121-4D5F-BE4D-B13FBD6CEBAE}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
 								</ObjectList>
 							</ObjectLists>
 						</RandomSequenceContainer>
@@ -421,6 +437,15 @@
 						</RandomSequenceContainer>
 					</ChildrenList>
 					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{9EEE4386-FD97-4FE8-86AA-C9C5BC4C9420}" ShortID="645839717">
+										<ReferenceList/>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
 						<ObjectList Name="Playlist">
 							<Reference>
 								<ObjectRef Name="RockHitGround" ID="{DCEAF137-48A7-499B-B3CD-51723F2494E8}" WorkUnitID="{0C2A8A81-D64C-41B9-84A1-64BB8D22FEF8}"/>

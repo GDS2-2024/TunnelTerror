@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="249772270" Type="Event" GUID="{525BAA67-25EB-498C-A659-9A06057D697A}" Language="SFX" Hash="{A6E16DF5-012D-1748-9A53-9FE5620DA80E}">
+			<ObjectPath>Play_fCough</ObjectPath>
+			<ShortName>Play_fCough</ShortName>
+			<Path>Event/Play_fCough.bnk</Path>
+			<Events>
+				<Event Id="249772270" Name="Play_fCough" ObjectPath="\Events\Default Work Unit\Play_fCough" GUID="{525BAA67-25EB-498C-A659-9A06057D697A}" DurationType="Infinite"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{5FC0E535-05DB-D14E-A36A-B7955A8CA30B}</FileHash>
+</SoundBanksInfo>

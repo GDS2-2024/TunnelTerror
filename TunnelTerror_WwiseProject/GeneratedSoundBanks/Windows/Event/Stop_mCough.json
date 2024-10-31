@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "1063654281",
+    "Type": "Event",
+    "GUID": "{DABE9434-237E-4C4C-B6AD-CE89FC21E0C0}",
+    "Language": "SFX",
+    "Hash": "{8EFB4771-734B-68BB-4C0F-F636AD35B95D}",
+    "ObjectPath": "Stop_mCough",
+    "ShortName": "Stop_mCough",
+    "Path": "Event/Stop_mCough.bnk",
+    "Events": [
+     {
+      "Id": "1063654281",
+      "Name": "Stop_mCough",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_mCough",
+      "GUID": "{DABE9434-237E-4C4C-B6AD-CE89FC21E0C0}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{B0364BF1-222A-32FF-2683-5007702DB8D4}"
+ }
+}

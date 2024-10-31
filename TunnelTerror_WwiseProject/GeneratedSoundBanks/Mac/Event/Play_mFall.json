@@ -1,0 +1,32 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "25938892",
+    "Type": "Event",
+    "GUID": "{59B1A844-A95F-4B37-8C0F-664C08A82F28}",
+    "Language": "SFX",
+    "Hash": "{0A2EA6CB-5456-DCD7-92D2-68EA5E8CF957}",
+    "ObjectPath": "Play_mFall",
+    "ShortName": "Play_mFall",
+    "Path": "Event/Play_mFall.bnk",
+    "Events": [
+     {
+      "Id": "25938892",
+      "Name": "Play_mFall",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_mFall",
+      "GUID": "{59B1A844-A95F-4B37-8C0F-664C08A82F28}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{3101A61C-11CC-B269-FFA2-B50A1BC36B95}"
+ }
+}

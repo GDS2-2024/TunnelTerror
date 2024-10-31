@@ -1,0 +1,32 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "3904875299",
+    "Type": "Event",
+    "GUID": "{5A8512E4-12F7-4DE2-A25A-85A8AFAFA131}",
+    "Language": "SFX",
+    "Hash": "{7EFFCF1C-30BA-06E5-BA71-0168A0CB6637}",
+    "ObjectPath": "Play_fFall",
+    "ShortName": "Play_fFall",
+    "Path": "Event/Play_fFall.bnk",
+    "Events": [
+     {
+      "Id": "3904875299",
+      "Name": "Play_fFall",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_fFall",
+      "GUID": "{5A8512E4-12F7-4DE2-A25A-85A8AFAFA131}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{7D5343F0-8A15-AB57-6110-25A6DAD2BEDE}"
+ }
+}
