@@ -17,11 +17,11 @@ void ATunnelTerrorGameMode::PostLogin(APlayerController* NewPlayer)
 {
     Super::PostLogin(NewPlayer);
 
-    if (ATunnelTerrorGameState* GameState = GetGameState<ATunnelTerrorGameState>())
+    if (ATunnelTerrorGameState* CurrentGameState = GetGameState<ATunnelTerrorGameState>())
     {
         if (ATunnelTerrorCharacter* Character = Cast<ATunnelTerrorCharacter>(NewPlayer->GetPawn()))
         {
-            GameState->AddPlayer(Character);
+            CurrentGameState->AddPlayer(Character);
         }
     }
 }
@@ -30,11 +30,11 @@ void ATunnelTerrorGameMode::Logout(AController* Exiting)
 {
     Super::Logout(Exiting);
 
-    if (ATunnelTerrorGameState* GameState = GetGameState<ATunnelTerrorGameState>())
+    if (ATunnelTerrorGameState* CurrentGameState = GetGameState<ATunnelTerrorGameState>())
     {
         if (ATunnelTerrorCharacter* Character = Cast<ATunnelTerrorCharacter>(Exiting->GetPawn()))
         {
-            GameState->RemovePlayer(Character);
+            CurrentGameState->RemovePlayer(Character);
         }
     }
 }
