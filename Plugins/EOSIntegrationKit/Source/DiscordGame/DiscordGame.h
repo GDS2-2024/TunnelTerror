@@ -23,7 +23,8 @@ public:
 	/**
 	 * @return TRUE if we successfully loaded the Discord GameSDK DLL; else FALSE
 	 */
-	FORCEINLINE bool IsDiscordSDKLoaded() const { return bDiscordSDKLoaded; }
+	FORCEINLINE bool IsDiscordSDKLoaded() const { return DiscordGameSDKHandle != nullptr; }
+
 	//~IModuleInterface interface
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
@@ -39,6 +40,5 @@ protected:
 private:
 	/** Handle to the dll we will load */
 	void* DiscordGameSDKHandle {nullptr};
-	bool bDiscordSDKLoaded = false;
 
 };

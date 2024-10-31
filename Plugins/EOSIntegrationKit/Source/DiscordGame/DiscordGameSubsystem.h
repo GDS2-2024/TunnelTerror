@@ -68,7 +68,6 @@ public:
 #if EIKDISCORDACTIVE
 		return DiscordGameModule && DiscordGameModule->IsDiscordSDKLoaded();
 #else
-		UE_LOG(LogTemp, Warning, TEXT("Discord SDK Not Loaded"));
 		return false;
 #endif
 	}
