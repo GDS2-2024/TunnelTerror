@@ -24,10 +24,6 @@ void AElevatorSafeZone::BeginPlay()
 		CollisionCapsule->OnComponentBeginOverlap.AddDynamic(this, &AElevatorSafeZone::OnOverlapBegin);
 		CollisionCapsule->OnComponentEndOverlap.AddDynamic(this, &AElevatorSafeZone::OnOverlapEnd);
 	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("CollisionSphere is nullptr in AElevatorEscape::AElevatorEscape"));
-	}
 }
 
 // Called every frame

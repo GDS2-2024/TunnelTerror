@@ -27,6 +27,12 @@ public:
 	UFUNCTION(BlueprintImplementableEvent)
 	void DeathAnim();
 
+	UFUNCTION(BlueprintImplementableEvent)
+	void Snap();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void StopSnap();
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
