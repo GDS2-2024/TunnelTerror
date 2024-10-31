@@ -911,6 +911,7 @@ void ATunnelTerrorCharacter::StartSporeInfection()
 	bSporesInfecting = true;
 	sporeInfectCurrent = sporeInfectTime;
 	UE_LOG(LogTemp, Log, TEXT("Spores are infecting"));
+	StartCoughing();
 }
 
 void ATunnelTerrorCharacter::EndSporeInfection()
@@ -918,6 +919,7 @@ void ATunnelTerrorCharacter::EndSporeInfection()
 	bSporesInfecting = false;
 	sporeInfectCurrent = 0.0f;
 	UE_LOG(LogTemp, Log, TEXT("Spores have stopped infecting"));
+	EndCoughing();
 }
 
 void ATunnelTerrorCharacter::MulticastSwingAnim_Implementation(bool swing)
