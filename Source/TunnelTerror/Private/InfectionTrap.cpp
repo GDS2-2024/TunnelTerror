@@ -68,8 +68,7 @@ void AInfectionTrap::Tick(float DeltaTime)
 	}
 
 	if (despawnTimer <= 0) {
-		DeathAnim();
-		CollisionSphere->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		PlantDie();
 	}
 }
 
@@ -88,4 +87,10 @@ void AInfectionTrap::InfectPlayer(ATunnelTerrorCharacter* TargetCharacter)
 {
 	TargetCharacter->DecreaseHealth(100.0f, "Plant Trap");
 	UE_LOG(LogTemp, Log, TEXT("The players health is: %f"), TargetCharacter->health);
+}
+
+void AInfectionTrap::PlantDie()
+{
+	DeathAnim();
+	CollisionSphere->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }

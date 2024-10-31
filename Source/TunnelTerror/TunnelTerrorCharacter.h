@@ -92,6 +92,9 @@ class ATunnelTerrorCharacter : public ACharacter
 public:
 	ATunnelTerrorCharacter();
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	float trapCDCurrent;
+
 protected:
 	virtual void BeginPlay();
 
@@ -342,9 +345,6 @@ private:
 
 	UPROPERTY(VisibleAnywhere)
 	float trapCD;
-
-	UPROPERTY(VisibleAnywhere)
-	float trapCDCurrent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Trap", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<AInfectionTrap> TrapBlueprint;
