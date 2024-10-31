@@ -52,6 +52,6 @@ public:
 		UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& HitInfo);
 	
 	UFUNCTION()
-	void OnPickupEndOverlap(UPrimitiveComponent* OverlappedComponent,
+	virtual void OnPickupEndOverlap(UPrimitiveComponent* OverlappedComponent,
 	                        AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 };
