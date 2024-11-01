@@ -372,7 +372,7 @@ void ATunnelTerrorCharacter::ServerInteractWithBridge_Implementation(ABridgeSabo
 
 void ATunnelTerrorCharacter::KillPlant_Implementation(AInfectionTrap* trap)
 {
-	trap->Destroy();
+	trap->PlantDie();
 }
 
 void ATunnelTerrorCharacter::Move(const FInputActionValue& Value)
