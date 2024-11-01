@@ -32,6 +32,8 @@ public:
 
 	virtual void GetLifetimeReplicatedProps(TArray< FLifetimeProperty >& OutLifetimeProps) const override;
 
+	virtual void Destroyed() override;
+
 protected:
 	// Used to copy properties from the current PlayerState to the passed one
 	virtual void CopyProperties(class APlayerState* PlayerState);
