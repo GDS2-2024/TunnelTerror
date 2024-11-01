@@ -294,22 +294,22 @@
 				<File Id="498364355" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>ui7.wav</ShortName>
 					<Path>Media/498364355.wem</Path>
-					<CachePath>SFX/ui7_6A768392.wem</CachePath>
+					<CachePath>SFX/ui7_C4EC5430.wem</CachePath>
 				</File>
 				<File Id="775253208" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>ui6.wav</ShortName>
 					<Path>Media/775253208.wem</Path>
-					<CachePath>SFX/ui6_4ABD8B54.wem</CachePath>
+					<CachePath>SFX/ui6_490B19BF.wem</CachePath>
 				</File>
 				<File Id="956966152" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>ui8.wav</ShortName>
 					<Path>Media/956966152.wem</Path>
-					<CachePath>SFX/ui8_68132823.wem</CachePath>
+					<CachePath>SFX/ui8_6036454F.wem</CachePath>
 				</File>
 				<File Id="1016949203" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>ui5.wav</ShortName>
 					<Path>Media/1016949203.wem</Path>
-					<CachePath>SFX/ui5_C092C985.wem</CachePath>
+					<CachePath>SFX/ui5_2F864502.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -1085,22 +1085,22 @@
 				<File Id="323736582" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>ui4.wav</ShortName>
 					<Path>Media/323736582.wem</Path>
-					<CachePath>SFX/ui4_BCB42E34.wem</CachePath>
+					<CachePath>SFX/ui4_9DB96F64.wem</CachePath>
 				</File>
 				<File Id="334968415" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>ui1.wav</ShortName>
 					<Path>Media/334968415.wem</Path>
-					<CachePath>SFX/ui1_6886FB87.wem</CachePath>
+					<CachePath>SFX/ui1_18726EED.wem</CachePath>
 				</File>
 				<File Id="626105931" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>ui2.wav</ShortName>
 					<Path>Media/626105931.wem</Path>
-					<CachePath>SFX/ui2_00BC772C.wem</CachePath>
+					<CachePath>SFX/ui2_B595BCE9.wem</CachePath>
 				</File>
 				<File Id="677397642" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>ui3.wav</ShortName>
 					<Path>Media/677397642.wem</Path>
-					<CachePath>SFX/ui3_1B908B89.wem</CachePath>
+					<CachePath>SFX/ui3_AC6B7AAA.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -1517,5 +1517,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3069E58D-0DCD-4D42-448C-BB97DF2604E7}</FileHash>
+	<FileHash>{BEACC3D9-1D8B-5EB2-A877-EAC67DE9628C}</FileHash>
 </SoundBanksInfo>

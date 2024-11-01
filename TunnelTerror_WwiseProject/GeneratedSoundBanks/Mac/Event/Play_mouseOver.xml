@@ -9,22 +9,22 @@
 				<File Id="323736582" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>ui4.wav</ShortName>
 					<Path>Media/323736582.wem</Path>
-					<CachePath>SFX/ui4_BCB42E34.wem</CachePath>
+					<CachePath>SFX/ui4_9DB96F64.wem</CachePath>
 				</File>
 				<File Id="334968415" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>ui1.wav</ShortName>
 					<Path>Media/334968415.wem</Path>
-					<CachePath>SFX/ui1_6886FB87.wem</CachePath>
+					<CachePath>SFX/ui1_18726EED.wem</CachePath>
 				</File>
 				<File Id="626105931" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>ui2.wav</ShortName>
 					<Path>Media/626105931.wem</Path>
-					<CachePath>SFX/ui2_00BC772C.wem</CachePath>
+					<CachePath>SFX/ui2_B595BCE9.wem</CachePath>
 				</File>
 				<File Id="677397642" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>ui3.wav</ShortName>
 					<Path>Media/677397642.wem</Path>
-					<CachePath>SFX/ui3_1B908B89.wem</CachePath>
+					<CachePath>SFX/ui3_AC6B7AAA.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -39,5 +39,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{25585E25-0B71-E7B4-55A3-BCA763C11FE3}</FileHash>
+	<FileHash>{0C830ED0-A17C-44D4-4113-4B23009E010E}</FileHash>
 </SoundBanksInfo>

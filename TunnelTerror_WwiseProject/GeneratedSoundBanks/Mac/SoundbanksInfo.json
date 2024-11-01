@@ -576,7 +576,7 @@
       "Location": "Loose",
       "ShortName": "ui7.wav",
       "Path": "Media/498364355.wem",
-      "CachePath": "SFX/ui7_6A768392.wem"
+      "CachePath": "SFX/ui7_C4EC5430.wem"
      },
      {
       "Id": "775253208",
@@ -585,7 +585,7 @@
       "Location": "Loose",
       "ShortName": "ui6.wav",
       "Path": "Media/775253208.wem",
-      "CachePath": "SFX/ui6_4ABD8B54.wem"
+      "CachePath": "SFX/ui6_490B19BF.wem"
      },
      {
       "Id": "956966152",
@@ -594,7 +594,7 @@
       "Location": "Loose",
       "ShortName": "ui8.wav",
       "Path": "Media/956966152.wem",
-      "CachePath": "SFX/ui8_68132823.wem"
+      "CachePath": "SFX/ui8_6036454F.wem"
      },
      {
       "Id": "1016949203",
@@ -603,7 +603,7 @@
       "Location": "Loose",
       "ShortName": "ui5.wav",
       "Path": "Media/1016949203.wem",
-      "CachePath": "SFX/ui5_C092C985.wem"
+      "CachePath": "SFX/ui5_2F864502.wem"
      }
     ],
     "Events": [
@@ -2193,7 +2193,7 @@
       "Location": "Loose",
       "ShortName": "ui4.wav",
       "Path": "Media/323736582.wem",
-      "CachePath": "SFX/ui4_BCB42E34.wem"
+      "CachePath": "SFX/ui4_9DB96F64.wem"
      },
      {
       "Id": "334968415",
@@ -2202,7 +2202,7 @@
       "Location": "Loose",
       "ShortName": "ui1.wav",
       "Path": "Media/334968415.wem",
-      "CachePath": "SFX/ui1_6886FB87.wem"
+      "CachePath": "SFX/ui1_18726EED.wem"
      },
      {
       "Id": "626105931",
@@ -2211,7 +2211,7 @@
       "Location": "Loose",
       "ShortName": "ui2.wav",
       "Path": "Media/626105931.wem",
-      "CachePath": "SFX/ui2_00BC772C.wem"
+      "CachePath": "SFX/ui2_B595BCE9.wem"
      },
      {
       "Id": "677397642",
@@ -2220,7 +2220,7 @@
       "Location": "Loose",
       "ShortName": "ui3.wav",
       "Path": "Media/677397642.wem",
-      "CachePath": "SFX/ui3_1B908B89.wem"
+      "CachePath": "SFX/ui3_AC6B7AAA.wem"
      }
     ],
     "Events": [
@@ -3061,6 +3061,6 @@
     ]
    }
   ],
-  "FileHash": "{DA15A0C6-BA3D-8C44-005D-FC496A4D1921}"
+  "FileHash": "{E75B4B6D-8992-7D1C-AA1E-88C0EC537B83}"
  }
 }
