@@ -256,6 +256,8 @@ void UInventoryComponent::ServerSetSelectedSlot_Implementation(int32 SlotIndex)
 		MulticastEquipPickaxe(false);
 		Player->EquipTorchAnim(false);
 		MulticastEquipTorch(false);
+		Player->EquipWeedKillerAnim(false);
+		MulticastEquipWeedKiller(false);
 	}
 	ServerSetItemVisibility();
 }
