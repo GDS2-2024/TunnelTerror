@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{55F0803B-89C6-451C-8A1E-22D71EAB10E3}",
     "Language": "SFX",
-    "Hash": "{E5799F6A-B11C-F6BE-75D7-A657C5037BB6}",
+    "Hash": "{EA9CBF53-272C-B795-8CEB-0277BB28C8B0}",
     "ObjectPath": "Play_fullBite",
     "ShortName": "Play_fullBite",
     "Path": "Event/Play_fullBite.bnk",
@@ -115,6 +115,18 @@
       "CachePath": "SFX/Bite_5CD7C961.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "2588596223",
@@ -122,8 +134,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_fullBite",
       "GUID": "{55F0803B-89C6-451C-8A1E-22D71EAB10E3}",
       "DurationType": "OneShot",
-      "DurationMin": "0.92073345",
-      "DurationMax": "1.2678617",
+      "DurationMin": "0.7337021",
+      "DurationMax": "0.8894372",
       "MediaRefs": [
        {
         "Id": "20832412"
@@ -158,11 +170,18 @@
        {
         "Id": "1044280572"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{3F84308D-3F9C-B33E-F7F1-B2D5AC7058B5}"
+  "FileHash": "{3AE66270-A562-2478-45DD-262531864E5B}"
  }
 }

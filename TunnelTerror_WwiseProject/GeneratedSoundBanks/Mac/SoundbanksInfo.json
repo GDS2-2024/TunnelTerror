@@ -412,7 +412,7 @@
     "Type": "Event",
     "GUID": "{DAABF8FE-0337-462B-86E7-CEAE7A83737D}",
     "Language": "SFX",
-    "Hash": "{EC01A839-BBE6-733E-0556-A9A950E33A2D}",
+    "Hash": "{BFE59FB4-B772-FF6C-5403-7E248149DE51}",
     "ObjectPath": "Play_plantStretch",
     "ShortName": "Play_plantStretch",
     "Path": "Event/Play_plantStretch.bnk",
@@ -445,6 +445,18 @@
       "CachePath": "SFX/stretch_C1050841.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "848292664",
@@ -464,7 +476,14 @@
        {
         "Id": "993867576"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
      }
     ]
    },
@@ -858,7 +877,7 @@
     "Type": "Event",
     "GUID": "{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}",
     "Language": "SFX",
-    "Hash": "{22614F67-77FD-2634-5EDA-39DB4F155217}",
+    "Hash": "{AE455396-1586-FA87-E75B-D69A4263DED2}",
     "ObjectPath": "Play_rustle",
     "ShortName": "Play_rustle",
     "Path": "Event/Play_rustle.bnk",
@@ -891,6 +910,18 @@
       "CachePath": "SFX/rustle1_07538E64.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1202343709",
@@ -910,7 +941,14 @@
        {
         "Id": "805458352"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
      }
     ]
    },
@@ -1011,7 +1049,7 @@
     "Type": "Event",
     "GUID": "{6AE614A5-9A56-464C-BE07-C8AE0037A0C6}",
     "Language": "SFX",
-    "Hash": "{8AA3C610-4FF7-036B-787B-D13EEED8F0F8}",
+    "Hash": "{15AD0737-4CBA-7208-61AC-DF54497278D4}",
     "ObjectPath": "Play_flashOff",
     "ShortName": "Play_flashOff",
     "Path": "Event/Play_flashOff.bnk",
@@ -1470,91 +1508,6 @@
         "Name": "Wood",
         "ObjectPath": "\\Switches\\Default Work Unit\\Footstep_Material\\Wood",
         "GUID": "{6074456D-A32A-4AAB-8F46-E09F5F98685E}"
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "Id": "1810912708",
-    "Type": "Event",
-    "GUID": "{E287937B-CDED-4F16-913F-DB393E5E8E26}",
-    "Language": "SFX",
-    "Hash": "{CA99F0C9-88EA-E81E-1461-E524811B5373}",
-    "ObjectPath": "Play_Bite",
-    "ShortName": "Play_Bite",
-    "Path": "Event/Play_Bite.bnk",
-    "Media": [
-     {
-      "Id": "140177471",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Bite.wav",
-      "Path": "Media/140177471.wem",
-      "CachePath": "SFX/Bite_07F4F787.wem"
-     },
-     {
-      "Id": "165520342",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Bite.wav",
-      "Path": "Media/165520342.wem",
-      "CachePath": "SFX/Bite_4B6ECAC2.wem"
-     },
-     {
-      "Id": "261416016",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Bite.wav",
-      "Path": "Media/261416016.wem",
-      "CachePath": "SFX/Bite_1CC9E668.wem"
-     },
-     {
-      "Id": "856751788",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Bite.wav",
-      "Path": "Media/856751788.wem",
-      "CachePath": "SFX/Bite_B6543914.wem"
-     },
-     {
-      "Id": "1044280572",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Bite.wav",
-      "Path": "Media/1044280572.wem",
-      "CachePath": "SFX/Bite_5CD7C961.wem"
-     }
-    ],
-    "Events": [
-     {
-      "Id": "1810912708",
-      "Name": "Play_Bite",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_Bite",
-      "GUID": "{E287937B-CDED-4F16-913F-DB393E5E8E26}",
-      "DurationType": "OneShot",
-      "DurationMin": "0.92073345",
-      "DurationMax": "1.2678617",
-      "MediaRefs": [
-       {
-        "Id": "140177471"
-       },
-       {
-        "Id": "165520342"
-       },
-       {
-        "Id": "261416016"
-       },
-       {
-        "Id": "856751788"
-       },
-       {
-        "Id": "1044280572"
        }
       ]
      }
@@ -2077,7 +2030,7 @@
     "Type": "Event",
     "GUID": "{55F0803B-89C6-451C-8A1E-22D71EAB10E3}",
     "Language": "SFX",
-    "Hash": "{E5799F6A-B11C-F6BE-75D7-A657C5037BB6}",
+    "Hash": "{EA9CBF53-272C-B795-8CEB-0277BB28C8B0}",
     "ObjectPath": "Play_fullBite",
     "ShortName": "Play_fullBite",
     "Path": "Event/Play_fullBite.bnk",
@@ -2182,6 +2135,18 @@
       "CachePath": "SFX/Bite_5CD7C961.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "2588596223",
@@ -2189,8 +2154,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_fullBite",
       "GUID": "{55F0803B-89C6-451C-8A1E-22D71EAB10E3}",
       "DurationType": "OneShot",
-      "DurationMin": "0.92073345",
-      "DurationMax": "1.2678617",
+      "DurationMin": "0.7337021",
+      "DurationMax": "0.8894372",
       "MediaRefs": [
        {
         "Id": "20832412"
@@ -2225,7 +2190,14 @@
        {
         "Id": "1044280572"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
      }
     ]
    },
@@ -2662,6 +2634,28 @@
     ]
    },
    {
+    "Id": "3143519455",
+    "Type": "Event",
+    "GUID": "{3C670717-CCB5-4E76-BABE-7448808A0266}",
+    "Language": "SFX",
+    "Hash": "{AC699BC2-B097-0EC5-1DF9-321F211449A1}",
+    "ObjectPath": "Stop_iMoans",
+    "ShortName": "Stop_iMoans",
+    "Path": "Event/Stop_iMoans.bnk",
+    "Events": [
+     {
+      "Id": "3143519455",
+      "Name": "Stop_iMoans",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_iMoans",
+      "GUID": "{3C670717-CCB5-4E76-BABE-7448808A0266}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   },
+   {
     "Id": "3157003241",
     "Type": "Event",
     "GUID": "{F708B019-CBAD-4BF6-A336-5613210032FA}",
@@ -2858,7 +2852,7 @@
     "Type": "Event",
     "GUID": "{CA79A399-06E2-4F90-905E-DBFA668264F9}",
     "Language": "SFX",
-    "Hash": "{9CA728BB-BC3E-5DD9-D42A-3C49A07A94F8}",
+    "Hash": "{2BD4DEFC-82C4-693C-521D-B3E6E546AD30}",
     "ObjectPath": "Play_flashOn",
     "ShortName": "Play_flashOn",
     "Path": "Event/Play_flashOn.bnk",
@@ -3277,6 +3271,6 @@
     ]
    }
   ],
-  "FileHash": "{1510B1FF-4645-8D76-C8F4-1E8751CBE7EB}"
+  "FileHash": "{847C84FD-2550-7BF9-5DC0-054DA3002454}"
  }
 }

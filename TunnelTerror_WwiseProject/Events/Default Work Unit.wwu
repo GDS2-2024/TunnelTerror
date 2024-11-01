@@ -539,6 +539,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stop_iMoans" ID="{3C670717-CCB5-4E76-BABE-7448808A0266}">
+					<ChildrenList>
+						<Action Name="" ID="{211821B1-3CF1-4218-8746-F132D7C7B908}" ShortID="5934991">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="iMoans" ID="{86A8DB10-2AB9-4E8F-99AE-506D38B638DB}" WorkUnitID="{B48A2A45-95D3-4666-9C09-54474C7DED67}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

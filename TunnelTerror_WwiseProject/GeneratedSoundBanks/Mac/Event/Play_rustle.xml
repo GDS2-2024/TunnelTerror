@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1202343709" Type="Event" GUID="{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}" Language="SFX" Hash="{22614F67-77FD-2634-5EDA-39DB4F155217}">
+		<SoundBank Id="1202343709" Type="Event" GUID="{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}" Language="SFX" Hash="{AE455396-1586-FA87-E75B-D69A4263DED2}">
 			<ObjectPath>Play_rustle</ObjectPath>
 			<ShortName>Play_rustle</ShortName>
 			<Path>Event/Play_rustle.bnk</Path>
@@ -22,6 +22,11 @@
 					<CachePath>SFX/rustle1_07538E64.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="1202343709" Name="Play_rustle" ObjectPath="\Events\Default Work Unit\Play_rustle" GUID="{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}" DurationType="OneShot" DurationMin="0.4231654" DurationMax="0.81324357">
 					<MediaRefs>
@@ -29,9 +34,14 @@
 						<MediaRef Id="631883680"/>
 						<MediaRef Id="805458352"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{269D317B-98DD-2072-21D9-CCDD6C1EF228}</FileHash>
+	<FileHash>{AD23ABB1-5D22-1B19-9E1D-95F9F90FC8EF}</FileHash>
 </SoundBanksInfo>

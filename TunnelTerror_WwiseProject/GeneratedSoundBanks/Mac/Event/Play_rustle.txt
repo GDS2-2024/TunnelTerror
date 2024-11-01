@@ -1,3 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1202343709	Play_rustle			\Default Work Unit\Play_rustle	
 
+Effect plug-ins	ID	Name	Type				Notes
+	1990128658	Room_Medium	Wwise RoomVerb			
+

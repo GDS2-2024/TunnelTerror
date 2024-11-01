@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}",
     "Language": "SFX",
-    "Hash": "{22614F67-77FD-2634-5EDA-39DB4F155217}",
+    "Hash": "{AE455396-1586-FA87-E75B-D69A4263DED2}",
     "ObjectPath": "Play_rustle",
     "ShortName": "Play_rustle",
     "Path": "Event/Play_rustle.bnk",
@@ -43,6 +43,18 @@
       "CachePath": "SFX/rustle1_07538E64.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1202343709",
@@ -62,11 +74,18 @@
        {
         "Id": "805458352"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{422AC03E-3999-F5F6-2BF0-7776C97ADCCC}"
+  "FileHash": "{FC068F56-E7DC-9A94-7085-0F58673AC2FB}"
  }
 }

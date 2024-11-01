@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{DAABF8FE-0337-462B-86E7-CEAE7A83737D}",
     "Language": "SFX",
-    "Hash": "{EC01A839-BBE6-733E-0556-A9A950E33A2D}",
+    "Hash": "{BFE59FB4-B772-FF6C-5403-7E248149DE51}",
     "ObjectPath": "Play_plantStretch",
     "ShortName": "Play_plantStretch",
     "Path": "Event/Play_plantStretch.bnk",
@@ -43,6 +43,18 @@
       "CachePath": "SFX/stretch_C1050841.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "848292664",
@@ -62,11 +74,18 @@
        {
         "Id": "993867576"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{1015E1F8-85CA-2FC6-B16B-CC7BFBC137E3}"
+  "FileHash": "{54895FE5-975B-3F07-2609-D64E5497E16B}"
  }
 }
