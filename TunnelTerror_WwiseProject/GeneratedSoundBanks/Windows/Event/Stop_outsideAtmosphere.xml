@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="1139562193" Type="Event" GUID="{E1DA4D58-2E31-4BC9-BF4F-FAEB55221E93}" Language="SFX" Hash="{D51F199F-8DC6-2556-F5E4-47028373A0D5}">
+			<ObjectPath>Stop_outsideAtmosphere</ObjectPath>
+			<ShortName>Stop_outsideAtmosphere</ShortName>
+			<Path>Event/Stop_outsideAtmosphere.bnk</Path>
+			<Events>
+				<Event Id="1139562193" Name="Stop_outsideAtmosphere" ObjectPath="\Events\Default Work Unit\Stop_outsideAtmosphere" GUID="{E1DA4D58-2E31-4BC9-BF4F-FAEB55221E93}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{59637B33-27A8-FE59-BE16-4022972416B9}</FileHash>
+</SoundBanksInfo>

@@ -1,0 +1,84 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "3033194243",
+    "Type": "Event",
+    "GUID": "{E70C83B2-4C7F-49EC-8E6A-4F6DA32DD0B7}",
+    "Language": "SFX",
+    "Hash": "{2DECF4FC-3367-8AC5-BD46-EE584AAC6EC1}",
+    "ObjectPath": "Play_mJump",
+    "ShortName": "Play_mJump",
+    "Path": "Event/Play_mJump.bnk",
+    "Media": [
+     {
+      "Id": "49200429",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-072.wav",
+      "Path": "Media/49200429.wem",
+      "CachePath": "SFX/sfx vox mono full-072_818F3B66.wem"
+     },
+     {
+      "Id": "89932502",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-088.wav",
+      "Path": "Media/89932502.wem",
+      "CachePath": "SFX/sfx vox mono full-088_818F3B66.wem"
+     },
+     {
+      "Id": "494904129",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-071.wav",
+      "Path": "Media/494904129.wem",
+      "CachePath": "SFX/sfx vox mono full-071_818F3B66.wem"
+     },
+     {
+      "Id": "592426673",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "jumpin.wav",
+      "Path": "Media/592426673.wem",
+      "CachePath": "SFX/jumpin_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3033194243",
+      "Name": "Play_mJump",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_mJump",
+      "GUID": "{E70C83B2-4C7F-49EC-8E6A-4F6DA32DD0B7}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.3169842",
+      "DurationMax": "1.5745578",
+      "MediaRefs": [
+       {
+        "Id": "49200429"
+       },
+       {
+        "Id": "89932502"
+       },
+       {
+        "Id": "494904129"
+       },
+       {
+        "Id": "592426673"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{05BA99C7-16FB-4BFC-32DB-6BFCC27AC831}"
+ }
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="2092244148" Type="Event" GUID="{5A35A690-3696-4B21-9C78-E4367F4BEB15}" Language="SFX" Hash="{16C2C4B9-FA85-432D-C84B-F56E42AC0903}">
+			<ObjectPath>Play_fJump</ObjectPath>
+			<ShortName>Play_fJump</ShortName>
+			<Path>Event/Play_fJump.bnk</Path>
+			<Media>
+				<File Id="779076487" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-039.wav</ShortName>
+					<Path>Media/779076487.wem</Path>
+					<CachePath>SFX/sfx vox mono full-039_818F3B66.wem</CachePath>
+				</File>
+				<File Id="797266951" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-038.wav</ShortName>
+					<Path>Media/797266951.wem</Path>
+					<CachePath>SFX/sfx vox mono full-038_818F3B66.wem</CachePath>
+				</File>
+				<File Id="841536043" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-037.wav</ShortName>
+					<Path>Media/841536043.wem</Path>
+					<CachePath>SFX/sfx vox mono full-037_818F3B66.wem</CachePath>
+				</File>
+				<File Id="965270959" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-036.wav</ShortName>
+					<Path>Media/965270959.wem</Path>
+					<CachePath>SFX/sfx vox mono full-036_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2092244148" Name="Play_fJump" ObjectPath="\Events\Default Work Unit\Play_fJump" GUID="{5A35A690-3696-4B21-9C78-E4367F4BEB15}" DurationType="OneShot" DurationMin="1.1689116" DurationMax="1.3096598">
+					<MediaRefs>
+						<MediaRef Id="779076487"/>
+						<MediaRef Id="797266951"/>
+						<MediaRef Id="841536043"/>
+						<MediaRef Id="965270959"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{47CD7930-7B1E-ABAF-11C8-E146F98A3175}</FileHash>
+</SoundBanksInfo>

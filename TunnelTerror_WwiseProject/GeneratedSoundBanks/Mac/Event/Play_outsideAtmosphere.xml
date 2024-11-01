@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="3942109467" Type="Event" GUID="{0E57EA07-3481-4CD4-AB5C-369B26ABFEEC}" Language="SFX" Hash="{74D8B056-010A-B21F-41FA-DE6ED93C81FC}">
+			<ObjectPath>Play_outsideAtmosphere</ObjectPath>
+			<ShortName>Play_outsideAtmosphere</ShortName>
+			<Path>Event/Play_outsideAtmosphere.bnk</Path>
+			<Media>
+				<File Id="12596277" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Outside3.wav</ShortName>
+					<Path>Media/12596277.wem</Path>
+					<CachePath>SFX/Outside3_11A93380.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3942109467" Name="Play_outsideAtmosphere" ObjectPath="\Events\Default Work Unit\Play_outsideAtmosphere" GUID="{0E57EA07-3481-4CD4-AB5C-369B26ABFEEC}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="12596277"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{E92798B9-152E-7DF7-419D-0E5B5485DA00}</FileHash>
+</SoundBanksInfo>

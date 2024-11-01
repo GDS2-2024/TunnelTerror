@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "3886625383",
+    "Type": "Event",
+    "GUID": "{3CBB73DE-9644-4A51-BD28-F3D5F4A7DABD}",
+    "Language": "SFX",
+    "Hash": "{E0B08468-5C9A-440A-8826-16DE563CE990}",
+    "ObjectPath": "Stop_caveAtmosphere",
+    "ShortName": "Stop_caveAtmosphere",
+    "Path": "Event/Stop_caveAtmosphere.bnk",
+    "Events": [
+     {
+      "Id": "3886625383",
+      "Name": "Stop_caveAtmosphere",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_caveAtmosphere",
+      "GUID": "{3CBB73DE-9644-4A51-BD28-F3D5F4A7DABD}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{FE5A4B72-942F-839E-7CB4-2E8D0820D882}"
+ }
+}

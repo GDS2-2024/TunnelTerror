@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "3942109467",
+    "Type": "Event",
+    "GUID": "{0E57EA07-3481-4CD4-AB5C-369B26ABFEEC}",
+    "Language": "SFX",
+    "Hash": "{74D8B056-010A-B21F-41FA-DE6ED93C81FC}",
+    "ObjectPath": "Play_outsideAtmosphere",
+    "ShortName": "Play_outsideAtmosphere",
+    "Path": "Event/Play_outsideAtmosphere.bnk",
+    "Media": [
+     {
+      "Id": "12596277",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Outside3.wav",
+      "Path": "Media/12596277.wem",
+      "CachePath": "SFX/Outside3_11A93380.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3942109467",
+      "Name": "Play_outsideAtmosphere",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_outsideAtmosphere",
+      "GUID": "{0E57EA07-3481-4CD4-AB5C-369B26ABFEEC}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "12596277"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{92BD3B2B-ABDA-75EF-E5D7-B767A8290E93}"
+ }
+}

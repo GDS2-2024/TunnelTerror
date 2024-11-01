@@ -1,0 +1,96 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "1668514525",
+    "Type": "Event",
+    "GUID": "{07852589-1383-4156-9440-788054B24A18}",
+    "Language": "SFX",
+    "Hash": "{69107DFB-D38F-F14B-636D-4710166E65C7}",
+    "ObjectPath": "Play_iMoans",
+    "ShortName": "Play_iMoans",
+    "Path": "Event/Play_iMoans.bnk",
+    "Media": [
+     {
+      "Id": "313275621",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-061.wav",
+      "Path": "Media/313275621.wem",
+      "CachePath": "SFX/sfx vox mono full-061_818F3B66.wem"
+     },
+     {
+      "Id": "398637573",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-066.wav",
+      "Path": "Media/398637573.wem",
+      "CachePath": "SFX/sfx vox mono full-066_818F3B66.wem"
+     },
+     {
+      "Id": "671955011",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-062.wav",
+      "Path": "Media/671955011.wem",
+      "CachePath": "SFX/sfx vox mono full-062_818F3B66.wem"
+     },
+     {
+      "Id": "908915927",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-089.wav",
+      "Path": "Media/908915927.wem",
+      "CachePath": "SFX/sfx vox mono full-089_818F3B66.wem"
+     },
+     {
+      "Id": "1061935294",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-090.wav",
+      "Path": "Media/1061935294.wem",
+      "CachePath": "SFX/sfx vox mono full-090_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1668514525",
+      "Name": "Play_iMoans",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_iMoans",
+      "GUID": "{07852589-1383-4156-9440-788054B24A18}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.9415872",
+      "DurationMax": "4.3086166",
+      "MediaRefs": [
+       {
+        "Id": "313275621"
+       },
+       {
+        "Id": "398637573"
+       },
+       {
+        "Id": "671955011"
+       },
+       {
+        "Id": "908915927"
+       },
+       {
+        "Id": "1061935294"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C73F02A9-CB8F-71D8-4364-20406FE77A29}"
+ }
+}

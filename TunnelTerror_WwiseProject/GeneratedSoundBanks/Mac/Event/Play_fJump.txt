@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2092244148	Play_fJump			\Default Work Unit\Play_fJump	
+

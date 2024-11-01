@@ -3,12 +3,12 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{E9C5DBA2-A2C7-48FB-8CC2-68EE12224ADB}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Atmosphere" ID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}">
+				<Event Name="Play_caveAtmosphere" ID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}">
 					<ChildrenList>
 						<Action Name="" ID="{98593568-A264-4070-BFA7-473635F94FD3}" ShortID="461207614">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Atmosphere" ID="{D64C652C-D9F1-4614-95C7-BD8BA9D156E8}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+									<ObjectRef Name="caveAtmosphere" ID="{D64C652C-D9F1-4614-95C7-BD8BA9D156E8}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -264,6 +264,91 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="mCough" ID="{7064832F-854B-4F5D-83D3-66110F6B5C77}" WorkUnitID="{F6EB16DF-A728-408B-941A-B3FC6594F678}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_outsideAtmosphere" ID="{0E57EA07-3481-4CD4-AB5C-369B26ABFEEC}">
+					<ChildrenList>
+						<Action Name="" ID="{EAC75C27-D36C-4024-A075-C28E6D2C7B73}" ShortID="148368857">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{5FAD0B44-E081-4166-BB8D-C17E6C3B1BA3}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="FadeTime" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{71A9B0B5-577A-4E70-964C-95BF42A8613B}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="outsideAtmosphere" ID="{89DB16B3-7A7F-4DCC-98BD-5CAA02E8B5F8}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B31AB216-B531-42DE-B7AD-7C390F728435}" ShortID="737072069">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{07153A53-A996-42BA-A758-44764762197D}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="SeekTime" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4052DEE5-B7CB-414E-B4F5-8B9B0E4F82B2}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="10"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="SeekType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="outsideAtmosphere" ID="{89DB16B3-7A7F-4DCC-98BD-5CAA02E8B5F8}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_outsideAtmosphere" ID="{E1DA4D58-2E31-4BC9-BF4F-FAEB55221E93}">
+					<ChildrenList>
+						<Action Name="" ID="{D1581FB2-64DB-4373-AC67-6F4C921F9383}" ShortID="545954471">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="outsideAtmosphere" ID="{89DB16B3-7A7F-4DCC-98BD-5CAA02E8B5F8}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_caveAtmosphere" ID="{3CBB73DE-9644-4A51-BD28-F3D5F4A7DABD}">
+					<ChildrenList>
+						<Action Name="" ID="{3C58A7A4-D314-4985-85C3-94D40F31C876}" ShortID="509121220">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="caveAtmosphere" ID="{D64C652C-D9F1-4614-95C7-BD8BA9D156E8}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

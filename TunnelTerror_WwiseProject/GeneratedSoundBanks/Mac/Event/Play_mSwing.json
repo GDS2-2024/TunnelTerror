@@ -1,0 +1,84 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "1204302407",
+    "Type": "Event",
+    "GUID": "{EDD6846B-FEFC-45C4-9704-DE01F2D8123E}",
+    "Language": "SFX",
+    "Hash": "{7EE28A94-0D86-459B-FCF8-701548F7C354}",
+    "ObjectPath": "Play_mSwing",
+    "ShortName": "Play_mSwing",
+    "Path": "Event/Play_mSwing.bnk",
+    "Media": [
+     {
+      "Id": "52700418",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-074.wav",
+      "Path": "Media/52700418.wem",
+      "CachePath": "SFX/sfx vox mono full-074_818F3B66.wem"
+     },
+     {
+      "Id": "181696581",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-076.wav",
+      "Path": "Media/181696581.wem",
+      "CachePath": "SFX/sfx vox mono full-076_818F3B66.wem"
+     },
+     {
+      "Id": "233807270",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-075.wav",
+      "Path": "Media/233807270.wem",
+      "CachePath": "SFX/sfx vox mono full-075_818F3B66.wem"
+     },
+     {
+      "Id": "291087524",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-073.wav",
+      "Path": "Media/291087524.wem",
+      "CachePath": "SFX/sfx vox mono full-073_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1204302407",
+      "Name": "Play_mSwing",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_mSwing",
+      "GUID": "{EDD6846B-FEFC-45C4-9704-DE01F2D8123E}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2377551",
+      "DurationMax": "1.5151247",
+      "MediaRefs": [
+       {
+        "Id": "52700418"
+       },
+       {
+        "Id": "181696581"
+       },
+       {
+        "Id": "233807270"
+       },
+       {
+        "Id": "291087524"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{16A36B2E-A069-BFCD-82CD-6DAFE4DC81BB}"
+ }
+}

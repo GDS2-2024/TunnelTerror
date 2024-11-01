@@ -298,6 +298,51 @@
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="1139562193" Type="Event" GUID="{E1DA4D58-2E31-4BC9-BF4F-FAEB55221E93}" Language="SFX" Hash="{D51F199F-8DC6-2556-F5E4-47028373A0D5}">
+			<ObjectPath>Stop_outsideAtmosphere</ObjectPath>
+			<ShortName>Stop_outsideAtmosphere</ShortName>
+			<Path>Event/Stop_outsideAtmosphere.bnk</Path>
+			<Events>
+				<Event Id="1139562193" Name="Stop_outsideAtmosphere" ObjectPath="\Events\Default Work Unit\Stop_outsideAtmosphere" GUID="{E1DA4D58-2E31-4BC9-BF4F-FAEB55221E93}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1204302407" Type="Event" GUID="{EDD6846B-FEFC-45C4-9704-DE01F2D8123E}" Language="SFX" Hash="{7EE28A94-0D86-459B-FCF8-701548F7C354}">
+			<ObjectPath>Play_mSwing</ObjectPath>
+			<ShortName>Play_mSwing</ShortName>
+			<Path>Event/Play_mSwing.bnk</Path>
+			<Media>
+				<File Id="52700418" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-074.wav</ShortName>
+					<Path>Media/52700418.wem</Path>
+					<CachePath>SFX/sfx vox mono full-074_818F3B66.wem</CachePath>
+				</File>
+				<File Id="181696581" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-076.wav</ShortName>
+					<Path>Media/181696581.wem</Path>
+					<CachePath>SFX/sfx vox mono full-076_818F3B66.wem</CachePath>
+				</File>
+				<File Id="233807270" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-075.wav</ShortName>
+					<Path>Media/233807270.wem</Path>
+					<CachePath>SFX/sfx vox mono full-075_818F3B66.wem</CachePath>
+				</File>
+				<File Id="291087524" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-073.wav</ShortName>
+					<Path>Media/291087524.wem</Path>
+					<CachePath>SFX/sfx vox mono full-073_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1204302407" Name="Play_mSwing" ObjectPath="\Events\Default Work Unit\Play_mSwing" GUID="{EDD6846B-FEFC-45C4-9704-DE01F2D8123E}" DurationType="OneShot" DurationMin="1.2377551" DurationMax="1.5151247">
+					<MediaRefs>
+						<MediaRef Id="52700418"/>
+						<MediaRef Id="181696581"/>
+						<MediaRef Id="233807270"/>
+						<MediaRef Id="291087524"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{357103FE-E98A-167F-15A8-2AABE38E90B0}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
@@ -319,6 +364,49 @@
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="1668514525" Type="Event" GUID="{07852589-1383-4156-9440-788054B24A18}" Language="SFX" Hash="{69107DFB-D38F-F14B-636D-4710166E65C7}">
+			<ObjectPath>Play_iMoans</ObjectPath>
+			<ShortName>Play_iMoans</ShortName>
+			<Path>Event/Play_iMoans.bnk</Path>
+			<Media>
+				<File Id="313275621" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-061.wav</ShortName>
+					<Path>Media/313275621.wem</Path>
+					<CachePath>SFX/sfx vox mono full-061_818F3B66.wem</CachePath>
+				</File>
+				<File Id="398637573" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-066.wav</ShortName>
+					<Path>Media/398637573.wem</Path>
+					<CachePath>SFX/sfx vox mono full-066_818F3B66.wem</CachePath>
+				</File>
+				<File Id="671955011" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-062.wav</ShortName>
+					<Path>Media/671955011.wem</Path>
+					<CachePath>SFX/sfx vox mono full-062_818F3B66.wem</CachePath>
+				</File>
+				<File Id="908915927" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-089.wav</ShortName>
+					<Path>Media/908915927.wem</Path>
+					<CachePath>SFX/sfx vox mono full-089_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1061935294" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-090.wav</ShortName>
+					<Path>Media/1061935294.wem</Path>
+					<CachePath>SFX/sfx vox mono full-090_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1668514525" Name="Play_iMoans" ObjectPath="\Events\Default Work Unit\Play_iMoans" GUID="{07852589-1383-4156-9440-788054B24A18}" DurationType="OneShot" DurationMin="2.9415872" DurationMax="4.3086166">
+					<MediaRefs>
+						<MediaRef Id="313275621"/>
+						<MediaRef Id="398637573"/>
+						<MediaRef Id="671955011"/>
+						<MediaRef Id="908915927"/>
+						<MediaRef Id="1061935294"/>
+					</MediaRefs>
+				</Event>
+			</Events>
 		</SoundBank>
 		<SoundBank Id="1805011878" Type="Event" GUID="{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}" Language="SFX" Hash="{73862A0F-FC9B-8696-E598-9123FA4E3400}">
 			<ObjectPath>Play_PlayerFootsteps</ObjectPath>
@@ -501,44 +589,40 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2145253833" Type="Event" GUID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}" Language="SFX" Hash="{3F57B527-27FE-3A47-9BD0-56D3DBDE13AB}">
-			<ObjectPath>Atmosphere</ObjectPath>
-			<ShortName>Atmosphere</ShortName>
-			<Path>Event/Atmosphere.bnk</Path>
+		<SoundBank Id="2092244148" Type="Event" GUID="{5A35A690-3696-4B21-9C78-E4367F4BEB15}" Language="SFX" Hash="{16C2C4B9-FA85-432D-C84B-F56E42AC0903}">
+			<ObjectPath>Play_fJump</ObjectPath>
+			<ShortName>Play_fJump</ShortName>
+			<Path>Event/Play_fJump.bnk</Path>
 			<Media>
-				<File Id="71860382" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>99S LT Vehicle - Resonation C.wav</ShortName>
-					<Path>Media/71860382.wem</Path>
-					<CachePath>SFX/99S LT Vehicle - Resonation C_6EA773F4.wem</CachePath>
+				<File Id="779076487" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-039.wav</ShortName>
+					<Path>Media/779076487.wem</Path>
+					<CachePath>SFX/sfx vox mono full-039_818F3B66.wem</CachePath>
 				</File>
-				<File Id="328367209" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>25879__acclivity__drip1.wav</ShortName>
-					<Path>Media/328367209.wem</Path>
-					<CachePath>SFX/25879__acclivity__drip1_2B5CC65E.wem</CachePath>
+				<File Id="797266951" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-038.wav</ShortName>
+					<Path>Media/797266951.wem</Path>
+					<CachePath>SFX/sfx vox mono full-038_818F3B66.wem</CachePath>
 				</File>
-				<File Id="724212248" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA.wav</ShortName>
-					<Path>Media/724212248.wem</Path>
-					<CachePath>SFX/- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA_5B0571AF.wem</CachePath>
+				<File Id="841536043" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-037.wav</ShortName>
+					<Path>Media/841536043.wem</Path>
+					<CachePath>SFX/sfx vox mono full-037_818F3B66.wem</CachePath>
+				</File>
+				<File Id="965270959" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-036.wav</ShortName>
+					<Path>Media/965270959.wem</Path>
+					<CachePath>SFX/sfx vox mono full-036_818F3B66.wem</CachePath>
 				</File>
 			</Media>
-			<Plugins>
-				<ShareSets>
-					<Plugin Id="2513915904" Name="Hall_Large" ObjectPath="\Effects\Factory Effects\RoomVerb\Halls\Hall_Large" GUID="{6D154498-FF6D-4823-96FC-56841B70E079}" LibName="Wwise RoomVerb" LibId="7733251"/>
-				</ShareSets>
-			</Plugins>
 			<Events>
-				<Event Id="2145253833" Name="Atmosphere" ObjectPath="\Events\Default Work Unit\Atmosphere" GUID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}" DurationType="Infinite">
+				<Event Id="2092244148" Name="Play_fJump" ObjectPath="\Events\Default Work Unit\Play_fJump" GUID="{5A35A690-3696-4B21-9C78-E4367F4BEB15}" DurationType="OneShot" DurationMin="1.1689116" DurationMax="1.3096598">
 					<MediaRefs>
-						<MediaRef Id="71860382"/>
-						<MediaRef Id="328367209"/>
-						<MediaRef Id="724212248"/>
+						<MediaRef Id="779076487"/>
+						<MediaRef Id="797266951"/>
+						<MediaRef Id="841536043"/>
+						<MediaRef Id="965270959"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="2513915904"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
@@ -585,6 +669,47 @@
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="2466093437" Type="Event" GUID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}" Language="SFX" Hash="{1405A74F-02E6-E5F3-AEAA-AC736532F557}">
+			<ObjectPath>Play_caveAtmosphere</ObjectPath>
+			<ShortName>Play_caveAtmosphere</ShortName>
+			<Path>Event/Play_caveAtmosphere.bnk</Path>
+			<Media>
+				<File Id="71860382" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>99S LT Vehicle - Resonation C.wav</ShortName>
+					<Path>Media/71860382.wem</Path>
+					<CachePath>SFX/99S LT Vehicle - Resonation C_6EA773F4.wem</CachePath>
+				</File>
+				<File Id="328367209" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>25879__acclivity__drip1.wav</ShortName>
+					<Path>Media/328367209.wem</Path>
+					<CachePath>SFX/25879__acclivity__drip1_2B5CC65E.wem</CachePath>
+				</File>
+				<File Id="724212248" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA.wav</ShortName>
+					<Path>Media/724212248.wem</Path>
+					<CachePath>SFX/- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA_5B0571AF.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="2513915904" Name="Hall_Large" ObjectPath="\Effects\Factory Effects\RoomVerb\Halls\Hall_Large" GUID="{6D154498-FF6D-4823-96FC-56841B70E079}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="2466093437" Name="Play_caveAtmosphere" ObjectPath="\Events\Default Work Unit\Play_caveAtmosphere" GUID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="71860382"/>
+						<MediaRef Id="328367209"/>
+						<MediaRef Id="724212248"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2513915904"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="2846960996" Type="Event" GUID="{7889DD4D-525D-40DE-A58F-738E55124508}" Language="SFX" Hash="{B80393FA-D89E-B8FF-1647-7F5811177841}">
 			<ObjectPath>Play_mDamage</ObjectPath>
 			<ShortName>Play_mDamage</ShortName>
@@ -628,12 +753,86 @@
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="3033194243" Type="Event" GUID="{E70C83B2-4C7F-49EC-8E6A-4F6DA32DD0B7}" Language="SFX" Hash="{2DECF4FC-3367-8AC5-BD46-EE584AAC6EC1}">
+			<ObjectPath>Play_mJump</ObjectPath>
+			<ShortName>Play_mJump</ShortName>
+			<Path>Event/Play_mJump.bnk</Path>
+			<Media>
+				<File Id="49200429" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-072.wav</ShortName>
+					<Path>Media/49200429.wem</Path>
+					<CachePath>SFX/sfx vox mono full-072_818F3B66.wem</CachePath>
+				</File>
+				<File Id="89932502" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-088.wav</ShortName>
+					<Path>Media/89932502.wem</Path>
+					<CachePath>SFX/sfx vox mono full-088_818F3B66.wem</CachePath>
+				</File>
+				<File Id="494904129" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-071.wav</ShortName>
+					<Path>Media/494904129.wem</Path>
+					<CachePath>SFX/sfx vox mono full-071_818F3B66.wem</CachePath>
+				</File>
+				<File Id="592426673" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>jumpin.wav</ShortName>
+					<Path>Media/592426673.wem</Path>
+					<CachePath>SFX/jumpin_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3033194243" Name="Play_mJump" ObjectPath="\Events\Default Work Unit\Play_mJump" GUID="{E70C83B2-4C7F-49EC-8E6A-4F6DA32DD0B7}" DurationType="OneShot" DurationMin="1.3169842" DurationMax="1.5745578">
+					<MediaRefs>
+						<MediaRef Id="49200429"/>
+						<MediaRef Id="89932502"/>
+						<MediaRef Id="494904129"/>
+						<MediaRef Id="592426673"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="3065143382" Type="Event" GUID="{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}" Language="SFX" Hash="{638A8D0F-FFB6-019B-DDD6-C16B10B72A4B}">
 			<ObjectPath>Stop_Torch</ObjectPath>
 			<ShortName>Stop_Torch</ShortName>
 			<Path>Event/Stop_Torch.bnk</Path>
 			<Events>
 				<Event Id="3065143382" Name="Stop_Torch" ObjectPath="\Events\Default Work Unit\Stop_Torch" GUID="{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="3141045618" Type="Event" GUID="{B46FB24D-D356-43B8-A725-11CEEAA14A3D}" Language="SFX" Hash="{47EE344C-C7D5-B413-2169-E5C01F837F52}">
+			<ObjectPath>Play_fSwing</ObjectPath>
+			<ShortName>Play_fSwing</ShortName>
+			<Path>Event/Play_fSwing.bnk</Path>
+			<Media>
+				<File Id="291087524" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-073.wav</ShortName>
+					<Path>Media/291087524.wem</Path>
+					<CachePath>SFX/sfx vox mono full-073_818F3B66.wem</CachePath>
+				</File>
+				<File Id="779076487" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-039.wav</ShortName>
+					<Path>Media/779076487.wem</Path>
+					<CachePath>SFX/sfx vox mono full-039_818F3B66.wem</CachePath>
+				</File>
+				<File Id="841536043" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-037.wav</ShortName>
+					<Path>Media/841536043.wem</Path>
+					<CachePath>SFX/sfx vox mono full-037_818F3B66.wem</CachePath>
+				</File>
+				<File Id="965270959" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-036.wav</ShortName>
+					<Path>Media/965270959.wem</Path>
+					<CachePath>SFX/sfx vox mono full-036_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3141045618" Name="Play_fSwing" ObjectPath="\Events\Default Work Unit\Play_fSwing" GUID="{B46FB24D-D356-43B8-A725-11CEEAA14A3D}" DurationType="OneShot" DurationMin="1.1689116" DurationMax="1.3096598">
+					<MediaRefs>
+						<MediaRef Id="291087524"/>
+						<MediaRef Id="779076487"/>
+						<MediaRef Id="841536043"/>
+						<MediaRef Id="965270959"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="3279106990" Type="Event" GUID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}" Language="SFX" Hash="{3C05C24C-D1A7-79BC-FE9A-B8FCB181B4F1}">
@@ -729,6 +928,14 @@
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="3886625383" Type="Event" GUID="{3CBB73DE-9644-4A51-BD28-F3D5F4A7DABD}" Language="SFX" Hash="{E0B08468-5C9A-440A-8826-16DE563CE990}">
+			<ObjectPath>Stop_caveAtmosphere</ObjectPath>
+			<ShortName>Stop_caveAtmosphere</ShortName>
+			<Path>Event/Stop_caveAtmosphere.bnk</Path>
+			<Events>
+				<Event Id="3886625383" Name="Stop_caveAtmosphere" ObjectPath="\Events\Default Work Unit\Stop_caveAtmosphere" GUID="{3CBB73DE-9644-4A51-BD28-F3D5F4A7DABD}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="3904875299" Type="Event" GUID="{5A8512E4-12F7-4DE2-A25A-85A8AFAFA131}" Language="SFX" Hash="{8CB85FA7-FE19-9161-2B8E-EEC070803C35}">
 			<ObjectPath>Play_fFall</ObjectPath>
 			<ShortName>Play_fFall</ShortName>
@@ -756,6 +963,25 @@
 						<MediaRef Id="154375343"/>
 						<MediaRef Id="604771415"/>
 						<MediaRef Id="757661738"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="3942109467" Type="Event" GUID="{0E57EA07-3481-4CD4-AB5C-369B26ABFEEC}" Language="SFX" Hash="{74D8B056-010A-B21F-41FA-DE6ED93C81FC}">
+			<ObjectPath>Play_outsideAtmosphere</ObjectPath>
+			<ShortName>Play_outsideAtmosphere</ShortName>
+			<Path>Event/Play_outsideAtmosphere.bnk</Path>
+			<Media>
+				<File Id="12596277" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Outside3.wav</ShortName>
+					<Path>Media/12596277.wem</Path>
+					<CachePath>SFX/Outside3_11A93380.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3942109467" Name="Play_outsideAtmosphere" ObjectPath="\Events\Default Work Unit\Play_outsideAtmosphere" GUID="{0E57EA07-3481-4CD4-AB5C-369B26ABFEEC}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="12596277"/>
 					</MediaRefs>
 				</Event>
 			</Events>
@@ -806,5 +1032,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2FB0A937-B9BC-BEBE-61AF-0AEFD773F75F}</FileHash>
+	<FileHash>{867FB4EF-ABB3-7B07-19ED-44579BE3C39E}</FileHash>
 </SoundBanksInfo>

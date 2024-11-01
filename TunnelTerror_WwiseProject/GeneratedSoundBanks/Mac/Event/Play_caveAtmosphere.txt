@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2466093437	Play_caveAtmosphere			\Default Work Unit\Play_caveAtmosphere	
+
+Effect plug-ins	ID	Name	Type				Notes
+	2513915904	Hall_Large	Wwise RoomVerb			
+

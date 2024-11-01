@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1139562193	Stop_outsideAtmosphere			\Default Work Unit\Stop_outsideAtmosphere	
+

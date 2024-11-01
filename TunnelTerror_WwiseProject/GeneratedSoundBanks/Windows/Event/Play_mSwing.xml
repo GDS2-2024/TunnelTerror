@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="1204302407" Type="Event" GUID="{EDD6846B-FEFC-45C4-9704-DE01F2D8123E}" Language="SFX" Hash="{7EE28A94-0D86-459B-FCF8-701548F7C354}">
+			<ObjectPath>Play_mSwing</ObjectPath>
+			<ShortName>Play_mSwing</ShortName>
+			<Path>Event/Play_mSwing.bnk</Path>
+			<Media>
+				<File Id="52700418" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-074.wav</ShortName>
+					<Path>Media/52700418.wem</Path>
+					<CachePath>SFX/sfx vox mono full-074_818F3B66.wem</CachePath>
+				</File>
+				<File Id="181696581" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-076.wav</ShortName>
+					<Path>Media/181696581.wem</Path>
+					<CachePath>SFX/sfx vox mono full-076_818F3B66.wem</CachePath>
+				</File>
+				<File Id="233807270" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-075.wav</ShortName>
+					<Path>Media/233807270.wem</Path>
+					<CachePath>SFX/sfx vox mono full-075_818F3B66.wem</CachePath>
+				</File>
+				<File Id="291087524" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-073.wav</ShortName>
+					<Path>Media/291087524.wem</Path>
+					<CachePath>SFX/sfx vox mono full-073_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1204302407" Name="Play_mSwing" ObjectPath="\Events\Default Work Unit\Play_mSwing" GUID="{EDD6846B-FEFC-45C4-9704-DE01F2D8123E}" DurationType="OneShot" DurationMin="1.2377551" DurationMax="1.5151247">
+					<MediaRefs>
+						<MediaRef Id="52700418"/>
+						<MediaRef Id="181696581"/>
+						<MediaRef Id="233807270"/>
+						<MediaRef Id="291087524"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{CDE9F5C7-C5E0-94F5-0C9F-6893555516C9}</FileHash>
+</SoundBanksInfo>
