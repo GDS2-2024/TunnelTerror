@@ -177,6 +177,12 @@ public:
 	UFUNCTION(Client, Reliable)
 	void ClientRemoveInventoryUI(int32 SlotIndex);
 
+	UFUNCTION(BlueprintImplementableEvent)
+	void StartCoughing();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void EndCoughing();
+
 	UPROPERTY(VisibleAnywhere)
 	float health;
 
