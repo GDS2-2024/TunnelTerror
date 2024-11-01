@@ -11,6 +11,7 @@
 #include "PlayerHUD.h"
 #include "Inventory/ItemPickup.h"
 #include "ElevatorEscape.h"
+#include "Inventory/ShopPickup.h"
 #include "TunnelTerrorCharacter.generated.h"
 
 class ABridgeSabotager;
@@ -266,6 +267,15 @@ public:
 	UFUNCTION()
 	void OnRep_CollidedPickup();
 
+	UFUNCTION()
+	void OnRep_CollidedShopPickup();
+
+	// Shop Item Pickup, used to detect when Player has collided with a shop item
+	UPROPERTY()
+	AShopPickup* CollidedShopPickup;
+	UPROPERTY()
+	AItemPickup* PreviousShopPickup;
+	
 	// Character Mesh Picker
 	UPROPERTY(Replicated, BlueprintReadWrite)
 	AActor* CollidedCharacterPicker;

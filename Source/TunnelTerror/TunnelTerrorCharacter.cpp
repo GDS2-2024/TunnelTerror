@@ -309,6 +309,26 @@ void ATunnelTerrorCharacter::OnRep_CollidedPickup()
 	}
 }
 
+void ATunnelTerrorCharacter::OnRep_CollidedShopPickup()
+{
+	if (IsLocallyControlled())
+	{
+		if (CollidedShopPickup)
+		{
+			CollidedShopPickup->ShowPrompt(true);
+			PreviousShopPickup = CollidedShopPickup;
+		}
+		else
+		{
+			if (PreviousShopPickup)
+			{
+				PreviousShopPickup->ShowPrompt(false);
+				PreviousShopPickup = nullptr;
+			}
+		}
+	}
+}
+
 void ATunnelTerrorCharacter::ShowCharacterPickerUI()
 {
 	if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
@@ -608,11 +628,7 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 		ServerEquipToInventory(InventoryItem);
 		if (CollidedPickup)
 		{
-			if (GetWorld()->GetName() != "LobbyScene") 
-			{
-				CollidedPickup->Destroy();
-			}
-			
+			CollidedPickup->Destroy();
 		}
 	}
 }
@@ -742,20 +758,10 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 					UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item (sample)"))
 						ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
 				}
-				else {
-					// Spawn an instance of the inventory item on the server
-					if (GetWorld()->GetName() == "LobbyScene") {
-						UE_LOG(LogTemp, Log, TEXT("LobbyScene"))
-						if (CollidedPickup->Cost <= money) {
-							ClientRemoveMoney(CollidedPickup->Cost);
-							ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
-						}
-					}
-					else {
-						UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item"))
-							ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
-					}
-					
+				else
+				{
+					UE_LOG(LogTemp, Log, TEXT("Telling Server to spawn inventory item"))
+					ServerSpawnItem(CollidedPickup->CorrespondingItemClass);
 				}
 			}
 			else
@@ -796,6 +802,21 @@ void ATunnelTerrorCharacter::Interact(const FInputActionValue& Value)
 		if(IsLocallyControlled())
 		{
 			ShowCharacterPickerUI();
+		}
+	}
+	if (CollidedShopPickup)
+	{
+		if (CollidedShopPickup->CorrespondingItemClass)
+		{
+			if (Inventory->HasEmptySlot())
+			{
+				if (money >= CollidedShopPickup->Cost)
+				{
+					PlayPickupSound();
+					ClientRemoveMoney(CollidedShopPickup->Cost);
+					ServerSpawnItem(CollidedShopPickup->CorrespondingItemClass);
+				}
+			}
 		}
 	}
 }
