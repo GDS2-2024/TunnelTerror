@@ -29,7 +29,7 @@ void ATunnelTerrorGameMode::PostLogin(APlayerController* NewPlayer)
 void ATunnelTerrorGameMode::Logout(AController* Exiting)
 {
     Super::Logout(Exiting);
-
+    UE_LOG(LogTemp, Log, TEXT("Player has disconnected"));
     if (ATunnelTerrorGameState* CurrentGameState = GetGameState<ATunnelTerrorGameState>())
     {
         if (ATunnelTerrorCharacter* Character = Cast<ATunnelTerrorCharacter>(Exiting->GetPawn()))

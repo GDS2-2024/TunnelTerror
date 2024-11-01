@@ -9,6 +9,7 @@
 #include "TunnelTerror/TunnelTerror.h"
 #include "TunnelTerror/Hazards/TorchHazard.h"
 #include "TunnelTerror/Hazards/BridgeHazard.h"
+#include "TunnelTerrorGameState.h" 
 
 void ATunnelTerrorPlayerState::SetIsInfected(const bool bNewInfected)
 {
@@ -82,4 +83,17 @@ void ATunnelTerrorPlayerState::GetLifetimeReplicatedProps(TArray< FLifetimePrope
     SharedParams.bIsPushBased = true;
 
     DOREPLIFETIME_WITH_PARAMS_FAST(ATunnelTerrorPlayerState, bIsInfected, SharedParams);
+}
+
+void ATunnelTerrorPlayerState::Destroyed()
+{
+    Super::Destroyed();
+    //UE_LOG(LogTemp, Log, TEXT("Player Disconnected"));
+    if (ATunnelTerrorGameState* GameState = GetWorld()->GetGameState<ATunnelTerrorGameState>())
+    {
+        if (ATunnelTerrorCharacter* Character = Cast<ATunnelTerrorCharacter>(GetPawn()))
+        {
+            GameState->RemovePlayer(Character);
+        }
+    }
 }
