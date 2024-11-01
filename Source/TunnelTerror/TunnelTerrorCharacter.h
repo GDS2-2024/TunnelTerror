@@ -336,7 +336,7 @@ public:
 
 	AElevatorEscape* ElevatorEscape;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	UPlayerHUD* PlayerHUD;
 
 	UPROPERTY()
