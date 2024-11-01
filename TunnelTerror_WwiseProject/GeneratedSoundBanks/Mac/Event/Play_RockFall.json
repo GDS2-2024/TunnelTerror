@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
     "Language": "SFX",
-    "Hash": "{2B273414-AB4B-CEE7-E69D-C5B10F5D78D5}",
+    "Hash": "{D3630A97-5E3B-8CAA-1043-7D683C545A8D}",
     "ObjectPath": "Play_RockFall",
     "ShortName": "Play_RockFall",
     "Path": "Event/Play_RockFall.bnk",
@@ -105,6 +105,16 @@
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
       }
+     ],
+     "ShareSets": [
+      {
+       "Id": "602546716",
+       "Name": "Room_Large",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Large",
+       "GUID": "{AD8EFAFC-7121-4D5F-BE4D-B13FBD6CEBAE}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
      ]
     },
     "Events": [
@@ -115,8 +125,8 @@
       "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
       "MaxAttenuation": "800",
       "DurationType": "OneShot",
-      "DurationMin": "5.2483253",
-      "DurationMax": "7.9186854",
+      "DurationMin": "7.2483253",
+      "DurationMax": "9.918686",
       "MediaRefs": [
        {
         "Id": "287643081"
@@ -151,12 +161,17 @@
         {
          "Id": "744592701"
         }
+       ],
+       "ShareSets": [
+        {
+         "Id": "602546716"
+        }
        ]
       }
      }
     ]
    }
   ],
-  "FileHash": "{BC80ED77-EA12-332D-003B-E9926100274E}"
+  "FileHash": "{D1658261-9622-AFE8-E62D-299EAFBFDCE1}"
  }
 }

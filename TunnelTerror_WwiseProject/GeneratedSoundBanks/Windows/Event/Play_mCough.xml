@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="1030680943" Type="Event" GUID="{7279E098-5799-4D47-98FB-C7C5EBB03C57}" Language="SFX" Hash="{F7B8BCBF-A663-87A0-3AEE-23AC58F4F366}">
+			<ObjectPath>Play_mCough</ObjectPath>
+			<ShortName>Play_mCough</ShortName>
+			<Path>Event/Play_mCough.bnk</Path>
+			<Media>
+				<File Id="71706976" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-050.wav</ShortName>
+					<Path>Media/71706976.wem</Path>
+					<CachePath>SFX/sfx vox mono full-050_818F3B66.wem</CachePath>
+				</File>
+				<File Id="254379164" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-049.wav</ShortName>
+					<Path>Media/254379164.wem</Path>
+					<CachePath>SFX/sfx vox mono full-049_818F3B66.wem</CachePath>
+				</File>
+				<File Id="333364772" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-086.wav</ShortName>
+					<Path>Media/333364772.wem</Path>
+					<CachePath>SFX/sfx vox mono full-086_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1058583552" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-085.wav</ShortName>
+					<Path>Media/1058583552.wem</Path>
+					<CachePath>SFX/sfx vox mono full-085_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1030680943" Name="Play_mCough" ObjectPath="\Events\Default Work Unit\Play_mCough" GUID="{7279E098-5799-4D47-98FB-C7C5EBB03C57}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="71706976"/>
+						<MediaRef Id="254379164"/>
+						<MediaRef Id="333364772"/>
+						<MediaRef Id="1058583552"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{26092490-CB2F-7F13-90B3-B0D12F9040FB}</FileHash>
+</SoundBanksInfo>

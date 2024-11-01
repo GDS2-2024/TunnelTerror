@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "736239132",
+    "Type": "Event",
+    "GUID": "{8C87B0AB-D43F-41E4-A3FE-5948C382CB16}",
+    "Language": "SFX",
+    "Hash": "{700A2BF6-75F0-85B5-CEED-B8D4D3E63828}",
+    "ObjectPath": "Stop_fCough",
+    "ShortName": "Stop_fCough",
+    "Path": "Event/Stop_fCough.bnk",
+    "Events": [
+     {
+      "Id": "736239132",
+      "Name": "Stop_fCough",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_fCough",
+      "GUID": "{8C87B0AB-D43F-41E4-A3FE-5948C382CB16}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{35C85A7F-C65D-9E3C-C96F-B61DEB45F337}"
+ }
+}

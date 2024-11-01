@@ -1,0 +1,72 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "3904875299",
+    "Type": "Event",
+    "GUID": "{5A8512E4-12F7-4DE2-A25A-85A8AFAFA131}",
+    "Language": "SFX",
+    "Hash": "{8CB85FA7-FE19-9161-2B8E-EEC070803C35}",
+    "ObjectPath": "Play_fFall",
+    "ShortName": "Play_fFall",
+    "Path": "Event/Play_fFall.bnk",
+    "Media": [
+     {
+      "Id": "154375343",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-032.wav",
+      "Path": "Media/154375343.wem",
+      "CachePath": "SFX/sfx vox mono full-032_818F3B66.wem"
+     },
+     {
+      "Id": "604771415",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-045.wav",
+      "Path": "Media/604771415.wem",
+      "CachePath": "SFX/sfx vox mono full-045_818F3B66.wem"
+     },
+     {
+      "Id": "757661738",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-033.wav",
+      "Path": "Media/757661738.wem",
+      "CachePath": "SFX/sfx vox mono full-033_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3904875299",
+      "Name": "Play_fFall",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_fFall",
+      "GUID": "{5A8512E4-12F7-4DE2-A25A-85A8AFAFA131}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.2104988",
+      "DurationMax": "3.8010204",
+      "MediaRefs": [
+       {
+        "Id": "154375343"
+       },
+       {
+        "Id": "604771415"
+       },
+       {
+        "Id": "757661738"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F437ECE3-708C-8BCF-3BE2-52EEF5D3C8F8}"
+ }
+}

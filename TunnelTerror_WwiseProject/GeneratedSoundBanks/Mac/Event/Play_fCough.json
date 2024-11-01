@@ -1,0 +1,82 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "249772270",
+    "Type": "Event",
+    "GUID": "{525BAA67-25EB-498C-A659-9A06057D697A}",
+    "Language": "SFX",
+    "Hash": "{B874DDE7-61F6-1A62-C73C-918413FF0D90}",
+    "ObjectPath": "Play_fCough",
+    "ShortName": "Play_fCough",
+    "Path": "Event/Play_fCough.bnk",
+    "Media": [
+     {
+      "Id": "155306609",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-052.wav",
+      "Path": "Media/155306609.wem",
+      "CachePath": "SFX/sfx vox mono full-052_818F3B66.wem"
+     },
+     {
+      "Id": "325174341",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-055.wav",
+      "Path": "Media/325174341.wem",
+      "CachePath": "SFX/sfx vox mono full-055_818F3B66.wem"
+     },
+     {
+      "Id": "702522122",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-054.wav",
+      "Path": "Media/702522122.wem",
+      "CachePath": "SFX/sfx vox mono full-054_818F3B66.wem"
+     },
+     {
+      "Id": "870190361",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-053.wav",
+      "Path": "Media/870190361.wem",
+      "CachePath": "SFX/sfx vox mono full-053_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "249772270",
+      "Name": "Play_fCough",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_fCough",
+      "GUID": "{525BAA67-25EB-498C-A659-9A06057D697A}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "155306609"
+       },
+       {
+        "Id": "325174341"
+       },
+       {
+        "Id": "702522122"
+       },
+       {
+        "Id": "870190361"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F9884EE8-AA87-0824-4793-9D4DF03956C7}"
+ }
+}

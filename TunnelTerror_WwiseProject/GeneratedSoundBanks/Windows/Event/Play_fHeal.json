@@ -1,0 +1,60 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "3279106990",
+    "Type": "Event",
+    "GUID": "{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}",
+    "Language": "SFX",
+    "Hash": "{3C05C24C-D1A7-79BC-FE9A-B8FCB181B4F1}",
+    "ObjectPath": "Play_fHeal",
+    "ShortName": "Play_fHeal",
+    "Path": "Event/Play_fHeal.bnk",
+    "Media": [
+     {
+      "Id": "225740081",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-056.wav",
+      "Path": "Media/225740081.wem",
+      "CachePath": "SFX/sfx vox mono full-056_818F3B66.wem"
+     },
+     {
+      "Id": "634154630",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-057.wav",
+      "Path": "Media/634154630.wem",
+      "CachePath": "SFX/sfx vox mono full-057_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3279106990",
+      "Name": "Play_fHeal",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_fHeal",
+      "GUID": "{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.6141723",
+      "DurationMax": "1.6736054",
+      "MediaRefs": [
+       {
+        "Id": "225740081"
+       },
+       {
+        "Id": "634154630"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{40955CBE-112F-2202-8EC3-6BC649C7843C}"
+ }
+}

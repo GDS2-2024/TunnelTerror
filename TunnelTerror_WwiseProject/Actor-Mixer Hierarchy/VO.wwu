@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FC933A67-CF6E-43F8-8162-A130483E47D2}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="VO" ID="{FC933A67-CF6E-43F8-8162-A130483E47D2}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Male" ID="{F6EB16DF-A728-408B-941A-B3FC6594F678}" PersistMode="Reference"/>
+				<WorkUnit Name="Female" ID="{E6DED6F4-79E4-46B1-A000-A2D010AD7865}" PersistMode="Reference"/>
+				<WorkUnit Name="Infected" ID="{B48A2A45-95D3-4666-9C09-54474C7DED67}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
