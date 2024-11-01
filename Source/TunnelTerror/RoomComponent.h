@@ -49,7 +49,7 @@ public:
 	TArray<FVector> SpawnLocations;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Room Config")
-	TArray<FVector> CrystalLocations;
+	TArray<FVector> HazardLocations;
 
 	TArray<FVector> GetDoorPositions(FVector Origin);
 };
