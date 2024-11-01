@@ -124,6 +124,9 @@ public:
 
 	UFUNCTION(NetMulticast, Reliable, BlueprintCallable)
 	void MulticastSetPlayerName(const FString& NewName);
+
+	UFUNCTION(BlueprintCallable)
+	void ResetCharacter();
 	
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Replicated)
 	FString playerName = "Player";

@@ -33,9 +33,12 @@ public:
 	UPROPERTY(Replicated, BlueprintReadWrite)
 	bool bGameTime;
 
+	UPROPERTY(Replicated, BlueprintReadWrite)
+	bool bInLobby;
+
 	bool bDoorClosing;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(Replicated, BlueprintReadWrite)
 	TArray<ATunnelTerrorCharacter*> Players;
 
 	UPROPERTY(BlueprintReadWrite)
@@ -71,6 +74,9 @@ public:
 	void AddPlayer(ATunnelTerrorCharacter* Character);
 
 	void RemovePlayer(ATunnelTerrorCharacter* Character);
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
+	void ResetTimers();
 
 private:
 
