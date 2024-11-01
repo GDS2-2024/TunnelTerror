@@ -498,6 +498,37 @@
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="1319708803" Type="Event" GUID="{6AE614A5-9A56-464C-BE07-C8AE0037A0C6}" Language="SFX" Hash="{8AA3C610-4FF7-036B-787B-D13EEED8F0F8}">
+			<ObjectPath>Play_flashOff</ObjectPath>
+			<ShortName>Play_flashOff</ShortName>
+			<Path>Event/Play_flashOff.bnk</Path>
+			<Media>
+				<File Id="456463279" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>flashlight3.wav</ShortName>
+					<Path>Media/456463279.wem</Path>
+					<CachePath>SFX/flashlight3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="764745543" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>flashLight1.wav</ShortName>
+					<Path>Media/764745543.wem</Path>
+					<CachePath>SFX/flashLight1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="890394530" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>flashLight2.wav</ShortName>
+					<Path>Media/890394530.wem</Path>
+					<CachePath>SFX/flashLight2_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1319708803" Name="Play_flashOff" ObjectPath="\Events\Default Work Unit\Play_flashOff" GUID="{6AE614A5-9A56-464C-BE07-C8AE0037A0C6}" DurationType="OneShot" DurationMin="1.1346939" DurationMax="1.2106087">
+					<MediaRefs>
+						<MediaRef Id="456463279"/>
+						<MediaRef Id="764745543"/>
+						<MediaRef Id="890394530"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{CD1FB943-5D4B-AF0B-9FB4-81C57F0F4FA9}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
@@ -1294,6 +1325,37 @@
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="3822360239" Type="Event" GUID="{CA79A399-06E2-4F90-905E-DBFA668264F9}" Language="SFX" Hash="{9CA728BB-BC3E-5DD9-D42A-3C49A07A94F8}">
+			<ObjectPath>Play_flashOn</ObjectPath>
+			<ShortName>Play_flashOn</ShortName>
+			<Path>Event/Play_flashOn.bnk</Path>
+			<Media>
+				<File Id="456463279" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>flashlight3.wav</ShortName>
+					<Path>Media/456463279.wem</Path>
+					<CachePath>SFX/flashlight3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="764745543" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>flashLight1.wav</ShortName>
+					<Path>Media/764745543.wem</Path>
+					<CachePath>SFX/flashLight1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="890394530" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>flashLight2.wav</ShortName>
+					<Path>Media/890394530.wem</Path>
+					<CachePath>SFX/flashLight2_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3822360239" Name="Play_flashOn" ObjectPath="\Events\Default Work Unit\Play_flashOn" GUID="{CA79A399-06E2-4F90-905E-DBFA668264F9}" DurationType="OneShot" DurationMin="0.9935307" DurationMax="1.0600014">
+					<MediaRefs>
+						<MediaRef Id="456463279"/>
+						<MediaRef Id="764745543"/>
+						<MediaRef Id="890394530"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="3858275350" Type="Event" GUID="{A7C25A1B-0608-4060-9C29-134EBEA4D185}" Language="SFX" Hash="{C8AD4F36-8208-6143-CF8C-B25636963B38}">
 			<ObjectPath>Play_Snap</ObjectPath>
 			<ShortName>Play_Snap</ShortName>
@@ -1455,5 +1517,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{96E1BAB5-3AB6-54AF-4423-10FD1423E34C}</FileHash>
+	<FileHash>{3069E58D-0DCD-4D42-448C-BB97DF2604E7}</FileHash>
 </SoundBanksInfo>

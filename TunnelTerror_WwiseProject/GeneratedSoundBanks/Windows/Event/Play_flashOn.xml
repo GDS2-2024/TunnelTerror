@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="3822360239" Type="Event" GUID="{CA79A399-06E2-4F90-905E-DBFA668264F9}" Language="SFX" Hash="{9CA728BB-BC3E-5DD9-D42A-3C49A07A94F8}">
+			<ObjectPath>Play_flashOn</ObjectPath>
+			<ShortName>Play_flashOn</ShortName>
+			<Path>Event/Play_flashOn.bnk</Path>
+			<Media>
+				<File Id="456463279" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>flashlight3.wav</ShortName>
+					<Path>Media/456463279.wem</Path>
+					<CachePath>SFX/flashlight3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="764745543" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>flashLight1.wav</ShortName>
+					<Path>Media/764745543.wem</Path>
+					<CachePath>SFX/flashLight1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="890394530" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>flashLight2.wav</ShortName>
+					<Path>Media/890394530.wem</Path>
+					<CachePath>SFX/flashLight2_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3822360239" Name="Play_flashOn" ObjectPath="\Events\Default Work Unit\Play_flashOn" GUID="{CA79A399-06E2-4F90-905E-DBFA668264F9}" DurationType="OneShot" DurationMin="0.9935307" DurationMax="1.0600014">
+					<MediaRefs>
+						<MediaRef Id="456463279"/>
+						<MediaRef Id="764745543"/>
+						<MediaRef Id="890394530"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{32C9B1AE-06E9-0274-3538-E4FF315DA7FE}</FileHash>
+</SoundBanksInfo>

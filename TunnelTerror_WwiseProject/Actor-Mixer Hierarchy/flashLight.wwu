@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F70B7A7B-C0A7-442C-9478-8A3EB1AB396C}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="flashLight" ID="{F70B7A7B-C0A7-442C-9478-8A3EB1AB396C}" PersistMode="Standalone"/>
+	</AudioObjects>
+</WwiseDocument>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="1319708803" Type="Event" GUID="{6AE614A5-9A56-464C-BE07-C8AE0037A0C6}" Language="SFX" Hash="{8AA3C610-4FF7-036B-787B-D13EEED8F0F8}">
+			<ObjectPath>Play_flashOff</ObjectPath>
+			<ShortName>Play_flashOff</ShortName>
+			<Path>Event/Play_flashOff.bnk</Path>
+			<Media>
+				<File Id="456463279" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>flashlight3.wav</ShortName>
+					<Path>Media/456463279.wem</Path>
+					<CachePath>SFX/flashlight3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="764745543" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>flashLight1.wav</ShortName>
+					<Path>Media/764745543.wem</Path>
+					<CachePath>SFX/flashLight1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="890394530" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>flashLight2.wav</ShortName>
+					<Path>Media/890394530.wem</Path>
+					<CachePath>SFX/flashLight2_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1319708803" Name="Play_flashOff" ObjectPath="\Events\Default Work Unit\Play_flashOff" GUID="{6AE614A5-9A56-464C-BE07-C8AE0037A0C6}" DurationType="OneShot" DurationMin="1.1346939" DurationMax="1.2106087">
+					<MediaRefs>
+						<MediaRef Id="456463279"/>
+						<MediaRef Id="764745543"/>
+						<MediaRef Id="890394530"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{91D83A7C-2763-F7D7-EACA-6EAE1AD2718F}</FileHash>
+</SoundBanksInfo>
