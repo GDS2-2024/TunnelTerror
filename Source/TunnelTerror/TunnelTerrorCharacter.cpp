@@ -580,7 +580,7 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 		}
 		if (InventoryItem->ItemName.ToString() == "Torch")
 		{
-			FRotator DesiredRotation(0.0f, -90.0f, 15.0f);
+			FRotator DesiredRotation(0.0f, -110.0f, 30.0f);
 			FVector DesiredPos(1.0f,3.0f,1.0f);
 			InventoryItem->SetActorRelativeLocation(DesiredPos);
 			InventoryItem->SetActorRelativeRotation(DesiredRotation);
