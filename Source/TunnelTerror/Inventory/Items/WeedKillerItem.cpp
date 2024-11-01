@@ -14,14 +14,14 @@ void AWeedKillerItem::UseItem()
 {
 	Super::UseItem();
 	bIsActivated = true;
-	OnUseItem();
+	OnUseItemVisual();
 }
 
 void AWeedKillerItem::ReleaseUseItem()
 {
 	Super::ReleaseUseItem();
 	bIsActivated = false;
-	OnReleaseUseItem();
+	OnReleaseItemVisual();
 }
 
 void AWeedKillerItem::BeginPlay()
@@ -41,9 +41,18 @@ void AWeedKillerItem::Tick(float DeltaTime)
 		for (AActor* trap : Results)
 		{
 			AInfectionTrap* trap2 = Cast<AInfectionTrap>(trap);
-			UE_LOG(LogTemp, Log, TEXT("DESTROOOOOY YEAHHHHHH"));
 			ATunnelTerrorCharacter* character = Cast<ATunnelTerrorCharacter>(Player);
 			character->KillPlant(trap2);
 		}
 	}
+}
+
+void AWeedKillerItem::OnUseItemVisual_Implementation()
+{
+	OnUseItem();
+}
+
+void AWeedKillerItem::OnReleaseItemVisual_Implementation()
+{
+	OnReleaseUseItem();
 }

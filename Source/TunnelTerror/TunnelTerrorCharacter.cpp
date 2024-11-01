@@ -38,6 +38,8 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 
 	sporeInfectTime = 10.0f;
 	sporeInfectCurrent = 0.0f;
+
+	bMenuOpen = false;
 	
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(55.f, 96.0f);
@@ -229,6 +231,9 @@ void ATunnelTerrorCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::Interact);
 		//PlaceTrap
 		EnhancedInputComponent->BindAction(PlaceTrapAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::PlaceTrap);
+
+		//Open Menu
+		EnhancedInputComponent->BindAction(MenuAction, ETriggerEvent::Started, this, &ATunnelTerrorCharacter::OpenCloseMenu);
 	}
 }
 
@@ -367,7 +372,7 @@ void ATunnelTerrorCharacter::ServerInteractWithBridge_Implementation(ABridgeSabo
 
 void ATunnelTerrorCharacter::KillPlant_Implementation(AInfectionTrap* trap)
 {
-	trap->Destroy();
+	trap->PlantDie();
 }
 
 void ATunnelTerrorCharacter::Move(const FInputActionValue& Value)
@@ -575,7 +580,7 @@ void ATunnelTerrorCharacter::ServerSpawnItem_Implementation(TSubclassOf<AInvento
 		}
 		if (InventoryItem->ItemName.ToString() == "Torch")
 		{
-			FRotator DesiredRotation(0.0f, -90.0f, 15.0f);
+			FRotator DesiredRotation(0.0f, -110.0f, 30.0f);
 			FVector DesiredPos(1.0f,3.0f,1.0f);
 			InventoryItem->SetActorRelativeLocation(DesiredPos);
 			InventoryItem->SetActorRelativeRotation(DesiredRotation);
@@ -855,6 +860,20 @@ void ATunnelTerrorCharacter::MulticastPlaceTrap_Implementation()
 	if (!HasAuthority())
 	{
 		PlaceTrapImplementation();
+	}
+}
+
+void ATunnelTerrorCharacter::OpenCloseMenu(const FInputActionValue& Value)
+{
+	if (bMenuOpen)
+	{
+		bMenuOpen = false;
+		UE_LOG(LogTemp, Log, TEXT("Menu Closed"));
+	}
+	else
+	{
+		bMenuOpen = true;
+		UE_LOG(LogTemp, Log, TEXT("Menu Open"));
 	}
 }
 

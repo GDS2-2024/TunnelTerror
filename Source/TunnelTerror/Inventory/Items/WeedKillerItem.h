@@ -30,4 +30,9 @@ protected:
 	void OnUseItem();
 	UFUNCTION(BlueprintImplementableEvent)
 	void OnReleaseUseItem();
+
+	UFUNCTION(Reliable, NetMulticast)
+	void OnUseItemVisual();
+	UFUNCTION(Reliable, NetMulticast)
+	void OnReleaseItemVisual();
 };
