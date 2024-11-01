@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3822360239" Type="Event" GUID="{CA79A399-06E2-4F90-905E-DBFA668264F9}" Language="SFX" Hash="{9CA728BB-BC3E-5DD9-D42A-3C49A07A94F8}">
+		<SoundBank Id="3822360239" Type="Event" GUID="{CA79A399-06E2-4F90-905E-DBFA668264F9}" Language="SFX" Hash="{2BD4DEFC-82C4-693C-521D-B3E6E546AD30}">
 			<ObjectPath>Play_flashOn</ObjectPath>
 			<ShortName>Play_flashOn</ShortName>
 			<Path>Event/Play_flashOn.bnk</Path>
@@ -33,5 +33,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{32C9B1AE-06E9-0274-3538-E4FF315DA7FE}</FileHash>
+	<FileHash>{2D214A45-2B4E-640C-4759-C427B7CF5159}</FileHash>
 </SoundBanksInfo>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1580464077" Type="Event" GUID="{28C0F76F-9DB4-45B5-8CA9-456279189419}" Language="SFX" Hash="{74491AC2-49D4-48E2-B960-0916317F6283}">
+		<SoundBank Id="1580464077" Type="Event" GUID="{28C0F76F-9DB4-45B5-8CA9-456279189419}" Language="SFX" Hash="{59F920F4-3322-473B-4CE6-808E645DCC5D}">
 			<ObjectPath>Play_spray</ObjectPath>
 			<ShortName>Play_spray</ShortName>
 			<Path>Event/Play_spray.bnk</Path>
@@ -33,5 +33,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{82657E9D-C0B2-BEC1-C931-90F2F5D08206}</FileHash>
+	<FileHash>{EA314D96-35B8-FFC1-4341-E0349F7A52DB}</FileHash>
 </SoundBanksInfo>

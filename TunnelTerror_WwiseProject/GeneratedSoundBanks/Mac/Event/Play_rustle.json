@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}",
     "Language": "SFX",
-    "Hash": "{ACA798A7-69E1-EFDF-99D2-5B9C7FF94DE1}",
+    "Hash": "{22614F67-77FD-2634-5EDA-39DB4F155217}",
     "ObjectPath": "Play_rustle",
     "ShortName": "Play_rustle",
     "Path": "Event/Play_rustle.bnk",
@@ -49,7 +49,6 @@
       "Name": "Play_rustle",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_rustle",
       "GUID": "{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}",
-      "MaxAttenuation": "400",
       "DurationType": "OneShot",
       "DurationMin": "0.4231654",
       "DurationMax": "0.81324357",
@@ -68,6 +67,6 @@
     ]
    }
   ],
-  "FileHash": "{1BBA7F47-CD07-1FCA-A715-054E258AA3CE}"
+  "FileHash": "{422AC03E-3999-F5F6-2BF0-7776C97ADCCC}"
  }
 }

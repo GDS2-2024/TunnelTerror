@@ -512,10 +512,10 @@
 						</ObjectList>
 						<ObjectList Name="Playlist">
 							<Reference>
-								<ObjectRef Name="hitShatter" ID="{48158276-7CF1-4610-8B8A-378007C97B56}" WorkUnitID="{0C2A8A81-D64C-41B9-84A1-64BB8D22FEF8}"/>
+								<ObjectRef Name="524307__bertsz__earthquake-in-cave" ID="{A2486BF8-51C2-48D1-99B5-21342C3B2719}" WorkUnitID="{0C2A8A81-D64C-41B9-84A1-64BB8D22FEF8}"/>
 							</Reference>
 							<Reference>
-								<ObjectRef Name="524307__bertsz__earthquake-in-cave" ID="{A2486BF8-51C2-48D1-99B5-21342C3B2719}" WorkUnitID="{0C2A8A81-D64C-41B9-84A1-64BB8D22FEF8}"/>
+								<ObjectRef Name="hitShatter" ID="{48158276-7CF1-4610-8B8A-378007C97B56}" WorkUnitID="{0C2A8A81-D64C-41B9-84A1-64BB8D22FEF8}"/>
 							</Reference>
 						</ObjectList>
 					</ObjectLists>

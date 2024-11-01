@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{DAABF8FE-0337-462B-86E7-CEAE7A83737D}",
     "Language": "SFX",
-    "Hash": "{817CB1CA-958E-D5F3-FDD9-A4CC3AA3E766}",
+    "Hash": "{EC01A839-BBE6-733E-0556-A9A950E33A2D}",
     "ObjectPath": "Play_plantStretch",
     "ShortName": "Play_plantStretch",
     "Path": "Event/Play_plantStretch.bnk",
@@ -49,7 +49,6 @@
       "Name": "Play_plantStretch",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_plantStretch",
       "GUID": "{DAABF8FE-0337-462B-86E7-CEAE7A83737D}",
-      "MaxAttenuation": "400",
       "DurationType": "OneShot",
       "DurationMin": "0.7337021",
       "DurationMax": "0.8894372",
@@ -68,6 +67,6 @@
     ]
    }
   ],
-  "FileHash": "{A3930FB9-BD6F-DBA4-1125-4C6CF869C741}"
+  "FileHash": "{1015E1F8-85CA-2FC6-B16B-CC7BFBC137E3}"
  }
 }

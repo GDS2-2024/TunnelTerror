@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1202343709" Type="Event" GUID="{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}" Language="SFX" Hash="{ACA798A7-69E1-EFDF-99D2-5B9C7FF94DE1}">
+		<SoundBank Id="1202343709" Type="Event" GUID="{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}" Language="SFX" Hash="{22614F67-77FD-2634-5EDA-39DB4F155217}">
 			<ObjectPath>Play_rustle</ObjectPath>
 			<ShortName>Play_rustle</ShortName>
 			<Path>Event/Play_rustle.bnk</Path>
@@ -23,7 +23,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1202343709" Name="Play_rustle" ObjectPath="\Events\Default Work Unit\Play_rustle" GUID="{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}" MaxAttenuation="400" DurationType="OneShot" DurationMin="0.4231654" DurationMax="0.81324357">
+				<Event Id="1202343709" Name="Play_rustle" ObjectPath="\Events\Default Work Unit\Play_rustle" GUID="{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}" DurationType="OneShot" DurationMin="0.4231654" DurationMax="0.81324357">
 					<MediaRefs>
 						<MediaRef Id="20832412"/>
 						<MediaRef Id="631883680"/>
@@ -33,5 +33,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0D8CF023-40D2-7465-F4C1-D8FF7D140BCE}</FileHash>
+	<FileHash>{269D317B-98DD-2072-21D9-CCDD6C1EF228}</FileHash>
 </SoundBanksInfo>
