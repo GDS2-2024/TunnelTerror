@@ -157,6 +157,7 @@ void ATunnelTerrorCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty
 	DOREPLIFETIME(ATunnelTerrorCharacter, Inventory);
 	DOREPLIFETIME(ATunnelTerrorCharacter, bIsRagdolled);
 	DOREPLIFETIME(ATunnelTerrorCharacter, CollidedPickup);
+	DOREPLIFETIME(ATunnelTerrorCharacter, CollidedShopPickup);
 	DOREPLIFETIME(ATunnelTerrorCharacter, CollidedCharacterPicker);
 	DOREPLIFETIME(ATunnelTerrorCharacter, playerName);
 }

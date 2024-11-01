@@ -274,7 +274,7 @@ public:
 	void OnRep_CollidedShopPickup();
 
 	// Shop Item Pickup, used to detect when Player has collided with a shop item
-	UPROPERTY()
+	UPROPERTY(ReplicatedUsing = OnRep_CollidedShopPickup, VisibleAnywhere)
 	AShopPickup* CollidedShopPickup;
 	UPROPERTY()
 	AItemPickup* PreviousShopPickup;
