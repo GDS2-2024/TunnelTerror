@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "1202343709",
+    "Type": "Event",
+    "GUID": "{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}",
+    "Language": "SFX",
+    "Hash": "{ACA798A7-69E1-EFDF-99D2-5B9C7FF94DE1}",
+    "ObjectPath": "Play_rustle",
+    "ShortName": "Play_rustle",
+    "Path": "Event/Play_rustle.bnk",
+    "Media": [
+     {
+      "Id": "20832412",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "rustle1.wav",
+      "Path": "Media/20832412.wem",
+      "CachePath": "SFX/rustle1_89314C5E.wem"
+     },
+     {
+      "Id": "631883680",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "rustle2.wav",
+      "Path": "Media/631883680.wem",
+      "CachePath": "SFX/rustle2_818F3B66.wem"
+     },
+     {
+      "Id": "805458352",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "rustle1.wav",
+      "Path": "Media/805458352.wem",
+      "CachePath": "SFX/rustle1_07538E64.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1202343709",
+      "Name": "Play_rustle",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_rustle",
+      "GUID": "{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}",
+      "MaxAttenuation": "400",
+      "DurationType": "OneShot",
+      "DurationMin": "0.4231654",
+      "DurationMax": "0.81324357",
+      "MediaRefs": [
+       {
+        "Id": "20832412"
+       },
+       {
+        "Id": "631883680"
+       },
+       {
+        "Id": "805458352"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{609DEB81-5040-87DD-FD15-D84F2F59E162}"
+ }
+}

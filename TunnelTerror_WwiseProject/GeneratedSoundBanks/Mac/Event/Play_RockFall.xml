@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1120692842" Type="Event" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" Language="SFX" Hash="{D3630A97-5E3B-8CAA-1043-7D683C545A8D}">
+		<SoundBank Id="1120692842" Type="Event" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" Language="SFX" Hash="{DFF7AB17-3017-660D-56C7-EA668672296E}">
 			<ObjectPath>Play_RockFall</ObjectPath>
 			<ShortName>Play_RockFall</ShortName>
 			<Path>Event/Play_RockFall.bnk</Path>
 			<Media>
+				<File Id="81005783" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>524307__bertsz__earthquake-in-cave.wav</ShortName>
+					<Path>Media/81005783.wem</Path>
+					<CachePath>SFX/524307__bertsz__earthquake-in-cave_579A8C4A.wem</CachePath>
+				</File>
 				<File Id="287643081" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>RockShatter.WAV</ShortName>
 					<Path>Media/287643081.wem</Path>
@@ -29,32 +34,33 @@
 				<File Id="874392032" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>RockHitGround\RockHitGround_1.wav</ShortName>
 					<Path>Media/874392032.wem</Path>
-					<CachePath>SFX/RockHitGround/RockHitGround_1_4FCD9C49.wem</CachePath>
+					<CachePath>SFX/RockHitGround/RockHitGround_1_F8855C92.wem</CachePath>
 				</File>
 				<File Id="953321177" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>RockHitGround\RockHitGround_2.wav</ShortName>
 					<Path>Media/953321177.wem</Path>
-					<CachePath>SFX/RockHitGround/RockHitGround_2_D678C78D.wem</CachePath>
+					<CachePath>SFX/RockHitGround/RockHitGround_2_E7AFDC3B.wem</CachePath>
 				</File>
 				<File Id="953676981" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>RockHitGround\RockHitGround_5.wav</ShortName>
 					<Path>Media/953676981.wem</Path>
-					<CachePath>SFX/RockHitGround/RockHitGround_5_8F54B111.wem</CachePath>
+					<CachePath>SFX/RockHitGround/RockHitGround_5_7F9ED8C3.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="8525658" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Rocks\RockFall\RockShatter\[Effect Slot [0]: (Parametric EQ)]\Parametric EQ (Custom)" GUID="{0DE8CC0F-A379-4320-9F31-EF7805AE6B3A}" LibName="Wwise Parametric EQ" LibId="6881283"/>
-					<Plugin Id="493556205" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Rocks\RockFall\RockHitGround\[Effect Slot [0]: (Parametric EQ)]\Parametric EQ (Custom)" GUID="{73E7BEE8-E9DC-4BD1-BEAE-6F7E35BD8555}" LibName="Wwise Parametric EQ" LibId="6881283"/>
-					<Plugin Id="744592701" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Rocks\RockFall\RockShatter\RockShatter_02\[Effect Slot [0]: (Parametric EQ)]\Parametric EQ (Custom)" GUID="{1ECBDC60-D6F4-44E4-B12F-A42A65346C00}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="8525658" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Rocks\RockFall\hitShatter\RockShatter\[Effect Slot [0]: (Parametric EQ)]\Parametric EQ (Custom)" GUID="{0DE8CC0F-A379-4320-9F31-EF7805AE6B3A}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="493556205" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Rocks\RockFall\hitShatter\RockHitGround\[Effect Slot [0]: (Parametric EQ)]\Parametric EQ (Custom)" GUID="{73E7BEE8-E9DC-4BD1-BEAE-6F7E35BD8555}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="744592701" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Rocks\RockFall\hitShatter\RockShatter\RockShatter_02\[Effect Slot [0]: (Parametric EQ)]\Parametric EQ (Custom)" GUID="{1ECBDC60-D6F4-44E4-B12F-A42A65346C00}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</Custom>
 				<ShareSets>
 					<Plugin Id="602546716" Name="Room_Large" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Large" GUID="{AD8EFAFC-7121-4D5F-BE4D-B13FBD6CEBAE}" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="1120692842" Name="Play_RockFall" ObjectPath="\Events\Default Work Unit\Play_RockFall" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" MaxAttenuation="800" DurationType="OneShot" DurationMin="7.2483253" DurationMax="9.918686">
+				<Event Id="1120692842" Name="Play_RockFall" ObjectPath="\Events\Default Work Unit\Play_RockFall" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" MaxAttenuation="800" DurationType="OneShot" DurationMin="7.021866" DurationMax="9.555864">
 					<MediaRefs>
+						<MediaRef Id="81005783"/>
 						<MediaRef Id="287643081"/>
 						<MediaRef Id="597728859"/>
 						<MediaRef Id="697333171"/>
@@ -77,5 +83,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C449F2CB-F652-7654-1257-724E4E9F6D5C}</FileHash>
+	<FileHash>{AB99B845-33D3-6E3B-0ED4-1EBB061CCE97}</FileHash>
 </SoundBanksInfo>

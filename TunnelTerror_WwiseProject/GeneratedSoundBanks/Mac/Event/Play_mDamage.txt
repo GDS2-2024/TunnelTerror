@@ -1,3 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	2846960996	Play_mDamage			\Default Work Unit\Play_mDamage	
 
+Effect plug-ins	ID	Name	Type				Notes
+	1990128658	Room_Medium	Wwise RoomVerb			
+

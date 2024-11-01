@@ -1,0 +1,84 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "1042987450",
+    "Type": "Event",
+    "GUID": "{D9B7304E-3726-4488-B370-CD4C711A247C}",
+    "Language": "SFX",
+    "Hash": "{8B0CB800-CE71-A0FA-537C-9FD59C298258}",
+    "ObjectPath": "Play_select",
+    "ShortName": "Play_select",
+    "Path": "Event/Play_select.bnk",
+    "Media": [
+     {
+      "Id": "498364355",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui7.wav",
+      "Path": "Media/498364355.wem",
+      "CachePath": "SFX/ui7_6A768392.wem"
+     },
+     {
+      "Id": "775253208",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui6.wav",
+      "Path": "Media/775253208.wem",
+      "CachePath": "SFX/ui6_4ABD8B54.wem"
+     },
+     {
+      "Id": "956966152",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui8.wav",
+      "Path": "Media/956966152.wem",
+      "CachePath": "SFX/ui8_68132823.wem"
+     },
+     {
+      "Id": "1016949203",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui5.wav",
+      "Path": "Media/1016949203.wem",
+      "CachePath": "SFX/ui5_C092C985.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1042987450",
+      "Name": "Play_select",
+      "ObjectPath": "\\Events\\UI\\Play_select",
+      "GUID": "{D9B7304E-3726-4488-B370-CD4C711A247C}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2667581",
+      "DurationMax": "1.4073935",
+      "MediaRefs": [
+       {
+        "Id": "498364355"
+       },
+       {
+        "Id": "775253208"
+       },
+       {
+        "Id": "956966152"
+       },
+       {
+        "Id": "1016949203"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{7DE08624-46CB-2ABA-070B-C630F8462EC1}"
+ }
+}

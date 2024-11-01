@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{3ADEA1F1-F0F5-4552-8C26-899603130220}",
     "Language": "SFX",
-    "Hash": "{ED974193-14FC-F7A3-F04D-F37566DE2417}",
+    "Hash": "{024C9924-71D6-D14B-DD97-A93A1F6E4008}",
     "ObjectPath": "Play_PickAxe",
     "ShortName": "Play_PickAxe",
     "Path": "Event/Play_PickAxe.bnk",
@@ -58,7 +58,6 @@
       "Name": "Play_PickAxe",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_PickAxe",
       "GUID": "{3ADEA1F1-F0F5-4552-8C26-899603130220}",
-      "MaxAttenuation": "200",
       "DurationType": "OneShot",
       "DurationMin": "0.39109114",
       "DurationMax": "0.5441268",
@@ -80,6 +79,6 @@
     ]
    }
   ],
-  "FileHash": "{0874F542-2C7D-A2F9-1BF9-E8C1190F5278}"
+  "FileHash": "{586ACA24-B627-90DD-768C-1852003509A1}"
  }
 }

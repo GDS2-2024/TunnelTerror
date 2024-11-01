@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="1668514525" Type="Event" GUID="{07852589-1383-4156-9440-788054B24A18}" Language="SFX" Hash="{5F6C6510-39A6-04F9-AE20-6A1BCA6107FB}">
+			<ObjectPath>Play_iMoans</ObjectPath>
+			<ShortName>Play_iMoans</ShortName>
+			<Path>Event/Play_iMoans.bnk</Path>
+			<Media>
+				<File Id="313275621" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-061.wav</ShortName>
+					<Path>Media/313275621.wem</Path>
+					<CachePath>SFX/sfx vox mono full-061_818F3B66.wem</CachePath>
+				</File>
+				<File Id="398637573" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-066.wav</ShortName>
+					<Path>Media/398637573.wem</Path>
+					<CachePath>SFX/sfx vox mono full-066_818F3B66.wem</CachePath>
+				</File>
+				<File Id="671955011" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-062.wav</ShortName>
+					<Path>Media/671955011.wem</Path>
+					<CachePath>SFX/sfx vox mono full-062_818F3B66.wem</CachePath>
+				</File>
+				<File Id="908915927" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-089.wav</ShortName>
+					<Path>Media/908915927.wem</Path>
+					<CachePath>SFX/sfx vox mono full-089_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1061935294" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-090.wav</ShortName>
+					<Path>Media/1061935294.wem</Path>
+					<CachePath>SFX/sfx vox mono full-090_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="1668514525" Name="Play_iMoans" ObjectPath="\Events\Default Work Unit\Play_iMoans" GUID="{07852589-1383-4156-9440-788054B24A18}" DurationType="OneShot" DurationMin="2.9415872" DurationMax="4.3086166">
+					<MediaRefs>
+						<MediaRef Id="313275621"/>
+						<MediaRef Id="398637573"/>
+						<MediaRef Id="671955011"/>
+						<MediaRef Id="908915927"/>
+						<MediaRef Id="1061935294"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{5A2C7DA3-AF95-79BB-C175-9E8DE1AFBF37}</FileHash>
+</SoundBanksInfo>

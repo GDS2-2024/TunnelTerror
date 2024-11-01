@@ -3,10 +3,9 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}" PersistMode="Standalone">
 			<ChildrenList>
-				<RandomSequenceContainer Name="Atmosphere" ID="{D64C652C-D9F1-4614-95C7-BD8BA9D156E8}" ShortID="583616545">
+				<RandomSequenceContainer Name="caveAtmosphere" ID="{D64C652C-D9F1-4614-95C7-BD8BA9D156E8}" ShortID="583616545">
 					<PropertyList>
 						<Property Name="3DPosition" Type="int16" Value="2"/>
-						<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 						<Property Name="HoldListenerOrientation" Type="bool" Value="True"/>
 						<Property Name="InitialDelay" Type="Real64">
 							<ModifierList>
@@ -435,12 +434,12 @@
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 						<Property Name="Pitch" Type="int32">
 							<ValueList>
-								<Value>-990</Value>
+								<Value>-1360</Value>
 							</ValueList>
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-12</Value>
+								<Value>-23</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -586,6 +585,11 @@
 								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 								<Property Name="TrimBegin" Type="Real64" Value="12.7542245787204"/>
 								<Property Name="TrimEnd" Type="Real64" Value="19.1612763623968"/>
+								<Property Name="VolumeOffset" Type="Real64">
+									<ValueList>
+										<Value>24</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>Glow.wav</AudioFile>
@@ -594,14 +598,42 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{27C9C7C2-C878-40C5-8C68-BFBBCA06B3D0}" ShortID="153416171">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+												<ObjectRef Name="Holy" ID="{CC7B8638-C670-4AD5-B3FB-331EA81037F6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 					<ActiveSourceList>
 						<ActiveSource Name="Glow" ID="{D517CD21-76D0-4951-9467-75CA0BA1174E}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<RandomSequenceContainer Name="PickAxe" ID="{CED7FD15-3E75-435D-8D19-ADC2AD36EE88}" ShortID="785958027">
+				<RandomSequenceContainer Name="spray" ID="{D2F232AE-5D31-45D2-B858-6513297960CE}" ShortID="522440798">
 					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{7C233978-8FC6-45B0-89BB-0FB4E128616D}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="127"/>
+											<Property Name="Min" Type="Real64" Value="-127"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -615,7 +647,10 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="PickAxe_01" ID="{12D6D4C3-B623-47B6-9785-F820EDB15FD7}" ShortID="904673048">
+						<Sound Name="spray1" ID="{4BB7A4CE-EE5C-4F7D-A24E-DA9A2153F7CC}" ShortID="650579404">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
@@ -625,24 +660,33 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="PickAxe" ID="{EC37C5DB-FD65-49D7-AE24-3EB1E9ECC510}">
+								<AudioFileSource Name="spray1" ID="{A559A3A0-41F1-4448-BF21-190D2062FE16}">
 									<PropertyList>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="299.441"/>
+										<Property Name="CrossfadeShape" Type="int16" Value="3"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0241322463768116"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.00904959239130432"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0.379"/>
+										<Property Name="LoopEnd" Type="Real64" Value="1.094"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.459106976123783"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.952221876404882"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0422314311594203"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.40570335144928"/>
 									</PropertyList>
 									<Language>SFX</Language>
-									<AudioFile>PickAxe.wav</AudioFile>
+									<AudioFile>spray1.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="1063682463"/>
+										<MediaID ID="221605604"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="PickAxe" ID="{EC37C5DB-FD65-49D7-AE24-3EB1E9ECC510}" Platform="Linked"/>
+								<ActiveSource Name="spray1" ID="{A559A3A0-41F1-4448-BF21-190D2062FE16}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="PickAxe_02" ID="{551CF912-CDE2-4A2E-84C3-B640A809D29A}" ShortID="618223326">
+						<Sound Name="spray2" ID="{7B795181-54C4-4ADE-8E2D-6695060885CB}" ShortID="53332607">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
@@ -652,24 +696,29 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="PickAxe" ID="{0512E2BF-8F97-4CAD-91FD-30067489278F}">
+								<AudioFileSource Name="spray2" ID="{0CD77E31-8F5E-453B-9332-FBAE0E2715C4}">
 									<PropertyList>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="284.04"/>
+										<Property Name="LoopBegin" Type="Real64" Value="1.013"/>
+										<Property Name="LoopEnd" Type="Real64" Value="2.515"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="1.73440413202318"/>
-										<Property Name="TrimEnd" Type="Real64" Value="2.27853091854026"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.8115143115942"/>
 									</PropertyList>
 									<Language>SFX</Language>
-									<AudioFile>PickAxe.wav</AudioFile>
+									<AudioFile>spray2.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="904230647"/>
+										<MediaID ID="980869954"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="PickAxe" ID="{0512E2BF-8F97-4CAD-91FD-30067489278F}" Platform="Linked"/>
+								<ActiveSource Name="spray2" ID="{0CD77E31-8F5E-453B-9332-FBAE0E2715C4}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="PickAxe_03" ID="{03301D38-46E5-4869-8D3F-01419215DCE8}" ShortID="570180126">
+						<Sound Name="spray3" ID="{30E1A84F-E28B-407D-83E9-80CD31BE873E}" ShortID="141537494">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
@@ -679,53 +728,41 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="PickAxe" ID="{5E018C2E-E070-4D2F-8E7C-D5D05D10B0E5}">
+								<AudioFileSource Name="spray3" ID="{13229CA7-3E9D-459B-92A0-BFD196694571}">
 									<PropertyList>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="399.346"/>
+										<Property Name="LoopBegin" Type="Real64" Value="1.12079517663043"/>
+										<Property Name="LoopEnd" Type="Real64" Value="2.35578457880435"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="2.9586894016866"/>
-										<Property Name="TrimEnd" Type="Real64" Value="3.50281618820368"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.94790278532609"/>
 									</PropertyList>
 									<Language>SFX</Language>
-									<AudioFile>PickAxe.wav</AudioFile>
+									<AudioFile>spray3.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="562104551"/>
+										<MediaID ID="384915686"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="PickAxe" ID="{5E018C2E-E070-4D2F-8E7C-D5D05D10B0E5}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="PickAxe_04" ID="{71A0F790-0BB8-49F1-B25F-C5FF8F903393}" ShortID="537417951">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="PickAxe" ID="{7C0104C6-F633-4DE8-8716-E5BB08023EF5}">
-									<PropertyList>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="6.49551351404759"/>
-										<Property Name="TrimEnd" Type="Real64" Value="6.88660464185674"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>PickAxe.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="545678415"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="PickAxe" ID="{7C0104C6-F633-4DE8-8716-E5BB08023EF5}" Platform="Linked"/>
+								<ActiveSource Name="spray3" ID="{13229CA7-3E9D-459B-92A0-BFD196694571}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
-				<RandomSequenceContainer Name="spray" ID="{D2F232AE-5D31-45D2-B858-6513297960CE}" ShortID="522440798">
+				<Sound Name="outsideAtmosphere" ID="{89DB16B3-7A7F-4DCC-98BD-5CAA02E8B5F8}" ShortID="530524941">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>50</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-14</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
@@ -734,7 +771,353 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
 						</Reference>
 					</ReferenceList>
-				</RandomSequenceContainer>
+					<ChildrenList>
+						<AudioFileSource Name="Outside3" ID="{9C5A9EB7-C6CD-4C79-9500-557B6C90C1C2}">
+							<PropertyList>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Outside3.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="12596277"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Outside3" ID="{9C5A9EB7-C6CD-4C79-9500-557B6C90C1C2}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<BlendContainer Name="pickRocks" ID="{2D42EC4A-26C7-42B7-9853-380D17C09349}" ShortID="625306126">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-17</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="RockShatter" ID="{61A719F5-DA37-45AD-8071-F6C98BAC3289}" ShortID="912440590">
+							<PropertyList>
+								<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>63</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>23</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{BD53C3C6-DFA2-4685-B7D7-7D06098C3D73}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-450</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{05B41E02-CFE8-4C58-895C-766D227577B6}">
+												<PropertyList>
+													<Property Name="Min" Type="Real64" Value="-300"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="RockShatter_03" ID="{27115734-A299-4CE9-BD53-E5669DEBB3A6}" ShortID="431782046">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RockShatter" ID="{34167CE7-2FEF-4D58-85EA-1BD65899EB5B}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.125397240377632"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="11.7873405954975"/>
+												<Property Name="TrimEnd" Type="Real64" Value="12.3553764642734"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RockShatter.WAV</AudioFile>
+											<MediaIDList>
+												<MediaID ID="244694714"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RockShatter" ID="{34167CE7-2FEF-4D58-85EA-1BD65899EB5B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RockShatter_02" ID="{F179E287-EE3D-40EE-BEF2-E004B34DF216}" ShortID="463864439">
+									<PropertyList>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RockShatter" ID="{32788E2B-8DDA-47D0-9BBB-40D850E063B5}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0817270061730273"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.160392016313041"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="6.61470442992012"/>
+												<Property Name="TrimEnd" Type="Real64" Value="7.27631117426037"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RockShatter.WAV</AudioFile>
+											<MediaIDList>
+												<MediaID ID="424047478"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{F6C3733C-39F8-4543-9058-6BC42C63F992}" ShortID="488066">
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom>
+																	<Effect Name="Parametric EQ (Custom)" ID="{357E5C0F-2919-4B16-92FA-A5A6EFCB3607}" ShortID="87593389" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																		<PropertyList>
+																			<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
+																			<Property Name="FrequencyBand1" Type="Real32" Value="199"/>
+																			<Property Name="FrequencyBand3" Type="Real32" Value="702"/>
+																			<Property Name="GainBand1" Type="Real32" Value="24"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+									<ActiveSourceList>
+										<ActiveSource Name="RockShatter" ID="{32788E2B-8DDA-47D0-9BBB-40D850E063B5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RockShatter_01" ID="{D4DEB6F6-CD15-4A1E-BCE5-F845CFF101E0}" ShortID="991792703">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RockShatter" ID="{342B5FEF-7621-42C8-A31B-90E91FBDDD73}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.1"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.125397240377632"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.34622488664419"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.97102829925695"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RockShatter.WAV</AudioFile>
+											<MediaIDList>
+												<MediaID ID="165098536"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RockShatter" ID="{342B5FEF-7621-42C8-A31B-90E91FBDDD73}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{85FD8FDD-8E02-49D9-B9FF-2B1CE8BE591E}" ShortID="680387585">
+												<ReferenceList>
+													<Reference Name="Effect">
+														<Custom>
+															<Effect Name="Parametric EQ (Custom)" ID="{C6E77CEA-8A54-4EA8-BB98-EB7F7E9C526E}" ShortID="302883366" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																<PropertyList>
+																	<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
+																	<Property Name="FrequencyBand1" Type="Real32" Value="300"/>
+																	<Property Name="FrequencyBand3" Type="Real32" Value="1300"/>
+																	<Property Name="GainBand1" Type="Real32" Value="12"/>
+																</PropertyList>
+															</Effect>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="PickAxe" ID="{CED7FD15-3E75-435D-8D19-ADC2AD36EE88}" ShortID="785958027">
+							<PropertyList>
+								<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="PickAxe_01" ID="{12D6D4C3-B623-47B6-9785-F820EDB15FD7}" ShortID="904673048">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PickAxe" ID="{EC37C5DB-FD65-49D7-AE24-3EB1E9ECC510}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.459106976123783"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.952221876404882"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PickAxe.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1063682463"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PickAxe" ID="{EC37C5DB-FD65-49D7-AE24-3EB1E9ECC510}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PickAxe_02" ID="{551CF912-CDE2-4A2E-84C3-B640A809D29A}" ShortID="618223326">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PickAxe" ID="{0512E2BF-8F97-4CAD-91FD-30067489278F}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.73440413202318"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.27853091854026"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PickAxe.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="904230647"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PickAxe" ID="{0512E2BF-8F97-4CAD-91FD-30067489278F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PickAxe_03" ID="{03301D38-46E5-4869-8D3F-01419215DCE8}" ShortID="570180126">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PickAxe" ID="{5E018C2E-E070-4D2F-8E7C-D5D05D10B0E5}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.9586894016866"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.50281618820368"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PickAxe.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="562104551"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PickAxe" ID="{5E018C2E-E070-4D2F-8E7C-D5D05D10B0E5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PickAxe_04" ID="{71A0F790-0BB8-49F1-B25F-C5FF8F903393}" ShortID="537417951">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2321A971-3C7B-4462-8CB7-E92E4D78C7B2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0151E647-1105-401E-9034-25128214D1C7}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PickAxe" ID="{7C0104C6-F633-4DE8-8716-E5BB08023EF5}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="6.49551351404759"/>
+												<Property Name="TrimEnd" Type="Real64" Value="6.88660464185674"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PickAxe.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="545678415"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PickAxe" ID="{7C0104C6-F633-4DE8-8716-E5BB08023EF5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</BlendContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3019770429	Play_mouseOver			\UI\Play_mouseOver	
+

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="1204302407" Type="Event" GUID="{EDD6846B-FEFC-45C4-9704-DE01F2D8123E}" Language="SFX" Hash="{D65511C8-077B-917F-B763-E3CE53D26F10}">
+			<ObjectPath>Play_mSwing</ObjectPath>
+			<ShortName>Play_mSwing</ShortName>
+			<Path>Event/Play_mSwing.bnk</Path>
+			<Media>
+				<File Id="52700418" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-074.wav</ShortName>
+					<Path>Media/52700418.wem</Path>
+					<CachePath>SFX/sfx vox mono full-074_818F3B66.wem</CachePath>
+				</File>
+				<File Id="181696581" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-076.wav</ShortName>
+					<Path>Media/181696581.wem</Path>
+					<CachePath>SFX/sfx vox mono full-076_818F3B66.wem</CachePath>
+				</File>
+				<File Id="233807270" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-075.wav</ShortName>
+					<Path>Media/233807270.wem</Path>
+					<CachePath>SFX/sfx vox mono full-075_818F3B66.wem</CachePath>
+				</File>
+				<File Id="291087524" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>sfx vox mono full-073.wav</ShortName>
+					<Path>Media/291087524.wem</Path>
+					<CachePath>SFX/sfx vox mono full-073_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="1204302407" Name="Play_mSwing" ObjectPath="\Events\Default Work Unit\Play_mSwing" GUID="{EDD6846B-FEFC-45C4-9704-DE01F2D8123E}" DurationType="OneShot" DurationMin="1.2377551" DurationMax="1.5151247">
+					<MediaRefs>
+						<MediaRef Id="52700418"/>
+						<MediaRef Id="181696581"/>
+						<MediaRef Id="233807270"/>
+						<MediaRef Id="291087524"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{9F06374C-EAFB-D79F-EC9F-41F7FA6BECAA}</FileHash>
+</SoundBanksInfo>

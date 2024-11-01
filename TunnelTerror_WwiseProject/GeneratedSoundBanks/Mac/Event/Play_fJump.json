@@ -1,0 +1,103 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "2092244148",
+    "Type": "Event",
+    "GUID": "{5A35A690-3696-4B21-9C78-E4367F4BEB15}",
+    "Language": "SFX",
+    "Hash": "{1FA71918-9821-D53A-8444-C060C218F7DA}",
+    "ObjectPath": "Play_fJump",
+    "ShortName": "Play_fJump",
+    "Path": "Event/Play_fJump.bnk",
+    "Media": [
+     {
+      "Id": "779076487",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-039.wav",
+      "Path": "Media/779076487.wem",
+      "CachePath": "SFX/sfx vox mono full-039_818F3B66.wem"
+     },
+     {
+      "Id": "797266951",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-038.wav",
+      "Path": "Media/797266951.wem",
+      "CachePath": "SFX/sfx vox mono full-038_818F3B66.wem"
+     },
+     {
+      "Id": "841536043",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-037.wav",
+      "Path": "Media/841536043.wem",
+      "CachePath": "SFX/sfx vox mono full-037_818F3B66.wem"
+     },
+     {
+      "Id": "965270959",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-036.wav",
+      "Path": "Media/965270959.wem",
+      "CachePath": "SFX/sfx vox mono full-036_818F3B66.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "2092244148",
+      "Name": "Play_fJump",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_fJump",
+      "GUID": "{5A35A690-3696-4B21-9C78-E4367F4BEB15}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.1689116",
+      "DurationMax": "1.3096598",
+      "MediaRefs": [
+       {
+        "Id": "779076487"
+       },
+       {
+        "Id": "797266951"
+       },
+       {
+        "Id": "841536043"
+       },
+       {
+        "Id": "965270959"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{03075177-4EAD-5C2E-C3A2-7D7FAD5CEFAD}"
+ }
+}

@@ -1,3 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	249772270	Play_fCough			\Default Work Unit\Play_fCough	
 
+Effect plug-ins	ID	Name	Type				Notes
+	1990128658	Room_Medium	Wwise RoomVerb			
+

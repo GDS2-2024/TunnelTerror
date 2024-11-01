@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D38330A2-6D28-435D-B8F0-3212ED59C31F}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="UI" ID="{D38330A2-6D28-435D-B8F0-3212ED59C31F}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_mouseOver" ID="{F95BB0FE-74F3-4CC8-AF85-8F50BF4A005D}">
+					<ChildrenList>
+						<Action Name="" ID="{BEDACD2F-254F-4A3F-9203-35C9BE48C9AA}" ShortID="157191001">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mouseOver" ID="{1B839034-E5B4-44C3-BD35-9A59B8065DC3}" WorkUnitID="{8542D7A7-AAC7-4BBE-AFBB-1B47BCA3816E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_select" ID="{D9B7304E-3726-4488-B370-CD4C711A247C}">
+					<ChildrenList>
+						<Action Name="" ID="{CB959E8F-B442-4EBA-95C6-9D6025F7658F}" ShortID="342681238">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="select" ID="{E42BBE22-F15F-43DB-9166-2318D011B6F8}" WorkUnitID="{8542D7A7-AAC7-4BBE-AFBB-1B47BCA3816E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

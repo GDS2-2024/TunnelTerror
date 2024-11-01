@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "3886625383",
+    "Type": "Event",
+    "GUID": "{3CBB73DE-9644-4A51-BD28-F3D5F4A7DABD}",
+    "Language": "SFX",
+    "Hash": "{F49F0952-5573-DF4E-D1C4-7C665E1FE166}",
+    "ObjectPath": "Stop_caveAtmosphere",
+    "ShortName": "Stop_caveAtmosphere",
+    "Path": "Event/Stop_caveAtmosphere.bnk",
+    "Events": [
+     {
+      "Id": "3886625383",
+      "Name": "Stop_caveAtmosphere",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_caveAtmosphere",
+      "GUID": "{3CBB73DE-9644-4A51-BD28-F3D5F4A7DABD}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C192BD1C-7BB7-A45A-0E56-14E69334F554}"
+ }
+}

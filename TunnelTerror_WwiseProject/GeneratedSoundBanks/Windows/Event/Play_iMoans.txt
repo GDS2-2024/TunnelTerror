@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1668514525	Play_iMoans			\Default Work Unit\Play_iMoans	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1990128658	Room_Medium	Wwise RoomVerb			
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="1139562193" Type="Event" GUID="{E1DA4D58-2E31-4BC9-BF4F-FAEB55221E93}" Language="SFX" Hash="{4DA849F3-5FB4-94C8-E35E-7D53C75734BE}">
+			<ObjectPath>Stop_outsideAtmosphere</ObjectPath>
+			<ShortName>Stop_outsideAtmosphere</ShortName>
+			<Path>Event/Stop_outsideAtmosphere.bnk</Path>
+			<Events>
+				<Event Id="1139562193" Name="Stop_outsideAtmosphere" ObjectPath="\Events\Default Work Unit\Stop_outsideAtmosphere" GUID="{E1DA4D58-2E31-4BC9-BF4F-FAEB55221E93}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{724B2FFF-EBE4-9F37-B2FD-B1F79DA2E166}</FileHash>
+</SoundBanksInfo>

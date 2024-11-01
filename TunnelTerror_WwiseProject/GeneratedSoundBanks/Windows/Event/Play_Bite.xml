@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1810912708" Type="Event" GUID="{E287937B-CDED-4F16-913F-DB393E5E8E26}" Language="SFX" Hash="{5ABA6FAA-AA73-C0B5-8A3D-EEFFFD75A3D5}">
+		<SoundBank Id="1810912708" Type="Event" GUID="{E287937B-CDED-4F16-913F-DB393E5E8E26}" Language="SFX" Hash="{37D69EDF-1E6D-D431-6208-07947E52FA64}">
 			<ObjectPath>Play_Bite</ObjectPath>
 			<ShortName>Play_Bite</ShortName>
 			<Path>Event/Play_Bite.bnk</Path>
@@ -32,8 +32,13 @@
 					<CachePath>SFX/Bite_5CD7C961.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="484890516" Name="Church_Small_Wood" ObjectPath="\Effects\Factory Effects\RoomVerb\Cathedrals\Church_Small_Wood" GUID="{940CCB47-F031-4C6A-B0E6-726CAC418C02}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
-				<Event Id="1810912708" Name="Play_Bite" ObjectPath="\Events\Default Work Unit\Play_Bite" GUID="{E287937B-CDED-4F16-913F-DB393E5E8E26}" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.42073348" DurationMax="0.7678617">
+				<Event Id="1810912708" Name="Play_Bite" ObjectPath="\Events\Default Work Unit\Play_Bite" GUID="{E287937B-CDED-4F16-913F-DB393E5E8E26}" MaxAttenuation="800" DurationType="OneShot" DurationMin="0.42073348" DurationMax="0.7678617">
 					<MediaRefs>
 						<MediaRef Id="140177471"/>
 						<MediaRef Id="165520342"/>
@@ -41,9 +46,14 @@
 						<MediaRef Id="856751788"/>
 						<MediaRef Id="1044280572"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="484890516"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B976B48C-B289-256D-9165-B51905351942}</FileHash>
+	<FileHash>{FFE884E2-6515-6508-237C-BE19C4565D7D}</FileHash>
 </SoundBanksInfo>

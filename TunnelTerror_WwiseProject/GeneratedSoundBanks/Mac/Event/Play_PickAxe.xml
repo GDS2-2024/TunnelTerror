@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="821056363" Type="Event" GUID="{3ADEA1F1-F0F5-4552-8C26-899603130220}" Language="SFX" Hash="{ED974193-14FC-F7A3-F04D-F37566DE2417}">
+		<SoundBank Id="821056363" Type="Event" GUID="{3ADEA1F1-F0F5-4552-8C26-899603130220}" Language="SFX" Hash="{024C9924-71D6-D14B-DD97-A93A1F6E4008}">
 			<ObjectPath>Play_PickAxe</ObjectPath>
 			<ShortName>Play_PickAxe</ShortName>
 			<Path>Event/Play_PickAxe.bnk</Path>
@@ -28,7 +28,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="821056363" Name="Play_PickAxe" ObjectPath="\Events\Default Work Unit\Play_PickAxe" GUID="{3ADEA1F1-F0F5-4552-8C26-899603130220}" MaxAttenuation="200" DurationType="OneShot" DurationMin="0.39109114" DurationMax="0.5441268">
+				<Event Id="821056363" Name="Play_PickAxe" ObjectPath="\Events\Default Work Unit\Play_PickAxe" GUID="{3ADEA1F1-F0F5-4552-8C26-899603130220}" DurationType="OneShot" DurationMin="0.39109114" DurationMax="0.5441268">
 					<MediaRefs>
 						<MediaRef Id="545678415"/>
 						<MediaRef Id="562104551"/>
@@ -39,5 +39,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9B0CAFDD-56A8-78AC-FA12-23107EDAC848}</FileHash>
+	<FileHash>{FA50B6A8-BC9B-78F3-9585-6C97E0EB676D}</FileHash>
 </SoundBanksInfo>

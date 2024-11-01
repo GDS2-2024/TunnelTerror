@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "848292664",
+    "Type": "Event",
+    "GUID": "{DAABF8FE-0337-462B-86E7-CEAE7A83737D}",
+    "Language": "SFX",
+    "Hash": "{817CB1CA-958E-D5F3-FDD9-A4CC3AA3E766}",
+    "ObjectPath": "Play_plantStretch",
+    "ShortName": "Play_plantStretch",
+    "Path": "Event/Play_plantStretch.bnk",
+    "Media": [
+     {
+      "Id": "109334872",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "stretch.wav",
+      "Path": "Media/109334872.wem",
+      "CachePath": "SFX/stretch_DDFAF94C.wem"
+     },
+     {
+      "Id": "283930358",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "stretch.wav",
+      "Path": "Media/283930358.wem",
+      "CachePath": "SFX/stretch_4BEFB7C6.wem"
+     },
+     {
+      "Id": "993867576",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "stretch.wav",
+      "Path": "Media/993867576.wem",
+      "CachePath": "SFX/stretch_C1050841.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "848292664",
+      "Name": "Play_plantStretch",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_plantStretch",
+      "GUID": "{DAABF8FE-0337-462B-86E7-CEAE7A83737D}",
+      "MaxAttenuation": "400",
+      "DurationType": "OneShot",
+      "DurationMin": "0.7337021",
+      "DurationMax": "0.8894372",
+      "MediaRefs": [
+       {
+        "Id": "109334872"
+       },
+       {
+        "Id": "283930358"
+       },
+       {
+        "Id": "993867576"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{8D792601-D5FA-959D-FEBC-375510B452E7}"
+ }
+}

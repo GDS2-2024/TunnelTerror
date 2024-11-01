@@ -1,0 +1,103 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "3141045618",
+    "Type": "Event",
+    "GUID": "{B46FB24D-D356-43B8-A725-11CEEAA14A3D}",
+    "Language": "SFX",
+    "Hash": "{8184DBE8-9665-0B58-ABBD-51050486491C}",
+    "ObjectPath": "Play_fSwing",
+    "ShortName": "Play_fSwing",
+    "Path": "Event/Play_fSwing.bnk",
+    "Media": [
+     {
+      "Id": "291087524",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-073.wav",
+      "Path": "Media/291087524.wem",
+      "CachePath": "SFX/sfx vox mono full-073_818F3B66.wem"
+     },
+     {
+      "Id": "779076487",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-039.wav",
+      "Path": "Media/779076487.wem",
+      "CachePath": "SFX/sfx vox mono full-039_818F3B66.wem"
+     },
+     {
+      "Id": "841536043",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-037.wav",
+      "Path": "Media/841536043.wem",
+      "CachePath": "SFX/sfx vox mono full-037_818F3B66.wem"
+     },
+     {
+      "Id": "965270959",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-036.wav",
+      "Path": "Media/965270959.wem",
+      "CachePath": "SFX/sfx vox mono full-036_818F3B66.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "3141045618",
+      "Name": "Play_fSwing",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_fSwing",
+      "GUID": "{B46FB24D-D356-43B8-A725-11CEEAA14A3D}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.1689116",
+      "DurationMax": "1.3096598",
+      "MediaRefs": [
+       {
+        "Id": "291087524"
+       },
+       {
+        "Id": "779076487"
+       },
+       {
+        "Id": "841536043"
+       },
+       {
+        "Id": "965270959"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F100BF4E-BD0C-A14B-9825-9E42FB973B2F}"
+ }
+}

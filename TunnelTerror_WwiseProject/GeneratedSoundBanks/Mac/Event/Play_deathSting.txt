@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3046905735	Play_deathSting			\Default Work Unit\Play_deathSting	
+

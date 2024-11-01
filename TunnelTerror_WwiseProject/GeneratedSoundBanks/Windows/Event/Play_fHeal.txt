@@ -1,3 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	3279106990	Play_fHeal			\Default Work Unit\Play_fHeal	
 
+Effect plug-ins	ID	Name	Type				Notes
+	1990128658	Room_Medium	Wwise RoomVerb			
+

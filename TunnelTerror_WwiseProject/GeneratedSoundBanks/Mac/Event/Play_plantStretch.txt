@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	848292664	Play_plantStretch			\Default Work Unit\Play_plantStretch	
+

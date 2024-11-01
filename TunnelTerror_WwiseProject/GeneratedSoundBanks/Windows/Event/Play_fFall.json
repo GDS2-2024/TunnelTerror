@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5A8512E4-12F7-4DE2-A25A-85A8AFAFA131}",
     "Language": "SFX",
-    "Hash": "{8CB85FA7-FE19-9161-2B8E-EEC070803C35}",
+    "Hash": "{A5B659C4-DB7B-C928-5E0F-A74A3DB4043B}",
     "ObjectPath": "Play_fFall",
     "ShortName": "Play_fFall",
     "Path": "Event/Play_fFall.bnk",
@@ -43,6 +43,18 @@
       "CachePath": "SFX/sfx vox mono full-033_818F3B66.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "3904875299",
@@ -62,11 +74,18 @@
        {
         "Id": "757661738"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{B8ABA366-383E-DEFD-9B7B-62720956F3F2}"
+  "FileHash": "{898C2FC9-796B-3AA8-2F59-6CFC05093186}"
  }
 }

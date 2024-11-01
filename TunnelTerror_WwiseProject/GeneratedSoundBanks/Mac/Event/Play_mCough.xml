@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1030680943" Type="Event" GUID="{7279E098-5799-4D47-98FB-C7C5EBB03C57}" Language="SFX" Hash="{F7B8BCBF-A663-87A0-3AEE-23AC58F4F366}">
+		<SoundBank Id="1030680943" Type="Event" GUID="{7279E098-5799-4D47-98FB-C7C5EBB03C57}" Language="SFX" Hash="{1FE8B3E3-644C-53B9-4F8A-3987FAFB5223}">
 			<ObjectPath>Play_mCough</ObjectPath>
 			<ShortName>Play_mCough</ShortName>
 			<Path>Event/Play_mCough.bnk</Path>
@@ -27,6 +27,11 @@
 					<CachePath>SFX/sfx vox mono full-085_818F3B66.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="1030680943" Name="Play_mCough" ObjectPath="\Events\Default Work Unit\Play_mCough" GUID="{7279E098-5799-4D47-98FB-C7C5EBB03C57}" DurationType="Infinite">
 					<MediaRefs>
@@ -35,9 +40,14 @@
 						<MediaRef Id="333364772"/>
 						<MediaRef Id="1058583552"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{071BD815-7D89-075F-2C46-D2056E2A8BFE}</FileHash>
+	<FileHash>{3CBEE24F-0D19-48E7-49BF-304D8DC717A0}</FileHash>
 </SoundBanksInfo>

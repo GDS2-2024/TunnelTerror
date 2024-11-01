@@ -3,12 +3,12 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{E9C5DBA2-A2C7-48FB-8CC2-68EE12224ADB}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Atmosphere" ID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}">
+				<Event Name="Play_caveAtmosphere" ID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}">
 					<ChildrenList>
 						<Action Name="" ID="{98593568-A264-4070-BFA7-473635F94FD3}" ShortID="461207614">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Atmosphere" ID="{D64C652C-D9F1-4614-95C7-BD8BA9D156E8}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+									<ObjectRef Name="caveAtmosphere" ID="{D64C652C-D9F1-4614-95C7-BD8BA9D156E8}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -264,6 +264,219 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="mCough" ID="{7064832F-854B-4F5D-83D3-66110F6B5C77}" WorkUnitID="{F6EB16DF-A728-408B-941A-B3FC6594F678}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_outsideAtmosphere" ID="{0E57EA07-3481-4CD4-AB5C-369B26ABFEEC}">
+					<ChildrenList>
+						<Action Name="" ID="{EAC75C27-D36C-4024-A075-C28E6D2C7B73}" ShortID="148368857">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{5FAD0B44-E081-4166-BB8D-C17E6C3B1BA3}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="FadeTime" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{71A9B0B5-577A-4E70-964C-95BF42A8613B}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="outsideAtmosphere" ID="{89DB16B3-7A7F-4DCC-98BD-5CAA02E8B5F8}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B31AB216-B531-42DE-B7AD-7C390F728435}" ShortID="737072069">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+								<Property Name="SeekPercent" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{07153A53-A996-42BA-A758-44764762197D}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="SeekTime" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4052DEE5-B7CB-414E-B4F5-8B9B0E4F82B2}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="10"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="outsideAtmosphere" ID="{89DB16B3-7A7F-4DCC-98BD-5CAA02E8B5F8}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_outsideAtmosphere" ID="{E1DA4D58-2E31-4BC9-BF4F-FAEB55221E93}">
+					<ChildrenList>
+						<Action Name="" ID="{D1581FB2-64DB-4373-AC67-6F4C921F9383}" ShortID="545954471">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="outsideAtmosphere" ID="{89DB16B3-7A7F-4DCC-98BD-5CAA02E8B5F8}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_caveAtmosphere" ID="{3CBB73DE-9644-4A51-BD28-F3D5F4A7DABD}">
+					<ChildrenList>
+						<Action Name="" ID="{3C58A7A4-D314-4985-85C3-94D40F31C876}" ShortID="509121220">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="caveAtmosphere" ID="{D64C652C-D9F1-4614-95C7-BD8BA9D156E8}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_fJump" ID="{5A35A690-3696-4B21-9C78-E4367F4BEB15}">
+					<ChildrenList>
+						<Action Name="" ID="{6EACF531-602D-4C65-ACA7-FCBEFC03F98A}" ShortID="315235476">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fJump" ID="{8DA7970C-6C1D-4F68-978F-353A3620E4D1}" WorkUnitID="{E6DED6F4-79E4-46B1-A000-A2D010AD7865}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_fSwing" ID="{B46FB24D-D356-43B8-A725-11CEEAA14A3D}">
+					<ChildrenList>
+						<Action Name="" ID="{C880EB79-B768-40D2-83AB-4DDB88C63E7A}" ShortID="492849029">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fSwing" ID="{DAB8CC82-5E03-48F7-B1F5-13D330C40670}" WorkUnitID="{E6DED6F4-79E4-46B1-A000-A2D010AD7865}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_mJump" ID="{E70C83B2-4C7F-49EC-8E6A-4F6DA32DD0B7}">
+					<ChildrenList>
+						<Action Name="" ID="{89FA0E66-FD30-42A2-AD9A-F0A4A40FF9A0}" ShortID="580819148">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mJump" ID="{DFAA7BCD-A423-4991-943E-6F5D1E2C888E}" WorkUnitID="{F6EB16DF-A728-408B-941A-B3FC6594F678}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_mSwing" ID="{EDD6846B-FEFC-45C4-9704-DE01F2D8123E}">
+					<ChildrenList>
+						<Action Name="" ID="{F4C2D5ED-002C-4B84-8FC4-3D75020627A9}" ShortID="286289771">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mSwing" ID="{1C2141AE-C667-4718-93B1-A2A4560957F4}" WorkUnitID="{F6EB16DF-A728-408B-941A-B3FC6594F678}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_iMoans" ID="{07852589-1383-4156-9440-788054B24A18}">
+					<ChildrenList>
+						<Action Name="" ID="{D031C489-34A3-4968-B684-6792BB5909BB}" ShortID="842795436">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="iMoans" ID="{86A8DB10-2AB9-4E8F-99AE-506D38B638DB}" WorkUnitID="{B48A2A45-95D3-4666-9C09-54474C7DED67}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_plantStretch" ID="{DAABF8FE-0337-462B-86E7-CEAE7A83737D}">
+					<ChildrenList>
+						<Action Name="" ID="{1F8C66B2-0450-46B6-B97D-F09C59A4F02F}" ShortID="57540014">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="stretch" ID="{F01B7411-D077-4251-A484-A2BCBCDFC57F}" WorkUnitID="{AD7EEDAC-93FE-4FAF-8E0F-62A65979BC6B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_pickRocks" ID="{1834CF08-9A28-4EC2-A83F-467C2A01EE72}">
+					<ChildrenList>
+						<Action Name="" ID="{1473E3BF-9075-4996-BD75-AC8127E315F6}" ShortID="880438050">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pickRocks" ID="{2D42EC4A-26C7-42B7-9853-380D17C09349}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_spray" ID="{28C0F76F-9DB4-45B5-8CA9-456279189419}">
+					<ChildrenList>
+						<Action Name="" ID="{36B39C18-4239-44B1-BF53-791EDF0B249D}" ShortID="351545802">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="spray" ID="{D2F232AE-5D31-45D2-B858-6513297960CE}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_spray" ID="{3C9EE3BE-450E-4DD8-B9B9-FF78479BAB18}">
+					<ChildrenList>
+						<Action Name="" ID="{D8DF58CD-7967-42C5-A0CD-D6C04DFEB24C}" ShortID="114903644">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="spray" ID="{D2F232AE-5D31-45D2-B858-6513297960CE}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_rustle" ID="{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}">
+					<ChildrenList>
+						<Action Name="" ID="{2DBC32AA-FB71-41C3-84F5-2B983C413D67}" ShortID="390146956">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="rustle" ID="{9E8579BF-E99B-485E-B110-7E1D547C1B74}" WorkUnitID="{AD7EEDAC-93FE-4FAF-8E0F-62A65979BC6B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_deathSting" ID="{038A761F-CFC6-4C76-93AE-6D95C140D559}">
+					<ChildrenList>
+						<Action Name="" ID="{AA81A51B-4647-4B30-8AA7-496DFA4D3ADB}" ShortID="79551724">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="deathSting" ID="{DC8190F8-E907-47CB-844A-FAE29C5C6168}" WorkUnitID="{A6DC2295-4579-4549-B564-B5309C472D27}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

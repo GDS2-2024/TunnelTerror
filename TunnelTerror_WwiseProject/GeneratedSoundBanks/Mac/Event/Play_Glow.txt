@@ -1,3 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	721983777	Play_Glow			\Default Work Unit\Play_Glow	
 
+Effect plug-ins	ID	Name	Type				Notes
+	3164629247	Holy	Wwise RoomVerb			
+

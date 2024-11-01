@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1063654281" Type="Event" GUID="{DABE9434-237E-4C4C-B6AD-CE89FC21E0C0}" Language="SFX" Hash="{8EFB4771-734B-68BB-4C0F-F636AD35B95D}">
+		<SoundBank Id="1063654281" Type="Event" GUID="{DABE9434-237E-4C4C-B6AD-CE89FC21E0C0}" Language="SFX" Hash="{6ED6B536-3F33-F3F2-4570-E1CBB2E90558}">
 			<ObjectPath>Stop_mCough</ObjectPath>
 			<ShortName>Stop_mCough</ShortName>
 			<Path>Event/Stop_mCough.bnk</Path>
@@ -10,5 +10,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4D989773-926F-E1D4-50B3-33DBF28AA264}</FileHash>
+	<FileHash>{ADE1F88F-70E6-DC92-27DC-0F864E1468E3}</FileHash>
 </SoundBanksInfo>

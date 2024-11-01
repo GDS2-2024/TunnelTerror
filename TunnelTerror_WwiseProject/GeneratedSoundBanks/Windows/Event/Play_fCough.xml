@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="249772270" Type="Event" GUID="{525BAA67-25EB-498C-A659-9A06057D697A}" Language="SFX" Hash="{B874DDE7-61F6-1A62-C73C-918413FF0D90}">
+		<SoundBank Id="249772270" Type="Event" GUID="{525BAA67-25EB-498C-A659-9A06057D697A}" Language="SFX" Hash="{9F485DA8-3970-8DB5-CA10-2FB1645E0CE8}">
 			<ObjectPath>Play_fCough</ObjectPath>
 			<ShortName>Play_fCough</ShortName>
 			<Path>Event/Play_fCough.bnk</Path>
@@ -27,6 +27,11 @@
 					<CachePath>SFX/sfx vox mono full-053_818F3B66.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="249772270" Name="Play_fCough" ObjectPath="\Events\Default Work Unit\Play_fCough" GUID="{525BAA67-25EB-498C-A659-9A06057D697A}" DurationType="Infinite">
 					<MediaRefs>
@@ -35,9 +40,14 @@
 						<MediaRef Id="702522122"/>
 						<MediaRef Id="870190361"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{75D209B3-1D74-F89B-E18D-4074513178B2}</FileHash>
+	<FileHash>{BD8304A8-F4FC-7080-662C-6BD8D91DFC2B}</FileHash>
 </SoundBanksInfo>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="1202343709" Type="Event" GUID="{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}" Language="SFX" Hash="{ACA798A7-69E1-EFDF-99D2-5B9C7FF94DE1}">
+			<ObjectPath>Play_rustle</ObjectPath>
+			<ShortName>Play_rustle</ShortName>
+			<Path>Event/Play_rustle.bnk</Path>
+			<Media>
+				<File Id="20832412" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>rustle1.wav</ShortName>
+					<Path>Media/20832412.wem</Path>
+					<CachePath>SFX/rustle1_89314C5E.wem</CachePath>
+				</File>
+				<File Id="631883680" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>rustle2.wav</ShortName>
+					<Path>Media/631883680.wem</Path>
+					<CachePath>SFX/rustle2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="805458352" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>rustle1.wav</ShortName>
+					<Path>Media/805458352.wem</Path>
+					<CachePath>SFX/rustle1_07538E64.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1202343709" Name="Play_rustle" ObjectPath="\Events\Default Work Unit\Play_rustle" GUID="{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}" MaxAttenuation="400" DurationType="OneShot" DurationMin="0.4231654" DurationMax="0.81324357">
+					<MediaRefs>
+						<MediaRef Id="20832412"/>
+						<MediaRef Id="631883680"/>
+						<MediaRef Id="805458352"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{13716CA2-E08A-63C9-F50F-89EBD78A8226}</FileHash>
+</SoundBanksInfo>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1805011878" Type="Event" GUID="{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}" Language="SFX" Hash="{73862A0F-FC9B-8696-E598-9123FA4E3400}">
+		<SoundBank Id="1805011878" Type="Event" GUID="{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}" Language="SFX" Hash="{55946853-902E-E831-36E5-E0B50096E22E}">
 			<ObjectPath>Play_PlayerFootsteps</ObjectPath>
 			<ShortName>Play_PlayerFootsteps</ShortName>
 			<Path>Event/Play_PlayerFootsteps.bnk</Path>
@@ -91,5 +91,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3CD54BBF-67FF-2B39-6CB6-202816527B21}</FileHash>
+	<FileHash>{4B3DABDD-8283-A597-E337-9499903D7A58}</FileHash>
 </SoundBanksInfo>

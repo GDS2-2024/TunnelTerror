@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{BE5A0D3A-492D-4FBE-9071-C77D396C3AEE}",
     "Language": "SFX",
-    "Hash": "{A0A44E3F-7F22-7958-AD35-C1B465408631}",
+    "Hash": "{364BDA94-B324-CDF0-38A2-CDA391FFEDCF}",
     "ObjectPath": "Stop_Glow",
     "ShortName": "Stop_Glow",
     "Path": "Event/Stop_Glow.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{815B9108-0BBD-6991-3D5E-A0C233ED4A4B}"
+  "FileHash": "{F864CDDE-02DE-9367-DC20-DE5985370148}"
  }
 }

@@ -18,7 +18,7 @@
     "Type": "Event",
     "GUID": "{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}",
     "Language": "SFX",
-    "Hash": "{91EBBBDF-17A8-32D9-43C5-223CECEC7346}",
+    "Hash": "{0D4BC75B-5DCD-41D8-E6F1-EE579AC4B017}",
     "ObjectPath": "Play_Grab",
     "ShortName": "Play_Grab",
     "Path": "Event/Play_Grab.bnk",
@@ -80,7 +80,7 @@
     "Type": "Event",
     "GUID": "{59B1A844-A95F-4B37-8C0F-664C08A82F28}",
     "Language": "SFX",
-    "Hash": "{32BC9457-6583-2CCB-03F0-EA10F0370DC4}",
+    "Hash": "{5E211564-8C63-EE82-2B9D-FA4B229B1419}",
     "ObjectPath": "Play_mFall",
     "ShortName": "Play_mFall",
     "Path": "Event/Play_mFall.bnk",
@@ -122,6 +122,18 @@
       "CachePath": "SFX/sfx vox mono full-024_818F3B66.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "25938892",
@@ -144,7 +156,14 @@
        {
         "Id": "755896194"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
      }
     ]
    },
@@ -153,7 +172,7 @@
     "Type": "Event",
     "GUID": "{525BAA67-25EB-498C-A659-9A06057D697A}",
     "Language": "SFX",
-    "Hash": "{B874DDE7-61F6-1A62-C73C-918413FF0D90}",
+    "Hash": "{9F485DA8-3970-8DB5-CA10-2FB1645E0CE8}",
     "ObjectPath": "Play_fCough",
     "ShortName": "Play_fCough",
     "Path": "Event/Play_fCough.bnk",
@@ -195,6 +214,18 @@
       "CachePath": "SFX/sfx vox mono full-053_818F3B66.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "249772270",
@@ -215,7 +246,14 @@
        {
         "Id": "870190361"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
      }
     ]
    },
@@ -224,7 +262,7 @@
     "Type": "Event",
     "GUID": "{AA3B480F-E159-421B-A0C2-0C2A86F882C2}",
     "Language": "SFX",
-    "Hash": "{59123A40-72B1-841A-ABFD-6173445E895B}",
+    "Hash": "{72201C87-6E37-235A-B6BA-3FFA5E9CC712}",
     "ObjectPath": "Play_Glow",
     "ShortName": "Play_Glow",
     "Path": "Event/Play_Glow.bnk",
@@ -239,6 +277,18 @@
       "CachePath": "SFX/Glow_36B74D48.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "3164629247",
+       "Name": "Holy",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Cathedrals\\Holy",
+       "GUID": "{CC7B8638-C670-4AD5-B3FB-331EA81037F6}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "721983777",
@@ -251,7 +301,14 @@
        {
         "Id": "733000276"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3164629247"
+        }
+       ]
+      }
      }
     ]
    },
@@ -260,7 +317,7 @@
     "Type": "Event",
     "GUID": "{8C87B0AB-D43F-41E4-A3FE-5948C382CB16}",
     "Language": "SFX",
-    "Hash": "{700A2BF6-75F0-85B5-CEED-B8D4D3E63828}",
+    "Hash": "{3C7AF7AF-0091-FE2E-163D-2F9A8A6551E3}",
     "ObjectPath": "Stop_fCough",
     "ShortName": "Stop_fCough",
     "Path": "Event/Stop_fCough.bnk",
@@ -282,7 +339,7 @@
     "Type": "Event",
     "GUID": "{3ADEA1F1-F0F5-4552-8C26-899603130220}",
     "Language": "SFX",
-    "Hash": "{ED974193-14FC-F7A3-F04D-F37566DE2417}",
+    "Hash": "{024C9924-71D6-D14B-DD97-A93A1F6E4008}",
     "ObjectPath": "Play_PickAxe",
     "ShortName": "Play_PickAxe",
     "Path": "Event/Play_PickAxe.bnk",
@@ -330,7 +387,6 @@
       "Name": "Play_PickAxe",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_PickAxe",
       "GUID": "{3ADEA1F1-F0F5-4552-8C26-899603130220}",
-      "MaxAttenuation": "200",
       "DurationType": "OneShot",
       "DurationMin": "0.39109114",
       "DurationMax": "0.5441268",
@@ -352,11 +408,73 @@
     ]
    },
    {
+    "Id": "848292664",
+    "Type": "Event",
+    "GUID": "{DAABF8FE-0337-462B-86E7-CEAE7A83737D}",
+    "Language": "SFX",
+    "Hash": "{817CB1CA-958E-D5F3-FDD9-A4CC3AA3E766}",
+    "ObjectPath": "Play_plantStretch",
+    "ShortName": "Play_plantStretch",
+    "Path": "Event/Play_plantStretch.bnk",
+    "Media": [
+     {
+      "Id": "109334872",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "stretch.wav",
+      "Path": "Media/109334872.wem",
+      "CachePath": "SFX/stretch_DDFAF94C.wem"
+     },
+     {
+      "Id": "283930358",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "stretch.wav",
+      "Path": "Media/283930358.wem",
+      "CachePath": "SFX/stretch_4BEFB7C6.wem"
+     },
+     {
+      "Id": "993867576",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "stretch.wav",
+      "Path": "Media/993867576.wem",
+      "CachePath": "SFX/stretch_C1050841.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "848292664",
+      "Name": "Play_plantStretch",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_plantStretch",
+      "GUID": "{DAABF8FE-0337-462B-86E7-CEAE7A83737D}",
+      "MaxAttenuation": "400",
+      "DurationType": "OneShot",
+      "DurationMin": "0.7337021",
+      "DurationMax": "0.8894372",
+      "MediaRefs": [
+       {
+        "Id": "109334872"
+       },
+       {
+        "Id": "283930358"
+       },
+       {
+        "Id": "993867576"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "1030680943",
     "Type": "Event",
     "GUID": "{7279E098-5799-4D47-98FB-C7C5EBB03C57}",
     "Language": "SFX",
-    "Hash": "{F7B8BCBF-A663-87A0-3AEE-23AC58F4F366}",
+    "Hash": "{1FE8B3E3-644C-53B9-4F8A-3987FAFB5223}",
     "ObjectPath": "Play_mCough",
     "ShortName": "Play_mCough",
     "Path": "Event/Play_mCough.bnk",
@@ -398,6 +516,18 @@
       "CachePath": "SFX/sfx vox mono full-085_818F3B66.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1030680943",
@@ -418,6 +548,86 @@
        {
         "Id": "1058583552"
        }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "Id": "1042987450",
+    "Type": "Event",
+    "GUID": "{D9B7304E-3726-4488-B370-CD4C711A247C}",
+    "Language": "SFX",
+    "Hash": "{8B0CB800-CE71-A0FA-537C-9FD59C298258}",
+    "ObjectPath": "Play_select",
+    "ShortName": "Play_select",
+    "Path": "Event/Play_select.bnk",
+    "Media": [
+     {
+      "Id": "498364355",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui7.wav",
+      "Path": "Media/498364355.wem",
+      "CachePath": "SFX/ui7_6A768392.wem"
+     },
+     {
+      "Id": "775253208",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui6.wav",
+      "Path": "Media/775253208.wem",
+      "CachePath": "SFX/ui6_4ABD8B54.wem"
+     },
+     {
+      "Id": "956966152",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui8.wav",
+      "Path": "Media/956966152.wem",
+      "CachePath": "SFX/ui8_68132823.wem"
+     },
+     {
+      "Id": "1016949203",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui5.wav",
+      "Path": "Media/1016949203.wem",
+      "CachePath": "SFX/ui5_C092C985.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1042987450",
+      "Name": "Play_select",
+      "ObjectPath": "\\Events\\UI\\Play_select",
+      "GUID": "{D9B7304E-3726-4488-B370-CD4C711A247C}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2667581",
+      "DurationMax": "1.4073935",
+      "MediaRefs": [
+       {
+        "Id": "498364355"
+       },
+       {
+        "Id": "775253208"
+       },
+       {
+        "Id": "956966152"
+       },
+       {
+        "Id": "1016949203"
+       }
       ]
      }
     ]
@@ -427,7 +637,7 @@
     "Type": "Event",
     "GUID": "{DABE9434-237E-4C4C-B6AD-CE89FC21E0C0}",
     "Language": "SFX",
-    "Hash": "{8EFB4771-734B-68BB-4C0F-F636AD35B95D}",
+    "Hash": "{6ED6B536-3F33-F3F2-4570-E1CBB2E90558}",
     "ObjectPath": "Stop_mCough",
     "ShortName": "Stop_mCough",
     "Path": "Event/Stop_mCough.bnk",
@@ -449,11 +659,20 @@
     "Type": "Event",
     "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
     "Language": "SFX",
-    "Hash": "{D3630A97-5E3B-8CAA-1043-7D683C545A8D}",
+    "Hash": "{DFF7AB17-3017-660D-56C7-EA668672296E}",
     "ObjectPath": "Play_RockFall",
     "ShortName": "Play_RockFall",
     "Path": "Event/Play_RockFall.bnk",
     "Media": [
+     {
+      "Id": "81005783",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "524307__bertsz__earthquake-in-cave.wav",
+      "Path": "Media/81005783.wem",
+      "CachePath": "SFX/524307__bertsz__earthquake-in-cave_579A8C4A.wem"
+     },
      {
       "Id": "287643081",
       "Language": "SFX",
@@ -497,7 +716,7 @@
       "Location": "Loose",
       "ShortName": "RockHitGround\\RockHitGround_1.wav",
       "Path": "Media/874392032.wem",
-      "CachePath": "SFX/RockHitGround/RockHitGround_1_4FCD9C49.wem"
+      "CachePath": "SFX/RockHitGround/RockHitGround_1_F8855C92.wem"
      },
      {
       "Id": "953321177",
@@ -506,7 +725,7 @@
       "Location": "Loose",
       "ShortName": "RockHitGround\\RockHitGround_2.wav",
       "Path": "Media/953321177.wem",
-      "CachePath": "SFX/RockHitGround/RockHitGround_2_D678C78D.wem"
+      "CachePath": "SFX/RockHitGround/RockHitGround_2_E7AFDC3B.wem"
      },
      {
       "Id": "953676981",
@@ -515,7 +734,7 @@
       "Location": "Loose",
       "ShortName": "RockHitGround\\RockHitGround_5.wav",
       "Path": "Media/953676981.wem",
-      "CachePath": "SFX/RockHitGround/RockHitGround_5_8F54B111.wem"
+      "CachePath": "SFX/RockHitGround/RockHitGround_5_7F9ED8C3.wem"
      }
     ],
     "Plugins": {
@@ -523,7 +742,7 @@
       {
        "Id": "8525658",
        "Name": "Parametric EQ (Custom)",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\Rocks\\RockFall\\RockShatter\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Rocks\\RockFall\\hitShatter\\RockShatter\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
        "GUID": "{0DE8CC0F-A379-4320-9F31-EF7805AE6B3A}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
@@ -531,7 +750,7 @@
       {
        "Id": "493556205",
        "Name": "Parametric EQ (Custom)",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\Rocks\\RockFall\\RockHitGround\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Rocks\\RockFall\\hitShatter\\RockHitGround\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
        "GUID": "{73E7BEE8-E9DC-4BD1-BEAE-6F7E35BD8555}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
@@ -539,7 +758,7 @@
       {
        "Id": "744592701",
        "Name": "Parametric EQ (Custom)",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\Rocks\\RockFall\\RockShatter\\RockShatter_02\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Rocks\\RockFall\\hitShatter\\RockShatter\\RockShatter_02\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
        "GUID": "{1ECBDC60-D6F4-44E4-B12F-A42A65346C00}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
@@ -564,9 +783,12 @@
       "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
       "MaxAttenuation": "800",
       "DurationType": "OneShot",
-      "DurationMin": "7.2483253",
-      "DurationMax": "9.918686",
+      "DurationMin": "7.021866",
+      "DurationMax": "9.555864",
       "MediaRefs": [
+       {
+        "Id": "81005783"
+       },
        {
         "Id": "287643081"
        },
@@ -611,11 +833,187 @@
     ]
    },
    {
+    "Id": "1139562193",
+    "Type": "Event",
+    "GUID": "{E1DA4D58-2E31-4BC9-BF4F-FAEB55221E93}",
+    "Language": "SFX",
+    "Hash": "{4DA849F3-5FB4-94C8-E35E-7D53C75734BE}",
+    "ObjectPath": "Stop_outsideAtmosphere",
+    "ShortName": "Stop_outsideAtmosphere",
+    "Path": "Event/Stop_outsideAtmosphere.bnk",
+    "Events": [
+     {
+      "Id": "1139562193",
+      "Name": "Stop_outsideAtmosphere",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_outsideAtmosphere",
+      "GUID": "{E1DA4D58-2E31-4BC9-BF4F-FAEB55221E93}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   },
+   {
+    "Id": "1202343709",
+    "Type": "Event",
+    "GUID": "{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}",
+    "Language": "SFX",
+    "Hash": "{ACA798A7-69E1-EFDF-99D2-5B9C7FF94DE1}",
+    "ObjectPath": "Play_rustle",
+    "ShortName": "Play_rustle",
+    "Path": "Event/Play_rustle.bnk",
+    "Media": [
+     {
+      "Id": "20832412",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "rustle1.wav",
+      "Path": "Media/20832412.wem",
+      "CachePath": "SFX/rustle1_89314C5E.wem"
+     },
+     {
+      "Id": "631883680",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "rustle2.wav",
+      "Path": "Media/631883680.wem",
+      "CachePath": "SFX/rustle2_818F3B66.wem"
+     },
+     {
+      "Id": "805458352",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "rustle1.wav",
+      "Path": "Media/805458352.wem",
+      "CachePath": "SFX/rustle1_07538E64.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1202343709",
+      "Name": "Play_rustle",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_rustle",
+      "GUID": "{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}",
+      "MaxAttenuation": "400",
+      "DurationType": "OneShot",
+      "DurationMin": "0.4231654",
+      "DurationMax": "0.81324357",
+      "MediaRefs": [
+       {
+        "Id": "20832412"
+       },
+       {
+        "Id": "631883680"
+       },
+       {
+        "Id": "805458352"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "1204302407",
+    "Type": "Event",
+    "GUID": "{EDD6846B-FEFC-45C4-9704-DE01F2D8123E}",
+    "Language": "SFX",
+    "Hash": "{D65511C8-077B-917F-B763-E3CE53D26F10}",
+    "ObjectPath": "Play_mSwing",
+    "ShortName": "Play_mSwing",
+    "Path": "Event/Play_mSwing.bnk",
+    "Media": [
+     {
+      "Id": "52700418",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-074.wav",
+      "Path": "Media/52700418.wem",
+      "CachePath": "SFX/sfx vox mono full-074_818F3B66.wem"
+     },
+     {
+      "Id": "181696581",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-076.wav",
+      "Path": "Media/181696581.wem",
+      "CachePath": "SFX/sfx vox mono full-076_818F3B66.wem"
+     },
+     {
+      "Id": "233807270",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-075.wav",
+      "Path": "Media/233807270.wem",
+      "CachePath": "SFX/sfx vox mono full-075_818F3B66.wem"
+     },
+     {
+      "Id": "291087524",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-073.wav",
+      "Path": "Media/291087524.wem",
+      "CachePath": "SFX/sfx vox mono full-073_818F3B66.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "1204302407",
+      "Name": "Play_mSwing",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_mSwing",
+      "GUID": "{EDD6846B-FEFC-45C4-9704-DE01F2D8123E}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2377551",
+      "DurationMax": "1.5151247",
+      "MediaRefs": [
+       {
+        "Id": "52700418"
+       },
+       {
+        "Id": "181696581"
+       },
+       {
+        "Id": "233807270"
+       },
+       {
+        "Id": "291087524"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
+     }
+    ]
+   },
+   {
     "Id": "1355168291",
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{357103FE-E98A-167F-15A8-2AABE38E90B0}",
+    "Hash": "{CD1FB943-5D4B-AF0B-9FB4-81C57F0F4FA9}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -671,11 +1069,175 @@
     ]
    },
    {
+    "Id": "1580464077",
+    "Type": "Event",
+    "GUID": "{28C0F76F-9DB4-45B5-8CA9-456279189419}",
+    "Language": "SFX",
+    "Hash": "{74491AC2-49D4-48E2-B960-0916317F6283}",
+    "ObjectPath": "Play_spray",
+    "ShortName": "Play_spray",
+    "Path": "Event/Play_spray.bnk",
+    "Media": [
+     {
+      "Id": "221605604",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "spray1.wav",
+      "Path": "Media/221605604.wem",
+      "CachePath": "SFX/spray1_C8052E0D.wem"
+     },
+     {
+      "Id": "384915686",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "spray3.wav",
+      "Path": "Media/384915686.wem",
+      "CachePath": "SFX/spray3_FC283A76.wem"
+     },
+     {
+      "Id": "980869954",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "spray2.wav",
+      "Path": "Media/980869954.wem",
+      "CachePath": "SFX/spray2_FA94C4E6.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1580464077",
+      "Name": "Play_spray",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_spray",
+      "GUID": "{28C0F76F-9DB4-45B5-8CA9-456279189419}",
+      "MaxAttenuation": "200",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "221605604"
+       },
+       {
+        "Id": "384915686"
+       },
+       {
+        "Id": "980869954"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "1668514525",
+    "Type": "Event",
+    "GUID": "{07852589-1383-4156-9440-788054B24A18}",
+    "Language": "SFX",
+    "Hash": "{5F6C6510-39A6-04F9-AE20-6A1BCA6107FB}",
+    "ObjectPath": "Play_iMoans",
+    "ShortName": "Play_iMoans",
+    "Path": "Event/Play_iMoans.bnk",
+    "Media": [
+     {
+      "Id": "313275621",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-061.wav",
+      "Path": "Media/313275621.wem",
+      "CachePath": "SFX/sfx vox mono full-061_818F3B66.wem"
+     },
+     {
+      "Id": "398637573",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-066.wav",
+      "Path": "Media/398637573.wem",
+      "CachePath": "SFX/sfx vox mono full-066_818F3B66.wem"
+     },
+     {
+      "Id": "671955011",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-062.wav",
+      "Path": "Media/671955011.wem",
+      "CachePath": "SFX/sfx vox mono full-062_818F3B66.wem"
+     },
+     {
+      "Id": "908915927",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-089.wav",
+      "Path": "Media/908915927.wem",
+      "CachePath": "SFX/sfx vox mono full-089_818F3B66.wem"
+     },
+     {
+      "Id": "1061935294",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-090.wav",
+      "Path": "Media/1061935294.wem",
+      "CachePath": "SFX/sfx vox mono full-090_818F3B66.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "1668514525",
+      "Name": "Play_iMoans",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_iMoans",
+      "GUID": "{07852589-1383-4156-9440-788054B24A18}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.9415872",
+      "DurationMax": "4.3086166",
+      "MediaRefs": [
+       {
+        "Id": "313275621"
+       },
+       {
+        "Id": "398637573"
+       },
+       {
+        "Id": "671955011"
+       },
+       {
+        "Id": "908915927"
+       },
+       {
+        "Id": "1061935294"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
+     }
+    ]
+   },
+   {
     "Id": "1805011878",
     "Type": "Event",
     "GUID": "{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}",
     "Language": "SFX",
-    "Hash": "{73862A0F-FC9B-8696-E598-9123FA4E3400}",
+    "Hash": "{55946853-902E-E831-36E5-E0B50096E22E}",
     "ObjectPath": "Play_PlayerFootsteps",
     "ShortName": "Play_PlayerFootsteps",
     "Path": "Event/Play_PlayerFootsteps.bnk",
@@ -859,7 +1421,7 @@
     "Type": "Event",
     "GUID": "{E287937B-CDED-4F16-913F-DB393E5E8E26}",
     "Language": "SFX",
-    "Hash": "{A949F78A-2506-6BE5-6F3B-FBB4BAABD1A0}",
+    "Hash": "{37D69EDF-1E6D-D431-6208-07947E52FA64}",
     "ObjectPath": "Play_Bite",
     "ShortName": "Play_Bite",
     "Path": "Event/Play_Bite.bnk",
@@ -910,6 +1472,18 @@
       "CachePath": "SFX/Bite_5CD7C961.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "484890516",
+       "Name": "Church_Small_Wood",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Cathedrals\\Church_Small_Wood",
+       "GUID": "{940CCB47-F031-4C6A-B0E6-726CAC418C02}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1810912708",
@@ -936,7 +1510,14 @@
        {
         "Id": "1044280572"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "484890516"
+        }
+       ]
+      }
      }
     ]
    },
@@ -945,7 +1526,7 @@
     "Type": "Event",
     "GUID": "{F05E8152-8526-474A-8CD3-14071D451BB3}",
     "Language": "SFX",
-    "Hash": "{264A4DEB-EB16-8C61-6250-666836A61338}",
+    "Hash": "{20F0193C-92F8-3344-38D6-4D67FA1216A8}",
     "ObjectPath": "Play_Torch",
     "ShortName": "Play_Torch",
     "Path": "Event/Play_Torch.bnk",
@@ -1037,50 +1618,198 @@
     ]
    },
    {
-    "Id": "2145253833",
+    "Id": "2090422101",
     "Type": "Event",
-    "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
+    "GUID": "{1834CF08-9A28-4EC2-A83F-467C2A01EE72}",
     "Language": "SFX",
-    "Hash": "{3F57B527-27FE-3A47-9BD0-56D3DBDE13AB}",
-    "ObjectPath": "Atmosphere",
-    "ShortName": "Atmosphere",
-    "Path": "Event/Atmosphere.bnk",
+    "Hash": "{C81BAF1C-281B-AE80-855A-B5FB7901E0E9}",
+    "ObjectPath": "Play_pickRocks",
+    "ShortName": "Play_pickRocks",
+    "Path": "Event/Play_pickRocks.bnk",
     "Media": [
      {
-      "Id": "71860382",
+      "Id": "165098536",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "99S LT Vehicle - Resonation C.wav",
-      "Path": "Media/71860382.wem",
-      "CachePath": "SFX/99S LT Vehicle - Resonation C_6EA773F4.wem"
+      "ShortName": "RockShatter.WAV",
+      "Path": "Media/165098536.wem",
+      "CachePath": "SFX/RockShatter_9BBF859C.wem"
      },
      {
-      "Id": "328367209",
+      "Id": "244694714",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "25879__acclivity__drip1.wav",
-      "Path": "Media/328367209.wem",
-      "CachePath": "SFX/25879__acclivity__drip1_2B5CC65E.wem"
+      "ShortName": "RockShatter.WAV",
+      "Path": "Media/244694714.wem",
+      "CachePath": "SFX/RockShatter_CC7A681C.wem"
      },
      {
-      "Id": "724212248",
+      "Id": "424047478",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA.wav",
-      "Path": "Media/724212248.wem",
-      "CachePath": "SFX/- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA_5B0571AF.wem"
+      "ShortName": "RockShatter.WAV",
+      "Path": "Media/424047478.wem",
+      "CachePath": "SFX/RockShatter_B6589091.wem"
+     },
+     {
+      "Id": "545678415",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PickAxe.wav",
+      "Path": "Media/545678415.wem",
+      "CachePath": "SFX/PickAxe_D1AD1249.wem"
+     },
+     {
+      "Id": "562104551",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PickAxe.wav",
+      "Path": "Media/562104551.wem",
+      "CachePath": "SFX/PickAxe_42392FB0.wem"
+     },
+     {
+      "Id": "904230647",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PickAxe.wav",
+      "Path": "Media/904230647.wem",
+      "CachePath": "SFX/PickAxe_7D046056.wem"
+     },
+     {
+      "Id": "1063682463",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PickAxe.wav",
+      "Path": "Media/1063682463.wem",
+      "CachePath": "SFX/PickAxe_8077902C.wem"
+     }
+    ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "87593389",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\pickRocks\\RockShatter\\RockShatter_02\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{357E5C0F-2919-4B16-92FA-A5A6EFCB3607}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "302883366",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\pickRocks\\RockShatter\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{C6E77CEA-8A54-4EA8-BB98-EB7F7E9C526E}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "2090422101",
+      "Name": "Play_pickRocks",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_pickRocks",
+      "GUID": "{1834CF08-9A28-4EC2-A83F-467C2A01EE72}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.73665136",
+      "DurationMax": "0.8579978",
+      "MediaRefs": [
+       {
+        "Id": "165098536"
+       },
+       {
+        "Id": "244694714"
+       },
+       {
+        "Id": "424047478"
+       },
+       {
+        "Id": "545678415"
+       },
+       {
+        "Id": "562104551"
+       },
+       {
+        "Id": "904230647"
+       },
+       {
+        "Id": "1063682463"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "87593389"
+        },
+        {
+         "Id": "302883366"
+        }
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "Id": "2092244148",
+    "Type": "Event",
+    "GUID": "{5A35A690-3696-4B21-9C78-E4367F4BEB15}",
+    "Language": "SFX",
+    "Hash": "{1FA71918-9821-D53A-8444-C060C218F7DA}",
+    "ObjectPath": "Play_fJump",
+    "ShortName": "Play_fJump",
+    "Path": "Event/Play_fJump.bnk",
+    "Media": [
+     {
+      "Id": "779076487",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-039.wav",
+      "Path": "Media/779076487.wem",
+      "CachePath": "SFX/sfx vox mono full-039_818F3B66.wem"
+     },
+     {
+      "Id": "797266951",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-038.wav",
+      "Path": "Media/797266951.wem",
+      "CachePath": "SFX/sfx vox mono full-038_818F3B66.wem"
+     },
+     {
+      "Id": "841536043",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-037.wav",
+      "Path": "Media/841536043.wem",
+      "CachePath": "SFX/sfx vox mono full-037_818F3B66.wem"
+     },
+     {
+      "Id": "965270959",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-036.wav",
+      "Path": "Media/965270959.wem",
+      "CachePath": "SFX/sfx vox mono full-036_818F3B66.wem"
      }
     ],
     "Plugins": {
      "ShareSets": [
       {
-       "Id": "2513915904",
-       "Name": "Hall_Large",
-       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Halls\\Hall_Large",
-       "GUID": "{6D154498-FF6D-4823-96FC-56841B70E079}",
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
       }
@@ -1088,26 +1817,31 @@
     },
     "Events": [
      {
-      "Id": "2145253833",
-      "Name": "Atmosphere",
-      "ObjectPath": "\\Events\\Default Work Unit\\Atmosphere",
-      "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
-      "DurationType": "Infinite",
+      "Id": "2092244148",
+      "Name": "Play_fJump",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_fJump",
+      "GUID": "{5A35A690-3696-4B21-9C78-E4367F4BEB15}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.1689116",
+      "DurationMax": "1.3096598",
       "MediaRefs": [
        {
-        "Id": "71860382"
+        "Id": "779076487"
        },
        {
-        "Id": "328367209"
+        "Id": "797266951"
        },
        {
-        "Id": "724212248"
+        "Id": "841536043"
+       },
+       {
+        "Id": "965270959"
        }
       ],
       "PluginRefs": {
        "ShareSets": [
         {
-         "Id": "2513915904"
+         "Id": "1990128658"
         }
        ]
       }
@@ -1119,7 +1853,7 @@
     "Type": "Event",
     "GUID": "{0F14277F-3996-484C-A37D-4633DA6B3085}",
     "Language": "SFX",
-    "Hash": "{E0379ED1-20EC-F7C4-0E3E-6924467455EE}",
+    "Hash": "{40B005DB-6C4C-30D5-0F33-5E683CAE304A}",
     "ObjectPath": "Play_WoodBreaking",
     "ShortName": "Play_WoodBreaking",
     "Path": "Event/Play_WoodBreaking.bnk",
@@ -1200,11 +1934,89 @@
     ]
    },
    {
+    "Id": "2466093437",
+    "Type": "Event",
+    "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
+    "Language": "SFX",
+    "Hash": "{FDB8CFCD-788F-E257-A0F1-2A706AE387CB}",
+    "ObjectPath": "Play_caveAtmosphere",
+    "ShortName": "Play_caveAtmosphere",
+    "Path": "Event/Play_caveAtmosphere.bnk",
+    "Media": [
+     {
+      "Id": "71860382",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "99S LT Vehicle - Resonation C.wav",
+      "Path": "Media/71860382.wem",
+      "CachePath": "SFX/99S LT Vehicle - Resonation C_6EA773F4.wem"
+     },
+     {
+      "Id": "328367209",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "25879__acclivity__drip1.wav",
+      "Path": "Media/328367209.wem",
+      "CachePath": "SFX/25879__acclivity__drip1_2B5CC65E.wem"
+     },
+     {
+      "Id": "724212248",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA.wav",
+      "Path": "Media/724212248.wem",
+      "CachePath": "SFX/- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA_5B0571AF.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2513915904",
+       "Name": "Hall_Large",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Halls\\Hall_Large",
+       "GUID": "{6D154498-FF6D-4823-96FC-56841B70E079}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "2466093437",
+      "Name": "Play_caveAtmosphere",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_caveAtmosphere",
+      "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "71860382"
+       },
+       {
+        "Id": "328367209"
+       },
+       {
+        "Id": "724212248"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2513915904"
+        }
+       ]
+      }
+     }
+    ]
+   },
+   {
     "Id": "2846960996",
     "Type": "Event",
     "GUID": "{7889DD4D-525D-40DE-A58F-738E55124508}",
     "Language": "SFX",
-    "Hash": "{B80393FA-D89E-B8FF-1647-7F5811177841}",
+    "Hash": "{19CA5702-CAE4-8700-443E-97B8C7FB77FC}",
     "ObjectPath": "Play_mDamage",
     "ShortName": "Play_mDamage",
     "Path": "Event/Play_mDamage.bnk",
@@ -1255,6 +2067,18 @@
       "CachePath": "SFX/sfx vox mono full-003_818F3B66.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "2846960996",
@@ -1280,6 +2104,227 @@
        {
         "Id": "999515445"
        }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "Id": "3019770429",
+    "Type": "Event",
+    "GUID": "{F95BB0FE-74F3-4CC8-AF85-8F50BF4A005D}",
+    "Language": "SFX",
+    "Hash": "{160DAE84-756D-E87B-1643-20BC8B022341}",
+    "ObjectPath": "Play_mouseOver",
+    "ShortName": "Play_mouseOver",
+    "Path": "Event/Play_mouseOver.bnk",
+    "Media": [
+     {
+      "Id": "323736582",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui4.wav",
+      "Path": "Media/323736582.wem",
+      "CachePath": "SFX/ui4_BCB42E34.wem"
+     },
+     {
+      "Id": "334968415",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui1.wav",
+      "Path": "Media/334968415.wem",
+      "CachePath": "SFX/ui1_6886FB87.wem"
+     },
+     {
+      "Id": "626105931",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui2.wav",
+      "Path": "Media/626105931.wem",
+      "CachePath": "SFX/ui2_00BC772C.wem"
+     },
+     {
+      "Id": "677397642",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui3.wav",
+      "Path": "Media/677397642.wem",
+      "CachePath": "SFX/ui3_1B908B89.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3019770429",
+      "Name": "Play_mouseOver",
+      "ObjectPath": "\\Events\\UI\\Play_mouseOver",
+      "GUID": "{F95BB0FE-74F3-4CC8-AF85-8F50BF4A005D}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2069238",
+      "DurationMax": "1.3389902",
+      "MediaRefs": [
+       {
+        "Id": "323736582"
+       },
+       {
+        "Id": "334968415"
+       },
+       {
+        "Id": "626105931"
+       },
+       {
+        "Id": "677397642"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "3033194243",
+    "Type": "Event",
+    "GUID": "{E70C83B2-4C7F-49EC-8E6A-4F6DA32DD0B7}",
+    "Language": "SFX",
+    "Hash": "{AEE6ED08-65EE-B71D-0539-F6D2974083B9}",
+    "ObjectPath": "Play_mJump",
+    "ShortName": "Play_mJump",
+    "Path": "Event/Play_mJump.bnk",
+    "Media": [
+     {
+      "Id": "49200429",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-072.wav",
+      "Path": "Media/49200429.wem",
+      "CachePath": "SFX/sfx vox mono full-072_818F3B66.wem"
+     },
+     {
+      "Id": "89932502",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-088.wav",
+      "Path": "Media/89932502.wem",
+      "CachePath": "SFX/sfx vox mono full-088_818F3B66.wem"
+     },
+     {
+      "Id": "494904129",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-071.wav",
+      "Path": "Media/494904129.wem",
+      "CachePath": "SFX/sfx vox mono full-071_818F3B66.wem"
+     },
+     {
+      "Id": "592426673",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "jumpin.wav",
+      "Path": "Media/592426673.wem",
+      "CachePath": "SFX/jumpin_818F3B66.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "3033194243",
+      "Name": "Play_mJump",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_mJump",
+      "GUID": "{E70C83B2-4C7F-49EC-8E6A-4F6DA32DD0B7}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.3169842",
+      "DurationMax": "1.5745578",
+      "MediaRefs": [
+       {
+        "Id": "49200429"
+       },
+       {
+        "Id": "89932502"
+       },
+       {
+        "Id": "494904129"
+       },
+       {
+        "Id": "592426673"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "Id": "3046905735",
+    "Type": "Event",
+    "GUID": "{038A761F-CFC6-4C76-93AE-6D95C140D559}",
+    "Language": "SFX",
+    "Hash": "{C0F9E473-477A-DD61-D907-186263AEEA80}",
+    "ObjectPath": "Play_deathSting",
+    "ShortName": "Play_deathSting",
+    "Path": "Event/Play_deathSting.bnk",
+    "Media": [
+     {
+      "Id": "466717337",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "death2.wav",
+      "Path": "Media/466717337.wem",
+      "CachePath": "SFX/death2_818F3B66.wem"
+     },
+     {
+      "Id": "469497542",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "death1.wav",
+      "Path": "Media/469497542.wem",
+      "CachePath": "SFX/death1_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3046905735",
+      "Name": "Play_deathSting",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_deathSting",
+      "GUID": "{038A761F-CFC6-4C76-93AE-6D95C140D559}",
+      "DurationType": "OneShot",
+      "DurationMin": "11.722018",
+      "DurationMax": "11.728368",
+      "MediaRefs": [
+       {
+        "Id": "466717337"
+       },
+       {
+        "Id": "469497542"
+       }
       ]
      }
     ]
@@ -1289,7 +2334,7 @@
     "Type": "Event",
     "GUID": "{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}",
     "Language": "SFX",
-    "Hash": "{638A8D0F-FFB6-019B-DDD6-C16B10B72A4B}",
+    "Hash": "{420AD9B6-2C09-5EA2-68E8-A4A9F48303CF}",
     "ObjectPath": "Stop_Torch",
     "ShortName": "Stop_Torch",
     "Path": "Event/Stop_Torch.bnk",
@@ -1307,11 +2352,103 @@
     ]
    },
    {
+    "Id": "3141045618",
+    "Type": "Event",
+    "GUID": "{B46FB24D-D356-43B8-A725-11CEEAA14A3D}",
+    "Language": "SFX",
+    "Hash": "{8184DBE8-9665-0B58-ABBD-51050486491C}",
+    "ObjectPath": "Play_fSwing",
+    "ShortName": "Play_fSwing",
+    "Path": "Event/Play_fSwing.bnk",
+    "Media": [
+     {
+      "Id": "291087524",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-073.wav",
+      "Path": "Media/291087524.wem",
+      "CachePath": "SFX/sfx vox mono full-073_818F3B66.wem"
+     },
+     {
+      "Id": "779076487",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-039.wav",
+      "Path": "Media/779076487.wem",
+      "CachePath": "SFX/sfx vox mono full-039_818F3B66.wem"
+     },
+     {
+      "Id": "841536043",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-037.wav",
+      "Path": "Media/841536043.wem",
+      "CachePath": "SFX/sfx vox mono full-037_818F3B66.wem"
+     },
+     {
+      "Id": "965270959",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx vox mono full-036.wav",
+      "Path": "Media/965270959.wem",
+      "CachePath": "SFX/sfx vox mono full-036_818F3B66.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "3141045618",
+      "Name": "Play_fSwing",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_fSwing",
+      "GUID": "{B46FB24D-D356-43B8-A725-11CEEAA14A3D}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.1689116",
+      "DurationMax": "1.3096598",
+      "MediaRefs": [
+       {
+        "Id": "291087524"
+       },
+       {
+        "Id": "779076487"
+       },
+       {
+        "Id": "841536043"
+       },
+       {
+        "Id": "965270959"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
+     }
+    ]
+   },
+   {
     "Id": "3279106990",
     "Type": "Event",
     "GUID": "{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}",
     "Language": "SFX",
-    "Hash": "{3C05C24C-D1A7-79BC-FE9A-B8FCB181B4F1}",
+    "Hash": "{C644147A-7754-972E-CAFD-DE32EA7FB804}",
     "ObjectPath": "Play_fHeal",
     "ShortName": "Play_fHeal",
     "Path": "Event/Play_fHeal.bnk",
@@ -1335,6 +2472,18 @@
       "CachePath": "SFX/sfx vox mono full-057_818F3B66.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "3279106990",
@@ -1351,7 +2500,36 @@
        {
         "Id": "634154630"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "Id": "3285640383",
+    "Type": "Event",
+    "GUID": "{3C9EE3BE-450E-4DD8-B9B9-FF78479BAB18}",
+    "Language": "SFX",
+    "Hash": "{C31773DB-BB68-3F89-0CCE-8261DE246293}",
+    "ObjectPath": "Stop_spray",
+    "ShortName": "Stop_spray",
+    "Path": "Event/Stop_spray.bnk",
+    "Events": [
+     {
+      "Id": "3285640383",
+      "Name": "Stop_spray",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_spray",
+      "GUID": "{3C9EE3BE-450E-4DD8-B9B9-FF78479BAB18}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    },
@@ -1360,7 +2538,7 @@
     "Type": "Event",
     "GUID": "{BB9FBAE0-EE84-48F3-96D9-0F1BA79BF2A0}",
     "Language": "SFX",
-    "Hash": "{D5FD5447-31EC-1C96-34D5-0D4335E57D42}",
+    "Hash": "{40A7609B-BABA-3337-3643-04642D700277}",
     "ObjectPath": "Play_mHeal",
     "ShortName": "Play_mHeal",
     "Path": "Event/Play_mHeal.bnk",
@@ -1393,6 +2571,18 @@
       "CachePath": "SFX/sfx vox mono full-083_818F3B66.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "3821234109",
@@ -1412,7 +2602,14 @@
        {
         "Id": "727467757"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
      }
     ]
    },
@@ -1421,7 +2618,7 @@
     "Type": "Event",
     "GUID": "{A7C25A1B-0608-4060-9C29-134EBEA4D185}",
     "Language": "SFX",
-    "Hash": "{4426CF7F-2268-C4A3-5DAB-60F5A464C9A5}",
+    "Hash": "{C8AD4F36-8208-6143-CF8C-B25636963B38}",
     "ObjectPath": "Play_Snap",
     "ShortName": "Play_Snap",
     "Path": "Event/Play_Snap.bnk",
@@ -1491,11 +2688,33 @@
     ]
    },
    {
+    "Id": "3886625383",
+    "Type": "Event",
+    "GUID": "{3CBB73DE-9644-4A51-BD28-F3D5F4A7DABD}",
+    "Language": "SFX",
+    "Hash": "{F49F0952-5573-DF4E-D1C4-7C665E1FE166}",
+    "ObjectPath": "Stop_caveAtmosphere",
+    "ShortName": "Stop_caveAtmosphere",
+    "Path": "Event/Stop_caveAtmosphere.bnk",
+    "Events": [
+     {
+      "Id": "3886625383",
+      "Name": "Stop_caveAtmosphere",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_caveAtmosphere",
+      "GUID": "{3CBB73DE-9644-4A51-BD28-F3D5F4A7DABD}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   },
+   {
     "Id": "3904875299",
     "Type": "Event",
     "GUID": "{5A8512E4-12F7-4DE2-A25A-85A8AFAFA131}",
     "Language": "SFX",
-    "Hash": "{8CB85FA7-FE19-9161-2B8E-EEC070803C35}",
+    "Hash": "{A5B659C4-DB7B-C928-5E0F-A74A3DB4043B}",
     "ObjectPath": "Play_fFall",
     "ShortName": "Play_fFall",
     "Path": "Event/Play_fFall.bnk",
@@ -1528,6 +2747,18 @@
       "CachePath": "SFX/sfx vox mono full-033_818F3B66.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "3904875299",
@@ -1547,6 +2778,48 @@
        {
         "Id": "757661738"
        }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "Id": "3942109467",
+    "Type": "Event",
+    "GUID": "{0E57EA07-3481-4CD4-AB5C-369B26ABFEEC}",
+    "Language": "SFX",
+    "Hash": "{DDDE2061-1EBA-B694-5228-0251402D761E}",
+    "ObjectPath": "Play_outsideAtmosphere",
+    "ShortName": "Play_outsideAtmosphere",
+    "Path": "Event/Play_outsideAtmosphere.bnk",
+    "Media": [
+     {
+      "Id": "12596277",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Outside3.wav",
+      "Path": "Media/12596277.wem",
+      "CachePath": "SFX/Outside3_11A93380.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3942109467",
+      "Name": "Play_outsideAtmosphere",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_outsideAtmosphere",
+      "GUID": "{0E57EA07-3481-4CD4-AB5C-369B26ABFEEC}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "12596277"
+       }
       ]
      }
     ]
@@ -1556,7 +2829,7 @@
     "Type": "Event",
     "GUID": "{BE5A0D3A-492D-4FBE-9071-C77D396C3AEE}",
     "Language": "SFX",
-    "Hash": "{A0A44E3F-7F22-7958-AD35-C1B465408631}",
+    "Hash": "{364BDA94-B324-CDF0-38A2-CDA391FFEDCF}",
     "ObjectPath": "Stop_Glow",
     "ShortName": "Stop_Glow",
     "Path": "Event/Stop_Glow.bnk",
@@ -1578,7 +2851,7 @@
     "Type": "Event",
     "GUID": "{AFFB088D-E64F-432C-B457-EDB99086C352}",
     "Language": "SFX",
-    "Hash": "{B7568238-705D-717A-A0D8-09B49902B90E}",
+    "Hash": "{A27E0EE7-DABF-0ABE-386E-966007554FCD}",
     "ObjectPath": "Play_fDamage",
     "ShortName": "Play_fDamage",
     "Path": "Event/Play_fDamage.bnk",
@@ -1620,6 +2893,18 @@
       "CachePath": "SFX/sfx vox mono full-040_818F3B66.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "4025974203",
@@ -1642,11 +2927,18 @@
        {
         "Id": "1009139115"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{88BFBD64-FA90-B5D9-F9C0-A901B777F53A}"
+  "FileHash": "{C2BA3FCF-7C04-5F2B-9CB8-5AF2A0E0010B}"
  }
 }

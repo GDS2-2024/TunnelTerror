@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3821234109" Type="Event" GUID="{BB9FBAE0-EE84-48F3-96D9-0F1BA79BF2A0}" Language="SFX" Hash="{D5FD5447-31EC-1C96-34D5-0D4335E57D42}">
+		<SoundBank Id="3821234109" Type="Event" GUID="{BB9FBAE0-EE84-48F3-96D9-0F1BA79BF2A0}" Language="SFX" Hash="{40A7609B-BABA-3337-3643-04642D700277}">
 			<ObjectPath>Play_mHeal</ObjectPath>
 			<ShortName>Play_mHeal</ShortName>
 			<Path>Event/Play_mHeal.bnk</Path>
@@ -22,6 +22,11 @@
 					<CachePath>SFX/sfx vox mono full-083_818F3B66.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="3821234109" Name="Play_mHeal" ObjectPath="\Events\Default Work Unit\Play_mHeal" GUID="{BB9FBAE0-EE84-48F3-96D9-0F1BA79BF2A0}" DurationType="OneShot" DurationMin="1.6736054" DurationMax="1.9113605">
 					<MediaRefs>
@@ -29,9 +34,14 @@
 						<MediaRef Id="404608766"/>
 						<MediaRef Id="727467757"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{46704D8B-AE50-02D9-676D-8CEB27E1F58F}</FileHash>
+	<FileHash>{2B6F7E48-42CF-6038-BCCC-5A8EB98FB9D9}</FileHash>
 </SoundBanksInfo>

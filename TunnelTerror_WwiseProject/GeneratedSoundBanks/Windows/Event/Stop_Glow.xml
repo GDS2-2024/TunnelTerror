@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="4000532691" Type="Event" GUID="{BE5A0D3A-492D-4FBE-9071-C77D396C3AEE}" Language="SFX" Hash="{A0A44E3F-7F22-7958-AD35-C1B465408631}">
+		<SoundBank Id="4000532691" Type="Event" GUID="{BE5A0D3A-492D-4FBE-9071-C77D396C3AEE}" Language="SFX" Hash="{364BDA94-B324-CDF0-38A2-CDA391FFEDCF}">
 			<ObjectPath>Stop_Glow</ObjectPath>
 			<ShortName>Stop_Glow</ShortName>
 			<Path>Event/Stop_Glow.bnk</Path>
@@ -10,5 +10,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{559FF882-173A-2B69-8C34-3A7DEE0C4A30}</FileHash>
+	<FileHash>{3099E168-14E4-C27B-5D2B-5C19CEA979C7}</FileHash>
 </SoundBanksInfo>

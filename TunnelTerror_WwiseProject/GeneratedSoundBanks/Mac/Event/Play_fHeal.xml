@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3279106990" Type="Event" GUID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}" Language="SFX" Hash="{3C05C24C-D1A7-79BC-FE9A-B8FCB181B4F1}">
+		<SoundBank Id="3279106990" Type="Event" GUID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}" Language="SFX" Hash="{C644147A-7754-972E-CAFD-DE32EA7FB804}">
 			<ObjectPath>Play_fHeal</ObjectPath>
 			<ShortName>Play_fHeal</ShortName>
 			<Path>Event/Play_fHeal.bnk</Path>
@@ -17,15 +17,25 @@
 					<CachePath>SFX/sfx vox mono full-057_818F3B66.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="3279106990" Name="Play_fHeal" ObjectPath="\Events\Default Work Unit\Play_fHeal" GUID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}" DurationType="OneShot" DurationMin="1.6141723" DurationMax="1.6736054">
 					<MediaRefs>
 						<MediaRef Id="225740081"/>
 						<MediaRef Id="634154630"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{391C5B02-4EBF-6A1F-36E0-61C6E047D7E7}</FileHash>
+	<FileHash>{B3BA76C7-4369-B1EE-107F-F91939E04764}</FileHash>
 </SoundBanksInfo>

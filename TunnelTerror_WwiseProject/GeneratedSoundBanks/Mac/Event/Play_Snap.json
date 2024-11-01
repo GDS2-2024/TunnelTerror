@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{A7C25A1B-0608-4060-9C29-134EBEA4D185}",
     "Language": "SFX",
-    "Hash": "{4426CF7F-2268-C4A3-5DAB-60F5A464C9A5}",
+    "Hash": "{C8AD4F36-8208-6143-CF8C-B25636963B38}",
     "ObjectPath": "Play_Snap",
     "ShortName": "Play_Snap",
     "Path": "Event/Play_Snap.bnk",
@@ -80,6 +80,6 @@
     ]
    }
   ],
-  "FileHash": "{25EAC489-352D-565C-3445-FC2D4DE10656}"
+  "FileHash": "{BE5869A1-4F20-068A-3D3A-C788EABCBAEB}"
  }
 }

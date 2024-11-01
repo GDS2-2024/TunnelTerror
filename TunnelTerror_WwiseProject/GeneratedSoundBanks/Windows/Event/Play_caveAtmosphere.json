@@ -1,0 +1,89 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "2466093437",
+    "Type": "Event",
+    "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
+    "Language": "SFX",
+    "Hash": "{FDB8CFCD-788F-E257-A0F1-2A706AE387CB}",
+    "ObjectPath": "Play_caveAtmosphere",
+    "ShortName": "Play_caveAtmosphere",
+    "Path": "Event/Play_caveAtmosphere.bnk",
+    "Media": [
+     {
+      "Id": "71860382",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "99S LT Vehicle - Resonation C.wav",
+      "Path": "Media/71860382.wem",
+      "CachePath": "SFX/99S LT Vehicle - Resonation C_6EA773F4.wem"
+     },
+     {
+      "Id": "328367209",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "25879__acclivity__drip1.wav",
+      "Path": "Media/328367209.wem",
+      "CachePath": "SFX/25879__acclivity__drip1_2B5CC65E.wem"
+     },
+     {
+      "Id": "724212248",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA.wav",
+      "Path": "Media/724212248.wem",
+      "CachePath": "SFX/- Room Tone, Air System, Class Room, Storage Room, Denver East High School, USA_5B0571AF.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2513915904",
+       "Name": "Hall_Large",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Halls\\Hall_Large",
+       "GUID": "{6D154498-FF6D-4823-96FC-56841B70E079}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "2466093437",
+      "Name": "Play_caveAtmosphere",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_caveAtmosphere",
+      "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "71860382"
+       },
+       {
+        "Id": "328367209"
+       },
+       {
+        "Id": "724212248"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2513915904"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{EEAA50FB-A50F-40C7-95E3-6338765A4ABA}"
+ }
+}
