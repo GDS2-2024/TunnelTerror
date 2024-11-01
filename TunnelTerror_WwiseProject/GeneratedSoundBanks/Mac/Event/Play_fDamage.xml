@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="4025974203" Type="Event" GUID="{AFFB088D-E64F-432C-B457-EDB99086C352}" Language="SFX" Hash="{B7568238-705D-717A-A0D8-09B49902B90E}">
+		<SoundBank Id="4025974203" Type="Event" GUID="{AFFB088D-E64F-432C-B457-EDB99086C352}" Language="SFX" Hash="{376199F4-F6BF-018B-CFB6-EF9392DC2A02}">
 			<ObjectPath>Play_fDamage</ObjectPath>
 			<ShortName>Play_fDamage</ShortName>
 			<Path>Event/Play_fDamage.bnk</Path>
@@ -27,6 +27,11 @@
 					<CachePath>SFX/sfx vox mono full-040_818F3B66.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="4025974203" Name="Play_fDamage" ObjectPath="\Events\Default Work Unit\Play_fDamage" GUID="{AFFB088D-E64F-432C-B457-EDB99086C352}" DurationType="OneShot" DurationMin="1.2674377" DurationMax="1.4363492">
 					<MediaRefs>
@@ -35,9 +40,14 @@
 						<MediaRef Id="699606164"/>
 						<MediaRef Id="1009139115"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{92B2AB3F-DBD7-B9C0-E0DC-844F318894FC}</FileHash>
+	<FileHash>{88E3858A-77B8-324B-3847-4249B07A29CD}</FileHash>
 </SoundBanksInfo>

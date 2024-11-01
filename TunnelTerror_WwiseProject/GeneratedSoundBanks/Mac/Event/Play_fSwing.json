@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{B46FB24D-D356-43B8-A725-11CEEAA14A3D}",
     "Language": "SFX",
-    "Hash": "{47EE344C-C7D5-B413-2169-E5C01F837F52}",
+    "Hash": "{E222C2CC-0489-CF9A-178A-84D15B390C89}",
     "ObjectPath": "Play_fSwing",
     "ShortName": "Play_fSwing",
     "Path": "Event/Play_fSwing.bnk",
@@ -52,6 +52,18 @@
       "CachePath": "SFX/sfx vox mono full-036_818F3B66.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "3141045618",
@@ -74,11 +86,18 @@
        {
         "Id": "965270959"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{04D68291-FBC2-CF0C-3A39-F1D031505F46}"
+  "FileHash": "{0CD0AF5D-CE4C-5845-9E54-C1D3C4C0D239}"
  }
 }

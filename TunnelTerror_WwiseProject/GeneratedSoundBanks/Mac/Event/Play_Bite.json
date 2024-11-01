@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E287937B-CDED-4F16-913F-DB393E5E8E26}",
     "Language": "SFX",
-    "Hash": "{A949F78A-2506-6BE5-6F3B-FBB4BAABD1A0}",
+    "Hash": "{2858B3B8-241F-118B-6859-28894E69F782}",
     "ObjectPath": "Play_Bite",
     "ShortName": "Play_Bite",
     "Path": "Event/Play_Bite.bnk",
@@ -61,6 +61,18 @@
       "CachePath": "SFX/Bite_5CD7C961.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "484890516",
+       "Name": "Church_Small_Wood",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Cathedrals\\Church_Small_Wood",
+       "GUID": "{940CCB47-F031-4C6A-B0E6-726CAC418C02}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1810912708",
@@ -87,11 +99,18 @@
        {
         "Id": "1044280572"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "484890516"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{21491E46-8BD3-C7F2-F74E-A9CE2FDB6E71}"
+  "FileHash": "{87C20A3F-FFA6-7ACA-A8AA-C262A0C4AA2D}"
  }
 }

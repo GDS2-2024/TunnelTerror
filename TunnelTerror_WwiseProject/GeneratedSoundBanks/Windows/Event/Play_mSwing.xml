@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1204302407" Type="Event" GUID="{EDD6846B-FEFC-45C4-9704-DE01F2D8123E}" Language="SFX" Hash="{7EE28A94-0D86-459B-FCF8-701548F7C354}">
+		<SoundBank Id="1204302407" Type="Event" GUID="{EDD6846B-FEFC-45C4-9704-DE01F2D8123E}" Language="SFX" Hash="{B0E0F6E7-D091-D93B-579D-EE65AC57CDD1}">
 			<ObjectPath>Play_mSwing</ObjectPath>
 			<ShortName>Play_mSwing</ShortName>
 			<Path>Event/Play_mSwing.bnk</Path>
@@ -27,6 +27,11 @@
 					<CachePath>SFX/sfx vox mono full-073_818F3B66.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="1204302407" Name="Play_mSwing" ObjectPath="\Events\Default Work Unit\Play_mSwing" GUID="{EDD6846B-FEFC-45C4-9704-DE01F2D8123E}" DurationType="OneShot" DurationMin="1.2377551" DurationMax="1.5151247">
 					<MediaRefs>
@@ -35,9 +40,14 @@
 						<MediaRef Id="233807270"/>
 						<MediaRef Id="291087524"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CDE9F5C7-C5E0-94F5-0C9F-6893555516C9}</FileHash>
+	<FileHash>{3EA9D59B-7E7B-95E1-5347-F302D319E034}</FileHash>
 </SoundBanksInfo>

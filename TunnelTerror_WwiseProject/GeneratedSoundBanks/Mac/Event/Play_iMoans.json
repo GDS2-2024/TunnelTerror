@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{07852589-1383-4156-9440-788054B24A18}",
     "Language": "SFX",
-    "Hash": "{69107DFB-D38F-F14B-636D-4710166E65C7}",
+    "Hash": "{93976944-146A-D952-5D65-C19343A13BE2}",
     "ObjectPath": "Play_iMoans",
     "ShortName": "Play_iMoans",
     "Path": "Event/Play_iMoans.bnk",
@@ -61,6 +61,18 @@
       "CachePath": "SFX/sfx vox mono full-090_818F3B66.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1668514525",
@@ -86,11 +98,18 @@
        {
         "Id": "1061935294"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{C73F02A9-CB8F-71D8-4364-20406FE77A29}"
+  "FileHash": "{E08FFA5C-0031-E5A7-07B8-9D0E30C6A076}"
  }
 }

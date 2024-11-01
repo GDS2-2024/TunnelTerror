@@ -1,0 +1,7 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2090422101	Play_pickRocks			\Default Work Unit\Play_pickRocks	
+
+Effect plug-ins	ID	Name	Type				Notes
+	87593389	Parametric EQ (Custom)	Wwise Parametric EQ			
+	302883366	Parametric EQ (Custom)	Wwise Parametric EQ			
+

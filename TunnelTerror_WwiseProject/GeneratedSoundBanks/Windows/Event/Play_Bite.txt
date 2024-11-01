@@ -1,3 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1810912708	Play_Bite			\Default Work Unit\Play_Bite	
 
+Effect plug-ins	ID	Name	Type				Notes
+	484890516	Church_Small_Wood	Wwise RoomVerb			
+

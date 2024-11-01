@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}",
     "Language": "SFX",
-    "Hash": "{3C05C24C-D1A7-79BC-FE9A-B8FCB181B4F1}",
+    "Hash": "{32D0410D-DF42-C8C6-570A-64814C43C6AA}",
     "ObjectPath": "Play_fHeal",
     "ShortName": "Play_fHeal",
     "Path": "Event/Play_fHeal.bnk",
@@ -34,6 +34,18 @@
       "CachePath": "SFX/sfx vox mono full-057_818F3B66.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "3279106990",
@@ -50,11 +62,18 @@
        {
         "Id": "634154630"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{472FE953-8CD6-8CE6-CB0A-B4BCF853ECF7}"
+  "FileHash": "{ABB0FAC5-6F51-B6B5-9F7B-95C4C6F473D7}"
  }
 }

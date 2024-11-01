@@ -1,3 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	3033194243	Play_mJump			\Default Work Unit\Play_mJump	
 
+Effect plug-ins	ID	Name	Type				Notes
+	1990128658	Room_Medium	Wwise RoomVerb			
+

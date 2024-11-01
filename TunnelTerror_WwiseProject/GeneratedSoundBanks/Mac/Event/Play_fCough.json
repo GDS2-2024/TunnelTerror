@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{525BAA67-25EB-498C-A659-9A06057D697A}",
     "Language": "SFX",
-    "Hash": "{B874DDE7-61F6-1A62-C73C-918413FF0D90}",
+    "Hash": "{0DB15892-B3FF-02E7-492C-913F8ACA5340}",
     "ObjectPath": "Play_fCough",
     "ShortName": "Play_fCough",
     "Path": "Event/Play_fCough.bnk",
@@ -52,6 +52,18 @@
       "CachePath": "SFX/sfx vox mono full-053_818F3B66.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "249772270",
@@ -72,11 +84,18 @@
        {
         "Id": "870190361"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{F9884EE8-AA87-0824-4793-9D4DF03956C7}"
+  "FileHash": "{0E8674B1-3886-5614-8AD4-1510DB7293DC}"
  }
 }

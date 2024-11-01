@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3033194243" Type="Event" GUID="{E70C83B2-4C7F-49EC-8E6A-4F6DA32DD0B7}" Language="SFX" Hash="{2DECF4FC-3367-8AC5-BD46-EE584AAC6EC1}">
+		<SoundBank Id="3033194243" Type="Event" GUID="{E70C83B2-4C7F-49EC-8E6A-4F6DA32DD0B7}" Language="SFX" Hash="{2D54396B-C332-2568-1F37-3BC0CE3D1DAF}">
 			<ObjectPath>Play_mJump</ObjectPath>
 			<ShortName>Play_mJump</ShortName>
 			<Path>Event/Play_mJump.bnk</Path>
@@ -27,6 +27,11 @@
 					<CachePath>SFX/jumpin_818F3B66.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="3033194243" Name="Play_mJump" ObjectPath="\Events\Default Work Unit\Play_mJump" GUID="{E70C83B2-4C7F-49EC-8E6A-4F6DA32DD0B7}" DurationType="OneShot" DurationMin="1.3169842" DurationMax="1.5745578">
 					<MediaRefs>
@@ -35,9 +40,14 @@
 						<MediaRef Id="494904129"/>
 						<MediaRef Id="592426673"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{30D98407-03A5-2A75-60FF-F06BC4E657CF}</FileHash>
+	<FileHash>{D25A2B33-709B-29DF-4484-14E59C5E82DF}</FileHash>
 </SoundBanksInfo>

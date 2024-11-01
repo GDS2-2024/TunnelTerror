@@ -1,3 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1204302407	Play_mSwing			\Default Work Unit\Play_mSwing	
 
+Effect plug-ins	ID	Name	Type				Notes
+	1990128658	Room_Medium	Wwise RoomVerb			
+

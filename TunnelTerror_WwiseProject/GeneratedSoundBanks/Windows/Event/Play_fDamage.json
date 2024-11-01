@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{AFFB088D-E64F-432C-B457-EDB99086C352}",
     "Language": "SFX",
-    "Hash": "{B7568238-705D-717A-A0D8-09B49902B90E}",
+    "Hash": "{376199F4-F6BF-018B-CFB6-EF9392DC2A02}",
     "ObjectPath": "Play_fDamage",
     "ShortName": "Play_fDamage",
     "Path": "Event/Play_fDamage.bnk",
@@ -52,6 +52,18 @@
       "CachePath": "SFX/sfx vox mono full-040_818F3B66.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "4025974203",
@@ -74,11 +86,18 @@
        {
         "Id": "1009139115"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{6F43ECE5-3F98-51F2-F712-6466B2E5A048}"
+  "FileHash": "{CDDB5B91-7A72-472F-6929-A1F0D250B688}"
  }
 }

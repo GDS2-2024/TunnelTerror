@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1668514525" Type="Event" GUID="{07852589-1383-4156-9440-788054B24A18}" Language="SFX" Hash="{69107DFB-D38F-F14B-636D-4710166E65C7}">
+		<SoundBank Id="1668514525" Type="Event" GUID="{07852589-1383-4156-9440-788054B24A18}" Language="SFX" Hash="{93976944-146A-D952-5D65-C19343A13BE2}">
 			<ObjectPath>Play_iMoans</ObjectPath>
 			<ShortName>Play_iMoans</ShortName>
 			<Path>Event/Play_iMoans.bnk</Path>
@@ -32,6 +32,11 @@
 					<CachePath>SFX/sfx vox mono full-090_818F3B66.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="1668514525" Name="Play_iMoans" ObjectPath="\Events\Default Work Unit\Play_iMoans" GUID="{07852589-1383-4156-9440-788054B24A18}" DurationType="OneShot" DurationMin="2.9415872" DurationMax="4.3086166">
 					<MediaRefs>
@@ -41,9 +46,14 @@
 						<MediaRef Id="908915927"/>
 						<MediaRef Id="1061935294"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{60E80B66-1536-88A9-9F37-F38D85DD739C}</FileHash>
+	<FileHash>{A572CBC1-80C2-2578-8D63-6799666E8EC7}</FileHash>
 </SoundBanksInfo>

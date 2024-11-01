@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "3285640383",
+    "Type": "Event",
+    "GUID": "{3C9EE3BE-450E-4DD8-B9B9-FF78479BAB18}",
+    "Language": "SFX",
+    "Hash": "{CD0914B8-D55F-1D4E-48F1-4C8B857F704E}",
+    "ObjectPath": "Stop_spray",
+    "ShortName": "Stop_spray",
+    "Path": "Event/Stop_spray.bnk",
+    "Events": [
+     {
+      "Id": "3285640383",
+      "Name": "Stop_spray",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_spray",
+      "GUID": "{3C9EE3BE-450E-4DD8-B9B9-FF78479BAB18}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A5842D9B-7FE3-72D8-DBF8-C650822F34BE}"
+ }
+}

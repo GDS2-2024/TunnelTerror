@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E70C83B2-4C7F-49EC-8E6A-4F6DA32DD0B7}",
     "Language": "SFX",
-    "Hash": "{2DECF4FC-3367-8AC5-BD46-EE584AAC6EC1}",
+    "Hash": "{2D54396B-C332-2568-1F37-3BC0CE3D1DAF}",
     "ObjectPath": "Play_mJump",
     "ShortName": "Play_mJump",
     "Path": "Event/Play_mJump.bnk",
@@ -52,6 +52,18 @@
       "CachePath": "SFX/jumpin_818F3B66.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "3033194243",
@@ -74,11 +86,18 @@
        {
         "Id": "592426673"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{91005FBE-6B64-9F42-9287-2A11BF5D6A3C}"
+  "FileHash": "{101AD7BF-05F2-63B4-780E-D3305CE71E06}"
  }
 }

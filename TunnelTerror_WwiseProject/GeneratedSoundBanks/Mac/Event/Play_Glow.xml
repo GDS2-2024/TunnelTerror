@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="721983777" Type="Event" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" Language="SFX" Hash="{59123A40-72B1-841A-ABFD-6173445E895B}">
+		<SoundBank Id="721983777" Type="Event" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" Language="SFX" Hash="{1E76EF5A-8873-6F2C-02DB-90B7525AF573}">
 			<ObjectPath>Play_Glow</ObjectPath>
 			<ShortName>Play_Glow</ShortName>
 			<Path>Event/Play_Glow.bnk</Path>
@@ -12,14 +12,24 @@
 					<CachePath>SFX/Glow_36B74D48.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="3164629247" Name="Holy" ObjectPath="\Effects\Factory Effects\RoomVerb\Cathedrals\Holy" GUID="{CC7B8638-C670-4AD5-B3FB-331EA81037F6}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="721983777" Name="Play_Glow" ObjectPath="\Events\Default Work Unit\Play_Glow" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" MaxAttenuation="800" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="733000276"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3164629247"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C21D06B6-6B45-3E51-99EA-6B024E9B473C}</FileHash>
+	<FileHash>{BD0B1C2C-7E94-2A56-9554-0F480ACF1F50}</FileHash>
 </SoundBanksInfo>

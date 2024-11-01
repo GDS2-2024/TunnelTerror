@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{AA3B480F-E159-421B-A0C2-0C2A86F882C2}",
     "Language": "SFX",
-    "Hash": "{59123A40-72B1-841A-ABFD-6173445E895B}",
+    "Hash": "{1E76EF5A-8873-6F2C-02DB-90B7525AF573}",
     "ObjectPath": "Play_Glow",
     "ShortName": "Play_Glow",
     "Path": "Event/Play_Glow.bnk",
@@ -25,6 +25,18 @@
       "CachePath": "SFX/Glow_36B74D48.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "3164629247",
+       "Name": "Holy",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Cathedrals\\Holy",
+       "GUID": "{CC7B8638-C670-4AD5-B3FB-331EA81037F6}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "721983777",
@@ -37,11 +49,18 @@
        {
         "Id": "733000276"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3164629247"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{42260D0C-7813-13A2-EE79-C88DDD0749C6}"
+  "FileHash": "{614C9805-C4AF-18B1-A185-0617F9E0B44B}"
  }
 }

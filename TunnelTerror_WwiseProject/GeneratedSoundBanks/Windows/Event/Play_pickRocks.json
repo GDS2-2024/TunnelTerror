@@ -1,0 +1,150 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "2090422101",
+    "Type": "Event",
+    "GUID": "{1834CF08-9A28-4EC2-A83F-467C2A01EE72}",
+    "Language": "SFX",
+    "Hash": "{96679CF1-EFA3-D464-C57F-7B19EF2D36D3}",
+    "ObjectPath": "Play_pickRocks",
+    "ShortName": "Play_pickRocks",
+    "Path": "Event/Play_pickRocks.bnk",
+    "Media": [
+     {
+      "Id": "165098536",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "RockShatter.WAV",
+      "Path": "Media/165098536.wem",
+      "CachePath": "SFX/RockShatter_87EAB145.wem"
+     },
+     {
+      "Id": "244694714",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "RockShatter.WAV",
+      "Path": "Media/244694714.wem",
+      "CachePath": "SFX/RockShatter_BB571E28.wem"
+     },
+     {
+      "Id": "424047478",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "RockShatter.WAV",
+      "Path": "Media/424047478.wem",
+      "CachePath": "SFX/RockShatter_26B56AA9.wem"
+     },
+     {
+      "Id": "545678415",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PickAxe.wav",
+      "Path": "Media/545678415.wem",
+      "CachePath": "SFX/PickAxe_D1AD1249.wem"
+     },
+     {
+      "Id": "562104551",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PickAxe.wav",
+      "Path": "Media/562104551.wem",
+      "CachePath": "SFX/PickAxe_42392FB0.wem"
+     },
+     {
+      "Id": "904230647",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PickAxe.wav",
+      "Path": "Media/904230647.wem",
+      "CachePath": "SFX/PickAxe_7D046056.wem"
+     },
+     {
+      "Id": "1063682463",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PickAxe.wav",
+      "Path": "Media/1063682463.wem",
+      "CachePath": "SFX/PickAxe_8077902C.wem"
+     }
+    ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "87593389",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\pickRocks\\RockShatter\\RockShatter_02\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{357E5C0F-2919-4B16-92FA-A5A6EFCB3607}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "302883366",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\pickRocks\\RockShatter\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{C6E77CEA-8A54-4EA8-BB98-EB7F7E9C526E}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "2090422101",
+      "Name": "Play_pickRocks",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_pickRocks",
+      "GUID": "{1834CF08-9A28-4EC2-A83F-467C2A01EE72}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.73665136",
+      "DurationMax": "0.8579978",
+      "MediaRefs": [
+       {
+        "Id": "165098536"
+       },
+       {
+        "Id": "244694714"
+       },
+       {
+        "Id": "424047478"
+       },
+       {
+        "Id": "545678415"
+       },
+       {
+        "Id": "562104551"
+       },
+       {
+        "Id": "904230647"
+       },
+       {
+        "Id": "1063682463"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "87593389"
+        },
+        {
+         "Id": "302883366"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A5987233-0A6D-AC50-E59B-C7D78D32BA46}"
+ }
+}

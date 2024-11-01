@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="25938892" Type="Event" GUID="{59B1A844-A95F-4B37-8C0F-664C08A82F28}" Language="SFX" Hash="{32BC9457-6583-2CCB-03F0-EA10F0370DC4}">
+		<SoundBank Id="25938892" Type="Event" GUID="{59B1A844-A95F-4B37-8C0F-664C08A82F28}" Language="SFX" Hash="{C9C8D512-BDB6-D4C5-012D-D3F5AD2F0660}">
 			<ObjectPath>Play_mFall</ObjectPath>
 			<ShortName>Play_mFall</ShortName>
 			<Path>Event/Play_mFall.bnk</Path>
@@ -27,6 +27,11 @@
 					<CachePath>SFX/sfx vox mono full-024_818F3B66.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="25938892" Name="Play_mFall" ObjectPath="\Events\Default Work Unit\Play_mFall" GUID="{59B1A844-A95F-4B37-8C0F-664C08A82F28}" DurationType="OneShot" DurationMin="2.48" DurationMax="3.476508">
 					<MediaRefs>
@@ -35,9 +40,14 @@
 						<MediaRef Id="656007416"/>
 						<MediaRef Id="755896194"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{61A023BC-1ADA-83F2-2E81-CAB51F78E9F8}</FileHash>
+	<FileHash>{CF734C5B-FAD7-AEAD-CC40-980B3E472B53}</FileHash>
 </SoundBanksInfo>

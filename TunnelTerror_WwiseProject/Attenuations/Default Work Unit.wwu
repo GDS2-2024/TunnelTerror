@@ -445,6 +445,14 @@
 					</CurveUsageInfoList>
 				</Attenuation>
 				<Attenuation Name="Plant" ID="{C7C0DA46-EFE8-4F41-8246-C80EBEBB0280}" ShortID="278391889">
+					<PropertyList>
+						<Property Name="ConeUse" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="RadiusMax" Type="Real64" Value="400"/>
+					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
 							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
@@ -457,9 +465,10 @@
 											<XPos>0</XPos>
 											<YPos>0</YPos>
 											<Flags>5</Flags>
+											<SegmentShape>Exp2</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>100</XPos>
+											<XPos>400</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
