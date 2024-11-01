@@ -1,0 +1,72 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "3822360239",
+    "Type": "Event",
+    "GUID": "{CA79A399-06E2-4F90-905E-DBFA668264F9}",
+    "Language": "SFX",
+    "Hash": "{9CA728BB-BC3E-5DD9-D42A-3C49A07A94F8}",
+    "ObjectPath": "Play_flashOn",
+    "ShortName": "Play_flashOn",
+    "Path": "Event/Play_flashOn.bnk",
+    "Media": [
+     {
+      "Id": "456463279",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "flashlight3.wav",
+      "Path": "Media/456463279.wem",
+      "CachePath": "SFX/flashlight3_818F3B66.wem"
+     },
+     {
+      "Id": "764745543",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "flashLight1.wav",
+      "Path": "Media/764745543.wem",
+      "CachePath": "SFX/flashLight1_818F3B66.wem"
+     },
+     {
+      "Id": "890394530",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "flashLight2.wav",
+      "Path": "Media/890394530.wem",
+      "CachePath": "SFX/flashLight2_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3822360239",
+      "Name": "Play_flashOn",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_flashOn",
+      "GUID": "{CA79A399-06E2-4F90-905E-DBFA668264F9}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.9935307",
+      "DurationMax": "1.0600014",
+      "MediaRefs": [
+       {
+        "Id": "456463279"
+       },
+       {
+        "Id": "764745543"
+       },
+       {
+        "Id": "890394530"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{4295DBE5-1446-6928-7E3F-DD5906DDC7AB}"
+ }
+}

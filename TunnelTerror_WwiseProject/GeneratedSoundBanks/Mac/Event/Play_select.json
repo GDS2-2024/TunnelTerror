@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "ui7.wav",
       "Path": "Media/498364355.wem",
-      "CachePath": "SFX/ui7_6A768392.wem"
+      "CachePath": "SFX/ui7_C4EC5430.wem"
      },
      {
       "Id": "775253208",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "ui6.wav",
       "Path": "Media/775253208.wem",
-      "CachePath": "SFX/ui6_4ABD8B54.wem"
+      "CachePath": "SFX/ui6_490B19BF.wem"
      },
      {
       "Id": "956966152",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "ui8.wav",
       "Path": "Media/956966152.wem",
-      "CachePath": "SFX/ui8_68132823.wem"
+      "CachePath": "SFX/ui8_6036454F.wem"
      },
      {
       "Id": "1016949203",
@@ -49,7 +49,7 @@
       "Location": "Loose",
       "ShortName": "ui5.wav",
       "Path": "Media/1016949203.wem",
-      "CachePath": "SFX/ui5_C092C985.wem"
+      "CachePath": "SFX/ui5_2F864502.wem"
      }
     ],
     "Events": [
@@ -79,6 +79,6 @@
     ]
    }
   ],
-  "FileHash": "{4853E890-86AE-4F95-7D82-AC7570BE1100}"
+  "FileHash": "{E1EFAD48-FEDD-F6FA-D80F-8D6C1CF04C4D}"
  }
 }

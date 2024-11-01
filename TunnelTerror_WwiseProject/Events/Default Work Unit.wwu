@@ -482,6 +482,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_flashOff" ID="{6AE614A5-9A56-464C-BE07-C8AE0037A0C6}">
+					<ChildrenList>
+						<Action Name="" ID="{F72BE4D3-0BA9-445F-91E0-66EA284C71D0}" ShortID="873631257">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="flashOff" ID="{92A17809-057C-4F20-A104-1CFC3AAE6490}" WorkUnitID="{F70B7A7B-C0A7-442C-9478-8A3EB1AB396C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_flashOn" ID="{CA79A399-06E2-4F90-905E-DBFA668264F9}">
+					<ChildrenList>
+						<Action Name="" ID="{5C5ACAFF-0F52-4CD8-BC4C-66168B1B4E3B}" ShortID="391553410">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="flashOn" ID="{828114E7-E2C6-4867-8808-F1A870BFED43}" WorkUnitID="{F70B7A7B-C0A7-442C-9478-8A3EB1AB396C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -576,7 +576,7 @@
       "Location": "Loose",
       "ShortName": "ui7.wav",
       "Path": "Media/498364355.wem",
-      "CachePath": "SFX/ui7_6A768392.wem"
+      "CachePath": "SFX/ui7_C4EC5430.wem"
      },
      {
       "Id": "775253208",
@@ -585,7 +585,7 @@
       "Location": "Loose",
       "ShortName": "ui6.wav",
       "Path": "Media/775253208.wem",
-      "CachePath": "SFX/ui6_4ABD8B54.wem"
+      "CachePath": "SFX/ui6_490B19BF.wem"
      },
      {
       "Id": "956966152",
@@ -594,7 +594,7 @@
       "Location": "Loose",
       "ShortName": "ui8.wav",
       "Path": "Media/956966152.wem",
-      "CachePath": "SFX/ui8_68132823.wem"
+      "CachePath": "SFX/ui8_6036454F.wem"
      },
      {
       "Id": "1016949203",
@@ -603,7 +603,7 @@
       "Location": "Loose",
       "ShortName": "ui5.wav",
       "Path": "Media/1016949203.wem",
-      "CachePath": "SFX/ui5_C092C985.wem"
+      "CachePath": "SFX/ui5_2F864502.wem"
      }
     ],
     "Events": [
@@ -1005,6 +1005,67 @@
         }
        ]
       }
+     }
+    ]
+   },
+   {
+    "Id": "1319708803",
+    "Type": "Event",
+    "GUID": "{6AE614A5-9A56-464C-BE07-C8AE0037A0C6}",
+    "Language": "SFX",
+    "Hash": "{8AA3C610-4FF7-036B-787B-D13EEED8F0F8}",
+    "ObjectPath": "Play_flashOff",
+    "ShortName": "Play_flashOff",
+    "Path": "Event/Play_flashOff.bnk",
+    "Media": [
+     {
+      "Id": "456463279",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "flashlight3.wav",
+      "Path": "Media/456463279.wem",
+      "CachePath": "SFX/flashlight3_818F3B66.wem"
+     },
+     {
+      "Id": "764745543",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "flashLight1.wav",
+      "Path": "Media/764745543.wem",
+      "CachePath": "SFX/flashLight1_818F3B66.wem"
+     },
+     {
+      "Id": "890394530",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "flashLight2.wav",
+      "Path": "Media/890394530.wem",
+      "CachePath": "SFX/flashLight2_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1319708803",
+      "Name": "Play_flashOff",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_flashOff",
+      "GUID": "{6AE614A5-9A56-464C-BE07-C8AE0037A0C6}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.1346939",
+      "DurationMax": "1.2106087",
+      "MediaRefs": [
+       {
+        "Id": "456463279"
+       },
+       {
+        "Id": "764745543"
+       },
+       {
+        "Id": "890394530"
+       }
+      ]
      }
     ]
    },
@@ -2132,7 +2193,7 @@
       "Location": "Loose",
       "ShortName": "ui4.wav",
       "Path": "Media/323736582.wem",
-      "CachePath": "SFX/ui4_BCB42E34.wem"
+      "CachePath": "SFX/ui4_9DB96F64.wem"
      },
      {
       "Id": "334968415",
@@ -2141,7 +2202,7 @@
       "Location": "Loose",
       "ShortName": "ui1.wav",
       "Path": "Media/334968415.wem",
-      "CachePath": "SFX/ui1_6886FB87.wem"
+      "CachePath": "SFX/ui1_18726EED.wem"
      },
      {
       "Id": "626105931",
@@ -2150,7 +2211,7 @@
       "Location": "Loose",
       "ShortName": "ui2.wav",
       "Path": "Media/626105931.wem",
-      "CachePath": "SFX/ui2_00BC772C.wem"
+      "CachePath": "SFX/ui2_B595BCE9.wem"
      },
      {
       "Id": "677397642",
@@ -2159,7 +2220,7 @@
       "Location": "Loose",
       "ShortName": "ui3.wav",
       "Path": "Media/677397642.wem",
-      "CachePath": "SFX/ui3_1B908B89.wem"
+      "CachePath": "SFX/ui3_AC6B7AAA.wem"
      }
     ],
     "Events": [
@@ -2614,6 +2675,67 @@
     ]
    },
    {
+    "Id": "3822360239",
+    "Type": "Event",
+    "GUID": "{CA79A399-06E2-4F90-905E-DBFA668264F9}",
+    "Language": "SFX",
+    "Hash": "{9CA728BB-BC3E-5DD9-D42A-3C49A07A94F8}",
+    "ObjectPath": "Play_flashOn",
+    "ShortName": "Play_flashOn",
+    "Path": "Event/Play_flashOn.bnk",
+    "Media": [
+     {
+      "Id": "456463279",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "flashlight3.wav",
+      "Path": "Media/456463279.wem",
+      "CachePath": "SFX/flashlight3_818F3B66.wem"
+     },
+     {
+      "Id": "764745543",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "flashLight1.wav",
+      "Path": "Media/764745543.wem",
+      "CachePath": "SFX/flashLight1_818F3B66.wem"
+     },
+     {
+      "Id": "890394530",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "flashLight2.wav",
+      "Path": "Media/890394530.wem",
+      "CachePath": "SFX/flashLight2_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3822360239",
+      "Name": "Play_flashOn",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_flashOn",
+      "GUID": "{CA79A399-06E2-4F90-905E-DBFA668264F9}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.9935307",
+      "DurationMax": "1.0600014",
+      "MediaRefs": [
+       {
+        "Id": "456463279"
+       },
+       {
+        "Id": "764745543"
+       },
+       {
+        "Id": "890394530"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "3858275350",
     "Type": "Event",
     "GUID": "{A7C25A1B-0608-4060-9C29-134EBEA4D185}",
@@ -2939,6 +3061,6 @@
     ]
    }
   ],
-  "FileHash": "{C2BA3FCF-7C04-5F2B-9CB8-5AF2A0E0010B}"
+  "FileHash": "{E75B4B6D-8992-7D1C-AA1E-88C0EC537B83}"
  }
 }
