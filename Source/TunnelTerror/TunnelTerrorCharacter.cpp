@@ -34,7 +34,7 @@ ATunnelTerrorCharacter::ATunnelTerrorCharacter()
 	trapCDCurrent = 0.0f;
 
 	samples = 0;
-	money = 50;
+	money = 20;
 
 	sporeInfectTime = 10.0f;
 	sporeInfectCurrent = 0.0f;
