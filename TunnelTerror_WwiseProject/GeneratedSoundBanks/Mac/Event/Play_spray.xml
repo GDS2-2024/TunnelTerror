@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1580464077" Type="Event" GUID="{28C0F76F-9DB4-45B5-8CA9-456279189419}" Language="SFX" Hash="{74491AC2-49D4-48E2-B960-0916317F6283}">
+		<SoundBank Id="1580464077" Type="Event" GUID="{28C0F76F-9DB4-45B5-8CA9-456279189419}" Language="SFX" Hash="{59F920F4-3322-473B-4CE6-808E645DCC5D}">
 			<ObjectPath>Play_spray</ObjectPath>
 			<ShortName>Play_spray</ShortName>
 			<Path>Event/Play_spray.bnk</Path>
@@ -33,5 +33,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{79886823-DD49-9560-C3F0-796D456E54CE}</FileHash>
+	<FileHash>{A6F73C00-0AAC-DA68-1B54-52A48949C6CF}</FileHash>
 </SoundBanksInfo>

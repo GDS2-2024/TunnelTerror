@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "3143519455",
+    "Type": "Event",
+    "GUID": "{3C670717-CCB5-4E76-BABE-7448808A0266}",
+    "Language": "SFX",
+    "Hash": "{AC699BC2-B097-0EC5-1DF9-321F211449A1}",
+    "ObjectPath": "Stop_iMoans",
+    "ShortName": "Stop_iMoans",
+    "Path": "Event/Stop_iMoans.bnk",
+    "Events": [
+     {
+      "Id": "3143519455",
+      "Name": "Stop_iMoans",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_iMoans",
+      "GUID": "{3C670717-CCB5-4E76-BABE-7448808A0266}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{BBAFFF46-134B-3973-6AE4-A13053C10670}"
+ }
+}

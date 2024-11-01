@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{6AE614A5-9A56-464C-BE07-C8AE0037A0C6}",
     "Language": "SFX",
-    "Hash": "{8AA3C610-4FF7-036B-787B-D13EEED8F0F8}",
+    "Hash": "{15AD0737-4CBA-7208-61AC-DF54497278D4}",
     "ObjectPath": "Play_flashOff",
     "ShortName": "Play_flashOff",
     "Path": "Event/Play_flashOff.bnk",
@@ -67,6 +67,6 @@
     ]
    }
   ],
-  "FileHash": "{B5C77663-8299-D5F5-DD1C-46EC19716C72}"
+  "FileHash": "{6740A9A4-8907-E28F-08E9-91E8D92033DA}"
  }
 }

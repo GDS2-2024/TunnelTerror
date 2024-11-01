@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{DAABF8FE-0337-462B-86E7-CEAE7A83737D}",
     "Language": "SFX",
-    "Hash": "{817CB1CA-958E-D5F3-FDD9-A4CC3AA3E766}",
+    "Hash": "{BFE59FB4-B772-FF6C-5403-7E248149DE51}",
     "ObjectPath": "Play_plantStretch",
     "ShortName": "Play_plantStretch",
     "Path": "Event/Play_plantStretch.bnk",
@@ -43,13 +43,24 @@
       "CachePath": "SFX/stretch_C1050841.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "848292664",
       "Name": "Play_plantStretch",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_plantStretch",
       "GUID": "{DAABF8FE-0337-462B-86E7-CEAE7A83737D}",
-      "MaxAttenuation": "400",
       "DurationType": "OneShot",
       "DurationMin": "0.7337021",
       "DurationMax": "0.8894372",
@@ -63,11 +74,18 @@
        {
         "Id": "993867576"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{A3930FB9-BD6F-DBA4-1125-4C6CF869C741}"
+  "FileHash": "{54895FE5-975B-3F07-2609-D64E5497E16B}"
  }
 }

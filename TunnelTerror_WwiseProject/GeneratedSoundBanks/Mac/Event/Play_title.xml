@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="3849537216" Type="Event" GUID="{C8050BE5-FD3C-4142-B34A-120C1C83C0AC}" Language="SFX" Hash="{25D1F795-0381-5FDA-4549-4F4D92394C47}">
+			<ObjectPath>Play_title</ObjectPath>
+			<ShortName>Play_title</ShortName>
+			<Path>Event/Play_title.bnk</Path>
+			<Media>
+				<File Id="210479033" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>lightPiano.wav</ShortName>
+					<Path>Media/210479033.wem</Path>
+					<CachePath>SFX/lightPiano_A724EA89.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3849537216" Name="Play_title" ObjectPath="\Events\Default Work Unit\Play_title" GUID="{C8050BE5-FD3C-4142-B34A-120C1C83C0AC}" DurationType="OneShot" DurationMin="30.629343" DurationMax="30.629343">
+					<MediaRefs>
+						<MediaRef Id="210479033"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{1517AD8E-D0ED-F004-6542-63E36EA8F88E}</FileHash>
+</SoundBanksInfo>

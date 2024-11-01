@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1120692842" Type="Event" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" Language="SFX" Hash="{DFF7AB17-3017-660D-56C7-EA668672296E}">
+		<SoundBank Id="1120692842" Type="Event" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" Language="SFX" Hash="{CC1E2E06-1A75-721B-2485-2AA649FC1A38}">
 			<ObjectPath>Play_RockFall</ObjectPath>
 			<ShortName>Play_RockFall</ShortName>
 			<Path>Event/Play_RockFall.bnk</Path>
@@ -83,5 +83,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F1321877-2E29-8957-89B2-C8707906C544}</FileHash>
+	<FileHash>{BD8493E6-5569-73B5-0955-12AF199D62F6}</FileHash>
 </SoundBanksInfo>

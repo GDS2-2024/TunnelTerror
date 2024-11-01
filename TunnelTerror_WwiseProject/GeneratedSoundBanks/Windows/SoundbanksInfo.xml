@@ -208,7 +208,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="848292664" Type="Event" GUID="{DAABF8FE-0337-462B-86E7-CEAE7A83737D}" Language="SFX" Hash="{817CB1CA-958E-D5F3-FDD9-A4CC3AA3E766}">
+		<SoundBank Id="848292664" Type="Event" GUID="{DAABF8FE-0337-462B-86E7-CEAE7A83737D}" Language="SFX" Hash="{BFE59FB4-B772-FF6C-5403-7E248149DE51}">
 			<ObjectPath>Play_plantStretch</ObjectPath>
 			<ShortName>Play_plantStretch</ShortName>
 			<Path>Event/Play_plantStretch.bnk</Path>
@@ -229,13 +229,23 @@
 					<CachePath>SFX/stretch_C1050841.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
-				<Event Id="848292664" Name="Play_plantStretch" ObjectPath="\Events\Default Work Unit\Play_plantStretch" GUID="{DAABF8FE-0337-462B-86E7-CEAE7A83737D}" MaxAttenuation="400" DurationType="OneShot" DurationMin="0.7337021" DurationMax="0.8894372">
+				<Event Id="848292664" Name="Play_plantStretch" ObjectPath="\Events\Default Work Unit\Play_plantStretch" GUID="{DAABF8FE-0337-462B-86E7-CEAE7A83737D}" DurationType="OneShot" DurationMin="0.7337021" DurationMax="0.8894372">
 					<MediaRefs>
 						<MediaRef Id="109334872"/>
 						<MediaRef Id="283930358"/>
 						<MediaRef Id="993867576"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
@@ -331,7 +341,7 @@
 				<Event Id="1063654281" Name="Stop_mCough" ObjectPath="\Events\Default Work Unit\Stop_mCough" GUID="{DABE9434-237E-4C4C-B6AD-CE89FC21E0C0}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1120692842" Type="Event" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" Language="SFX" Hash="{DFF7AB17-3017-660D-56C7-EA668672296E}">
+		<SoundBank Id="1120692842" Type="Event" GUID="{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}" Language="SFX" Hash="{CC1E2E06-1A75-721B-2485-2AA649FC1A38}">
 			<ObjectPath>Play_RockFall</ObjectPath>
 			<ShortName>Play_RockFall</ShortName>
 			<Path>Event/Play_RockFall.bnk</Path>
@@ -420,7 +430,7 @@
 				<Event Id="1139562193" Name="Stop_outsideAtmosphere" ObjectPath="\Events\Default Work Unit\Stop_outsideAtmosphere" GUID="{E1DA4D58-2E31-4BC9-BF4F-FAEB55221E93}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1202343709" Type="Event" GUID="{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}" Language="SFX" Hash="{ACA798A7-69E1-EFDF-99D2-5B9C7FF94DE1}">
+		<SoundBank Id="1202343709" Type="Event" GUID="{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}" Language="SFX" Hash="{AE455396-1586-FA87-E75B-D69A4263DED2}">
 			<ObjectPath>Play_rustle</ObjectPath>
 			<ShortName>Play_rustle</ShortName>
 			<Path>Event/Play_rustle.bnk</Path>
@@ -441,13 +451,23 @@
 					<CachePath>SFX/rustle1_07538E64.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
-				<Event Id="1202343709" Name="Play_rustle" ObjectPath="\Events\Default Work Unit\Play_rustle" GUID="{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}" MaxAttenuation="400" DurationType="OneShot" DurationMin="0.4231654" DurationMax="0.81324357">
+				<Event Id="1202343709" Name="Play_rustle" ObjectPath="\Events\Default Work Unit\Play_rustle" GUID="{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}" DurationType="OneShot" DurationMin="0.4231654" DurationMax="0.81324357">
 					<MediaRefs>
 						<MediaRef Id="20832412"/>
 						<MediaRef Id="631883680"/>
 						<MediaRef Id="805458352"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
@@ -498,7 +518,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1319708803" Type="Event" GUID="{6AE614A5-9A56-464C-BE07-C8AE0037A0C6}" Language="SFX" Hash="{8AA3C610-4FF7-036B-787B-D13EEED8F0F8}">
+		<SoundBank Id="1319708803" Type="Event" GUID="{6AE614A5-9A56-464C-BE07-C8AE0037A0C6}" Language="SFX" Hash="{15AD0737-4CBA-7208-61AC-DF54497278D4}">
 			<ObjectPath>Play_flashOff</ObjectPath>
 			<ShortName>Play_flashOff</ShortName>
 			<Path>Event/Play_flashOff.bnk</Path>
@@ -551,7 +571,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1580464077" Type="Event" GUID="{28C0F76F-9DB4-45B5-8CA9-456279189419}" Language="SFX" Hash="{74491AC2-49D4-48E2-B960-0916317F6283}">
+		<SoundBank Id="1580464077" Type="Event" GUID="{28C0F76F-9DB4-45B5-8CA9-456279189419}" Language="SFX" Hash="{59F920F4-3322-473B-4CE6-808E645DCC5D}">
 			<ObjectPath>Play_spray</ObjectPath>
 			<ShortName>Play_spray</ShortName>
 			<Path>Event/Play_spray.bnk</Path>
@@ -723,59 +743,6 @@
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
-		</SoundBank>
-		<SoundBank Id="1810912708" Type="Event" GUID="{E287937B-CDED-4F16-913F-DB393E5E8E26}" Language="SFX" Hash="{37D69EDF-1E6D-D431-6208-07947E52FA64}">
-			<ObjectPath>Play_Bite</ObjectPath>
-			<ShortName>Play_Bite</ShortName>
-			<Path>Event/Play_Bite.bnk</Path>
-			<Media>
-				<File Id="140177471" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Bite.wav</ShortName>
-					<Path>Media/140177471.wem</Path>
-					<CachePath>SFX/Bite_07F4F787.wem</CachePath>
-				</File>
-				<File Id="165520342" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Bite.wav</ShortName>
-					<Path>Media/165520342.wem</Path>
-					<CachePath>SFX/Bite_4B6ECAC2.wem</CachePath>
-				</File>
-				<File Id="261416016" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Bite.wav</ShortName>
-					<Path>Media/261416016.wem</Path>
-					<CachePath>SFX/Bite_1CC9E668.wem</CachePath>
-				</File>
-				<File Id="856751788" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Bite.wav</ShortName>
-					<Path>Media/856751788.wem</Path>
-					<CachePath>SFX/Bite_B6543914.wem</CachePath>
-				</File>
-				<File Id="1044280572" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Bite.wav</ShortName>
-					<Path>Media/1044280572.wem</Path>
-					<CachePath>SFX/Bite_5CD7C961.wem</CachePath>
-				</File>
-			</Media>
-			<Plugins>
-				<ShareSets>
-					<Plugin Id="484890516" Name="Church_Small_Wood" ObjectPath="\Effects\Factory Effects\RoomVerb\Cathedrals\Church_Small_Wood" GUID="{940CCB47-F031-4C6A-B0E6-726CAC418C02}" LibName="Wwise RoomVerb" LibId="7733251"/>
-				</ShareSets>
-			</Plugins>
-			<Events>
-				<Event Id="1810912708" Name="Play_Bite" ObjectPath="\Events\Default Work Unit\Play_Bite" GUID="{E287937B-CDED-4F16-913F-DB393E5E8E26}" MaxAttenuation="800" DurationType="OneShot" DurationMin="0.42073348" DurationMax="0.7678617">
-					<MediaRefs>
-						<MediaRef Id="140177471"/>
-						<MediaRef Id="165520342"/>
-						<MediaRef Id="261416016"/>
-						<MediaRef Id="856751788"/>
-						<MediaRef Id="1044280572"/>
-					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="484890516"/>
-						</ShareSets>
-					</PluginRefs>
-				</Event>
-			</Events>
 		</SoundBank>
 		<SoundBank Id="2025845440" Type="Event" GUID="{F05E8152-8526-474A-8CD3-14071D451BB3}" Language="SFX" Hash="{20F0193C-92F8-3344-38D6-4D67FA1216A8}">
 			<ObjectPath>Play_Torch</ObjectPath>
@@ -983,6 +950,14 @@
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="2370690330" Type="Event" GUID="{A0E8382A-A63E-411A-B327-3FEBB59B2349}" Language="SFX" Hash="{B1B873E7-04DF-E65E-A7AC-3E60A57408C0}">
+			<ObjectPath>Stop_title</ObjectPath>
+			<ShortName>Stop_title</ShortName>
+			<Path>Event/Stop_title.bnk</Path>
+			<Events>
+				<Event Id="2370690330" Name="Stop_title" ObjectPath="\Events\Default Work Unit\Stop_title" GUID="{A0E8382A-A63E-411A-B327-3FEBB59B2349}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="2466093437" Type="Event" GUID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}" Language="SFX" Hash="{FDB8CFCD-788F-E257-A0F1-2A706AE387CB}">
 			<ObjectPath>Play_caveAtmosphere</ObjectPath>
 			<ShortName>Play_caveAtmosphere</ShortName>
@@ -1019,6 +994,95 @@
 					<PluginRefs>
 						<ShareSets>
 							<PluginRef Id="2513915904"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="2588596223" Type="Event" GUID="{55F0803B-89C6-451C-8A1E-22D71EAB10E3}" Language="SFX" Hash="{EA9CBF53-272C-B795-8CEB-0277BB28C8B0}">
+			<ObjectPath>Play_fullBite</ObjectPath>
+			<ShortName>Play_fullBite</ShortName>
+			<Path>Event/Play_fullBite.bnk</Path>
+			<Media>
+				<File Id="20832412" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>rustle1.wav</ShortName>
+					<Path>Media/20832412.wem</Path>
+					<CachePath>SFX/rustle1_89314C5E.wem</CachePath>
+				</File>
+				<File Id="109334872" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>stretch.wav</ShortName>
+					<Path>Media/109334872.wem</Path>
+					<CachePath>SFX/stretch_DDFAF94C.wem</CachePath>
+				</File>
+				<File Id="140177471" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Bite.wav</ShortName>
+					<Path>Media/140177471.wem</Path>
+					<CachePath>SFX/Bite_07F4F787.wem</CachePath>
+				</File>
+				<File Id="165520342" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Bite.wav</ShortName>
+					<Path>Media/165520342.wem</Path>
+					<CachePath>SFX/Bite_4B6ECAC2.wem</CachePath>
+				</File>
+				<File Id="261416016" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Bite.wav</ShortName>
+					<Path>Media/261416016.wem</Path>
+					<CachePath>SFX/Bite_1CC9E668.wem</CachePath>
+				</File>
+				<File Id="283930358" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>stretch.wav</ShortName>
+					<Path>Media/283930358.wem</Path>
+					<CachePath>SFX/stretch_4BEFB7C6.wem</CachePath>
+				</File>
+				<File Id="631883680" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>rustle2.wav</ShortName>
+					<Path>Media/631883680.wem</Path>
+					<CachePath>SFX/rustle2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="805458352" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>rustle1.wav</ShortName>
+					<Path>Media/805458352.wem</Path>
+					<CachePath>SFX/rustle1_07538E64.wem</CachePath>
+				</File>
+				<File Id="856751788" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Bite.wav</ShortName>
+					<Path>Media/856751788.wem</Path>
+					<CachePath>SFX/Bite_B6543914.wem</CachePath>
+				</File>
+				<File Id="993867576" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>stretch.wav</ShortName>
+					<Path>Media/993867576.wem</Path>
+					<CachePath>SFX/stretch_C1050841.wem</CachePath>
+				</File>
+				<File Id="1044280572" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Bite.wav</ShortName>
+					<Path>Media/1044280572.wem</Path>
+					<CachePath>SFX/Bite_5CD7C961.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="2588596223" Name="Play_fullBite" ObjectPath="\Events\Default Work Unit\Play_fullBite" GUID="{55F0803B-89C6-451C-8A1E-22D71EAB10E3}" DurationType="OneShot" DurationMin="0.7337021" DurationMax="0.8894372">
+					<MediaRefs>
+						<MediaRef Id="20832412"/>
+						<MediaRef Id="109334872"/>
+						<MediaRef Id="140177471"/>
+						<MediaRef Id="165520342"/>
+						<MediaRef Id="261416016"/>
+						<MediaRef Id="283930358"/>
+						<MediaRef Id="631883680"/>
+						<MediaRef Id="805458352"/>
+						<MediaRef Id="856751788"/>
+						<MediaRef Id="993867576"/>
+						<MediaRef Id="1044280572"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
 						</ShareSets>
 					</PluginRefs>
 				</Event>
@@ -1241,6 +1305,22 @@
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="3143519455" Type="Event" GUID="{3C670717-CCB5-4E76-BABE-7448808A0266}" Language="SFX" Hash="{AC699BC2-B097-0EC5-1DF9-321F211449A1}">
+			<ObjectPath>Stop_iMoans</ObjectPath>
+			<ShortName>Stop_iMoans</ShortName>
+			<Path>Event/Stop_iMoans.bnk</Path>
+			<Events>
+				<Event Id="3143519455" Name="Stop_iMoans" ObjectPath="\Events\Default Work Unit\Stop_iMoans" GUID="{3C670717-CCB5-4E76-BABE-7448808A0266}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="3157003241" Type="Event" GUID="{F708B019-CBAD-4BF6-A336-5613210032FA}" Language="SFX" Hash="{60449CED-BC09-609A-0B34-0D96ED24F7CD}">
+			<ObjectPath>test</ObjectPath>
+			<ShortName>test</ShortName>
+			<Path>Event/test.bnk</Path>
+			<Events>
+				<Event Id="3157003241" Name="test" ObjectPath="\Events\Default Work Unit\test" GUID="{F708B019-CBAD-4BF6-A336-5613210032FA}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="3279106990" Type="Event" GUID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}" Language="SFX" Hash="{C644147A-7754-972E-CAFD-DE32EA7FB804}">
 			<ObjectPath>Play_fHeal</ObjectPath>
 			<ShortName>Play_fHeal</ShortName>
@@ -1325,7 +1405,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3822360239" Type="Event" GUID="{CA79A399-06E2-4F90-905E-DBFA668264F9}" Language="SFX" Hash="{9CA728BB-BC3E-5DD9-D42A-3C49A07A94F8}">
+		<SoundBank Id="3822360239" Type="Event" GUID="{CA79A399-06E2-4F90-905E-DBFA668264F9}" Language="SFX" Hash="{2BD4DEFC-82C4-693C-521D-B3E6E546AD30}">
 			<ObjectPath>Play_flashOn</ObjectPath>
 			<ShortName>Play_flashOn</ShortName>
 			<Path>Event/Play_flashOn.bnk</Path>
@@ -1352,6 +1432,25 @@
 						<MediaRef Id="456463279"/>
 						<MediaRef Id="764745543"/>
 						<MediaRef Id="890394530"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="3849537216" Type="Event" GUID="{C8050BE5-FD3C-4142-B34A-120C1C83C0AC}" Language="SFX" Hash="{25D1F795-0381-5FDA-4549-4F4D92394C47}">
+			<ObjectPath>Play_title</ObjectPath>
+			<ShortName>Play_title</ShortName>
+			<Path>Event/Play_title.bnk</Path>
+			<Media>
+				<File Id="210479033" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>lightPiano.wav</ShortName>
+					<Path>Media/210479033.wem</Path>
+					<CachePath>SFX/lightPiano_A724EA89.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3849537216" Name="Play_title" ObjectPath="\Events\Default Work Unit\Play_title" GUID="{C8050BE5-FD3C-4142-B34A-120C1C83C0AC}" DurationType="OneShot" DurationMin="30.629343" DurationMax="30.629343">
+					<MediaRefs>
+						<MediaRef Id="210479033"/>
 					</MediaRefs>
 				</Event>
 			</Events>
@@ -1517,5 +1616,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4A730E78-0A00-CB34-BCCA-443F51C8C3FE}</FileHash>
+	<FileHash>{B548B4E7-FA7F-85BE-984A-ED929F34C6A2}</FileHash>
 </SoundBanksInfo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="3143519455" Type="Event" GUID="{3C670717-CCB5-4E76-BABE-7448808A0266}" Language="SFX" Hash="{AC699BC2-B097-0EC5-1DF9-321F211449A1}">
+			<ObjectPath>Stop_iMoans</ObjectPath>
+			<ShortName>Stop_iMoans</ShortName>
+			<Path>Event/Stop_iMoans.bnk</Path>
+			<Events>
+				<Event Id="3143519455" Name="Stop_iMoans" ObjectPath="\Events\Default Work Unit\Stop_iMoans" GUID="{3C670717-CCB5-4E76-BABE-7448808A0266}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{2C4B79D9-1D19-018C-8E81-DF2E601D2730}</FileHash>
+</SoundBanksInfo>

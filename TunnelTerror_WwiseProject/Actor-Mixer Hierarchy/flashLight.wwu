@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<RandomSequenceContainer Name="flashOn" ID="{828114E7-E2C6-4867-8808-F1A870BFED43}" ShortID="281153471">
 					<PropertyList>
+						<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 						<Property Name="Pitch" Type="int32">
 							<ValueList>
 								<Value>180</Value>
@@ -100,6 +101,7 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="flashOff" ID="{92A17809-057C-4F20-A104-1CFC3AAE6490}" ShortID="486304246">
 					<PropertyList>
+						<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}",
     "Language": "SFX",
-    "Hash": "{ACA798A7-69E1-EFDF-99D2-5B9C7FF94DE1}",
+    "Hash": "{AE455396-1586-FA87-E75B-D69A4263DED2}",
     "ObjectPath": "Play_rustle",
     "ShortName": "Play_rustle",
     "Path": "Event/Play_rustle.bnk",
@@ -43,13 +43,24 @@
       "CachePath": "SFX/rustle1_07538E64.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1202343709",
       "Name": "Play_rustle",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_rustle",
       "GUID": "{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}",
-      "MaxAttenuation": "400",
       "DurationType": "OneShot",
       "DurationMin": "0.4231654",
       "DurationMax": "0.81324357",
@@ -63,11 +74,18 @@
        {
         "Id": "805458352"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{1BBA7F47-CD07-1FCA-A715-054E258AA3CE}"
+  "FileHash": "{FC068F56-E7DC-9A94-7085-0F58673AC2FB}"
  }
 }

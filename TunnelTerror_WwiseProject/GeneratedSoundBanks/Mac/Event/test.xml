@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="3157003241" Type="Event" GUID="{F708B019-CBAD-4BF6-A336-5613210032FA}" Language="SFX" Hash="{60449CED-BC09-609A-0B34-0D96ED24F7CD}">
+			<ObjectPath>test</ObjectPath>
+			<ShortName>test</ShortName>
+			<Path>Event/test.bnk</Path>
+			<Events>
+				<Event Id="3157003241" Name="test" ObjectPath="\Events\Default Work Unit\test" GUID="{F708B019-CBAD-4BF6-A336-5613210032FA}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{88F4C4E8-E60A-5AA8-9023-8EFF0CC999E2}</FileHash>
+</SoundBanksInfo>

@@ -1,3 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	848292664	Play_plantStretch			\Default Work Unit\Play_plantStretch	
 
+Effect plug-ins	ID	Name	Type				Notes
+	1990128658	Room_Medium	Wwise RoomVerb			
+
