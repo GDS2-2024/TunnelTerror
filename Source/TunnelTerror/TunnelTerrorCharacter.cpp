@@ -955,3 +955,15 @@ void ATunnelTerrorCharacter::SetIsInSafeZone(bool bNewIsInSafeZone)
 {
 	bIsInSafeZone = bNewIsInSafeZone;
 }
+
+void ATunnelTerrorCharacter::ResetCharacter()
+{
+	bIsInSafeZone = false;
+	health = 100.0f;
+	causeOfDeath = "alive";
+	timeAlive = 0.0f;
+
+	trapCDCurrent = 0.0f;
+	ATunnelTerrorPlayerState* playerState = GetPlayerState<ATunnelTerrorPlayerState>();
+	playerState->SetIsInfected(false);
+}

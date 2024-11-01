@@ -13,21 +13,25 @@ ATunnelTerrorGameState::ATunnelTerrorGameState()
 	bChaosTime = false;
 	gameTime = 600.0f;
 	bDoorClosing = false;
+	bInLobby = true;
 }
 
 void ATunnelTerrorGameState::BeginPlay()
 {
 	ElevatorEscape = Cast<AElevatorEscape>(UGameplayStatics::GetActorOfClass(GetWorld(), AElevatorEscape::StaticClass()));
 
-	TArray<AActor*> FoundActors;
-
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ATunnelTerrorCharacter::StaticClass(), FoundActors);
-
-	for (AActor* Actor : FoundActors)
+	if (HasAuthority())
 	{
-		if (ATunnelTerrorCharacter* Character = Cast<ATunnelTerrorCharacter>(Actor))
+		TArray<AActor*> FoundActors;
+
+		UGameplayStatics::GetAllActorsOfClass(GetWorld(), ATunnelTerrorCharacter::StaticClass(), FoundActors);
+
+		for (AActor* Actor : FoundActors)
 		{
-			Players.Add(Character);
+			if (ATunnelTerrorCharacter* Character = Cast<ATunnelTerrorCharacter>(Actor))
+			{
+				Players.Add(Character);
+			}
 		}
 	}
 }
@@ -122,30 +126,38 @@ void ATunnelTerrorGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty
 	DOREPLIFETIME(ATunnelTerrorGameState, gameTime);
 	DOREPLIFETIME(ATunnelTerrorGameState, chaosTime);
 	DOREPLIFETIME(ATunnelTerrorGameState, bChaosTime);
+	DOREPLIFETIME(ATunnelTerrorGameState, bInLobby);
+	DOREPLIFETIME(ATunnelTerrorGameState, Players);
 }
 
 void ATunnelTerrorGameState::AddPlayer(ATunnelTerrorCharacter* Character)
 {
-	if (Character && !Players.Contains(Character))
+	if (HasAuthority())
 	{
-		Players.Add(Character);
-
-		if (ElevatorEscape)
+		if (Character && !Players.Contains(Character))
 		{
-			ElevatorEscape->samplesNeeded = Players.Num() * 2;
+			Players.Add(Character);
+
+			if (ElevatorEscape)
+			{
+				ElevatorEscape->samplesNeeded = Players.Num() * 2;
+			}
 		}
 	}
 }
 
 void ATunnelTerrorGameState::RemovePlayer(ATunnelTerrorCharacter* Character)
 {
-	if (Character)
+	if (HasAuthority())
 	{
-		Players.Remove(Character);
-
-		if (ElevatorEscape)
+		if (Character)
 		{
-			ElevatorEscape->samplesNeeded = Players.Num() * 2;
+			Players.Remove(Character);
+
+			if (ElevatorEscape)
+			{
+				ElevatorEscape->samplesNeeded = Players.Num() * 2;
+			}
 		}
 	}
 }
