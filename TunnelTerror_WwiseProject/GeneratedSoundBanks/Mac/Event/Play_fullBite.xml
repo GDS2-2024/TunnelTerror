@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="2588596223" Type="Event" GUID="{55F0803B-89C6-451C-8A1E-22D71EAB10E3}" Language="SFX" Hash="{EA9CBF53-272C-B795-8CEB-0277BB28C8B0}">
+			<ObjectPath>Play_fullBite</ObjectPath>
+			<ShortName>Play_fullBite</ShortName>
+			<Path>Event/Play_fullBite.bnk</Path>
+			<Media>
+				<File Id="20832412" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>rustle1.wav</ShortName>
+					<Path>Media/20832412.wem</Path>
+					<CachePath>SFX/rustle1_89314C5E.wem</CachePath>
+				</File>
+				<File Id="109334872" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>stretch.wav</ShortName>
+					<Path>Media/109334872.wem</Path>
+					<CachePath>SFX/stretch_DDFAF94C.wem</CachePath>
+				</File>
+				<File Id="140177471" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Bite.wav</ShortName>
+					<Path>Media/140177471.wem</Path>
+					<CachePath>SFX/Bite_07F4F787.wem</CachePath>
+				</File>
+				<File Id="165520342" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Bite.wav</ShortName>
+					<Path>Media/165520342.wem</Path>
+					<CachePath>SFX/Bite_4B6ECAC2.wem</CachePath>
+				</File>
+				<File Id="261416016" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Bite.wav</ShortName>
+					<Path>Media/261416016.wem</Path>
+					<CachePath>SFX/Bite_1CC9E668.wem</CachePath>
+				</File>
+				<File Id="283930358" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>stretch.wav</ShortName>
+					<Path>Media/283930358.wem</Path>
+					<CachePath>SFX/stretch_4BEFB7C6.wem</CachePath>
+				</File>
+				<File Id="631883680" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>rustle2.wav</ShortName>
+					<Path>Media/631883680.wem</Path>
+					<CachePath>SFX/rustle2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="805458352" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>rustle1.wav</ShortName>
+					<Path>Media/805458352.wem</Path>
+					<CachePath>SFX/rustle1_07538E64.wem</CachePath>
+				</File>
+				<File Id="856751788" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Bite.wav</ShortName>
+					<Path>Media/856751788.wem</Path>
+					<CachePath>SFX/Bite_B6543914.wem</CachePath>
+				</File>
+				<File Id="993867576" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>stretch.wav</ShortName>
+					<Path>Media/993867576.wem</Path>
+					<CachePath>SFX/stretch_C1050841.wem</CachePath>
+				</File>
+				<File Id="1044280572" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Bite.wav</ShortName>
+					<Path>Media/1044280572.wem</Path>
+					<CachePath>SFX/Bite_5CD7C961.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="2588596223" Name="Play_fullBite" ObjectPath="\Events\Default Work Unit\Play_fullBite" GUID="{55F0803B-89C6-451C-8A1E-22D71EAB10E3}" DurationType="OneShot" DurationMin="0.7337021" DurationMax="0.8894372">
+					<MediaRefs>
+						<MediaRef Id="20832412"/>
+						<MediaRef Id="109334872"/>
+						<MediaRef Id="140177471"/>
+						<MediaRef Id="165520342"/>
+						<MediaRef Id="261416016"/>
+						<MediaRef Id="283930358"/>
+						<MediaRef Id="631883680"/>
+						<MediaRef Id="805458352"/>
+						<MediaRef Id="856751788"/>
+						<MediaRef Id="993867576"/>
+						<MediaRef Id="1044280572"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{F29A2C65-981D-5055-C07A-C634F7618F12}</FileHash>
+</SoundBanksInfo>

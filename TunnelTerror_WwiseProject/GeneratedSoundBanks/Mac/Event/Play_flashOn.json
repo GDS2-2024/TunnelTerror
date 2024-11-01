@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{CA79A399-06E2-4F90-905E-DBFA668264F9}",
     "Language": "SFX",
-    "Hash": "{9CA728BB-BC3E-5DD9-D42A-3C49A07A94F8}",
+    "Hash": "{2BD4DEFC-82C4-693C-521D-B3E6E546AD30}",
     "ObjectPath": "Play_flashOn",
     "ShortName": "Play_flashOn",
     "Path": "Event/Play_flashOn.bnk",
@@ -67,6 +67,6 @@
     ]
    }
   ],
-  "FileHash": "{4295DBE5-1446-6928-7E3F-DD5906DDC7AB}"
+  "FileHash": "{1D2C8379-442F-6D10-ED24-520AC16EC5F5}"
  }
 }

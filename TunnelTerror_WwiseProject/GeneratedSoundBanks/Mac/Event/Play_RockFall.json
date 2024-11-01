@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
     "Language": "SFX",
-    "Hash": "{DFF7AB17-3017-660D-56C7-EA668672296E}",
+    "Hash": "{CC1E2E06-1A75-721B-2485-2AA649FC1A38}",
     "ObjectPath": "Play_RockFall",
     "ShortName": "Play_RockFall",
     "Path": "Event/Play_RockFall.bnk",
@@ -184,6 +184,6 @@
     ]
    }
   ],
-  "FileHash": "{7F494130-B4D9-3463-4B0B-CF0C85240FE2}"
+  "FileHash": "{0CC0BEFF-E805-28C9-D428-80DBD561D431}"
  }
 }

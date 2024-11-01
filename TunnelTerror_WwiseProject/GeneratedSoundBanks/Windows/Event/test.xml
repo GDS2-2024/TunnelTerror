@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="3157003241" Type="Event" GUID="{F708B019-CBAD-4BF6-A336-5613210032FA}" Language="SFX" Hash="{60449CED-BC09-609A-0B34-0D96ED24F7CD}">
+			<ObjectPath>test</ObjectPath>
+			<ShortName>test</ShortName>
+			<Path>Event/test.bnk</Path>
+			<Events>
+				<Event Id="3157003241" Name="test" ObjectPath="\Events\Default Work Unit\test" GUID="{F708B019-CBAD-4BF6-A336-5613210032FA}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{BF917CA6-F6F2-7A68-2FF0-124514568FAA}</FileHash>
+</SoundBanksInfo>

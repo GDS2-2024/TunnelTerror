@@ -105,17 +105,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Bite" ID="{E287937B-CDED-4F16-913F-DB393E5E8E26}">
-					<ChildrenList>
-						<Action Name="" ID="{26C7F876-017B-45C2-ACCC-D6BE898DE877}" ShortID="409305453">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Bite" ID="{6B631BCA-2E17-4680-9AC4-84887647491F}" WorkUnitID="{AD7EEDAC-93FE-4FAF-8E0F-62A65979BC6B}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_Glow" ID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}">
 					<ChildrenList>
 						<Action Name="" ID="{DA830352-05E8-4015-B9FD-30A182F72BD2}" ShortID="43596638">
@@ -499,6 +488,66 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="flashOn" ID="{828114E7-E2C6-4867-8808-F1A870BFED43}" WorkUnitID="{F70B7A7B-C0A7-442C-9478-8A3EB1AB396C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_title" ID="{C8050BE5-FD3C-4142-B34A-120C1C83C0AC}">
+					<ChildrenList>
+						<Action Name="" ID="{34944B1B-FDD6-4A50-BD7F-0CAA5E5D90B1}" ShortID="55856457">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{316E0337-E038-4641-BAEF-2279F223C186}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="title" ID="{F920B43B-000A-4981-A0E8-F5070864565C}" WorkUnitID="{60DE0536-7D18-46B3-B781-D1B43B8FFDD7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_title" ID="{A0E8382A-A63E-411A-B327-3FEBB59B2349}">
+					<ChildrenList>
+						<Action Name="" ID="{56813FFA-1364-4823-9ED7-5CB342AB438C}" ShortID="968966196">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="title" ID="{F920B43B-000A-4981-A0E8-F5070864565C}" WorkUnitID="{60DE0536-7D18-46B3-B781-D1B43B8FFDD7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="test" ID="{F708B019-CBAD-4BF6-A336-5613210032FA}"/>
+				<Event Name="Play_fullBite" ID="{55F0803B-89C6-451C-8A1E-22D71EAB10E3}">
+					<ChildrenList>
+						<Action Name="" ID="{DD04501B-C7AC-4569-BD7F-7EF42B0D9C7F}" ShortID="683086579">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fullBite" ID="{60251167-404D-4888-ABA8-BF3E1F832F5B}" WorkUnitID="{AD7EEDAC-93FE-4FAF-8E0F-62A65979BC6B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_iMoans" ID="{3C670717-CCB5-4E76-BABE-7448808A0266}">
+					<ChildrenList>
+						<Action Name="" ID="{211821B1-3CF1-4218-8746-F132D7C7B908}" ShortID="5934991">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="iMoans" ID="{86A8DB10-2AB9-4E8F-99AE-506D38B638DB}" WorkUnitID="{B48A2A45-95D3-4666-9C09-54474C7DED67}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

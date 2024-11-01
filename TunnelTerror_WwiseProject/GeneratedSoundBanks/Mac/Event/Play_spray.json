@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{28C0F76F-9DB4-45B5-8CA9-456279189419}",
     "Language": "SFX",
-    "Hash": "{74491AC2-49D4-48E2-B960-0916317F6283}",
+    "Hash": "{59F920F4-3322-473B-4CE6-808E645DCC5D}",
     "ObjectPath": "Play_spray",
     "ShortName": "Play_spray",
     "Path": "Event/Play_spray.bnk",
@@ -66,6 +66,6 @@
     ]
    }
   ],
-  "FileHash": "{BA567AB6-70F8-4AC0-5CE9-6B92AECBCFA6}"
+  "FileHash": "{4E366E06-39D1-A496-54C7-7EB90F9DD52A}"
  }
 }

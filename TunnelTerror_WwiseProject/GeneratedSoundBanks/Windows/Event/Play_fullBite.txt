@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2588596223	Play_fullBite			\Default Work Unit\Play_fullBite	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1990128658	Room_Medium	Wwise RoomVerb			
+

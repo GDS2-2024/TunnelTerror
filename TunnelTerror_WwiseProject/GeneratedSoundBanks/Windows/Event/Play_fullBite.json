@@ -1,0 +1,187 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "2588596223",
+    "Type": "Event",
+    "GUID": "{55F0803B-89C6-451C-8A1E-22D71EAB10E3}",
+    "Language": "SFX",
+    "Hash": "{EA9CBF53-272C-B795-8CEB-0277BB28C8B0}",
+    "ObjectPath": "Play_fullBite",
+    "ShortName": "Play_fullBite",
+    "Path": "Event/Play_fullBite.bnk",
+    "Media": [
+     {
+      "Id": "20832412",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "rustle1.wav",
+      "Path": "Media/20832412.wem",
+      "CachePath": "SFX/rustle1_89314C5E.wem"
+     },
+     {
+      "Id": "109334872",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "stretch.wav",
+      "Path": "Media/109334872.wem",
+      "CachePath": "SFX/stretch_DDFAF94C.wem"
+     },
+     {
+      "Id": "140177471",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bite.wav",
+      "Path": "Media/140177471.wem",
+      "CachePath": "SFX/Bite_07F4F787.wem"
+     },
+     {
+      "Id": "165520342",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bite.wav",
+      "Path": "Media/165520342.wem",
+      "CachePath": "SFX/Bite_4B6ECAC2.wem"
+     },
+     {
+      "Id": "261416016",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bite.wav",
+      "Path": "Media/261416016.wem",
+      "CachePath": "SFX/Bite_1CC9E668.wem"
+     },
+     {
+      "Id": "283930358",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "stretch.wav",
+      "Path": "Media/283930358.wem",
+      "CachePath": "SFX/stretch_4BEFB7C6.wem"
+     },
+     {
+      "Id": "631883680",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "rustle2.wav",
+      "Path": "Media/631883680.wem",
+      "CachePath": "SFX/rustle2_818F3B66.wem"
+     },
+     {
+      "Id": "805458352",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "rustle1.wav",
+      "Path": "Media/805458352.wem",
+      "CachePath": "SFX/rustle1_07538E64.wem"
+     },
+     {
+      "Id": "856751788",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bite.wav",
+      "Path": "Media/856751788.wem",
+      "CachePath": "SFX/Bite_B6543914.wem"
+     },
+     {
+      "Id": "993867576",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "stretch.wav",
+      "Path": "Media/993867576.wem",
+      "CachePath": "SFX/stretch_C1050841.wem"
+     },
+     {
+      "Id": "1044280572",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bite.wav",
+      "Path": "Media/1044280572.wem",
+      "CachePath": "SFX/Bite_5CD7C961.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "2588596223",
+      "Name": "Play_fullBite",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_fullBite",
+      "GUID": "{55F0803B-89C6-451C-8A1E-22D71EAB10E3}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.7337021",
+      "DurationMax": "0.8894372",
+      "MediaRefs": [
+       {
+        "Id": "20832412"
+       },
+       {
+        "Id": "109334872"
+       },
+       {
+        "Id": "140177471"
+       },
+       {
+        "Id": "165520342"
+       },
+       {
+        "Id": "261416016"
+       },
+       {
+        "Id": "283930358"
+       },
+       {
+        "Id": "631883680"
+       },
+       {
+        "Id": "805458352"
+       },
+       {
+        "Id": "856751788"
+       },
+       {
+        "Id": "993867576"
+       },
+       {
+        "Id": "1044280572"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{64820EA0-4D9C-E395-E579-7D6EE64D732C}"
+ }
+}

@@ -97,17 +97,18 @@ URoomComponent* ALevelGenerator::SpawnRoom(int32 CurrentI, int32 CurrentJ, TSubc
 
                 FVector location = LastRoomSpawned->GetActorLocation() + RC->SpawnLocations[rand];
                 AActor* ItemSpawned = GetWorld()->SpawnActor<AActor>(Items[randomItem], location, FRotator::ZeroRotator);
-                locations.Add(rand);
+                
 
-                for (int i = 0; i < 5; i++) {
-                    rand = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
+                /*for (int i = 0; i < 5; i++) {
+                    rand = FMath::RandRange(0, RC->HazardLocations.Num() - 1);
+                    locations.Add(rand);
                     while (locations.Contains(rand)) {
-                        rand = FMath::RandRange(0, RC->SpawnLocations.Num() - 1);
+                        rand = FMath::RandRange(0, RC->HazardLocations.Num() - 1);
                     }
-                    location = LastRoomSpawned->GetActorLocation() + RC->SpawnLocations[rand];
+                    location = LastRoomSpawned->GetActorLocation() + RC->HazardLocations[rand];
                     AActor* HazardSpawned = GetWorld()->SpawnActor<AActor>(Hazard1, location, FRotator::ZeroRotator);
                     locations.Add(rand);
-                }
+                }*/
             }
             else {
                 for (int i = 0; i < RC->SpawnLocations.Num(); i++) {
