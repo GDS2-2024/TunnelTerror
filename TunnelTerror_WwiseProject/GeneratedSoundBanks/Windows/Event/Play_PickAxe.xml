@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="821056363" Type="Event" GUID="{3ADEA1F1-F0F5-4552-8C26-899603130220}" Language="SFX" Hash="{7CCAC838-A98C-4B47-C4A5-3C6A3CBFBFD4}">
+		<SoundBank Id="821056363" Type="Event" GUID="{3ADEA1F1-F0F5-4552-8C26-899603130220}" Language="SFX" Hash="{024C9924-71D6-D14B-DD97-A93A1F6E4008}">
 			<ObjectPath>Play_PickAxe</ObjectPath>
 			<ShortName>Play_PickAxe</ShortName>
 			<Path>Event/Play_PickAxe.bnk</Path>
@@ -39,5 +39,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4759D33A-3293-0CEE-10C4-7AA8E9776AB5}</FileHash>
+	<FileHash>{B7C6B12C-6A24-4CBB-A4E5-59AE8D076947}</FileHash>
 </SoundBanksInfo>

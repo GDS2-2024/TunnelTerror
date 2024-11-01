@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{3ADEA1F1-F0F5-4552-8C26-899603130220}",
     "Language": "SFX",
-    "Hash": "{7CCAC838-A98C-4B47-C4A5-3C6A3CBFBFD4}",
+    "Hash": "{024C9924-71D6-D14B-DD97-A93A1F6E4008}",
     "ObjectPath": "Play_PickAxe",
     "ShortName": "Play_PickAxe",
     "Path": "Event/Play_PickAxe.bnk",
@@ -79,6 +79,6 @@
     ]
    }
   ],
-  "FileHash": "{A192CFAC-D773-14DA-B2CF-7E9A9F9FA62C}"
+  "FileHash": "{106F1676-84F8-7429-8B80-89E30674D31D}"
  }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="721983777" Type="Event" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" Language="SFX" Hash="{1E76EF5A-8873-6F2C-02DB-90B7525AF573}">
+		<SoundBank Id="721983777" Type="Event" GUID="{AA3B480F-E159-421B-A0C2-0C2A86F882C2}" Language="SFX" Hash="{72201C87-6E37-235A-B6BA-3FFA5E9CC712}">
 			<ObjectPath>Play_Glow</ObjectPath>
 			<ShortName>Play_Glow</ShortName>
 			<Path>Event/Play_Glow.bnk</Path>
@@ -31,5 +31,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BD0B1C2C-7E94-2A56-9554-0F480ACF1F50}</FileHash>
+	<FileHash>{6CC61F7C-7828-C08B-683C-EFA4110FD84F}</FileHash>
 </SoundBanksInfo>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3285640383" Type="Event" GUID="{3C9EE3BE-450E-4DD8-B9B9-FF78479BAB18}" Language="SFX" Hash="{CD0914B8-D55F-1D4E-48F1-4C8B857F704E}">
+		<SoundBank Id="3285640383" Type="Event" GUID="{3C9EE3BE-450E-4DD8-B9B9-FF78479BAB18}" Language="SFX" Hash="{C31773DB-BB68-3F89-0CCE-8261DE246293}">
 			<ObjectPath>Stop_spray</ObjectPath>
 			<ShortName>Stop_spray</ShortName>
 			<Path>Event/Stop_spray.bnk</Path>
@@ -10,5 +10,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F1CD07E6-8326-6EC8-C0BF-6458BDB13925}</FileHash>
+	<FileHash>{740EEC0E-DB5A-2D8A-A51A-6DDDDDB9B3A1}</FileHash>
 </SoundBanksInfo>

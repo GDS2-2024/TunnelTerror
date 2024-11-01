@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{AFFB088D-E64F-432C-B457-EDB99086C352}",
     "Language": "SFX",
-    "Hash": "{376199F4-F6BF-018B-CFB6-EF9392DC2A02}",
+    "Hash": "{A27E0EE7-DABF-0ABE-386E-966007554FCD}",
     "ObjectPath": "Play_fDamage",
     "ShortName": "Play_fDamage",
     "Path": "Event/Play_fDamage.bnk",
@@ -98,6 +98,6 @@
     ]
    }
   ],
-  "FileHash": "{CDDB5B91-7A72-472F-6929-A1F0D250B688}"
+  "FileHash": "{11B9FFE4-9965-5949-BA72-17F583ADBE13}"
  }
 }

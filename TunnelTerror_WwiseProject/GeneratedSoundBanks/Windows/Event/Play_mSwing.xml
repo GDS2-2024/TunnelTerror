@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1204302407" Type="Event" GUID="{EDD6846B-FEFC-45C4-9704-DE01F2D8123E}" Language="SFX" Hash="{B0E0F6E7-D091-D93B-579D-EE65AC57CDD1}">
+		<SoundBank Id="1204302407" Type="Event" GUID="{EDD6846B-FEFC-45C4-9704-DE01F2D8123E}" Language="SFX" Hash="{D65511C8-077B-917F-B763-E3CE53D26F10}">
 			<ObjectPath>Play_mSwing</ObjectPath>
 			<ShortName>Play_mSwing</ShortName>
 			<Path>Event/Play_mSwing.bnk</Path>
@@ -49,5 +49,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3EA9D59B-7E7B-95E1-5347-F302D319E034}</FileHash>
+	<FileHash>{9F06374C-EAFB-D79F-EC9F-41F7FA6BECAA}</FileHash>
 </SoundBanksInfo>

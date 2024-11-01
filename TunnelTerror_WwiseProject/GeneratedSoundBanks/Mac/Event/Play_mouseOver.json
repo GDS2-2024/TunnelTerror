@@ -1,0 +1,84 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "150",
+  "SoundBanks": [
+   {
+    "Id": "3019770429",
+    "Type": "Event",
+    "GUID": "{F95BB0FE-74F3-4CC8-AF85-8F50BF4A005D}",
+    "Language": "SFX",
+    "Hash": "{160DAE84-756D-E87B-1643-20BC8B022341}",
+    "ObjectPath": "Play_mouseOver",
+    "ShortName": "Play_mouseOver",
+    "Path": "Event/Play_mouseOver.bnk",
+    "Media": [
+     {
+      "Id": "323736582",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui4.wav",
+      "Path": "Media/323736582.wem",
+      "CachePath": "SFX/ui4_BCB42E34.wem"
+     },
+     {
+      "Id": "334968415",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui1.wav",
+      "Path": "Media/334968415.wem",
+      "CachePath": "SFX/ui1_6886FB87.wem"
+     },
+     {
+      "Id": "626105931",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui2.wav",
+      "Path": "Media/626105931.wem",
+      "CachePath": "SFX/ui2_00BC772C.wem"
+     },
+     {
+      "Id": "677397642",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui3.wav",
+      "Path": "Media/677397642.wem",
+      "CachePath": "SFX/ui3_1B908B89.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3019770429",
+      "Name": "Play_mouseOver",
+      "ObjectPath": "\\Events\\UI\\Play_mouseOver",
+      "GUID": "{F95BB0FE-74F3-4CC8-AF85-8F50BF4A005D}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2069238",
+      "DurationMax": "1.3389902",
+      "MediaRefs": [
+       {
+        "Id": "323736582"
+       },
+       {
+        "Id": "334968415"
+       },
+       {
+        "Id": "626105931"
+       },
+       {
+        "Id": "677397642"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{FBD751B0-BC04-3A94-CA4C-C5F52862061C}"
+ }
+}

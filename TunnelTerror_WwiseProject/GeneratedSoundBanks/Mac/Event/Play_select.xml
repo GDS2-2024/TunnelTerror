@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="1042987450" Type="Event" GUID="{D9B7304E-3726-4488-B370-CD4C711A247C}" Language="SFX" Hash="{8B0CB800-CE71-A0FA-537C-9FD59C298258}">
+			<ObjectPath>Play_select</ObjectPath>
+			<ShortName>Play_select</ShortName>
+			<Path>Event/Play_select.bnk</Path>
+			<Media>
+				<File Id="498364355" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>ui7.wav</ShortName>
+					<Path>Media/498364355.wem</Path>
+					<CachePath>SFX/ui7_6A768392.wem</CachePath>
+				</File>
+				<File Id="775253208" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>ui6.wav</ShortName>
+					<Path>Media/775253208.wem</Path>
+					<CachePath>SFX/ui6_4ABD8B54.wem</CachePath>
+				</File>
+				<File Id="956966152" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>ui8.wav</ShortName>
+					<Path>Media/956966152.wem</Path>
+					<CachePath>SFX/ui8_68132823.wem</CachePath>
+				</File>
+				<File Id="1016949203" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>ui5.wav</ShortName>
+					<Path>Media/1016949203.wem</Path>
+					<CachePath>SFX/ui5_C092C985.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1042987450" Name="Play_select" ObjectPath="\Events\UI\Play_select" GUID="{D9B7304E-3726-4488-B370-CD4C711A247C}" DurationType="OneShot" DurationMin="1.2667581" DurationMax="1.4073935">
+					<MediaRefs>
+						<MediaRef Id="498364355"/>
+						<MediaRef Id="775253208"/>
+						<MediaRef Id="956966152"/>
+						<MediaRef Id="1016949203"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{C0844ED5-8310-FCC0-41FE-301001963BE1}</FileHash>
+</SoundBanksInfo>

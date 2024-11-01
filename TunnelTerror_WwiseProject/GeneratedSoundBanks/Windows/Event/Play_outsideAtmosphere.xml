@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3942109467" Type="Event" GUID="{0E57EA07-3481-4CD4-AB5C-369B26ABFEEC}" Language="SFX" Hash="{74D8B056-010A-B21F-41FA-DE6ED93C81FC}">
+		<SoundBank Id="3942109467" Type="Event" GUID="{0E57EA07-3481-4CD4-AB5C-369B26ABFEEC}" Language="SFX" Hash="{DDDE2061-1EBA-B694-5228-0251402D761E}">
 			<ObjectPath>Play_outsideAtmosphere</ObjectPath>
 			<ShortName>Play_outsideAtmosphere</ShortName>
 			<Path>Event/Play_outsideAtmosphere.bnk</Path>
@@ -21,5 +21,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{96CBADED-C1A8-6429-743B-7B3761BC7C87}</FileHash>
+	<FileHash>{AE181D3A-3962-6CCA-F8ED-9068868E1EB5}</FileHash>
 </SoundBanksInfo>

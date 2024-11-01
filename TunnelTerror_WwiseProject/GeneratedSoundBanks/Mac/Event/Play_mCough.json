@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{7279E098-5799-4D47-98FB-C7C5EBB03C57}",
     "Language": "SFX",
-    "Hash": "{BB13C52B-D75A-DAAB-DA87-88F4680DCF3E}",
+    "Hash": "{1FE8B3E3-644C-53B9-4F8A-3987FAFB5223}",
     "ObjectPath": "Play_mCough",
     "ShortName": "Play_mCough",
     "Path": "Event/Play_mCough.bnk",
@@ -96,6 +96,6 @@
     ]
    }
   ],
-  "FileHash": "{C8D3D82A-7BB1-8353-E090-64753876A9A0}"
+  "FileHash": "{12AF7098-9291-DFED-A453-D8485CB735F2}"
  }
 }

@@ -471,6 +471,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_deathSting" ID="{038A761F-CFC6-4C76-93AE-6D95C140D559}">
+					<ChildrenList>
+						<Action Name="" ID="{AA81A51B-4647-4B30-8AA7-496DFA4D3ADB}" ShortID="79551724">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="deathSting" ID="{DC8190F8-E907-47CB-844A-FAE29C5C6168}" WorkUnitID="{A6DC2295-4579-4549-B564-B5309C472D27}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

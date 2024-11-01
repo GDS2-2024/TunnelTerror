@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
     "Language": "SFX",
-    "Hash": "{CFC8E96F-0E0C-354B-1E57-BB1B56BCB069}",
+    "Hash": "{FDB8CFCD-788F-E257-A0F1-2A706AE387CB}",
     "ObjectPath": "Play_caveAtmosphere",
     "ShortName": "Play_caveAtmosphere",
     "Path": "Event/Play_caveAtmosphere.bnk",
@@ -84,6 +84,6 @@
     ]
    }
   ],
-  "FileHash": "{ADB93B4A-E904-A1A6-FF0D-BDF204638335}"
+  "FileHash": "{EEAA50FB-A50F-40C7-95E3-6338765A4ABA}"
  }
 }

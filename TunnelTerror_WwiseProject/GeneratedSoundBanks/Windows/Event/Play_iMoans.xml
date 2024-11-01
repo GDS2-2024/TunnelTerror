@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1668514525" Type="Event" GUID="{07852589-1383-4156-9440-788054B24A18}" Language="SFX" Hash="{93976944-146A-D952-5D65-C19343A13BE2}">
+		<SoundBank Id="1668514525" Type="Event" GUID="{07852589-1383-4156-9440-788054B24A18}" Language="SFX" Hash="{5F6C6510-39A6-04F9-AE20-6A1BCA6107FB}">
 			<ObjectPath>Play_iMoans</ObjectPath>
 			<ShortName>Play_iMoans</ShortName>
 			<Path>Event/Play_iMoans.bnk</Path>
@@ -55,5 +55,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{98426F30-5E53-E360-4231-B74693D689A1}</FileHash>
+	<FileHash>{DFB27824-BF41-8CD9-F0A1-5EF686ABE64D}</FileHash>
 </SoundBanksInfo>

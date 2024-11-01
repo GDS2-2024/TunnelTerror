@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}",
     "Language": "SFX",
-    "Hash": "{54387A4C-E8B0-2FC6-5614-8065E3EB1EB3}",
+    "Hash": "{ACA798A7-69E1-EFDF-99D2-5B9C7FF94DE1}",
     "ObjectPath": "Play_rustle",
     "ShortName": "Play_rustle",
     "Path": "Event/Play_rustle.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "rustle1.wav",
       "Path": "Media/20832412.wem",
-      "CachePath": "SFX/rustle1_537ED500.wem"
+      "CachePath": "SFX/rustle1_89314C5E.wem"
      },
      {
       "Id": "631883680",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "rustle1.wav",
       "Path": "Media/805458352.wem",
-      "CachePath": "SFX/rustle1_E0D20921.wem"
+      "CachePath": "SFX/rustle1_07538E64.wem"
      }
     ],
     "Events": [
@@ -68,6 +68,6 @@
     ]
    }
   ],
-  "FileHash": "{E561F150-B499-DB77-B6F2-C7CF66E574E3}"
+  "FileHash": "{609DEB81-5040-87DD-FD15-D84F2F59E162}"
  }
 }

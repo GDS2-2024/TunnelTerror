@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{07852589-1383-4156-9440-788054B24A18}",
     "Language": "SFX",
-    "Hash": "{93976944-146A-D952-5D65-C19343A13BE2}",
+    "Hash": "{5F6C6510-39A6-04F9-AE20-6A1BCA6107FB}",
     "ObjectPath": "Play_iMoans",
     "ShortName": "Play_iMoans",
     "Path": "Event/Play_iMoans.bnk",
@@ -110,6 +110,6 @@
     ]
    }
   ],
-  "FileHash": "{706D2A57-4089-386D-C43F-417DC5A85A3E}"
+  "FileHash": "{BB3B5E41-D253-2435-C3FF-DFB112F9ECBC}"
  }
 }

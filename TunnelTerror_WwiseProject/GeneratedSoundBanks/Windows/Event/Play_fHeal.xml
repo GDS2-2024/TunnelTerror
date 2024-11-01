@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3279106990" Type="Event" GUID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}" Language="SFX" Hash="{32D0410D-DF42-C8C6-570A-64814C43C6AA}">
+		<SoundBank Id="3279106990" Type="Event" GUID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}" Language="SFX" Hash="{C644147A-7754-972E-CAFD-DE32EA7FB804}">
 			<ObjectPath>Play_fHeal</ObjectPath>
 			<ShortName>Play_fHeal</ShortName>
 			<Path>Event/Play_fHeal.bnk</Path>
@@ -37,5 +37,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3764B39E-9FB4-4980-7761-FBC2BA49D59D}</FileHash>
+	<FileHash>{5F7A3ABF-3A2E-64F6-F510-E5DAAFEEE4E8}</FileHash>
 </SoundBanksInfo>

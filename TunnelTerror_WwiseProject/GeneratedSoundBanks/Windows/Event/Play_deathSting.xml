@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<SoundBanks>
+		<SoundBank Id="3046905735" Type="Event" GUID="{038A761F-CFC6-4C76-93AE-6D95C140D559}" Language="SFX" Hash="{C0F9E473-477A-DD61-D907-186263AEEA80}">
+			<ObjectPath>Play_deathSting</ObjectPath>
+			<ShortName>Play_deathSting</ShortName>
+			<Path>Event/Play_deathSting.bnk</Path>
+			<Media>
+				<File Id="466717337" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>death2.wav</ShortName>
+					<Path>Media/466717337.wem</Path>
+					<CachePath>SFX/death2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="469497542" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>death1.wav</ShortName>
+					<Path>Media/469497542.wem</Path>
+					<CachePath>SFX/death1_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3046905735" Name="Play_deathSting" ObjectPath="\Events\Default Work Unit\Play_deathSting" GUID="{038A761F-CFC6-4C76-93AE-6D95C140D559}" DurationType="OneShot" DurationMin="11.722018" DurationMax="11.728368">
+					<MediaRefs>
+						<MediaRef Id="466717337"/>
+						<MediaRef Id="469497542"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{07A288C8-7C96-BF5C-E9F8-FC7F162AF9B5}</FileHash>
+</SoundBanksInfo>

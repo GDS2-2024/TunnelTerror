@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}",
     "Language": "SFX",
-    "Hash": "{91EBBBDF-17A8-32D9-43C5-223CECEC7346}",
+    "Hash": "{0D4BC75B-5DCD-41D8-E6F1-EE579AC4B017}",
     "ObjectPath": "Play_Grab",
     "ShortName": "Play_Grab",
     "Path": "Event/Play_Grab.bnk",
@@ -68,6 +68,6 @@
     ]
    }
   ],
-  "FileHash": "{71EA7E08-DB67-FE4C-27C4-607AD02E56B3}"
+  "FileHash": "{3AA26A13-B9BA-A2BA-0A21-17475A4DA181}"
  }
 }

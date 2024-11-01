@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3942109467" Type="Event" GUID="{0E57EA07-3481-4CD4-AB5C-369B26ABFEEC}" Language="SFX" Hash="{74D8B056-010A-B21F-41FA-DE6ED93C81FC}">
+		<SoundBank Id="3942109467" Type="Event" GUID="{0E57EA07-3481-4CD4-AB5C-369B26ABFEEC}" Language="SFX" Hash="{DDDE2061-1EBA-B694-5228-0251402D761E}">
 			<ObjectPath>Play_outsideAtmosphere</ObjectPath>
 			<ShortName>Play_outsideAtmosphere</ShortName>
 			<Path>Event/Play_outsideAtmosphere.bnk</Path>
@@ -21,5 +21,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E92798B9-152E-7DF7-419D-0E5B5485DA00}</FileHash>
+	<FileHash>{573EF72C-1481-98CB-473C-6CD995F83579}</FileHash>
 </SoundBanksInfo>

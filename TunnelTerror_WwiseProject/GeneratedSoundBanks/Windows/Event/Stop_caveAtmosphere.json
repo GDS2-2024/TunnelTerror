@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{3CBB73DE-9644-4A51-BD28-F3D5F4A7DABD}",
     "Language": "SFX",
-    "Hash": "{E0B08468-5C9A-440A-8826-16DE563CE990}",
+    "Hash": "{F49F0952-5573-DF4E-D1C4-7C665E1FE166}",
     "ObjectPath": "Stop_caveAtmosphere",
     "ShortName": "Stop_caveAtmosphere",
     "Path": "Event/Stop_caveAtmosphere.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{87E6D9E2-55EA-1EAC-24EA-51335AF32F5E}"
+  "FileHash": "{C192BD1C-7BB7-A45A-0E56-14E69334F554}"
  }
 }

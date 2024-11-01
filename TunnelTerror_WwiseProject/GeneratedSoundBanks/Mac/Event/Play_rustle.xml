@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1202343709" Type="Event" GUID="{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}" Language="SFX" Hash="{54387A4C-E8B0-2FC6-5614-8065E3EB1EB3}">
+		<SoundBank Id="1202343709" Type="Event" GUID="{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}" Language="SFX" Hash="{ACA798A7-69E1-EFDF-99D2-5B9C7FF94DE1}">
 			<ObjectPath>Play_rustle</ObjectPath>
 			<ShortName>Play_rustle</ShortName>
 			<Path>Event/Play_rustle.bnk</Path>
@@ -9,7 +9,7 @@
 				<File Id="20832412" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>rustle1.wav</ShortName>
 					<Path>Media/20832412.wem</Path>
-					<CachePath>SFX/rustle1_537ED500.wem</CachePath>
+					<CachePath>SFX/rustle1_89314C5E.wem</CachePath>
 				</File>
 				<File Id="631883680" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>rustle2.wav</ShortName>
@@ -19,7 +19,7 @@
 				<File Id="805458352" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>rustle1.wav</ShortName>
 					<Path>Media/805458352.wem</Path>
-					<CachePath>SFX/rustle1_E0D20921.wem</CachePath>
+					<CachePath>SFX/rustle1_07538E64.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -33,5 +33,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A157B526-14C1-5DFD-353E-DB5C2D50E9DA}</FileHash>
+	<FileHash>{0D8CF023-40D2-7465-F4C1-D8FF7D140BCE}</FileHash>
 </SoundBanksInfo>

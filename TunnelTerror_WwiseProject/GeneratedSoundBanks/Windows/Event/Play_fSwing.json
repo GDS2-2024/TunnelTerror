@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{B46FB24D-D356-43B8-A725-11CEEAA14A3D}",
     "Language": "SFX",
-    "Hash": "{E222C2CC-0489-CF9A-178A-84D15B390C89}",
+    "Hash": "{8184DBE8-9665-0B58-ABBD-51050486491C}",
     "ObjectPath": "Play_fSwing",
     "ShortName": "Play_fSwing",
     "Path": "Event/Play_fSwing.bnk",
@@ -98,6 +98,6 @@
     ]
    }
   ],
-  "FileHash": "{4ABACB6C-6EBC-A64C-A9DB-9995C3DF1CC9}"
+  "FileHash": "{9939B071-2D6C-A29C-A53F-1486FD0EC99F}"
  }
 }

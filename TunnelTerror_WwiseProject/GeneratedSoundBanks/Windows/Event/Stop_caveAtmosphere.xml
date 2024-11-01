@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3886625383" Type="Event" GUID="{3CBB73DE-9644-4A51-BD28-F3D5F4A7DABD}" Language="SFX" Hash="{E0B08468-5C9A-440A-8826-16DE563CE990}">
+		<SoundBank Id="3886625383" Type="Event" GUID="{3CBB73DE-9644-4A51-BD28-F3D5F4A7DABD}" Language="SFX" Hash="{F49F0952-5573-DF4E-D1C4-7C665E1FE166}">
 			<ObjectPath>Stop_caveAtmosphere</ObjectPath>
 			<ShortName>Stop_caveAtmosphere</ShortName>
 			<Path>Event/Stop_caveAtmosphere.bnk</Path>
@@ -10,5 +10,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{24B9EFE9-102C-877F-69CE-8DFCD353E466}</FileHash>
+	<FileHash>{119D00A3-3DC1-4E21-257A-BC2BCF0BEA47}</FileHash>
 </SoundBanksInfo>

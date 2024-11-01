@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}",
     "Language": "SFX",
-    "Hash": "{32D0410D-DF42-C8C6-570A-64814C43C6AA}",
+    "Hash": "{C644147A-7754-972E-CAFD-DE32EA7FB804}",
     "ObjectPath": "Play_fHeal",
     "ShortName": "Play_fHeal",
     "Path": "Event/Play_fHeal.bnk",
@@ -74,6 +74,6 @@
     ]
    }
   ],
-  "FileHash": "{ABB0FAC5-6F51-B6B5-9F7B-95C4C6F473D7}"
+  "FileHash": "{F0C58C8F-3BDF-FC86-11A4-221468242959}"
  }
 }

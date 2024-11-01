@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="1580464077" Type="Event" GUID="{28C0F76F-9DB4-45B5-8CA9-456279189419}" Language="SFX" Hash="{8A7A3BD3-D81C-7426-BCEA-801846A60344}">
+		<SoundBank Id="1580464077" Type="Event" GUID="{28C0F76F-9DB4-45B5-8CA9-456279189419}" Language="SFX" Hash="{74491AC2-49D4-48E2-B960-0916317F6283}">
 			<ObjectPath>Play_spray</ObjectPath>
 			<ShortName>Play_spray</ShortName>
 			<Path>Event/Play_spray.bnk</Path>
@@ -9,17 +9,17 @@
 				<File Id="221605604" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>spray1.wav</ShortName>
 					<Path>Media/221605604.wem</Path>
-					<CachePath>SFX/spray1_FDAD22E7.wem</CachePath>
+					<CachePath>SFX/spray1_C8052E0D.wem</CachePath>
 				</File>
 				<File Id="384915686" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>spray3.wav</ShortName>
 					<Path>Media/384915686.wem</Path>
-					<CachePath>SFX/spray3_06640976.wem</CachePath>
+					<CachePath>SFX/spray3_FC283A76.wem</CachePath>
 				</File>
 				<File Id="980869954" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>spray2.wav</ShortName>
 					<Path>Media/980869954.wem</Path>
-					<CachePath>SFX/spray2_6D72D86C.wem</CachePath>
+					<CachePath>SFX/spray2_FA94C4E6.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -33,5 +33,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4BAC98F9-9124-2708-054E-22C7DE154B0F}</FileHash>
+	<FileHash>{79886823-DD49-9560-C3F0-796D456E54CE}</FileHash>
 </SoundBanksInfo>

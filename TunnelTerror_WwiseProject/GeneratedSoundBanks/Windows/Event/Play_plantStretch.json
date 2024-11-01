@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{DAABF8FE-0337-462B-86E7-CEAE7A83737D}",
     "Language": "SFX",
-    "Hash": "{FABFB8DE-5051-57EE-6990-2AA82FDAE30F}",
+    "Hash": "{817CB1CA-958E-D5F3-FDD9-A4CC3AA3E766}",
     "ObjectPath": "Play_plantStretch",
     "ShortName": "Play_plantStretch",
     "Path": "Event/Play_plantStretch.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "stretch.wav",
       "Path": "Media/109334872.wem",
-      "CachePath": "SFX/stretch_096DC8E8.wem"
+      "CachePath": "SFX/stretch_DDFAF94C.wem"
      },
      {
       "Id": "283930358",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "stretch.wav",
       "Path": "Media/283930358.wem",
-      "CachePath": "SFX/stretch_C4B38065.wem"
+      "CachePath": "SFX/stretch_4BEFB7C6.wem"
      },
      {
       "Id": "993867576",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "stretch.wav",
       "Path": "Media/993867576.wem",
-      "CachePath": "SFX/stretch_43201C84.wem"
+      "CachePath": "SFX/stretch_C1050841.wem"
      }
     ],
     "Events": [
@@ -68,6 +68,6 @@
     ]
    }
   ],
-  "FileHash": "{E2F480D1-64F4-DE84-BA99-DE182715A28E}"
+  "FileHash": "{8D792601-D5FA-959D-FEBC-375510B452E7}"
  }
 }

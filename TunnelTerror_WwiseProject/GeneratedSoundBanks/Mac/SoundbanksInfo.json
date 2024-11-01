@@ -18,7 +18,7 @@
     "Type": "Event",
     "GUID": "{8BAF539D-E6C6-4B06-BB53-786FF73CEAAC}",
     "Language": "SFX",
-    "Hash": "{91EBBBDF-17A8-32D9-43C5-223CECEC7346}",
+    "Hash": "{0D4BC75B-5DCD-41D8-E6F1-EE579AC4B017}",
     "ObjectPath": "Play_Grab",
     "ShortName": "Play_Grab",
     "Path": "Event/Play_Grab.bnk",
@@ -80,7 +80,7 @@
     "Type": "Event",
     "GUID": "{59B1A844-A95F-4B37-8C0F-664C08A82F28}",
     "Language": "SFX",
-    "Hash": "{C9C8D512-BDB6-D4C5-012D-D3F5AD2F0660}",
+    "Hash": "{5E211564-8C63-EE82-2B9D-FA4B229B1419}",
     "ObjectPath": "Play_mFall",
     "ShortName": "Play_mFall",
     "Path": "Event/Play_mFall.bnk",
@@ -172,7 +172,7 @@
     "Type": "Event",
     "GUID": "{525BAA67-25EB-498C-A659-9A06057D697A}",
     "Language": "SFX",
-    "Hash": "{0DB15892-B3FF-02E7-492C-913F8ACA5340}",
+    "Hash": "{9F485DA8-3970-8DB5-CA10-2FB1645E0CE8}",
     "ObjectPath": "Play_fCough",
     "ShortName": "Play_fCough",
     "Path": "Event/Play_fCough.bnk",
@@ -262,7 +262,7 @@
     "Type": "Event",
     "GUID": "{AA3B480F-E159-421B-A0C2-0C2A86F882C2}",
     "Language": "SFX",
-    "Hash": "{1E76EF5A-8873-6F2C-02DB-90B7525AF573}",
+    "Hash": "{72201C87-6E37-235A-B6BA-3FFA5E9CC712}",
     "ObjectPath": "Play_Glow",
     "ShortName": "Play_Glow",
     "Path": "Event/Play_Glow.bnk",
@@ -317,7 +317,7 @@
     "Type": "Event",
     "GUID": "{8C87B0AB-D43F-41E4-A3FE-5948C382CB16}",
     "Language": "SFX",
-    "Hash": "{700A2BF6-75F0-85B5-CEED-B8D4D3E63828}",
+    "Hash": "{3C7AF7AF-0091-FE2E-163D-2F9A8A6551E3}",
     "ObjectPath": "Stop_fCough",
     "ShortName": "Stop_fCough",
     "Path": "Event/Stop_fCough.bnk",
@@ -339,7 +339,7 @@
     "Type": "Event",
     "GUID": "{3ADEA1F1-F0F5-4552-8C26-899603130220}",
     "Language": "SFX",
-    "Hash": "{7CCAC838-A98C-4B47-C4A5-3C6A3CBFBFD4}",
+    "Hash": "{024C9924-71D6-D14B-DD97-A93A1F6E4008}",
     "ObjectPath": "Play_PickAxe",
     "ShortName": "Play_PickAxe",
     "Path": "Event/Play_PickAxe.bnk",
@@ -412,7 +412,7 @@
     "Type": "Event",
     "GUID": "{DAABF8FE-0337-462B-86E7-CEAE7A83737D}",
     "Language": "SFX",
-    "Hash": "{FABFB8DE-5051-57EE-6990-2AA82FDAE30F}",
+    "Hash": "{817CB1CA-958E-D5F3-FDD9-A4CC3AA3E766}",
     "ObjectPath": "Play_plantStretch",
     "ShortName": "Play_plantStretch",
     "Path": "Event/Play_plantStretch.bnk",
@@ -424,7 +424,7 @@
       "Location": "Loose",
       "ShortName": "stretch.wav",
       "Path": "Media/109334872.wem",
-      "CachePath": "SFX/stretch_096DC8E8.wem"
+      "CachePath": "SFX/stretch_DDFAF94C.wem"
      },
      {
       "Id": "283930358",
@@ -433,7 +433,7 @@
       "Location": "Loose",
       "ShortName": "stretch.wav",
       "Path": "Media/283930358.wem",
-      "CachePath": "SFX/stretch_C4B38065.wem"
+      "CachePath": "SFX/stretch_4BEFB7C6.wem"
      },
      {
       "Id": "993867576",
@@ -442,7 +442,7 @@
       "Location": "Loose",
       "ShortName": "stretch.wav",
       "Path": "Media/993867576.wem",
-      "CachePath": "SFX/stretch_43201C84.wem"
+      "CachePath": "SFX/stretch_C1050841.wem"
      }
     ],
     "Events": [
@@ -474,7 +474,7 @@
     "Type": "Event",
     "GUID": "{7279E098-5799-4D47-98FB-C7C5EBB03C57}",
     "Language": "SFX",
-    "Hash": "{BB13C52B-D75A-DAAB-DA87-88F4680DCF3E}",
+    "Hash": "{1FE8B3E3-644C-53B9-4F8A-3987FAFB5223}",
     "ObjectPath": "Play_mCough",
     "ShortName": "Play_mCough",
     "Path": "Event/Play_mCough.bnk",
@@ -560,11 +560,84 @@
     ]
    },
    {
+    "Id": "1042987450",
+    "Type": "Event",
+    "GUID": "{D9B7304E-3726-4488-B370-CD4C711A247C}",
+    "Language": "SFX",
+    "Hash": "{8B0CB800-CE71-A0FA-537C-9FD59C298258}",
+    "ObjectPath": "Play_select",
+    "ShortName": "Play_select",
+    "Path": "Event/Play_select.bnk",
+    "Media": [
+     {
+      "Id": "498364355",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui7.wav",
+      "Path": "Media/498364355.wem",
+      "CachePath": "SFX/ui7_6A768392.wem"
+     },
+     {
+      "Id": "775253208",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui6.wav",
+      "Path": "Media/775253208.wem",
+      "CachePath": "SFX/ui6_4ABD8B54.wem"
+     },
+     {
+      "Id": "956966152",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui8.wav",
+      "Path": "Media/956966152.wem",
+      "CachePath": "SFX/ui8_68132823.wem"
+     },
+     {
+      "Id": "1016949203",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui5.wav",
+      "Path": "Media/1016949203.wem",
+      "CachePath": "SFX/ui5_C092C985.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1042987450",
+      "Name": "Play_select",
+      "ObjectPath": "\\Events\\UI\\Play_select",
+      "GUID": "{D9B7304E-3726-4488-B370-CD4C711A247C}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2667581",
+      "DurationMax": "1.4073935",
+      "MediaRefs": [
+       {
+        "Id": "498364355"
+       },
+       {
+        "Id": "775253208"
+       },
+       {
+        "Id": "956966152"
+       },
+       {
+        "Id": "1016949203"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "1063654281",
     "Type": "Event",
     "GUID": "{DABE9434-237E-4C4C-B6AD-CE89FC21E0C0}",
     "Language": "SFX",
-    "Hash": "{8EFB4771-734B-68BB-4C0F-F636AD35B95D}",
+    "Hash": "{6ED6B536-3F33-F3F2-4570-E1CBB2E90558}",
     "ObjectPath": "Stop_mCough",
     "ShortName": "Stop_mCough",
     "Path": "Event/Stop_mCough.bnk",
@@ -586,7 +659,7 @@
     "Type": "Event",
     "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
     "Language": "SFX",
-    "Hash": "{F23030D9-A760-13C7-FE41-B2596DEEFD75}",
+    "Hash": "{DFF7AB17-3017-660D-56C7-EA668672296E}",
     "ObjectPath": "Play_RockFall",
     "ShortName": "Play_RockFall",
     "Path": "Event/Play_RockFall.bnk",
@@ -643,7 +716,7 @@
       "Location": "Loose",
       "ShortName": "RockHitGround\\RockHitGround_1.wav",
       "Path": "Media/874392032.wem",
-      "CachePath": "SFX/RockHitGround/RockHitGround_1_F787CD80.wem"
+      "CachePath": "SFX/RockHitGround/RockHitGround_1_F8855C92.wem"
      },
      {
       "Id": "953321177",
@@ -652,7 +725,7 @@
       "Location": "Loose",
       "ShortName": "RockHitGround\\RockHitGround_2.wav",
       "Path": "Media/953321177.wem",
-      "CachePath": "SFX/RockHitGround/RockHitGround_2_876768F5.wem"
+      "CachePath": "SFX/RockHitGround/RockHitGround_2_E7AFDC3B.wem"
      },
      {
       "Id": "953676981",
@@ -661,7 +734,7 @@
       "Location": "Loose",
       "ShortName": "RockHitGround\\RockHitGround_5.wav",
       "Path": "Media/953676981.wem",
-      "CachePath": "SFX/RockHitGround/RockHitGround_5_7A493CEA.wem"
+      "CachePath": "SFX/RockHitGround/RockHitGround_5_7F9ED8C3.wem"
      }
     ],
     "Plugins": {
@@ -764,7 +837,7 @@
     "Type": "Event",
     "GUID": "{E1DA4D58-2E31-4BC9-BF4F-FAEB55221E93}",
     "Language": "SFX",
-    "Hash": "{D51F199F-8DC6-2556-F5E4-47028373A0D5}",
+    "Hash": "{4DA849F3-5FB4-94C8-E35E-7D53C75734BE}",
     "ObjectPath": "Stop_outsideAtmosphere",
     "ShortName": "Stop_outsideAtmosphere",
     "Path": "Event/Stop_outsideAtmosphere.bnk",
@@ -786,7 +859,7 @@
     "Type": "Event",
     "GUID": "{DAF91C5A-234F-44C3-9B8B-150DAF474EEE}",
     "Language": "SFX",
-    "Hash": "{54387A4C-E8B0-2FC6-5614-8065E3EB1EB3}",
+    "Hash": "{ACA798A7-69E1-EFDF-99D2-5B9C7FF94DE1}",
     "ObjectPath": "Play_rustle",
     "ShortName": "Play_rustle",
     "Path": "Event/Play_rustle.bnk",
@@ -798,7 +871,7 @@
       "Location": "Loose",
       "ShortName": "rustle1.wav",
       "Path": "Media/20832412.wem",
-      "CachePath": "SFX/rustle1_537ED500.wem"
+      "CachePath": "SFX/rustle1_89314C5E.wem"
      },
      {
       "Id": "631883680",
@@ -816,7 +889,7 @@
       "Location": "Loose",
       "ShortName": "rustle1.wav",
       "Path": "Media/805458352.wem",
-      "CachePath": "SFX/rustle1_E0D20921.wem"
+      "CachePath": "SFX/rustle1_07538E64.wem"
      }
     ],
     "Events": [
@@ -848,7 +921,7 @@
     "Type": "Event",
     "GUID": "{EDD6846B-FEFC-45C4-9704-DE01F2D8123E}",
     "Language": "SFX",
-    "Hash": "{B0E0F6E7-D091-D93B-579D-EE65AC57CDD1}",
+    "Hash": "{D65511C8-077B-917F-B763-E3CE53D26F10}",
     "ObjectPath": "Play_mSwing",
     "ShortName": "Play_mSwing",
     "Path": "Event/Play_mSwing.bnk",
@@ -940,7 +1013,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{357103FE-E98A-167F-15A8-2AABE38E90B0}",
+    "Hash": "{CD1FB943-5D4B-AF0B-9FB4-81C57F0F4FA9}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -1000,7 +1073,7 @@
     "Type": "Event",
     "GUID": "{28C0F76F-9DB4-45B5-8CA9-456279189419}",
     "Language": "SFX",
-    "Hash": "{8A7A3BD3-D81C-7426-BCEA-801846A60344}",
+    "Hash": "{74491AC2-49D4-48E2-B960-0916317F6283}",
     "ObjectPath": "Play_spray",
     "ShortName": "Play_spray",
     "Path": "Event/Play_spray.bnk",
@@ -1012,7 +1085,7 @@
       "Location": "Loose",
       "ShortName": "spray1.wav",
       "Path": "Media/221605604.wem",
-      "CachePath": "SFX/spray1_FDAD22E7.wem"
+      "CachePath": "SFX/spray1_C8052E0D.wem"
      },
      {
       "Id": "384915686",
@@ -1021,7 +1094,7 @@
       "Location": "Loose",
       "ShortName": "spray3.wav",
       "Path": "Media/384915686.wem",
-      "CachePath": "SFX/spray3_06640976.wem"
+      "CachePath": "SFX/spray3_FC283A76.wem"
      },
      {
       "Id": "980869954",
@@ -1030,7 +1103,7 @@
       "Location": "Loose",
       "ShortName": "spray2.wav",
       "Path": "Media/980869954.wem",
-      "CachePath": "SFX/spray2_6D72D86C.wem"
+      "CachePath": "SFX/spray2_FA94C4E6.wem"
      }
     ],
     "Events": [
@@ -1060,7 +1133,7 @@
     "Type": "Event",
     "GUID": "{07852589-1383-4156-9440-788054B24A18}",
     "Language": "SFX",
-    "Hash": "{93976944-146A-D952-5D65-C19343A13BE2}",
+    "Hash": "{5F6C6510-39A6-04F9-AE20-6A1BCA6107FB}",
     "ObjectPath": "Play_iMoans",
     "ShortName": "Play_iMoans",
     "Path": "Event/Play_iMoans.bnk",
@@ -1164,7 +1237,7 @@
     "Type": "Event",
     "GUID": "{7B6C1E9E-39B5-4D58-88E3-597DAEA64044}",
     "Language": "SFX",
-    "Hash": "{73862A0F-FC9B-8696-E598-9123FA4E3400}",
+    "Hash": "{55946853-902E-E831-36E5-E0B50096E22E}",
     "ObjectPath": "Play_PlayerFootsteps",
     "ShortName": "Play_PlayerFootsteps",
     "Path": "Event/Play_PlayerFootsteps.bnk",
@@ -1348,7 +1421,7 @@
     "Type": "Event",
     "GUID": "{E287937B-CDED-4F16-913F-DB393E5E8E26}",
     "Language": "SFX",
-    "Hash": "{2858B3B8-241F-118B-6859-28894E69F782}",
+    "Hash": "{37D69EDF-1E6D-D431-6208-07947E52FA64}",
     "ObjectPath": "Play_Bite",
     "ShortName": "Play_Bite",
     "Path": "Event/Play_Bite.bnk",
@@ -1453,7 +1526,7 @@
     "Type": "Event",
     "GUID": "{F05E8152-8526-474A-8CD3-14071D451BB3}",
     "Language": "SFX",
-    "Hash": "{264A4DEB-EB16-8C61-6250-666836A61338}",
+    "Hash": "{20F0193C-92F8-3344-38D6-4D67FA1216A8}",
     "ObjectPath": "Play_Torch",
     "ShortName": "Play_Torch",
     "Path": "Event/Play_Torch.bnk",
@@ -1549,7 +1622,7 @@
     "Type": "Event",
     "GUID": "{1834CF08-9A28-4EC2-A83F-467C2A01EE72}",
     "Language": "SFX",
-    "Hash": "{96679CF1-EFA3-D464-C57F-7B19EF2D36D3}",
+    "Hash": "{C81BAF1C-281B-AE80-855A-B5FB7901E0E9}",
     "ObjectPath": "Play_pickRocks",
     "ShortName": "Play_pickRocks",
     "Path": "Event/Play_pickRocks.bnk",
@@ -1561,7 +1634,7 @@
       "Location": "Loose",
       "ShortName": "RockShatter.WAV",
       "Path": "Media/165098536.wem",
-      "CachePath": "SFX/RockShatter_87EAB145.wem"
+      "CachePath": "SFX/RockShatter_9BBF859C.wem"
      },
      {
       "Id": "244694714",
@@ -1570,7 +1643,7 @@
       "Location": "Loose",
       "ShortName": "RockShatter.WAV",
       "Path": "Media/244694714.wem",
-      "CachePath": "SFX/RockShatter_BB571E28.wem"
+      "CachePath": "SFX/RockShatter_CC7A681C.wem"
      },
      {
       "Id": "424047478",
@@ -1579,7 +1652,7 @@
       "Location": "Loose",
       "ShortName": "RockShatter.WAV",
       "Path": "Media/424047478.wem",
-      "CachePath": "SFX/RockShatter_26B56AA9.wem"
+      "CachePath": "SFX/RockShatter_B6589091.wem"
      },
      {
       "Id": "545678415",
@@ -1688,7 +1761,7 @@
     "Type": "Event",
     "GUID": "{5A35A690-3696-4B21-9C78-E4367F4BEB15}",
     "Language": "SFX",
-    "Hash": "{9070F20C-5821-4B72-68B6-2E28969B0927}",
+    "Hash": "{1FA71918-9821-D53A-8444-C060C218F7DA}",
     "ObjectPath": "Play_fJump",
     "ShortName": "Play_fJump",
     "Path": "Event/Play_fJump.bnk",
@@ -1780,7 +1853,7 @@
     "Type": "Event",
     "GUID": "{0F14277F-3996-484C-A37D-4633DA6B3085}",
     "Language": "SFX",
-    "Hash": "{E0379ED1-20EC-F7C4-0E3E-6924467455EE}",
+    "Hash": "{40B005DB-6C4C-30D5-0F33-5E683CAE304A}",
     "ObjectPath": "Play_WoodBreaking",
     "ShortName": "Play_WoodBreaking",
     "Path": "Event/Play_WoodBreaking.bnk",
@@ -1865,7 +1938,7 @@
     "Type": "Event",
     "GUID": "{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}",
     "Language": "SFX",
-    "Hash": "{CFC8E96F-0E0C-354B-1E57-BB1B56BCB069}",
+    "Hash": "{FDB8CFCD-788F-E257-A0F1-2A706AE387CB}",
     "ObjectPath": "Play_caveAtmosphere",
     "ShortName": "Play_caveAtmosphere",
     "Path": "Event/Play_caveAtmosphere.bnk",
@@ -1943,7 +2016,7 @@
     "Type": "Event",
     "GUID": "{7889DD4D-525D-40DE-A58F-738E55124508}",
     "Language": "SFX",
-    "Hash": "{40C3B5CB-2A5F-39F1-2F50-D43CD0C043C9}",
+    "Hash": "{19CA5702-CAE4-8700-443E-97B8C7FB77FC}",
     "ObjectPath": "Play_mDamage",
     "ShortName": "Play_mDamage",
     "Path": "Event/Play_mDamage.bnk",
@@ -2043,11 +2116,84 @@
     ]
    },
    {
+    "Id": "3019770429",
+    "Type": "Event",
+    "GUID": "{F95BB0FE-74F3-4CC8-AF85-8F50BF4A005D}",
+    "Language": "SFX",
+    "Hash": "{160DAE84-756D-E87B-1643-20BC8B022341}",
+    "ObjectPath": "Play_mouseOver",
+    "ShortName": "Play_mouseOver",
+    "Path": "Event/Play_mouseOver.bnk",
+    "Media": [
+     {
+      "Id": "323736582",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui4.wav",
+      "Path": "Media/323736582.wem",
+      "CachePath": "SFX/ui4_BCB42E34.wem"
+     },
+     {
+      "Id": "334968415",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui1.wav",
+      "Path": "Media/334968415.wem",
+      "CachePath": "SFX/ui1_6886FB87.wem"
+     },
+     {
+      "Id": "626105931",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui2.wav",
+      "Path": "Media/626105931.wem",
+      "CachePath": "SFX/ui2_00BC772C.wem"
+     },
+     {
+      "Id": "677397642",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui3.wav",
+      "Path": "Media/677397642.wem",
+      "CachePath": "SFX/ui3_1B908B89.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3019770429",
+      "Name": "Play_mouseOver",
+      "ObjectPath": "\\Events\\UI\\Play_mouseOver",
+      "GUID": "{F95BB0FE-74F3-4CC8-AF85-8F50BF4A005D}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2069238",
+      "DurationMax": "1.3389902",
+      "MediaRefs": [
+       {
+        "Id": "323736582"
+       },
+       {
+        "Id": "334968415"
+       },
+       {
+        "Id": "626105931"
+       },
+       {
+        "Id": "677397642"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "3033194243",
     "Type": "Event",
     "GUID": "{E70C83B2-4C7F-49EC-8E6A-4F6DA32DD0B7}",
     "Language": "SFX",
-    "Hash": "{2D54396B-C332-2568-1F37-3BC0CE3D1DAF}",
+    "Hash": "{AEE6ED08-65EE-B71D-0539-F6D2974083B9}",
     "ObjectPath": "Play_mJump",
     "ShortName": "Play_mJump",
     "Path": "Event/Play_mJump.bnk",
@@ -2135,11 +2281,60 @@
     ]
    },
    {
+    "Id": "3046905735",
+    "Type": "Event",
+    "GUID": "{038A761F-CFC6-4C76-93AE-6D95C140D559}",
+    "Language": "SFX",
+    "Hash": "{C0F9E473-477A-DD61-D907-186263AEEA80}",
+    "ObjectPath": "Play_deathSting",
+    "ShortName": "Play_deathSting",
+    "Path": "Event/Play_deathSting.bnk",
+    "Media": [
+     {
+      "Id": "466717337",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "death2.wav",
+      "Path": "Media/466717337.wem",
+      "CachePath": "SFX/death2_818F3B66.wem"
+     },
+     {
+      "Id": "469497542",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "death1.wav",
+      "Path": "Media/469497542.wem",
+      "CachePath": "SFX/death1_818F3B66.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3046905735",
+      "Name": "Play_deathSting",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_deathSting",
+      "GUID": "{038A761F-CFC6-4C76-93AE-6D95C140D559}",
+      "DurationType": "OneShot",
+      "DurationMin": "11.722018",
+      "DurationMax": "11.728368",
+      "MediaRefs": [
+       {
+        "Id": "466717337"
+       },
+       {
+        "Id": "469497542"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "3065143382",
     "Type": "Event",
     "GUID": "{1A65EB7E-C16F-4AF0-B025-2819EC9A5E5B}",
     "Language": "SFX",
-    "Hash": "{638A8D0F-FFB6-019B-DDD6-C16B10B72A4B}",
+    "Hash": "{420AD9B6-2C09-5EA2-68E8-A4A9F48303CF}",
     "ObjectPath": "Stop_Torch",
     "ShortName": "Stop_Torch",
     "Path": "Event/Stop_Torch.bnk",
@@ -2161,7 +2356,7 @@
     "Type": "Event",
     "GUID": "{B46FB24D-D356-43B8-A725-11CEEAA14A3D}",
     "Language": "SFX",
-    "Hash": "{E222C2CC-0489-CF9A-178A-84D15B390C89}",
+    "Hash": "{8184DBE8-9665-0B58-ABBD-51050486491C}",
     "ObjectPath": "Play_fSwing",
     "ShortName": "Play_fSwing",
     "Path": "Event/Play_fSwing.bnk",
@@ -2253,7 +2448,7 @@
     "Type": "Event",
     "GUID": "{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}",
     "Language": "SFX",
-    "Hash": "{32D0410D-DF42-C8C6-570A-64814C43C6AA}",
+    "Hash": "{C644147A-7754-972E-CAFD-DE32EA7FB804}",
     "ObjectPath": "Play_fHeal",
     "ShortName": "Play_fHeal",
     "Path": "Event/Play_fHeal.bnk",
@@ -2321,7 +2516,7 @@
     "Type": "Event",
     "GUID": "{3C9EE3BE-450E-4DD8-B9B9-FF78479BAB18}",
     "Language": "SFX",
-    "Hash": "{CD0914B8-D55F-1D4E-48F1-4C8B857F704E}",
+    "Hash": "{C31773DB-BB68-3F89-0CCE-8261DE246293}",
     "ObjectPath": "Stop_spray",
     "ShortName": "Stop_spray",
     "Path": "Event/Stop_spray.bnk",
@@ -2343,7 +2538,7 @@
     "Type": "Event",
     "GUID": "{BB9FBAE0-EE84-48F3-96D9-0F1BA79BF2A0}",
     "Language": "SFX",
-    "Hash": "{5616E3FB-9DF6-4A2E-5665-898E9B3A5F9A}",
+    "Hash": "{40A7609B-BABA-3337-3643-04642D700277}",
     "ObjectPath": "Play_mHeal",
     "ShortName": "Play_mHeal",
     "Path": "Event/Play_mHeal.bnk",
@@ -2423,7 +2618,7 @@
     "Type": "Event",
     "GUID": "{A7C25A1B-0608-4060-9C29-134EBEA4D185}",
     "Language": "SFX",
-    "Hash": "{4426CF7F-2268-C4A3-5DAB-60F5A464C9A5}",
+    "Hash": "{C8AD4F36-8208-6143-CF8C-B25636963B38}",
     "ObjectPath": "Play_Snap",
     "ShortName": "Play_Snap",
     "Path": "Event/Play_Snap.bnk",
@@ -2497,7 +2692,7 @@
     "Type": "Event",
     "GUID": "{3CBB73DE-9644-4A51-BD28-F3D5F4A7DABD}",
     "Language": "SFX",
-    "Hash": "{E0B08468-5C9A-440A-8826-16DE563CE990}",
+    "Hash": "{F49F0952-5573-DF4E-D1C4-7C665E1FE166}",
     "ObjectPath": "Stop_caveAtmosphere",
     "ShortName": "Stop_caveAtmosphere",
     "Path": "Event/Stop_caveAtmosphere.bnk",
@@ -2519,7 +2714,7 @@
     "Type": "Event",
     "GUID": "{5A8512E4-12F7-4DE2-A25A-85A8AFAFA131}",
     "Language": "SFX",
-    "Hash": "{5DD1BD55-88C2-4C01-42CB-969218862828}",
+    "Hash": "{A5B659C4-DB7B-C928-5E0F-A74A3DB4043B}",
     "ObjectPath": "Play_fFall",
     "ShortName": "Play_fFall",
     "Path": "Event/Play_fFall.bnk",
@@ -2599,7 +2794,7 @@
     "Type": "Event",
     "GUID": "{0E57EA07-3481-4CD4-AB5C-369B26ABFEEC}",
     "Language": "SFX",
-    "Hash": "{74D8B056-010A-B21F-41FA-DE6ED93C81FC}",
+    "Hash": "{DDDE2061-1EBA-B694-5228-0251402D761E}",
     "ObjectPath": "Play_outsideAtmosphere",
     "ShortName": "Play_outsideAtmosphere",
     "Path": "Event/Play_outsideAtmosphere.bnk",
@@ -2634,7 +2829,7 @@
     "Type": "Event",
     "GUID": "{BE5A0D3A-492D-4FBE-9071-C77D396C3AEE}",
     "Language": "SFX",
-    "Hash": "{A0A44E3F-7F22-7958-AD35-C1B465408631}",
+    "Hash": "{364BDA94-B324-CDF0-38A2-CDA391FFEDCF}",
     "ObjectPath": "Stop_Glow",
     "ShortName": "Stop_Glow",
     "Path": "Event/Stop_Glow.bnk",
@@ -2656,7 +2851,7 @@
     "Type": "Event",
     "GUID": "{AFFB088D-E64F-432C-B457-EDB99086C352}",
     "Language": "SFX",
-    "Hash": "{376199F4-F6BF-018B-CFB6-EF9392DC2A02}",
+    "Hash": "{A27E0EE7-DABF-0ABE-386E-966007554FCD}",
     "ObjectPath": "Play_fDamage",
     "ShortName": "Play_fDamage",
     "Path": "Event/Play_fDamage.bnk",
@@ -2744,6 +2939,6 @@
     ]
    }
   ],
-  "FileHash": "{4C17F79F-5688-6FDC-1295-F0FADA5C7047}"
+  "FileHash": "{C2BA3FCF-7C04-5F2B-9CB8-5AF2A0E0010B}"
  }
 }

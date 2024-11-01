@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{28C0F76F-9DB4-45B5-8CA9-456279189419}",
     "Language": "SFX",
-    "Hash": "{8A7A3BD3-D81C-7426-BCEA-801846A60344}",
+    "Hash": "{74491AC2-49D4-48E2-B960-0916317F6283}",
     "ObjectPath": "Play_spray",
     "ShortName": "Play_spray",
     "Path": "Event/Play_spray.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "spray1.wav",
       "Path": "Media/221605604.wem",
-      "CachePath": "SFX/spray1_FDAD22E7.wem"
+      "CachePath": "SFX/spray1_C8052E0D.wem"
      },
      {
       "Id": "384915686",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "spray3.wav",
       "Path": "Media/384915686.wem",
-      "CachePath": "SFX/spray3_06640976.wem"
+      "CachePath": "SFX/spray3_FC283A76.wem"
      },
      {
       "Id": "980869954",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "spray2.wav",
       "Path": "Media/980869954.wem",
-      "CachePath": "SFX/spray2_6D72D86C.wem"
+      "CachePath": "SFX/spray2_FA94C4E6.wem"
      }
     ],
     "Events": [
@@ -66,6 +66,6 @@
     ]
    }
   ],
-  "FileHash": "{C7412EEA-63A8-64C0-1A5B-3F8396D0CA26}"
+  "FileHash": "{ADE1E5E7-45CB-59B7-ED3A-BF1E1595EF05}"
  }
 }

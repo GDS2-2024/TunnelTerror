@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="4000532691" Type="Event" GUID="{BE5A0D3A-492D-4FBE-9071-C77D396C3AEE}" Language="SFX" Hash="{A0A44E3F-7F22-7958-AD35-C1B465408631}">
+		<SoundBank Id="4000532691" Type="Event" GUID="{BE5A0D3A-492D-4FBE-9071-C77D396C3AEE}" Language="SFX" Hash="{364BDA94-B324-CDF0-38A2-CDA391FFEDCF}">
 			<ObjectPath>Stop_Glow</ObjectPath>
 			<ShortName>Stop_Glow</ShortName>
 			<Path>Event/Stop_Glow.bnk</Path>
@@ -10,5 +10,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5F820439-41E6-C6D4-A371-489141F9C631}</FileHash>
+	<FileHash>{635AA9E7-4A46-D685-E0C8-8FAB4F0D2071}</FileHash>
 </SoundBanksInfo>

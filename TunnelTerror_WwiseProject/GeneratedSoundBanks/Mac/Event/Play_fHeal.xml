@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="3279106990" Type="Event" GUID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}" Language="SFX" Hash="{32D0410D-DF42-C8C6-570A-64814C43C6AA}">
+		<SoundBank Id="3279106990" Type="Event" GUID="{8C5FA8FF-1B06-45E2-8D5E-44FC65899108}" Language="SFX" Hash="{C644147A-7754-972E-CAFD-DE32EA7FB804}">
 			<ObjectPath>Play_fHeal</ObjectPath>
 			<ShortName>Play_fHeal</ShortName>
 			<Path>Event/Play_fHeal.bnk</Path>
@@ -37,5 +37,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9970B791-46B0-A0AD-F904-1BEF3FCA38C5}</FileHash>
+	<FileHash>{B3BA76C7-4369-B1EE-107F-F91939E04764}</FileHash>
 </SoundBanksInfo>

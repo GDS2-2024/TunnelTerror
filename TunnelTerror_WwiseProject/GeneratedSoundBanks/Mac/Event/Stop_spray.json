@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{3C9EE3BE-450E-4DD8-B9B9-FF78479BAB18}",
     "Language": "SFX",
-    "Hash": "{CD0914B8-D55F-1D4E-48F1-4C8B857F704E}",
+    "Hash": "{C31773DB-BB68-3F89-0CCE-8261DE246293}",
     "ObjectPath": "Stop_spray",
     "ShortName": "Stop_spray",
     "Path": "Event/Stop_spray.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{3CAB27B2-1AEB-EAD6-C788-181404FC4D1A}"
+  "FileHash": "{9672EC61-FC7E-A8DA-8292-509B08692318}"
  }
 }

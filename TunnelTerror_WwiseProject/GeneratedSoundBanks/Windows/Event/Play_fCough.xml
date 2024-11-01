@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="249772270" Type="Event" GUID="{525BAA67-25EB-498C-A659-9A06057D697A}" Language="SFX" Hash="{0DB15892-B3FF-02E7-492C-913F8ACA5340}">
+		<SoundBank Id="249772270" Type="Event" GUID="{525BAA67-25EB-498C-A659-9A06057D697A}" Language="SFX" Hash="{9F485DA8-3970-8DB5-CA10-2FB1645E0CE8}">
 			<ObjectPath>Play_fCough</ObjectPath>
 			<ShortName>Play_fCough</ShortName>
 			<Path>Event/Play_fCough.bnk</Path>
@@ -49,5 +49,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{ADF9855E-059C-5B19-0E3B-01DACF82B78C}</FileHash>
+	<FileHash>{BD8304A8-F4FC-7080-662C-6BD8D91DFC2B}</FileHash>
 </SoundBanksInfo>

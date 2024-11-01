@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="2466093437" Type="Event" GUID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}" Language="SFX" Hash="{CFC8E96F-0E0C-354B-1E57-BB1B56BCB069}">
+		<SoundBank Id="2466093437" Type="Event" GUID="{366D6B8F-C9E5-4059-B15B-85A69C4B1B50}" Language="SFX" Hash="{FDB8CFCD-788F-E257-A0F1-2A706AE387CB}">
 			<ObjectPath>Play_caveAtmosphere</ObjectPath>
 			<ShortName>Play_caveAtmosphere</ShortName>
 			<Path>Event/Play_caveAtmosphere.bnk</Path>
@@ -43,5 +43,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8C60E4E3-2F77-2348-632C-345E3F2A43ED}</FileHash>
+	<FileHash>{497E766D-8FF6-A9BF-457E-AA7432301C45}</FileHash>
 </SoundBanksInfo>

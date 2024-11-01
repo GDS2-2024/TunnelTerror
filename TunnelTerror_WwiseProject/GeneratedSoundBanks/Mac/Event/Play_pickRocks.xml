@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<SoundBanks>
-		<SoundBank Id="2090422101" Type="Event" GUID="{1834CF08-9A28-4EC2-A83F-467C2A01EE72}" Language="SFX" Hash="{96679CF1-EFA3-D464-C57F-7B19EF2D36D3}">
+		<SoundBank Id="2090422101" Type="Event" GUID="{1834CF08-9A28-4EC2-A83F-467C2A01EE72}" Language="SFX" Hash="{C81BAF1C-281B-AE80-855A-B5FB7901E0E9}">
 			<ObjectPath>Play_pickRocks</ObjectPath>
 			<ShortName>Play_pickRocks</ShortName>
 			<Path>Event/Play_pickRocks.bnk</Path>
@@ -9,17 +9,17 @@
 				<File Id="165098536" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>RockShatter.WAV</ShortName>
 					<Path>Media/165098536.wem</Path>
-					<CachePath>SFX/RockShatter_87EAB145.wem</CachePath>
+					<CachePath>SFX/RockShatter_9BBF859C.wem</CachePath>
 				</File>
 				<File Id="244694714" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>RockShatter.WAV</ShortName>
 					<Path>Media/244694714.wem</Path>
-					<CachePath>SFX/RockShatter_BB571E28.wem</CachePath>
+					<CachePath>SFX/RockShatter_CC7A681C.wem</CachePath>
 				</File>
 				<File Id="424047478" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>RockShatter.WAV</ShortName>
 					<Path>Media/424047478.wem</Path>
-					<CachePath>SFX/RockShatter_26B56AA9.wem</CachePath>
+					<CachePath>SFX/RockShatter_B6589091.wem</CachePath>
 				</File>
 				<File Id="545678415" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>PickAxe.wav</ShortName>
@@ -69,5 +69,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{52EBC695-21B7-E83A-8489-B7247AF98A0B}</FileHash>
+	<FileHash>{3B10E805-8A47-F834-7653-5F6A684D78A8}</FileHash>
 </SoundBanksInfo>

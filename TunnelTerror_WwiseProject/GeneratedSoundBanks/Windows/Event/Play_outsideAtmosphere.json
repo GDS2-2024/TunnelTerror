@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{0E57EA07-3481-4CD4-AB5C-369B26ABFEEC}",
     "Language": "SFX",
-    "Hash": "{74D8B056-010A-B21F-41FA-DE6ED93C81FC}",
+    "Hash": "{DDDE2061-1EBA-B694-5228-0251402D761E}",
     "ObjectPath": "Play_outsideAtmosphere",
     "ShortName": "Play_outsideAtmosphere",
     "Path": "Event/Play_outsideAtmosphere.bnk",
@@ -41,6 +41,6 @@
     ]
    }
   ],
-  "FileHash": "{8D3C3DEB-A959-82B6-C500-CC0CD89B80F0}"
+  "FileHash": "{6B804D56-1B16-F969-D72F-55FC5E1C69BA}"
  }
 }

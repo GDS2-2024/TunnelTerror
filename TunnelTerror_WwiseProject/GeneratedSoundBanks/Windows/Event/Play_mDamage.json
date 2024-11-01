@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{7889DD4D-525D-40DE-A58F-738E55124508}",
     "Language": "SFX",
-    "Hash": "{40C3B5CB-2A5F-39F1-2F50-D43CD0C043C9}",
+    "Hash": "{19CA5702-CAE4-8700-443E-97B8C7FB77FC}",
     "ObjectPath": "Play_mDamage",
     "ShortName": "Play_mDamage",
     "Path": "Event/Play_mDamage.bnk",
@@ -110,6 +110,6 @@
     ]
    }
   ],
-  "FileHash": "{CC41AF95-3FC8-FF8C-4DEE-2491909FFED5}"
+  "FileHash": "{65A3132C-7010-1921-7C54-C85389E3D951}"
  }
 }

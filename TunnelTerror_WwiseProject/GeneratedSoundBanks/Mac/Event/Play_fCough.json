@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{525BAA67-25EB-498C-A659-9A06057D697A}",
     "Language": "SFX",
-    "Hash": "{0DB15892-B3FF-02E7-492C-913F8ACA5340}",
+    "Hash": "{9F485DA8-3970-8DB5-CA10-2FB1645E0CE8}",
     "ObjectPath": "Play_fCough",
     "ShortName": "Play_fCough",
     "Path": "Event/Play_fCough.bnk",
@@ -96,6 +96,6 @@
     ]
    }
   ],
-  "FileHash": "{0E8674B1-3886-5614-8AD4-1510DB7293DC}"
+  "FileHash": "{6DC6313A-5D9A-748D-F561-E9148ABACFA4}"
  }
 }
