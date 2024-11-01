@@ -65,6 +65,10 @@ class ATunnelTerrorCharacter : public ACharacter
 	/** Drop Item */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* DropItemAction;
+
+	/** Open and Close menu */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	class UInputAction* MenuAction;
 	
 	/** Inventory Input Actions */
 	UPROPERTY(EditDefaultsOnly, Category=Input)
@@ -94,6 +98,9 @@ public:
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh, BlueprintReadWrite)
 	USkeletalMeshComponent* Mesh1P;
+
+	UPROPERTY(BlueprintReadWrite)
+	bool bMenuOpen;
 
 protected:
 	virtual void BeginPlay();
@@ -297,6 +304,8 @@ protected:
 	void PlaceTrap(const FInputActionValue& Value);
 
 	void DropItem(const FInputActionValue& Value);
+
+	void OpenCloseMenu(const FInputActionValue& Value);
 	
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<UPlayerHUD> PlayerHUDClass;
