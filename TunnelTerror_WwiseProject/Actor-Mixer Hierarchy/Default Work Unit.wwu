@@ -6,7 +6,6 @@
 				<RandomSequenceContainer Name="caveAtmosphere" ID="{D64C652C-D9F1-4614-95C7-BD8BA9D156E8}" ShortID="583616545">
 					<PropertyList>
 						<Property Name="3DPosition" Type="int16" Value="2"/>
-						<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 						<Property Name="HoldListenerOrientation" Type="bool" Value="True"/>
 						<Property Name="InitialDelay" Type="Real64">
 							<ModifierList>

@@ -10,11 +10,20 @@
     "Type": "Event",
     "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
     "Language": "SFX",
-    "Hash": "{D3630A97-5E3B-8CAA-1043-7D683C545A8D}",
+    "Hash": "{F23030D9-A760-13C7-FE41-B2596DEEFD75}",
     "ObjectPath": "Play_RockFall",
     "ShortName": "Play_RockFall",
     "Path": "Event/Play_RockFall.bnk",
     "Media": [
+     {
+      "Id": "81005783",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "524307__bertsz__earthquake-in-cave.wav",
+      "Path": "Media/81005783.wem",
+      "CachePath": "SFX/524307__bertsz__earthquake-in-cave_579A8C4A.wem"
+     },
      {
       "Id": "287643081",
       "Language": "SFX",
@@ -58,7 +67,7 @@
       "Location": "Loose",
       "ShortName": "RockHitGround\\RockHitGround_1.wav",
       "Path": "Media/874392032.wem",
-      "CachePath": "SFX/RockHitGround/RockHitGround_1_4FCD9C49.wem"
+      "CachePath": "SFX/RockHitGround/RockHitGround_1_F787CD80.wem"
      },
      {
       "Id": "953321177",
@@ -67,7 +76,7 @@
       "Location": "Loose",
       "ShortName": "RockHitGround\\RockHitGround_2.wav",
       "Path": "Media/953321177.wem",
-      "CachePath": "SFX/RockHitGround/RockHitGround_2_D678C78D.wem"
+      "CachePath": "SFX/RockHitGround/RockHitGround_2_876768F5.wem"
      },
      {
       "Id": "953676981",
@@ -76,7 +85,7 @@
       "Location": "Loose",
       "ShortName": "RockHitGround\\RockHitGround_5.wav",
       "Path": "Media/953676981.wem",
-      "CachePath": "SFX/RockHitGround/RockHitGround_5_8F54B111.wem"
+      "CachePath": "SFX/RockHitGround/RockHitGround_5_7A493CEA.wem"
      }
     ],
     "Plugins": {
@@ -84,7 +93,7 @@
       {
        "Id": "8525658",
        "Name": "Parametric EQ (Custom)",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\Rocks\\RockFall\\RockShatter\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Rocks\\RockFall\\hitShatter\\RockShatter\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
        "GUID": "{0DE8CC0F-A379-4320-9F31-EF7805AE6B3A}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
@@ -92,7 +101,7 @@
       {
        "Id": "493556205",
        "Name": "Parametric EQ (Custom)",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\Rocks\\RockFall\\RockHitGround\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Rocks\\RockFall\\hitShatter\\RockHitGround\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
        "GUID": "{73E7BEE8-E9DC-4BD1-BEAE-6F7E35BD8555}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
@@ -100,7 +109,7 @@
       {
        "Id": "744592701",
        "Name": "Parametric EQ (Custom)",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\Rocks\\RockFall\\RockShatter\\RockShatter_02\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Rocks\\RockFall\\hitShatter\\RockShatter\\RockShatter_02\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
        "GUID": "{1ECBDC60-D6F4-44E4-B12F-A42A65346C00}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
@@ -125,9 +134,12 @@
       "GUID": "{5442DF26-D3C6-455E-A0D1-CE1936EBC6DA}",
       "MaxAttenuation": "800",
       "DurationType": "OneShot",
-      "DurationMin": "7.2483253",
-      "DurationMax": "9.918686",
+      "DurationMin": "7.021866",
+      "DurationMax": "9.555864",
       "MediaRefs": [
+       {
+        "Id": "81005783"
+       },
        {
         "Id": "287643081"
        },
@@ -172,6 +184,6 @@
     ]
    }
   ],
-  "FileHash": "{D1658261-9622-AFE8-E62D-299EAFBFDCE1}"
+  "FileHash": "{10EB90D2-8F9B-8C56-9A7E-43A6C94E45EC}"
  }
 }

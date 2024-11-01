@@ -297,10 +297,16 @@
 						<Action Name="" ID="{B31AB216-B531-42DE-B7AD-7C390F728435}" ShortID="737072069">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 								<Property Name="SeekPercent" Type="Real64">
 									<ModifierList>
 										<ModifierInfo>
-											<Modifier Name="" ID="{07153A53-A996-42BA-A758-44764762197D}"/>
+											<Modifier Name="" ID="{07153A53-A996-42BA-A758-44764762197D}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+												</PropertyList>
+											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
@@ -309,14 +315,12 @@
 										<ModifierInfo>
 											<Modifier Name="" ID="{4052DEE5-B7CB-414E-B4F5-8B9B0E4F82B2}">
 												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
 													<Property Name="Max" Type="Real64" Value="10"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
-								<Property Name="SeekType" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -349,6 +353,61 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="caveAtmosphere" ID="{D64C652C-D9F1-4614-95C7-BD8BA9D156E8}" WorkUnitID="{23B8E68E-4C6C-4A23-87A5-4AE0046CD106}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_fJump" ID="{5A35A690-3696-4B21-9C78-E4367F4BEB15}">
+					<ChildrenList>
+						<Action Name="" ID="{6EACF531-602D-4C65-ACA7-FCBEFC03F98A}" ShortID="315235476">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fJump" ID="{8DA7970C-6C1D-4F68-978F-353A3620E4D1}" WorkUnitID="{E6DED6F4-79E4-46B1-A000-A2D010AD7865}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_fSwing" ID="{B46FB24D-D356-43B8-A725-11CEEAA14A3D}">
+					<ChildrenList>
+						<Action Name="" ID="{C880EB79-B768-40D2-83AB-4DDB88C63E7A}" ShortID="492849029">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fSwing" ID="{DAB8CC82-5E03-48F7-B1F5-13D330C40670}" WorkUnitID="{E6DED6F4-79E4-46B1-A000-A2D010AD7865}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_mJump" ID="{E70C83B2-4C7F-49EC-8E6A-4F6DA32DD0B7}">
+					<ChildrenList>
+						<Action Name="" ID="{89FA0E66-FD30-42A2-AD9A-F0A4A40FF9A0}" ShortID="580819148">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mJump" ID="{DFAA7BCD-A423-4991-943E-6F5D1E2C888E}" WorkUnitID="{F6EB16DF-A728-408B-941A-B3FC6594F678}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_mSwing" ID="{EDD6846B-FEFC-45C4-9704-DE01F2D8123E}">
+					<ChildrenList>
+						<Action Name="" ID="{F4C2D5ED-002C-4B84-8FC4-3D75020627A9}" ShortID="286289771">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mSwing" ID="{1C2141AE-C667-4718-93B1-A2A4560957F4}" WorkUnitID="{F6EB16DF-A728-408B-941A-B3FC6594F678}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_iMoans" ID="{07852589-1383-4156-9440-788054B24A18}">
+					<ChildrenList>
+						<Action Name="" ID="{D031C489-34A3-4968-B684-6792BB5909BB}" ShortID="842795436">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="iMoans" ID="{86A8DB10-2AB9-4E8F-99AE-506D38B638DB}" WorkUnitID="{B48A2A45-95D3-4666-9C09-54474C7DED67}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
