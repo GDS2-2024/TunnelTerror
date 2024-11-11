@@ -20,7 +20,7 @@
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
-						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="10">
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2">
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{825CF86F-CC1A-493F-A5F6-6B8122C89745}">
@@ -73,7 +73,7 @@
 							<ChildrenList>
 								<AudioFileSource Name="lightPiano" ID="{3B7B8D08-4669-4A33-9553-C3DD3105048F}">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.5"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>lightPiano.wav</AudioFile>
@@ -87,6 +87,65 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{2C660F80-3D76-43C4-BDD8-0EC8ADB2EE55}" ShortID="339585705">
+										<ReferenceList>
+											<Reference Name="Effect">
+												<Custom CreatedFrom="{AEB3F175-958B-45F2-A4C2-3FBD4F456568}">
+													<Effect Name="Medium (Custom)" ID="{64360839-6C8B-47AF-AF8D-6BD1E4304864}" ShortID="586574097" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<PropertyList>
+															<Property Name="DecayTime" Type="Real32" Value="5.8"/>
+															<Property Name="Density" Type="Real32" Value="70"/>
+															<Property Name="DryLevel" Type="Real32" Value="-2.3"/>
+															<Property Name="ERLevel" Type="Real32" Value="-28"/>
+															<Property Name="ERPattern" Type="int32" Value="9"/>
+															<Property Name="Filter1Freq" Type="Real32" Value="490"/>
+															<Property Name="Filter1Gain" Type="Real32" Value="-2"/>
+															<Property Name="Filter1InsertPos" Type="int32" Value="2"/>
+															<Property Name="Filter2InsertPos" Type="int32" Value="0"/>
+															<Property Name="Filter3Freq" Type="Real32" Value="11000"/>
+															<Property Name="Filter3Gain" Type="Real32" Value="-4.5"/>
+															<Property Name="HFDamping" Type="Real32" Value="5.7"/>
+															<Property Name="PreDelay" Type="Real32" Value="120"/>
+															<Property Name="Quality" Type="int32" Value="14"/>
+															<Property Name="ReverbLevel" Type="Real32" Value="-22"/>
+															<Property Name="RoomSize" Type="Real32" Value="100"/>
+															<Property Name="StereoWidth" Type="Real32" Value="172"/>
+														</PropertyList>
+													</Effect>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{94ECCA18-C306-4CC5-BD17-9517944BA311}" ShortID="143787742">
+										<ReferenceList>
+											<Reference Name="Effect">
+												<Custom>
+													<Effect Name="Parametric EQ (Custom)" ID="{94A8186D-9298-4A8F-A028-757D45632A13}" ShortID="426279092" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+														<PropertyList>
+															<Property Name="FilterTypeBand2" Type="int32" Value="3"/>
+															<Property Name="FrequencyBand2" Type="Real32" Value="80"/>
+															<Property Name="FrequencyBand3" Type="Real32" Value="2616"/>
+															<Property Name="GainBand2" Type="Real32" Value="-5"/>
+															<Property Name="GainBand3" Type="Real32" Value="-3"/>
+															<Property Name="QFactorBand2" Type="Real32" Value="56.5"/>
+														</PropertyList>
+													</Effect>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
