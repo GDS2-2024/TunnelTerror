@@ -59,7 +59,10 @@ void AInfectionTrap::Tick(float DeltaTime)
 	}
 	else
 	{
-		CollisionSphere->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+		if (CollisionSphere)
+		{
+			CollisionSphere->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+		}
 	}
 
 	if (bCanTimeOut)
@@ -92,5 +95,8 @@ void AInfectionTrap::InfectPlayer(ATunnelTerrorCharacter* TargetCharacter)
 void AInfectionTrap::PlantDie()
 {
 	DeathAnim();
-	CollisionSphere->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	if (CollisionSphere)
+	{
+		CollisionSphere->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	}
 }
