@@ -2,8 +2,7 @@
 
 
 #include "WeedKillerItem.h"
-#include "InfectionTrap.h"
-#include "NiagaraComponent.h"
+#include "TunnelTerror/InfectionTrap.h"
 #include "TunnelTerror/TunnelTerrorCharacter.h"
 
 AWeedKillerItem::AWeedKillerItem()

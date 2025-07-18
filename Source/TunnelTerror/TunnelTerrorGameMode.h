@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameMode.h"
-#include "Public/TunnelTerrorGameState.h"
+#include "TunnelTerrorGameState.h"
 #include "TunnelTerrorGameMode.generated.h"
 
 UCLASS(minimalapi)
