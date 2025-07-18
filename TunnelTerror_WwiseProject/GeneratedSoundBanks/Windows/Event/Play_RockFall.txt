@@ -1,9 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	1120692842	Play_RockFall			\Default Work Unit\Play_RockFall	
-
-Effect plug-ins	ID	Name	Type				Notes
-	8525658	Parametric EQ (Custom)	Wwise Parametric EQ			
-	493556205	Parametric EQ (Custom)	Wwise Parametric EQ			
-	602546716	Room_Large	Wwise RoomVerb			
-	744592701	Parametric EQ (Custom)	Wwise Parametric EQ			
-

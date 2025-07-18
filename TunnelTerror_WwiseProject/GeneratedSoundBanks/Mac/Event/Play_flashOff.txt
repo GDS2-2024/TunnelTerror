@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	1319708803	Play_flashOff			\Default Work Unit\Play_flashOff	
-
